@@ -1,0 +1,86 @@
+name: Organizar Pasta e Sincronizar Simulados
+
+on:
+  push:
+    paths:
+      - '*.html'
+      - 'simulados/*.html'
+
+jobs:
+  organizar-e-sincronizar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Mover HTMLs para /simulados e atualizar index.html e simulados.json
+        run: |
+          python -c "
+          import os, json, re, shutil
+
+          PASTA_DESTINO = 'simulados'
+          
+          # 1. Garante que a pasta destino existe
+          if not os.path.exists(PASTA_DESTINO):
+              os.makedirs(PASTA_DESTINO)
+
+          # 2. Move qualquer arquivo .html da raiz (exceto o index.html) para a pasta /simulados
+          for arq in os.listdir('.'):
+              if arq.lower().endswith('.html') and arq.lower() != 'index.html' and os.path.isfile(arq):
+                  origem = arq
+                  destino = os.path.join(PASTA_DESTINO, arq)
+                  print(f'Movendo {origem} -> {destino}')
+                  shutil.move(origem, destino)
+
+          # 3. Lista todos os arquivos da pasta /simulados
+          arquivos_simulados = [
+              f for f in sorted(os.listdir(PASTA_DESTINO)) 
+              if f.lower().endswith('.html')
+          ]
+
+          # 4. Atualiza o index.html com o caminho completo 'simulados/nome-do-arquivo.html'
+          linhas_js = [f\"      '{PASTA_DESTINO}/{arq}'\" for arq in arquivos_simulados]
+          bloco_novo = ',\n'.join(linhas_js)
+
+          with open('index.html', 'r', encoding='utf-8') as f:
+              conteudo = f.read()
+
+          padrao = r'/\* INICIO_LISTA \*/.*?/\* FIM_LISTA \*/'
+          substituicao = f'/* INICIO_LISTA */\n{bloco_novo}\n      /* FIM_LISTA */'
+
+          conteudo_atualizado = re.sub(padrao, substituicao, conteudo, flags=re.DOTALL)
+
+          with open('index.html', 'w', encoding='utf-8') as f:
+              f.write(conteudo_atualizado)
+
+          # 5. Gerar o simulados.json atualizado
+          simulados_json = []
+          for arq in arquivos_simulados:
+              nome_sem_ext = arq.replace('.html', '')
+              partes = nome_sem_ext.split('-')
+              titulo_formatado = ' '.join([p.upper() if len(p) <= 2 else p.capitalize() for p in partes])
+
+              simulados_json.append({
+                  'arquivo': f'{PASTA_DESTINO}/{arq}',
+                  'titulo_exibicao': titulo_formatado
+              })
+
+          with open('simulados.json', 'w', encoding='utf-8') as f:
+              json.dump(simulados_json, f, ensure_ascii=False, indent=2)
+          "
+
+      - name: Salvar alterações no repositório
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "auto: reorganiza simulados na pasta /simulados e atualiza index [skip ci]" || echo "Sem alterações para salvar"
+          git push
