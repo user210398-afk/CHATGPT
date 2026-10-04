@@ -1,9 +1,10 @@
 import { afterEach, expect, it, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { ExamPage } from '../src/components/exam/ExamPage';
 import { RichContent } from '../src/components/common/RichContent';
 import { App } from '../src/app/App';
+import { MultipleChoiceQuestion } from '../src/components/questions/MultipleChoiceQuestion';
 import { poc } from './fixtures';
 
 afterEach(() => {
@@ -35,6 +36,7 @@ it('renderiza e conclui a POC real, restaura dissertativa e exibe modelos soment
   expect(screen.getByText(/28 questão\(ões\) sem resposta/)).toBeInTheDocument();
   await user.click(screen.getByRole('button', { name: 'Confirmar finalização' }));
   expect(screen.getByRole('heading', { name: 'Seu resultado' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Seu resultado' })).toHaveFocus();
   expect(screen.getByText(/1 de 10 dissertativas respondidas/)).toBeInTheDocument();
   await user.click(screen.getByRole('button', { name: 'Revisar respostas' }));
   expect(screen.getByRole('heading', { name: 'Resposta-modelo' })).toBeInTheDocument();
@@ -44,6 +46,100 @@ it('renderiza e conclui a POC real, restaura dissertativa e exibe modelos soment
   );
   expect(screen.getByText('Resposta correta')).toBeInTheDocument();
   expect(screen.getAllByRole('radio')[0]).toBeDisabled();
+  await user.click(screen.getByRole('button', { name: 'Voltar ao resultado' }));
+  expect(screen.getByRole('heading', { name: 'Seu resultado' })).toHaveFocus();
+});
+it('debounce da dissertativa evita escrita a cada tecla e permite restaurar após o prazo', async () => {
+  const user = userEvent.setup();
+  const setItem = vi.spyOn(Storage.prototype, 'setItem');
+  const view = render(<ExamPage exam={poc} />);
+  await user.click(screen.getByRole('button', { name: 'Ir para questão 21' }));
+  const writesBeforeTyping = setItem.mock.calls.length;
+  const answer = screen.getByRole('textbox', { name: 'Sua resposta' });
+  fireEvent.change(answer, { target: { value: 'a' } });
+  fireEvent.change(answer, { target: { value: 'ab' } });
+  fireEvent.change(answer, { target: { value: 'abc' } });
+  expect(setItem).toHaveBeenCalledTimes(writesBeforeTyping);
+  expect(screen.getByText('Salvando resposta…')).toBeInTheDocument();
+  await waitFor(() => expect(setItem).toHaveBeenCalledTimes(writesBeforeTyping + 1));
+  view.unmount();
+  render(<ExamPage exam={poc} />);
+  expect(screen.getByRole('textbox', { name: 'Sua resposta' })).toHaveValue('abc');
+  const writesBeforeFinish = setItem.mock.calls.length;
+  await user.click(screen.getByRole('button', { name: 'Finalizar tentativa' }));
+  await user.click(screen.getByRole('button', { name: 'Confirmar finalização' }));
+  expect(setItem.mock.calls.length).toBeGreaterThan(writesBeforeFinish);
+  expect(screen.getByRole('heading', { name: 'Seu resultado' })).toBeInTheDocument();
+  expect(
+    JSON.parse(localStorage.getItem('chatgpt-exams:v1:fisiologia-m5-aula-1-2026:r1')!).current
+      .completedAt,
+  ).toBeTruthy();
+  setItem.mockRestore();
+});
+it('erro de quota não interrompe a tentativa dissertativa', async () => {
+  const user = userEvent.setup();
+  const setItem = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+    throw new Error('QuotaExceededError');
+  });
+  render(<ExamPage exam={poc} />);
+  await user.click(screen.getByRole('button', { name: 'Ir para questão 21' }));
+  fireEvent.change(screen.getByRole('textbox', { name: 'Sua resposta' }), {
+    target: { value: 'resposta em memória' },
+  });
+  await waitFor(() => expect(screen.getByRole('alert')).toHaveTextContent('não conseguiu salvar'));
+  expect(screen.getByRole('textbox', { name: 'Sua resposta' })).toHaveValue('resposta em memória');
+  await user.click(screen.getByRole('button', { name: 'Finalizar tentativa' }));
+  await user.click(screen.getByRole('button', { name: 'Confirmar finalização' }));
+  expect(screen.getByRole('heading', { name: 'Seu resultado' })).toBeInTheDocument();
+  setItem.mockRestore();
+});
+it('alternativa com parágrafo, lista e tabela mantém radio acessível e selecionável', async () => {
+  const question = structuredClone(poc.questions[0]!);
+  if (question.type !== 'multiple-choice') throw new Error('fixture objetiva');
+  question.options[0]!.text = [
+    { type: 'element', tag: 'p', children: [{ type: 'text', text: 'Parágrafo' }] },
+    {
+      type: 'element',
+      tag: 'ul',
+      children: [{ type: 'element', tag: 'li', children: [{ type: 'text', text: 'Lista' }] }],
+    },
+    {
+      type: 'element',
+      tag: 'table',
+      children: [
+        {
+          type: 'element',
+          tag: 'tbody',
+          children: [
+            {
+              type: 'element',
+              tag: 'tr',
+              children: [
+                { type: 'element', tag: 'td', children: [{ type: 'text', text: 'Dado' }] },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
+  const onAnswer = vi.fn();
+  render(
+    <MultipleChoiceQuestion
+      question={question}
+      answer={undefined}
+      readOnly={false}
+      onAnswer={onAnswer}
+    />,
+  );
+  const radio = screen.getByRole('radio', { name: /Parágrafo Lista Dado/ });
+  expect(radio.closest('.option')?.querySelector('table')).toBeInTheDocument();
+  expect(radio.closest('label')).toBeNull();
+  await userEvent.setup().click(screen.getByText('Dado'));
+  expect(onAnswer).toHaveBeenCalledWith('option-1');
+  radio.focus();
+  await userEvent.setup().keyboard('[Space]');
+  expect(onAnswer).toHaveBeenCalledWith('option-1');
 });
 it('carrega o catálogo, filtra por texto sem acentos e salva tema', async () => {
   const user = userEvent.setup();

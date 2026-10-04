@@ -20,16 +20,27 @@ export function MultipleChoiceQuestion({
                 : option.id === answer
                   ? 'selected'
                   : '';
+          const contentId = `option-text-${question.id}-${option.id}`;
           return (
-            <label className={`option ${status}`} key={option.id}>
+            <div
+              className={`option ${status}`}
+              key={option.id}
+              onClick={(event) => {
+                if (readOnly) return;
+                event.currentTarget.querySelector('input')?.focus();
+                onAnswer(option.id);
+              }}
+            >
               <input
                 type="radio"
                 name={question.id}
                 value={option.id}
+                aria-labelledby={contentId}
                 checked={option.id === answer}
+                onClick={(event) => event.stopPropagation()}
                 onChange={() => onAnswer(option.id)}
               />
-              <span className="option-content">
+              <div className="option-content" id={contentId}>
                 <RichContent content={option.text} />
                 {readOnly && option.id === question.correctAnswer && (
                   <span className="answer-note">Resposta correta</span>
@@ -37,8 +48,8 @@ export function MultipleChoiceQuestion({
                 {readOnly && option.id === answer && (
                   <span className="answer-note">Sua resposta</span>
                 )}
-              </span>
-            </label>
+              </div>
+            </div>
           );
         })}
       </fieldset>

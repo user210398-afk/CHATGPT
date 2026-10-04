@@ -30,7 +30,7 @@ implementa CI/CD, revisão/QA finais ou remoção do legado.
 
 - Auditoria executável: 17 provas, 485 questões; paridade entre representações.
 - Schema/geração, TypeScript e build aprovados.
-- 36 testes unitários/de integração/paridade e dois percursos Chromium (desktop/mobile).
+- 47 testes unitários/de integração/paridade e dois percursos Chromium (desktop/mobile).
 - Nenhum erro de página/requisição ou dependência do HTML legado no fluxo da POC.
 - Discrepâncias da auditoria, decisões e contrato da Fase 3 em
   `docs/PHASE2_VALIDATION.md` e `docs/ARCHITECTURE.md`.

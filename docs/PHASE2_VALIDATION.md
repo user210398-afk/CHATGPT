@@ -80,7 +80,7 @@ correções de interpretação com base no código real.
 | `npm run audit:legacy` | Paridade e contagens confirmadas |
 | `npm run validate` | Uma prova válida, 30 questões |
 | `npm run typecheck` | Sem erros TypeScript/imports |
-| `npm test` | 36 testes fundamentais passando em sete arquivos |
+| `npm test` | 47 testes fundamentais passando em oito arquivos |
 | `npm run build` | Vite gera artefato estático com `/CHATGPT/` |
 | Smoke test de `npm run dev` em Chromium | Catálogo e POC abrem sob `/CHATGPT/`, sem erros |
 | `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:browser` | Dois percursos passando: desktop e mobile |
