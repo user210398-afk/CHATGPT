@@ -7,6 +7,9 @@ test('catálogo → tentativa mista → reload → resultado → revisão no bas
   const failures: string[] = [];
   const requests: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
+  page.on('console', (message) => {
+    if (message.type() === 'error') errors.push(message.text());
+  });
   page.on('response', (response) => {
     if (response.status() >= 400) failures.push(response.url());
   });

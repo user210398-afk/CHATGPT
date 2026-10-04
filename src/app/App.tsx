@@ -61,7 +61,7 @@ export function App() {
           O tema foi aplicado, mas não pôde ser salvo neste navegador.
         </p>
       )}
-      <main id="main" className="main-container">
+      <main id="main" className="main-container" tabIndex={-1}>
         {id !== null ? <ExamRoute id={id} /> : <CatalogRoute />}
       </main>
       <footer className="app-footer">
