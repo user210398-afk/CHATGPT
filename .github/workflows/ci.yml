@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [refactor/json-exam-engine, main]
+  push:
+    branches: [main, refactor/json-exam-engine, 'codex/**']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Os testes de preservação comparam fontes com commits históricos.
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.12.0'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - run: npm run audit:legacy
+      - run: npm run validate
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run validate:dist
+      - name: Instalar Chromium e dependências pelo Playwright do lockfile
+        run: npx --no-install playwright install --with-deps chromium
+      - run: npm run test:browser
