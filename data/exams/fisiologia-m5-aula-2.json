@@ -1,0 +1,2573 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "fisiologia-m5-aula-2",
+  "title": "Fisiologia dos Hormônios Pancreáticos",
+  "subject": "Fisiologia",
+  "year": 2026,
+  "division": "M5, aula 2",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    },
+    {
+      "id": "dissertativas",
+      "title": "Questões dissertativas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/fisiologia-aula-m5-2-Hormônios Pancreáticos.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "Ano explicitamente declarado no HTML: hub “Edição 2026” (linha 1702) e badge “Fisiologia 2026” (linha 1783). Corrige a observação de ano ausente da auditoria; não inferido da sequência.",
+      "Módulos independentes: objetivas seguidas de dissertativas, preservando ordem interna e numeração reiniciada, conforme a decisão da POC."
+    ]
+  },
+  "questions": [
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Histologia Pancreática",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 1 (Objetiva) - Sobre a organização histológica e funcional do pâncreas endócrino, assinale a alternativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O pâncreas endócrino é composto por cerca de 1 a 2 milhões de ilhotas de Langerhans. A distribuição das células inclui: beta (65%, insulina), alfa (20%, glucagon), delta (10%, somatostatina) e PP/F (polipeptídeo pancreático)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A proporção de 65% de células beta, 20% de células alfa e 10% de células delta reflete a composição histológica típica das ilhotas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Histologia Pancreática"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. As células beta (β) correspondem a cerca de 20% das ilhotas de Langerhans e secretam o hormônio glucagon."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A somatostatina é secretada pelas células alfa (α) e representa aproximadamente 65% do tecido endócrino pancreático."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. As ilhotas de Langerhans abrigam células beta (β) (65%), células alfa (α) (20%) e células delta (δ) (10%)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O pâncreas possui cerca de 10 a 20 mil ilhotas distribuídas exclusivamente na cabeça do órgão."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. O polipeptídeo pancreático é produzido e liberado pelas células delta (δ)."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Síntese de Insulina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 2 (Objetiva) - A respeito da biossíntese e maturação da insulina, assinale a alternativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A síntese inicia no RER como pré-pró-insulina, clivada para pró-insulina. No Golgi e grânulos, a pró-insulina gera a insulina madura (cadeias A e B unidas por pontes dissulfeto) e o Peptídeo C, co-secretados em proporção equimolar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O RER é o local de clivagem da pré-pró-insulina em pró-insulina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Síntese de Insulina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A pré-pró-insulina é processada no retículo endoplásmico rugoso (RER) dando origem à pró-insulina."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. O Peptídeo C é uma impureza descartada antes do empacotamento da insulina nos grânulos de secreção, não chegando à circulação."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A insulina madura é formada por três cadeias de aminoácidos unidas exclusivamente por ligações de hidrogênio."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O tempo necessário para a conversão da pró-insulina em insulina nos grânulos imaturos é de aproximadamente 5 a 10 segundos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A liberação do Peptídeo C ocorre via secreção constitutiva, independente do influxo de cálcio."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Mecanismo de Secreção de Insulina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 3 (Objetiva) - No mecanismo molecular da secreção de insulina pelas células beta, a elevação da glicemia desencadeia uma sequência de eventos. A ordem cronológica CORRETA desses eventos é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A glicose entra na célula beta via GLUT-2, aumenta a razão ATP/ADP, fecha os canais de K+ sensíveis ao ATP, despolariza a membrana, abre os canais de Ca2+ voltagem-dependentes e desencadeia a exocitose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descreve exatamente a cascata iônica e metabólica de liberação da insulina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Mecanismo de Secreção de Insulina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Entrada de glicose via GLUT-4 -> Bloqueio do canal de Ca2+ -> Abertura do canal de K+ -> Exocitose."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Entrada de glicose via GLUT-2 -> Aumento de ATP -> Fechamento dos canais de K+ -> Despolarização -> Abertura dos canais de Ca2+ -> Exocitose."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Abertura dos canais de K+ sensíveis ao ATP -> Entrada de glicose via GLUT-1 -> Hiperpolarização -> Entrada de cálcio."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Influxo direto de Ca2+ pela membrana -> Glicólise -> Aumento de ADP -> Exocitose de insulina."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Entrada de glicose via GLUT-5 -> Ativação do receptor Tyrosine Kinase -> Aumento de K+ citossólico."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Transportadores de Glicose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 4 (Objetiva) - Qual dos seguintes transportadores de glicose possui sua translocação para a membrana plasmática dependente da sinalização da insulina?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GLUT-4 é o transportador insulina-dependente expresso no músculo estriado e tecido adiposo. GLUT-1 (hemácias, cérebro), GLUT-2 (fígado, pâncreas), GLUT-3 (neurônios) e GLUT-5 (intestino) são independentes de insulina."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A insulina estimula a translocação de vesículas de GLUT-4 para a membrana celular."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Transportadores de Glicose"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. GLUT-1"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. GLUT-2"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. GLUT-3"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. GLUT-4"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. GLUT-5"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Metabolismo dos Lipídeos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 5 (Objetiva) - Sobre as ações da insulina no metabolismo dos lipídeos, é correto afirmar que ela:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A insulina é lipogênica: ativa a LPL para captação de ácidos graxos circulantes e inibe a LHS, bloqueando a lipólise no adipócito."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A ativação da LPL favorece o armazenamento lipídico e a inibição da LHS impede a degradação dos triacilgliceróis."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Metabolismo dos Lipídeos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Estimula a Lipase Hormônio-Sensível (LHS) no tecido adiposo, aumentando a lipólise."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Inibe a enzima Lipoproteína Lipase (LPL), reduzindo o armazenamento de gordura."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Ativa a Lipoproteína Lipase (LPL) e inibe a Lipase Hormônio-Sensível (LHS), promovendo a lipogênese."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Bloqueia a captação de glicose pelo tecido adiposo ao inibir o substrato alfa-glicerolfosfato."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Reduz a conversão de ácidos graxos em triacilglicerol no interior do adipócito."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Incretinas e GLP-1",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 6 (Objetiva) - Em relação às incretinas, especificamente o GLP-1 (Peptídeo Semelhante ao Glucagon), assinale a alternativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GLP-1 é secretado pelas células L intestinais. Aumenta a insulina dependente de glicose, suprime o glucagon, retarda o esvaziamento gástrico e promove saciedade."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Sintetiza a origem celular e os principais efeitos fisiológicos do GLP-1."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Incretinas e GLP-1"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. É secretado pelas células K do duodeno em resposta à ingestão de fibras."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. É responsável por inibir a secreção de insulina e acelerar o esvaziamento gástrico."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. É secretado pelas células L do intestino, aumenta a secreção de insulina, reduz o glucagon e retarda o esvaziamento gástrico."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Tem sua meia-vida prolongada no sangue por ação da enzima Dipeptidil Peptidase IV (DPP-IV)."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Apresenta efeito antagônico ao GIP no que tange ao estímulo da célula beta pancreática."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Farmacologia do Diabetes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 7 (Objetiva) - Analisando as estratégias farmacológicas no tratamento do Diabetes Mellitus tipo 2 baseadas no sistema das incretinas, é correto afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A DPP-IV degrada o GLP-1 em minutos. Os inibidores da DPP-IV preservam o GLP-1 nativo ativo, prolongando seu efeito insulinotrópico."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Ao inibir a DPP-IV, impede-se a quebra enzimática do GLP-1 endógeno."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacologia do Diabetes"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Os inibidores da DPP-IV bloqueiam a liberação de insulina ao destruírem os receptores de GLP-1."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Agonistas do receptor de GLP-1 (como a Liraglutida e Semaglutida) são degradados instantaneamente pela enzima DPP-IV."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Medicamentos inibidores da DPP-IV impedem a inativação do GLP-1 endógeno, mantendo suas ações biológicas por mais tempo."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O hormônio GLP-1 natural possui tempo de ação circulante de 24 horas, dispensando análogos sintéticos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. O monstro-de-gila foi utilizado para extrair a enzima DPP-IV humana em larga escala."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Dinâmica da Secreção de Insulina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 8 (Objetiva) - A curva bimodal da secreção de insulina em resposta a um estímulo contínuo e mantido de glicose demonstra que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A secreção possui padrão bifásico: 1ª fase rápida (exocitose dos grânulos estocados e ancorados) e 2ª fase sustentada (nova síntese e recrutamento vesicular)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Explica as bases celulares das duas fases de secreção da insulina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Dinâmica da Secreção de Insulina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A primeira fase reflete a conversão imediata de aminoácidos em insulina no núcleo celular."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A primeira fase é rápida e resulta do esvaziamento de grânulos pré-formados; a segunda fase é sustentada e envolve a síntese e liberação de novas vesículas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A secreção de insulina cai a zero após 10 minutos devido à exaustão definitiva das células beta."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O glucagon é liberado simultaneamente na primeira fase para impedir a hipoglicemia."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A segunda fase ocorre independentemente dos níveis de cálcio intracelular."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Ações do Glucagon",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 9 (Objetiva) - Sobre as ações do glucagon no metabolismo intermediário, assinale a opção correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O glucagon ativa receptores acoplados à proteína G no fígado, elevando o AMPc e estimulando a glicogenólise e a gliconeogênese."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A via do AMPc é o mecanismo secundário central do glucagon para elevação da glicemia."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Ações do Glucagon"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Reduz a gliconeogênese ao inibir o fornecimento de aminoácidos ao fígado."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Ativa a glicogênio sintase hepática, acelerando a glicogenogênese."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Estimula a glicogenólise e a gliconeogênese no fígado via sinalização de AMPc."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Estimula a captação maciça de glicose pelos tecidos adiposo e muscular."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Inibe a formação de cetoácidos durante o jejum prolongado."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Somatostatina Pancreática",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 10 (Objetiva) - Considerando o papel da somatostatina pancreática na regulação parácrina, pode-se afirmar que esse hormônio:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Secretada pelas células delta, a somatostatina exerce um controle inibitório parácrino local sobre as células alfa (glucagon) e beta (insulina)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A inibição parácrina direta sobre as células vizinhas da ilhota é sua função clássica."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Somatostatina Pancreática"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Estimula seletivamente a liberação de glucagon pelas células alfa sem afetar a insulina."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Inibe a secreção de insulina e de glucagon localmente nas ilhotas de Langerhans."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Aumenta a motilidade do estômago e a taxa de absorção de nutrientes no intestino."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. É produzido em maior quantidade do que a insulina para manter o tônus glicêmico basal."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Atua como um potente hormônio hiperglicemiante sistêmico de emergência."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Diagnóstico de Glicemia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 11 (Objetiva) - De acordo com os critérios diagnósticos da glicemia de jejum apresentados no material, um indivíduo que apresenta uma taxa plasmática de 115 mg/dL em jejum é classificado como:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Faixas de glicemia de jejum: Hipoglicemia (<70 mg/dL), Normal (70 a 99 mg/dL), Pré-diabetes (100 a 125 mg/dL) e Diabetes (>= 126 mg/dL)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O valor de 115 mg/dL enquadra-se estritamente na faixa de pré-diabetes (100 a 125 mg/dL)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico de Glicemia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Hipoglicêmico"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Normal (Normoglicêmico)"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Pré-diabético"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Diabético"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Diabético tipo 1 descompensado"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Hormônios Contrarreguladores",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 12 (Objetiva) - Qual dos seguintes hormônios atua de forma contrarreguladora à insulina, elevando a glicemia durante situações de hipoglicemia ou estresse?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os hormônios contrarreguladores defendem o organismo da hipoglicemia: Glucagon, Adrenalina, Noradrenalina, Cortisol e GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Cortisol, adrenalina e glucagon promovem a elevação da glicose sanguínea em oposição à insulina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hormônios Contrarreguladores"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Somatostatina e Peptídeo C."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Cortisol, Adrenalina e Glucagon."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. GIP, GLP-1 e Insulina."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Betatrofina e Polipeptídeo Pancreático."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Glicoquinase e Troponina."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Fisiopatologia do Diabetes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 13 (Objetiva) - A respeito da Fisiopatologia do Diabetes Mellitus Tipo 1 e Tipo 2, assinale a afirmativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Diabetes Tipo 1 é autoimune (destruição das células beta com deficiência absoluta de insulina). O Tipo 2 envolve resistência periférica e disfunção progressiva da célula beta."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Reflete perfeitamente o mecanismo patogênico do Diabetes Tipo 1."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fisiopatologia do Diabetes"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. O Diabetes Tipo 1 decorre da destruição autoimune das células beta, resultando em deficiência absoluta de insulina."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. O Diabetes Tipo 2 é provocado exclusivamente pela secreção excessiva de glucagon por um tumor nas células alfa."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. No Diabetes Tipo 2, ocorre destruição viral imediata do tecido exócrino pancreático."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Pacientes com Diabetes Tipo 1 mantêm produção normal de insulina, porém apresentam resistência nos receptores musculares."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A resistência à insulina no tipo 2 reduz a glicemia de jejum devido ao esgotamento do glicogênio hepático."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Cirurgia Metabólica e Incretinas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 14 (Objetiva) - Uma das cirurgias metabólicas utilizadas para o tratamento do Diabetes Tipo 2 envolve o reposicionamento do íleo. O principal mecanismo hormonal de melhora do diabetes associado a essa técnica é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O reposicionamento do íleo faz o alimento atingir as células L precocemente, aumentando drasticamente o GLP-1 pós-prandial e restaurando a secreção de insulina."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O aumento do estímulo incretínico (GLP-1) via íleo é a base do benefício metabólico."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Cirurgia Metabólica e Incretinas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A eliminação total da secreção de somatostatina pelo duodeno."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. O contato precoce do alimento com o íleo, estimulando a liberação maciça de GLP-1."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A interrupção imediata do fluxo de bile, impedindo a absorção de glicose."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O aumento da secreção de grelina por remoção do cólon."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A destruição cirúrgica das células alfa do pâncreas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Sinalização da Insulina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 15 (Objetiva) - Em relação ao receptor de insulina e sua via de sinalização intracelular, é correto afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O receptor de insulina é um heterotetrâmero com atividade tirosina quinase. A ligação da insulina promove a autofosforilação das subunidades beta citoplasmáticas e ativa a cascata do IRS/PI3K."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A autofosforilação do resíduo de tirosina kinase é a etapa disparadora do sinal intracelular."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Sinalização da Insulina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Trata-se de um canal iônico dependente de voltagem diretamente acoplado à calmodulina."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A ligação da insulina ao receptor induz a autofosforilação em resíduos de tirosina kinase na subunidade beta."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. O receptor de insulina é do tipo intracelular/nuclear, ligando-se diretamente ao DNA sem mediadores."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A ativação do receptor bloqueia permanentemente a síntese proteica e os fatores de transcrição."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. O receptor atua degradando o PIP3 em ADP para inativar a enzima glicoquinase."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Metabolismo Proteico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 16 (Objetiva) - Como a insulina atua no metabolismo das proteínas nas células musculares esqueléticas?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A insulina é anabólica proteica: aumenta o transporte ativo de aminoácidos, ativa a tradução de proteínas e inibe as vias de degradação proteico-muscular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O efeito líquido da insulina no músculo é o ganho e preservação de massa proteica."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Metabolismo Proteico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Estimulando a proteólise e a liberação de aminoácidos no sangue."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Inibindo a captação de aminoácidos e bloqueando a tradução de mRNAs."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Promovendo a captação de aminoácidos, aumentando a síntese proteica e inibindo o catabolismo proteico."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Convertendo aminoácidos essenciais em glicose via gliconeogênese muscular."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Inativando os fatores de elongação da tradução ribossômica."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Regulação do Glucagon",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 17 (Objetiva) - Sobre a regulação fisiológica da secreção de glucagon pelas células alfa pancreáticas, qual dos seguintes fatores é um potente ESTIMULADOR da sua liberação?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O glucagon é liberado durante a hipoglicemia para elevar a glicose sanguínea. Hiperglicemia, insulina e somatostatina inibem a célula alfa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A hipoglicemia remove o freio inibitório e estimula diretamente a liberação do glucagon."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Regulação do Glucagon"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Hiperglicemia."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Concentração elevada de insulina local."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Queda na concentração de glicose sanguínea (Hipoglicemia)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Aumento na concentração de somatostatina."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Ingestão isolada e maciça de carboidratos de alto índice glicêmico."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Pesquisa em Diabetes - Betatrofina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 18 (Objetiva) - A Betatrofina é um hormônio descoberto em estudos de resistência à insulina cuja principal função fisiológica demonstrada em roedores é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A betatrofina é secretada pelo fígado/adipócito em quadros de resistência à insulina para induzir a proliferação e expansão da massa de células beta pancreáticas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O estudo demonstrou um aumento significativo na proliferação de células beta promovido pela betatrofina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Pesquisa em Diabetes - Betatrofina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Destruir seletivamente o excesso de grânulos de glucagon nas células alfa."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Promover a proliferação e o aumento da massa de células beta pancreáticas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Bloquear a ação dos transportadores GLUT-4 no músculo esquelético."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Inibir a conversão de pró-insulina em insulina no complexo de Golgi."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Induzir a apoptose acelerada de adipócitos brancos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Metabolismo Hepático da Glicose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 19 (Objetiva) - No fígado, a ação da insulina favorece a retenção de glicose e a síntese de glicogênio. A enzima ativada pela insulina para converter a glicose captada em glicose-6-fosfato é a:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Ao entrar no hepatócito, a glicose é fosforilada pela glicoquinase para ser mantida no meio intracelular e direcionada à síntese de glicogênio via glicogênio sintase."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A glicoquinase é a enzima hepática responsável pela primeira etapa do aprisionamento intracelular da glicose."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Metabolismo Hepático da Glicose"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Glicogênio fosforilase."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Glicoquinase."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Lipase Hormônio-Sensível."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Fosfofructoquinase inibidora."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Lactato desidrogenase tipo B."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Homeostase Pós-Prandial",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 20 (Objetiva) - Considerando o controle global da homeostase glicêmica no estado pós-prandial (após uma refeição rica em carboidratos), qual o perfil hormonal esperado no sangue arterial?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " No estado alimentado/pós-prandial, a glicose e as incretinas (GLP-1 e GIP) sobem, estimulando forte secreção de insulina e suprimindo o glucagon."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Representa o perfil hormonal pós-prandial exato para armazenamento e captação de nutrientes."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Homeostase Pós-Prandial"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Insulina elevada, Glucagon reduzido, GLP-1 elevado."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Insulina reduzida, Glucagon elevado, GIP reduzido."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Insulina reduzida, Glucagon elevado, Adrenalina elevada."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Somatostatina nula, Insulina reduzida, Glucagon elevado."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Cortisol elevado, Glucagon elevado, Insulina ausente."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "fisiologia-m5-aula-2-dissertativas-001",
+      "label": "1",
+      "sectionId": "dissertativas",
+      "category": "Insulina e Ações Metabólicas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "1. A insulina é um importante hormônio com ações metabólicas, capaz de influenciar o metabolismo de carboidratos, lipídeos e proteínas. Descreva quais são as ações da insulina no metabolismo destes macronutrientes."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Insulina e Ações Metabólicas"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gabarito Oficial & Resumo Teórico:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "A insulina é um hormônio anabólico secretado pelas células beta das ilhotas de Langerhans no pâncreas. Suas ações incluem:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Carboidratos:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula a captação de glicose nos tecidos periféricos (músculo e tecido adiposo) via recrutamento do GLUT-4; estimula a glicogenogênese hepática e muscular (ativa a glicogênio sintase); inibe a glicogenólise e a gliconeogênese."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lipídeos:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula a lipogênese e a síntese de triacilgliceróis; ativa a Lipoproteína Lipase (LPL) nos capilares adiposos; inibe a Lipase Hormônio-Sensível (LHS), bloqueando a lipólise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Proteínas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula a captação de aminoácidos pelo músculo, promove a síntese proteica e inibe a proteólise."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-aula-2-dissertativas-002",
+      "label": "2",
+      "sectionId": "dissertativas",
+      "category": "Mecanismo de Secreção de Insulina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "2. O principal estímulo para secreção da insulina é o aumento da glicemia. Descreva quais são as etapas que ocorrem para termos a liberação da insulina, a partir de uma elevação da glicemia."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Mecanismo de Secreção de Insulina"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gabarito Oficial & Resumo Teórico:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "A secreção de insulina desencadeada por glicose segue os passos:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. Entrada de glicose na célula beta pancreática via transportador GLUT-2."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. Fosforilação pela glicoquinase e metabolismo via glicólise/respiração celular, gerando aumento da razão ATP/ADP."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. O aumento de ATP fecha os canais de K+ sensíveis ao ATP."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "4. O acúmulo de K+ causa a despolarização da membrana plasmática."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "5. A despolarização abre os canais de Ca2+ dependentes de voltagem."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "6. O influxo de Ca2+ estimula a exocitose dos grânulos contendo insulina e peptídeo C para a circulação."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-aula-2-dissertativas-003",
+      "label": "3",
+      "sectionId": "dissertativas",
+      "category": "Incretinas e GLP-1",
+      "statement": [
+        {
+          "type": "text",
+          "text": "3. Além deste aumento da glicemia, outros fatores também induzem a liberação da insulina, como as incretinas. Uma destas incretinas é o GLP-1 (Peptídeo Semelhante ao Glucagon). Descreva, de maneira geral, quais são as ações do GLP-1."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Incretinas e GLP-1"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gabarito Oficial & Resumo Teórico:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "O GLP-1 é um hormônio incretínico secretado pelas células L do intestino. Suas ações incluem:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Estímulo à secreção e síntese de insulina pelas células beta de forma dependente de glicose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Inibição da secreção de glucagon pelas células alfa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Retardo do esvaziamento gástrico, prolongando a digestão."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Atuação central no SNC promovendo saciedade e diminuição do apetite."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Aumento da proliferação e redução da apoptose das células beta pancreáticas."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-aula-2-dissertativas-004",
+      "label": "4",
+      "sectionId": "dissertativas",
+      "category": "Ações do Glucagon",
+      "statement": [
+        {
+          "type": "text",
+          "text": "4. O glucagon também apresenta efeitos metabólicos importantes no organismo. Descreva quais são as ações metabólicas do glucagon."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Ações do Glucagon"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gabarito Oficial & Resumo Teórico:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "O glucagon é secretado pelas células alfa pancreáticas em resposta à hipoglicemia. Suas ações metabólicas predominantemente hepáticas e adiposas são:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Estímulo à glicogenólise hepática (quebra do glicogênio em glicose)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Estímulo à gliconeogênese (formação de glicose a partir de aminoácidos, glicerol e lactato)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Estímulo à lipólise no tecido adiposo via ativação da Lipase Hormônio-Sensível (LHS)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Estímulo à cetogênese no fígado, formando corpos cetônicos a partir de ácidos graxos."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-aula-2-dissertativas-005",
+      "label": "5",
+      "sectionId": "dissertativas",
+      "category": "Somatostatina Pancreática",
+      "statement": [
+        {
+          "type": "text",
+          "text": "5. As células delta do pâncreas são responsáveis pela produção do hormônio somatostatina. Quais são as ações deste hormônio?"
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Somatostatina Pancreática"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Gabarito Oficial & Resumo Teórico:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "A somatostatina é um hormônio inibitório produzido pelas células delta das ilhotas pancreáticas. Suas ações incluem:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Inibição parácrina local da secreção de insulina (células beta) e de glucagon (células alfa)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Redução da motilidade do estômago, duodeno e vesícula biliar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Inibição da secreção do suco gástrico, gastrina e secretina."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Diminuição da absorção intestinal de nutrientes, prolongando a assimilação alimentar e evitando picos glicêmicos."
+        }
+      ]
+    }
+  ]
+}
