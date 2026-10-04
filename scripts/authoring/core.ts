@@ -7,6 +7,8 @@ import { identifier, parseExam, type RichText } from '../../schema/exam';
 import { reviewSchema } from '../../schema/authoring';
 import { readExamCatalog } from '../catalog';
 import { assertReleaseBaseline } from '../release-baseline';
+import { validateGenerationRecord } from './generation-integrity';
+import { promptVersion } from '../../schema/generation';
 
 export function normalizeText(value: string) {
   return value
@@ -93,12 +95,28 @@ export async function loadCandidate(root: string, id: string, existingIds: strin
   identifier.parse(id);
   const filename = join(root, 'authoring/candidates', `${id}.json`);
   const review = join(root, 'authoring/reviews', `${id}.json`);
-  return validateCandidate(
+  const pair = validateCandidate(
     await readRegular(filename),
     await readRegular(review),
     filename,
     existingIds,
   );
+  // 6A manual/older manifests stay compatible; the versioned 6B pipeline requires audit evidence.
+  const generation = join(root, 'authoring/generations', `${id}.json`);
+  let present = false;
+  try {
+    await lstat(generation);
+    present = true;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+  }
+  if (
+    present ||
+    (pair.review.generation.mode === 'ai-assisted' &&
+      pair.review.generation.promptVersion === promptVersion)
+  )
+    validateGenerationRecord(await readRegular(generation), pair.exam, pair.review);
+  return pair;
 }
 function realFiles(files: string[]) {
   return files
@@ -114,6 +132,15 @@ export async function validateAll(root = '.', id?: string) {
       reviews,
       'Cada candidate exige review correspondente, sem reviews órfãos',
     );
+  if (!id) {
+    let generations: string[] = [];
+    try {
+      generations = realFiles(await readdir(join(root, 'authoring/generations')));
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+    }
+    for (const file of generations) assert.ok(candidates.includes(file), 'Generation record órfão');
+  }
   const { exams } = await readExamCatalog(join(root, 'data/exams'), join(root, 'public'));
   const ids = id ? [`${identifier.parse(id)}.json`] : candidates;
   for (const file of ids) {

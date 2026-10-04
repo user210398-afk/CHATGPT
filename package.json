@@ -21,7 +21,9 @@
     "author:hash": "node --import tsx scripts/authoring/cli.ts hash",
     "author:validate": "node --import tsx scripts/authoring/cli.ts validate",
     "author:gate": "node --import tsx scripts/authoring/cli.ts gate",
-    "author:promote": "node --import tsx scripts/authoring/cli.ts promote"
+    "author:promote": "node --import tsx scripts/authoring/cli.ts promote",
+    "author:generate": "node --import tsx scripts/authoring/generation-cli.ts generate",
+    "author:import-generation": "node --import tsx scripts/authoring/generation-cli.ts import"
   },
   "dependencies": {
     "react": "^19.3.0",
