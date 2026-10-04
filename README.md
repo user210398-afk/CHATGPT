@@ -2,8 +2,9 @@
 
 Aplicação estática React + TypeScript + Vite + Zod com **17 provas JSON e 485
 questões: 462 objetivas e 23 dissertativas**. A Fase 3 concluiu a migração e a
-paridade acadêmica. A Fase 4 prepara CI, QA e deployment seguro; o cutover de
-produção depende de aprovação em fase posterior.
+paridade acadêmica. O sistema já está em produção em
+https://user210398-afk.github.io/CHATGPT/. A Fase 6A prepara authoring seguro
+sem novas provas reais, IA/API, merge ou deploy.
 
 ## Instalar e desenvolver
 
@@ -59,16 +60,16 @@ concentra regras e persistência v2; componentes e estilos são compartilhados.
 O catálogo é gerado no build e o loader busca apenas JSONs da mesma origem.
 Não há backend, credencial ou API do GitHub em runtime.
 
-Para adicionar uma prova futuramente:
+Novas provas começam em `authoring/candidates/`, usam o próprio Schema v1 e
+exigem proveniência externa SHA-256 e revisão humana em `authoring/reviews/`.
+A promoção local exige `approved` e confirmação literal `PROMOVER`.
+O catálogo pode crescer; as 17 provas migradas continuam protegidas individualmente.
 
-1. Criar `data/exams/<id>.json` com Schema v1, ID estável, `revision`, proveniência,
-   metadados explícitos e questões ordenadas. Não inferir ano ou alterar gabaritos
-   silenciosamente. Imagens locais ficam em `public/media/`, com alt.
-2. Executar `npm run validate` e testes/paridade apropriados; registrar fonte e
-   decisões acadêmicas. Alterações de conteúdo exigem política de revisão.
-3. Gerar build e catálogo automaticamente, sem editar homepage ou índice gerado.
-   Revisar os invariantes de release somente com autorização para mudar o acervo;
-   a Fase 4 bloqueia totais diferentes de 17/485/462/23.
+## Content authoring
+
+Veja [CONTENT_AUTHORING.md](docs/CONTENT_AUTHORING.md) para hash local,
+`author:validate`, `author:gate`, `author:promote`, checklist humano, templates,
+Content Gate read-only e política de baseline. A Fase 6A não chama IA/API.
 
 Tentativas são locais ao navegador. Dissertativas não recebem nota automática.
 O estado legado não é importado automaticamente; suas chaves permanecem intactas.
@@ -79,7 +80,7 @@ O hub `index.html` da raiz, `simulados.json`, os 17 HTMLs, scripts históricos e
 ferramentas de migração/paridade permanecem preservados. O build os copia para
 `/CHATGPT/legacy/`, acessível pelo link “Acervo legado”. A homepage nova é
 `dist/index.html`; o acervo é independente do runtime novo e permite comparação
-e rollback. Limpeza será decidida depois da publicação e validação real.
+e rollback. Limpeza do legado depende de autorização futura.
 
 - `.github/workflows/ci.yml`: PRs para `refactor/json-exam-engine`/`main` e pushes
   em `main`, `refactor/json-exam-engine`, `codex/**`; somente `contents: read`.
@@ -90,10 +91,10 @@ e rollback. Limpeza será decidida depois da publicação e validação real.
 - `.github/workflows/atualizar-index.yml`: deprecated, manual e inerte (`if: false`),
   sem permissão de escrita. A lógica histórica continua disponível.
 
-O destino futuro continua `https://user210398-afk.github.io/CHATGPT/`, com Vite
+A produção atual está em `https://user210398-afk.github.io/CHATGPT/`, com Vite
 `base: '/CHATGPT/'`. Nenhuma configuração externa ou site de produção é alterado
 nesta fase. O procedimento de aprovação, configuração de Pages/environment,
-cutover e rollback está em [Fase 4](docs/PHASE4_RELEASE_READINESS.md).
+cutover histórico e rollback está em [Fase 4](docs/PHASE4_RELEASE_READINESS.md).
 
 ## Histórico e decisões
 
@@ -101,7 +102,7 @@ cutover e rollback está em [Fase 4](docs/PHASE4_RELEASE_READINESS.md).
 - [Migração e paridade da POC](docs/POC_MIGRATION.md)
 - [Validação histórica da Fase 2](docs/PHASE2_VALIDATION.md)
 - [Migração das 17 provas — Fase 3](docs/PHASE3_MIGRATION.md)
-- [Release readiness, QA e cutover futuro — Fase 4](docs/PHASE4_RELEASE_READINESS.md)
+- [Release readiness e plano histórico de cutover — Fase 4](docs/PHASE4_RELEASE_READINESS.md)
 - [Regras para agentes](AGENTS.md)
 - [Auditoria original](docs/LEGACY_AUDIT.md)
 - [Inventário original](docs/EXAM_INVENTORY.md)

@@ -1,4 +1,4 @@
-# Arquitetura compartilhada — estado após as Fases 3 e 4
+# Arquitetura compartilhada — produção e authoring da Fase 6A
 
 ## Decisão e escopo
 
@@ -9,7 +9,8 @@ A base histórica da Fase 2 foi `origin/refactor/json-exam-engine`, commit
 questões / 462 objetivas / 23 dissertativas**, com 2.187 alternativas e três
 grupos/casos. Os 17 HTMLs permanecem como acervo de comparação/rollback.
 A Fase 4 parte de `b31295406ee800f0bb113282da7edfc27bfa511b` e prepara CI,
-validação de `dist/` e Pages manual, sem cutover. As decisões abaixo permanecem.
+validação de `dist/` e Pages manual, sem cutover naquela fase. O sistema já está em produção;
+a Fase 6A adiciona a infraestrutura descrita em [CONTENT_AUTHORING.md](CONTENT_AUTHORING.md).
 
 **Vite + TypeScript estrito + React + Zod.** Vite produz arquivos estáticos,
 resolve assets com `/CHATGPT/` e dispensa backend. TypeScript tipa contratos e
@@ -95,7 +96,8 @@ Campos de prova:
   configurações ainda não implementadas, como randomização.
 - `sections`: identificação dos módulos originais, sem criar motores separados.
 - `groups`: casos compartilhados com título, contexto rico e imagens.
-- `provenance`: arquivo e commit de origem, além de notas de ambiguidade/migração.
+- `provenance`: arquivo, notas e pelo menos um entre commit Git e SHA-256 da fonte.
+  Authoring novo exige SHA-256 externo; o baseline legado conserva seus commits.
 - `questions`: sequência canônica não vazia, livre para intercalar tipos.
 
 Toda questão tem `id`, `label` original, categoria, enunciado, explicação,
@@ -232,7 +234,7 @@ largura fluida. Tabelas têm overflow contido.
 
 ## GitHub Pages e convivência
 
-A publicação futura, preparada pelo workflow oficial de Pages, deve servir
+A produção, publicada pelo workflow oficial de Pages, serve
 **o conteúdo de `dist/`** em
 `https://user210398-afk.github.io/CHATGPT/`. `base: '/CHATGPT/'` está definido no
 Vite. Catálogo: `/CHATGPT/`; prova:
@@ -249,7 +251,7 @@ Nenhuma referência `/Simulados/` existe no código da nova aplicação.
 O CI da Fase 4 valida instalação pelo lockfile, auditoria, schema, TypeScript,
 Vitest, build, artefato e Chromium instalado oficialmente pelo Playwright.
 Pages usa somente dispatch manual em main com confirmação PUBLICAR; publicar
-exige aprovação posterior e configuração externa documentada. O workflow legado
+exige aprovação explícita e a configuração externa documentada. O workflow legado
 não escreve mais automaticamente. Nenhum cutover ocorreu na Fase 4.
 Servir a raiz do repositório ainda abre o hub antigo; para demonstrar a versão
 nova, usar `npm run dev` ou o preview de `dist/` conforme o README.
@@ -263,6 +265,6 @@ proveniência e decisão de ordenação da prova mista.
 Na Fase 2, migração em massa, CI e QA final foram explicitamente adiados.
 A migração foi concluída na [Fase 3](PHASE3_MIGRATION.md); CI, QA de release e
 preparação do Pages estão na [Fase 4](PHASE4_RELEASE_READINESS.md).
-Continuam futuros: cutover/publicação real, limpeza do legado, estatísticas
+Continuam futuros: limpeza do legado, estatísticas
 globais, cronômetros avançados, notas/marca-texto, backup novo e feedback imediato.
 Conteúdo acadêmico permanece separado do shell e dos renderers.
