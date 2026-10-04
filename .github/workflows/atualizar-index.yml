@@ -1,20 +1,27 @@
-name: Organizar Pasta e Sincronizar Simulados
+name: LEGACY DEPRECATED — Organizar Pasta e Sincronizar Simulados (inativo)
 
 on:
-  push:
-    paths:
-      - '*.html'
-      - 'simulados/*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Lógica histórica preservada para auditoria. Não reativar no cutover JSON.
+# Mesmo um dispatch manual não executa escrita, commit ou push.
+# Decisão e recuperação: docs/PHASE4_RELEASE_READINESS.md.
 
 jobs:
   organizar-e-sincronizar:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
 
     steps:
       - name: Baixar o código do repositório
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Configurar o Python
         uses: actions/setup-python@v5
