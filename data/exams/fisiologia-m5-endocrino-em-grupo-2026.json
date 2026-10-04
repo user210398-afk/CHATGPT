@@ -1,0 +1,1948 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "fisiologia-m5-endocrino-em-grupo-2026",
+  "title": "Fisiologia 2026 — Endocrinologia Médica",
+  "subject": "Fisiologia",
+  "year": 2026,
+  "division": "M5, trabalho em grupo",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "dissertativas",
+      "title": "Questões dissertativas"
+    }
+  ],
+  "groups": [
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-caso-1",
+      "title": "QUESTÃO I",
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO I — TURMA B"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Idade:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " J.P, sexo feminino, 42 anos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Queixa principal:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " aumento progressivo das extremidades e alterações faciais há cerca de 6 anos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "História:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Joana percebeu que seus anéis e sapatos deixaram de servir. Notou também crescimento mandibular, alargamento do nariz, cefaleia frequente e fadiga. Recentemente, foi diagnosticada com pré-diabetes e hipertensão leve. Durante exame odontológico, o dentista relatou aumento no espaçamento entre os dentes inferiores."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Exame físico:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Fácies grosseira, mandíbula proeminente, nariz e lábios espessos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Mãos largas e dedos espessados."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Pele oleosa, sudorese excessiva."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Pressão arterial: 145/90 mmHg."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ressonância magnética de crânio:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " massa hipofisária de 1,2 cm, compatível com adenoma secretor de GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Exames laboratoriais (colhidos pela manhã):"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "table",
+          "children": [
+            {
+              "type": "element",
+              "tag": "tbody",
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Exame"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Resultado"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Valores de referência"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "GH basal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "12 ng/mL"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "< 2 ng/mL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "GH após sobrecarga oral de glicose"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "8 ng/mL"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "< 1 ng/mL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "IGF-1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "740 ng/mL"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "80 – 300 ng/mL"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-caso-2",
+      "title": "QUESTÃO II",
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO II"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "T.M.P, 35 anos, atleta de alto rendimento, disputou as Olimpíadas de Paris em 2024. Durante sua preparação faz ciclos de utilização de testosterona, hormônio que já tomava regularmente desde a adolescência, com intuito de melhorar seu rendimento esportivo. Entretanto, ao realizar consulta de rotina com urologista, foi solicitado um exame de espermograma, que constatou azoospermia (ausência de espermatozoides no sêmen). Por conta disso, seu médico solicitou a dosagem hormonal de testosterona, hormônio folículo estimulante (FSH) e hormônio luteinizante (LH). Os resultados estão mostrados na tabela abaixo:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "table",
+          "children": [
+            {
+              "type": "element",
+              "tag": "tbody",
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Hormônio"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Dosagem"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Valor de referência"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Testosterona livre"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "1200 ng/dL ↑"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "3,03 – 14,80 ng/dL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "FSH"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Indetectável"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "1,40 – 18,10 mUI/mL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "LH"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Indetectável"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "1,50 – 9,30 mUI/mL"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "images": []
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-caso-3",
+      "title": "QUESTÃO III",
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO III"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "J.M., 35 anos, procurou atendimento médico relatando cansaço constante há cerca de 10 meses, sonolência excessiva, dificuldade para perder peso e sensação de frio mesmo em dias quentes. Conta que sua pele está mais seca, o cabelo tem caído com frequência e sente o intestino mais \"preso\" do que o habitual. Durante o exame físico, o médico observou discreto aumento de volume na região anterior do pescoço. Diante do quadro, solicitou exames hormonais para avaliação da função tireoidiana:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "table",
+          "children": [
+            {
+              "type": "element",
+              "tag": "tbody",
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Exame"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Resultado"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "th",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "Valores de Referência"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "T4 livre"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "0,6 ng/dL"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "0,8 – 1,8 ng/dL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "tr",
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "TSH"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "64 mUI/L"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "td",
+                      "children": [
+                        {
+                          "type": "text",
+                          "text": "0,4 – 4,0 mUI/L"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "Com base nos achados clínicos e laboratoriais, o médico diagnosticou hipotireoidismo de origem autoimune (Tireoidite de Hashimoto) e iniciou tratamento com L-tiroxina (T4 sintético) por via oral, orientando reavaliação periódica dos níveis de TSH para ajuste da dose."
+        }
+      ],
+      "images": []
+    }
+  ],
+  "provenance": {
+    "sourceFile": "simulados/fisiologia-m5-Endocrino em Grupo.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "Três casos, oito subitens: q1_a–q1_c, q2_a–q2_b, q3_a–q3_c. mainNum integral em label, num em ID composto; caso completo compartilhado em groups e referências de continuação em context.",
+      "Preservados literalmente: “somatostatinahipotalâmica”, “endocitose do colo”, testosterona livre 1200 ng/dL versus referência 3,03 – 14,80 ng/dL e paciente/pacienta com identificação variável. Sem revisão ou correção acadêmica."
+    ]
+  },
+  "questions": [
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-001-q1-a",
+      "label": "QUESTÃO I - Item a",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-1",
+      "category": "Eixo Somatotrófico e Acromegalia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "a) Explique a relação fisiológica entre GH e IGF-1, destacando onde cada um é produzido e como atuam sobre o crescimento tecidual. Por que, na acromegalia, ambos permanecem elevados mesmo na presença de altos níveis circulantes de IGF-1?"
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Somatotrófico e Acromegalia"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GH estimula a produção hepática de IGF-1. Em condições fisiológicas normais, o IGF-1 inibe o GH por feedback negativo. Na acromegalia, a autonomia do adenoma tumoral impede a inibição."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "1. Locais de Produção:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "GH:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Secretado pelas células somatotróficas da adeno-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "IGF-1:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Produzido primariamente pelo fígado sob estímulo direto do GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "2. Atuação no Crescimento Tecidual:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• O GH estimula a síntese proteica, lipólise e proliferação celular. O IGF-1 é o principal mediador somatogênico das ações do GH, atuando nos tecidos-alvo (ossos, cartilagens e partes moles) para promover hipertrofia e proliferação celular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "3. Elevação Mantida na Acromegalia:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Em condições normais, o IGF-1 exerceria feedback negativo inibindo a secreção de GH. Na acromegalia, as células do adenoma hipofisário apresentam secreção autônoma e são insensíveis ao feedback negativo pelo IGF-1, mantendo tanto o GH quanto o IGF-1 continuamente elevados."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-002-q1-b",
+      "label": "QUESTÃO I - Item b",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-1",
+      "category": "Eixo Somatotrófico e Acromegalia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "b) Para o diagnóstico laboratorial da acromegalia, por que a dosagem do IGF-1 é mais confiável que uma dosagem isolada de GH? Qual é o princípio fisiológico do teste oral de tolerância à glicose neste contexto?"
+        }
+      ],
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO I — TURMA B (Continuação)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "Ver caso clínico e tabela de exames no item a."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Somatotrófico e Acromegalia"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O IGF-1 possui estabilidade sérica superior devido à sua meia-vida longa. O TOTG avalia a supressibilidade do GH induzida por hiperglicemia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "1. Superioridade do IGF-1:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• O GH é secretado em pulsos circadianos de curta meia-vida (aprox. 20 min) e sofre grandes oscilações por estresse, sono e alimentação, tornando uma dosagem isolada pouco confiável."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• O IGF-1 circula ligado a proteínas carreadoras (IGFBP-3) com meia-vida longa e níveis plasmáticos estáveis ao longo de 24h."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "2. Princípio do TOTG:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Em indivíduos hígidos, a sobrecarga de glicose estimula a somatostatinahipotalâmica, suprimindo o GH para valores < 1 ng/mL."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Na acromegalia, o adenoma autônomo falha em responder à supressão pela glicose (no caso da paciente, manteve-se em 8 ng/mL), confirmando a autossecreção desregulada."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-003-q1-c",
+      "label": "QUESTÃO I - Item c",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-1",
+      "category": "Eixo Somatotrófico e Acromegalia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "c) Considere um paciente cujo fígado está com sua função comprometida por uma doença crônica. A disfunção hepática pode influenciar os níveis de GH e IGF-1? Explique considerando o eixo somatotrófico."
+        }
+      ],
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO I — TURMA B (Continuação)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "Ver caso clínico no item a."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Somatotrófico e Acromegalia"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A insuficiência hepática reduz a síntese de IGF-1, interrompendo o feedback negativo e elevando compensatoriamente o GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. Como o fígado é o órgão primário de síntese de IGF-1 e de suas proteínas carreadoras, a insuficiência hepática gera "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "redução acentuada dos níveis séricos de IGF-1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. A queda do IGF-1 desativa a alça de feedback negativo sobre o hipotálamo e a hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. Sem a inibição, a hipófise funcional reage aumentando a secreção compensatória de GH, levando a "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "níveis de GH cronicamente elevados"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no plasma (resistência periférica ao GH)."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-004-q2-a",
+      "label": "QUESTÃO II - Item a",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-2",
+      "category": "Eixo Reprodutor Masculino",
+      "statement": [
+        {
+          "type": "text",
+          "text": "a) Com base nos resultados obtidos nos exames hormonais, o que poderia justificar o quadro de azoospermia deste atleta?"
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Reprodutor Masculino"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Doses suprafisiológicas de testosterona exógena promovem feedback negativo central, suprimindo LH e FSH e paralisando a espermatogênese testicular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. Níveis séricos maciços de testosterona exógena ativam forte "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "feedback negativo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no hipotálamo (inibindo GnRH) e na adeno-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. Ocorre bloqueio e "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "supressão total de LH e FSH (indetectáveis)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. Sem LH, as células de Leydig interrompem a produção de testosterona intratesticular (essencial para a maturação espermática em concentrações 100 vezes superiores à sérica)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "4. Sem FSH, as células de Sertoli deixam de apoiar a espermatogênese, culminando em azoospermia."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-005-q2-b",
+      "label": "QUESTÃO II - Item b",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-2",
+      "category": "Eixo Reprodutor Masculino",
+      "statement": [
+        {
+          "type": "text",
+          "text": "b) Qual o papel da testosterona no processo de espermatogênese e como ocorre a regulação da sua secreção?"
+        }
+      ],
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO II (Continuação)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "Ver caso clínico e tabela de exames no item a."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Reprodutor Masculino"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A testosterona intratesticular sustenta a meiose e espermiogênese; seu eixo é controlado pela alça pulsátil GnRH -> LH/FSH -> Testosterona."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "1. Papel na Espermatogênese:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Produzida pelas células de Leydig via estímulo do LH, atua nas células de Sertoli para manter a barreira hematotesticular e viabilizar a diferenciação de espermátides em espermatozoides."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "2. Regulação da Secreção:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• O hipotálamo libera "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "GnRH"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que estimula a adeno-hipófise a secretar "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "LH"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (estimula células de Leydig a produzir testosterona) e "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "FSH"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (estimula células de Sertoli). Níveis elevados de testosterona exercem feedback negativo reduzindo GnRH e LH."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-006-q3-a",
+      "label": "QUESTÃO III - Item a",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-3",
+      "category": "Eixo Tireoidiano",
+      "statement": [
+        {
+          "type": "text",
+          "text": "a) Descreva e explique todos os efeitos do TSH sobre a glândula Tireóide, destacando o efeito que justifica o aumento de volume na região anterior do pescoço, observado pelo médico."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Tireoidiano"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O TSH estimula a captação de iodeto, síntese/liberação de T3/T4 e exerce efeito trófico glandular (responsável pelo bócio)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "1. Efeitos do TSH na Tireóide:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Estimula o simporte Na+/I- (NIS), a organificação do iodo e acoplamento pela TPO na tireoglobulina, a endocitose do colo e a proteólise para liberação hormonal."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Exerce efeito trófico, estimulando vascularização, hipertrofia e hiperplasia das células foliculares."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "2. Gênese do Bócio:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A falha glandular reduz o T4 livre (0,6 ng/dL), disparando secreção compensatória massiva de "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "TSH (64 mUI/L)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• O TSH elevado e crônico estimula a proliferação celular (hipertrofia/hiperplasia), gerando o bócio."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-007-q3-b",
+      "label": "QUESTÃO III - Item b",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-3",
+      "category": "Eixo Tireoidiano",
+      "statement": [
+        {
+          "type": "text",
+          "text": "b) Explique como a diminuição dos níveis de T4 livre leva aos sintomas relatados pela paciente."
+        }
+      ],
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO III (Continuação)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "Ver caso clínico e tabela de exames no item a."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Tireoidiano"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O T4/T3 regula o metabolismo basal, a termogênese e a atividade tecidual sistêmica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cansaço e sonolência:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Redução do metabolismo do SNC e menor produção de ATP."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ganho de peso:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Queda na taxa metabólica basal e redução da lipólise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Intolerância ao frio:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Diminuição da expressão de proteínas desacopladoras (UCPs) e desaceleração da termogênese."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Pele seca/queda de cabelo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Redução do turnover celular epitelial e glandular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Constipação:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Queda na motilidade e movimentos peristálticos do trato gastrointestinal."
+        }
+      ]
+    },
+    {
+      "id": "fisiologia-m5-endocrino-em-grupo-2026-dissertativas-008-q3-c",
+      "label": "QUESTÃO III - Item c",
+      "sectionId": "dissertativas",
+      "groupId": "fisiologia-m5-endocrino-em-grupo-2026-caso-3",
+      "category": "Eixo Tireoidiano",
+      "statement": [
+        {
+          "type": "text",
+          "text": "c) Na consulta de retorno a paciente relatou que passou a apresentar taquicardia após algumas semanas de tratamento. Ao analisar os exames recentes da paciente o médico concluiu que a dose de L-tiroxina está alta demais, o que justifica a taquicardia apresentada pela paciente. Quais são os efeitos dos hormônios tireoidianos sobre o sistema cardiovascular? Justifique a sua resposta."
+        }
+      ],
+      "context": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "QUESTÃO III (Continuação)"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "Ver caso clínico no item a."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Tireoidiano"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os hormônios tireoidianos aumentam o inotropismo e cronotropismo cardíaco por superexpressão de receptores β1-adrenérgicos no miocárdio."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "1. Ações Cardiovasculares:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Efeitos inotrópico positivo, cronotrópico positivo, dromotrópico positivo e vasodilatação periférica por relaxamento vascular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "2. Mecanismo da Taquicardia Iatrogênica:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• O excesso de L-tiroxina estimula a transcrição de "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "receptores β1-adrenérgicos"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " no coração e aumenta proteínas contráteis (alfa-MHC, SERCA2a). O miocárdio torna-se hiper-responsivo às catecolaminas, elevando o automatismo do nó sinoatrial e desencadeando taquicardia."
+        }
+      ]
+    }
+  ]
+}
