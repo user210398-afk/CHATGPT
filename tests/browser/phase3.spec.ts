@@ -21,13 +21,11 @@ function monitor(page: import('@playwright/test').Page) {
   };
 }
 
-test('catálogo de 17 provas e loader de cada JSON sem depender do HTML legado', async ({
-  page,
-}) => {
+test('catálogo atual e loader de cada JSON sem depender do HTML legado', async ({ page }) => {
   const check = monitor(page);
   const { exams, catalog } = await readExamCatalog();
   await page.goto('./');
-  await expect(page.getByRole('link', { name: /Abrir prova/ })).toHaveCount(17);
+  await expect(page.getByRole('link', { name: /Abrir prova/ })).toHaveCount(exams.length);
   const response = await page.request.get('generated/exam-index.json');
   expect(await response.json()).toEqual(catalog);
   for (const exam of exams) {

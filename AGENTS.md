@@ -15,4 +15,10 @@
 13. O código legado na raiz e em `simulados/` está preservado para comparação. Não removê-lo nesta fase.
 14. O schema Zod é a fonte de verdade; exportar JSON Schema com `npm run generate`. Refinamentos semânticos requerem o validador TypeScript.
 15. Antes de concluir mudanças, executar `npm run typecheck`, `npm test` e `npm run build`; para interface, os testes de navegador pertinentes.
-16. Histórico: a Fase 2 autorizou somente a POC; a Fase 3 concluiu as 17 provas. A Fase 4 autoriza CI/CD preparado, QA e documentação, sem mudar conteúdo acadêmico, publicar, alterar Pages externo, fazer merge em main ou remover legado. Manter 17 provas / 485 questões / 462 objetivas / 23 dissertativas.
+16. Histórico: Fases 2/3 concluíram a migração; Fase 4 preparou CI/QA/Pages. O sistema já está em produção. Na Fase 6A, os 17 migrados são baseline individual congelado (485 questões / 462 objetivas / 23 dissertativas / 2.187 alternativas / 3 grupos); futuras adições aprovadas podem ampliar o catálogo sem alterar o baseline.
+17. Novas provas nascem como candidates em `authoring/candidates/`, no mesmo Schema v1, com review separado em `authoring/reviews/`. Authoring nunca entra no runtime, catálogo ou dist.
+18. Novas provas exigem provenance externa por basename e SHA-256 real da fonte. Não inventar sourceCommit. Os commits de proveniência legados continuam válidos.
+19. Aprovação acadêmica é humana: IA nunca aprova seu próprio conteúdo. Approved exige checklist completo e revisor identificado.
+20. Promoção exige comando local explícito e `--confirm PROMOVER`; suporta somente adição. Revisão/substituição de prova existente não é autorizada na 6A.
+21. Nenhuma geração automática faz merge ou deploy. Promoção não faz git/PR/deploy. Manter Content Gate read-only e deploy manual separado.
+22. A Fase 6A não chama IA/API, não adiciona serviço/segredo/dependência e não altera UI, engine, conteúdo acadêmico existente ou Pages. Ver `docs/CONTENT_AUTHORING.md`.

@@ -158,28 +158,64 @@
       }
     },
     "provenance": {
-      "type": "object",
-      "properties": {
-        "sourceFile": {
-          "type": "string"
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "sourceFile": {
+              "type": "string"
+            },
+            "sourceCommit": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "sourceSha256": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$"
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "sourceFile",
+            "sourceCommit",
+            "notes"
+          ],
+          "additionalProperties": false
         },
-        "sourceCommit": {
-          "type": "string",
-          "pattern": "^[a-f0-9]{40}$"
-        },
-        "notes": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
+        {
+          "type": "object",
+          "properties": {
+            "sourceFile": {
+              "type": "string"
+            },
+            "sourceCommit": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "sourceSha256": {
+              "type": "string",
+              "pattern": "^[a-fA-F0-9]{64}$"
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "sourceFile",
+            "sourceSha256",
+            "notes"
+          ],
+          "additionalProperties": false
         }
-      },
-      "required": [
-        "sourceFile",
-        "sourceCommit",
-        "notes"
-      ],
-      "additionalProperties": false
+      ]
     },
     "questions": {
       "minItems": 1,

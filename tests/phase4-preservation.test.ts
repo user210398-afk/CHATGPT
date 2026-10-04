@@ -1,16 +1,16 @@
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { assertReleaseBaseline } from '../scripts/release-baseline';
 import { expect, it } from 'vitest';
 
 const run = promisify(execFile);
-it('release mantém todos os JSONs acadêmicos, schema, engine e scripts históricos da base Fase 4', async () => {
+it('release mantém baseline acadêmico, engine e scripts históricos da base Fase 4', async () => {
+  await assertReleaseBaseline();
   const { stdout } = await run('git', [
     'diff',
     '--name-only',
     'b31295406ee800f0bb113282da7edfc27bfa511b',
     '--',
-    'data/exams',
-    'schema',
     'src/engine',
     'simulados',
     'simulados.json',

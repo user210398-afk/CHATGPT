@@ -113,11 +113,26 @@ export const examStructure = z.strictObject({
       images: z.array(imageSchema),
     }),
   ),
-  provenance: z.strictObject({
-    sourceFile: nonempty,
-    sourceCommit: z.string().regex(/^[a-f0-9]{40}$/),
-    notes: z.array(nonempty),
-  }),
+  provenance: z.union([
+    z.strictObject({
+      sourceFile: nonempty,
+      sourceCommit: z.string().regex(/^[a-f0-9]{40}$/),
+      sourceSha256: z
+        .string()
+        .regex(/^[a-fA-F0-9]{64}$/)
+        .optional(),
+      notes: z.array(nonempty),
+    }),
+    z.strictObject({
+      sourceFile: nonempty,
+      sourceCommit: z
+        .string()
+        .regex(/^[a-f0-9]{40}$/)
+        .optional(),
+      sourceSha256: z.string().regex(/^[a-fA-F0-9]{64}$/),
+      notes: z.array(nonempty),
+    }),
+  ]),
   questions: z.array(questionSchema).min(1),
 });
 export const examSchema = examStructure.superRefine((exam, ctx) => {

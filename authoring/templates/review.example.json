@@ -1,0 +1,28 @@
+{
+  "authoringVersion": 1,
+  "examId": "exemplo-neutro",
+  "status": "draft",
+  "source": {
+    "fileName": "exemplo-ficticio.txt",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "generation": {
+    "mode": "manual",
+    "provider": null,
+    "model": null,
+    "promptVersion": null
+  },
+  "requirements": {
+    "objectiveCount": 1,
+    "essayCount": 0,
+    "optionsPerObjective": 4
+  },
+  "checks": {
+    "sourceCoverageReviewed": false,
+    "answerKeyReviewed": false,
+    "explanationsReviewed": false,
+    "duplicateCheckReviewed": false
+  },
+  "reviewedBy": null,
+  "notes": ["EXEMPLO fictício não aprovado. Não promover."]
+}
