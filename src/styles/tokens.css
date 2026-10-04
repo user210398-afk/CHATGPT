@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+  --color-bg: #f4f6fa;
+  --color-surface: #ffffff;
+  --color-surface-soft: #edf2f9;
+  --color-text: #182a42;
+  --color-muted: #55657b;
+  --color-primary: #174ea6;
+  --color-primary-hover: #103d86;
+  --color-on-primary: #ffffff;
+  --color-selection: #eaf1fe;
+  --color-border: #d7e0ec;
+  --color-success: #146b46;
+  --color-success-bg: #eaf7ef;
+  --color-error: #b42335;
+  --color-error-bg: #fff0f1;
+  --color-attention: #855000;
+  --color-attention-bg: #fff7e3;
+  --color-focus: #2576dd;
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-small: 0.875rem;
+  --font-base: 1rem;
+  --font-reading: 1.0625rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --shadow-card: 0 5px 24px rgb(24 42 66 / 4%);
+  --transition-fast: 140ms ease;
+  --z-header: 10;
+  --z-skip: 20;
+  --layout-max: 1200px;
+  /* Media queries usam literais: CSS custom properties não são válidas nelas. */
+  --breakpoint-mobile: 48rem;
+  --breakpoint-compact: 64rem;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #101923;
+  --color-surface: #182431;
+  --color-surface-soft: #213144;
+  --color-text: #e7edf5;
+  --color-muted: #b0bfd1;
+  --color-primary: #9ac2ff;
+  --color-primary-hover: #bdd7ff;
+  --color-on-primary: #10294d;
+  --color-selection: #233c5d;
+  --color-border: #35475b;
+  --color-success: #8bdcb2;
+  --color-success-bg: #1d3b30;
+  --color-error: #ffadb7;
+  --color-error-bg: #48262f;
+  --color-attention: #f3c46e;
+  --color-attention-bg: #3e3421;
+  --color-focus: #a8cfff;
+  --shadow-card: 0 5px 24px rgb(0 0 0 / 12%);
+}

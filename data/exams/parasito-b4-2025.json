@@ -1,0 +1,4113 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "parasito-b4-2025",
+  "title": "Parasitologia e Dermatozoonoses",
+  "subject": "Parasitologia",
+  "year": 2025,
+  "division": "B4",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/parasito-b4-Simulado 2025.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "30 categorias para 31 questões, uma repetida. Bug setItem do motor legado não transportado para dados."
+    ]
+  },
+  "questions": [
+    {
+      "id": "parasito-b4-2025-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Coccídios Entéricos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 1 - Geraldo, 45 anos, apresenta diarreia severa e fétida, relata fortes dores abdominais, febre ocasional aferida em 37,8 ºC, náuseas e um episódio de vômito. Ao exame clínico, o paciente se apresentava desidratado (+++/+++++) e em estado geral regular. Foi solicitada a internação para a administração endovenosa de soro e exames laboratoriais, que incluíram hemograma completo, coprocultura, exame parasitológico de fezes (EPF) com pesquisa de coccídios e sangue oculto nas fezes. Em relação aos parâmetros hematológicos, o paciente apresentou eosinofilia em 3200 (VR 50-500/mm³) e os demais parâmetros próximos à normalidade, positivo para sangue oculto nas fezes no EPF, negativo para ovos e cistos de enteroparasitas e positivo para oocistos de Cryptosporidium parvum. Por se tratar de uma coccidiose, qual doença de base deve ser investigada nesse paciente?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A criptosporidíase grave, crônica e profunda em adultos é uma clássica infecção oportunista associada à imunodeficiência celular grave, especialmente na infecção pelo HIV/AIDS (contagem de T-CD4 < 100/mm³)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A presença de infecção grave e sintomática por "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cryptosporidium"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " em adulto exige investigação de AIDS como condição imunossupressora de base."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Coccídios Entéricos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Doença celíaca"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Doença de Crohn"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. AIDS"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Neoplasias"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Doença autoimune"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Toxoplasmose na Gestação",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 2 - Gestante de 25 anos, com 2 partos prévios, moradora de zona rural, apresenta sorologia para toxoplasmose com IgG positivo e IgM negativo. Está na décima semana de gestação. Identifique a conduta a ser adotada neste caso:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " IgG positivo acompanhado de IgM negativo em gestante no primeiro trimestre demonstra imunidade remota (infecção pregressa adquirida antes da gestação). Não há risco de transmissão congênita em imunocompetentes, dispensando tratamento."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Paciente imune prévia à gestação; sem indicação de intervenção terapêutica ou propedêutica invasiva."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Toxoplasmose na Gestação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Tratamento imediato com espiramicina até o parto."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Pesquisa de avidez IgG."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Não é necessário tratamento."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Cordocentese ou PCR de líquido amniótico."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Tratamento com pirimetamina + sulfadiazina + ácido folínico a partir do parto."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Esquistossomose & Epidemiologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 3 - A esquistossomose é considerada, em relação à sua transmissão:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Schistosoma mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " necessita de água doce habitada por caramujos do gênero "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Biomphalaria"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " onde ocorre a liberação das cercárias, caracterizando uma doença típica de veiculação hídrica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A penetração ativa de cercárias na pele ocorre durante o contato com águas doces contaminadas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Esquistossomose & Epidemiologia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Doença de veiculação hídrica."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Doença de transmissão direta."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Doença de veiculação vetorial."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Doença de transmissão horizontal."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Doença de transmissão vertical."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Coccídios Entéricos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 4 - Vários funcionários de uma empresa apresentavam queixas de doença gastrointestinal que se apresentava como diarreia e cólicas abdominais. Funcionários entrevistados por profissionais de saúde pública relataram que os sintomas começaram cerca de uma semana após sua participação na festa de feriado do escritório. Alguns dos alimentos disponíveis incluíam uma salada mista de frutas e uma pasta de pesto de manjericão servido junto a torradas. Os funcionários receberam atendimento médico no posto de saúde do bairro, onde foram coletadas amostras de fezes para análise. Os resultados para todos os funcionários foram semelhantes. As lâminas obtidas a partir do esfregaço fecal apresentavam oocistos redondos, álcool-ácido resistentes. Qual é o agente etiológico e o tratamento indicado?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Surto alimentar/hídrico associado a oocistos redondos álcool-ácido resistentes (coloração de Ziehl-Neelsen modificada) identifica o coccídio "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cryptosporidium"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O tratamento de escolha aprovado é a Nitazoxanida."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Oocistos álcool-ácido resistentes em fezes e quadro diarreico surto-relacionado definem "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cryptosporidium sp."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " tratado com nitazoxanida."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Coccídios Entéricos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Toxoplasma gondii; tratamento com metronidazol."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Giardia sp.; tratamento com tiabendazol."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Entamoeba sp.; tratamento com praziquantel."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Entamoeba histolytica; tratamento com metronidazol."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Cryptosporidium sp.; tratamento com nitazoxanida."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Miíase / Dermatozoonoses",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 5 - Uma trabalhadora rural de 55 anos de Alfenas/MG procurou atendimento médico em um centro de saúde local devido a um inchaço doloroso próximo ao pescoço. A protuberância não desapareceu com antibióticos e, quando a ferida foi drenada, foi removido um espécime de 3,5 mm de comprimento. Qual é o diagnóstico e o prognóstico do paciente?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dermatobiose (miíase primária furunculoide) é causada pela larva da mosca "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dermatobia hominis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (berne). Apresenta lesão nodular eritrematosa contendo orifício central com larva. O tratamento é a extração e o prognóstico é excelente."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Trata-se de dermatobiose por "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "D. hominis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " com excelente prognóstico após remoção da larva."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Miíase / Dermatozoonoses"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Este foi um caso de miíase do tipo \"bicheira\" e o prognóstico é ruim, caso não haja tratamento imediato."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Este foi um caso de escabiose e o prognóstico é positivo, após o tratamento com antiparasitário específico."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Este foi um caso de pediculose e o prognóstico é positivo, após a remoção manual do parasito."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Este foi um caso de dermatobiose e o prognóstico é quase sempre positivo, com a rápida recuperação da paciente."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Este foi um caso de tungíase e o prognóstico é ruim pela probabilidade de tétano secundário."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Malária / Hipnozoítos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 6 - Em casos de uma recidiva de malária, ocorre o reapparecimento da parasitemia e de manifestações clínicas com re-invasão das hemácias pelos merozoítos provenientes de hipnozoítos dormentes no fígado do paciente. Assim, a falha no tratamento pode ser relacionada como uma das principais causas de recidiva, ou seja, a possível persistência de hipnozoítos voltando a corrente sanguínea. Uma das maneiras de um médico(a) contribuir melhorando a qualidade de vida do paciente e a atuação profissional frente a estes casos é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As espécies "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Plasmodium vivax"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Plasmodium ovale"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " produzem formas hepáticas dormentes (hipnozoítos) responsáveis por recidivas tardias se não tratadas com primaquina/tafenoquina. O histórico de deslocamento para áreas endêmicas é fundamental no raciocínio médico."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O conhecimento epidemiológico e do ciclo biológico com formas dormentes hepáticas previne o subdiagnóstico de recidivas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Malária / Hipnozoítos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Conhecer o ciclo do Plasmodium, ter noção sobre possíveis recidivas, uma vez que a maioria dos pacientes não se lembra de citar migração a outras áreas (viagens a áreas endêmicas)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Recomendar o uso do antimalárico indistintamente para todos os casos de febre de mais de 39 graus e de padrão intermitente."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Encaminhar estes casos para serem cuidados apenas por especialistas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Relacionar a causa da febre com malária e prescrever uso de antitérmicos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Solicitar todos os exames que forem possíveis para só após obter os resultados, realizar um tratamento com efetividade e segurança."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Dermatozoonoses / Miíases",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 7 - Sobre as infestações larvares causadas por dípteros, assinale a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A miíase secundária (bicheira) ocorre quando moscas cavitárias ou necrofágicas (como "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cochliomyia hominivorax"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") depositam ovos em feridas pré-existentes ou ulcerações, onde as larvas se alimentam de tecido vivo/necrótico local, sem disseminação linfática sistêmica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As larvas de miíases secundárias atuam por contiguidade tecidual direta nas feridas, não por invasão e disseminação pela via linfática."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Dermatozoonoses / Miíases"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Miíases são zoodermatoses caracterizadas pelo acometimento da pele ou orifícios por larvas de moscas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A gravidade da infestação depende da localização e do grau de destruição."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A miíase primária caracteriza-se por lesão nodular que surge com o desenvolvimento da larva, apresentando orifício central de onde sai secreção serosa."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A lesão provocada pela larva berneira é dolorosa e o paciente sente a sensação de \"ferroada\"."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Na miíase secundária, ocorre a disseminação dos parasitos via sistema linfático."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Doença de Chagas / Trypanosoma",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 8 - É uma antropozoonose de elevada prevalência e expressiva morbimortalidade. Apresenta curso clínico bifásico, composto por uma fase aguda (clinicamente aparente ou não) e uma fase crônica, que pode se manifestar nas formas indeterminada, cardíaca, digestiva ou cardiodigestiva. Tais distinções clínicas são importantes no exercício da prática clínica em medicina e se referem a qual das seguintes parasitoses?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Doença de Chagas (causada pelo "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Trypanosoma cruzi"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e transmitida por triatomíneos) é uma antropozoonose bifásica clássica com formas crônicas indeterminada, cardíaca e/ou digestiva (megaesôfago e megacólon)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A descrição clínica das formas agudas e crônicas (cardíaca/digestiva) é a definição exata da Doença de Chagas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Doença de Chagas / Trypanosoma"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Esquistossomose."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Doença de Chagas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Leishmaniose visceral."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Ancilostomose."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Toxoplasmose."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Miíases / Tratamento Cavitário",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 9 - Ao atender um caso de miíase na região do palato (cavitária/secundária), o tratamento correto a ser realizado é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Em miíases cavitárias/múltiplas (bicheira por "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cochliomyia"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "), o protocolo terapêutico consiste no uso de Ivermectina oral/sistêmica (para paralisar/matar as larvas), aplicação de substâncias oclusivas/asfixiantes e catagem/remoção mecânica cuidadosa das larvas com pinça."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descreve a conduta ideal para miíase cavitária/destrutiva: Ivermectina sistêmica, asfixiantes locais e remoção mecânica com pinça."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Miíases / Tratamento Cavitário"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Retirada do parasito com auxílio de agulha desinfetada, devendo todo o parasito ser retirado. Em seguida, usa-se tintura de iodo ou outro antisséptico no local. Havendo infecção secundária, tratar com antibioticoterapia tópica ou sistêmica."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Remoção mecânica das larvas com o auxílio de pinça após a aplicação de substâncias tópicas que cubram as lesões (asfixiantes para as larvas) e utilização sistêmica de ivermectina."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Curetagem ou retirada manual com lâmina de bisturi, seguida de pincelagem com tinturas de iodo e antibioticoterapia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Uma ou poucas lesões: usa-se a pomada de tiabendazol a 5% três vezes ao dia, durante 10 dias."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Permetrina a 5% em creme, uma aplicação à noite, por 6 noites."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Helmintos Entéricos / Diagnóstico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 10 - Um missionário viajou para vários estados brasileiros durante um ano. Ele visitou seu médico queixando-se de dor abdominal e diarreia ocasional, sintomas presentes desde que retornou. O paciente informou ainda que nadou em vários lagos e lagoas durante a viagem. O exame de fezes revelou objetos, medindo 135 mm (com espículo lateral pronunciado). Qual é o seu diagnóstico?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O achado parasitológico de ovos grandes e ovais com "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "espículo lateral"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " proeminente nas fezes de paciente com histórico de banho em lagoas é patognomônico de "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Schistosoma mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (Esquistossomose)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A presença de espículo lateral no ovo identifica a infecção por "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Schistosoma mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Helmintos Entéricos / Diagnóstico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Teníase."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Ascaridíase."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Esquistossomose."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Ancilostomose."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Larva Migrans Visceral."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Esquistossomose / Ciclo Biológico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 11 - Larvas de cauda bifurcada presentes em remansos de água doce onde se observam planorbídeos são denominadas ____(1)____. Estas penetram pela pele, adaptam-se às condições fisiológicas do meio interno do hospedeiro e migram já sem cauda, na forma de ____(2)____ pelo tecido subcutâneo. Assinale a alternativa que preenche corretamente as lacunas 1 e 2:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " No ciclo do "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Schistosoma mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", as cercárias são larvas de cauda bifurcada que emergem dos caramujos planorbídeos e penetram ativamente a pele humana. Ao perderem a cauda durante a penetração cutânea, transformam-se em esquistossômulos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Preenche perfeitamente: (1) cercárias e (2) esquistossômulos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Esquistossomose / Ciclo Biológico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. 1: filarióides; 2: ovos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. 1: rabditóides; 2: filarióides."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. 1: filarióides; 2: L3."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. 1: L3; 2: L4."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. 1: cercárias; 2: esquistossômulos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Esquistossomose / Imunopatologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 12 - A imunopatogênese da esquistossomose crônica na fase hepatointestinal/hepatoesplênica decorre principalmente da formação de ____(1)____ em torno dos ____(2)____ retidos nos tecidos hepáticos, induzindo resposta inflamatória granulomatosa e fibrótica mediada por células Th2."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A patogenia da esquistossomose crônica não é causada pelos vermes adultos em si, mas pela reação imunológica granulomatosa desencadeada pelos ovos do "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "S. mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " embolizados na vasculatura porta-hepática."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A formação de granulomas ao redor dos ovos retidos no fígado é a lesão tecidual central da doença."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Esquistossomose / Imunopatologia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. 1: ancilostomose; 2: lesões pulmonares."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. 1: granulomas hepáticos; 2: ovos do parasito."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. 1: escabiose; 2: dermatite."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. 1: amebíase extra-intestinal; 2: abscesso."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. 1: larva migrans visceral; 2: trofozoítos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Ectoparasitoses & Sinais Clínicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 13 - Doenças ectoparasitárias, como a pediculose, a escabiose e a larva migrans cutânea (LMC), apresentam manifestações bastante incômodas. O sinal clínico marcador da Larva Migrans Cutânea (bicho-geográfico) e da Escabiose são, respectivamente:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Larva Migrans Cutânea (causada por "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ancylostoma braziliense/caninum"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") forma túneis eritematosos e serpiginosos extremamente pruriginosos na pele. A Escabiose ("
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sarcoptes scabiei"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") produz túneis epidérmicos, pápulas e prurido noturno proeminente."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Caracteriza com precisão as lesões clínicas da LMC (trajeto serpiginoso) e da Escabiose."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Ectoparasitoses & Sinais Clínicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Erosões urogenitais e onicomicose."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Febre intensa e manchas escuras."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Lesão serpiginosa eritematosa com prurido intenso e pápulas/túneis pruriginosos interdigitais."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Alopecia e coriza."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Dor retroorbital e escoriações."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Histopatologia da Esquistossomose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 14 - Em um corte histológico de biópsia hepática, observou-se a presença de um ovo de parasito de formato oval com espículo lateral nítido, cercado por intensa reação inflamatória granulomatosa com eosinófilos e macrófagos. Qual o diagnóstico e a reação tecidual observada?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Na biópsia de tecido hepático na esquistossomose, o achado patognomônico é o ovo de "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Schistosoma mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " cercado pela reação granulomatosa inflamatória rica em eosinófilos e macrófagos ativados."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O achado confirma "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Schistosoma mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e reação granulomatosa periovular."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Histopatologia da Esquistossomose"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Taenia solium - cisticerco."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Trichuris trichiura - reação anérgica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Entamoeba histolytica - fibrose."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Schistosoma mansoni - reação granulomatosa ao redor do ovo."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Ancylostoma duodenale - reação aguda."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Saúde Única (One Health)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 15 - Define-se Saúde Única como uma abordagem global, integrada e unificadora que visa equilibrar a saúde de pessoas, animais e ecossistemas. Considerando as doenças parasitárias, é INCORRETO afirmar nesta temática que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O conceito de Saúde Única (One Health) reconhece a íntima interconexão entre a saúde humana, animal e o meio ambiente. As zoonoses parasitárias (como leishmaniose, raiva, febre amarela e toxoplasmose) constituem o exemplo central da aplicação da Saúde Única."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Afirmar que zoonoses e parasitoses não têm relação com Saúde Única é falso, pois elas constituem o pilar do conceito."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Saúde Única (One Health)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A Saúde Única tem papel fundamental na prevenção de doenças infecciosas e parasitárias zoonóticas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A medicina veterinária tem papel importante na proteção da saúde humana ao controlar zoonoses animais."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Na tomada de decisões em saúde pública, a saúde única integra setores administrativos e ambientais."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Zoonoses e antropozoonoses nada têm a ver com doenças parasitárias e saúde única, dado que os ciclos parasitários são isolados."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. As doenças parasitárias transmitidas por vetores exigem ações integradas no ecossistema para seu controle."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Neurocisticercose vs Toxoplasmose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 16 - Um homem de 49 anos apresentou dores de cabeça frequentes e convulsões ocasionais. O exame de imagem tomográfico mostrou a presença de calcificações nodulares parenquimatosas cerebrais. Com base nessas informações, assinale a alternativa que apresenta agentes etiológicos compatíveis para o diagnóstico diferencial:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Calcificações parenquimatosas cerebrais em pacientes com crises convulsivas no Brasil têm como principais diagnósticos diferenciais a Neurocisticercose (formas calcificadas de cistos de "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Taenia solium"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") e a Toxoplasmose SNC (calcificações sequelares)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "T. gondii"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "T. solium"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " são as causas mais importantes de lesões calcificadas neurológicas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Neurocisticercose vs Toxoplasmose"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Toxoplasma gondii e Taenia solium (Neurocisticercose)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Cryptosporidium sp. e Taenia saginata."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Entamoeba histolytica e Schistosoma mansoni."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Enterobius vermicularis e Taenia solium."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Schistosoma mansoni e Toxoplasma gondii."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Aedes aegypti & Arboviroses",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 17 - O mosquito "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Aedes aegypti"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é o vetor urbano no Brasil de duas arboviroses humanas de grande impacto. Sobre a transmissão e conduta terapêutica destas doenças, é correto afirmar:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Aedes aegypti"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (fêmea hematófaga) transmite os vírus da Dengue e da Febre Amarela urbana. O manejo da dengue é baseado na reposição volêmica/hidratação e sintomáticos, com proibição de AAS/AINEs devido ao risco hemorrágico."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A transmissão ocorre pela fêmea e o tratamento é de suporte hidroeletrolítico."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Aedes aegypti & Arboviroses"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. As duas doenças (Dengue e Febre Amarela) são causadas por vírus transmitidos pela picada da fêmea do mosquito. O tratamento da dengue é sintomático com hidratação rigorosa, contraindicando-se salicilatos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A dengue é causada por toxinas do mosquito e a febre amarela por vírus."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. O macho do mosquito é o hematófago transmissor das arboviroses."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Os tratamentos de ambas envolvem antibioticoterapia de amplo espectro."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A febre amarela é tratada exclusivamente com vacinação após o surgimento dos sintomas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Geohelmintíases / Ancilostomose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 18 - Sou um parasito cuja larva L3 penetra ativamente pela pele, alcança a circulação, passa pelos pulmões (ciclo de Loss), é deglutido e fixa-se na mucosa do intestino delgado, onde causa repasto sanguíneo com espoliação e anemia ferropriva severa no hospedeiro. Quem sou eu?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os ancilostomídeos ("
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ancylostoma duodenale"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Necator americanus"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") realizam penetração cutânea, ciclo pulmonar (Loss) e fixação intestinal por ganchos/lâminas, provocando espoliação sanguínea crônica e anemia amarela/hipocrômica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descrição clássica da infecção por ancilostomídeos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Geohelmintíases / Ancilostomose"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Trichuris trichiura."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Ancilostomídeo (Ancylostoma duodenale / Necator americanus)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Toxocara canis."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Tunga penetrans."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Schistosoma mansoni."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Ciclo de Loss / Imunologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 19 - Parasitos que realizam ciclo pulmonar (como "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ascaris lumbricoides"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e Ancilostomídeos) induzem a Síndrome de Löffler, caracterizada por tosse, infiltrado pulmonar e alterações hematológicas marcantes. As alterações imunológicas e o exame coproscópico adequado na fase pulmonar inicial são:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A passagem de larvas pelos pulmões ativa imunidade do tipo Th2 (com elevação de IL-4, IL-5, IgE e intensa eosinofilia sanguínea). Como os vermes ainda são larvas jovens nos pulmões, o exame de fezes é negativo para ovos nesta fase inicial."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Resposta imune Th2 com IgE/eosinofilia alta e fezes negativas para ovos na fase pulmonar pré-patente."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Ciclo de Loss / Imunologia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Aumento de IgE e eosinofilia sanguínea elevada devido à resposta imune Th2; no início da fase pulmonar os exames de fezes ainda são negativos para ovos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Aumento de IgG e neutrofilia severa."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Elevação de IgM e pesquisa positiva imediata de ovos nas fezes no 1º dia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Redução de eosinófilos e aumento de basófilos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Resposta imune puramente bacteriana."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Tungíase / Siphonaptera",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 20 - Paciente relata prurido e dor no pé. Observa-se pápula amarelada com ponto negro central de cerca de 0,5 cm onde se localiza o espiráculo posterior da fêmea engurgitada do ectoparasito. O diagnóstico de certeza é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Tungíase (bicho-do-pé) é provocada pela fêmea fertilizada da pulga "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tunga penetrans"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", que se introduz na epiderme (especialmente periungueal e plantar) e hipertrofia-se, forming lesão papulonodular amarelada com centro negro."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A lesão nodular com ponto negro central plantar identifica a infecção por "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tunga penetrans"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Tungíase / Siphonaptera"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Pulex irritans."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Cochliomyia hominivorax."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Tunga penetrans (Tungíase / Bicho-do-pé)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Sarcoptes scabiei."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Ancylostoma braziliense."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-021",
+      "label": "21",
+      "sectionId": "objetivas",
+      "category": "Escabiose / Sarcoptes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 21 - O sintoma primário marcador da escabiose (sarna humana), que se intensifica caracteristicamente no período noturno devido ao aquecimento do corpo no leito e maior atividade do ácaro, é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A fêmea do ácaro "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sarcoptes scabiei var. hominis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " escava túneis no estrato córneo da pele, liberando saliva e dejetos que causam reação de hipersensibilidade com prurido noturno intolerável."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Prurido noturno intenso é a queixa patognomônica da escabiose."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Escabiose / Sarcoptes"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Pediculose."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Phthiríase."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Prurido intenso predominantemente noturno."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Miíase."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Filariose."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-022",
+      "label": "22",
+      "sectionId": "objetivas",
+      "category": "Geohelmintíases / Conceito",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 22 - São considerados geohelmintos os parasitos cujos ovos ou larvas necessitam passar um período de maturação e desenvolvimento no solo antes de se tornarem infectantes para o ser humano. Assinale a alternativa que contém APENAS geohelmintos clássicos:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O grupo das geohelmintíases humanas compreende "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ascaris lumbricoides"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Trichuris trichiura"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ancylostoma duodenale"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Necator americanus"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", cujos ovos/larvas desenvolvem-se na terra sob umidade e temperatura adequadas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Contém os quatro geohelmintos humanos clássicos de transmissão fecal-solo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Geohelmintíases / Conceito"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Ascaris lumbricoides, Trichuris trichiura, Ancylostoma duodenale e Necator americanus."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Enterobius vermicularis, Taenia saginata e Hymenolepis nana."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Schistosoma mansoni e Fasciola hepatica."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Wuchereria bancrofti e Brugia malayi."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Toxocara canis e Echinococcus granulosus."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-023",
+      "label": "23",
+      "sectionId": "objetivas",
+      "category": "Farmacologia Antiparasitária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 23 - Metronidazol, Cloroquina e Pirimetamina são antiparasitários empregados, respectivamente, na terapia de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Metronidazol:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Nitroimidazólico ativo contra protozoários anaeróbios/microaerófilos ("
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Trichomonas"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Entamoeba"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Giardia"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ")."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cloroquina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Antimalárico esquizonticida sanguíneo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Pirimetamina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Inibidor da di-hidrofolato redutase usado na Toxoplasmose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Corresponde à indicação farmacológica exata da tríade de medicamentos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacologia Antiparasitária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Tricomoníase/Amebíase/Giardíase; Malária; Toxoplasmose."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Amebíase; Giardíase; Tricomoníase."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Giardíase; Leishmaniose; Chagas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Esquistossomose; Filariose; Teníase."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Ascaridíase; Ancilostomose; Escabiose."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-024",
+      "label": "24",
+      "sectionId": "objetivas",
+      "category": "Tungíase / Profilaxia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 24 - São medidas profiláticas e ambientais indicadas para a prevenção da tungíase (bicho-do-pé), EXCETO:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A aplicação indiscriminada de pesticidas químicos em corpos d'água fluviais e praias não é medida indicada nem viável para o controle da pulga da terra "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tunga penetrans"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", além de causar desastre ecológico ambiental."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Trata-se de conduta ineficaz e ambientalmente incorreta para o controle da tungíase."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Tungíase / Profilaxia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Uso de calçados fechados em solos arejados/fétidos e áreas de criação de animais."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Evitar andar descalço em currais e chiqueiros."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Cimentação e regularização de pisos em habitações humanas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Saneamento e tratamento dos animais domésticos (porcos e cães) infectados."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Aplicação de inseticidas em larga escala no solo dos rios e praias de água doce."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-025",
+      "label": "25",
+      "sectionId": "objetivas",
+      "category": "Pediculose / Phthiríase",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 25 - Paciente apresenta prurido intenso na região pubiana e observação de pequenos ectoparasitos aderidos à base dos pelos pubianos e manchas azuladas (maculae ceruleae). O agente e o tratamento tópico de primeira escolha são:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O 'chato' ("
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Phthirus pubis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") infecta os pelos pubianos causando ftiríase. O tratamento de escolha é a Permetrina tópica a 1% associada à remoção manual de ninfas e lêndeas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Define com exatidão o agente "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Phthirus pubis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a terapêutica com Permetrina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Pediculose / Phthiríase"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Phthirus pubis; tratamento com xampu ou loção de Permetrina a 1% e remoção manual."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Pediculus humanus capitis; tratamento com DDT."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Sarcoptes scabiei; tratamento com tiabendazol oral."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Tunga penetrans; sabonete neutro."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Dermatobia hominis; extração cirúrgica ampla."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-026",
+      "label": "26",
+      "sectionId": "objetivas",
+      "category": "Miíases / Vetores de Ovos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 26 - No Brasil, a espécie ____(1)____ é a causa de miíase primária furunculoide (berne), utilizando frequentemente outros insetos (como mosquitos e mutucas) para transportar seus ovos até o hospedeiro vertebrado. Já a espécie ____(2)____ causa miíase secundária por deposição de ovos em feridas abertas. Assinale a alternativa que preenche corretamente:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dermatobia hominis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " realiza a forésia (transporta seus ovos no abdômen de dípteros hematófagos). A "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cochliomyia hominivorax"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " deposita ovos em lesões/feridas da pele gerando miíases cavitárias/bicheiras."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Completa adequadamente: (1) "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dermatobia hominis"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e (2) "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cochliomyia hominivorax"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Miíases / Vetores de Ovos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. 1: Dermatobia hominis; 2: Cochliomyia hominivorax."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. 1: Simulium spp.; 2: Glossina spp."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. 1: Sarcophaga spp.; 2: Musca domestica."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. 1: Pulex irritans; 2: Pediculus humanus."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. 1: Tunga penetrans; 2: Xenopsylla cheopis."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-027",
+      "label": "27",
+      "sectionId": "objetivas",
+      "category": "Dermatozoonoses / Mitos e Fatos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 27 - Sobre as dermatozoonoses parasitárias, assinale a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Escabiose é transmitida primariamente por contato direto pele com pele prolongado (no ambiente familiar, creches ou leitos) e por vestuário/fômites contaminados, não sendo uma infecção de transmissão exclusivamente sexual."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Afirmar que a escabiose é exclusivamente IST é incorreto."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Dermatozoonoses / Mitos e Fatos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Na larva migrans cutânea, as larvas de ancilostomídeos de cães/gatos não conseguem ultrapassar a camada basal da epiderme humana."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Na tungíase, a fêmea hipertrofiada da pulga Tunga penetrans permanece na pele excretando ovos pelo espiráculo."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. As lêndeas são os ovos de pediculídeos firmemente aderidos à haste dos pelos e cabelos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A escabiose é uma infecção exclusivamente transmitida por via sexual."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A ftiríase acomete preferencialmente os pelos pubianos e da região perineal."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-028",
+      "label": "28",
+      "sectionId": "objetivas",
+      "category": "Larva Migrans Cutânea",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 28 - Menino de 6 anos é levado ao posto de saúde com queixa de lesão eritematosa, elevada, linear e serpiginosa no pé esquerdo, de caráter progressivo e com intenso prurido, surgida após brincar em caixa de areia da praia. Qual é o diagnóstico e o tratamento:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Larva Migrans Cutânea apresenta trajeto túnel sinuoso/serpiginoso pruriginoso eritematoso na pele provocado por larvas de "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ancylostoma braziliense"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". O tratamento é feito com anti-helmínticos como Albendazol oral ou Tiabendazol tópico."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Lesão serpiginosa pós-contato com areia define Larva Migrans Cutânea tratada com Albendazol/Tiabendazol."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Larva Migrans Cutânea"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Larva Migrans Cutânea (bicho-geográfico); tratamento com Albendazol ou Tiabendazol."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Escabiose; tratamento com sabonete de enxofre."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Miíase; tratamento com extração com agulha."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Tungíase; tratamento com curetagem."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Dermatite por contato; corticoide tópico apenas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-029",
+      "label": "29",
+      "sectionId": "objetivas",
+      "category": "Leishmanioses / Formas Clínicas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 29 - Classicamente, as ____(1)____ podem apresentar diferentes formas clínicas. A forma ____(2)____ caracteriza-se por lesões indolores na pele de bordas ulceradas e elevadas. A forma ____(3)____ por lesões destrutivas em mucosas da nasofaringe. A forma ____(4)____ é uma manifestação crônica visceral (Calazar) com hepatoesplenomegalia e febre irregular. Assinale a alternativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O complexo das Leishmanioses manifesta-se sob três formas principais: Leishmaniose Cutânea (úlcera indolor com bordas em moldura), Leishmaniose Mucosa (destrutiva nasofaríngea) e Leishmaniose Visceral (hepatoesplenomegalia e pancitopenia)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Preenche perfeitamente as formas da Leishmaniose: (1) Leishmanioses, (2) cutânea, (3) mucosa e (4) visceral."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Leishmanioses / Formas Clínicas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. 1: Miíases; 2: primária; 3: secundária; 4: invasiva."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. 1: Ancilostomoses; 2: cutânea; 3: respiratória; 4: cerebral."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. 1: Leishmanioses; 2: cutânea; 3: mucosa; 4: visceral."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. 1: Escabiose; 2: tegumentar; 3: linfática; 4: disseminada."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. 1: Larva migrans; 2: tegumentar; 3: mucosa; 4: visceral."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-030",
+      "label": "30",
+      "sectionId": "objetivas",
+      "category": "Esquistossomose / V ou F",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 30 - Com relação à esquistossomose mansônica, julgue os itens como Verdadeiro (V) ou Falso (F):\n( ) O diagnóstico laboratorial de certeza na fase crônica é feito pela pesquisa de ovos de S. mansoni nas fezes (métodos de Kato-Katz ou Lutz).\n( ) O praziquantel é o medicamento antiparasitário de escolha para o tratamento da esquistossomose no Brasil.\n( ) A fase crônica hepatoesplênica cursa com hipertensão portal, esplenomegalia e varizes esofágicas.\n( ) A infecção é adquirida pela ingestão de caramujos contaminados na água.\n\nAssinale a sequência correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. Verdadeiro: Kato-Katz visualiza os ovos viáveis de "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "S. mansoni"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " nas fezes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. Verdadeiro: Praziquantel é o tratamento de 1ª linha do MS."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. Verdadeiro: A fibrose de Symmers periportal causa hipertensão portal e esplenomegalia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "4. Falso: A infecção ocorre por penetração ativa de cercárias pela pele, não por ingestão de caramujos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A sequência correta é V, V, V, F."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Esquistossomose / V ou F"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. V, V, V, F"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. V, V, F, V"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. F, V, V, F"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. V, F, V, F"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. F, F, V, V"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "parasito-b4-2025-objetivas-031",
+      "label": "31",
+      "sectionId": "objetivas",
+      "category": "Vetores & Rickettsia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 31 - Os carrapatos da família Ixodidae (carrapatos duros) são vetores de patógenos graves para o homem. Assinale a alternativa que apresenta a espécie vetor e o agente etiológico da Febre Maculosa Brasileira:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Febre Maculosa Brasileira é causada pela bactéria intracelular obrigatória "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Rickettsia rickettsii"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", transmitida pela picada do carrapato-estrela ("
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Amblyomma sculptum / A. cajennense"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ")."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Associa corretamente o carrapato "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Amblyomma"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " e a bactéria "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Rickettsia rickettsii"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Vetores & Rickettsia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Pulex irritans (Dipylidium caninum)"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Xenopsylla cheopis (Yersinia pestis)"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Amblyomma sculptum / cajennense (Rickettsia rickettsii)"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Pediculus humanus (Rickettsia prowazekii)"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Cimex lectularius (Rickettsia typhi)"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    }
+  ]
+}
