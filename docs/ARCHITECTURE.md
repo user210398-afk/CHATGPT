@@ -1,11 +1,15 @@
-# Arquitetura definitiva — Fase 2
+# Arquitetura compartilhada — estado após as Fases 3 e 4
 
 ## Decisão e escopo
 
-A base validada é `origin/refactor/json-exam-engine`, commit
+A base histórica da Fase 2 foi `origin/refactor/json-exam-engine`, commit
 `8d90b35d38d0f4d36f7793ffa9b744262e40fe28`, do repositório
-`user210398-afk/CHATGPT`. Esta fase implementa uma aplicação estática e uma única
-POC real de 30 questões. As outras 16 provas permanecem legadas.
+`user210398-afk/CHATGPT`. Ela implementou a aplicação estática e a POC real de
+30 questões. A Fase 3 migrou as outras 16, totalizando **17 provas JSON / 485
+questões / 462 objetivas / 23 dissertativas**, com 2.187 alternativas e três
+grupos/casos. Os 17 HTMLs permanecem como acervo de comparação/rollback.
+A Fase 4 parte de `b31295406ee800f0bb113282da7edfc27bfa511b` e prepara CI,
+validação de `dist/` e Pages manual, sem cutover. As decisões abaixo permanecem.
 
 **Vite + TypeScript estrito + React + Zod.** Vite produz arquivos estáticos,
 resolve assets com `/CHATGPT/` e dispensa backend. TypeScript tipa contratos e
@@ -35,16 +39,18 @@ Fontes locais do sistema evitam carregamentos externos.
 | `src/utils/paths.ts` | Resolução de URLs usando `import.meta.env.BASE_URL` |
 | `data/exams/` | Fonte acadêmica canônica, um JSON por prova |
 | `schema/` | Zod e JSON Schema estrutural exportado |
-| `scripts/` | Validação, geração de catálogo, extração e migração exclusiva da POC |
-| `tests/` | Testes fundamentais e dois percursos de navegador (desktop/mobile) |
+| `scripts/` | Validação, catálogo, validação de dist e extração/migração/paridade histórica das 17 provas |
+| `tests/` | Schema, engine, persistência, paridade e QA de catálogo/release em desktop/mobile |
 | `public/media/` | Destino de imagens futuras; a POC e o legado atual não têm imagens |
 | `public/generated/`, `public/legacy/`, `dist/` | Artefatos ignorados, regenerados no build |
 
 O `index.html` original da raiz e todos os 17 HTMLs estão **intactos**. O root do
 Vite é `app/`; o `dist/index.html` produzido é a homepage nova. Isso permite
 comparar o legado e evita que o workflow antigo trate uma entrada nova na raiz
-como se fosse outro simulado. O workflow existente não foi modificado: sua
-substituição pelo pipeline de publicação pertence a uma fase posterior.
+como se fosse outro simulado. Na Fase 2 o workflow existente permaneceu intacto;
+na Fase 4 tornou-se manual e inerte, com lógica histórica preservada. O novo CI
+é ativo e o pipeline oficial de Pages está preparado, restrito a dispatch em
+main com confirmação explícita. Ver PHASE4_RELEASE_READINESS.md.
 
 ## Fluxo
 
@@ -194,7 +200,7 @@ retomada parcial no legado impedem uma importação automática confiável. Roll
 consiste em reabrir o acervo legado com seus próprios dados ainda preservados.
 Os scripts antigos de backup e marca-texto continuam no acervo; não conhecem nem
 manipulam o namespace novo. Sincronização entre abas e exportação/importação da
-nova persistência não fazem parte desta POC; usar uma aba por tentativa.
+nova persistência não fazem parte do escopo atual; usar uma aba por tentativa.
 
 ## Catálogo e decisão sobre simulados.json
 
@@ -226,7 +232,8 @@ largura fluida. Tabelas têm overflow contido.
 
 ## GitHub Pages e convivência
 
-A publicação futura deve servir **o conteúdo de `dist/`** em
+A publicação futura, preparada pelo workflow oficial de Pages, deve servir
+**o conteúdo de `dist/`** em
 `https://user210398-afk.github.io/CHATGPT/`. `base: '/CHATGPT/'` está definido no
 Vite. Catálogo: `/CHATGPT/`; prova:
 `/CHATGPT/?exam=fisiologia-m5-aula-1-2026`. Refresh funciona sem rewrites porque
@@ -234,22 +241,28 @@ não há rotas virtuais. Fetch, links, imagens e assets respeitam o mesmo base.
 
 O build copia o hub e arquivos legados sem alteração para `dist/legacy/`, de modo
 que links relativos continuam válidos. O link “Acervo legado” dá acesso às 17
-provas originais. Essa cópia não é importada nem buscada para renderizar a POC.
+provas originais. Essa cópia não é importada nem buscada para renderizar as 17 provas JSON.
 As referências históricas incorretas ao GitHub no hub original permanecem apenas
 na cópia preservada para comparação; a aplicação nova não utiliza essas referências.
 Nenhuma referência `/Simulados/` existe no código da nova aplicação.
 
-Esta fase não altera configuração do site publicado nem estabelece CI/CD final.
+O CI da Fase 4 valida instalação pelo lockfile, auditoria, schema, TypeScript,
+Vitest, build, artefato e Chromium instalado oficialmente pelo Playwright.
+Pages usa somente dispatch manual em main com confirmação PUBLICAR; publicar
+exige aprovação posterior e configuração externa documentada. O workflow legado
+não escreve mais automaticamente. Nenhum cutover ocorreu na Fase 4.
 Servir a raiz do repositório ainda abre o hub antigo; para demonstrar a versão
 nova, usar `npm run dev` ou o preview de `dist/` conforme o README.
 
 ## Verificação e limites
 
-Ver [PHASE2_VALIDATION.md](PHASE2_VALIDATION.md) para evidências, discrepâncias,
+Ver [PHASE2_VALIDATION.md](PHASE2_VALIDATION.md) para evidências históricas, discrepâncias,
 comandos e critérios verificados. Ver [POC_MIGRATION.md](POC_MIGRATION.md) para
 proveniência e decisão de ordenação da prova mista.
 
-Não foram implementados nesta fase: migração em massa, publicação/CI final,
-QA/revisão final, remoção de legado, estatísticas globais, cronômetros avançados,
-notas/marca-texto, backup novo e modos de feedback imediato. São escopos futuros,
-sem acoplar seu conteúdo acadêmico ao shell ou aos renderers.
+Na Fase 2, migração em massa, CI e QA final foram explicitamente adiados.
+A migração foi concluída na [Fase 3](PHASE3_MIGRATION.md); CI, QA de release e
+preparação do Pages estão na [Fase 4](PHASE4_RELEASE_READINESS.md).
+Continuam futuros: cutover/publicação real, limpeza do legado, estatísticas
+globais, cronômetros avançados, notas/marca-texto, backup novo e feedback imediato.
+Conteúdo acadêmico permanece separado do shell e dos renderers.

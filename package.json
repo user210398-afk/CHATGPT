@@ -10,6 +10,7 @@
     "dev": "npm run generate && vite --host 0.0.0.0",
     "generate": "node --import tsx scripts/generate-exam-index.ts",
     "validate": "node --import tsx scripts/generate-exam-index.ts --check",
+    "validate:dist": "node --import tsx scripts/validate-dist.ts",
     "migrate:poc": "node --import tsx scripts/migrate-poc.ts",
     "audit:legacy": "node --import tsx scripts/audit-legacy.ts",
     "typecheck": "tsc --noEmit",

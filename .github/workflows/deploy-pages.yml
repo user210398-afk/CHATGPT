@@ -1,0 +1,75 @@
+name: Pages — cutover manual aprovado
+
+# Preparação apenas: não publica em push/PR. Disponível após promoção para main.
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: 'Somente após aprovação do cutover: digite PUBLICAR'
+        required: true
+        default: 'NAO'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-production
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: >-
+      github.repository == 'user210398-afk/CHATGPT' &&
+      github.ref == 'refs/heads/main' &&
+      inputs.confirmation == 'PUBLICAR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci
+      - run: npm run audit:legacy
+      - run: npm run validate
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run validate:dist
+      - run: npx --no-install playwright install --with-deps chromium
+      - run: npm run test:browser
+      - name: Ler configuração existente de Pages (sem ativação automática)
+        uses: actions/configure-pages@v5
+        with:
+          enablement: false
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+  deploy:
+    needs: build
+    if: >-
+      github.repository == 'user210398-afk/CHATGPT' &&
+      github.ref == 'refs/heads/main' &&
+      inputs.confirmation == 'PUBLICAR'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar artefato aprovado
+        id: deployment
+        uses: actions/deploy-pages@v4

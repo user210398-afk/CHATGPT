@@ -28,7 +28,7 @@ export function CatalogPage({ catalog }: { catalog: Catalog }) {
           <div>
             <h2 id="catalog-title">Suas provas</h2>
             <p className="muted small">
-              {catalog.exams.length} disponível · progresso salvo neste navegador
+              {catalog.exams.length} provas disponíveis · progresso salvo neste navegador
             </p>
           </div>
           <div className="search">

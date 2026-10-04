@@ -15,4 +15,4 @@
 13. O código legado na raiz e em `simulados/` está preservado para comparação. Não removê-lo nesta fase.
 14. O schema Zod é a fonte de verdade; exportar JSON Schema com `npm run generate`. Refinamentos semânticos requerem o validador TypeScript.
 15. Antes de concluir mudanças, executar `npm run typecheck`, `npm test` e `npm run build`; para interface, os testes de navegador pertinentes.
-16. Fase 2 migra somente a POC. Não ampliar migração, CI/CD ou QA final sem solicitação.
+16. Histórico: a Fase 2 autorizou somente a POC; a Fase 3 concluiu as 17 provas. A Fase 4 autoriza CI/CD preparado, QA e documentação, sem mudar conteúdo acadêmico, publicar, alterar Pages externo, fazer merge em main ou remover legado. Manter 17 provas / 485 questões / 462 objetivas / 23 dissertativas.

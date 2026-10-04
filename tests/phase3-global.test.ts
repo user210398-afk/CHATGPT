@@ -36,7 +36,7 @@ it('confirma 17 JSONs, 485 questões, 462 objetivas, 23 dissertativas, IDs/refer
   }
 }, 15000);
 
-it('mantém POC, fontes legadas e workflow idênticos à base confirmada', async () => {
+it('mantém POC e fontes legadas idênticas à base confirmada (workflows têm sucessores na Fase 4)', async () => {
   const paths = [
     'simulados',
     'simulados.json',
@@ -46,7 +46,6 @@ it('mantém POC, fontes legadas e workflow idênticos à base confirmada', async
     'desempenho-estatisticas.js',
     'ajustes-voltar-hub-v5.js',
     'branding-medsim.js',
-    '.github/workflows',
     `data/exams/${pocId}.json`,
   ];
   const result = await run('git', ['diff', '--name-only', phase3Base, '--', ...paths]);

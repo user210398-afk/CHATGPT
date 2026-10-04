@@ -6,6 +6,9 @@ function monitor(page: import('@playwright/test').Page) {
     failures: string[] = [],
     requests: string[] = [];
   page.on('pageerror', (e) => errors.push(e.message));
+  page.on('console', (message) => {
+    if (message.type() === 'error') errors.push(message.text());
+  });
   page.on('response', (r) => {
     if (r.status() >= 400) failures.push(r.url());
   });
