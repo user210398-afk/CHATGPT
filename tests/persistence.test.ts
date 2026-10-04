@@ -1,0 +1,79 @@
+import { describe, expect, it } from 'vitest';
+import { AttemptRepository, storageKey } from '../src/engine/persistence';
+import { createAttempt, transition } from '../src/engine/exam-state';
+import { poc, first, firstEssay } from './fixtures';
+const repository = () => new AttemptRepository(() => localStorage);
+describe('persistência isolada e versionada', () => {
+  it('restaura respostas, questão, marcação, início, resultado e histórico sem duplicar', () => {
+    const repo = repository();
+    let state = createAttempt(poc, '2026-10-03T10:00:00.000Z');
+    state = transition(poc, state, { type: 'answer', questionId: first.id, value: 'option-2' });
+    state = transition(poc, state, {
+      type: 'answer',
+      questionId: firstEssay.id,
+      value: 'Resposta dissertativa',
+    });
+    state = transition(poc, state, { type: 'navigate', index: 20 });
+    state = transition(poc, state, { type: 'flag', questionId: firstEssay.id });
+    repo.save(poc, state, []);
+    expect(repo.load(poc)).toMatchObject({ current: state, restored: true, warning: null });
+    state = transition(poc, state, { type: 'finish', now: '2026-10-03T10:20:00.000Z' });
+    const saved = repo.save(poc, state, []);
+    repo.save(poc, state, saved.history);
+    expect(repo.load(poc).history).toEqual([state]);
+    const next = createAttempt(poc);
+    repo.save(poc, next, saved.history);
+    expect(repo.load(poc)).toMatchObject({ current: next, history: [state] });
+  });
+  it.each(['{bad', '{}', '{"storageVersion":0}'])(
+    'sobrevive a estado corrompido/antigo: %s',
+    (value) => {
+      localStorage.setItem(storageKey(poc), value);
+      expect(repository().load(poc)).toMatchObject({ restored: false, current: { answers: {} } });
+      expect(repository().load(poc).warning).toBeTruthy();
+      expect(localStorage.getItem(storageKey(poc))).toBe(value);
+    },
+  );
+  it('rejeita referências, posições e resultados adulterados', () => {
+    const repo = repository();
+    const fresh = createAttempt(poc);
+    for (const current of [
+      { ...fresh, currentIndex: 99 },
+      { ...fresh, answers: { [first.id]: 'option-99' } },
+      { ...fresh, answers: { inexistente: 'abc' } },
+      { ...fresh, flagged: ['inexistente'] },
+      { ...fresh, examRevision: 2 },
+    ]) {
+      localStorage.setItem(
+        storageKey(poc),
+        JSON.stringify({ storageVersion: 1, current, history: [] }),
+      );
+      expect(repo.load(poc).restored).toBe(false);
+    }
+    const finished = transition(poc, fresh, { type: 'finish', now: new Date().toISOString() });
+    localStorage.setItem(
+      storageKey(poc),
+      JSON.stringify({
+        storageVersion: 1,
+        current: { ...finished, result: { ...finished.result, correct: 999 } },
+        history: [],
+      }),
+    );
+    expect(repo.load(poc).restored).toBe(false);
+  });
+  it('isola provas, revisões e chaves do legado', () => {
+    const repo = repository();
+    localStorage.setItem('simulado_fisio_state', 'preservado');
+    repo.save(poc, createAttempt(poc), []);
+    expect(repo.load({ ...poc, id: 'outra-prova' }).restored).toBe(false);
+    expect(repo.load({ ...poc, revision: 2 }).restored).toBe(false);
+    expect(localStorage.getItem('simulado_fisio_state')).toBe('preservado');
+  });
+  it('continua em memória se armazenamento for bloqueado ou exceder quota', () => {
+    const repo = new AttemptRepository(() => {
+      throw new Error('SecurityError');
+    });
+    expect(repo.load(poc).warning).toBeTruthy();
+    expect(repo.save(poc, createAttempt(poc), []).warning).toBeTruthy();
+  });
+});
