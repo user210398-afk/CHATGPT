@@ -5,3 +5,5 @@ public/legacy/
 test-results/
 playwright-report/
 *.tsbuildinfo
+.authoring-work/
+authoring/exports/

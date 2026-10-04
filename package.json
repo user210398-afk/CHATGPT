@@ -18,6 +18,7 @@
     "test:browser": "playwright test",
     "build": "npm run generate && npm run typecheck && vite build",
     "preview": "vite preview --host 0.0.0.0",
+    "author:flow": "node --import tsx scripts/authoring/workflow-cli.ts",
     "author:hash": "node --import tsx scripts/authoring/cli.ts hash",
     "author:validate": "node --import tsx scripts/authoring/cli.ts validate",
     "author:gate": "node --import tsx scripts/authoring/cli.ts gate",
