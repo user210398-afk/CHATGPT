@@ -97,7 +97,7 @@ export const remainingExams: MigrationEntry[] = [
     8,
     [
       'Três casos, oito subitens: q1_a–q1_c, q2_a–q2_b, q3_a–q3_c. mainNum integral em label, num em ID composto; caso completo compartilhado em groups e referências de continuação em context.',
-      'Preservados literalmente: “somatostatinahipotalâmica”, “endocitose do colo”, testosterona livre 1200 ng/dL versus referência 3,03 – 14,80 ng/dL e paciente/pacienta com identificação variável. Sem revisão ou correção acadêmica.',
+      'Preservados literalmente: “somatostatinahipotalâmica”, “endocitose do colo”, testosterona livre 1200 ng/dL versus referência 3,03 – 14,80 ng/dL e referências à paciente nos subitens de QUESTÃO III. Sem revisão ou correção acadêmica.',
     ],
     'dissertativa; caso/subitem; conteúdo rico/tabela',
   ),
