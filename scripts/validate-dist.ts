@@ -3,30 +3,30 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { parse, type DefaultTreeAdapterMap } from 'parse5';
 import { readExamCatalog } from './catalog';
+import { assertReleaseBaseline, examCounts, migratedBaseline } from './release-baseline';
 import viteConfig from '../vite.config';
 
 const directory = process.argv[2] ?? 'dist';
 const base = '/CHATGPT/';
 assert.equal(viteConfig.base, base, 'Base do Pages deve continuar /CHATGPT/');
 const { exams, catalog } = await readExamCatalog();
-const questions = exams.flatMap((exam) => exam.questions);
-assert.deepEqual(
-  [
-    exams.length,
-    questions.length,
-    questions.filter((q) => q.type === 'multiple-choice').length,
-    questions.filter((q) => q.type === 'essay').length,
-  ],
-  [17, 485, 462, 23],
-  'Invariantes acadêmicos da release',
-);
+await assertReleaseBaseline();
+assert.deepEqual(examCounts(migratedBaseline(exams)), {
+  exams: 17,
+  questions: 485,
+  objective: 462,
+  essay: 23,
+  options: 2187,
+  groups: 3,
+});
+const counts = examCounts(exams);
 const read = (path: string) => readFile(join(directory, path));
 const json = async (path: string) => JSON.parse((await read(path)).toString('utf8'));
 assert.deepEqual(await json('generated/exam-index.json'), catalog, 'Catálogo/metadados do dist');
 assert.deepEqual(
   (await readdir(join(directory, 'generated/exams'))).sort(),
   exams.map((exam) => `${exam.id}.json`).sort(),
-  'Conjunto exato de 17 JSONs',
+  'Conjunto exato de JSONs do catálogo atual',
 );
 for (const exam of exams)
   assert.deepEqual(await json(`generated/exams/${exam.id}.json`), exam, exam.id);
@@ -64,6 +64,7 @@ async function htmlAssets(path: string, legacy = false) {
   await walk(document);
 }
 await htmlAssets('index.html');
+assert.ok(!(await readdir(directory)).includes('authoring'), 'Authoring não pertence ao dist');
 const assets = await files(join(directory, 'assets'));
 assert.ok(
   assets.some((path) => path.endsWith('.js')),
@@ -102,5 +103,5 @@ for (const path of legacySources) {
   if (path.endsWith('.html')) await htmlAssets(`legacy/${path}`, true);
 }
 console.log(
-  `dist OK: 17 provas / 485 questões / 462 objetivas / 23 dissertativas; catálogo e JSONs iguais à fonte, assets locais sob ${base}, legado integral byte a byte. Refresh e requests de runtime: npm run test:browser.`,
+  `dist OK: ${counts.exams} provas / ${counts.questions} questões / ${counts.objective} objetivas / ${counts.essay} dissertativas; catálogo e JSONs iguais à fonte, assets locais sob ${base}, legado integral byte a byte. Refresh e requests de runtime: npm run test:browser.`,
 );

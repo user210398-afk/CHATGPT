@@ -5,12 +5,25 @@ import { expect, it } from 'vitest';
 import { readExamCatalog } from '../scripts/catalog';
 import { phase3Base, remainingExams } from '../scripts/phase3-inventory';
 import { pocId, pocSource } from '../scripts/legacy-data';
+import { assertReleaseBaseline, migratedBaseline, examCounts } from '../scripts/release-baseline';
 const run = promisify(execFile);
 
 it('confirma 17 JSONs, 485 questões, 462 objetivas, 23 dissertativas, IDs/referências/assets e catálogo gerado', async () => {
-  const { exams, catalog } = await readExamCatalog(); // schema + referências + arquivos de imagens
+  const { exams: currentExams, catalog } = await readExamCatalog();
+  await assertReleaseBaseline();
+  const exams = migratedBaseline(currentExams); // schema + referências + arquivos de imagens
   expect(exams).toHaveLength(17);
-  expect((await readdir('data/exams')).filter((f) => f.endsWith('.json'))).toHaveLength(17);
+  expect((await readdir('data/exams')).filter((f) => f.endsWith('.json'))).toHaveLength(
+    currentExams.length,
+  );
+  expect(examCounts(exams)).toEqual({
+    exams: 17,
+    questions: 485,
+    objective: 462,
+    essay: 23,
+    options: 2187,
+    groups: 3,
+  });
   expect(new Set(exams.map((e) => e.id)).size).toBe(17);
   expect(new Set(exams.map((e) => e.provenance.sourceFile))).toEqual(
     new Set([pocSource, ...remainingExams.map((e) => e.sourceFile)]),
@@ -29,7 +42,7 @@ it('confirma 17 JSONs, 485 questões, 462 objetivas, 23 dissertativas, IDs/refer
   ]);
   await run(process.execPath, ['--import', 'tsx', 'scripts/generate-exam-index.ts']);
   expect(JSON.parse(await readFile('public/generated/exam-index.json', 'utf8'))).toEqual(catalog);
-  for (const exam of exams) {
+  for (const exam of currentExams) {
     expect(JSON.parse(await readFile(`public/generated/exams/${exam.id}.json`, 'utf8'))).toEqual(
       exam,
     );

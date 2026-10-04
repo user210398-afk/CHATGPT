@@ -37,7 +37,7 @@ async function tabTo(page: Page, target: Locator) {
   throw new Error(`Controle inacessível por Tab: ${await target.textContent()}`);
 }
 
-test('release: links e metadados das 17 provas, refresh, claro/escuro e paths de produção', async ({
+test('release: links e metadados do catálogo atual, refresh, claro/escuro e paths de produção', async ({
   page,
 }) => {
   test.setTimeout(90_000);
@@ -45,7 +45,9 @@ test('release: links e metadados das 17 provas, refresh, claro/escuro e paths de
   const { exams } = await readExamCatalog();
   for (const theme of ['light', 'dark']) {
     await page.goto('./');
-    await expect(page.getByText('17 provas disponíveis', { exact: false })).toBeVisible();
+    await expect(
+      page.getByText(`${exams.length} provas disponíveis`, { exact: false }),
+    ).toBeVisible();
     if (theme === 'dark') await page.getByRole('button', { name: /Tema escuro/ }).click();
     await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
     await noOverflow(page);
