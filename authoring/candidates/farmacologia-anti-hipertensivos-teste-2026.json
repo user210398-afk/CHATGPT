@@ -1,0 +1,824 @@
+{
+  "schemaVersion": 1,
+  "revision": 2,
+  "id": "farmacologia-anti-hipertensivos-teste-2026",
+  "title": "Farmacologia dos Anti-hipertensivos — teste de geração",
+  "subject": "Farmacologia Básica",
+  "year": null,
+  "division": "2º ano de Medicina — Anti-hipertensivos",
+  "description": "Teste de geração baseado exclusivamente no material de aula sobre determinantes e regulação da pressão arterial, simpatolíticos, bloqueadores de canais de cálcio, vasodilatadores diretos e inibidores do sistema renina-angiotensina-aldosterona.",
+  "tags": [
+    "anti-hipertensivos",
+    "pressão arterial",
+    "simpatolíticos",
+    "bloqueadores de canais de cálcio",
+    "vasodilatadores diretos",
+    "SRAA"
+  ],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "Anti-hipertensivos.pdf",
+    "sourceSha256": "a99871fba87b91f6b139f62e4196a83785fa95315eece160dcdd4c4e6ad94b95",
+    "notes": [
+      "Candidate assistido por IA; revisão humana obrigatória de fonte, gabaritos e explicações."
+    ]
+  },
+  "questions": [
+    {
+      "id": "objetivas-001",
+      "label": "Questão 1",
+      "category": "Determinantes da pressão arterial",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Considerando as relações apresentadas na aula, qual combinação descreve corretamente os determinantes hemodinâmicos da pressão arterial e do débito cardíaco?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula apresenta PA = DC x RVP e DC = VS x FC. Assim, pressão arterial depende do débito cardíaco e da resistência vascular periférica, enquanto o débito cardíaco depende do volume sistólico e da frequência cardíaca.\nAlternativa 1: Correta: reproduz as duas relações apresentadas no material.\nAlternativa 2: Incorreta: a aula define VS x FC como débito cardíaco, não como pressão arterial.\nAlternativa 3: Incorreta: as relações mostradas são multiplicativas.\nAlternativa 4: Incorreta: o material apresenta múltiplos determinantes para PA e DC.\nAlternativa 5: Incorreta: essas relações não são as apresentadas na aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "pressão arterial",
+        "débito cardíaco",
+        "resistência vascular periférica"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "PA = DC x RVP e DC = VS x FC."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "PA = VS x FC e DC = PA x RVP."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "PA = DC dividido por RVP e DC = VS dividido por FC."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "PA depende apenas da frequência cardíaca e DC depende apenas da resistência vascular periférica."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "PA = RVP x FC e DC = VS x PA."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-002",
+      "label": "Questão 2",
+      "category": "Regulação simpática da pressão arterial",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Na regulação simpática descrita na aula, qual efeito da ativação de receptores beta1 renais contribui para a elevação da pressão arterial?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O material relaciona receptores beta1 no rim à liberação de renina e à ativação do sistema renina-angiotensina-aldosterona, mecanismo que contribui para elevar a pressão arterial.\nAlternativa 1: Incorreta: a aula associa beta1 renal à liberação de renina.\nAlternativa 2: Correta: é o vínculo mostrado no esquema de regulação neural da PA.\nAlternativa 3: Incorreta: isso corresponde a uma intervenção farmacológica sobre o SRAA, não ao efeito da ativação beta1 renal.\nAlternativa 4: Incorreta: bloqueio alfa1 é ação farmacológica antagonista, não efeito da ativação beta1.\nAlternativa 5: Incorreta: a ativação simpática beta1 cardíaca não é descrita como produtora de cronotropismo negativo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "simpático",
+        "beta1",
+        "renina",
+        "SRAA"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Redução da liberação de renina."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumento da liberação de renina e ativação do SRAA."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueio da enzima conversora de angiotensina."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Vasodilatação direta por bloqueio alfa1."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Redução da frequência cardíaca por cronotropismo negativo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-003",
+      "label": "Questão 3",
+      "category": "Betabloqueadores",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Ao associar o perfil de antagonismo adrenérgico à classificação dos betabloqueadores apresentada na aula, qual combinação está correta?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A classificação da aula associa carvedilol ao antagonismo beta1, beta2 e alfa1 e à terceira geração ou aos vasodilatadores. Propranolol é apresentado como antagonista beta1 e beta2 de primeira geração; atenolol, bisoprolol e metoprolol são antagonistas seletivos beta1 de segunda geração.\nAlternativa 1: Incorreta: propranolol antagoniza beta1 e beta2 e pertence à primeira geração ou aos não seletivos, não à segunda geração.\nAlternativa 2: Incorreta: atenolol é antagonista seletivo beta1 de segunda geração, não antagonista beta1 e beta2 de primeira geração.\nAlternativa 3: Incorreta: bisoprolol é antagonista seletivo beta1 de segunda geração; o perfil beta1, beta2 e alfa1 de terceira geração é atribuído ao carvedilol.\nAlternativa 4: Correta: reúne o fármaco, o perfil de receptores antagonizados e a classificação apresentados para carvedilol.\nAlternativa 5: Incorreta: metoprolol é antagonista seletivo beta1 de segunda geração, não antagonista beta1 e beta2 de primeira geração."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "betabloqueadores",
+        "carvedilol",
+        "vasodilatação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Propranolol — antagonismo seletivo beta1 — segunda geração ou cardiosseletivo."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Atenolol — antagonismo beta1 e beta2 — primeira geração ou não seletivo."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bisoprolol — antagonismo beta1, beta2 e alfa1 — terceira geração ou vasodilatador."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Carvedilol — antagonismo beta1, beta2 e alfa1 — terceira geração ou vasodilatador."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Metoprolol — antagonismo beta1 e beta2 — primeira geração ou não seletivo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "objetivas-004",
+      "label": "Questão 4",
+      "category": "Betabloqueadores",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Segundo os cuidados apresentados na aula, qual associação está correta quanto ao uso de betabloqueadores em pacientes diabéticos e asmáticos?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula destaca dois cuidados: em pacientes diabéticos, betabloqueadores podem mascarar sinais e sintomas de hipoglicemia; em pacientes asmáticos, há risco de broncoconstrição.\nAlternativa 1: Incorreta: o mascaramento de sinais e sintomas de hipoglicemia está de acordo com a aula, mas a ausência de risco de broncoconstrição contradiz o cuidado destacado para asmáticos.\nAlternativa 2: Correta: associa os dois cuidados explicitamente apresentados na aula.\nAlternativa 3: Incorreta: reconhece o risco de broncoconstrição em asmáticos, mas nega o mascaramento de sinais e sintomas de hipoglicemia descrito para diabéticos.\nAlternativa 4: Incorreta: nega os dois cuidados apresentados na aula.\nAlternativa 5: Incorreta: o mascaramento de sinais e sintomas de hipoglicemia está de acordo com a aula, mas o material destaca risco de broncoconstrição em asmáticos, não broncodilatação."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "betabloqueadores",
+        "asma",
+        "hipoglicemia",
+        "broncoconstrição"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Podem mascarar sinais e sintomas de hipoglicemia, mas não há risco de broncoconstrição em asmáticos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Podem mascarar sinais e sintomas de hipoglicemia; em asmáticos, há risco de broncoconstrição."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Não mascaram sinais e sintomas de hipoglicemia; em asmáticos, há risco de broncoconstrição."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Não mascaram sinais e sintomas de hipoglicemia e não há risco de broncoconstrição em asmáticos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Podem mascarar sinais e sintomas de hipoglicemia e provocam broncodilatação em asmáticos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-005",
+      "label": "Questão 5",
+      "category": "Antagonistas alfa-adrenérgicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual consequência hemodinâmica é mais diretamente associada, no material, ao antagonismo alfa1 nos vasos sanguíneos?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O esquema da aula mostra que o bloqueio alfa1 reduz o efeito vasoconstritor simpático, favorecendo vasodilatação e redução da resistência vascular periférica, o que contribui para diminuir a pressão arterial.\nAlternativa 1: Correta: é o efeito hemodinâmico mostrado para o bloqueio alfa1.\nAlternativa 2: Incorreta: isso corresponde ao efeito da ativação alfa1, não ao antagonismo.\nAlternativa 3: Incorreta: não descreve a ação dos antagonistas alfa1.\nAlternativa 4: Incorreta: esse é o alvo dos IECA.\nAlternativa 5: Incorreta: essa é a estratégia farmacológica exemplificada pelo alisquireno."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "alfa1",
+        "vasodilatação",
+        "resistência vascular periférica"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Vasodilatação e redução da resistência vascular periférica."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Vasoconstrição e aumento da resistência vascular periférica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumento direto da frequência cardíaca por agonismo beta1."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueio da conversão de angiotensina I em angiotensina II."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Inibição direta da renina."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-006",
+      "label": "Questão 6",
+      "category": "Simpatolíticos de ação central",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual associação entre fármaco, mecanismo e uso clínico está de acordo com a aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula apresenta clonidina e alfametildopa como agonistas de receptores alfa2 de ação pré-sináptica e destaca a alfametildopa nas hipertensões da gravidez e pré-eclâmpsia.\nAlternativa 1: Correta: mecanismo e indicação aparecem no material.\nAlternativa 2: Incorreta: clonidina é apresentada como agonista alfa2 de ação central; alopecia tópica é associada ao minoxidil.\nAlternativa 3: Incorreta: a aula não classifica a alfametildopa como antagonista beta1.\nAlternativa 4: Incorreta: clonidina é classificada como simpatolítico de ação central.\nAlternativa 5: Incorreta: o inibidor direto de renina apresentado é o alisquireno."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "clonidina",
+        "metildopa",
+        "alfa2",
+        "gestação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Alfametildopa — agonista alfa2 de ação central — uso em hipertensão na gravidez."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Clonidina — antagonista alfa1 periférico — tratamento tópico de alopecia."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Alfametildopa — antagonista beta1 — tratamento de arritmias."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Clonidina — bloqueador de canal de cálcio — prevenção de angina."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Alfametildopa — inibidor direto de renina — tratamento de nefropatia diabética."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-007",
+      "label": "Questão 7",
+      "category": "Bloqueadores de canais de cálcio",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual comparação entre diidropiridinas e verapamil/diltiazem corresponde ao conteúdo da aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula associa as diidropiridinas principalmente à vasodilatação arterial e redução da resistência vascular periférica. Verapamil e diltiazem, além de uso em HAS, angina e arritmias, apresentam cronotropismo e inotropismo negativos.\nAlternativa 1: Correta: é a diferenciação funcional apresentada na aula.\nAlternativa 2: Incorreta: esses alvos pertencem a outras classes farmacológicas.\nAlternativa 3: Incorreta: ambas pertencem à classe dos bloqueadores de canais de cálcio.\nAlternativa 4: Incorreta: o material destaca taquicardia reflexa entre os efeitos das diidropiridinas e bradicardia para verapamil/diltiazem.\nAlternativa 5: Incorreta: a aula diferencia claramente seus efeitos e reações adversas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "bloqueadores de canais de cálcio",
+        "diidropiridinas",
+        "verapamil",
+        "diltiazem"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diidropiridinas promovem vasodilatação arterial; verapamil e diltiazem apresentam efeitos cronotrópico e inotrópico negativos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diidropiridinas reduzem diretamente a renina; verapamil e diltiazem bloqueiam receptores AT1."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diidropiridinas são agonistas alfa2; verapamil e diltiazem são antagonistas alfa1."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diidropiridinas causam predominantemente bradicardia; verapamil e diltiazem causam taquicardia reflexa."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "As duas subclasses são descritas como tendo exatamente o mesmo efeito cardiovascular e as mesmas reações adversas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-008",
+      "label": "Questão 8",
+      "category": "Vasodilatadores diretos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Em relação ao nitroprussiato de sódio, qual conjunto de cuidados e risco adverso está explicitamente destacado na aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O material orienta proteger o nitroprussiato da luz, administrá-lo em bomba de infusão e avaliar risco de intoxicação por cianeto, sobretudo em idosos ou pacientes com insuficiência renal.\nAlternativa 1: Correta: os três cuidados são destacados no material.\nAlternativa 2: Incorreta: contradiz os cuidados apresentados.\nAlternativa 3: Incorreta: alopecia tópica e crescimento de pelos são associados ao minoxidil.\nAlternativa 4: Incorreta: a aula afirma exatamente o contrário.\nAlternativa 5: Incorreta: tosse por bradicinina é associada aos IECA."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "nitroprussiato de sódio",
+        "emergência hipertensiva",
+        "cianeto"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Proteger da luz, administrar em bomba de infusão e monitorar risco de intoxicação por cianeto."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Administrar exclusivamente por via oral e evitar proteção da luz."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Usar apenas para alopecia e monitorar principalmente crescimento de pelos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Evitar bomba de infusão porque o fármaco é estável à luz e não apresenta risco tóxico relevante."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Seu principal cuidado é prevenir tosse seca por aumento de bradicinina."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-009",
+      "label": "Questão 9",
+      "category": "Sistema renina-angiotensina-aldosterona",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Segundo o esquema do SRAA apresentado na aula, qual conjunto de efeitos é associado à ativação de receptores AT1 pela angiotensina II?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O material associa receptores AT1 à vasoconstrição de arteríolas, reabsorção renal de sódio, ativação simpática, efeitos hipertróficos e proliferativos, liberação de aldosterona e liberação de ADH.\nAlternativa 1: Incorreta: o esquema associa AT1 a efeitos opostos a esses.\nAlternativa 2: Correta: todos esses efeitos aparecem no esquema do SRAA.\nAlternativa 3: Incorreta: esses efeitos não são os atribuídos aos receptores AT1 no material.\nAlternativa 4: Incorreta: mistura mecanismos farmacológicos não descritos como ação do AT1.\nAlternativa 5: Incorreta: o material mostra efeitos vasculares, renais e neuro-hormonais."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "SRAA",
+        "angiotensina II",
+        "AT1",
+        "aldosterona",
+        "ADH"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Vasodilatação, natriurese e redução da atividade simpática."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Vasoconstrição, reabsorção renal de sódio, ativação simpática e liberação de aldosterona."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Cronotropismo negativo, broncodilatação e redução de ADH."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueio da renina, redução de aldosterona por agonismo alfa2 e aumento da filtração glomerular como único efeito."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Apenas efeitos hipertróficos, sem qualquer ação vascular ou renal."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-010",
+      "label": "Questão 10",
+      "category": "IECA e BRA",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Segundo a aula, qual alternativa diferencia IECA e BRA quanto à tosse seca e ao angioedema?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula relaciona tosse seca e angioedema dos IECA ao aumento de bradicinina. Para os BRA, apresenta como vantagem não causar tosse nem angioedema. Ambas as classes, porém, podem causar hipotensão e hipercalemia e são contraindicadas na gestação no material.\nAlternativa 1: Correta: essa diferença é explicitamente apresentada no material.\nAlternativa 2: Incorreta: inverte as características descritas na aula.\nAlternativa 3: Incorreta: hipercalemia aparece entre os efeitos adversos de ambas as classes.\nAlternativa 4: Incorreta: o material os apresenta como contraindicados durante a gestação.\nAlternativa 5: Incorreta: os BRA bloqueiam receptores AT1; o inibidor direto de renina apresentado é o alisquireno."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "IECA",
+        "BRA",
+        "bradicinina",
+        "tosse",
+        "angioedema"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A tosse é destacada para IECA por aumento de bradicinina, enquanto os BRA são apresentados como não causadores de tosse e angioedema."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "A tosse é característica dos BRA, enquanto os IECA são apresentados como isentos de angioedema."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Somente os BRA podem causar hipercalemia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "IECA e BRA são descritos como seguros durante a gestação."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Os BRA atuam inibindo diretamente a renina, por isso não causam tosse."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "dissertativas-001",
+      "label": "Questão 11",
+      "category": "Integração da regulação da pressão arterial",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Explique como a regulação simpática e o sistema renina-angiotensina-aldosterona contribuem para a manutenção ou elevação da pressão arterial e relacione esses mecanismos com pelo menos duas estratégias farmacológicas apresentadas na aula."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A resposta deve integrar os determinantes PA = DC x RVP, as ações simpáticas sobre coração, vasos e rim e os efeitos do SRAA, relacionando esses pontos a classes farmacológicas presentes no material."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "pressão arterial",
+        "simpático",
+        "SRAA",
+        "integração farmacológica"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A pressão arterial depende do débito cardíaco e da resistência vascular periférica. A atividade simpática pode elevar o débito cardíaco por ações beta1 no coração, aumentar a resistência vascular por vasoconstrição alfa1 e estimular liberação de renina por receptores beta1 renais. A renina inicia a ativação do SRAA, culminando em angiotensina II atuando em receptores AT1, com vasoconstrição, reabsorção de sódio, ativação simpática e liberação de aldosterona e ADH. Entre as estratégias farmacológicas da aula, betabloqueadores reduzem efeitos beta-adrenérgicos, antagonistas alfa1 reduzem a vasoconstrição periférica e IECA ou BRA reduzem a ação do SRAA em pontos distintos.\nPontos esperados:\nReconhecer PA = DC x RVP.\nRelacionar beta1 cardíaco a frequência/força e débito cardíaco.\nRelacionar alfa1 vascular a vasoconstrição e resistência vascular periférica.\nRelacionar beta1 renal à renina e ao SRAA.\nDescrever efeitos de angiotensina II em AT1 sustentados pela aula.\nRelacionar pelo menos duas classes farmacológicas aos mecanismos descritos."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-002",
+      "label": "Questão 12",
+      "category": "Fármacos que atuam no SRAA",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Compare IECA, bloqueadores do receptor AT1 e inibidor direto de renina quanto ao ponto de ação descrito na aula, exemplos de fármacos e principais efeitos adversos ou cuidados destacados."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A questão exige comparação entre três estratégias farmacológicas do SRAA usando apenas os exemplos, indicações, efeitos adversos e cuidados explicitados no material."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "IECA",
+        "BRA",
+        "alisquireno",
+        "SRAA"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "Os IECA atuam sobre a enzima conversora de angiotensina; a aula cita captopril, enalapril, ramipril, benazepril, lisinopril e fosinopril. Entre os efeitos adversos destacados estão hipotensão, hipercalemia, tosse seca e angioedema relacionados ao aumento de bradicinina, além de contraindicação na gestação. Os BRA bloqueiam receptores AT1; são citados losartana, valsartana, candesartana, telmisartana, olmesartana e irbesartana. Podem causar hipotensão e hipercalemia, são contraindicados na gestação e a aula destaca como vantagem não causar tosse nem angioedema. O inibidor direto de renina apresentado é o alisquireno, indicado para HAS de estágios 1, 2 e 3, com hipotensão e hipercalemia entre os efeitos adversos e contraindicação na gestação.\nPontos esperados:\nIdentificar IECA como inibidores da enzima conversora de angiotensina.\nCitar ao menos um IECA apresentado na aula.\nRelacionar IECA a tosse seca e angioedema por aumento de bradicinina.\nIdentificar BRA como bloqueadores do receptor AT1 e citar ao menos um exemplo.\nDestacar que a aula apresenta os BRA como não causadores de tosse e angioedema.\nIdentificar alisquireno como inibidor direto de renina.\nReconhecer hipotensão e hipercalemia como efeitos adversos destacados nas classes comparadas.\nReconhecer a contraindicação durante a gestação conforme o material."
+        }
+      ]
+    }
+  ]
+}
