@@ -14,7 +14,7 @@ Todos os enunciados/categorias/opções/gabaritos/modelos permanecem na ordem or
 | Legado | JSON previsto | Classificação | Total | Obj. | Diss. | Paridade |
 |---|---|---|---:|---:|---:|---|
 | `simulados/farmaco-p2-Simulado-2023.html` | `data/exams/farmaco-p2-2023.json` | objetiva simples; conteúdo rico | 35 | 35 | 0 | OK — schema + DOM integral |
-| `simulados/farmaco-p2-Simulado-2024.html` | `data/exams/farmaco-p2-2024.json` | objetiva simples; conteúdo rico | 34 | 34 | 0 | Pendente |
+| `simulados/farmaco-p2-Simulado-2024.html` | `data/exams/farmaco-p2-2024.json` | objetiva simples; conteúdo rico | 34 | 34 | 0 | OK — schema + DOM integral |
 | `simulados/farmaco-p2-Simulado-2025.html` | `data/exams/farmaco-p2-2025.json` | objetiva simples; conteúdo rico | 42 | 42 | 0 | Pendente |
 | `simulados/fisiologia-aula-m5-2-Hormônios Pancreáticos.html` | `data/exams/fisiologia-m5-aula-2.json` | mista; conteúdo rico | 25 | 20 | 5 | Pendente |
 | `simulados/fisiologia-m5-Endocrino em Grupo.html` | `data/exams/fisiologia-m5-endocrino-em-grupo-2026.json` | dissertativa; caso/subitem; conteúdo rico/tabela | 8 | 0 | 8 | Pendente |
