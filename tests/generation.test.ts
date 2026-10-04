@@ -450,9 +450,11 @@ it.each(['statements', 'options', 'correctIndex', 'extra', 'html', 'url'])(
     if (mode === 'extra') Object.assign(q, { id: 'model-id' });
     if (mode === 'html') q.statement = '<script>execute()</script>';
     if (mode === 'url') q.statement = 'Visit https://example.com';
-    network.mockResolvedValue(api(output));
-    await expect(live()).rejects.toThrow();
-    await noArtifacts();
+  network.mockResolvedValue(api(output));
+  const error = await live().catch((value: unknown) => value);
+  expect(error).toBeInstanceOf(Error);
+  expect(safeGenerationError(error, key)).toContain('zero retry');
+  await noArtifacts();
   },
 );
 it.each([401, 403, 429, 500, 503])('HTTP %s sem retry ou arquivos', async (status) => {

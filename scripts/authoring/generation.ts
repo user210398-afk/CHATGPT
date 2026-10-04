@@ -197,9 +197,11 @@ export async function importGeneration(
 export function safeGenerationError(error: unknown, key?: string) {
   // Zod issues may contain attacker-controlled text; return only a bounded generic message.
   if (error instanceof z.ZodError)
-    return 'Configuração, structured output ou metadata inválidos; nenhum candidate foi gravado';
+    return 'Configuração, structured output ou metadata inválidos; nenhum candidate foi gravado. Nenhuma segunda chamada foi feita (zero retry).';
   if (error instanceof GenerationError || error instanceof assert.AssertionError) {
-    const message = error.message;
+    const message = error.message.includes('zero retry')
+      ? error.message
+      : `${error.message}. Nenhuma segunda chamada foi feita (zero retry).`;
     return key ? message.split(key).join('[REDACTED]') : message;
   }
   return 'Geração falhou; nenhum candidate parcial foi mantido. Não houve retry automático';
