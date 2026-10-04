@@ -1,5 +1,12 @@
 # Evidências e limites da validação da Fase 2
 
+> Registro histórico da entrega da Fase 2. A POC e os números de testes abaixo
+> descrevem aquela fase: as outras 16 provas foram migradas na
+> [Fase 3](PHASE3_MIGRATION.md), totalizando 17 JSONs / 485 questões / 462
+> objetivas / 23 dissertativas. CI, QA de release e Pages preparado estão na
+> [Fase 4](PHASE4_RELEASE_READINESS.md). O contrato para a Fase 3 foi cumprido;
+> restrições históricas de CI/workflow não descrevem o estado atual.
+
 ## Base Git validada antes da implementação
 
 Data: 03/10/2026. Repositório exclusivo: `user210398-afk/CHATGPT`.
