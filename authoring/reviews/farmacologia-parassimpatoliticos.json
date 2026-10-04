@@ -1,0 +1,35 @@
+{
+  "authoringVersion": 1,
+  "examId": "farmacologia-parassimpatoliticos",
+  "status": "approved",
+  "source": {
+    "fileName": "Parassimpatoliticos.pdf",
+    "sha256": "f359b553800831fd712adb4b5be95804c6703a66a762cd8210e4da975b37aa9d"
+  },
+  "generation": {
+    "mode": "ai-assisted",
+    "provider": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1"
+  },
+  "requirements": {
+    "objectiveCount": 20,
+    "essayCount": 5,
+    "optionsPerObjective": 5
+  },
+  "checks": {
+    "sourceCoverageReviewed": true,
+    "answerKeyReviewed": true,
+    "explanationsReviewed": true,
+    "duplicateCheckReviewed": true
+  },
+  "reviewedBy": "ChatGPT",
+  "notes": [
+    "Schema válido não garante correção acadêmica. Source anchors auxiliam revisão, sem garantia factual.",
+    "Pré-revisão acadêmica assistida de todas as 25 questões concluída com alterações, usando exclusivamente Parassimpatoliticos.pdf, inclusive diagramas e tabelas/diretrizes das páginas finais; allowExternalKnowledge=false. Candidate revision 1 → 2. A aprovação anterior não foi registrada, pois o conteúdo acadêmico mudou; nova aprovação humana obrigatória.",
+    "Q8 (objetivas-008), p. 11: o distrator 2 atribuía dilatação acentuada das pupilas à dose de 2 mg, mas a tabela informa dilatação das pupilas sem esse qualificativo; acentuado refere-se ao ressecamento da boca. Removido acentuada da alternativa e explicitada a comparação entre 2 mg e 0,5 mg no rationale incorporado à explanation. Gabarito preservado.",
+    "Q15 (objetivas-015), p. 17: a alternativa correta podia atribuir à fisostigmina a competição com atropina. Explicitado, na alternativa e na explanation, que a fisostigmina é anticolinesterásico e aumenta acetilcolina, e que esta compete com atropina no receptor muscarínico, conforme o slide. Gabarito preservado.",
+    "As demais questões, alternativas, gabaritos, rationales, explanations, respostas-modelo e expectedPoints foram conferidos contra a fonte sem outras alterações necessárias. Source anchors revisados; a fosfolipase C citada no rationale da Q1 está no diagrama da p. 4. Há retomadas temáticas de efeitos cardíacos e sistêmicos, sem questões idênticas ou cópia de exercícios da fonte; não há casos clínicos inventados. Generation record e sourceAnchors originais preservados integralmente como evidência da geração.",
+    "Aprovação registrada após declaração explícita do usuário/revisor; a CLI não decide a aprovação acadêmica."
+  ]
+}

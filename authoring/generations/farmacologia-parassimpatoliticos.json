@@ -1,0 +1,253 @@
+{
+  "generationVersion": 1,
+  "examId": "farmacologia-parassimpatoliticos",
+  "source": {
+    "fileName": "Parassimpatoliticos.pdf",
+    "sha256": "f359b553800831fd712adb4b5be95804c6703a66a762cd8210e4da975b37aa9d",
+    "sizeBytes": 2089260
+  },
+  "request": {
+    "examId": "farmacologia-parassimpatoliticos",
+    "subject": "Farmacologia Básica",
+    "year": null,
+    "division": "2º ano FMJ",
+    "title": "Farmacologia do Sistema Nervoso Autônomo — Parassimpatolíticos",
+    "language": "pt-BR",
+    "objectiveCount": 20,
+    "essayCount": 5,
+    "optionsPerObjective": 5,
+    "difficulty": {
+      "easy": 0.2,
+      "medium": 0.6,
+      "hard": 0.2
+    },
+    "focusTopics": [],
+    "excludeTopics": [],
+    "allowExternalKnowledge": false
+  },
+  "provider": {
+    "name": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1",
+    "detail": "low"
+  },
+  "response": {
+    "id": null,
+    "usage": null
+  },
+  "coverage": {
+    "topicsDetected": [
+      "síntese e degradação da acetilcolina",
+      "receptores muscarínicos e nicotínicos",
+      "efeitos da estimulação muscarínica",
+      "mecanismo dos antagonistas muscarínicos",
+      "atropina",
+      "escopolamina e butilbrometo de escopolamina",
+      "ipatrópio e tiotrópio",
+      "oxibutinina e darifenacina",
+      "biperideno e triexifenidil",
+      "efeitos oculares e glaucoma",
+      "intoxicação por antimuscarínicos",
+      "fisostigmina",
+      "efeitos dose-dependentes da atropina",
+      "segurança dos anticolinérgicos"
+    ],
+    "topicsUsed": [
+      "síntese e degradação da acetilcolina",
+      "receptores muscarínicos e nicotínicos",
+      "efeitos da estimulação muscarínica",
+      "mecanismo dos antagonistas muscarínicos",
+      "atropina",
+      "escopolamina e butilbrometo de escopolamina",
+      "ipatrópio e tiotrópio",
+      "oxibutinina e darifenacina",
+      "biperideno e triexifenidil",
+      "efeitos oculares e glaucoma",
+      "intoxicação por antimuscarínicos",
+      "fisostigmina",
+      "efeitos dose-dependentes da atropina"
+    ],
+    "topicsSkipped": [
+      "etimologia mitológica do nome atropina",
+      "lista comercial completa de marcas e concentrações",
+      "referências bibliográficas da aula"
+    ]
+  },
+  "insufficiency": {
+    "detected": false,
+    "reason": null
+  },
+  "difficultyCounts": {
+    "easy": 5,
+    "medium": 15,
+    "hard": 5
+  },
+  "questions": [
+    {
+      "questionId": "objetivas-001",
+      "sourceAnchors": [
+        "p. 3 — síntese de acetilcolina por colina-acetiltransferase e degradação por acetilcolinesterase."
+      ]
+    },
+    {
+      "questionId": "objetivas-002",
+      "sourceAnchors": [
+        "p. 5 — Nm na musculatura somática e Nn nos gânglios do sistema nervoso autônomo."
+      ]
+    },
+    {
+      "questionId": "objetivas-003",
+      "sourceAnchors": [
+        "p. 7 — antagonistas competitivos muscarínicos com afinidade presente e atividade zero."
+      ]
+    },
+    {
+      "questionId": "objetivas-004",
+      "sourceAnchors": [
+        "p. 8 — atropina e escopolamina entre os alcaloides naturais."
+      ]
+    },
+    {
+      "questionId": "objetivas-005",
+      "sourceAnchors": [
+        "p. 10 — atropina como pré-anestésico para reduzir salivação e peristaltismo intestinal."
+      ]
+    },
+    {
+      "questionId": "objetivas-006",
+      "sourceAnchors": [
+        "p. 6 — consequências da estimulação de receptores muscarínicos."
+      ]
+    },
+    {
+      "questionId": "objetivas-007",
+      "sourceAnchors": [
+        "p. 9 — esquema de efeitos anticolinérgicos em olho, coração, pele, trato gastrointestinal e SNC."
+      ]
+    },
+    {
+      "questionId": "objetivas-008",
+      "sourceAnchors": [
+        "p. 11 — tabela de efeitos da atropina conforme a dose."
+      ]
+    },
+    {
+      "questionId": "objetivas-009",
+      "sourceAnchors": [
+        "p. 10 — atropina no bloqueio de efeitos muscarínicos graves causados por carbamatos e organofosforados."
+      ]
+    },
+    {
+      "questionId": "objetivas-010",
+      "sourceAnchors": [
+        "p. 13 — butilbrometo de escopolamina como antiespasmódico em cólicas de musculatura lisa."
+      ]
+    },
+    {
+      "questionId": "objetivas-011",
+      "sourceAnchors": [
+        "p. 14 — músculo circular M3, midríase por anticolinérgicos e prejuízo da drenagem do humor aquoso."
+      ]
+    },
+    {
+      "questionId": "objetivas-012",
+      "sourceAnchors": [
+        "p. 12 — ipratrópio e tiotrópio em broncoespasmo por inalação.",
+        "p. 15 — uso respiratório e potencialização da broncodilatação com agonistas beta-adrenérgicos.",
+        "p. 19 — resumo de ipratrópio e tiotrópio no tratamento de broncoespasmo."
+      ]
+    },
+    {
+      "questionId": "objetivas-013",
+      "sourceAnchors": [
+        "p. 15 — oxibutinina e darifenacina no trato geniturinário, reduzindo pressão e contrações vesicais.",
+        "p. 16 — esquema da bexiga com receptor M3 e ação de oxibutinina e darifenacina."
+      ]
+    },
+    {
+      "questionId": "objetivas-014",
+      "sourceAnchors": [
+        "p. 12 — biperideno e triexifenidil no parkinsonismo.",
+        "p. 19 — resumo do uso em Parkinson e síndrome parkinsonóide.",
+        "p. 20 — ação central e controle de sintomas extrapiramidais."
+      ]
+    },
+    {
+      "questionId": "objetivas-015",
+      "sourceAnchors": [
+        "p. 17 — fisostigmina intravenosa no tratamento sintomático da intoxicação por antagonistas muscarínicos."
+      ]
+    },
+    {
+      "questionId": "objetivas-016",
+      "sourceAnchors": [
+        "p. 17 — benzodiazepínicos em caso de convulsão durante intoxicação antimuscarínica."
+      ]
+    },
+    {
+      "questionId": "objetivas-017",
+      "sourceAnchors": [
+        "p. 10 — bloqueio dos efeitos vagais sobre o coração e redução da bradicardia.",
+        "p. 9 — aumento da frequência cardíaca por bloqueio vagal."
+      ]
+    },
+    {
+      "questionId": "objetivas-018",
+      "sourceAnchors": [
+        "p. 9 — redução de ácido estomacal, secreção pancreática e peristaltismo no bloqueio anticolinérgico."
+      ]
+    },
+    {
+      "questionId": "objetivas-019",
+      "sourceAnchors": [
+        "p. 12 — homatropina em oftalmologia como midriático; atropina também citada."
+      ]
+    },
+    {
+      "questionId": "objetivas-020",
+      "sourceAnchors": [
+        "p. 6 — diminuição da frequência cardíaca por M2.",
+        "p. 9 — aumento da frequência cardíaca por bloqueio vagal com anticolinérgicos."
+      ]
+    },
+    {
+      "questionId": "dissertativas-001",
+      "sourceAnchors": [
+        "p. 6 — efeitos da estimulação muscarínica.",
+        "p. 7 — antagonistas competitivos muscarínicos.",
+        "p. 9 — efeitos anticolinérgicos em múltiplos órgãos.",
+        "p. 14 — efeitos oculares do bloqueio anticolinérgico.",
+        "p. 15-16 — efeitos sobre o trato geniturinário."
+      ]
+    },
+    {
+      "questionId": "dissertativas-002",
+      "sourceAnchors": [
+        "p. 10 — usos terapêuticos da atropina.",
+        "p. 12-13 — usos de homatropina, biperideno, triexifenidil, butilbrometo de escopolamina, ipratrópio, tiotrópio, oxibutinina e darifenacina.",
+        "p. 15 — usos respiratórios e geniturinários.",
+        "p. 19 — resumo dos principais fármacos e usos."
+      ]
+    },
+    {
+      "questionId": "dissertativas-003",
+      "sourceAnchors": [
+        "p. 11 — tabela completa de efeitos da atropina em 0,5 mg, 1 mg, 2 mg, 5 mg e 10 mg ou mais."
+      ]
+    },
+    {
+      "questionId": "dissertativas-004",
+      "sourceAnchors": [
+        "p. 17 — intoxicações por antagonistas muscarínicos, fisostigmina intravenosa e benzodiazepínicos em convulsão."
+      ]
+    },
+    {
+      "questionId": "dissertativas-005",
+      "sourceAnchors": [
+        "p. 14 — musculatura circular M3, musculatura radial alfa-adrenérgica, midríase e drenagem do humor aquoso.",
+        "p. 22 — alerta de segurança sobre glaucoma de ângulo fechado."
+      ]
+    }
+  ],
+  "createdAt": "2026-10-04T21:46:28.098Z"
+}

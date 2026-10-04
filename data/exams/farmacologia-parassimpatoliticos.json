@@ -1,0 +1,1628 @@
+{
+  "schemaVersion": 1,
+  "revision": 2,
+  "id": "farmacologia-parassimpatoliticos",
+  "title": "Farmacologia do Sistema Nervoso Autônomo — Parassimpatolíticos",
+  "subject": "Farmacologia Básica",
+  "year": null,
+  "division": "2º ano FMJ",
+  "description": "Questões baseadas exclusivamente na aula sobre parassimpatolíticos e antagonistas colinérgicos, com foco em mecanismos, efeitos, usos terapêuticos, intoxicações e segurança.",
+  "tags": [
+    "Farmacologia Básica",
+    "Sistema Nervoso Autônomo",
+    "Parassimpatolíticos",
+    "Antagonistas muscarínicos"
+  ],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "Parassimpatoliticos.pdf",
+    "sourceSha256": "f359b553800831fd712adb4b5be95804c6703a66a762cd8210e4da975b37aa9d",
+    "notes": [
+      "Candidate assistido por IA; revisão humana obrigatória de fonte, gabaritos e explicações."
+    ]
+  },
+  "questions": [
+    {
+      "id": "objetivas-001",
+      "label": "Questão 1",
+      "category": "Sistema colinérgico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual enzima catalisa a formação de acetilcolina a partir de colina e acetil-coenzima A, segundo a aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A síntese mostrada na aula ocorre a partir de colina e acetil-coenzima A, catalisada pela colina-acetiltransferase; a acetilcolina é degradada pela acetilcolinesterase.\nAlternativa 1: Correta. A aula apresenta a colina-acetiltransferase como a enzima da síntese de acetilcolina.\nAlternativa 2: Incorreta. A acetilcolinesterase participa da degradação da acetilcolina.\nAlternativa 3: Incorreta. A aula a relaciona à sinalização de receptores muscarínicos, não à síntese de acetilcolina.\nAlternativa 4: Incorreta. Essa enzima não é apresentada como responsável pela síntese de acetilcolina.\nAlternativa 5: Incorreta. Essa enzima não é apresentada como responsável pela síntese de acetilcolina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "acetilcolina",
+        "síntese",
+        "colina-acetiltransferase"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Colina-acetiltransferase"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Acetilcolinesterase"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Fosfolipase C"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Monoaminoxidase"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Catecol-O-metiltransferase"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-002",
+      "label": "Questão 2",
+      "category": "Receptores nicotínicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual associação entre os subtipos nicotínicos Nm e Nn está correta?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula divide os receptores nicotínicos em Nm, associados à musculatura somática e junção mionervosa, e Nn, presentes nos gânglios do sistema nervoso autônomo.\nAlternativa 1: Incorreta. A aula apresenta essa distribuição de forma invertida.\nAlternativa 2: Correta. É a divisão apresentada na aula.\nAlternativa 3: Incorreta. Ambos são receptores nicotínicos ionotrópicos.\nAlternativa 4: Incorreta. Essa distribuição não é apresentada na aula.\nAlternativa 5: Incorreta. A aula os localiza em junção neuromuscular e gânglios autonômicos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "receptores nicotínicos",
+        "Nm",
+        "Nn"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Nm está nos gânglios autonômicos e Nn na junção neuromuscular somática."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Nm está na musculatura somática, enquanto Nn está nos gânglios do sistema nervoso autônomo."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Nm e Nn são ambos receptores muscarínicos metabotrópicos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Nm atua apenas no coração e Nn apenas na íris."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Nm e Nn são receptores exclusivos do sistema nervoso central."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-003",
+      "label": "Questão 3",
+      "category": "Mecanismo dos parassimpatolíticos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Como a aula caracteriza os antagonistas farmacológicos competitivos muscarínicos?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Os parassimpatolíticos são apresentados como antagonistas competitivos muscarínicos que têm afinidade pelo receptor colinérgico, porém não o ativam.\nAlternativa 1: Incorreta. A aula descreve afinidade presente e ausência de atividade.\nAlternativa 2: Incorreta. A atividade é apresentada como zero.\nAlternativa 3: Correta. A aula resume como afinidade igual a 1 e atividade igual a zero.\nAlternativa 4: Incorreta. O antagonista precisa ter afinidade para ocupar o receptor.\nAlternativa 5: Incorreta. A descrição da aula exige afinidade e ausência de atividade."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "parassimpatolíticos",
+        "antagonismo competitivo",
+        "receptor muscarínico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Sem afinidade e com atividade máxima."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Com afinidade e atividade parcial."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Com afinidade pelo receptor, mas sem atividade intrínseca."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Sem afinidade e sem atividade."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Com atividade, mas sem afinidade pelo receptor."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-004",
+      "label": "Questão 4",
+      "category": "Classificação de fármacos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual par é apresentado na aula como formado por alcaloides naturais anticolinérgicos?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Na classificação apresentada, atropina e escopolamina aparecem como alcaloides naturais, enquanto diversos outros antimuscarínicos são listados como sintéticos.\nAlternativa 1: Incorreta. A aula os coloca entre os fármacos sintéticos.\nAlternativa 2: Incorreta. A aula os lista entre os sintéticos.\nAlternativa 3: Incorreta. A aula os lista entre os sintéticos.\nAlternativa 4: Correta. São os dois alcaloides naturais destacados.\nAlternativa 5: Incorreta. Não são o par de alcaloides naturais destacado na classificação da aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "atropina",
+        "escopolamina",
+        "classificação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ipratrópio e tiotrópio"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Oxibutinina e darifenacina"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Biperideno e triexifenidil"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Atropina e escopolamina"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Pirenzepina e homatropina"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "objetivas-005",
+      "label": "Questão 5",
+      "category": "Atropina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual finalidade pré-anestésica da atropina é explicitamente citada na aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula cita a atropina como pré-anestésico para diminuir salivação e peristaltismo intestinal durante anestesia e intubação.\nAlternativa 1: Incorreta. A finalidade citada é reduzi-los.\nAlternativa 2: Correta. Esse uso é explicitamente apresentado.\nAlternativa 3: Incorreta. A broncoconstrição é um efeito muscarínico, não o objetivo descrito para atropina.\nAlternativa 4: Incorreta. Anticolinérgicos reduzem a sudorese.\nAlternativa 5: Incorreta. O bloqueio muscarínico tende a reduzir o tono e a atividade vesical."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "atropina",
+        "pré-anestésico",
+        "salivação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumentar a salivação e o peristaltismo."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diminuir a salivação e o peristaltismo intestinal durante anestesia e intubação."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Produzir broncoconstrição para facilitar a intubação."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumentar a sudorese no período pré-operatório."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimular a contração do detrusor."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-006",
+      "label": "Questão 6",
+      "category": "Efeitos muscarínicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual conjunto corresponde a efeitos atribuídos à estimulação muscarínica na aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A estimulação muscarínica apresentada na aula reduz a frequência cardíaca por M2 e pode provocar broncoconstrição, salivação e lacrimejamento por M3.\nAlternativa 1: Incorreta. Esses efeitos se alinham mais ao bloqueio muscarínico.\nAlternativa 2: Correta. A aula atribui esses efeitos a M2 e M3.\nAlternativa 3: Incorreta. Esses efeitos aparecem no contexto anticolinérgico.\nAlternativa 4: Incorreta. São efeitos associados ao antagonismo muscarínico.\nAlternativa 5: Incorreta. A aula relaciona a estimulação muscarínica a miose, broncoconstrição e aumento de secreções."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "receptores muscarínicos",
+        "M2",
+        "M3"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumento da frequência cardíaca, midríase e redução da salivação."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diminuição da frequência cardíaca, broncoconstrição e aumento da salivação."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diminuição da motilidade gástrica, retenção urinária e pele seca."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Taquicardia, redução da sudorese e boca seca."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Midríase, broncodilatação e redução do suco gástrico."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-007",
+      "label": "Questão 7",
+      "category": "Efeitos anticolinérgicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual combinação representa efeitos anticolinérgicos mostrados no esquema da atropina?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O material relaciona anticolinérgicos a midríase, aumento da frequência cardíaca por bloqueio vagal e pele quente e seca por redução da sudorese.\nAlternativa 1: Incorreta. O esquema mostra o padrão oposto para anticolinérgicos.\nAlternativa 2: Correta. Esses efeitos são destacados no material.\nAlternativa 3: Incorreta. São efeitos associados à estimulação colinérgica.\nAlternativa 4: Incorreta. O bloqueio muscarínico reduz secreções e peristaltismo.\nAlternativa 5: Incorreta. O esquema anticolinérgico mostra redução da sudorese e do tono vesical e aumento da frequência cardíaca."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "atropina",
+        "efeitos anticolinérgicos",
+        "midríase"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Miose, bradicardia e aumento da sudorese."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Midríase, aumento da frequência cardíaca e pele quente e seca."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Broncoconstrição, aumento da salivação e diarreia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumento do peristaltismo, miose e secreção pancreática aumentada."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Sudorese aumentada, bradicardia e contração vesical."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-008",
+      "label": "Questão 8",
+      "category": "Atropina e dose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Segundo a tabela de efeitos da atropina, qual efeito é associado à dose de 0,5 mg?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Na tabela da aula, 0,5 mg de atropina é relacionado a algum ressecamento da boca e inibição da sudorese.\nAlternativa 1: Incorreta. Esses efeitos aparecem nas doses de 10 mg ou mais.\nAlternativa 2: Incorreta. Para 2 mg, a tabela descreve FC alta, palpitações e dilatação das pupilas; para 0,5 mg, descreve algum ressecamento da boca e inibição da sudorese.\nAlternativa 3: Correta. É o efeito descrito para 0,5 mg.\nAlternativa 4: Incorreta. Esse conjunto aparece em torno de 5 mg.\nAlternativa 5: Incorreta. Esses achados são associados a 10 mg ou mais."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "atropina",
+        "dose",
+        "efeitos adversos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Coma e delírio."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "FC alta, palpitações e dilatação das pupilas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Algum ressecamento da boca e inibição da sudorese."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Dificuldade em falar e deglutir, com pele quente e seca."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Pulso rápido e fraco com alucinação."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-009",
+      "label": "Questão 9",
+      "category": "Atropina e intoxicação colinérgica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual uso da atropina está relacionado ao bloqueio de efeitos muscarínicos graves produzidos por colinomiméticos?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula apresenta a atropina como antagonista capaz de bloquear efeitos muscarínicos graves ou potencialmente letais causados por colinomiméticos, incluindo carbamatos e organofosforados.\nAlternativa 1: Incorreta. Esse uso é associado a oxibutinina e darifenacina.\nAlternativa 2: Incorreta. Esse uso é associado principalmente a ipratrópio e tiotrópio.\nAlternativa 3: Correta. Esse uso é explicitamente apresentado para atropina.\nAlternativa 4: Incorreta. Biperideno e triexifenidil são destacados para esse fim.\nAlternativa 5: Incorreta. A atropina possui múltiplos usos e a aula destaca outros antiespasmódicos para cólicas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "atropina",
+        "organofosforados",
+        "carbamatos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tratamento da incontinência urinária de urgência."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tratamento de broncoespasmo por via inalatória."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueio dos efeitos causados por carbamatos e organofosforados."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tratamento primário do parkinsonismo com ação central."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tratamento de cólicas como uso exclusivo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-010",
+      "label": "Questão 10",
+      "category": "Antiespasmódicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual fármaco é destacado como antiespasmódico para cólicas decorrentes de contratura de musculatura lisa?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O butilbrometo de escopolamina é apresentado como antiespasmódico para cólicas produzidas por contratura de musculatura lisa abdominal e de outros segmentos.\nAlternativa 1: Correta. A aula o destaca para cólicas renais, vesicais, biliares, menstruais e espasmo esofágico.\nAlternativa 2: Incorreta. É destacado para uso inalatório em broncoespasmo.\nAlternativa 3: Incorreta. É destacado para Parkinson e síndrome parkinsonóide.\nAlternativa 4: Incorreta. É destacada para incontinência urinária e bexiga hiperativa.\nAlternativa 5: Incorreta. É apresentada no tratamento de intoxicação por antagonistas muscarínicos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "butilbrometo de escopolamina",
+        "antiespasmódico",
+        "cólicas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Butilbrometo de escopolamina"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tiotrópio"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Biperideno"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Darifenacina"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Fisostigmina"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-011",
+      "label": "Questão 11",
+      "category": "Farmacologia ocular",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual sequência explica corretamente a midríase causada por anticolinérgicos segundo a aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A musculatura circular da íris é apresentada como muscarínica M3 e relacionada à miose. O bloqueio anticolinérgico favorece midríase e pode prejudicar a drenagem do humor aquoso.\nAlternativa 1: Incorreta. A estimulação M3 do músculo circular é relacionada à miose.\nAlternativa 2: Correta. É a relação apresentada no material.\nAlternativa 3: Incorreta. O músculo radial é relacionado a receptores alfa-adrenérgicos.\nAlternativa 4: Incorreta. O mecanismo pupilar descrito envolve receptores muscarínicos M3.\nAlternativa 5: Incorreta. A aula relaciona o efeito ocular a M3 e menciona prejuízo da drenagem do humor aquoso."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "íris",
+        "M3",
+        "midríase",
+        "glaucoma"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimulação de M3 no músculo circular, seguida de miose."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueio da ação muscarínica no músculo circular da íris, favorecendo midríase e podendo prejudicar a drenagem do humor aquoso."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimulação colinérgica do músculo radial, com fechamento do canal de Schlemm."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueio de receptores nicotínicos Nm, produzindo constrição pupilar."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ativação de M2 na íris, causando midríase sem alteração da drenagem."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-012",
+      "label": "Questão 12",
+      "category": "Vias respiratórias",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual descrição corresponde ao uso de ipratrópio e tiotrópio apresentado na aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Ipratrópio e tiotrópio aparecem como antagonistas muscarínicos inalatórios utilizados para broncoespasmo, especialmente em DPOC, e a aula menciona associação com agonistas beta-adrenérgicos.\nAlternativa 1: Incorreta. São apresentados por via inalatória e reduzem broncoespasmo e produção de muco.\nAlternativa 2: Correta. Essa é a indicação descrita.\nAlternativa 3: Incorreta. A atropina é destacada como antídoto, e a fisostigmina em intoxicação antimuscarínica.\nAlternativa 4: Incorreta. Não é a indicação destacada para esses fármacos.\nAlternativa 5: Incorreta. Esse papel é atribuído a biperideno e triexifenidil."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "ipratrópio",
+        "tiotrópio",
+        "broncoespasmo"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Uso oral para aumentar secreção brônquica."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Uso inalatório no tratamento de broncoespasmo, com destaque para DPOC e associação com agonistas beta-adrenérgicos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Uso intravenoso como antídoto de organofosforados."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Uso oftalmológico para provocar miose."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Uso central no tratamento do parkinsonismo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-013",
+      "label": "Questão 13",
+      "category": "Trato geniturinário",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual efeito terapêutico é atribuído ao bloqueio muscarínico por oxibutinina e darifenacina no trato urinário?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula apresenta oxibutinina e darifenacina para bexiga hiperativa e incontinência urinária, reduzindo pressão intravesical e contrações do detrusor.\nAlternativa 1: Incorreta. A aula descreve redução desses parâmetros.\nAlternativa 2: Correta. É o efeito descrito.\nAlternativa 3: Incorreta. A aula relaciona esses fármacos ao bloqueio muscarínico, com destaque para M3.\nAlternativa 4: Incorreta. A indicação é justamente reduzir sintomas de urgência e incontinência.\nAlternativa 5: Incorreta. O objetivo é reduzir as contrações vesicais."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "oxibutinina",
+        "darifenacina",
+        "M3",
+        "bexiga hiperativa"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumentar a pressão intravesical e a frequência das contrações."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Reduzir a pressão intravesical e a frequência de contrações da bexiga, aumentando a capacidade vesical."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimular diretamente receptores nicotínicos do detrusor."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumentar a urgência urinária como efeito terapêutico."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Produzir contração sustentada do músculo detrusor."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-014",
+      "label": "Questão 14",
+      "category": "Ação central",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual associação de fármacos e indicação está correta segundo a aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Biperideno e triexifenidil são apresentados como anticolinérgicos de ação central usados no Parkinson e em síndrome parkinsonóide, inclusive relacionada a neurolépticos.\nAlternativa 1: Correta. Essa associação aparece repetidamente no material.\nAlternativa 2: Incorreta. São fármacos respiratórios inalatórios.\nAlternativa 3: Incorreta. São usados para bexiga hiperativa e incontinência urinária.\nAlternativa 4: Incorreta. É destacado como antiespasmódico.\nAlternativa 5: Incorreta. É mencionada em oftalmologia como midriático e também em cólicas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "biperideno",
+        "triexifenidil",
+        "Parkinson"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Biperideno e triexifenidil — Parkinson e síndrome parkinsonóide."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ipratrópio e tiotrópio — síndrome parkinsonóide."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Oxibutinina e darifenacina — tremor da doença de Parkinson."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Butilbrometo de escopolamina — antídoto de organofosforados."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Homatropina — intoxicação por plantas atropânicas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-015",
+      "label": "Questão 15",
+      "category": "Intoxicação antimuscarínica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Segundo a aula, qual conduta farmacológica é indicada no tratamento sintomático da intoxicação por antagonistas muscarínicos?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula apresenta a fisostigmina intravenosa como anticolinesterásico no tratamento sintomático da intoxicação por antagonistas muscarínicos: ela aumenta a acetilcolina, que compete com a atropina no receptor muscarínico.\nAlternativa 1: Correta. Esse é o tratamento descrito no slide.\nAlternativa 2: Incorreta. Tiotrópio é antagonista muscarínico inalatório.\nAlternativa 3: Incorreta. A atropina é ela própria um antagonista muscarínico.\nAlternativa 4: Incorreta. Oxibutinina é antimuscarínico e não é apresentada como antídoto.\nAlternativa 5: Incorreta. Homatropina é relacionada a efeito midriático."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "fisostigmina",
+        "intoxicação",
+        "anticolinesterásico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Administrar fisostigmina intravenosa, um anticolinesterásico que aumenta a acetilcolina; esta compete com a atropina no receptor muscarínico."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Administrar tiotrópio para aumentar acetilcolina na sinapse."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Administrar atropina para competir com outros antimuscarínicos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Administrar oxibutinina para reverter os efeitos centrais."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Administrar homatropina para produzir miose."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-016",
+      "label": "Questão 16",
+      "category": "Intoxicação antimuscarínica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Na presença de convulsão durante intoxicação por antagonistas muscarínicos, qual classe é citada na aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O slide de intoxicação por antagonistas muscarínicos afirma que, em caso de convulsão, utilizam-se benzodiazepínicos.\nAlternativa 1: Incorreta. Não são citados para convulsão nesse contexto.\nAlternativa 2: Correta. A aula os indica em caso de convulsão.\nAlternativa 3: Incorreta. Não são apresentados como tratamento de convulsão.\nAlternativa 4: Incorreta. Não são citados nesse contexto.\nAlternativa 5: Incorreta. Não são citados nesse contexto."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "intoxicação",
+        "convulsão",
+        "benzodiazepínicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Agonistas beta-adrenérgicos"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Benzodiazepínicos"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Antagonistas nicotínicos"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diuréticos tiazídicos"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueadores de canais de cálcio"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-017",
+      "label": "Questão 17",
+      "category": "Atropina e coração",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Como a atropina reduz a bradicardia causada por estimulação vagal, segundo a aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A atropina bloqueia os efeitos muscarínicos do nervo vago sobre o coração, reduzindo a bradicardia associada à estimulação vagal.\nAlternativa 1: Incorreta. A atropina é antagonista muscarínico, não agonista M2.\nAlternativa 2: Correta. Esse mecanismo é explicitamente citado.\nAlternativa 3: Incorreta. Esse mecanismo não é atribuído à atropina.\nAlternativa 4: Incorreta. Isso tenderia a reforçar a ação vagal, não a bloqueá-la.\nAlternativa 5: Incorreta. A aula não apresenta esse mecanismo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "atropina",
+        "nervo vago",
+        "bradicardia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ativando diretamente receptores M2 cardíacos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Bloqueando os efeitos do nervo vago sobre o coração."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Inibindo receptores beta1 no coração."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumentando a liberação de acetilcolina vagal."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ativando receptores nicotínicos Nm cardíacos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-018",
+      "label": "Questão 18",
+      "category": "Secreções e trato gastrointestinal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual alteração é compatível com o bloqueio muscarínico no trato gastrointestinal apresentado na aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "No esquema anticolinérgico, há redução da produção de ácido, da atividade secretória pancreática e do peristaltismo intestinal.\nAlternativa 1: Incorreta. O bloqueio muscarínico reduz essas funções.\nAlternativa 2: Correta. Esses efeitos aparecem no esquema anticolinérgico.\nAlternativa 3: Incorreta. Esses são efeitos relacionados à estimulação muscarínica.\nAlternativa 4: Incorreta. O bloqueio muscarínico reduz tono vesical e motilidade.\nAlternativa 5: Incorreta. O bloqueio muscarínico reduz secreções."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "trato gastrointestinal",
+        "peristaltismo",
+        "secreções"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumento do peristaltismo e da secreção pancreática."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Diminuição do peristaltismo intestinal e da atividade secretória pancreática."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumento do suco gástrico e da motilidade."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Contração da bexiga acompanhada de diarreia."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aumento da salivação e lacrimejamento."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-019",
+      "label": "Questão 19",
+      "category": "Oftalmologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual fármaco é citado como midriático em oftalmologia, além da própria atropina?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula menciona homatropina como fármaco usado em oftalmologia para produzir midríase e também observa que atropina pode ser usada como midriático.\nAlternativa 1: Correta. A aula cita homatropina como midriático em oftalmologia.\nAlternativa 2: Incorreta. É indicada para incontinência urinária.\nAlternativa 3: Incorreta. É indicado para Parkinson e síndrome parkinsonóide.\nAlternativa 4: Incorreta. É inalatório para broncoespasmo.\nAlternativa 5: Incorreta. É citada no tratamento de intoxicação antimuscarínica."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "homatropina",
+        "oftalmologia",
+        "midríase"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Homatropina"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Darifenacina"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Biperideno"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tiotrópio"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Fisostigmina"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-020",
+      "label": "Questão 20",
+      "category": "Relação mecanismo-efeito",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual alternativa relaciona corretamente um efeito da estimulação muscarínica ao efeito esperado de seu bloqueio?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A estimulação M2 diminui a frequência cardíaca, enquanto o bloqueio antimuscarínico do efeito vagal pode aumentar a frequência cardíaca.\nAlternativa 1: Correta. A aula mostra bradicardia muscarínica e aumento de frequência com anticolinérgicos.\nAlternativa 2: Incorreta. A estimulação M3 no músculo circular causa miose; o bloqueio favorece midríase.\nAlternativa 3: Incorreta. A estimulação aumenta secreções, e o bloqueio as reduz.\nAlternativa 4: Incorreta. A estimulação muscarínica contrai a bexiga; o bloqueio reduz seu tono e contrações.\nAlternativa 5: Incorreta. A aula apresenta o sentido oposto."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "M2",
+        "frequência cardíaca",
+        "bloqueio muscarínico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimulação M2 reduz frequência cardíaca; bloqueio muscarínico pode aumentar a frequência cardíaca."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimulação M3 causa midríase; bloqueio muscarínico causa miose."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimulação M3 reduz secreções; bloqueio aumenta salivação."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimulação M3 relaxa a bexiga; bloqueio causa contração do detrusor."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Estimulação muscarínica reduz peristaltismo; bloqueio o aumenta."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "dissertativas-001",
+      "label": "Questão 21",
+      "category": "Integração fisiológica e farmacológica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Explique como o antagonismo muscarínico pode produzir, a partir do bloqueio da ação da acetilcolina, alterações no coração, olho, trato gastrointestinal, bexiga e glândulas sudoríparas e salivares."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Resposta dissertativa avaliada pelos pontos esperados e pela resposta-modelo, sempre com base na aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "parassimpatolíticos",
+        "efeitos sistêmicos",
+        "integração"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "Os parassimpatolíticos reduzem ou abolam os efeitos da acetilcolina nos receptores muscarínicos. No coração, o bloqueio da ação vagal muscarínica reduz o efeito inibitório sobre a frequência cardíaca, favorecendo aumento da frequência. No olho, o bloqueio de M3 na musculatura circular favorece midríase e pode prejudicar a drenagem do humor aquoso. No trato gastrointestinal, há redução de secreções e do peristaltismo. Na bexiga, ocorre redução do tono e das contrações do detrusor. Nas glândulas, o bloqueio reduz salivação, lacrimejamento e sudorese, podendo produzir boca seca e pele quente e seca.\nPontos esperados:\nDefinir o antagonismo muscarínico como redução ou abolição dos efeitos da acetilcolina.\nRelacionar bloqueio vagal cardíaco a aumento da frequência cardíaca.\nRelacionar bloqueio ocular a midríase.\nExplicar redução de secreções e peristaltismo gastrointestinal.\nExplicar redução do tono ou das contrações vesicais.\nMencionar redução de salivação, lacrimejamento ou sudorese."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-002",
+      "label": "Questão 22",
+      "category": "Usos terapêuticos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Compare os principais usos terapêuticos de atropina, butilbrometo de escopolamina, ipratrópio ou tiotrópio, oxibutinina ou darifenacina e biperideno ou triexifenidil."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Resposta dissertativa avaliada pelos pontos esperados e pela resposta-modelo, sempre com base na aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "usos terapêuticos",
+        "atropina",
+        "escopolamina",
+        "ipratrópio",
+        "oxibutinina",
+        "biperideno"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A atropina tem múltiplos usos: bloqueio de efeitos muscarínicos graves por colinomiméticos como organofosforados e carbamatos, reversão de bradicardia associada à estimulação vagal, uso pré-anestésico para reduzir salivação e peristaltismo e uso midriático. O butilbrometo de escopolamina é antiespasmódico para cólicas de musculatura lisa. Ipratrópio e tiotrópio são usados por inalação em broncoespasmo e DPOC. Oxibutinina e darifenacina reduzem contrações vesicais e são usadas em bexiga hiperativa e incontinência urinária. Biperideno e triexifenidil têm ação central e são usados em Parkinson e síndrome parkinsonóide.\nPontos esperados:\nApresentar pelo menos dois usos da atropina.\nIdentificar o butilbrometo de escopolamina como antiespasmódico.\nIdentificar ipratrópio ou tiotrópio como inalatório respiratório.\nIdentificar oxibutinina ou darifenacina como fármaco urinário.\nIdentificar biperideno ou triexifenidil como anticolinérgico central no parkinsonismo."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-003",
+      "label": "Questão 23",
+      "category": "Atropina e relação dose-efeito",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Descreva a progressão dos efeitos da atropina apresentada na tabela da aula, desde 0,5 mg até 10 mg ou mais."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Resposta dissertativa avaliada pelos pontos esperados e pela resposta-modelo, sempre com base na aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "atropina",
+        "dose",
+        "toxicidade"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "Em 0,5 mg, a aula descreve algum ressecamento da boca e inibição da sudorese. Em 1 mg, há ressecamento marcante, sede, aceleração da frequência cardíaca e leve dilatação pupilar. Em 2 mg, aparecem frequência cardíaca alta, palpitações, ressecamento acentuado, dilatação pupilar e alguma turvação da visão de perto. Em 5 mg, os sinais anteriores se intensificam e surgem dificuldade para falar e deglutir, inquietude, fadiga, cefaleia, pele seca e quente, dificuldade para urinar e redução do peristaltismo. Em 10 mg ou mais, há acentuação global, pulso rápido e fraco, borramento visual acentuado, pele ruborizada, quente e seca, ataxia, agitação, excitação, alucinação, delírio e coma.\nPontos esperados:\nDescrever os efeitos de 0,5 mg.\nDescrever a progressão em 1 mg e 2 mg.\nDescrever os sinais adicionais em 5 mg.\nDescrever os efeitos graves em 10 mg ou mais.\nReconhecer a progressão dose-dependente do quadro anticolinérgico."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-004",
+      "label": "Questão 24",
+      "category": "Intoxicação por antagonistas muscarínicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Explique o manejo farmacológico da intoxicação por antagonistas muscarínicos descrito na aula e a lógica do uso de fisostigmina."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Resposta dissertativa avaliada pelos pontos esperados e pela resposta-modelo, sempre com base na aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "intoxicação",
+        "fisostigmina",
+        "anticolinesterásico"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A aula cita intoxicações por plantas atropânicas e por fármacos como atropina, biperideno e triexifenidil. O tratamento sintomático apresentado inclui fisostigmina intravenosa. A fisostigmina é um anticolinesterásico, portanto aumenta a disponibilidade de acetilcolina; o slide relaciona esse aumento à competição funcional com a atropina no receptor muscarínico. Se houver convulsão, a aula recomenda benzodiazepínicos.\nPontos esperados:\nIdentificar a intoxicação como decorrente de antagonismo muscarínico.\nCitar fisostigmina intravenosa.\nExplicar que a fisostigmina é anticolinesterásico.\nRelacionar seu efeito ao aumento de acetilcolina.\nCitar benzodiazepínicos em caso de convulsão."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-005",
+      "label": "Questão 25",
+      "category": "Farmacologia ocular e segurança",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Relacione os receptores e músculos da íris aos efeitos de miose e midríase e explique por que a aula chama atenção para a drenagem do humor aquoso durante o uso de anticolinérgicos."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Resposta dissertativa avaliada pelos pontos esperados e pela resposta-modelo, sempre com base na aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "íris",
+        "M3",
+        "midríase",
+        "glaucoma"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A aula apresenta a musculatura circular da íris com receptores muscarínicos M3, cuja ativação produz miose. A musculatura radial é relacionada a receptores alfa-adrenérgicos e à midríase. Anticolinérgicos como atropina bloqueiam a ação muscarínica no músculo circular, favorecendo midríase. O material destaca que a alteração do diâmetro pupilar pode prejudicar a drenagem do humor aquoso, relacionando isso ao risco de aumento da pressão intraocular e glaucoma. Em sua seção de segurança, a aula reforça o risco de crise em glaucoma de ângulo fechado.\nPontos esperados:\nRelacionar musculatura circular da íris a M3 e miose.\nRelacionar musculatura radial a receptores alfa-adrenérgicos e midríase.\nExplicar que o bloqueio muscarínico favorece midríase.\nMencionar prejuízo da drenagem do humor aquoso.\nRelacionar esse prejuízo ao risco de aumento da pressão intraocular ou glaucoma segundo a aula."
+        }
+      ]
+    }
+  ]
+}
