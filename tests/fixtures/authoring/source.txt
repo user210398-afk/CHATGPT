@@ -1,0 +1,3 @@
+Oficina de organização de materiais.
+Os rótulos azul, verde, amarelo e branco identificam caixas de teste.
+Uma lista numerada permite conferir a ordem dos rótulos.
