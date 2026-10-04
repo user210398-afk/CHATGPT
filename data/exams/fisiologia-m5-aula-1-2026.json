@@ -1,0 +1,4239 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "fisiologia-m5-aula-1-2026",
+  "title": "Fisiologia 2026 — Sistema Endócrino / Introdução e Hipófise",
+  "subject": "Fisiologia",
+  "year": 2026,
+  "division": "M5, aula 1",
+  "description": "",
+  "tags": [
+    "Sistema Endócrino",
+    "Introdução e Hipófise"
+  ],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    },
+    {
+      "id": "dissertativas",
+      "title": "Questões dissertativas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/fisiologia-aula-m5- 1 - Introdução e Hipófise.html",
+    "sourceCommit": "8d90b35d38d0f4d36f7793ffa9b744262e40fe28",
+    "notes": [
+      "O legado oferece dois módulos independentes, sem uma ordem global entre eles. A POC concatena objetivas e dissertativas, preservando a ordem interna e a numeração original de cada módulo.",
+      "Os prefixos das alternativas permanecem no texto original. Os IDs option-1 etc. indicam a posição, sem inferir gabaritos pelas letras.",
+      "Tags e título agregam identificações presentes no HTML; descrição vazia por não haver descrição acadêmica canônica separada."
+    ]
+  },
+  "questions": [
+    {
+      "id": "objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Conceitos Gerais Endócrinos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "01. Qual das alternativas abaixo define corretamente o conceito e a caracterização geral de um hormônio no organismo humano?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os hormônios são mensageiros químicos produzidos por glândulas/células endócrinas que circulam em quantidades microscópicas para coordenar funções vitais ligando-se a receptores específicos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os hormônios atuam em concentrações extremamente baixas (pg a µg/ml) e ligam-se a receptores específicos nas células-alvo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Hormônios atuam em baixas concentrações e não são exclusivos de neurônios."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• c: São produzidos endogenamente, não dependem de ingestão alimentar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• d e e: Não são subprodutos digestivos e dependem de receptores químicos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Conceitos Gerais Endócrinos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Molécula sintetizada e secretada exclusivamente por neurônios que atua apenas no local de sua produção em concentrações molares elevadas;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Substância química sinalizadora secretada no sangue ou meio intersticial em concentrações muito baixas (pg a µg/ml), atuando em células-alvo específicas;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Proteína de alta massa molecular que necessita ser ingerida pela alimentação para desempenhar papel metabólico no fígado;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Subproduto da degradação celular armazenado em grandes quantidades para ser liberado na presença de enzimas digestivas;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Neurotransmissor que atua obrigatoriamente por meio de sinapses elétricas sem a necessidade de receptores celulares;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Química Hormonal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "02. Com relação à classificação química dos hormônios, assinale a opção que indica corretamente o precursor dos hormônios esteroides:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os hormônios esteroides são lipossolúveis e derivam do colesterol. Exemplos incluem o cortisol, aldosterona, progesterona e testosterona."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os esteroides são sintetizados no organismo a partir do colesterol."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Tirosina origina catecolaminas e hormônios tireoidianos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• c, d e e: Triptofano origina serotonina/melatonina; ácido araquidônico origina eicosanoides."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Química Hormonal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Tirosina;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Colesterol;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Triptofano;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Ácido araquidônico;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Glicose;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Química Hormonal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "03. O aminoácido tirosina serve como precursor para a síntese de quais grupos de hormônios?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A tirosina é o aminoácido precursor tanto das catecolaminas (dopamina, noradrenalina, adrenalina) quanto dos hormônios tireoidianos (T3 e T4)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A tirosina origina catecolaminas e iodotironinas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, d e e: São hormônios peptídicos/proteicos formados por cadeias de aminoácidos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• b: São hormônios esteroides derivados do colesterol."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Química Hormonal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Insulina e Glucagon;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Cortisol e Aldosterona;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Catecolaminas e Hormônios da Tireóide;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Ocitocina e Vasopressina (ADH);"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Hormônio do Crescimento (GH) e Prolactina;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Farmacocinética Hormonal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "04. Quanto às características físico-químicas e farmacocinéticas dos hormônios hidrossolúveis (proteicos/peptídicos e catecolaminas), é correto afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Hormônios hidrossolúveis são estocados em vesículas secretoras, circulam livres no plasma, possuem meia-vida curta e são degradados no TGI se ingeridos via oral."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Corresponde exatamente à síntese, armazenamento vesicular e cinética dos peptídeos/catecolaminas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Armazenamento em coloide é exclusivo da tireoide."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• b e e: Não atravessam a membrana por lipossolubilidade."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• d: Hormônios peptídicos são digeridos se tomados por via oral."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacocinética Hormonal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) São armazenados em colóide folicular e possuem meia-vida longa de vários dias;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Atravessam livremente a membrana celular e ligam-se exclusivamente a receptores nucleares;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) São armazenados em vesículas, circulam livres no plasma e possuem meia-vida curta;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Podem ser administrados por via oral com facilidade, pois resistem à degradação no trato gastrointestinal;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) São sintetizados continuamente e liberados apenas por difusão passiva lipídica;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Mecanismo de Ação",
+      "statement": [
+        {
+          "type": "text",
+          "text": "05. Mecanismos de ação hormonal envolvidos no acoplamento de hormônios hidrossolúveis exigem a presença de receptores localizados na:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Por não atravessarem a bicamada lipídica celular, hormônios peptídicos e catecolaminas ligam-se a receptores de superfície na membrana plasmática."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O acoplamento na membrana plasmática ativa cascatas de segundos mensageiros intramembranares."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, c, d e e: Receptores citoplasmáticos ou nucleares são reservados a hormônios lipossolúveis (esteroides e T3/T4)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Mecanismo de Ação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Matriz extracelular óssea;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Membrana plasmática (receptores de superfície);"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Membrana interna da mitocôndria;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Cromatina no nucléolo;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Membrana do retículo endoplasmático liso;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Regulação Hormonal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "06. Quando a liberação de um hormônio é desencadeada diretamente por alterações nos níveis plasmáticos de nutrientes ou íons (como o aumento da glicose estimulando a secreção de insulina), diz-se que o controle é do tipo:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A regulação por estímulo humoral ocorre quando variações na concentração de substâncias nos fluidos corporais estimulam a secreção hormonal."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Alterações nos íons ou nutrientes circulantes no sangue/humores configuram o controle humoral."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Controle neuronal depende de estímulo de fibras nervosas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• b: Controle hormonal envolve hormônios tróficos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• c e e: Dizem respeito à distância de atuação local."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Regulação Hormonal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Neuronal;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Hormonal;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Parácrino;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Humoral;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Autócrino;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Feedback Hormonal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "07. Assinale a alternativa que apresenta um exemplo clássico de mecanismo fisiológico regulado por feedback positivo (retroalimentação positiva):"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O feedback positivo amplifica o sinal inicial para conduzir o organismo até a conclusão de um evento (ex: trabalho de parto e reflexo de ejeção do leite)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O ciclo de Ferguson no parto (estiramento cervical -> ocitocina -> contração -> mais estiramento) é um exemplo clássico de feedback positivo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, b, d e e: São exemplos típicos de feedback negativo para manutenção do equilíbrio homeostático."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Feedback Hormonal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Inibição da secreção de CRH pelo aumento do cortisol plasmático;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Regulação dos níveis de glicose no sangue pela insulina;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Estiramento do colo uterino estimulando a liberação de ocitocina, que aumenta a contração uterina e gera maior distensão;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Supressão do TSH por níveis elevados de hormônios tireoidianos;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Redução da secreção de GH provocada por altas concentrações de IGF-1;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Anatomia Hipofisária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "08. Do ponto de vista anatômico e embrionário, a neuro-hipófise (hipófise posterior) caracteriza-se por ser:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A hipófise divide-se em adeno-hipófise (origem epitelial da bolsa de Rathke) e neuro-hipófise (extensão anatômica neuroectodérmica direta do hipotálamo)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A neuro-hipófise é formada por axônios e terminais nervosos dos neurônios hipotalâmicos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Descreve a adeno-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• c: Possui íntima conexão neural através do haste hipofisário."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• d e e: Não sintetiza hormônios tróficos ou armazena corticoides."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Anatomia Hipofisária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Uma glândula composta exclusivamente por células epiteliais derivadas da cavidade oral;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Uma extensão direta de tecido neural proveniente do hipotálamo;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Um órgão independente sem qualquer conexão vascular ou nervosa com o cérebro;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Uma estrutura responsável pela síntese direta dos hormônios tróficos ACTH e TSH;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Um aglomerado vascular responsável apenas pelo armazenamento de glicocorticoides;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Neuro-hipófise",
+      "statement": [
+        {
+          "type": "text",
+          "text": "09. Os dois hormônios armazenados e secretados pela neuro-hipófise são sintetizados em quais núcleos hipotalâmicos?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O ADH e a Ocitocina são produzidos nos corpos celulares localizados nos núcleos supra-óptico e paraventricular do hipotálamo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Apresenta os dois núcleos magnocelulares hipotalâmicos responsáveis pela síntese."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• b, c, d e e: Não são os núcleos produtores de ADH e Ocitocina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Neuro-hipófise"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Núcleos paraventricular e supra-óptico;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Corpo mamilário e quiasma óptico;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Eminência mediana e par intermédio;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Córtex adrenal e medula espinhal;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Núcleo caudado e putamen;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Neuro-hipófise",
+      "statement": [
+        {
+          "type": "text",
+          "text": "10. Qual das seguintes ações biológicas é promovida diretamente pelo hormônio ocitocina?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A ocitocina atua na contração da musculatura lisa do miométrio e das células mioepiteliais mamárias (ejeção do leite), além de modular laços afetivos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Promove a ejeção (e não a produção) do leite e a contração uterina."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Função do ADH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• b: Função da Prolactina."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• d: Função do ACTH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• e: A ocitocina estimula (e não inibe) o vínculo materno e social."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Neuro-hipófise"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Reabsorção de água nos dútulos e túbulos coletores renais;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Estímulo à síntese e produção de leite nas glândulas mamárias;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Contração das células mioepiteliais para a ejeção do leite e contração uterina no parto;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Estímulo da secreção de cortisol pelo córtex adrenal;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Inibição do desenvolvimento de comportamentos sociais e vínculo materno;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Eixo Hipotálamo-Hipofisário",
+      "statement": [
+        {
+          "type": "text",
+          "text": "11. A comunicação entre o hipotálamo e a adeno-hipófise (hipófise anterior) para regulação hormonal é feita através de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O sistema porta-hipofisário é uma rede capilar especializada que transporta hormônios liberadores e inibidores hipotalâmicos diretamente para a adeno-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A comunicação vascular do sistema porta garante alta concentração de neuro-hormônios na adeno-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Descreve a comunicação com a neuro-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• c, d e e: Não representam a via fisiológica principal do eixo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Eixo Hipotálamo-Hipofisário"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Condução sináptica direta ao longo de axônios longos;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Um sistema de vasos sanguíneos denominado sistema porta-hipofisário;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Difusão direta pelo liquor no terceiro ventrículo;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Sinalização puramente autócrina iniciada pelas células da tireóide;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Inervação simpática proveniente da medula adrenal;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Adeno-hipófise",
+      "statement": [
+        {
+          "type": "text",
+          "text": "12. Qual população de células presentes na adeno-hipófise é a mais abundante, representando cerca de 30% a 40% do total celular?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os somatotrofos (células produtoras do hormônio do crescimento - GH) representam a maior porcentagem das células endócrinas da adeno-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os somatotrofos equivalem a cerca de 30-40% da adeno-hipófise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, b, d e e: Representam frações menores da população celular da adeno-hipófise."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Adeno-hipófise"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Gonadotrofos;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Corticotrofos;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Somatotrofos;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Tirotrofos;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Lactotrofos;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Regulação da Prolactina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "13. O neuro-hormônio hipotalâmico responsável por inibir tonicamente a secreção de Prolactina pela adeno-hipófise é a:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Dopamina secretada pelo hipotálamo atua como o principal fator inibidor tônico da liberação de prolactina pelos lactotrofos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dopamina inibe a secreção de prolactina continuamente."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a: Inibe o GH e TSH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• c, d e e: São hormônios liberadores (TRH estimula TSH/PRL; CRH estimula ACTH; GnRH estimula LH/FSH)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Regulação da Prolactina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Somatostatina (GHIH);"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Dopamina;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) TRH;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) CRH;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) GnRH;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Eixos Hormonais",
+      "statement": [
+        {
+          "type": "text",
+          "text": "14. Assinale a alternativa que associa corretamente o hormônio hipotalâmico ao seu respectivo hormônio liberado pela adeno-hipófise e seu tecido-alvo:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O CRH hipotalâmico estimula a liberação de ACTH pela adeno-hipófise, que atua no córtex adrenal estimulando a síntese de glicocorticoides."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Apresenta a tríade correta do eixo hipotálamo-hipófise-adrenal."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• b: TRH estimula TSH (e não GH)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• c: GnRH estimula LH/FSH (e não TSH)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• d: GHRH estimula GH (e não prolactina)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• e: Dopamina inibe Prolactina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Eixos Hormonais"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) CRH -> ACTH -> Córtex Adrenal;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) TRH -> GH -> Sistema Musculoesquelético;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) GnRH -> TSH -> Glândula Tireóide;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) GHRH -> Prolactina -> Glândulas Mamárias;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Dopamina -> LH/FSH -> Gônadas;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Efeitos do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "15. A maior parte do efeito do GH no crescimento linear dos ossos ocorre de forma indireta, mediada por qual substância produzida principalmente no fígado?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O IGF-1 (Fator de Crescimento Semelhante à Insulina 1 / Somatomedina C) é secretado pelo fígado sob estímulo do GH, promovendo a mitose nos condrócitos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O IGF-1 é o mediador periférico direto do crescimento epifisário."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, c, d e e: São hormônios com funções regulatórias metabólicas, eletrolíticas ou de estresse, não sendo o mediador somatomedínico do GH."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Efeitos do GH"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Cortisol;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) IGF-1 (Somatomedina C);"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Calcitocina;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Adrenalina;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Aldosterona;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Metabolismo do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "16. Qual é a ação do hormônio do crescimento (GH) sobre o metabolismo dos lipídios?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GH é lipolítico: estimula a quebra dos triacilgliceróis no tecido adiposo para utilizar os ácidos graxos como fonte primária de energia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Promove o aumento de ácidos graxos livres no plasma por ativação da lipólise."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, b, d e e: Contradizem o efeito mobilizador de gordura promovido pelo GH."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Metabolismo do GH"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Estimula o acúmulo de gordura e inibe a enzima lipase;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Promove a conversão de ácidos graxos em glicose no tecido adiposo;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Induz a lipólise, aumentando a concentração de ácidos graxos livres no plasma;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Inibe a degradação de triacilgliceróis nas células gordurosas;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Bloqueia a utilização de gorduras como fonte de energia pelo músculo;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Metabolismo do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "17. O GH é considerado um hormônio diabetogênico porque, no metabolismo dos carboidratos, ele:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GH opõe-se aos efeitos da insulina nos tecidos periféricos (diminuindo o consumo de glicose no músculo/gordura) e aumenta a produção hepática de glicose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Seu efeito anti-insulínico reduz a captação celular de glicose, tendendo a elevar a glicemia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a e b: São ações opostas ao efeito diabetogênico do GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• d e e: O pâncreas ou rins não sofrem destruição ou estimulação renal direta por esse mecanismo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Metabolismo do GH"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Aumenta a captação de glicose no músculo e tecido adiposo;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Diminui a gliconeogênese no fígado;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Reduz a utilização de glicose pelos tecidos e pode elevar a glicemia;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Estimula a secreção excessiva de glucagon pelo rim;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Destrói as células beta do pâncreas diretamente;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Metabolismo do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "18. Em relação ao metabolismo das proteínas, o GH atua como um potente hormônio:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GH estimula a entrada de aminoácidos nas células e a tradução do RNAm, promovendo o anabolismo proteico e o ganho de massa magra."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Aumenta a captação celular de aminoácidos e a síntese de proteínas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, c, d e e: Contradizem o forte caráter anabólico do GH nos tecidos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Metabolismo do GH"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Catabólico, promovendo a degradação e consumo proteico;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Anabólico, aumentando a captação de aminoácidos e a síntese proteica;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Inerte, não afetando o balanço de nitrogênio do organismo;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Inibidor do transporte de aminoácidos através das membranas celulares;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Estimulador da conversão de proteínas em corpos cetônicos;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Regulação do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "19. Quais são os dois hormônios hipotalâmicos de ação oposta envolvidos na regulação direta da secreção de GH pela adeno-hipófise?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O hipotálamo regula o GH secretando GHRH (que estimula a liberação) e Somatostatina (que inibe a liberação)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " GHRH e Somatostatina atuam diretamente nos somatotrofos adeno-hipofisários de forma antagônica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, b, d e e: Pertencem a outros eixos hormonais."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Regulação do GH"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) CRH e Cortisol;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) TRH e TSH;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) GHRH (estimulador) e Somatostatina/GHIH (inibidor);"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) GnRH e LH;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Dopamina e Ocitocina;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Regulação do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "20. Qual das seguintes condições estressoras ou fisiológicas atua como um estímulo para aumentar a secreção de GH?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A diminuição da disponibilidade energética (hipoglicemia, jejum) e o estresse do exercício físico são potentes gatilhos para a liberação do GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Jejum, hipoglicemia e atividade física demandam mobilização de energia e disparam o GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• a, c, d e e: São fatores inibidores da secreção de GH."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Regulação do GH"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Hiperglicemia pós-prandial;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Jejum, exercício físico e hipoglicemia;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Níveis muito elevados de ácidos graxos livres na circulação;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Envelhecimento avançado;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Altas concentrações circulantes de IGF-1;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "dissertativas-001",
+      "label": "1",
+      "sectionId": "dissertativas",
+      "category": "Conceitos Gerais Endócrinos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 1 (Dissertativa) - Defina o que é um hormônio."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Conceitos Gerais Endócrinos"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O sistema endócrino atua junto ao sistema nervoso para manter a homeostase orgânica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Um "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "hormônio"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é uma molécula sinalizadora química sintetizada por glândulas ou células endócrinas e lançada na circulação sanguínea ou meio intersticial. Ele atua em concentrações extremamente baixas (na faixa de pg/mL a µg/mL) e liga-se a receptores específicos em células-alvo para desencadear respostas biológicas regulatórias."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-002",
+      "label": "2",
+      "sectionId": "dissertativas",
+      "category": "Química e Mecanismo de Ação",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 2 (Dissertativa) - Classifique os hormônios com base em sua estrutura química, dê exemplos e explique de forma geral o mecanismo de ação destes hormônios."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Química e Mecanismo de Ação"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os hormônios classificam-se em 3 grupos principais segundo a solubilidade e estrutura."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Peptídicos/Proteicos e Catecolaminas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Hidrossolúveis (ex: Insulina, GH, Adrenalina). Não atravessam a membrana lipídica e ligam-se a receptores de superfície celular, ativando vias de segundos mensageiros (cAMP, IP3/DAG, Ca2+)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Esteroides:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Lipossolúveis derivados do colesterol (ex: Cortisol, Testosterona, Aldosterona). Atravessam a membrana celular e ligam-se a receptores intracelulares (citoplasmáticos/nucleares), alterando diretamente a transcrição gênica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Hormônios Tireoidianos:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Aminas lipofílicas derivadas da tirosina (T3 e T4). Ligam-se a receptores nucleares acoplados ao DNA, modulando a expressão de proteínas metabólicas."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-003",
+      "label": "3",
+      "sectionId": "dissertativas",
+      "category": "Classificação Funcional",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 3 (Dissertativa) - Qual é a diferença entre hormônios gerais e locais? Explique o que são hormônios autócrinos, parácrinos, neurócrinos e endócrinos."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Classificação Funcional"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os hormônios diferem pelo alcance de sua distribuição e pelo modo de sinalização."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Hormônios Gerais:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Circulam pela corrente sanguínea para atingir tecidos e órgãos-alvo distantes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Hormônios Locais:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Atuam no microambiente próximo de onde foram secretados."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Modalidades de Sinalização:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Autócrina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A substância atua na própria célula que a secretou."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Parácrina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A substância se difunde pelo meio intersticial e atua em células vizinhas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Endócrina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O hormônio é lançado no sangue e transportado para alvos distantes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Neurócrina/Neuroendócrina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Neurônios secretam um neuro-hormônio diretamente na circulação sanguínea."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-004",
+      "label": "4",
+      "sectionId": "dissertativas",
+      "category": "Regulação Hormonal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 4 (Dissertativa) - Explique de forma geral como ocorre a regulação da secreção dos hormônios."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Regulação Hormonal"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A regulação garante a liberação hormonal estritamente conforme a demanda corporal."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A secreção hormonal é disparada por três tipos de estímulos:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Humoral:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Variação de substâncias/íons no sangue (ex: glicose estimulando insulina)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Neuronal:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Impulsos nervosos diretos (ex: estimulação da medula adrenal pela via simpática)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Hormonal:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Um hormônio trófico estimula a liberação de outro (ex: TSH estimulando T3/T4)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "A homeostase é mantida predominantemente por "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "feedback negativo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (retroalimentação negativa), onde o produto final inibe sua própria produção. Em ocasiões específicas (como na ovulação e no parto), ocorre "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "feedback positivo"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " para amplificar temporariamente o estímulo."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-005",
+      "label": "5",
+      "sectionId": "dissertativas",
+      "category": "Neuro-hipófise",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 5 (Dissertativa) - Cite os hormônios liberados pela neuro-hipófise e descreva suas funções."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Neuro-hipófise"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A neuro-hipófise armazena e secreta dois neuro-hormônios sintetizados no hipotálamo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "ADH (Hormônio Antidiurético / Vasopressina):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Atua nos dútulos e túbulos coletores renais promovendo a reabsorção de água livre (via inserção de aquaporinas-2) e induz vasoconstrição em altas doses."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ocitocina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Promove a contração das células mioepiteliais das glândulas mamárias (ejeção do leite), contração do miométrio no trabalho de parto e favorece sentimentos de apego e vínculo social."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-006",
+      "label": "6",
+      "sectionId": "dissertativas",
+      "category": "Adeno-hipófise",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 6 (Dissertativa) - Cite os hormônios liberados pela adeno-hipófise e descreva suas funções."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Adeno-hipófise"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A adeno-hipófise sintetiza e secreta 6 hormônios tróficos e não tróficos primordiais."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "TSH:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula a síntese e liberação dos hormônios tireoidianos (T3 e T4)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "ACTH:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula o córtex adrenal a produzir glucocorticoides (cortisol)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "FSH:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula o desenvolvimento folicular ovariano e a espermatogênese testicular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "4. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "LH:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Induz a ovulação/corpo lúteo na mulher e estimula a produção de testosterona no homem."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "5. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "GH:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Promove o crescimento linear e tecidual e regula o metabolismo energético."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "6. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Prolactina:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula a produção e lactogênese nas glândulas mamárias."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-007",
+      "label": "7",
+      "sectionId": "dissertativas",
+      "category": "Eixo Hipotálamo-Hipofisário",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 7 (Dissertativa) - Descreva como o hipotálamo regula a secreção dos hormônios da neuro-hipófise e da adeno-hipófise."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Eixo Hipotálamo-Hipofisário"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A conexão entre hipotálamo e hipófise ocorre por duas vias anatômicas distintas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Neuro-hipófise (Via Neuronal):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Regulada diretamente pelo "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "trato hipotálamo-hipofisário"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Os corpos celulares dos núcleos supra-óptico e paraventricular produzem ADH e Ocitocina, que viajam via axônios até os terminais na neuro-hipófise para serem liberados no sangue."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Adeno-hipófise (Via Vascular/Hormonal):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Regulada pelo "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "sistema porta-hipofisário"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". Neuro-hormônios liberadores (ex: GHRH, TRH, CRH, GnRH) ou inibidores (ex: Somatostatina, Dopamina) secretados no hipotálamo viajam por esses vasos até a adeno-hipófise, regulando suas células endócrinas."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-008",
+      "label": "8",
+      "sectionId": "dissertativas",
+      "category": "Efeitos do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 8 (Dissertativa) - Descreva as ações do GH sobre o crescimento linear."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Efeitos do GH"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O hormônio do crescimento (GH) atua de forma direta e indireta na cartilagem epifisária."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GH promove o crescimento linear dos ossos longos majoritariamente de forma indireta, ao induzir a produção e secreção do "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "IGF-1 (Somatomedina C)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", principalmente no fígado e tecidos locais."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "O IGF-1 estimula a proliferação e diferenciação dos condrócitos nas placas de crescimento epifisárias, aumenta a aposição de matriz cartilaginosa e favorece a conversão osteogênica até a ossificação/fechamento das epífises."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-009",
+      "label": "9",
+      "sectionId": "dissertativas",
+      "category": "Metabolismo do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 9 (Dissertativa) - Descreva as ações do GH sobre o metabolismo dos carboidratos, lipídios e proteínas."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Metabolismo do GH"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O GH possui profundos efeitos metabólicos anabólicos e poupadores de glicose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Proteínas (Anabólico):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Aumenta a captação celular de aminoácidos e a síntese proteica, reduzindo o catabolismo muscular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Lipídios (Lipolítico):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula a quebra de triacilgliceróis no tecido adiposo, elevando o nível de ácidos graxos livres no plasma para uso energético."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Carboidratos (Diabetogênico / Anti-insulínico):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Reduz a captação e utilização periférica da glicose no músculo e tecido adiposo e estimula a gliconeogênese hepática, o que tende a elevar a glicemia."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-010",
+      "label": "10",
+      "sectionId": "dissertativas",
+      "category": "Regulação do GH",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 10 (Dissertativa) - Descreva como ocorre a regulação da secreção do GH."
+        }
+      ],
+      "explanation": [],
+      "images": [],
+      "tags": [
+        "Regulação do GH"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A regulação do GH envolve um controle hipotalâmico dual e alças de retroalimentação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " É regulada pelo equilíbrio entre dois hormônios hipotalâmicos de ações opostas:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "GHRH:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estimula a secreção de GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Somatostatina (GHIH):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Inibe a secreção de GH."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Estímulos de Secreção:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Hipoglicemia, jejum, exercício físico, estresse e sono profundo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Inibição por Feedback Negativo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Níveis elevados do próprio GH e do IGF-1 inibem o GHRH e estimulam a Somatostatina no hipotálamo."
+        }
+      ]
+    }
+  ]
+}

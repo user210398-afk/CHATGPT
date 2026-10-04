@@ -1,0 +1,3531 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "farmaco-p2-2024",
+  "title": "Plataforma de Avaliação — Farmacologia",
+  "subject": "Farmacologia",
+  "year": 2024,
+  "division": "P2",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/farmaco-p2-Simulado-2024.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "8 questões com quatro alternativas e 26 com cinco."
+    ]
+  },
+  "questions": [
+    {
+      "id": "farmaco-p2-2024-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Farmacologia Cardiovascular - Anti-hipertensivos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Utilize o caso clínico abaixo para responder as questões 01 e 02:\nCaso Clínico 1: M.M.C, 46 anos, masculino, branco, solteiro, professor, procedente de Jundiaí, interior de São Paulo. Hipertenso desde os 35 anos em uso de losartana. O paciente refere que, há um mês submeteu-se a exame médico e constatou níveis pressóricos de 160/100 mmHg (hipertensão de estágio 02). Embora estivesse totalmente assintomático, foi aconselhado a procurar atendimento clínico. Nega doenças sérias no passado e refere que sua pressão arterial, medida há dois anos, era normal. Não pratica atividade física regular e a obesidade o acompanha desde criança. Seu pai e sua mãe são hipertensos e seu avô faleceu em decorrência de um AVC. Sabe-se que a FC basal de JW está em torno de 130 bpm, não apresenta diabetes e nem dislipidemia.\n\n01. Considerando a aplicação de uma farmacoterapia anti-hipertensiva inicial segura e eficaz, qual dos medicamentos ou combinações poderiam ser prescritos para M.M.C, seguindo as orientações das Diretrizes Brasileiras de Hipertensão (2020):"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O tratamento inicial da Hipertensão Arterial Sistêmica (HAS) Estágio 2 (PA ≥ 160/100 mmHg) requer terapia combinada com duas classes distintas de primeira linha."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A associação de um Bloqueador do Receptor de Angiotensina (BRA) com um diurético tiazídico atua em dois mecanismos complementares (inibição do SRAA e redução da volemia/resistência vascular periférica), sendo a conduta recomendada para HAS Estágio 2."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacologia Cardiovascular - Anti-hipertensivos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) 1 Bloqueador do receptor AT1 + 1 diurético tiazídico;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Apenas 1 bloqueador do receptor AT1;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) 1 betabloqueador cardioseletivo + 1 simpatolítico de ação central;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) 1 bloqueador de canal de cálcio diidropiridínico + 1 vasodilatador direto;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Apenas 1 diurético tiazídico;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Interações e Contraindicações em Anti-hipertensivos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "02. Considerando a aplicação de uma farmacoterapia anti-hipertensiva segura e a necessidade de associar um novo fármaco, qual dos medicamentos abaixo deve ser evitado na associação para M.M.C?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O bloqueio duplo do Sistema Renina-Angiotensina-Aldosterona (SRAA) pela combinação de iECA + BRA é formalmente contraindicado."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Como o paciente já faz uso do BRA losartana, a adição de um iECA (como enalapril) provocaria duplo bloqueio do SRAA, aumentando acentuadamente o risco de hipercalemia, hipotensão grave e insuficiência renal aguda."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Interações e Contraindicações em Anti-hipertensivos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Antagonista beta 1 e beta 2."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Bloqueador de canais de cálcio diidropiridínicos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Inibidor da Enzima conversora de angiotensina."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Antagonista seletivo de receptores beta1."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Diurético tiazídico."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Farmacologia do SRAA - iECA e BRA",
+      "statement": [
+        {
+          "type": "text",
+          "text": "03. Os fármacos inibidores do sistema renina-angiotensina-aldosterona estão entre os anti-hipertensivos mais utilizados na última década, tanto para o tratamento da hipertensão arterial sistêmica, quanto o tratamento das cardiopatias.\nAnalise as sentenças abaixo e assinale a alternativa correta:\nI. O captopril e o enalapril são inibidores da enzima conversora de angiotensina, sendo que o primeiro não interage com alimentos e o segundo interage;\nII. Losartana é um bloqueador do receptor AT1 e, portanto, não promove a tosse como reação adversa;\nIII. Captopril pode ser utilizado em pacientes com doença renal crônica a fim de reduzir os efeitos deletérios da angiotensina II e aldosterona nos rins;\nIV. Losartana reduz, nos pacientes, estresse oxidativo, processo inflamatório e fibrogênese nos rins, previne ou reduz também a hipertrofia e remodelagem cardíaca na insuficiência cardíaca, e ainda melhorar o clearance de creatinina na nefropatia diabética;\nV. Os fármacos inibidores da ECA são capazes de aumentar, nos pacientes, a resistência vascular periférica, a retenção de água e sódio pelos rins e a concentração plasmática de aldosterona;\nEstão corretas somente as sentenças:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os inibidores do SRAA promovem vasodilatação, natriurese, redução do remodelamento tecidual e efeito nefroprotetor. Os BRAs não alteram a bradicinina, não provocando a tosse seca típica dos iECAs."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A afirmativa II está correta pois os BRAs atuam diretamente no receptor AT1 sem inibir a degradação da bradicinina. A III e a IV estão corretas ao descreverem os efeitos nefro e cardioprotetores do bloqueio do SRAA."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacologia do SRAA - iECA e BRA"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) I, II e III;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) II, IV e V;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) I, IV e V"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) II, III e IV;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Todas estão corretas"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Simpatolíticos de Ação Central",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Utilize o caso clínico abaixo para responder as questões 04, 05 e 06:\nCaso Clínico 2: MTF, 34 anos, sexo feminino, teve diagnóstico de HAS aos 34 anos de idade e utilizava losartana 50mg 1x/dia. Há 1 ano atrás MTF decidiu engravidar e seu médico substituiu o medicamento losartana por anlodipino 5mg 1x/dia. Sabe-se que a paciente apresenta asma brônquica e hipertrigliceridemia, porém nenhuma outra doença metabólica foi relatada.\nA PA da paciente manteve-se estabilizada em 125/80 mmHg até a 25 semana de gestação, quando a paciente começou a apresentar PAS 170 e PAD 110 mmHg e proteinúria (600mg/24 h).\nA partir desse momento, o medicamento anlodipino foi substituído por α-metildopa 750 mg/dia e sua PA voltou a 125/80 mmHg.\n\n04. Sobre o fármaco alfa-metildopa, analise as sentenças abaixo e assinale a alternativa correta:\nI. é um agonista de receptores alfa2-adrenérgicos;\nII. é um anti-hipertensivo inseguro na gestação;\nIII. é um fármaco utilizado no processo de sedação em unidade de terapia intensiva;\nIV. é um fármaco adrenérgico de ação indireta;\nV. seu uso contínuo aumenta o risco de anemia hemolítica por processo autoimune;\nEstão corretas:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A α-metildopa é um agonista direto dos receptores α₂-adrenérgicos centrais, sendo a droga de escolha na gestação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " I está correta (agonista α₂ central) e V está correta (risco de anemia hemolítica autoimune por teste de Coombs direto positivo)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Simpatolíticos de Ação Central"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Somente I e II;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Somente I e V;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Somente III e IV;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Somente III e V;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Todas as sentenças estão corretas;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Farmacologia na Gestação e Teratogênese",
+      "statement": [
+        {
+          "type": "text",
+          "text": "05. Considerando que o fármaco losartana estava controlando a Pressão arterial da paciente adequadamente, por que ela foi substituída por anlodipino?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os inibidores do SRAA (iECA e BRA) possuem efeito teratogênico bem estabelecido e são estritamente contraindicados na gestação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A medicação precisou ser descontinuada prevendo a gestação devido ao comprovado potencial teratogênico dos fármacos que inibem o SRAA."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacologia na Gestação e Teratogênese"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Foi um erro ter alterado a terapia com losartana, ela deveria ter sido mantida, já que a pressão da paciente estava estável;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) A retirada da losartana aconteceu antes da gravidez. Esta conduta é comum, pois losartana reduz a fertilidade da mulher dificultando a ocorrência de gravidez;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Por ser um antagonista de receptores AT1. Não se deve inibir o sistema renina-angiotensina-aldosterona durante a gestação, esta conduta poderia causar malformação fetal;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) A substituição de losartana por anlodipino não foi adequada, pois anlodipino também pode causar mal formação fetal, além de aumentar o risco de um parto prematuro;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Houve a substituição porque losartana está contraindicada para pacientes asmáticos, aumentando o risco de broncoespasmo;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Tocolíticos e Farmacologia Obstétrica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "06. Caso a gestante comece a apresentar contrações prematuras, e risco de um parto prematuro, quais fármacos podem ser administrados, a fim de reduzir o risco de parto prematuro:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Agentes tocolíticos inibem o trabalho de parto prematuro relaxando o miométrio (agonistas β₂ e bloqueadores dos canais de cálcio)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O salbutamol (estimula β₂ miometrial) e o nifedipino (bloqueia o influxo de cálcio) relaxam a musculatura uterina e atuam como tocolíticos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Tocolíticos e Farmacologia Obstétrica"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Propranolol ou enalapril;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Doxazosina ou alfametildopa;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Fenoterol ou losartana;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Hidralazina ou furosemida;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Salbutamol ou nifedipino;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Antagonistas da Aldosterona e Remodelamento",
+      "statement": [
+        {
+          "type": "text",
+          "text": "07. Qual dos fármacos abaixo pode reduzir o risco de hipocalemia e remodelagem cardíaca:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A espironolactona é um diurético poupador de potássio que bloqueia os efeitos profibróticos/remodeladores da aldosterona no miocárdio."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Ao antagonizar a aldosterona no coração, a espironolactona previne o remodelamento e a fibrose miocárdica e, ao mesmo tempo, reduz a excreção de potássio nos rins."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Antagonistas da Aldosterona e Remodelamento"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Furosemida;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Espironolactona;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Clortalidona;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Hidroclorotiazida;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Amilorida;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Distúrbios Eletrolíticos e Diuréticos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "08. Paciente Maria, 57 anos, hipertensa e nefropata fazia uso de enalapril, furosemida e espironolactona. Devido a uma descompensação pressórica, houve a necessidade de retirar a furosemida e manter apenas enalapril e espironolactona. Qual o risco para esta paciente:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A associação de iECA com poupadores de potássio retém K⁺. A retirada de um diurético de alça caliurético em paciente nefropata dispara o risco de hipercalemia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Sem o efeito caliurético da furosemida, a combinação de iECA + Espironolactona em uma paciente nefropata culmina em risco iminente de retenção de K⁺ (hipercalemia)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Distúrbios Eletrolíticos e Diuréticos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Hipomagnesemia;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Hipermagnesemia;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Hiperuricemia;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Hipocalemia;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Hipercalemia;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Indicações Terapêuticas de Diuréticos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "09. Diuréticos são fármacos amplamente utilizados no tratamento da hipertensão arterial sistêmica, cardiopatias e doença renal. Qual das sentenças abaixo indica, respectivamente, um bom diurético para o tratamento da hipertensão arterial sistêmica de estágio 01, insuficiência cardíaca e edema:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " HAS estágio 1 = Tiazídicos (Hidroclorotiazida); Insuficiência Cardíaca = Antialdosterônicos (Espironolactona); Edemas = Diuréticos de alça (Furosemida)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Hidroclorotiazida é tiazídico indicado na HAS estágio 1; Espironolactona é o antagonista de aldosterona na IC; Furosemida é diurético de alça potente para edemas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Indicações Terapêuticas de Diuréticos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Hidroclorotiazida, espironolactona e furosemida;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Espironolactona, furosemida e captopril;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Furosemida, hidroclorotiazida e espironolactona;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Dopamina, espironolactona e digoxina;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Hidroclorotiazida, hidralazina e nitroprussiato de sódio;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Agonistas Beta-2 Adrenérgicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "10. O fenoterol e o salbutamol, dois simpatomiméticos bastante utilizados no tratamento da asma, podem causar todos os efeitos a seguir com exceção de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Fenoterol e salbutamol são agonistas β₂ seletivos. Causam broncodilatação, tremor, glicogenólise e taquicardia reflexa, mas não midríase."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dilatação pupilar (midríase) depende exclusivamente da estimulação de receptores α₁ no músculo radial da íris, não sendo produzida por agonistas β₂ seletivos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Agonistas Beta-2 Adrenérgicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Glicogenólise;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Taquicardia;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Tremor;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Redução da resistência das vias aéreas;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Midríase;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Inotrópicos e Dosagem de Dopamina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "11. A dopamina é uma catecolamina que promove diferentes efeitos, de acordo com a dose administrada, sendo assim é um fármaco amplamente utilizado em algumas situações de choque. Sobre este fármaco, é correto afirmar:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Dopamina: Doses baixas (D₁ - renal), Doses moderadas (β₁ - inotrópica) e Doses altas (α₁ - vasopressora)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Na faixa de dose intermediária (3 a 10 µg/kg/min), a dopamina atua predominantemente sobre os receptores β₁ cardíacos, aumentando o inotropismo e o débito cardíaco."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Inotrópicos e Dosagem de Dopamina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Doses baixas (0,2 a 3,0 ug/kg/min) promovem dilatação da artériola eferente renal e consequente redução do débito urinário;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Doses elevadas (superior a 20,0 ug/kg/min) promovem ativação seletiva de receptores beta1-adrenérgicos causando inotropismo positivo;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Independente da dose, a dopamina é uma catecolamina agonista de receptores dopaminérgicos e adrenérgicos;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Doses moderadas (3,0 a 10,0 ug/kg/min) promovem ativação de receptores beta1-adrenérgicos e consequentemente aumento da contratilidade cardíaca;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Independente da dose, a dopamina é uma catecolamina exclusivamente agonista de receptores dopaminérgicos;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Inotrópicos e Débito Cardíaco",
+      "statement": [
+        {
+          "type": "text",
+          "text": "12. O aumento do débito cardíaco está associado com qual dos seguintes fármacos listados a seguir?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dobutamina aumenta o débito cardíaco por estímulo inotrópico direto nos receptores β₁-adrenérgicos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dobutamina é um agonista predominantemente β₁-adrenérgico utilizado para aumentar a contratilidade e o débito cardíaco."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Inotrópicos e Débito Cardíaco"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Clonidina;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Alfa-metildopa;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Dobutamina;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Propranolol;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Fenilefrina;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Simpatomiméticos de Ação Mista",
+      "statement": [
+        {
+          "type": "text",
+          "text": "13. A efedrina é um simpatomimético de ação mista, esta é utilizada em quadros de hipotensão causada por anestésicos gerais. Sabe-se que a efedrina promove:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A efedrina combina ação direta (estímulo de receptores adrenérgicos) e indireta (liberação de noradrenalina vesicular)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Fármacos de ação mista atuam por dois caminhos: estimulação direta de receptores adrenérgicos e liberação indireta de noradrenalina estocada."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Simpatomiméticos de Ação Mista"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Somente ativação de receptores adrenérgicos;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Somente aumento de noradrenalina na fenda sináptica;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Inibição das enzimas MAO e COMT;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Ativação de receptores adrenérgicos e aumento de noradrenalina na fenda sináptica;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Ativação de receptores adrenérgicos e colinérgicos;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Agonistas Alfa-1 e Descongestionantes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "14. A fenilefrina é um fármaco amplamente utilizado em medicamentos antigripais, juntamente com analgésicos e anti-histamínicos. Uma das principais justificativas para sua inclusão nestes medicamentos é acarretar diminuição da congestão nasal causada por doenças respiratórias, como rinites. A fenilefrina possivelmente é um fármaco:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A fenilefrina é um agonista adrenérgico de ação direta seletivo para receptores α₁."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A fenilefrina liga-se e ativa diretamente os receptores α₁-adrenérgicos nos vasos da mucosa nasal, causando vasoconstrição e ação descongestionante."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Agonistas Alfa-1 e Descongestionantes"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Dopaminérgico de ação direta;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Adrenérgico de ação direta;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Colinérgico de ação direta;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Adrenérgico de ação indireta;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Simpatolítico"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Antidepressivos e Tônus Adrenérgico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Utilize o caso clínico abaixo para responder as questões 15 e 16:\nCaso Clínico 3: Uma mulher, com 53 anos de idade, peso de 59 kg e altura de 1,56 m, é atendida em ambulatório, apresentando pressão arterial (PA) = 180 x 110 mmHg. A paciente relata histórico de hipertensão, controlada com dieta hipossódica e uso de captopril (25 mg/dia) em duas tomadas. Informa que, há dois meses, após episódios de humor marcadamente deprimido, anedonia, astenia, ideação suicida e anorexia, seu médico lhe receita venlafaxina (25 mg/dia), potente antidepressivo de última geração, que atua no sistema nervoso central, inibindo a recaptação de serotonina e noradrenalina, tendo aumentado a dosagem progressivamente. A paciente refere que, após o uso desta medicação, vem sentindo cefaleia, mal-estar abdominal e instabilidade nos níveis pressóricos. Pergunta-se:\n\n15. O fármaco venlafaxina pode ser classificado como:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Inibidores de recaptação de noradrenalina (como a venlafaxina) são classificados como agentes adrenérgicos de ação indireta."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A venlafaxina inibe o transportador de recaptação de noradrenalina, aumentando os níveis sinápticos do neurotransmissor sem ligar-se diretamente como agonista, o que caracteriza ação adrenérgica indireta."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Antidepressivos e Tônus Adrenérgico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Colinérgico de ação indireta;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Adrenérgico de ação direta;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Anticolinesterásico;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Adrenérgico de ação indireta;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Colinérgico de ação direta;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Interações Antidepressivos e Anti-hipertensivos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "16. Diante do caso clínico descrito acima, podemos concluir:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Antidepressivos inibidores da recaptação de noradrenalina podem elevar a pressão arterial e antagonizar o controle de anti-hipertensivos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O aumento da noradrenalina pela venlafaxina eleva a resistência vascular e a pressão arterial, reduzindo a efetividade do tratamento anti-hipertensivo prévio com captopril."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Interações Antidepressivos e Anti-hipertensivos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) O captopril não é um bom anti-hipertensivo para o perfil da paciente;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) O captopril estava reagindo com a venlafaxina piorando o quadro de depressão;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) A venlafaxina estava reduzindo a efetividade do tratamento anti-hipertensivo instituído;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) A paciente deveria associar alfametildopa ao tratamento;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) A paciente deveria associar losartana ao tratamento;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Nefroproteção e iECA",
+      "statement": [
+        {
+          "type": "text",
+          "text": "17. Uma mulher com 42 anos de idade, portadora de doença renal policística, procurou atendimento médico por apresentar picos hipertensivos em três ocasiões diferentes, em repouso. A paciente não faz uso de medicações e não tem histórico prévio de Hipertensão Arterial Sistêmica (HAS). Ao exame físico, apresentou: pressão arterial (PA) = 190 x 140 mmHg; auscultas cardíaca e pulmonar normais; edema em membros inferiores 2+/4+. A dosagem sérica de creatinina foi de 1,8 mg/dL (normal: 0,6-1,2) e a proteinúria 24 horas de 870 mg/dL. A paciente foi orientada a adotar medidas não farmacológicas. Nessa situação, para que a progressão da doença renal se torne mais lenta, o anti-hipertensivo a ser iniciado é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Inibidores da ECA (ex: enalapril) são medicamentos de primeira escolha para hipertensão com nefropatia e proteinúria devido à ação nefroprotetora."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O enalapril (iECA) promove vasodilatação da arteríola eferente renal, reduzindo a pressão intraglomerular e a proteinúria, desacelerando a progressão da doença renal."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Nefroproteção e iECA"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) atenolol."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) clonidina."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) espironolactona."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) enalapril."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) furosemida."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Vasodilatadores Diretos e Canais de Potássio",
+      "statement": [
+        {
+          "type": "text",
+          "text": "18. Sobre o fármaco Minoxidil é correto afirmar:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O minoxidil atua como abridor de canais de potássio vasculares, promovendo relaxamento e vasodilatação arteriolar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O minoxidil abre os canais de potássio sensíveis ao ATP no músculo liso arteriolar, hiperpolarizando a membrana e gerando intensa vasodilatação."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Vasodilatadores Diretos e Canais de Potássio"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) é um vasodilatador ativador de canais de potássio na membrana do músculo liso vascular;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) é um vasodilatador bloqueador de canais de cálcio do tipo diidropiridinas;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) é um vasodilatador de mecanismo de ação desconhecido, utilizado somente por via tópica;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) é um cárdio-inibidor antagonista de receptores beta-adrenérgicos;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) é um diurético tiazídico;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Vasopressores e Manejo do Choque Séptico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "19. Paciente em choque séptico apresenta hipotensão grave, com redução acentuada do débito cardíaco, resistência vascular periférica e insuficiência renal aguda. Qual das condutas abaixo é mais adequada para ele:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " No choque séptico vasoplégico, a noradrenalina (agonista α₁) é o vasopressor de escolha para restaurar o tônus vascular sistêmico."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A noradrenalina atua intensamente nos receptores α₁ corrigindo a vasodilatação sistêmica, enquanto a dopamina em doses baixas/dopaminérgicas busca preservar a perfusão renal."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Vasopressores e Manejo do Choque Séptico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Associação de dobutamina (agonista seletivo de receptores beta 2-adrenérgicos) e furosemida (diurético de alça);"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Associação de dopamina (agonista adrenérgico) e doxazosina (agonista seletivo de receptores alfa 1-adrenérgicos);"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Associação de noradrenalina (potente agonista alfa1-adrenérgico) e dopamina em doses dopaminérgicas;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Associação de adrenalina (agonista preferencial de receptores beta-2 adrenérgicos) e salbutamol (agonista seletivo de receptores beta1-adrenérgicos);"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Associação de dopamina via oral e noradrenalina em bomba de infusão contínua;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Diuréticos Osmóticos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "20. Sobre o uso endovenoso do manitol é correto afirmar:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O manitol é um diurético osmótico IV empregado no manejo da hipertensão intracraniana e edema cerebral."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O manitol IV permanece no espaço vascular e cria um gradiente osmótico que drena fluido do parênquima cerebral para o sangue, reduzindo a hipertensão intracraniana."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diuréticos Osmóticos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Tem ação laxativa;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) É utilizado para fazer lavagem intestinal, a fim de realizar uma colonoscopia;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Inibe transportadores de sódio no túbulo proximal e ramo descendente da alça de Henle;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Não deve ser utilizado por via endovenosa. Seu uso é restrito para via oral;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) É um diurético osmótico utilizado para reduzir a hipertensão intracraniana;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-021",
+      "label": "21",
+      "sectionId": "objetivas",
+      "category": "Betabloqueadores e Cardioproteção",
+      "statement": [
+        {
+          "type": "text",
+          "text": "21. Sobre a indicação de metoprolol é correto afirmar:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O metoprolol é um betabloqueador β₁-seletivo com comprovado papel cardioprotetor na cardiopatia hipertensiva."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O metoprolol bloqueia a hiperativação simpática nos receptores β₁ cardíacos, reduzindo o trabalho cardíaco e prevenindo o remodelamento na miocardiopatia hipertensiva."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Betabloqueadores e Cardioproteção"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Trata-se de um betabloqueador de 3ª geração, antagonista de receptores beta e alfa adrenérgicos;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Não deve ser utilizado em arritmias atriais;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Seu efeito cardioprotetor justifica seu uso na miocardiopatia hipertensiva;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Apresenta baixo índice terapêutico e, portanto, exige monitoramento de eletrólitos"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-022",
+      "label": "22",
+      "sectionId": "objetivas",
+      "category": "Antagonistas Muscarínicos e Antiespasmódicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "22. A escopolamina é o princípio ativo do medicamento Buscopan®. Este fármaco é amplamente utilizado para diminuir cólicas intestinais e renais por atuar como:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Antagonistas muscarínicos (como a escopolamina) promovem relaxamento do músculo liso visceral, agindo como antiespasmódicos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Ao bloquear os receptores M₃ no músculo liso visceral, a escopolamina inibe os espasmos promovidos pela acetilcolina no TGI e trato urinário."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Antagonistas Muscarínicos e Antiespasmódicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Antagonista muscarínico;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Inibidor da MAO;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Simpatolítico;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Agonista muscarínico;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Anticolinesterásico;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-023",
+      "label": "23",
+      "sectionId": "objetivas",
+      "category": "Farmacologia Cardíaca da Atropina",
+      "statement": [
+        {
+          "type": "text",
+          "text": "23. A atropina já foi amplamente utilizada na ressuscitação cardiorrespiratória, e ainda hoje existem várias indicações clínicas que utilizam este fármaco. Sobre a atropina, é correto afirmar:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A atropina antagoniza os receptores muscarínicos M₂ no coração, bloqueando a bradicardia induzida pelo nervo vago."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " No coração, a atropina bloqueia os receptores M₂, anulando a inibição vagal (parassimpática) e revertendo quadros de bradicardia."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacologia Cardíaca da Atropina"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Ativa receptores β adrenérgicos no coração, retirando o paciente da parada cardiorrespiratória;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Ativa receptores muscarínicos no coração, aumentando a frequência cardíaca;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Inibe a enzima acetilcolinesterase promovendo ações excitatórias no sistema nervoso central do paciente;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Antagoniza receptores muscarínicos no coração, diminuindo as ações bradicárdicas da acetilcolina;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Inibe a enzima MAO, aumentando os efeitos cardioestimuladores da adrenalina no coração;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-024",
+      "label": "24",
+      "sectionId": "objetivas",
+      "category": "Anticolinérgicos Inalatórios",
+      "statement": [
+        {
+          "type": "text",
+          "text": "24. O brometo de ipratrópio (Atrovent®) é um fármaco frequentemente utilizado para promover:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O brometo de ipratrópio é um antagonista muscarínico inalatório empregado como broncodilatador na asma e DPOC."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O bloqueio dos receptores M₃ brônquicos pelo ipratrópio inibe a broncoconstrição parassimpática, promovendo broncodilatação."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Anticolinérgicos Inalatórios"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Broncodilatação;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Hipersecreção gástrica;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Bradicardia;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Vasoconstrição;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Diarreia;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-025",
+      "label": "25",
+      "sectionId": "objetivas",
+      "category": "Toxicologia e Antídotos Colinérgicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "No Brasil, o \"Chumbinho\" é um produto clandestino, irregularmente utilizado como raticida. Não possui registro na Anvisa, nem em nenhum outro órgão de governo. O agrotóxico carbamato aldicarbe (classificado como colinomimético de ação indireta) é o preferido pelos contraventores, encontrado em cerca de 50% dos \"chumbinhos\" analisados. A outra metade são organofosforados diversos. A Anvisa afirma que a matéria prima para este produto vem de roubo de carga ou entrada ilegal de produtos químicos pelas fronteiras. Seu uso está relacionado intensamente a assassinatos, suicídios, e mortes por intoxicação acidental.\nPergunta-se:\n\n25. O tratamento de um paciente intoxicado com chumbinho poderá ser feito com:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A atropina é o antídoto muscarínico de escolha no envenenamento por carbamatos ou organofosforados."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A atropina compete com o excesso de acetilcolina nos receptores muscarínicos, revertendo a hipersecreção e bradicardia graves da crise colinérgica."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Toxicologia e Antídotos Colinérgicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Atropina;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Neostigmina;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Nitroprussiato de sódio;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Fisostigmina;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Metildopa;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-026",
+      "label": "26",
+      "sectionId": "objetivas",
+      "category": "Efeitos Oculares dos Anticolinérgicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "26. Sobre atropina podemos afirmar que a mesma:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O bloqueio muscarínico ocular pela atropina provoca midríase, cicloplegia e fotofobia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O bloqueio muscarínico M₃ nos olhos paralisa a constrição pupilar e o músculo ciliar, levando a midríase, paralisia da acomodação (cicloplegia) e fotofobia."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Efeitos Oculares dos Anticolinérgicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Pode provocar intensa taquicardia devido ao bloqueio dos receptores nicotínicos cardíacos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Inibem intensamente o tônus intestinal, a motilidade e aumentam as secreções do TGI."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Pode provocar midríase, ciclopegia e fotofobia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Podem produzir broncoconstrição."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-027",
+      "label": "27",
+      "sectionId": "objetivas",
+      "category": "Toxina Botulínica e Junção Neuromuscular",
+      "statement": [
+        {
+          "type": "text",
+          "text": "27. O uso da toxina botulínica vai muito além da estética, sendo utilizada no tratamento da enxaqueca, espasticidades, pós AVC, estrabismo, Parkinson etc. Sabe-se que este fármaco promove:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A toxina botulínica bloqueia a liberação pré-sináptica de acetilcolina na junção neuromuscular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A toxina botulínica impede a exocitose das vesículas de acetilcolina no terminal pré-sináptico por clivagem das proteínas do complexo SNARE."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Toxina Botulínica e Junção Neuromuscular"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Paralisia, por bloquear a liberação da acetilcolina na junção neuromuscular;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Paralisia, por bloquear receptores nicotínicos na junção neuromuscular;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Paralisia, por inibir a enzima acetilcolinesterase;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Relaxamento, por promover dessensibilização de receptores nicotínicos na junção neuromuscular;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Relaxamento, por aumentar a atividade catalítica da enzima acetilcolinesterase"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-028",
+      "label": "28",
+      "sectionId": "objetivas",
+      "category": "Miastenia Gravis e Anticolinesterásicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "28. Uma mulher de 30 anos apresenta quadro de fraqueza muscular nos membros inferiores com predomínio distal, há alguns anos. Na evolução apresentou fraqueza muscular nos membros superiores. O exame físico mostrava nervos cranianos sem alterações, atrofia bilateral dos músculos quadríceps e interósseos dos pés, redução da força muscular mais intensa em tibiais anteriores e interósseos dorsais dos pés e reflexos tendinosos globalmente hipoativos. Notou, também, dificuldade para mastigar e deglutir. A dosagem de anticorpos anti-receptor nicotínico foi positiva o que confirmou miastenia gravis (Arquivos de neuropsiquiatria, 2003). O tratamento da paciente pode ser feito com:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Anticolinesterásicos reversíveis (piridostigmina) aumentam a oferta de acetilcolina na fenda neuromuscular na Miastenia Gravis."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os anticolinesterásicos (piridostigmina) inibem a destruição da acetilcolina, elevando sua concentração na placa motora para compensar a perda de receptores nicotínicos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Miastenia Gravis e Anticolinesterásicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Toxina botulínica;"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Pancurônio;"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Piridostigmina / fisostigmina;"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Atropina;"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "e) Succinilcolina;"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-029",
+      "label": "29",
+      "sectionId": "objetivas",
+      "category": "Bloqueadores Neuromusculares",
+      "statement": [
+        {
+          "type": "text",
+          "text": "29. Os antagonistas seletivos dos receptores nicotínicos são utilizados primariamente para produzir bloqueio neuromuscular não-despolarizante (competitivo) durante procedimentos cirúrgicos. Os agentes bloqueadores não-despolarizantes da JNM atuam ao antagonizar diretamente os receptores nicotínicos de ACh, impedindo, assim, a ligação da ACh endógena e a despolarização subsequente das células musculares.\n(Fonte: GOLAN, D. E. et al. Princípios de farmacologia: a base fisiopatológica da farmacoterapia. [s.l.] 2.ed. São Paulo: Guanabara, 2009).\n\nConsiderando o conteúdo estudado sobre os bloqueadores neuromusculares, analise as afirmativas a seguir.\nI. Os bloqueadores neuromusculares podem ser classificados em despolarizantes e agentes bloqueadores não despolarizantes, isto é, antagonistas de receptores nicotínicos musculares.\nII. O succinilcolina é um exemplo de agente, antagonistas de receptores nicotínicos musculares.\nIII. Os primeiros efeitos dos agentes bloqueadores não despolarizantes ocorrem sobre os músculos envolvidos nos músculos da face e depois nos músculos da respiração podendo levar a parada respiratória.\nIV. A recuperação do paciente após a retirada do succinilcolina é mais lenta quando comparada aos fármacos não despolarizantes (curares).\nEstá correto apenas o que se afirmar em:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O bloqueio neuromuscular não-despolarizante afeta primeiro os músculos faciais e por último a musculatura respiratória."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " I é verdadeira e III é verdadeira (bloqueio progride dos pequenos músculos faciais para os respiratórios)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Bloqueadores Neuromusculares"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) I e III."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) I e IV."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) II e III."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) II e IV."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-030",
+      "label": "30",
+      "sectionId": "objetivas",
+      "category": "Aplicações de Anticolinesterásicos Reversíveis",
+      "statement": [
+        {
+          "type": "text",
+          "text": "30. O uso clínico para agentes anticolinesterásicos reversíveis são:\nI. Tratamento sintomático do glaucoma.\nII. Íleo paralítico após procedimento cirúrgico.\nIII. como antídoto nas intoxicações causadas por relaxantes musculares despolarizantes (succinilcolina).\nIV. como antídotos nas intoxicações por anticolinérgicos.\nestão corretas:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Anticolinesterásicos aumentam a acetilcolina, tratando íleo paralítico e revertendo envenenamento por anticolinérgicos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As indicações para íleo paralítico e reversão de bloqueio anticolinérgico são perfeitamente estabelecidas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Aplicações de Anticolinesterásicos Reversíveis"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) II e IV"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) I e II"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) I e III"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Todas estão corretas"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-031",
+      "label": "31",
+      "sectionId": "objetivas",
+      "category": "Manejo da Intoxicação por Carbamatos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "31. Um paciente deu entrada no pronto socorro apresentando bradicardia, hipotensão, salivação, vômitos, cólicas intestinais, miose, espasmo de acomodação e broncoconstrição, após o exame clínico suspeitou-se de intoxicação por praguicida do grupo dos carbamatos (chumbinho):\nRealizou-se lavagem gástrica, tentou-se manter as vias aéreas livres e:\nI. administrou-se atropina por via intravenosa\nII. administrou-se succinilcolina por via intravenosa\nIII. administrou-se benzodiazepínico por via muscular\nIV. administrou-se fisostigmina por via intravenosa\nestão corretos os procedimentos:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O suporte na intoxicação por carbamatos requer atropinização e controle sintomático central com benzodiazepínicos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A atropina (I) bloqueia os sintomas muscarínicos letais e o benzodiazepínico (III) previne e trata tremores, fasciculações e convulsões associados."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Manejo da Intoxicação por Carbamatos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) I e II"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) I e III"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) I e IV"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) II e IV"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-032",
+      "label": "32",
+      "sectionId": "objetivas",
+      "category": "Farmacologia da Placa Mioneural",
+      "statement": [
+        {
+          "type": "text",
+          "text": "32. analise as afirmativas a seguir:\nI. Os curares são bloqueadores dos receptores nicotínicos da placa mionervosa, e sua utilização como relaxamento muscular potentes.\nII. A fisiostigmina leva a um relaxamento muscular marcante por agir em receptores nicotínicos da placa mioneural levando a uma hiperpolarização.\nIII. A succinilcolina é um despolarizante da placa mioneural tem como efeito relaxamento muscular, porém não causa parada respiratória.\nIV. A succinilcolina pode ser utilizada para intoxicações por colinomiméticos muscarínicos.\nestão corretas:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Curares são antagonistas nicotínicos motores e a succinilcolina é um agonista despolarizante."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " I está correta (curares bloqueiam Nm) e III descreve o efeito despolarizante (embora na prática exija ventilação por risco de apneia)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Farmacologia da Placa Mioneural"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) III e IV"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) I e II"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) I e III"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Todas estão corretas"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-033",
+      "label": "33",
+      "sectionId": "objetivas",
+      "category": "Ações do Sistema Autônomo e Somático",
+      "statement": [
+        {
+          "type": "text",
+          "text": "33. Marque o item que representa exemplos de fármacos que causam as seguintes ações respectivamente:\n1. relaxar a musculatura lisa\n2. Liberar adrenalina da suprarrenal\n3. relaxar a musculatura esquelética"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Atropina relaxa músculo liso; Nicotina libera adrenalina na adrenal; Curare relaxa musculatura esquelética."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Atropina (bloqueia M₃ e relaxa músculo liso); Nicotina (estimula Nn e libera adrenalina na medula adrenal); Curare (bloqueia Nm e relaxa músculo esquelético)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Ações do Sistema Autônomo e Somático"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Atropina, nicotina e curare"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Curare, atropina, succinilcolina"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Curare, atropina e nicotina"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Atropina, curare e pilocarpina"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "farmaco-p2-2024-objetivas-034",
+      "label": "34",
+      "sectionId": "objetivas",
+      "category": "Indicações de Anticolinérgicos e Anticolinesterásicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "34. Os medicamentos oxibutinina, biperideno e rivastigmina são indicados respectivamente para:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Oxibutinina trata incontinência urinária; Biperideno é antiparkinsoniano central; Rivastigmina trata o Alzheimer."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Oxibutinina (incontinência urinária); Biperideno (antiparkinsoniano/sintomas extrapiramidais); Rivastigmina (demência de Alzheimer)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Indicações de Anticolinérgicos e Anticolinesterásicos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) tratamento de demência de Alzheimer incontinência urinária e antiparkinsoniano"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) antiparkinsoniano incontinência urinária, e tratamento de demência de Alzheimer"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) incontinência urinária, tratamento de demência de Alzheimer e antiparkinsoniano"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) incontinência urinária, antiparkinsoniano e tratamento de demência de Alzheimer"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    }
+  ]
+}

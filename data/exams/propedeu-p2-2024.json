@@ -1,0 +1,2521 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "propedeu-p2-2024",
+  "title": "Clínica Médica e Propedêutica",
+  "subject": "Propedêutica/Clínica Médica",
+  "year": 2024,
+  "division": "P2",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/propedeu-p2-Simulado 2024.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "Quatro alternativas em cada questão."
+    ]
+  },
+  "questions": [
+    {
+      "id": "propedeu-p2-2024-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Neurofisiologia Sensitiva",
+      "statement": [
+        {
+          "type": "text",
+          "text": "1) Assinale a alternativa correta sobre a neurofisiologia do sistema sensitivo:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As fibras A-delta (pouco mielinizadas, dor rápida/aguda) e fibras C (amielínicas, dor lenta/crônica) transmitem a nocicepção. Fibras A-beta possuem mielinização espessa e conduzem estímulos táteis inócuos. A entrada na medula ocorre pela raiz posterior (dorsal), e o cruzamento espinotalâmico é imediato na medula espinhal (comissura branca anterior). O córtex somatossensorial participa da localização e discriminação da dor."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descreve com exatidão a classificação fisiológica das fibras aferentes sensoriais primárias (A-delta, C e A-beta)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A entrada dos impulsos sensitivos no H medular dá-se pela raiz "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "dorsal/posterior"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e não pela raiz ventral/anterior (que é motora)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "c) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A decussação do trato espinotalâmico lateral ocorre logo no nível de entrada na medula espinhal, e não no bulbo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "d) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O tálamo é uma estação de retransmissão e integração; a percepção discriminativa fina e a decodificação cortical ocorrem no córtex somatossensorial primário e secundário e sistema límbico."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Neurofisiologia Sensitiva"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) O nervo periférico sensitivo projeta o seu axônio para o sistema nervoso central via raiz ventral (parte frontal) da medula espinhal"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Os aferentes primários da dor são compostos de fibras pouco mielinizadas (A-delta) ou não mielinizadas (tipo C). Por sua vez, as fibras A-beta, em situações normais, respondem ao tato e estímulos leves (não dolorosos)"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) A maior parte da informação sensitiva dolorosa proveniente de um dos lados do corpo (direito ou esquerdo) ascende pelo trato espinotolâmico (neurônio de 2ª via) do mesmo lado em que penetra na medula espinhal. A passagem para o lado contralateral ocorre apenas no bulbo."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) A via sensitiva termina no tálamo, onde ocorre a decodificação do estímulo doloroso (qualidade, intensidade, localização, etc.) e resposta emocional a esse estímulo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Semiótica da Dor",
+      "statement": [
+        {
+          "type": "text",
+          "text": "2) Cite as características semiológicas da dor:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A semiologia clássica da dor exige a investigação completa de seus atributos (mnemônico ALICE ou atributos semiológicos): Localização, Modos de Início, Intensidade, Caráter/Tipo, Irradiação, Evolução/Duração, Fatores de Agravamento e Alívio e Manifestações Acompanhantes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Abrange todos os pilares essenciais da anamnese da dor na propedêutica médica."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Semiótica da Dor"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Localização, Irradiação, Intensidade, Caráter/Qualidade, Duração/Evolução, Fatores de Melhora/Piora e Sintomas Associados."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Apenas Intensidade e Localização corporal do sintoma."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Apenas Tipo de dor e Frequência de episódios ao dia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Apenas Fatores desencadeantes e Nível de consciência."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Sensibilização e Modulação da Dor",
+      "statement": [
+        {
+          "type": "text",
+          "text": "3) Assinale a alternativa incorreta sobre os processos de sensibilização e modulação da dor:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A sensibilização periférica e central altera a plasticidade neuronal e modula a percepção dolorosa individual. Dessa forma, a intensidade perceptiva da dor varia amplamente de pessoa para pessoa mesmo diante do mesmo estímulo patológico nocivo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A alternativa C afirma que a sensibilização e modulação 'não modificam a percepção entre indivíduos distintos', o que é inteiramente FALSO (portanto é a alternativa incorreta a ser assinalada)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão corretas?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), b) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " São afirmações conceitualmente verdadeiras sobre neurobiologia da dor, hiperalgesia, alodinia e vias opioides endógenas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Sensibilização e Modulação da Dor"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Ocorrem tanto por mecanismos periféricos (no nível dos nociceptores) quanto por mecanismos centrais (medula espinhal e encéfalo)"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Explicam os fenômenos de hiperalgesia (aumento da dor em resposta a estímulo nocivo) e alodinia (dor intensa a estímulo inócuo)"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Embora possam estar presentes, não modificam a percepção da intensidade da dor entre indivíduos distintos submetidos a um mesmo processo patológico responsável pela gênese da dor (p. ex., infarto agudo do miocárdio)"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) O sistema opioide endógeno é uma via importante de modulação central da dor, que é alvo tanto de terapia farmacológica quanto não-farmacológica para o manejo da dor"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Classificação das Dores",
+      "statement": [
+        {
+          "type": "text",
+          "text": "4) Assinale a alternativa que indica exemplos de dores nociceptivas, neuropáticas, mistas e psicogênicas, respectivamente:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Classificação da dor pela etiologia:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. Nociceptiva: Lesão tecidual direta (Infarto Agudo do Miocárdio)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. Neuropática: Lesão no sistema somatossensorial (Neuropatia Diabética)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. Mista: Componentes nociceptivos e neuropáticos sobrepostos (Lombociatalgia por compressão radicular)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "4. Psicogênica/Nociplástica: Influenciada por aspectos psíquicos sem lesão estrutural direta (Transtorno Somatoforme)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Segue rigorosamente a ordem exigida: IAM (nociceptiva), Neuropatia diabética (neuropática), Lombociatalgia (mista) e Transtorno somatoforme (psicogênica)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Classificação das Dores"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Dor fantasma (pós-amputação de membro); queimadura; hérpes-zoster; síndrome do pânico"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Neuropatia diabética; radiculopatia (lombociatalgia); transtorno somatoforme; lesão do tálamo"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Picada de animal peçonhento; infarto agudo do miocárdio; dor oncologia; síndrome do pânico"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Infarto agudo do miocárdio; neuropatia diabética; lombociatalgia; transtorno somatoforme"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Fisiopatologia da Dor e Referida",
+      "statement": [
+        {
+          "type": "text",
+          "text": "5) Conhecimentos fisiopatológicos sobre a dor possuem relevância clínica significativa. Em relação a esse tema, assinale a alternativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O fenômeno da dor referida visceral ocorre pela convergência de aferentes nociceptivos viscerais e somáticos no mesmo neurônio de segunda ordem no corno posterior da medula (Teoria da Convergência-Projeção). Assim, a isquemia miocárdica (T1-T5) referencia dor para o dermatomo somático correspondente (membro superior esquerdo, mandíbula/mento)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Explica perfeitamente o mecanismo neuroanatômico da dor referida visceral."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A inervação visceral é difusa e apresenta alta convergência, tornando a dor visceral mal localizada."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A inervação nociceptiva visceral é transmitida predominantemente por fibras C lentas amielínicas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "d) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dor crônica envolve neuroplasticidade, centralização da dor e sensibilização central independente do estímulo original."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fisiopatologia da Dor e Referida"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) As terminações sensitivas (nociceptores) de um mesmo axônio não se distribuem por vísceras. Essa exclusividade anátomo-fisiológica permite ao médico a pronta identificação do órgão acometido com base exclusivamente na localização da dor relatada pelo paciente"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Os estímulos dolorosos provenientes das vísceras são transmitidos principalmente por fibras mielinizadas do tipo A-delta, mais velozes que as amielínicas (tipo C), que estão localizadas predominantemente na pele."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) A explicação usual para as dores irradiada e referida é que existe compartilhamento, em um mesmo nível medular, do neurônio de 2ª ordem da via sensitiva dolorosa que ascende ao córtex pela medula espinhal, levando informações nociceptivas provenientes tanto de órgãos viscerais como de aferências somáticas (pele, músculo e articulações). Desse modo, a isquemia do coração, por exemplo, pode ocasionar dor que é percebida no mento (mandíbula)"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) A dor crônica é explicada exclusivamente por persistência do estímulo original que gerou o quadro doloroso inicial (p. ex., inflamação tecidual secundária a um agente infeccioso). Processos como modulação periférica e central da dor não participam da fisiopatologia da dor crônica e, portanto, não são alvos terapêuticos"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Perda de Peso Involuntária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "6) Assinale a alternativa CORRETA quanto a perda de peso involuntária:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A perda de peso involuntária (PPI) é significativamente mais frequente em idosos (prevalência elevada) e constitui um marcador independente de fragilidade, sarcopenia e aumento expressivo da morbi-mortalidade. Embora neoplasias sejam causas importantes, causas psiquiátricas, sociais e não-neoplásicas são extremamente frequentes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A epidemiologia da PPI destaca o idoso como população de alto risco onde a perda ponderal acarreta elevação direta de mortalidade."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A definição clínica clássica é a perda superior a 5% do peso corporal no período de 6 a 12 meses sem intenção voluntária (dieta/exercício)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "c) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Neoplasias correspondem a cerca de 15-37% dos casos; causas não-neoplásicas (orgânicas e psiquiátricas) são muito comuns e não meros diagnósticos de exclusão."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "d) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Fatores sociais, isolamento, depressão e demência (fator 'meals on wheels') têm altíssima influência na PPI em idosos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Perda de Peso Involuntária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Pode ser definida como perda de peso não intencional de cerca de 5-10% ao longo de 6 a 12 meses, independentemente de interferência dos hábitos de vida do paciente ou uso de quaisquer medicações, ocasionando risco à saúde do indivíduo."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Há maior prevalência com o avanço da idade, e é muito importante que seja detectada com precisão em indivíduos mais idosos, pois acarreta aumento significativo da morbi-mortalidade."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) A principal causa, sem dúvida, são as neoplasias em qualquer órgão ou tecido. Causas não neoplásicas são diagnósticos de exclusão."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) O modo de vida dos idosos, condições sociais e emocionais devem ser consideradas, entretanto, tem baixa influência como causa de perda de peso involuntária nessa faixa etária."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Etiologia da Perda de Peso Involuntária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "7) São causas de perda de peso involuntária, exceto:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O hipotireoidismo reduz o metabolismo basal e promove ganho de peso / retenção hídrica (mixoedema). O insulinoma causa hiperinsulinismo, hipoglicemia recorrente e aumento do apetite/peso. O hipertireoidismo (e não o hipotireoidismo) é causa clássica de perda de peso."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Hipotireoidismo e insulinoma causam tipicamente *ganho de peso*, e não perda involuntária (logo, é a resposta ao EXCETO)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas (são causas reais de perda de peso)?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), b) e c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todas listam doenças consumptivas, inflamatórias, infecciosas ou de insuficiência orgânica avançada (caquexia cardíaca/pulmonar/hepática) que causam PPI."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Etiologia da Perda de Peso Involuntária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Doenças inflamatórias intestinais, neoplasias, gastrite"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) HIV, tuberculose, parasitoses intestinais, esquistossomose"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Insuficiência cardíaca congestiva, cirrose hepática, DPOC"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Depressão, hipotireoidismo, insulinoma"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Perda de Peso com Hiperfagia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "8) Em algumas situações da prática clínica, é possível que haja perda de peso apesar do aumento da fome e ingesta de alimentos. Assinale a alternativa que contempla essa situação:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O binômio 'perda ponderal com polifagia/hiperfagia' é clássico de estados de hipermetabolismo intenso ou perda de calorias na urina. Ocorre notadamente no Diabetes Mellitus descompensado (glicosúria e catabolismo por ausência de ação da insulina) e no Hipertireoidismo (aumento da taxa metabólica basal pelas hormônios tireoidianos)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Diabetes mellitus e hipertireoidismo cursam classicamente com consumo calórico elevado/perda calórica associada a aumento compensatório do apetite."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Perda de Peso com Hiperfagia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Diabetes mellitus e doença de Addison"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Hipotireoidismo e doença de Cushing"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Diabetes mellitus e hipertireoidismo"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Insuficiência cardíaca e hipertireoidismo"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Anamnese da Perda de Peso",
+      "statement": [
+        {
+          "type": "text",
+          "text": "9) Questionar sobre hábitos faz parte da anamnese de investigação de perda de peso involuntária. Assinale a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O uso de substâncias ilícitas (como cocaína, crack e anfetaminas) é causa importante e bem estabelecida de perda de peso involuntária/caquexia devido à supressão do centro do apetite e estilo de vida desorganizado. O fato de a maconha ter efeito orexígeno não exclui a drogadição da lista de etiologias."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " É FALSO afirmar que 'não podemos considerar a drogadição como causa de perda de peso involuntária'."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras alternativas são corretas?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), c) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O álcool e o tabaco influenciam diretamente o hábito alimentar, o gasto energético e a caquexia por DPOC/neoplasias."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Anamnese da Perda de Peso"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Tabagismo e etilismo são hábitos que fazem com que o indivíduo tenha menos apetite, podendo causar perda de peso inexplicada."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Embora alguns tipos de drogas ilícitas possam causar diminuição da ingesta alimentar, não podemos considerar a drogadição como causa de perda de peso involuntária, uma vez que algumas substâncias, como a maconha, não causam esse efeito."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) A carga tabágica está diretamente relacionada a problemas pulmonares crônicos, podendo ser uma causa adicional de perda de peso involuntária."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Independente da quantificação do consumo de álcool, o mesmo deve ser levado em consideração quando se investiga causas de perda de peso inexplicada nas diferentes faixas etárias."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Investigação Clínica na Urgência",
+      "statement": [
+        {
+          "type": "text",
+          "text": "10) Joana, 41 anos, te procura no pronto socorro do hospital São Vicente, referindo que tem notado que vem emagrecendo de forma que a preocupou nos últimos 2 meses. Embora você não tenha acesso a informações de prontuário prévio, paciente refere ter perdido cerca de 12-15Kg nesse período, embora tenha notado um aumento do apetite. Refere que tem passado por estresse no trabalho, que anda irritada com todos. Frente a esse quadro você:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Paciente com perda ponderal acentuada (12-15 kg em 2 meses) acompanhada de hiperfagia, irritabilidade e estresse apresenta suspeita clínica alta de Tirotoxicose/Hipertireoidismo (Doença de Graves) ou Diabetes Mellitus. É indispensável investigar sinais tireoidianos (palpitações, tremores, intolerância ao calor, diarreia/hiperdefecação)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A conduta médica correta exige aprofundar a anamnese para sintomas metabólicos/tireoidianos antes de atribuir o quadro puramente a fatores psiquiátricos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão incorretas?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b), c) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Encaminhar precocemente para psiquiatria/psicologia ou negligenciar a perda de 15kg em uma mulher de 41 anos constitui erro de conduta e omissão diagnóstica de causas orgânicas graves."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Investigação Clínica na Urgência"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Se preocupa com a perda de peso relatada, e enriquece sua anamnese com perguntas como presença de palpitações, tremores, insônia, alteração de hábito intestinal, antecedentes familiares de patologias, em busca de reforçar suas hipóteses diagnósticas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Encaminha paciente para psiquiatria imediatamente, uma vez que suas queixas e seus relatos se enquadram em transtorno psiquiátrico que traz repercussões à sua saúde, necessitando de tratamento com brevidade."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Embora você pense em seu conhecimento sobre doenças que cursam com perda de peso dessa maneira, acredita que não seja nada grave, pois paciente muito jovem e deve estar fazendo uso de medicações que não quis relatar."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Conversando com Joana, ela nega poliúria e polidipsia, você exclui diabetes e encaminha para psicologia."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Propagação do Investigatório Laboratorial",
+      "statement": [
+        {
+          "type": "text",
+          "text": "11) Em pacientes jovens com queixa de perda de peso involuntária, é fundamental a realização dos seguintes exames:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O rastreamento inicial de primeira linha para PPI em jovens orienta exames laboratoriais básicos não invasivos: Hemograma (avaliação de anemia/infecção/neoplasia hematológica), Glicemia de Jejum (Diabetes Mellitus) e TSH/T4 livre (Disfunção tireoidiana). Exames de imagem avançados (TC/RM total) são reservados para segunda linha."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Contempla o painel laboratorial essencial inicial de triagem em adultos jovens."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Propagação do Investigatório Laboratorial"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Hemograma, tomografia de abdome, tomografia de crânio"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Dosagens de vitaminas, Hemograma, Ressonância de corpo inteiro"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Glicemia de jejum, exames de função tireoidiana, hemograma"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Função hepática, ultrassom de abdome, função renal"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Mecanismos Fisiopatológicos do Edema",
+      "statement": [
+        {
+          "type": "text",
+          "text": "12) [...] de edemas generalizados existe retenção renal de sódio e água, quer seja por acometimento primário renal [...] posta a condições que determinam redução do volume arterial efetivo. O líquido se acumula no tecido [...] eo, e a sua distribuição em determinadas regiões do corpo sofre influência de alguns fatores. Em relação a esse [...] analise as sentenças abaixo e assinale a alternativa correta:\nI – Em pacientes acamados, deve-se pesquisar também a região sacral à procura de edema.\nII – Em pacientes que deambulam ou permanecem sentados a maior parte do tempo, o acúmulo inicial de líquido ocorre em membros inferiores.\nIII – No edema por acometimento primário dos rins (insuficiência renal ou síndrome nefrótica), o edema das pálpebras pela manhã é característico."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O edema gravitacional desloca-se conforme a posição do corpo: em ortostatismo ocorre em MMII; em decúbito dorsal (acamados), acumula-se no pré-sacro e dorso. Na Síndrome Nefrótica/Glomerulopatias, a retenção hídrica com baixa pressão oncótica e frouxidão do tecido periorbitário gera o clássico edema palpebral/matutino."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todas as três sentenças (I, II e III) descrevem dados propedêuticos exatos sobre a distribuição física do edema."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Mecanismos Fisiopatológicos do Edema"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Apenas a alternativa I está correta"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Somente as alternativas I e II estão corretas"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Somente as alternativas I e III estão corretas"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Todas as alternativas estão corretas"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Sistemas Neuro-humorais no Edema",
+      "statement": [
+        {
+          "type": "text",
+          "text": "13) Cite 3 sistemas neuro-humorais que normalmente estão ativados nos estados edematosos relacionados à preenchimento insuficiente de árvore arterial (redução do volume arterial efetivo) e que, portanto, contribuem para a gênese e persistência do edema:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A redução do Volume Arterial Efetivo do Sangue (VAES) em doenças como Insuficiência Cardíaca, Cirrose e Síndrome Nefrótica ativa mecanismos compensatórios de retenção de sódio e água: 1) Sistema Renina-Angiotensina-Aldosterona (SRAA); 2) Sistema Nervoso Simpático (SNS); 3) Hormônio Antidiurético (ADH/Vasopressina)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Cita com precisão os três sistemas neuro-humorais retenção de volume clássicos da fisiopatologia do edema."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Sistemas Neuro-humorais no Edema"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Sistema Renina-Angiotensina-Aldosterona (SRAA), Sistema Nervoso Simpático (SNS) e Hormônio Antidireútico (ADH / Vasopressina)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Sistema Parassimpático, Peptídeo Natriurético Atrial (ANP) e Glucagon."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Sistema Calicreína-Cinina, Insulina e Calcitocina."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Sistema Endotelina, Histamina e Serotonina."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Etiologia e Fisiopatologia do Edema",
+      "statement": [
+        {
+          "type": "text",
+          "text": "14) Estabeleça a correlação adequada entre mecanismos fisiopatológicos básicos causadores de edema enumerados de I a IV e etiologias de edema listadas de A a D:\n\nI – aumento da pressão hidrostática capilar\nII – redução da pressão oncótica plasmática\nIII – aumento da permeabilidade capilar\nIV – redução da drenagem linfática/retorno venoso\n\nEtiologias:\nA – Insuficiência Cardíaca\nB – Paresia de membro\nC – Angioedema por fármacos (resposta alérgica)\nD – Desnutrição proteica grave"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Mecanismos de Starling do Edema:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• I. Aumento da pressão hidrostática capilar -> Insuficiência Cardíaca (A) por congestão venosa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• II. Redução da pressão oncótica plasmática -> Desnutrição proteica grave / Kwashiorkor (D) por hipoalbuminemia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• III. Aumento da permeabilidade capilar -> Angioedema por fármacos / reações alérgicas (C)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• IV. Redução do retorno venoso/linfático -> Paresia de membro (B) por ausência de bomba muscular/estase."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A correspondência exata é I-A; II-D; III-C; IV-B."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Etiologia e Fisiopatologia do Edema"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) I-A; II-D; III-C; IV-B"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) I-D; II-A; III-C; IV-B"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) I-A; II-C; III-D; IV-B"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Nenhuma das anteriores"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Equilíbrio de Starling nos Capilares",
+      "statement": [
+        {
+          "type": "text",
+          "text": "15) Analise a figura abaixo que representa as forças atuantes na distribuição do líquido corporal entre os espaços intra e extravasculares. Assinale a alternativa incorreta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " De acordo com a Equação de Starling (J_v = K_f [ (P_c - P_i) - σ (Π_c - Π_i) ]), a redução da pressão coloidosmótica do plasma (Π_c) decorrente de hipoalbuminemia (cirrose, síndrome nefrótica, desnutrição) quebra o equilíbrio transcapilar e é uma causa clássica e principal de extravasamento de líquido para o interstício e formação de edema."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Afirmar que a hipoalbuminemia 'nunca é causa de edema' é totalmente FALSO, tornando a alternativa D a resposta incorreta procurada."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Por que as outras estão corretas?"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), b) e c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descrevem com exatidão a permeabilidade sinusoidal hepática, a fisiopatologia do linfedema com fibrose tecidual e o edema periorbitário palpebral."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Equilíbrio de Starling nos Capilares"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) O coeficiente de permeabilidade capilar (t) é diferente para cada órgão; por exemplo, a passagem de líquido e solutos é muito maior nos capilares do fígado (sinusoides hepáticos) em comparação aos capilares pulmonares."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Distúrbios linfáticos aumentam a pressão coloidosmótica do líquido intersticial já que essas estruturas removem proteínas que de outro modo se acumulariam nesse local, o que leva em situações patológicas à ativação de fibroblastos e remodelamento fibroso do tecido (edema endurecido)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Locais com maior quantidade de tecido conjuntivo frouxo (menor pressão do líquido intersticial) apresentam maior propensão a edema, como por exemplo, o tecido ao redor das pálpebras na retenção primária de sódio e água pelos rins (edema renal)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Redução da pressão coloidosmótica do plasma (hipoalbuminemia) nunca é causa de edema, já que necessariamente se acompanha de redução concomitante e de mesma magnitude da concentração de proteínas do líquido intersticial."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Síndrome Febril Crônica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "16) Febre com história crônica de cerca de 1 mês, caracterizada por ser noturna e acompanhada de sudorese noturna com emagrecimento, pode ser típica de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A tríade febre vespertina/noturna + sudorese noturna profusa + perda de peso (sintomas B) é o quadro clássico tanto de infecções granulomatosas crônicas (Tuberculose) quanto de neoplasias hematológicas (Linfoma de Hodgkin e Não-Hodgkin) e tumores sólidos com necrose tumoral interna."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todas as patologias citadas nas alternativas a, b e c apresentam classicamente essa apresentação clínica."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Síndrome Febril Crônica"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Tuberculose"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Linfoma"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Neoplasia com necrose central"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Todas as anteriores"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Semiótica Térmica - Temperatura Retal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "17) A realização de medida de temperatura retal e sua comparação com a axilar pode ser útil para diagnóstico de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dissociação axilo-retal (sinal de Lenander) ocorre quando a temperatura retal está mais de 1 °C acima da temperatura axilar. É um sinal clássico de processos inflamatórios/infecciosos intra-abdominais e pélvicos profundos, notadamente no Abdome Agudo Inflamatório (ex.: Apendicite aguda, peritonite)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Apendicite e infecções cavitárias peritoniais causam elevação da temperatura retal local em relação à sistêmica axilar."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Semiótica Térmica - Temperatura Retal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Anexite em mulheres"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Abdome agudo inflamatório (p. ex., apendicite)"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Hepatomegalia febril"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Esplenomegalia febril"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Etiologia da Febre",
+      "statement": [
+        {
+          "type": "text",
+          "text": "18) São causas de febre:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Febre de Origem Indeterminada (FOI) e a febre em geral dividem-se em três grandes grupos etiológicos principais: 1) Infecções (bacterianas, virais, fúngicas); 2) Doenças inflamatórias não infecciosas / Autoimunes (Lúpus, Vasculites, Artrite Reumatoide); 3) Neoplasias (Linfomas, Carcinomas renal/hepático)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todas as três categorias são etiologias fundamentais de febre."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Etiologia da Febre"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Doenças infecciosas"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Doenças auto-imunes"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Neoplasias"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Todas as acima"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Ritmo Circadiano Térmico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "19) Qual o ciclo circadiano da temperatura humana?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A temperatura corporal fisiológica obedece a um ritmo circadiano regulado pelo centro termorregulador do hipotálamo: atinge seu ponto mais baixo (nadir) no início da manhã (entre 4h e 6h) e seu ponto mais alto (pico) no final da tarde / início da noite (entre 17h e 20h)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A temperatura corpórea fisiológica é mais elevada no período vespertino/noturno."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Ritmo Circadiano Térmico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Temperatura corpórea maior pela manhã"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Temperatura corpórea maior à noite"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Temperatura corpórea maior no meio do dia"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Não há variação ao longo das 24 horas do dia"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2024-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Síndromes Hipermetabólicas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "20) Paciente com hipertermia, acompanhada de emagrecimento, sudorese, batedeira no peito, aumento do hábito intestinal, sensação de calor extremo, insônia, agitação e nervosismo pode ser MAIS compatível com qual das alternativas:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A exacerbação do hormônio tireoidiano (Tirotoxicose/Hipertireoidismo) causa hiperestimulação do metabolismo e do sistema nervoso simpático, gerando o quadro clássico: intolerância ao calor/hipertermia, palpitações ('batedeira'), taquicardia, perda de peso com hiperfagia, hipermotilidade intestinal/diarreia, insônia, tremores e agitação psicomotora."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A constelação sintomática descrita é patognomônica da crise/síndrome de Hipertireoidismo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Síndromes Hipermetabólicas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Tuberculose intestinal"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Hipertireoidismo"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Neoplasia de intestino"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Linfoma"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    }
+  ]
+}

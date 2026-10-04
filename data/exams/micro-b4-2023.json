@@ -1,0 +1,4225 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "micro-b4-2023",
+  "title": "Microbiologia e Virologia Clínica",
+  "subject": "Microbiologia/Virologia",
+  "year": 2023,
+  "division": "B4",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/micro-b4-Simulado 2023.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados."
+    ]
+  },
+  "questions": [
+    {
+      "id": "micro-b4-2023-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Hepatites Virais & Transmissão",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 1 - Vicente, 19 anos, procura um pronto-socorro relatando que há uma semana notou que sua urina está escura e que sua pele adquiriu um tom amarelado. Ele também se queixa de enjoos, alguns episódios de vômito, dores abdominais e fraqueza. Ele relata que esses sintomas apareceram após duas semanas de chegar de uma viagem ao interior do Nordeste do Brasil, onde havia permanecido em um acampamento sem condições sanitárias. Tendo como uma das hipóteses de diagnóstico uma hepatite aguda de causa viral, o médico solicita exame com o qual é detectado o RNA de um vírus causador de hepatite. Tendo em vista a descrição acima, assinale a alternativa que descreve o POSSÍVEL agente causador do quadro."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Hepatite A (HAV) é um Picornavirus de RNA de fita simples, transmitido pela via fecal-oral. Apresenta período de incubação médio de 2 a 4 semanas e está fortemente associada a condições sanitárias precárias (água e alimentos contaminados). O HBV é vírus de DNA, enquanto HCV/HDV têm transmissão parenteral/sexual."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O histórico de viagem recente a local sem saneamento básico, o período de incubação de 2 semanas, o quadro agudo e a detecção de um vírus de "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "RNA"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " confirmam o diagnóstico de Hepatite A."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: O HBV tem genoma de DNA."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B e D: HCV e HDV têm transmissão parenteral/sanguínea/sexual e não por falta de saneamento em acampamentos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• E: Os dados clínicos, epidemiológicos e virológicos apontam diretamente para o HAV."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hepatites Virais & Transmissão"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Vírus da Hepatite B (HBV)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Vírus da Hepatite C (HCV)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Vírus da Hepatite A (HAV)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Vírus da Hepatite D (HDV)."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Não é possível determinar o agente causador somente com as informações dadas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "HPV & Oncogênese",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 2 - Existem mais de 200 tipos de vírus HPV capazes de infectar os seres humanos, mas somente alguns estão frequentemente associados ao desenvolvimento de tumores. Dentre os tipos associados a tumores estão:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os genótipos de HPV de alto risco oncogênico são os principais causadores do câncer de colo uterino, anogenital e orofaringe, sendo os tipos 16 e 18 responsáveis por cerca de 70% de todos os casos de câncer cervical no mundo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os tipos 16 e 18 são os clássicos genótipos oncogênicos de alto risco do HPV."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os tipos 10, 12 e 22 não pertencem ao grupo clássico de alto risco anogenital."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "HPV & Oncogênese"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Tipo 16 e tipo 22."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Tipo 16 e tipo 18."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Tipo 18 e tipo 22."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Tipo 12 e tipo 16."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Tipo 10 e tipo 18."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Sorologia da Hepatite B",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 3 - Analise a seguir os resultados obtidos na sorologia de um paciente acompanhado para hepatite B:\nHBsAg = positivo; HBeAg = positivo; Anti-HBs = negativo; Anti-HBe = negativo; Anti-HBc-IgM = negativo; Anti-HBc-total = positivo. Tendo em vista os resultados é POSSÍVEL AFIRMAR QUE:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Hepatite B Crônica é caracterizada pela persistência do HBsAg positivo por mais de 6 meses. A presença de Anti-HBc Total positivo com Anti-HBc IgM negativo afasta infecção aguda recente. O HBeAg positivo indica alta replicação viral e infectividade na fase crônica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " HBsAg(+) e Anti-HBc Total(+) com Anti-HBc IgM(-) definem Hepatite B crônica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B e E: A imunidade (vacinal ou por cura) exige HBsAg negativo e Anti-HBs positivo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C e D: A fase aguda cursa obrigatoriamente com Anti-HBc IgM positivo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Sorologia da Hepatite B"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Trata-se de um caso de hepatite B em fase crônica."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Trata-se de um indivíduo imunizado por meio de infecção natural pelo vírus da hepatite B."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Trata-se de um caso de hepatite B em fase aguda."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Trata-se de um caso de hepatite B em fase aguda, com indícios de resolução (bom prognóstico)."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Trata-se de um caso de indivíduo imunizado por meio da vacina contra Hepatite B."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Dengue & Fenômeno de ADE",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 4 - O fenômeno de “Aumento de Infecção Dependente de Anticorpos” pode ser observado em algumas infecções virais, particularmente na Dengue. Sobre esse fenômeno é CORRETO afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Aumento Dependente de Anticorpos (ADE) ocorre quando uma pessoa previamente infectada por um sorotipo de Dengue é infectada secundariamente por um sorotipo HETERÓLOGO (diferente). Os anticorpos da primeira infecção ligam-se ao novo vírus de forma subneutralizante, ligando-se a receptores Fcγ de macrófagos/monócitos e facilitando a entrada e replicação viral."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O ADE requer infecção secundária por sorotipo heterólogo com anticorpos subneutralizantes facilitando a penetração em células imunes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: O ADE não é mimetismo molecular contra antígenos próprios."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C e E: Infecção homóloga (mesmo sorotipo) é neutralizada eficazmente pela imunidade homóloga duradoura."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Dengue & Fenômeno de ADE"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Ocorre devido ao fenômeno de mimetismo molecular, onde na primeira infecção com o vírus são produzidos anticorpos que reconhecem antígenos próprios expressos pelas nossas células."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Pode ocorrer por até 4 vezes em um mesmo indivíduo, uma vez que existem 4 sorotipos de vírus da dengue, a cada infecção com um vírus diferente ocorre maior produção de anticorpos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. É observado na segunda infecção com o vírus de Vírus igual ao causador da primeira infecção, pois a presença de anticorpos neutralizantes facilita a infecção das células."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. É observado na segunda infecção com um sorotipo de Vírus diferente daquele causador da primeira infecção, pois a presença de anticorpos subneutralizantes facilita a infecção das células."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Pode ocorrer em qualquer indivíduo infectado pela segunda vez com o vírus da dengue, independentemente do sorotipo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Hepatites Virais (Associação)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 5 - As hepatites virais podem ser causadas por diferentes tipos de agentes. Dentre os vírus mais importantes destacam-se os vírus da Hepatite A, Hepatite B, Hepatite C, Hepatite D e Hepatite E. Associa abaixo as colunas 1 (tipo de vírus) e 2 (características dos vírus). Assinale abaixo a alternativa que contém A ORDEM CORRETA DE ASSOCIAÇÃO DAS COLUNAS:\n\n1 - Tipo de Vírus:\nA) HAV | B) HBV | C) HCV | D) HDV | E) HEV\n\n2 - Características do vírus:\n( ) Comum em usuários de drogas e submetidos a transfusão de sangue, maior parte evolui para infecção crônica.\n( ) Associado a baixas condições sanitárias, causa somente infecção aguda.\n( ) Transmitido somente em casos onde ocorre infecção simultânea ou superinfecção pelo vírus da hepatite B.\n( ) Transmissão sexual, ou parenteral. Maioria infecção aguda, pode evoluir para infecção crônica em alguns casos.\n( ) Transmissão oral-fecal, associado a infecções graves durante a gestação."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "HCV (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Transmissão parenteral/sanguínea; >80% cronificam."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "HAV (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Fecal-oral, saneamento precário, exclusivamente agudo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "HDV (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Vírus defectivo dependente do HBsAg do HBV (co-infecção ou superinfecção)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "HBV (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Transmissão sexual/parenteral/vertical, maior parte aguda em adultos, mas pode cronificar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "HEV (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Fecal-oral, alta mortalidade/gravidade em gestantes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A ordem correta das lacunas na Coluna 2 é: C, A, D, B, E."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hepatites Virais (Associação)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. B, C, E, D, A."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. E, B, A, C, D."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A, C, D, E, B."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. E, C, A, B, D."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. C, A, D, B, E."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "HPV & Oncoproteínas Virais",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 6 - Alguns tipos de tumor (de colo de útero, de ânus e de pênis, p. ex.) apresentam associação direta com a infecção por alguns tipos de vírus HPV (papilomavírus humano). A transformação neoplásica das células infectadas por esses vírus ocorre devido:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O HPV de alto risco expressa as oncoproteínas E6 e E7. A proteína E6 liga-se à p53 e promove sua degradação proteassômica, enquanto a E7 liga-se à pRb (proteína do retinoblastoma) e a inativa, desregulando o ponto de checagem do ciclo celular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A oncogênese do HPV ocorre pela produção de proteínas virais (E6/E7) que interferem nas proteínas reguladoras do ciclo celular humano (p53 e pRb)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A e C: O vírus não atua por secreção de fatores de crescimento solúveis."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: O DNA do HPV integra-se no DNA nuclear/genômico e não no DNA mitocondrial."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "HPV & Oncoproteínas Virais"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A infecção leva à ativação macrófagos no epitélio, responsáveis pela produção de fatores de crescimento e angiogênicos e pela proliferação das células epiteliais."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A produção de proteínas, codificadas pelo vírus, que interferem com proteínas presentes nas células hospedeiras responsáveis pela regulação do ciclo celular."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. O vírus HPV codifica em seu genoma proteínas que atuam como fatores de crescimento, induzindo a proliferação descontrolada das células infectadas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A inserção aleatória do DNA viral no DNA mitocondrial das células hospedeiras causando a disfunção de genes supressores de tumor."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. As células infectadas pelo HPV produzem proteínas com ação anti-apoptótica em grandes quantidades, levando à perda do controle do ciclo celular."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Febre Amarela & Fisiopatologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 7 - A febre amarela é caracterizada por diferentes fases e manifestações clínicas, que muitas vezes podem levar ao óbito do paciente. Em relação a essa Arbovirose é INCORRETO afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Febre Amarela recebe o termo 'fase de intoxicação' não devido a quadro gastrointestinal alimentar, mas pelo estado de toxicidade sistêmica grave com insuficiência hepatorrenal, icterícia e diátese hemorrágica decorrente da destruição parenquimatosa promovida pelo vírus."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " É incorreta porque a fase de intoxicação refere-se ao comprometimento hepático-renal severo e coagulopatias, e não a um quadro de intoxicação alimentar bacteriana."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das corretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A, B, C e E descrevem com precisão a evolução bifásica (infecção, remissão e intoxicação) da febre amarela."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Febre Amarela & Fisiopatologia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A fase de intoxicação é caracterizada pelos sintomas mais graves da doença, com retorno de febre, disfunção hepática e icterícia e hemorragias. Apresentando alta taxa de mortalidade (30-70%)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A fase infecção é caracterizada pela viremia e manifesta-se com febre alta, cefaleia, fotofobia, náuseas e vômitos. Porém sem apresentação de icterícia."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A fase de remissão ocorre após a fase infecção e é caracterizada pela diminuição dos sintomas, podendo evoluir para resolução (infecção abortiva) ou para a fase de intoxicação."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A fase de intoxicação é caracterizada pela ocorrência de sintomas similares aqueles observados em intoxicações alimentares (por isso recebe esse nome), como náusea, vômito e diarreia aquosa intensa."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Alguns indivíduos infectados pelo vírus da febre amarela podem apresentar infecção assintomática."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Chikungunya & Quadro Clínico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 8 - A infecção causada pelo vírus Chikungunya (CHKV) é caraterizada pelas seguintes manifestações clínicas, EXCETO:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O vírus Chikungunya (Alphavirus) é marcado por febre alta súbita e poliartralgia/artrite intensa, simétrica e incapacitante, acompanhada de mialgia e cefaleia. Não cursa primariamente com hepatite aguda e icterícia como achado característico."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Hepatite aguda com icterícia é achado marcador de vírus hepatotrópicos e da febre amarela, não sendo sintoma característico de Chikungunya."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das corretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A, B, D e E representam o quadro clínico clássico e frequente da infecção pelo vírus Chikungunya."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Chikungunya & Quadro Clínico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Artrite e Artralgia (principal sintoma)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Febre de início abrupto."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Hepatite aguda e Icterícia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Cefaleia e dores oculares."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Mialgia."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Mononucleose Infecciosa & EBV",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 9 - Analise o caso a seguir: Uma garota de 17 anos é atendida em um pronto-socorro com história de febre, dor de garganta, rouquidão, cansaço e dores musculares generalizadas. Ao ser examinada apresentava febre (39,1ºC), faringite com exsudato e aumento de linfonodos submandibular e cervicais. Ao ser realizado um hemograma, foi detectado linfocitose, com a presença de linfócitos atípicos. Tendo em vista os sintomas apresentados, e o resultado do hemograma. A doença apresentada pela garota é causada por:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Mononucleose Infecciosa clássica é causada pelo Vírus Epstein-Barr (EBV / HHV-4) e caracteriza-se por febre, faringite exsudativa, adenomegalia cervical e linfocitose atípica (linfócitos T ativados/células de Downey)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O conjunto de faringite exsudativa, adenopatia cervical e linfócitos atípicos em jovem confirma o EBV."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: O CMV causa síndrome mononucleóide frequentemente sem faringite exsudativa proeminente."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: O HHV-8 causa o Sarcoma de Kaposi."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D e E: Zika e Sarampo apresentam exantema característico e fisiopatologias distintas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Mononucleose Infecciosa & EBV"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Infecção pelo vírus Epstein-Barr (EBV)"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Infecção pelo Citomegalovírus (CMV)"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Infecção pelo vírus KSHV ou HHV-8"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Infecção pelo vírus da Zika (ZKV)"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Infecção por vírus do Sarampo (MeV)"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Sarampo & Cobertura Vacinal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 10 - O Sarampo é uma doença exantemática que nos últimos anos tem causado surtos epidêmicos em algumas regiões do Brasil. Em relação a esses surtos avalie as afirmações a seguir:\nI - Os surtos recentes de Sarampo foram associados ao surgimento de variantes do vírus, contra as quais a vacina atual apresenta eficácia reduzida.\nII - Os surtos epidêmicos de Sarampo podem ocorrer em populações nas quais a cobertura vacinal é menor do que 85-90%, uma vez que esse vírus apresenta uma transmissibilidade muito elevada, com R0 que varia de 9-18.\nIII - Os surtos recentes de Sarampo podem ser associados à baixa eficácia da vacina disponível atualmente. Essa vacina, composta por vírus inativados, apresenta eficácia na ordem de 70%.\nIV - Os casos recentes de Sarampo registrados no Brasil são decorrentes da aplicação da própria vacina disponível. Uma vez que se trata de vacina composta de vírus atenuado capaz de reverter para seu estado selvagem.\nApós avaliar as afirmações é POSSÍVEL AFIRMAR QUE:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O vírus do Sarampo é monotípico e altamente contagioso (R0 entre 12 e 18). Quedas na cobertura vacinal para níveis abaixo de 90-95% abrem brechas populacionais para surtos epidêmicos. A vacina é de vírus vivo atenuado (não inativado) e não reverte para vírus selvagem."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Apenas a afirmativa II está correta."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• I e III: O vírus é estável e a vacina (vírus vivo atenuado) possui eficácia altíssima (>95%)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• IV: A cepa vacinal do sarampo não sofre reversão para forma selvagem."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Sarampo & Cobertura Vacinal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Todas as afirmações SÃO INCORRETAS."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Somente a afirmação III é CORRETA."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Somente a afirmação IV é CORRETA."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Somente a afirmação I é CORRETA."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Somente a afirmação II é CORRETA."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Dengue Neonatal & Transmissão Placentária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 11 - Crianças recém-nascidas de gestantes infectadas com o vírus da dengue apresentam maior risco de desenvolver DENGUE GRAVE caso também sejam infectadas, isto é decorrente de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Anticorpos IgG maternos contra a Dengue cruzam a placenta para o feto. Se a mãe possui anticorpos heterólogos e o RN é infectado por Dengue, esses anticorpos IgG maternos circulantes provocam o fenômeno de ADE no recém-nascido, aumentando o risco de dengue grave/choque."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A transferência transplacentária de IgG materna subneutralizante desencadeia o fenômeno de ADE no lactente."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: IgM não atravessa a barreira placentária."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• E: O vírus da dengue não é um teratógeno clássico causador de malformações congênitas diretas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Dengue Neonatal & Transmissão Placentária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Transferência de anticorpos da classe IgM para o feto via transplacentária, que se ligam às células infectadas da criança, causando ativação de complemento."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Passagem transplacentária de proteínas virais (NS1) que induzem destruição de plaquetas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Fenômeno de Infecção Aumentada Dependente de Anticorpos, causada pela transmissão de anticorpos da classe IgG materna via placenta durante a gestação."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Fenômeno do “pecado original antigênico”."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Infecção congênita pelo vírus transmitido pela placenta, que apresenta capacidade teratogênica."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "HHV-8 & Sarcoma de Kaposi",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 12 - A infecção pelo KSHV ou HHV8 pode ser associada com o desenvolvimento de Sarcoma de Kaposi em pacientes com imunodeficiência, particularmente aqueles com HIV/AIDS. Em relação aos tumores associados com esse vírus, assinale abaixo a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Herpesvírus Humano 8 (HHV-8 / KSHV) é o agente etiológico do Sarcoma de Kaposi. Não existe vacina comercializada contra o HHV-8 (os genótipos 16 e 18 mencionados pertencem ao HPV)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " É incorreta pois não há vacina contra o HHV-8, e os tipos 16 e 18 referem-se ao Papilomavírus Humano (HPV)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das corretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A, C, D e E descrevem adequadamente o sarcoma de Kaposi (lesões cutâneas e viscerais, forma clássica em idosos mediterrâneos e diagnóstico histopatológico)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "HHV-8 & Sarcoma de Kaposi"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. O Sarcoma de Kaposi afeta inicialmente a pele causando lesões indolores, geralmente elipsoides hiperpigmentadas, mas posteriormente pode afetar os pulmões e trato gastro-intestinal."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A infecção pelo KSHV ou HHV8, e consequentemente o desenvolvimento dos tumores, pode ser evitada pelo uso de uma vacina composta pelos genótipos 16 e 18 do vírus. Os dois genótipos que apresentam características de oncovírus."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. O KSHV ou HHV8 além de estar associado ao desenvolvimento do Sarcoma de Kaposi em indivíduos com HIV/AIDS, também pode acometer imunocompetentes, particularmente idosos (forma esporádica/clássica) em regiões da europa."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Nos pacientes com HIV/AIDS a infecção com o KSHV ou HHV8 pode estar associado ao desenvolvimento do Sarcoma de Kaposi."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. O diagnóstico do Sarcoma de Kaposi é inicialmente clínico (características das lesões) e pode ser confirmado por análise histopatológica com a detecção de antígenos do vírus nas células tumorais."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Fases da COVID-19",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 13 - Analise as afirmações abaixo relacionadas às fases de evolução da Covid-19 e assinale a ALTERNATIVA INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Na COVID-19 grave, a disfunção endotelial e a coagulopatia/trombose sistêmica da Fase III (hiperinflamatória) são desencadeadas pela tempestade de citocinas inflamatórias circulantes e imunotrombose, e não primariamente por replicação viral direta extrapulmonar maciça."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A alteração vascular e de coagulação na fase severa decorre da resposta imune desregulada e tempestade de citocinas (imunotrombose), e não da disseminação viral direta extrapulmonar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das corretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A, B, C e E descrevem a fase viral inicial (com indicação do antiviral Paxlovid), a fase pulmonar e a dissociação entre diminuição da carga viral e aumento da inflamação na fase III."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fases da COVID-19"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A fase I (infecção / fase de resposta viral) pode ser assintomática ou apresentar sintomas como febre, dor de garganta e tosse seca."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A fase II (fase pulmonar) é decorrente do aumento da atividade inflamatória no pulmão, e caracterizda pelo início dos sintomas como falta de ar e hipóxia."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A fase III (hiper inflamatória) da Covid-19 é caracterizada pela diminuição da carga viral e aumento da resposta inflamatória no indivíduo infectado."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A disseminação do vírus (replicação extrapulmonar) é responsável pela ativação sistêmica do endotélio vascular e, consequentemente, pelas alterações de coagulação observada na fase III (hiper inflamatória)."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A fase I da Covid-19 pode ser tratada com o uso de medicamentos como o Paxlovid (Nirmatrelvir+ritonavir) que diminuem a replicação viral e consequentemente o processo inflamatório."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "COVID-19 & Coagulopatia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 14 - Em relação ao estado pró-trombótico observado em muitos casos de Covid-19, assinale abaixo o ALTERNATIVA INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Proteína C Ativada é um anticoagulante fisiológico. A lesão e ativação endotelial na COVID-19 expõem o fator tecidual e colágeno subendotelial pró-coagulantes, ao mesmo tempo em que reduzem os mecanismos anticoagulantes (como a Proteína C)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A afirmação de que a exposição de Proteína C Ativada causa microtrombos é incorreta, pois a Proteína C atua como fator anticoagulante e não pró-trombótico."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das corretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A, B, C e E explicam os mecanismos de imunotrombose (fator tecidual, inibição de fibrinólise por PAI-1 e ativação da coagulação)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "COVID-19 & Coagulopatia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A formação de micro trombos na circulação pode ser decorrente tanto da ativação extrínseca quanto da ativação intrínseca da cascata de coagulação."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A formação de micro trombos pode ser decorrente da diminuição da capacidade fibrinolítica, em virtude do aumento da produção do fator inibidor do ativador de plasminogênio 1 (PAI1)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A formação de micro trombos na circulação pode ser decorrente do aumento da expressão de fator tecidual ativo por monócitos ativados na circulação pelo reconhecimento de PAMPs virais."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A formação de micro trombos é decorrente do aumento da destruição de células endoteliais infectadas pelo vírus e consequente exposição de Proteína C Ativada presente nas membranas basais dos vasos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A formação de trombos pode ser decorrente do aumento da produção de bradicinina e ativação do sistema calicreína-cinina, que leva à vasodilatação e aumento de permeabilidade vascular, promovendo extravasamento de plasma e diminuição dos componentes do sistema de coagulação na circulação."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Diagnóstico de Infecções Virais",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 15 - Analise a seguir as afirmações sobre os parâmetros que podem ser utilizados para o diagnóstico de infecções virais (e causadas por outros agentes).\nI - Infecções agudas podem ser caracterizadas pela presença de IgM e IgG de baixa avidez.\nII - Infecções agudas podem ser caracterizadas pelo aumento significativo dos títulos de IgG em duas amostras obtidas com intervalo de tempo de duas semanas.\nIII - Infecções agudas podem ser caracterizadas pela detecção de antígenos virais na circulação ou fluidos biológicos de pacientes.\nIV – Infecções crônicas/passadas podem ser caracterizadas pela ausência de IgM e presença de IgG de alta avidez.\nApós analisar as afirmações é POSSÍVEL AFIRMAR QUE:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "\n• IgM e IgG de baixa avidez indicam infecção recente/aguda.\n• Soroconversão ou aumento de ≥ 4 vezes no título de IgG em amostras pareadas (14 dias) confirma infecção aguda.\n• Pesquisa direta de antígenos/viremia confirma fase aguda.\n• IgG de alta avidez na ausência de IgM indica infecção remota/passada."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todas as quatro afirmativas (I, II, III e IV) estão corretas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico de Infecções Virais"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Todas as afirmações são CORRETAS."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Somente as afirmações II e IV são CORRETAS."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Somente as afirmações I, II e III são CORRETAS."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Somente as afirmações I, II e IV são CORRETAS."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Somente as afirmações I e III são CORRETAS."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Erradicação da Poliomielite",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 16 - A Organização Mundial da Saúde tem um planejamento para erradicar a poliomielite antes de 2030. Para isso, campanhas de imunização no mundo todo (especialmente em países subdesenvolvidos) estão sendo implementadas ou apoiadas pela OMS. Um dos principais motivos pelos quais existe a possibilidade de erradicação da poliomielite via imunização em massa é que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Um pré-requisito biológico indispensável para a erradicação global de um vírus (como ocorreu com a Varíola) é que o ser humano seja seu único hospedeiro/reservatório natural, sem reservatórios animais silvestres."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O fato do homem ser o único reservatório e hospedeiro do Poliovírus viabiliza sua erradicação mundial por vacinação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: A transmissão é fecal-oral e oral-oral."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B e D: O vírus é altamente contagioso e pode persistir na água e esgoto por períodos prolongados."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Erradicação da Poliomielite"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Como a transmissão é via inalação, pretende-se que uma vacina via “aspersores” seja disseminada em locais de grande fluxo possibilitando uma rápida imunização em massa."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. O vírus tem baixa taxa de infectividade; se conseguirmos sabotar minimamente a cadeia de transmissão, há grande chance de, após alguns anos, não haver mais fluxo de vírus entre as pessoas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. O homem é o único hospedeiro do vírus."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O vírus da poliomielite é extremamente sensível no ambiente, não permanecendo em materiais biológicos senão durante alguns minutos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Nenhuma alternativa desta questão está correta."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Poliomielite & Vacinas (Salk vs Sabin)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 17 - Temos duas vacinas famosas contra a poliomielite: a SALK e a SABIN. A vacina Sabin é dada tradicionalmente por via oral. A Salk, por outro lado, é injetada (intramuscular ou subcutânea). O que aconteceria se usássemos a vacina Salk por via oral para imunizar crianças pequenas?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A vacina Salk (VIP) consiste em vírus inativados (mortos). Se administrados por via oral, as proteínas virais inativadas seriam degradadas pelas enzimas digestivas e pelo pH do trato gastrointestinal (TGI), sem replicar e sem gerar imunidade."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os vírus inativados da vacina Salk seriam destruídos na digestão gastrointestinal se administrados via oral, não induzindo resposta imune."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A e B: A Salk contém vírus inativados, logo é completamente incapaz de sofrer reversão de virulência."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Poliomielite & Vacinas (Salk vs Sabin)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Haveria grande chance de reversão de virulência, expondo as crianças a um risco desnecessário."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Haveria uma estimulação superior de imunidade, mas, em compensação, um risco aumentado de reversão de virulência."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Elas seriam imunizadas de forma quase equivalente à sua forma injetável."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Nada. Os antígenos contidos na vacina iriam passar pelo TGI sem suscitar resposta imunológica importante. Não teríamos imunidade protetora contra a poliomielite."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Nenhuma alternativa desta questão está correta."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Rinovírus & Quadro Clínico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 18 - Os resfriados comuns são infecções virais do trato respiratório superior, e os rinovírus são os patógenos virais mais comuns associados a essas infecções. Analise as seguintes afirmações e indique a alternativa que contempla todas as corretas:\nI - No caso do resfriado comum por rinovírus, é imprescindível o diagnóstico.\nII – Embora os rinovírus sejam bastante benignos, casos mais graves de pneumonia podem ocorrer em pacientes imunocomprometidos.\nIII – Sua associação com exacerbação da asma e quadros alérgicos está associada com a redução da expressão das caderinas ocasionada por ele. Isso permitiria uma passagem facilitada de alérgenos pelo epitélio respiratório."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O resfriado comum é autolimitado e benigno, tornando desnecessário o diagnóstico etiológico laboratorial de rotina (I é falsa). Em imunodeprimidos, o rinovírus pode acometer as vias inferiores. A redução de caderinas quebra a barreira epitelial e facilita a penetração de alérgenos desencadeando asma (II e III são verdadeiras)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As afirmativas II e III estão corretas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise da afirmativa I (falsa):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Não é imprescindível realizar diagnóstico etiológico laboratorial para resfriado comum."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Rinovírus & Quadro Clínico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Nenhuma afirmativa está correta."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. I, II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. III"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. II"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Rinovírus & Virologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 19 - Quais das seguintes afirmações sobre os rinovírus, agentes causadores de resfriados, é verdadeira?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os Rinovírus pertencem à família Picornaviridae. Possuem mais de 100 sorotipos sorologicamente distintos e são altamente contagiosos via aerossóis e fômites."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os rinovírus destacam-se pela elevada transmissibilidade e pela existência de mais de uma centena de sorotipos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Antibióticos combatem bactérias e não vírus."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: A transmissão é por gotículas respiratórias e contato."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Pertencem à família Picornaviridae."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: A diversidade de sorotipos previne imunidade cruzada duradoura vitalícia."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Rinovírus & Virologia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. O tratamento específico para infecções por rinovírus envolve necessariamente o uso de antibióticos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A principal via de transmissão dos rinovírus é através da ingestão de alimentos contaminados."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Os rinovírus pertencem à família Coronaviridae."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A imunidade contra os rinovírus é duradoura, proporcionando proteção ao longo da vida."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Os rinovírus são altamente contagiosos e apresentam uma extensa variedade de sorotipos diferentes."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Diagnóstico da Gripe (Influenza)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 20 - O diagnóstico da GRIPE:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O manejo da síndrome gripal na prática clínica diária é predominantemente baseado em critérios clínico-epidemiológicos. O diagnóstico etiológico específico (RT-PCR) é reservado para síndromes respiratórias agudas graves (SRAG), pacientes de risco com indicação de antiviral (Oseltamivir) e vigilância epidemiológica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O diagnóstico é essencialmente clínico na rotina, indicando-se exames em situações de gravidade, surtos ou vigilância."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A, B e C estão erradas pois o diagnóstico virológico não é realizado em larga escala para todos os casos leves de gripe."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico da Gripe (Influenza)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. O diagnóstico e feito rotineiramente por PCR, uma prova bem padronizada e barata."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Usa como padrão ouro de identificação do agente sua estrutura morfológica e deve sempre ser pedido para que se faça a distinção dessa doença respiratória e uma plêiade de outras doenças causadas por outros agentes."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. É feito rotineiramente em larga escala nos hospitais brasileiros"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Por ser infecção genérica causada por muitos agentes diferentes, o uso da palavra \"gripe\" é indistinto, inclusive por autoridades do governo, não sendo possível responder essa questão de forma objetiva."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Raramente se faz diagnóstico laboratorial; o médico em geral se apoia no diagnóstico clínico, pedindo exames laboratoriais apenas para fins epidemiológicos, grupos de risco ou se houver surto importante em curso."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-021",
+      "label": "21",
+      "sectionId": "objetivas",
+      "category": "Herpesviridae & Propriedades Biolócias",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 21 - Em relação aos herpesvírus (Família Herpesviridae), analise as afirmativas a seguir e assinale a alternativa que contempla todas as corretas:\nI – Catapora, mononucleose e Roséola são algumas de suas manifestações clínicas.\nII – É um grupo de vírus bastante complexo em termos de estrutura e replicação, podendo apresentar infecções líticas, persistentes, latentes ou imortalizantes.\nIII – Na latência viral dos herpesvírus, temos um fenômeno em que as células do hospedeiro detectam a invasão desses agentes e conseguem bloquear sua replicação até que o sistema imune esteja articulado e concentrado no local da infecção."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os herpesvírus causam catapora (VZV), mononucleose (EBV) e roséola (HHV-6) (I é verdadeira). Apresentam ciclo biológico complexo com infecção lítica, latente e imunossupressora/oncológica (II é verdadeira). A latência é uma estratégia de evasão do próprio VÍRUS e não uma contenção celular defensiva bem-sucedida da célula (III é falsa)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estão corretas apenas as afirmações I e II."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise da afirmativa III (falsa):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A latência é um programa de expressão gênica reprimida ativamente codificado pelo vírus para se esconder do sistema imune."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Herpesviridae & Propriedades Biolócias"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. II"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. I, II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. I e II"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. III"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-022",
+      "label": "22",
+      "sectionId": "objetivas",
+      "category": "Gripe Suína & Terapêutica Antiviral",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 22 - Uma paciente grávida deu entrada no pronto socorro de um hospital com sintomas sugestivos de serem gripe (mal-estar, dor de cabeça, febre, calafrios, mialgia e tosse seca). Isso ocorreu no contexto de um novo surto de gripe suína na capital paulista. Em relação à terapêutica dessa paciente:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O antiviral Oseltamivir (inibidor da neuraminidase) é o tratamento de escolha indicado para gestantes e grupos de risco com síndrome gripal por Influenza A/H1N1 (gripe suína). A amantadina é um inibidor histórico da proteína M2."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Oseltamivir (Tamiflu) e a Amantadina constituem antivirais indicados contra o vírus Influenza."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Antibióticos não tratam infecção viral e Ribavirina é teratogênica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C e D: Existe indicação formal de antiviral específico em gestantes."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Gripe Suína & Terapêutica Antiviral"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Deve ser administrado apenas antibióticos de amplo espectro associado à RIBAVIRINA."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Deve ser administrado apenas corticoides, pois a gravidade dos sintomas está relacionada à reação imunológica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Não existe tratamento disponível, porque há poucas drogas para lidar com esse grupo de agentes."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Apenas deve ser feito tratamento sintomático"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Existe a possibilidade de se administrar drogas como o OSELTAMIVIR e a AMANTADINA"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-023",
+      "label": "23",
+      "sectionId": "objetivas",
+      "category": "Família Rhabdoviridae & Raiva",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 23 - Em relação aos vírus da Família Rhabdoviridae, analise as seguintes afirmativas e assinale a alternativa correta.\nI - Nesta família temos o causador da ENCEFALITE DE SAINT LOUIS, um vírus envelopado e pleomórfico.\nII - São vírus altamente resistentes no meio ambiente, o que facilita sua disseminação.\nIII – Nessa família temos o vírus rábico, cujo diagnóstico é feito especialmente por imunofluorescência e, mais recentemente, por técnicas moleculares.\nIV - Após ser mordido por um animal suspeito de raiva, deve-se lavar a ferida com água e sabão e aguardar 10 dias. Caso não haja nenhum sinal clínico, a ida ao médico está descartada."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O vírus da Raiva (Lyssavirus) pertence à família Rhabdoviridae e seu diagnóstico confirmatório é realizado por imunofluorescência direta e RT-PCR (III é verdadeira). A Encefalite de Saint Louis é causada por um Flavivirus (I é falsa). Rhabdovírus são sensíveis no ambiente (II é falsa). O atendimento médico pós-exposição é imediato (IV é falsa)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Apenas a afirmativa III é verdadeira."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das afirmativas incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• I: O vírus da encefalite de St. Louis pertence à família Flaviviridae."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• II: Vírus envelopados são lábeis no ambiente."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• IV: A avaliação médica pós-exposição de risco deve ser imediata."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Família Rhabdoviridae & Raiva"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Apenas as afirmativas I, II e IV estão corretas"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Apenas as afirmativas I e II estão corretas"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Apenas a afirmativa III está correta"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Apenas as afirmativas I, II e III estão corretas"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Apenas as afirmativas I, III e IV estão corretas"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-024",
+      "label": "24",
+      "sectionId": "objetivas",
+      "category": "Profilaxia Antirrábica Humana",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 24 - A notícia sobre 'primeiro caso de raiva canina desde 1983' representa um caso de preocupação que rompe uma série histórica de controle da doença. No caso de pessoas que tenham recebido mordedura profunda de um animal sabidamente raivoso, o procedimento deverá ser:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Na exposição de alto risco a animal raivoso (acidente grave com ferimento profundo), o protocolo oficial do Ministério da Saúde exige a profilaxia pós-exposição completa: vacina antirrábica (imunização ativa) associada ao soro antirrábico/imunoglobulina (imunização passiva), infiltrada preferencialmente no local do trauma."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Ferimentos graves por animais raivosos exigem soro/imunoglobulina infiltrados na lesão concomitante com a vacina."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Apenas a vacina (A) é insuficiente em acidentes graves por não fornecer anticorpos imediatos na ferida."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Profilaxia Antirrábica Humana"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Apenas vacina antirrábica"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Vacina antirrábica e soro antirrábico (imunoglobulinas) simultaneamente (o soro no local do trauma)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Interleucina-2 e Interferon gama"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Anticorpos monoclonais humanizados"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Ribavirina e Amantadina"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-025",
+      "label": "25",
+      "sectionId": "objetivas",
+      "category": "Herpesviridae & Latência Viral",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 25 - Os membros da Família Herpesviridae apresentam o fenômeno da LATÊNCIA VIRAL. Esse fenômeno trata-se de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A latência viral dos Herpesvírus é a manutenção do genoma viral no núcleo da célula hospedeira sem a produção de partículas virais infecciosas, podendo reativar-se perante episódios de imunossupressão ou estresse."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Define latência como a permanência do genoma viral intracelular reprimido sem replicação ativa, aguardando oportunidade/reativação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " B, C, D e E contêm conceitos incorretos sobre latência intracelular."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Herpesviridae & Latência Viral"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Período em que o vírus está dentro das células do hospedeiro sem se multiplicar, esperando que estímulos externos sinalizem que a imunidade do hospedeiro está baixa para que ele possa se multiplicar"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Fenômeno induzido pelo uso de drogas antivirais colinérgicas durante a fase de eclipse da multiplicação viral"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Um período em que o vírus permanece viável no ambiente, resistindo às mais severas condições ambientais"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Período em que o vírus fica encistado sob a pele, esperando o melhor momento para eclodir e parasitar o hospedeiro"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Espaço de tempo entre a adsorção e a translocação viral; pelo fato de ser muito mais longo do que o encontrado em outros vírus, acabou recebendo essa denominação, embora ela não seja, a rigor, tecnicamente correta"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-026",
+      "label": "26",
+      "sectionId": "objetivas",
+      "category": "Herpes-Zóster & Patogênese",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 26 - Paciente de 67 anos viúvo há pouco mais de 3 meses chega ao seu consultório relatando dor cruciante na região das costas e refere aparecimento de “feridas” exatamente no local dessas dores. Você desconfia de Herpes-Zóster e, nesse caso:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Herpes-Zóster resulta da reativação endógena do Vírus Varicela-Zóster (VZV) latente nos gânglios sensitivos desde a infecção primária (catapora) ocorrida no passado, desencadeada por queda da imunidade celular (ex: estresse do luto ou idade avançada)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Herpes-Zóster é o resultado da reativação do VZV latente em indivíduos que tiveram catapora pregressa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Não é infecção de transmissão sexual."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D e E: Herpes-zóster é típico de idosos/imunocomprometidos e não decorre de reinfecção exógena recente em aglomerações."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Herpes-Zóster & Patogênese"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. É possível inferir que ele teve catapora (sintomática ou assintomática) na infância e permaneceu com o vírus todos esse período, até a reemergência da replicação desse mesmo vírus."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Ele deve ser orientado sobre as formas de infecção dessa doença (transmissão sexual) para que possa prevenir uma futura infecção desse mesmo vírus, praticando sexo seguro."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. É fundamental o diagnóstico pois existe várias entidades clínicas que se apresentam exatamente da mesma forma."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Embora os sinais clínicos sejam compatíveis, o contexto do indivíduo não é, pois Zóster é uma doença exantemática que afeta apenas crianças pequenas."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Podemos inferir corretamente que ele e infectou em algum episódio recente de aglomeração, talvez durante o velório da esposa."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-027",
+      "label": "27",
+      "sectionId": "objetivas",
+      "category": "Transmissão do SARS-CoV-2",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 27 - Duas pessoas foram obrigadas a compartilhar um ambiente interno e uma delas estava com COVID-19. Essa pessoa teve um acesso de espirros e resolveu justamente retirar a máscara para que os espirros pudessem sair em toda a sua plenitude. A outra pessoa, percebendo o risco que corria, manteve-se o mais afastada possível (6 metros). Numa situação como essa, o segundo indivíduo, mesmo usando máscara, tem chance de se infectar:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O SARS-CoV-2 é transmitido por aerossóis (partículas < 5 µm) que permanecem suspensos no ar e viajam distâncias superiores a 2 metros em ambientes fechados mal ventilados. As gotículas grandes caem rapidamente em até 1-2 metros."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A uma distância de 6 metros em ambiente fechado, o contágio ocorre pela inalação de aerossóis virais suspensos no ar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Gotículas pesadas (D e E) não alcançam 6 metros em suspensão."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Transmissão do SARS-CoV-2"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Inalando os aerossóis espalhados pelo infectado."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Apenas se tocar em alguma superfície que o primeiro indivíduo tocou."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Nenhuma alternativa desta questão está correta."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Inalando as gotículas espalhadas pelo infectado."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Se a nuvem de gotículas se depositar na sua conjuntiva ou mucosa respiratória."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-028",
+      "label": "28",
+      "sectionId": "objetivas",
+      "category": "Receptores do SARS-CoV-2 (ACE-2)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 28 - O principal receptor para o SARS-CoV-2 é o ACE-2, um receptor de angiotensina. Por conta disso, sabe-se hoje que o SARS-CoV-2 é encontrado em diversos tecidos, EXCETO:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A enzima conversora de angiotensina 2 (ACE-2) é expressa em células epiteliais e endoteliais do trato respiratório, coração, rins, fígado e vasos. As hemácias (eritrócitos) são anucleadas e não expressam o receptor de membrana ACE-2."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As hemácias não expressam ACE-2 e não são infectadas diretamente pelo SARS-CoV-2."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das corretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Fígado, pulmões, coração e nasofaringe expressam ACE-2 e são alvos do vírus."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Receptores do SARS-CoV-2 (ACE-2)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Fígado"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Pulmões"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Coração"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Nasofaringe"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Hemácias"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-029",
+      "label": "29",
+      "sectionId": "objetivas",
+      "category": "Vírus Nipah & Zoonoses Emergentes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 29 - A notícia sobre o vírus Nipah alerta para o risco de novas pandemias. Os NIPAH vírus pertencem à família ____________ e assustam porque possuem uma taxa de letalidade da ordem de ____________. As principais formas de infecção conhecidas até aqui no ser humano são ____________.\n\nA alternativa que completa de forma correta e respectiva as lacunas acima é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O vírus Nipah é um Henipavirus pertencente à família "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Paramyxoviridae"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". É uma zoonose grave com alta taxa de letalidade (estimada em "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "40% a 75%"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "). A transmissão ocorre por contato com suínos/cavalos infectados, alimentos contaminados por excreta de morcegos e transmissão interhumana."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Completa com precisão: Família Paramyxoviridae / 40 a 75% / Consumo de carne/alimentos contaminados e transmissão interpessoal."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Nipah não é Coronaviridae nem Picornaviridae."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Vírus Nipah & Zoonoses Emergentes"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Família Coronaviridae / 40 a 75% / Consumo de carne de morcego e contato com pessoas infectadas"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Família Paramyxoviridae / 40 a 75% / Consumo de carne de cavalo e proximidade com outras pessoas infectadas"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Família Picornaviridae / 40 a 100% / Consumo de carne de cavalo e proximidade com outras pessoas infectada"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Família Paramyxoviridae / 4 a 6% / Proximidade com outras pessoas infectadas"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Família Coronaviridae / 4 a 5% / Contato com pessoas infectadas e ingestão de carne de cavalo crua"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "micro-b4-2023-objetivas-030",
+      "label": "30",
+      "sectionId": "objetivas",
+      "category": "Gripe Aviária (H5N1) & Potencial Pandêmico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 30 - O espectro de uma pandemia por linhagens de influenzavírus aviários (Gripe aviária) aterroriza o mundo dada a sua alta taxa de LETALIDADE (até 60%). No entanto, essa linhagem não conseguiu causar pandemias em tempos modernos porque:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O vírus da Influenza Aviária de alta patogenicidade (como H5N1) infecta humanos expostos a aves infectadas, porém não possui adaptação nos receptores de hemaglutinina para realizar sustentadamente a transmissão interhumana (pessoa a pessoa)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (E):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Falta ao vírus aviário a capacidade de transmissão direta e sustentada entre seres humanos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Ocorrem casos graves de transmissão de aves para humanos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Gripe Aviária (H5N1) & Potencial Pandêmico"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Nenhuma alternativa desta questão está correta."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A distribuição rápida de drogas antivirais previne o surgimento de pandemias."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Temos um programa mundial de vacinação contra a gripe muito eficiente, mesmo em países subdesenvolvidos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Nunca houve a passagem desse vírus para seres humanos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Embora o vírus da gripe aviária consiga, ocasionalmente, saltar das aves para os seres humanos, ele ainda não é capaz de fazer uma eficiente transmissão pessoa a pessoa."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    }
+  ]
+}

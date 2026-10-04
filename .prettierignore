@@ -1,0 +1,14 @@
+# Fontes legadas e auditoria original preservadas; nunca formatar em massa.
+/index.html
+/*.js
+/simulados/
+/simulados.json
+/docs/LEGACY_AUDIT.md
+/docs/EXAM_INVENTORY.md
+# Dados acadêmicos e schema exportado têm geração determinística própria.
+/data/
+/schema/*.json
+/public/
+/dist/
+/node_modules/
+/test-results/
