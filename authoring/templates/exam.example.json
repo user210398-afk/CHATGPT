@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "exemplo-neutro",
+  "title": "EXEMPLO — não é prova acadêmica",
+  "subject": "Exemplo neutro",
+  "year": null,
+  "division": "EXEMPLO",
+  "description": "Template didático fictício; não promover.",
+  "tags": ["exemplo"],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "exemplo-ficticio.txt",
+    "sourceSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "notes": ["Hash fictício exclusivo deste template."]
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "label": "1",
+      "type": "multiple-choice",
+      "category": "Exemplo",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual palavra representa o número um?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Um é a palavra usada neste exemplo."
+        }
+      ],
+      "images": [],
+      "tags": [],
+      "options": [
+        {
+          "id": "a",
+          "text": [
+            {
+              "type": "text",
+              "text": "Um"
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "text": [
+            {
+              "type": "text",
+              "text": "Dois"
+            }
+          ]
+        },
+        {
+          "id": "c",
+          "text": [
+            {
+              "type": "text",
+              "text": "Três"
+            }
+          ]
+        },
+        {
+          "id": "d",
+          "text": [
+            {
+              "type": "text",
+              "text": "Quatro"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "a"
+    }
+  ]
+}
