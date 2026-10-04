@@ -1,0 +1,15 @@
+{
+  "examId": "oficina-neutra-2026",
+  "subject": "Oficina de organização",
+  "year": 2026,
+  "division": "Aula de teste",
+  "title": "Oficina — fixture neutra",
+  "language": "pt-BR",
+  "objectiveCount": 2,
+  "essayCount": 1,
+  "optionsPerObjective": 4,
+  "difficulty": { "easy": 0.2, "medium": 0.6, "hard": 0.2 },
+  "focusTopics": [],
+  "excludeTopics": [],
+  "allowExternalKnowledge": false
+}

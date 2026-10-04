@@ -152,3 +152,20 @@ Baseline alterado: restaure o arquivo exatamente da base e investigue o diff.
 A futura Fase 6B poderá criar candidates a partir de arquivos-fonte, mantendo
 este mesmo contrato, hash, revisão humana e promoção explícita. Upload, OCR,
 parsing, prompts, LLMs, provedores e serviços externos continuam fora da 6A.
+
+## Implementação da Fase 6B
+
+A Fase 6B agora implementa o gerador sobre estes mesmos contratos. Consulte
+[AI_GENERATION.md](AI_GENERATION.md): export offline gratuito, mock neutro e
+Responses API opcional com `ENVIAR`. `author:generate` e
+`author:import-generation` produzem candidate Schema v1, review draft sem checks
+aprovados e registro estrito em `authoring/generations/<id>.json`.
+O import exige fonte original local via `--file` para recalcular seu SHA-256.
+
+`author:validate`, `loadCandidate`, promoção explícita e Content Gate conferem
+o registro para `exam-generation-v1`, incluindo source/hash, request, provider,
+counts, dificuldade e IDs/anchors. Records órfãos são rejeitados; authoring manual
+e manifests anteriores da 6A continuam compatíveis. Nenhuma regra de aprovação,
+baseline ou igualdade com produção foi relaxada. Para uma futura adição 6B,
+conserve também o generation record junto aos três arquivos descritos acima.
+Nenhuma prova real foi adicionada nesta fase; UI, engine e deploy são preservados.

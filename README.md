@@ -6,6 +6,12 @@ paridade acadêmica. O sistema já está em produção em
 https://user210398-afk.github.io/CHATGPT/. A Fase 6A prepara authoring seguro
 sem novas provas reais, IA/API, merge ou deploy.
 
+A Fase 6B acrescenta geração segura de candidates: export offline gratuito,
+mock determinístico e OpenAI opcional com consentimento literal `ENVIAR`.
+IA sempre produz review draft; aprovação e promoção continuam humanas e separadas.
+Veja [AI_GENERATION.md](docs/AI_GENERATION.md) para `author:generate`,
+`author:import-generation`, configuração, privacidade e revisão da fonte.
+
 ## Instalar e desenvolver
 
 Use **Node 24.19.0** e npm, como nos workflows e na validação local. O manifesto
@@ -104,5 +110,6 @@ cutover histórico e rollback está em [Fase 4](docs/PHASE4_RELEASE_READINESS.md
 - [Migração das 17 provas — Fase 3](docs/PHASE3_MIGRATION.md)
 - [Release readiness e plano histórico de cutover — Fase 4](docs/PHASE4_RELEASE_READINESS.md)
 - [Regras para agentes](AGENTS.md)
+- [Geração assistida de candidates — Fase 6B](docs/AI_GENERATION.md)
 - [Auditoria original](docs/LEGACY_AUDIT.md)
 - [Inventário original](docs/EXAM_INVENTORY.md)
