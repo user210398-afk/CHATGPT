@@ -21,7 +21,7 @@ Todos os enunciados/categorias/opções/gabaritos/modelos permanecem na ordem or
 | `simulados/imunologia-b4-Simulado 2022.html` | `data/exams/imunologia-b4-2022.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | OK — schema + DOM integral |
 | `simulados/imunologia-b4-Simulado 2023.html` | `data/exams/imunologia-b4-2023.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | OK — schema + DOM integral |
 | `simulados/imunologia-b4-Simulado 2024.html` | `data/exams/imunologia-b4-2024.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | OK — schema + DOM integral |
-| `simulados/imunologia-b4-Simulado 2025.html` | `data/exams/imunologia-b4-2025.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | Pendente |
+| `simulados/imunologia-b4-Simulado 2025.html` | `data/exams/imunologia-b4-2025.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | OK — schema + DOM integral |
 | `simulados/micro-b4-Simulado 2023.html` | `data/exams/micro-b4-2023.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | Pendente |
 | `simulados/micro-b4-Simulado 2024.html` | `data/exams/micro-b4-2024.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | Pendente |
 | `simulados/micro-b4-Simulado 2025.html` | `data/exams/micro-b4-2025.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | Pendente |
