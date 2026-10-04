@@ -1,0 +1,2780 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "propedeu-p2-2025",
+  "title": "Propedêutica Médica",
+  "subject": "Propedêutica",
+  "year": 2025,
+  "division": "P2",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/propedeu-p2-Simulado 2025.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "Quatro alternativas em cada questão; 15 categorias."
+    ]
+  },
+  "questions": [
+    {
+      "id": "propedeu-p2-2025-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Perda de Peso Involuntária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 1 - São causas de perda de peso involuntária, exceto:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O hipotireoidismo reduz o metabolismo basal e costuma provocar ganho de peso/retenção hídrica. O insulinoma cursa com hiperinsulinismo e hipoglicemia, promovendo aumento do apetite e ganho de peso."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O hipotireoidismo e o insulinoma são causas clássicas de "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "ganho de peso"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", e não de perda involuntária (representando a exceção)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), b) e c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todas listam patologias consumptivas, inflamatórias, infecciosas ou de falência de órgãos que causam perda de peso involuntária/caquexia."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Perda de Peso Involuntária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Doenças inflamatórias intestinais, neoplasias, gastrite"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) HIV, tuberculose, parasitoses intestinais, esquistossomose"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Insuficiência cardíaca congestiva, cirrose hepática, DPOC"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Depressão, hipotireoidismo, insulinoma"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Perda de Peso Involuntária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 2 - Qual a definição correta de perda de peso involuntária?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A definição médica formal de Perda de Peso Involuntária (PPI) exige que a perda seja involuntária (não intencional), equivalente a 5-10% da massa corporal total no intervalo de 6 a 12 meses, excluindo causas voluntárias/medicações indutoras."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Define precisamente os critérios quantitativos, temporais e de exclusão voluntária."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b), c) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Trazem dados equivocados quanto aos grupos de risco, obrigatoriedade de neoplasias ou desconsideração de obesos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Perda de Peso Involuntária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Perda de peso não intencional, de 5-10% do peso, ao longo de 6-12 meses, excluindo uso de diuréticos, medicações para perda de peso, dietas restritivas e atividade física intensa."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Perda de cerca de 5-10% do peso inicial, ao longo dos últimos 6 meses, exceto em pacientes obesos, cuja perda de peso traz benefícios à saúde."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Perda de peso considerada significativa pelo paciente, que cursa com piora da qualidade de vida, aumento da fragilidade e riscos de vida, em qualquer faixa etária, sendo a principal causa, as doenças neoplásicas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Perda de peso não intencional, de 5-10% do peso, ao longo de 6-12 meses, no entanto só sendo de significado preocupante em pacientes idosos com baixo peso."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Perda de Peso Involuntária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 3 - Joana, 41 anos, te procura no pronto socorro do hospital São Vicente, referindo que tem notado que vem emagrecendo de forma que a preocupou nos últimos 2 meses. Embora você não tenha acesso a informações de prontuário prévio, paciente refere ter perdido cerca de 12-15Kg nesse período, embora tenha notado um aumento do apetite. Refere que tem passado por estresse no trabalho, que anda irritada com todos. Frente a esse quadro você:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Uma perda ponderal acentuada (12-15 kg em 2 meses) associada a hiperfagia, irritabilidade e estresse exige investigação rigorosa de causas orgânicas hipermetabólicas, notadamente Tirotoxicose / Hipertireoidismo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Aprofundar a anamnese pesquisando sintomas adrenérgicos/tireoidianos (palpitações, tremores, insônia, diarreia) é a conduta médica correta."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b), c) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Atribuir precocemente o quadro a causas psicológicas/uso de drogas sem investigar hipertireoidismo representa erro grave de conduta."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Perda de Peso Involuntária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Se preocupa com a perda de peso relatada, e enriquece sua anamnese com perguntas como presença de palpitações, tremores, insônia, alteração de hábito intestinal, antecedentes familiares de patologias, em busca de reforçar suas hipóteses diagnósticas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Encaminha paciente para psiquiatria imediatamente, uma vez que suas queixas e seus relatos se enquadram em transtorno psiquiátrico que traz repercussões à sua saúde, necessitando de tratamento com brevidade."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Embora você pense em seu conhecimento sobre doenças que cursam com perda de peso dessa maneira, acredita que não seja nada grave, pois paciente muito jovem e deve estar fazendo uso de medicações que não quis relatar."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Conversando com Joana, ela nega poliúria e polidipsia, você exclui diabetes e encaminha para psicologia."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Perda de Peso Involuntária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 4 - Em pacientes jovens com queixa de perda de peso involuntária, é fundamental a realização dos seguintes exames:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O rastreamento laboratorial inicial de 1ª linha na PPI em adultos jovens engloba Hemograma completo, Glicemia de Jejum (exclusão de Diabetes Mellitus) e TSH/T4 livre (exclusão de disfunções tireoidianas)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Reúne os exames de triagem inicial indispensáveis na propedêutica de perda de peso."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), b) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Imagens avançadas (TC/RM) não fazem parte do rastreamento laboratorial de primeira linha sem sinais de localização."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Perda de Peso Involuntária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Hemograma, tomografia de abdome, tomografia de crânio"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Dosagens de vitaminas, Hemograma, Ressonância de corpo inteiro"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Glicemia de jejum, exames de função tireoidiana, hemograma"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Função hepática, ultrassom de abdome, função renal"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Pneumologia & Semiologia Respiratória",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 5 - Assinale a alternativa que faz uma correta correlação entre os termos médicos:\n\nI. Taquipneia — A. Dispneia ao decúbito\nII. Ortopneia — B. Aumento da frequência respiratória\nIII. Dispneia paroxística noturna — C. Dispneia em posição ortostática\nIV. Platipneia — D. Despertar por dispneia"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Glossário de Semiologia Respiratória:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• I. Taquipneia = Aumento da FR (B)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• II. Ortopneia = Dispneia ao decúbito dorsal (A)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• III. Dispneia paroxística noturna = Despertar repentino por falta de ar (D)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• IV. Platipneia = Dispneia na posição ortostática que melhora ao deitar (C)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A correlação exata é I-B, II-A, III-D, IV-C."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Pneumologia & Semiologia Respiratória"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) I A, II B, III C, IV D"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) I B, II A, III D, IV C"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) I B, II D, III C, IV A"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) I D, II C, III B, IV A"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Pneumologia & Diagnóstico Diferencial",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 6 - Assinale a afirmativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dispneia pode ter etiologia não-cardiopulmonar primária. Anemia (redução da capacidade de transporte de $O_2$), infecções sistêmicas/sepse (acidose metabólica) e crises convulsivas (período pós-ictal/hipóxia) são causas sistêmicas clássicas no diagnóstico diferencial da dispneia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Reconhece com precisão as causas sistêmicas e extrapulmonares no diagnóstico diferencial."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Mudanças na pressão atmosférica/altitude interferem na saturação e causam dispneia."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Herpes zoster causa dor neuropática nos dermátomos intercostais, não paralisia muscular respiratória."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "d) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O tireoidismo (especialmente o hipertireoidismo) causa dispneia de esforço e hiperventilação."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Pneumologia & Diagnóstico Diferencial"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Dentre as causas de dispneia, mudanças atmosféricas não podem ser consideradas, pois o organismo se adapta prontamente as variações de O2."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Herpes zoster pode acometer um nervo da caixa torácica, levando a desconforto respiratório, por paralisia da musculatura torácica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Anemia, infecções, crises convulsivas também entram em diagnóstico diferencial de dispneia."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Doenças tireoidianas não se enquadram na investigação roteira de dispneia."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Cardiologia & Insuficiência Cardíaca",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 7 - Paciente com antecedente de ICC, HAS e IAM prévio há cerca de 2 anos, procura atendimento médico devido a piora da dispneia há cerca de 1 semana, associada a ortopneia, DPN e piora do edema de membros inferiores. Quais achados você espera encontrar no exame físico?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O quadro de descompensação da Insuficiência Cardíaca Congestiva (ICC) cursa com congestão pulmonar (estertores crepitantes finos inspiratórios em bases) e congestão sistêmica (edema de MMII depressível / sinal do cacifo ou Godet positivo, turgência jugular e hepatomegalia congestiva)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estertores finos e edema com sinal de Godet são achados cardinais da ICC descompensada."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b), c) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Trazem achados estranhos como hipertimpanismo (pneumotórax), sinal da bandeira ou sinal de Jobert (pneumoperitônio)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Cardiologia & Insuficiência Cardíaca"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Estertores finos e edema de membros inferiores com Godet positivo"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Estase jugular e hipertimpanismo a percussão torácica"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Refluxo hepato-jugular e sinal da bandeira positivo"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Cianose central e sinal de Jobert positivo"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Cardiologia & Insuficiência Cardíaca",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 8 - Mulher de 58 anos de idade, obesa, tabagista, com hipotireoidismo e depressão queixa-se de dispneia e cansaço aos esforços há 3 meses. Qual alternativa contém os dados da história e alterações do exame físico que poderiam sugerir mais fortemente a presença de insuficiência cardíaca neste paciente?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Pelos Critérios de Framingham para o diagnóstico de Insuficiência Cardíaca, os critérios maiores incluem: Dispneia Paroxística Noturna (DPN), Turgência/Estase Jugular a 45°, Rales crepitantes pulmonares, Cardiomegalia, Edema agudo de pulmão, Ritmo de galope por Terceira Bulha ($B_3$) e Refluxo Hepatojugular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estase jugular, DPN e $B_3$ são altamente específicos para a confirmação diagnóstica de ICC."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Cardiologia & Insuficiência Cardíaca"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Ortopneia, tosse noturna e elevação da pressão arterial"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Estase jugular, dispneia paroxística noturna e presença de terceira bulha"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Pressão arterial elevada, edema em membros inferiores e sibilos"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Dispneia paroxística noturna, tosse noturna e platipneia."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Hipertensão Arterial (SBC)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 9 - De acordo com a Cardiologia e a Sociedade Brasileira de Cardiologia – Diretriz de Hipertensão Arterial, marca-se o diagnóstico de hipertensão arterial em ambiente de consultório quando:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O diagnóstico formal de Hipertensão Arterial Sistêmica (HAS) no consultório segundo as Diretrizes Brasileiras é definido por valores de Pressão Arterial Sistólica (PAS) $ge 140$ mmHg e/ou Pressão Arterial Diastólica (PAD) $ge 90$ mmHg, confirmados em pelo menos duas ocasiões."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Define com exatidão o ponto de corte diagnóstico oficial de consultório ($ge 140/90$ mmHg)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hipertensão Arterial (SBC)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) PAS ≥ 120 mmHg ou PAD ≥ 70 mmHg."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) PAS ≥ 130 mmHg ou PAD ≥ 80 mmHg."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Condição multifatorial caracterizada por elevação persistente da pressão arterial, dependente de fatores genéticos, epigenéticos, ambientais e sociais, que aumenta o risco cardiovascular e mortalidade."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) PAS ≥ 140 mmHg ou PAD ≥ 90 mmHg."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Técnica de Aferição da Pressão Arterial",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 10 - A medição adequada da pressão arterial é fundamental para o diagnóstico e acompanhamento da hipertensão. Assinale a alternativa correta sobre os cuidados e procedimentos necessários para realizar a medição da pressão arterial de maneira correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Procedimento padrão de medição da PA: Repouso sentado em ambiente calmo por 3 a 5 minutos, bexiga vazia, pernas não cruzadas, braço apoiado na altura do precórdio, sem falar/mover-se e manguito adequado à circunferência do braço (com a bolsa inflável cobrindo 80% do braço, posicionado 2-3 cm acima da fossa cubital)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Contempla as recomendações internacionais e da SBC de técnica de aferição."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O paciente deve estar sentado com pés apoiados, e não em pé."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O manguito deve ficar 2 a 3 cm *acima* do cotovelo/fossa cubital."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "d) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Falar ou mover-se eleva artificialmente a pressão arterial em até 10 mmHg."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Técnica de Aferição da Pressão Arterial"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) A pressão arterial deve ser medida com o paciente em pé, após 5 minutos de repouso, para garantir um valor preciso."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) É necessário que o paciente tenha o braço relaxado e posicionado ao nível do coração, com o manguito do esfigmomanômetro colocado sobre o cotovelo."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) A medição da pressão arterial deve ser realizada com o paciente em repouso por pelo menos 5 minutos, em um ambiente silencioso, utilizando o manguito adequado ao tamanho do braço."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) O paciente pode estar falando ou se movendo durante a medição da pressão arterial, pois isso não interfere nos resultados."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Síndrome Febril",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 11 - Qual é a causa mais comum de febre em adultos saudáveis?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Em adultos imunocompetentes e previamente saudáveis, as infecções do trato respiratório (virais ou bacterianas, como resfriado, gripe, sinusite, amigdalite e pneumonia) são estatisticamente a causa mais frequente de síndrome febril aguda."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Infecções respiratórias correspondem à etiologia prevalente primária na atenção básica e urgência."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Síndrome Febril"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Hipertireoidismo."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Intoxicação alcoólica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Infecções respiratórias."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Linfoma."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Síndrome Febril",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 12 - Sobre a abordagem do paciente com febre, é falsa a afirmativa:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Antipiréticos (como dipirona, paracetamol e AINEs) inibem a ciclo-oxigenase (COX) reduzindo a síntese de $PGE_2$. Além da ação antipirética central no hipotálamo, exercem também efeito analgésico e anti-inflamatório periférico, REDUZINDO SIM sintomas como mialgias e artralgias associados."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (b):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " É FALSO afirmar que os inibidores da COX 'não reduzem outros sintomas periféricos como mialgia'."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), c) e d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " São afirmações conceitualmente verdadeiras sobre fisiopatologia, conduta e impacto do consumo metabólico de $O_2$ na febre."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Síndrome Febril"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) A febre geralmente é acompanhada de outras manifestações clínicas, e não deve ser encarada como entidade clínica definida e isolada dos demais sinais e sintomas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Os principais medicamentos do tratamento da febre são os inibidores da ciclo-oxigenase que, ao agir reduzindo o nível das prostaglandinas circulantes, reduzem a temperatura do centro termorregulador, porém não reduzem outros sintomas periféricos como mialgia."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Na maioria das vezes, a febre está associada a infecções autolimitadas, que podem não necessitar tratamento específico."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Em geral, o tratamento da febre é recomendado principalmente naqueles pacientes portadores de alguma condição crônica como insuficiência cardíaca ou respiratória, onde cada grau de elevação da temperatura corporal pode aumentar a demanda de oxigênio dos tecidos em mais de 10%."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Fisiologia Térmica & Ciclo Circadiano",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 13 - A temperatura corporal é controlada no hipotálamo de maneira resumida de acordo com variações ambientais e atividade metabólica. Dentre os pacientes abaixo, qual podemos considerar portador de temperatura corporal normal?\n\nI. Adolescente de 14 anos com temperatura corporal de 36,4°C (medida oral) durante o sono noturno.\nII. Mulher de 25 anos, na segunda fase do ciclo menstrual (pós ovulação), com temperatura corporal de 37,8°C (medida oral) no final da tarde."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Variações fisiológicas da temperatura:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• Durante o sono noturno/madrugada (nadir do ritmo circadiano), valores de 36,4°C são perfeitamente fisiológicos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• No final da tarde (acme circadiano), somado ao efeito progestágeno da fase luteínica do ciclo menstrual (que eleva a temperatura basal em 0,3-0,6°C), a temperatura de 37,8°C é considerada variação fisiológica e não febre patológica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Ambos os indivíduos apresentam temperaturas normais dentro de seus contextos fisiológicos/circadianos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fisiologia Térmica & Ciclo Circadiano"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Apenas o paciente I."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Apenas a paciente II."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Ambos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Nenhum."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Semiologia da Dor",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 14 - Assinale a alternativa que indica exemplos de dores nociceptivas, neuropáticas, mistas e psicogênicas, respectivamente:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Tipos etiológicos de dor:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. Nociceptiva: Lesão tecidual (Infarto Agudo do Miocárdio)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. Neuropática: Lesão do sistema somatossensorial (Neuropatia Diabética)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "3. Mista: Componentes somáticos e neuropáticos combinados (Lombociatalgia por hérnia de disco)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "4. Psicogênica: Fatores emocionais/somatização (Transtorno Somatoforme)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Segue com exatidão a sequência solicitada no enunciado."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Semiologia da Dor"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Dor fantasma (pós-amputação de membro); queimadura; hérpes-zoster; síndrome do pânico"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Neuropatia diabética; radiculopatia (lombociatalgia); transtorno somatoforme; lesão do tálamo"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Picada de animal peçonhento; infarto agudo do miocárdio; dor oncologia; síndrome do pânico"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Infarto agudo do miocárdio; neuropatia diabética; lombociatalgia; transtorno somatoforme"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Emergências Cardiovasculares",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 15 - Dissecção aguda de aorta é causa incomum de dor torácica de início recente (<1% dos casos de dor torácica atendidos em prontos socorros), mas deve ser reconhecida por ser de alta letalidade, principalmente se o tratamento imediato não for instituído. Assinale a alternativa correta sobre essa doença:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Dissecção Aguda de Aorta apresenta-se tipicamente como dor torácica de início súbito, intensidade máxima no início, de caráter rasgador, lancinante ou em punhalada, irradiando para a região interscapular, dorso ou abdome conforme a progressão da lâmina de dissecção."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descreve os atributos semiológicos clássicos da dor da dissecção aórtica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "b) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " HAS, síndrome de Marfan e bicuspidia aórtica são fatores de risco maiores bem conhecidos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "c) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dor é atroz e de intensidade dramática (máxima desde o início)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "d) incorreta:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descargas autonômicas (diaforese, taquicardia/hipertensão) acompanham frequentemente a dissecção."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Emergências Cardiovasculares"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) A dor torácica frequentemente é descrita por termos semelhantes a “punhalada”, “lancinante”, e costuma acompanhar o trajeto da dissecção (por ex., início retroesternal, com irradiação sequencial para o dorso e abdome)"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Não há fatores de risco conhecidos para essa condição clínica"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Tradicionalmente, a intensidade da dor é leve a moderada (muito raramente é intensa)"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Sinais autonômicos, como taquicardia, hipertensão e diaforese (sudorese profusa) raramente acompanham o quadro clínico de dissecção aguda de aorta e são exclusivos de paciente com infarto do miocárdio"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Neurofisiologia e Semiologia da Dor",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 16 - São compatíveis com dor de origem neuropática:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A dor neuropática decorre de lesão ou disfunção do sistema nervoso somatossensorial. Manifesta-se classicamente por queimação (disestesia), choque elétrico, pontadas, dor mal delimitada e alterações sensitivas associadas (parestesias, dormência, formigamento, alodinia)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todas as descrições nas opções a, b e c constituem vocabulário semiológico típico da dor neuropática."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Neurofisiologia e Semiologia da Dor"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Dor em queimação"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Dor difusa/mal localizada"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Parestesias, como sensação de choque ou formigamento/dormência"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Todas as alternativas acima estão corretas"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Semiologia do Abdome Agudo",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 17 - Sobre as principais apresentações clínicas de Dor Abdominal, escolha a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Pancreatite Aguda caracteriza-se tipicamente por dor de início *súdito/agudo*, de localização *epigástrica e em faixa*, *persistente e de forte intensidade*, com irradiação clássica para o *dorso (em faixa)*, aliviada com a atitude genupeitoral (posição de prece maometana) e acompanhada de vômitos incoercíveis."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa incorreta (d):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A alternativa D traz uma descrição totalmente errônea para pancreatite (descrevendo-a como 'subaguda, difusa, intermitente e em cólica sem irradiação'), constituindo a afirmativa incorreta a ser assinalada."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das outras opções:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "a), b) e c):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descrevem com precisão as apresentações clássicas da Cólica Renal, Úlcera Péptica e Apendicite Aguda."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Semiologia do Abdome Agudo"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) INÍCIO: hiperagudo. LOCALIZAÇÃO: lumbar posterior. DURAÇÃO: persistente. QUALIDADE: em cólica. IRRADIAÇÃO: fossas ilíacas do mesmo lado, bolsa escrotal/grande lábio. EVOLUÇÃO: nada alivia, sem posição. Hipótese diagnóstica: Cólica Renal."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) INÍCIO: agudo. LOCALIZAÇÃO: epigástrio. DURAÇÃO: intermitente. QUALIDADE: em pontada. IRRADIAÇÃO: ausente. EVOLUÇÃO: piora com jejum e alivia com a alimentação. Hipótese diagnóstica: Úlcera péptica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) INÍCIO: agudo. LOCALIZAÇÃO: periumbilical. DURAÇÃO: persistente. QUALIDADE: pontada. IRRADIAÇÃO: fossa ilíaca direita. EVOLUÇÃO: Localiza em fossa ilíaca direita. Hipótese diagnóstica: Apendicite aguda."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) INÍCIO: subagudo. LOCALIZAÇÃO: difusa. DURAÇÃO: intermitente. QUALIDADE: em cólica. IRRADIAÇÃO: ausente. EVOLUÇÃO: sem relação com funções fisiológicas. Hipótese diagnóstica: Pancreatite aguda"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Fisiopatologia dos Edemas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 18 - Assinale a alternativa que estabelece a melhor correspondência entre os determinantes principais para a formação de edema listados de 1-4 e as etiologias enumeradas de A-D:\n\nDeterminantes:\n1. Aumento da pressão hidrostática intracapilar\n2. Redução da pressão coloidosmótica (oncótica) do plasma\n3. Aumento da permeabilidade capilar\n4. Comprometimento da função dos linfáticos\n\nEtiologias:\nA. Celulite ou erisipela (infecções do tecido subcutâneo)\nB. Ressecção linfonodal prévia\nC. Insuficiência cardíaca\nD. Enteropatia perdedora de proteínas"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Forças de Starling e etiologias do edema:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• 1. Aumento da pressão hidrostática intracapilar $\nightarrow$ Insuficiência Cardíaca (C)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• 2. Redução da pressão oncótica plasmática $\nightarrow$ Enteropatia perdedora de proteínas / Desnutrição (D)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• 3. Aumento da permeabilidade capilar $\nightarrow$ Processos inflamatórios/infecciosos locais como Celulite/Erisipela (A)"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• 4. Comprometimento linfático $\nightarrow$ Ressecção linfonodal / Linfedema (B)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (a):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A correspondência exata é 1-C, 2-D, 3-A, 4-B."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fisiopatologia dos Edemas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) 1-C; 2-D; 3-A; 4-B"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) 1-A; 2-B; 3-C; 4-D"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) 1-C; 2-A; 3-D; 4-B"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) 1-D; 2-C; 3-B; 4-A"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Casos Clínicos & Exame Físico Abdominal",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 19 - Paciente com dor abdominal deu entrada no Pronto Socorro com exame físico:\n- Inspeção: Desidratação, respiração acidótica. Peristalse visível em epigástrio, da Esquerda para a Direita. Distensão rígida do estômago (epigástrio).\n- Ausculta: Sem estetoscópio $\nightarrow$ a compressão rápida do estômago faz com que a parede o órgão bata com a superfície líquida, culminando em uma ruído de \"clap, clap\": patinhação.\n- Percussão: Distensão com hipertimpanismo.\n- Palpacao: Deslizamento sobre o plano profundo palpa a grande curvatura gástrica.\n\nCom base no caso acima, assinale a alternativa que indica o ritmo respiratório patológico relacionado e a intensidade dos ruídos hidroaéreos na ausculta abdominal:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Análise do caso clínico:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "1. A respiração acidótica profunda e ruidosa associada à desidratação e perturbação metabólica é o "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Ritmo Respiratório de Kussmaul"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "2. Os achados de peristalse gástrica visível em epigástrio da esquerda para a direita (ondas peristálticas de Kussmaul), distensão epigástrica e patinhação ao sucussão (ruído hidroaéreo de estase líquido-gasosa) configuram a "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Síndrome de Obstrução Pilórica"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (Síndrome do Tumulto Gástrico), na qual a intensidade dos ruídos hidroaéreos gástricos de luta encontra-se "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Aumentada"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " (ou exagerada)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Casos Clínicos & Exame Físico Abdominal"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Ritmo de Kussmaul (respiração profunda e ruidosa por acidose) e Ruídos Hidroaéreos Aumentados (ou de luta por obstrução pilórica/Síndrome do Tumulto)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Ritmo de Cheyne-Stokes e Ruídos Hidroaéreos Abolidos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Ritmo de Biot e Ruídos Hidroaéreos Normais."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Ritmo de Cantani e Ruídos Hidroaéreos Diminuídos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "propedeu-p2-2025-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Casos Clínicos & Gastroenterologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 20 - Paciente do sexo feminino, 77 anos, relata dor no hipocôndrio direito há um mês, associada a icterícia, colúria e acolia estercoral. Relata também perda ponderal de 4 kg, inapetência e hematoquezia durante a apresentação dos sintomas. Exame físico: Ictérica 4+/4+, massa palpável indolor no ponto cístico (Sinal de Courvoisier-Terrier). Com base no caso, assinale a alternativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Resolução das questões do caso da paciente de 77 anos:"
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "A) "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Classificação da Hemorragia:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A hematoquezia (eliminação de sangue rutilante/vivo pelas fezes) representa uma "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Hemorragia Digestiva Baixa (HDB)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", originada distalmente ao Ângulo de Treitz (ligamento suspensor do duodeno)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "B) "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Tríade da Síndrome Ictérica Obstrutiva (Colestática):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " É caracterizada pela presença de "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "1. Icterícia (impregnação de bilirrubina conjugada/direta), 2. Colúria (urina escura cor de 'chá preto/coca-cola') e 3. Acolia fecal (fezes esbranquiçadas/massa de vidraceiro por ausência de estercobilinogênio)"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Nota clínica:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A vesícula biliar palpável e indolor em paciente idoso com icterícia progressiva configura o "
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Sinal de Courvoisier-Terrier"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ", altamente sugestivo de neoplasia periampular/cabeça de pâncreas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Casos Clínicos & Gastroenterologia"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "a) Trata-se de Hemorragia Digestiva Baixa (sangramento abaixo do ângulo de Treitz) e a Síndrome Ictérica Obstrutiva é caracterizada por Icterícia + Colúria + Acolia Fecal."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "b) Trata-se de Hemorragia Digestiva Alta e a Síndrome Ictérica é caracterizada por Febre + Calafrios + Dor em hipocôndrio direito (Tríade de Charcot)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "c) Trata-se de Hemorragia Digestiva Baixa e a Síndrome Ictérica é caracterizada exclusivamente por Anemia + Esplenomegalia + Reticulocitose."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "d) Trata-se de Hemorragia Digestiva Alta e a Síndrome Ictérica é caracterizada por Ascite + Encefalopatia + Asterixis."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { parseExpressionAt, type AnyNode } from 'acorn';
 import { readFile } from 'node:fs/promises';
 import { z } from 'zod';
-import { parseFragment, type DefaultTreeAdapterMap } from 'parse5';
+import { parseFragment, Tokenizer, type Token, type DefaultTreeAdapterMap } from 'parse5';
 import { richTag, type RichNode, type RichText } from '../schema/exam';
 
 // Extrai somente literais. Nunca avalia scripts dos HTMLs, nem usa eval/vm.
@@ -14,7 +14,8 @@ function literal(node: AnyNode): unknown {
         if (!item) throw new Error('Array esparso no legado');
         return literal(item);
       });
-    case 'ObjectExpression':
+    case 'ObjectExpression': {
+      const keys = new Set<string>();
       return Object.fromEntries(
         node.properties.map((property) => {
           if (
@@ -27,9 +28,12 @@ function literal(node: AnyNode): unknown {
           const key =
             property.key.type === 'Identifier' ? property.key.name : literal(property.key);
           if (typeof key !== 'string') throw new Error('Chave inválida');
+          if (keys.has(key)) throw new Error(`Chave duplicada no legado: ${key}`);
+          keys.add(key);
           return [key, literal(property.value)];
         }),
       );
+    }
     default:
       throw new Error(`Expressão não permitida no banco legado: ${node.type}`);
   }
@@ -68,6 +72,29 @@ export async function readLegacy(file: string) {
   };
 }
 export function convertRichText(html: string): RichText {
+  // Validar também tokens que o parser de fragmentos poderia ignorar (html/body,
+  // tags finais e atributos). Não permitir descarte silencioso antes da árvore.
+  const checkTag = (token: Token.TagToken) => {
+    richTag.parse(token.tagName);
+    if (token.attrs.length) throw new Error(`Atributos exigem revisão explícita: ${token.tagName}`);
+  };
+  const unsupported = () => {
+    throw new Error('Comentário/doctype não permitido no conteúdo acadêmico');
+  };
+  const ignoreText = () => {};
+  new Tokenizer(
+    {},
+    {
+      onStartTag: checkTag,
+      onEndTag: checkTag,
+      onComment: unsupported,
+      onDoctype: unsupported,
+      onCharacter: ignoreText,
+      onWhitespaceCharacter: ignoreText,
+      onNullCharacter: unsupported,
+      onEof: ignoreText,
+    },
+  ).write(html, true);
   const convert = (node: DefaultTreeAdapterMap['childNode']): RichNode => {
     if (node.nodeName === '#text' && 'value' in node) return { type: 'text', text: node.value };
     if (!('tagName' in node)) throw new Error(`Nó não suportado: ${node.nodeName}`);
