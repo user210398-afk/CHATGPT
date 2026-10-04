@@ -1,0 +1,39 @@
+name: Content Gate
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'data/exams/**'
+      - 'authoring/**'
+      - 'schema/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'public/media/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/content-gate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  content-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run author:validate
+      - name: Conferir adições aprovadas e baseline
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: npm run author:gate -- --base "$PR_BASE_SHA"
+      - run: npm run validate
