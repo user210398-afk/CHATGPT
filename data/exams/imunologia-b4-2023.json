@@ -1,0 +1,3211 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "imunologia-b4-2023",
+  "title": "Imunologia Médica P4 (2023)",
+  "subject": "Imunologia",
+  "year": 2023,
+  "division": "P4",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/imunologia-b4-Simulado 2023.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "Arquivo/catálogo legado B4, título e identificação da prova P4. division P4 segue a identificação explícita da prova; ID conserva origem B4, registrada em sourceFile. Nenhuma questão foi alterada."
+    ]
+  },
+  "questions": [
+    {
+      "id": "imunologia-b4-2023-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Hipótese da Higiene",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 1 - Na figura abaixo estão representadas a prevalência de esclerose múltipla e de \"diarreia do viajante\" (infecção transmitida por via oro-fecal). Estudos epidemiológicos apontam para uma distribuição semelhante para outras doenças causadas por reações de hipersensibilidade (doenças alérgicas e autoimunes). Essas observações levaram à elaboração da chamada Hipótese ou Teoria da Higiene, no final dos anos 1980. Atualmente essa teoria sofreu algumas adaptações, mas de modo geral relaciona fatores socioeconômicos, ambientais/geográficos e comportamentais, para explicar as diferenças de prevalência e incidência de hipersensibilidades. Levando-se em conta o quadro apresentado, assinale abaixo a ALTERNATIVA INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Hipótese da Higiene postula que a "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "falta"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " de exposição a infecções e microbiotas na infância desequilibra a imunorregulação (reduz Treg/IL-10 e altera o balanço Th1/Th2/Th17), predispondo a alergias e autoimunidade[span_3](start_span)[span_3](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A alternativa E afirma que a menor exposição a patógenos favorece o desenvolvimento imunológico equilibrado, o que é o oposto direto da Hipótese da Higiene[span_4](start_span)[span_4](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hipótese da Higiene"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Segundo a Hipótese da Higiene a exposição a alguns tipos de patógenos e micro-organismos no trato gastrointestinal durante a infância favorece o desenvolvimento de uma maior diversidade de células regulatórias, capazes de prevenir no futuro a ocorrência de respostas imunológicas exacerbadas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Além da exposição à patógenos, atualmente se considera que alterações nos hábitos alimentares dos habitantes de países desenvolvidos alteram a composição da microbiota intestinal, diminuindo a sua diversidade. Como resultado o amadurecimento das células regulatórias é prejudicado, levando a desequilíbrio posterior do sistema imunológico."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Além das melhores condições sanitárias, alguns estudos apontam que países com maior prevalência de doenças causadas por hipersensibilidades apresentam menor incidência de radiação solar. A menor exposição à luz solar reduz a produção de vitamina D, cujos metabólitos apresentam papel modulador na resposta imunológica."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O desenvolvimento do sistema imunológico do recém-nascido pode ser influenciado por diversos fatores como o tipo de parto, o aleitamento materno e o número de indivíduos no círculo familiar."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A Hipótese da Higiene se baseia no fato de que países com melhores condições sanitárias e melhor acesso a tratamento médico apresentam menor incidência de doenças infecciosas. Essa menor exposição a patógenos diminui a carga de estímulos sobre o sistema imunológico, favorecendo o seu desenvolvimento de forma equilibrada."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Diagnóstico Laboratorial de HIV",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 2 - Um paciente do sexo masculino, com 25 anos, procura atendimento médico apresentando lesões (placas) esbranquiçadas na mucosa oral, que se estendem por toda a cavidade oral, laringe e superfície da língua. As características das lesões permitem o diagnóstico de candidíase. Tendo em vista que tal infecção não é comum em pacientes imunocompetentes, o médico suspeita de que o paciente apresenta infecção pelo vírus HIV. A CONFIRMAÇÃO do diagnóstico da infecção pelo HIV DEVE SER FEITA OBRIGATORIAMENTE POR:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O algoritmo clássico de diagnóstico confirmatório de HIV requer uma triagem sorológica inicial de alta sensibilidade (ELISA / Imunoensaio) seguida obrigatoriamente de um teste confirmatório especificado (Western Blot / Imunoblot ou Carga Viral / Teste de Biologia Molecular)[span_5](start_span)[span_5](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Descreve exatamente o fluxo sequencial obrigatório de triagem sorológica seguida do ensaio confirmatório por Imunoblot[span_6](start_span)[span_6](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico Laboratorial de HIV"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Realização de teste rápido imunoenzimático para detecção de anticorpos anti-HIV1/anti-HIV2."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Determinação do número de células TCD4+ circulantes no sangue do paciente (citometria de fluxo)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Determinação de carga viral (número de cópias do DNA viral) presentes na circulação do paciente."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Realização de teste imunoenzimático (ELISA) para detecção de anticorpos anti-HIV1/anti-HIV2, seguido de confirmação por Imunoblot (western-blotting)."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Realização de teste rápido (imunocromatografia) e determinação do número de células TCD4+ circulantes no sangue dos pacientes (citometria de fluxo)."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Microbiota e Desenvolvimento Imune",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 3 - Dentre os fatores que estão relacionados às alterações imunológicas envolvidas na Hipótese da Higiene está a composição da Microbiota, particularmente do trato gastrointestinal. Em relação aos fatores que podem afetar essa composição, assinale abaixo a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O ambiente uterino saudável e a cavidade amniótica são fisiologicamente estéreis em uma gestação normal. A colonização do TGI da criança inicia-se no nascimento e durante o parto (vias vaginais ou pele)[span_7](start_span)[span_7](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Afirma incorretamente que o TGI fetal é colonizado no período intrauterino via transplacentária[span_8](start_span)[span_8](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Microbiota e Desenvolvimento Imune"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A estrutura familiar pode afetar a composição da microbiota de uma criança. Em geral, crianças de família numerosa apresentam maior diversidade de microbiota que crianças de família com poucos componentes."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A colonização do trato gastrointestinal de uma criança tem início ainda no período intrauterino, pela passagem de micro-organismos da mãe para o feto via placenta. Dessa forma, a composição da microbiota materna afeta a microbiota da criança."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. O uso de medicamentos e antibióticos durante a gestação ou após o nascimento da criança pode ter efeito profundo na composição da microbiota de um indivíduo."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A convivência com animais domésticos e o tipo de ambiente ao qual a pessoa é exposta durante a infância pode alterar a composição da microbiota, e influenciar o desenvolvimento do sistema imunológico."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A colonização por micro-organismos pode ser influenciada pelo tipo de alimentação do indivíduo, sendo de especial importância a amamentação (leite materno)."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Exercício Físico e Imunomodulação",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 4 - Analise as alternativas a seguir que descrevem os benefícios da prática regular de atividades físicas, e que contribuem para diminuir o risco de desenvolvimento de Doenças Cardiovasculares e Doenças Metabólicas:\nI - Aumento da produção de hormônios pelas glândulas adrenais (Adrenalina e Cortisol) que diminuem a produção de citocinas inflamatórias e aumentam a produção de citocinas anti-inflamatórias por monócitos e macrófagos.\nII - Aumento da mobilização de gordura no tecido adiposo que leva ao aumento na produção de adiponectina e mudança de fenótipo dos macrófagos de M1 (inflamatórios) para M2 (anti-inflamatórios).\nIII - Estímulo na diferenciação de células T com atividade regulatória (Treg) que auxiliam no controle da resposta inflamatória por meio da produção de citocinas supressoras como a IL-10.\nIV - Aumento da produção de IL-6 pelas células musculares, que irá atuar sobre monócitos e macrófagos induzindo a produção de citocinas anti-inflamatórias e diminuindo a produção de citocinas inflamatórias.\n\nApós a análise é POSSÍVEL afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O exercício físico induz modulação sistêmica anti-inflamatória abrangendo catecolaminas/glicocorticoides, miocinas (IL-6 muscular liberada sem TNF) e polarização M2 de macrófagos adiposos[span_9](start_span)[span_9](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Todos os quatro enunciados descrevem adequadamente vias imunometabólicas protetoras da atividade física regular[span_10](start_span)[span_10](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Exercício Físico e Imunomodulação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Todas as alternativas são INCORRETAS."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. São corretas somente as alternativas I, II e III."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. São corretas somente as alternativas I, III e IV."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. São corretas somente as alternativas II, III e IV."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Todas as alternativas são CORRETAS."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Imunoterapia Tumoral e Checkpoints",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 5 - Em outubro de 2018, a Academia Real Sueca de Ciências anunciou como vencedores do Nobel de Medicina ou Fisiologia os imunologistas James Patrick Allison e Tasuku Honjo. Ambos os cientistas desenvolveram estudos que possibilitaram uma melhor compreensão dos mecanismos envolvidos na evasão de células tumorais do sistema imunológico (chamados de \"pontos-de-checagem\") e proporcionaram o desenvolvimento de uma das formas de imunoterapia com maior efetividade, contra alguns tipos de tumor. Em relação aos diferentes tipos de imunoterapia, assinale abaixo a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Inhibitores de checkpoints imunes bloqueiam alvos inibitórios (anti-CTLA-4, anti-PD-1, anti-PD-L1). Eles não utilizam anticorpos estimuladores dirigidos contra o receptor coestimulador CD28[span_11](start_span)[span_11](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Erra ao incluir 'anti-CD28' como fármaco de imunoterapia de ponto de checagem[span_12](start_span)[span_12](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunoterapia Tumoral e Checkpoints"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Vacinas de células dendríticas estão sendo estudadas como forma de imunoterapia de alguns tipos de tumor. Essas vacinas são produzidas com a diferenciação e maturação in vitro de células dendríticas, que são posteriormente reinfundidas no paciente e irão estimular a ativação de linfócitos T específicos contra antígenos tumorais."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Citocinas recombinantes, como por exemplo a IL-2, são empregadas no tratamento de algumas formas de tumor. Essas citocinas estimulam o sistema imunológico de modo inespecífico, mas podem apresentar resultados positivos, levando à diminuição da massa tumoral."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Algumas imunoterapias podem ser realizadas com anticorpos monoclonais (específicos para antígenos tumorais) acoplados a drogas com atividade citotóxica. Esse tipo de imunoterapia apresenta a vantagem de empregar uma quantidade de quimioterápico muito menor do que a utilizada na quimioterapia convencional, e dessa forma diminuir os seus efeitos adversos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A imunoterapia contra \"pontos-de-checagem\" é baseada na aplicação de anticorpos monoclonais contra moléculas coestimulatórias dos linfócitos TCD4+ e TCD8+ (p. ex. anti-CTLA-4 e anti-CD28). Esses anticorpos bloqueiam as moléculas com atividade inibitória como o CTLA-4 ou estimulam a sinalização via CD28, promovendo a ativação das células T presentes no tumor."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Algumas imunoterapias consistem na utilização de anticorpos monoclonais direcionados contra antígenos tumorais específicos, levando a eliminação direta das células tumorais que expressam esses antígenos. Esses anticorpos destroem as células tumorais por meio da ativação do sistema complemento ou pela indução de citotoxicidade celular dependente de anticorpos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Diagnóstico da Artrite Reumatoide",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 6 - Em relação ao diagnóstico da artrite reumatoide, assinale abaixo a alternativa VERDADEIRA (CORRETA):"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O diagnóstico de Artrite Reumatoide (critérios ACR/EULAR) integra padrões clínicos (sinovite em pequenas articulações, simetria, cronicidade) e sorológicos (Anti-CCP, Fator Reumatoide e reagentes de fase aguda como PCR/VHS)[span_13](start_span)[span_13](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Abrange de forma fidedigna a abordagem diagnóstica e os critérios estabelecidos da doença[span_14](start_span)[span_14](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico da Artrite Reumatoide"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A inflamação de articulações acompanhada de dores são sintomas-chave da artrite reumatoide, sendo patognomônicas para essa doença."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A presença do Fator reumatoide e dos anticorpos anti-CCP em altas concentrações fecham o diagnóstico da artrite reumatoide."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. O diagnóstico da artrite reumatoide deve levar em conta os sintomas clínicos (como o número e a distribuição de articulações acometidas), duração de sintomas e parâmetros laboratoriais, como PCR elevada, presença de anticorpos anti-CCP e de Fator reumatoide."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A presença de fator reumatoide na circulação de pacientes com artrite reumatoide pode ser considerada um fator de bom prognóstico, uma vez que esses anticorpos auxiliam na supressão da resposta imunológica."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. O diagnóstico da artrite reumatoide é complexo, mas o fato da doença afetar somente grandes articulações como ombros e joelhos de forma assimétrica, facilita o diagnóstico diferencial."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Atividade Física e Células T Naive",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 7 - A prática de exercícios físicos é considerada atualmente uma forma auxiliar no tratamento de doenças metabólicas e como forma de diminuir o risco de desenvolvimento de doenças cardiovasculares. Em relação aos efeitos da atividade física sobre o sistema imunológico é CORRETO afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O exercício regular atenua a imunossenescência estimulando a saída tímica de células T virgens, melhorando o tempo de vida e a capacidade de renovação dessas células T naive[span_15](start_span)[span_15](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Afirmativa plenamente verdadeira quanto à preservação do reservatório tímico e periférico de linfócitos T naive[span_16](start_span)[span_16](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Atividade Física e Células T Naive"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A prática regular de atividade física de intensidade moderada reduz a produção de citocinas inflamatórias como a IL-6 e IL-7."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Os efeitos moduladores de atividades físicas sobre a resposta imunológica somente são observados com a prática de exercícios aeróbicos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Exercícios físicos regulares de intensidade moderada aumentam a polarização de macrófagos com fenótipo M1, melhorando a resposta a antígenos estranhos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Um dos efeitos moduladores da atividade física sobre a resposta imunológica é o aumento da produção de citocinas supressoras como a IL-1beta e o TNF-alfa."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A prática regular de atividades físicas de intensidade moderada aumenta a produção, sobrevida e capacidade de proliferação de linfócitos T naive."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Imunoterapia CAR-T Cell",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 8 - Dentre as diferentes formas de imunoterapia aplicadas para o tratamento de neoplasias/tumores, uma das mais recentes e promissoras é a chamada Terapia com Células T-CAR (receptor de antígeno quimérico). Em relação a essa forma de imunoterapia, assinale abaixo a afirmativa CORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O receptor quimérico de antígeno (CAR) funde um fragmento scFv de anticorpo extracelular (reconhecimento direto do antígeno nativo sem restrição a MHC) com domínios de sinalização do TCR ($zeta$-CD3) e domínios coestimuladores intracelulares[span_17](start_span)[span_17](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Define com rigor a bioengenharia molecular do receptor T-CAR[span_18](start_span)[span_18](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunoterapia CAR-T Cell"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Células T-CAR têm a capacidade de \"resistir\" à imunossupressão do ambiente tumoral atuando à distância, pois migram para órgãos linfoides que drenam o tecido/órgão afetado, e produzem grandes quantidade de citocinas inflamatórias que atuam sistemicamente. Esse fenômeno é chamado de \"tempestade de citocinas\", sendo responsável pela ativação dos linfócitos que se encontram suprimidos no microambiente tumoral."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Células T-CAR recebem esse nome pois são modificadas in vitro para expressarem em sua superfície tanto receptores de antígenos característicos de linfócitos B (imunoglobulina de superfície = BCR), quanto os receptores de antígenos característicos de linfócitos T (TCR). Dessa forma, as células T-CAR ao serem ativadas podem atuar tanto na produção de anticorpos específicos para o tumor, quanto como células com atividade citotóxica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. As células T-CAR recebem esse nome pois são modificadas para expressarem em sua superfície um tipo de receptor de antígeno composto por uma porção extracelular formada pela região variável de uma molécula de imunoglobulina, e uma porção intracelular formada por sequências sinalizadoras derivadas de moléculas de CD3/cadeia zeta e de moléculas coestimulatórias."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Um dos efeitos adversos mais comuns e potencialmente perigosos da terapia com células T-CAR é a síndrome de liberação de citocinas (\"tempestade de citocinas\"). Nessa síndrome ocorre a ativação de um número extremamente grande de linfócitos T com atividade regulatória produtores de citocinas supressoras, que irão inibir a resposta imunológica anti-tumoral, e, portanto, podem contribuir para o crescimento tumoral."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. As células T-CAR são produzidas a partir de Células Tronco Hematopoiéticas coletadas da medula óssea do paciente com câncer. Essas células tronco são então diferenciadas em linfócitos T in vitro e dessa forma passam a expressar receptores de antígenos quiméricos específicos para os antígenos tumorais."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Síndrome de Guillain-Barré",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 9 - A síndrome de Guillain-Barré é uma doença autoimune associada a infecções (bacterianas como a infecção causada por Campylobacter jejuni ou virais como a causada pelo Zika virus). Em relação a essa doença é CORRETO afirmar que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Síndrome de Guillain-Barré (SGB) é desencadeada por mimetismo molecular, onde anticorpos (ex: anti-GM1) reagem de forma cruzada contra gangliosídeos nas bainhas de mielina dos nervos periféricos[span_19](start_span)[span_19](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Explica perfeitamente a fisiopatologia imunomediada do SGB clássico[span_20](start_span)[span_20](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Síndrome de Guillain-Barré"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A Síndrome de Guillain-Barré é causada pela produção de autoanticorpos originalmente direcionados contra antígenos dos patógenos, mas que reconhecem de forma “cruzada” antígenos presentes na bainha de mielina de células de Schwann ou na membrana de axônios (mimetismo molecular)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Existem duas formas mais importantes da Síndrome de Guillain-Barré: uma forma que afeta a região cortical do sistema nervoso central (substância cinzenta) provocando perda de funções cognitivas e outra forma que afeta os nervos periféricos causando paralisia flácida."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A Síndrome de Guillain-Barré pode ser diagnosticada pela análise do líquido cefalorraquidiano dos pacientes, no qual observa-se a presença de grande número de leucócitos (particularmente linfócitos B), com diminuição da quantidade de proteínas. Um fenômeno conhecido como dissociação albuminocitológica."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O tratamento da Síndrome de Guillain-Barré inclui o suporte e o uso de glicocorticoide em altas doses para diminuir a resposta inflamatória e consequentemente a produção de anticorpos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. O principal mecanismo imunológico responsável pela destruição das células de Schwann é a ativação de linfócitos TCD8+ (citotóxicos) que reconhecem antígenos presentes na membrana de mielina de uma forma “cruzada” (mimetismo molecular)."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Antígenos Tumorais (ATE e AAT)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 10 - Sobre os mecanismos efetores da resposta imunológica contra tumores, assinale abaixo a alternativa CORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os Antígenos Tumorais Específicos (ATE) resultam de mutações exclusivas no genoma tumoral (neoantígenos). Já os Antígenos Associados ao Tumor (AAT) são proteínas próprias normais superexpressas ou embrionárias[span_21](start_span)[span_21](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Conceitua com precisão os dois grupos de antígenos reconhecidos na imuno-oncologia[span_22](start_span)[span_22](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Antígenos Tumorais (ATE e AAT)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Os linfócitos citotóxicos atuam sobre as células neoplásicas por meio da produção e secreção de citocinas com atividade supressora do crescimento tumoral, como por exemplo o Fator de Transformação de Crescimento Tumoral Beta (TGF-beta)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Células da resposta imunológica inata, como células dendríticas, também desempenham papel importante na vigilância imunológica a tumores. As células dendríticas são as responsáveis pela ativação e diferenciação de linfócitos T (TCD4+ e TCD8+), além de apresentarem antígenos tumorais aos linfócitos B, induzindo a produção de anticorpos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Os antígenos tumorais específicos (ATE) são resultados de mutações de genes que codificam proteínas próprias encontradas somente em células tumorais. Enquanto os antígenos associados a tumor (AAT) têm origem em proteínas também expressas por células normais no nosso organismo (p.ex. proteínas com produção aumentada ou proteínas que são expressas somente por células embrionárias ou de tecido germinativo)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Macrófagos atuam como células efetoras da resposta anti-tumoral, particularmente os macrófagos com fenótipo M2, produtores de citocinas inflamatórias como o Fator de Transformação de Crescimento beta (TGF-beta) e Espécies Reativas de Oxigênio."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. As células T regulatórias (Treg) apresentam papel fundamental na resposta anti-tumoral. Essas células suprimem a resposta imunológica, aumentando a expressão de CTLA-4 nas células neoplásicas e dessa forma impedem a ocorrência de reações inflamatórias exacerbadas contra o tumor que poderiam resultar em doenças autoimunes."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Metástase e Macrófagos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 11 - Os macrófagos desempenham papel essencial na resposta imunológica anti-tumoral, mas também podem participar no escape/evasão das células tumorais. Em relação a essas funções dos macrófagos, assinale abaixo a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O extravasamento metastático no microambiente tecidual secundário é orquestrado por macrófagos residentes e células do nicho tecidual pré-metastático, não sendo atribuído primariamente a 'macrófagos na circulação sanguínea[span_23](start_span)'[span_23](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Contém erro conceitual sobre os mecanismos vasculares e do estroma tumoral na metástase[span_24](start_span)[span_24](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Metástase e Macrófagos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Além de influenciarem na resposta imunológica local (tumor primário), os macrófagos encontrados na circulação sanguínea participam da formação de metástases, promovendo o extravasamento de células tumorais circulantes e invasão de novos tecidos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Macrófagos Associados a Tumor atuam de forma indireta na resposta anti-tumoral, contribuindo para o remodelamento do tecido onde o tumor está se desenvolvendo. Esse remodelamento pode incluir a formação de sítios imunoprivilegiados e a formação de novos vasos (neoangiogênese) necessários para a “nutrição” da massa tumoral."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Macrófagos com fenótipo M1 são importantes na destruição de células neoplásicas, por meio da produção de espécies reativas de oxigênio ou citocinas como o TNF-alfa capazes de induzir a morte/apoptose das células tumorais."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Macrófagos com fenótipo M2 contribuem com a supressão da resposta imunológica anti-tumoral por meio da produção de citocinas supressoras como o TGF-beta e IL-10, que inibem a ativação de outras células do sistema imunológico."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Macrófagos encontrados no ambiente tumoral (Macrófagos Associados a Tumor) podem exercer ação direta ou indireta sobre a resposta anti-tumoral. Dessa forma, contribuindo para o estabelecimento e crescimento tumoral."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Hipóxia e Tecido Adiposo na Obesidade",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 12 - Atualmente, a obesidade e sua associação ao desenvolvimento de doenças metabólicas são consideradas um grande problema de saúde pública. Em relação aos mecanismos imunológicos que levam a essa associação, assinale abaixo a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A morte e a hipóxia dos adipócitos no tecido adiposo visceral liberam DAMPs que atraem macrófagos ativando-os para o perfil pró-inflamatório **M1** (e não M2 anti-inflamatório)[span_25](start_span)[span_25](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Erra ao afirmar que os DAMPs e a hipóxia estimulariam a diferenciação M2[span_26](start_span)[span_26](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hipóxia e Tecido Adiposo na Obesidade"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A hipertrofia dos adipócitos, observada nos indivíduos obesos, leva a uma resposta inflamatória de baixa intensidade, em parte relacionada ao desequilíbrio na produção de adipocinas que apresentam efeito anti-inflamatório (p.ex. adiponectina) ou pró-inflamatório (p.ex. leptina) sobre células do sistema imunológico."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Os ácidos graxos livres (FFA) liberados no tecido adiposo obeso atuam em outros órgãos como o fígado, levando à ativação de células imunológicas residentes e desencadeando uma resposta inflamatória sistêmica de baixo grau."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A hipóxia do tecido adiposo visceral, causada pela hipertrofia dos adipócitos, pode desencadear a apoptose de células do tecido adiposo e a liberação de DAMPs e ácidos graxos livres (FFA) que estimulam a diferenciação de macrófagos para o fenótipo M2, produtores de citocinas anti-inflamatórias."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A resposta inflamatória de baixo grau observada nos indivíduos obesos leva a produção de substâncias como a Fetuína A pelo fígado. Essa substância, associada a ácidos graxos livres (FFA), estimula a produção de citocinas inflamatórias por células do sistema imunológico, atuando em receptores de reconhecimento padrão (PRRs)."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. O processo de resistência à insulina observada nos indivíduos obesos é decorrente da produção de citocinas como o TNF-alfa por macrófagos associados ao tecido adiposo. Essas substâncias interferem com a sinalização intracelular dos receptores de insulina, diminuindo a captação de glicose pelas células afetadas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Vigilância Imunológica Tumoral",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 13 - Diversas evidências apontam que o sistema imunológico é capaz de reconhecer e destruir células alteradas com potencial para originar tumores. Esse processo é conhecido como Vigilância Imunológica. Em relação a esse processo analise as afirmações a seguir:\nI - Em um primeiro momento, na fase de eliminação, o reconhecimento de Antígenos Tumorais leva à ativação do sistema imunológico e à destruição da maior parte das células tumorais.\nII - Na fase de equilíbrio não ocorre crescimento tumoral, uma vez que algumas células neoplásicas são destruídas, enquanto outras passam por alterações adicionais que impedem o reconhecimento pelo sistema imunológico.\nIII - Na fase de edição do Tumor, a “pressão” exercida pelo sistema imunológico induz a seleção de células que apresentam mecanismos de escape ou evasão que propiciam a evolução do tumor.\nIV - O processo de vigilância imunológica pode ser influenciado por fatores externos. Dessa forma, fatores ambientais que interferem com as funções do sistema imunológico (imunodeficiência secundárias) podem aumentar a incidência de neoplasias.\n\nApós a análise é POSSÍVEL AFIRMAR QUE:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As fases da teoria da Imunoedição do Tumor compreendem Eliminação, Equilíbrio e Edição/Evasão, sendo moduladas ativamente por fatores do hospedeiro e imunodeficiências[span_27](start_span)[span_27](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As quatro premissas conceituais da vigilância e edição tumoral são verdadeiras[span_28](start_span)[span_28](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Vigilância Imunológica Tumoral"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Somente as alternativas I, II e III são corretas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Somente as alternativas I, III e IV são corretas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Somente as alternativas II, III e IV são corretas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Todas as alternativas são corretas."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Somente as alternativas II e III são corretas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Patogênese da Artrite Reumatoide",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 14 - Marta, 47 anos, consulta um médico com queixa de dores nos punhos e dificuldades de \"fechar\" os dedos das mãos ao acordar (sintoma que melhora no decorrer do dia). No exame o médico nota que os dois punhos, assim como as articulações metacarpofalangeais das duas mãos estão inchadas e edemaciadas. Os resultados dos exames laboratoriais realizados e o exame de Raios-X de suas mãos demonstrando erosão óssea nas articulações metacarpofalangeais conduziram o médico ao diagnóstico de Artrite Reumatoide. Em relação à patogênese da artrite reumatoide, assinale abaixo a alternativa INCORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Fator Reumatoide (IgM/IgG anti-Fc de IgG) em níveis elevados está associado a doença mais agressiva, deformidades articulares e manifestações extra-articulares, sendo um marcador de **pior prognóstico**[span_29](start_span)[span_29](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Afirma erroneamente que o fator reumatoide seria um sinal de bom prognóstico ou supressor imune[span_30](start_span)[span_30](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Patogênese da Artrite Reumatoide"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Na artrite reumatoide observa-se inicialmente, a hiperplasia de fibroblastos sinoviais, com grande produção de citocinas pró-inflamatórias e proteases, seguida de infiltração linfocitária e macrófagos, características de reações de hipersensibilidade do tipo IV."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A artrite reumatoide inicia-se com o aparecimento de neoantígenos surgidos da citrulinização de várias proteínas próprias, processo esse provocado por fatores estressores externos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A presença de fator reumatoide na circulação de pacientes com artrite reumatoide pode ser considerada um sinal de bom prognóstico, uma vez que esses anticorpos auxiliam na supressão da resposta imunológica."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O tratamento da artrite reumatoide pode ser feito com o uso de anticorpos que bloqueiam a ação do TNF-alfa, uma das citocinas inflamatórias mais importantes no desenvolvimento dessa patologia."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A artrite reumatoide é uma doença autoimune complexa, no qual fatores genéticos e ambientais levam à ativação de linfócitos T CD4+ autorreativos, promovendo a inflamação do tecido articular pela produção de citocinas inflamatórias que ativam neutrófilos e macrófagos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Evasão Tumoral de Células NK",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 15 - A tirinha [em anexo] faz referência a um dos mecanismos de escape “utilizados” pelas células tumorais para evadir-se do reconhecimento por linfócitos TCD8+ (diminuição da expressão de moléculas de MHC de classe I na membrana plasmática). Entretanto essa “estratégia” possibilitaria o seu reconhecimento por células NK. Assinale abaixo a alternativa que descreve a maneira pela qual as células tumorais “conseguem também evitar” o reconhecimento pelas células NK."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Células tumorais que perdem MHC-I clássico (HLA-A, B, C) aumentam a expressão de MHC-I não clássico (ex: HLA-G / HLA-E) que se ligam aos receptores inibitórios das células NK (NKG2A / ILT2), evitando a lise[span_31](start_span)[span_31](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Explica precisamente a estratégia do MHC de classe I não-clássico na inibição simultânea de TCD8 e NK[span_32](start_span)[span_32](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Evasão Tumoral de Células NK"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Aumentam a expressão de moléculas de CTLA-4 em suas membranas, promovendo a exaustão das células NK por meio da ligação nas moléculas de B7."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Aumentam a expressão de moléculas de PDL-1 em suas membranas, promovendo a apoptose das células NK por meio da ligação nas moléculas de PD-1."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Aumentam a expressão de moléculas de CD95 (FAS) em suas membranas, promovendo a apoptose das células NK por meio da ligação nas moléculas de CD95L (FASL)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Aumentam a expressão de moléculas de MHC de classe I não clássicas (Ib), que servem de ligantes para receptores inibitórios de células NK, mas não apresentam antígenos para os linfócitos TCD8+."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Produzem citocinas como Interferon do tipo I, que atuam sobre as células NK inibindo a sua atividade citotóxica."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Imunoterapia com Vacina BCG",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 16 - A vacina BCG (bacilo Calmette-Guérin) é utilizada há muitas décadas para o tratamento complementar de algumas formas de tumor. Em relação a esse tipo de imunoterapia, assinale abaixo a alternativa CORRETA:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O tratamento intravesical com BCG em câncer de bexiga recruta macrófagos e células T em uma resposta imune celular que reativa de forma indireta e massiva o estroma antitumoral[span_33](start_span)[span_33](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Corresponde exatamente ao mecanismo de ação celular e local da imunoterapia por BCG[span_34](start_span)[span_34](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunoterapia com Vacina BCG"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A aplicação da vacina BCG induz a ativação inespecífica e indireta das células imunológicas de modo sistêmico, aumentando a capacidade de destruição das células neoplásicas por meio da indução da produção de anticorpos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A aplicação da BCG promove a geração de uma resposta imunológica celular (macrófagos e linfócitos T), inicialmente direcionada contra o bacilo presente na vacina, mas que indiretamente reativa as células presentes no microambiente tumoral."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Os bacilos presentes na vacina BCG são capazes de infectar e de induzir a apoptose das células tumorais, uma vez que ativam enzimas envolvidas na clivagem do material genético (DNA) das células neoplásicas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A aplicação do bacilo leva a uma resposta inflamatória local, estimulando a diferenciação de linfócitos B produtores de anticorpos capazes de reconhecer e destruir a células tumorais."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A vacina BCG é capaz de reativar células imunológicas presentes no ambiente tumoral, pois o bacilo apresenta antígenos com estrutura molecular semelhante àquela de antígenos tumorais específicos, um fenômeno chamado de mimetismo molecular."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Diagnóstico da Criptosporidiose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 17 - O diagnóstico de criptosporidiose (infecção por Cryptosporidium spp.) muitas vezes é difícil e necessita da aplicação de métodos específicos. Analise a seguir as alternativas que descrevem alguns métodos utilizados para o diagnóstico dessa infecção:\nI - Exame protoparasitológico (fezes) com uso de colorações especiais, como o método de Ziehl-Neelsen modificado.\nII - Exame protoparasitológico (fezes) com o uso de anticorpos marcados com fluorocromos (imunofluorescência direta).\nIII - Exame para detecção de antígenos do protozoário nas fezes, por exemplo uso de testes rápidos (imunocromatografia).\nIV - Sorologia com a dosagem de IgG específica em amostras de sangue.\n\nDentre os métodos descritos os que CONFIRMAM a criptosporidiose ATUAL ATIVA são:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A infecção ativa atual por "
+        },
+        {
+          "type": "element",
+          "tag": "i",
+          "children": [
+            {
+              "type": "text",
+              "text": "Cryptosporidium"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " é confirmada identificando o parasita/oocisto nas fezes (Ziehl-Neelsen, Imunofluorescência) ou antígenos fecais diretos. A sorologia IgG apenas registra contato prévio (cicatriz imunológica)[span_35](start_span)[span_35](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os métodos I, II e III detectam o agente/antígeno nas fezes na fase ativa, enquanto o item IV não diferencia infecção passada de ativa[span_36](start_span)[span_36](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico da Criptosporidiose"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. I, II e III."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. I, II e IV."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. II, III e IV."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. I, III e IV."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. I, II, III e IV."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Neurotoxoplasmose em Imunossuprimidos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 18 - A infecção ou reativação de infecção por Toxoplasma gondii é uma das principais causas de morte entre pacientes imunossuprimidos, como aqueles com HIV/AIDS, particularmente no caso de infecções do sistema nervoso central (neurotoxoplasmose). O diagnóstico da neurotoxoplasmose normalmente é feito de forma presuntiva pela combinação de características clínicas e análise de imagens (por exemplo ressonância magnética). Abaixo estão representadas 5 imagens de ressonância magnética (1 a 5). Assinale a alternativa que contenha a RM com características de neurotoxoplasmose."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O achado neuroimagem clássico e patognomônico da Neurotoxoplasmose na Ressonância Magnética com contraste é a **lesão expansiva arredondada com realce anelar/em anel** associada a edema perilesional nos gânglios da base/subcortical[span_37](start_span)[span_37](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Imagem 2 mostra claramente a lesão característica com realce anelar delimitado típico da neurotoxoplasmose no HIV[span_38](start_span)[span_38](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Neurotoxoplasmose em Imunossuprimidos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Imagem 5"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Imagem 1"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Imagem 2"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Imagem 4"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Imagem 3"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Paradoxo Imunológico da Gestação",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 19 - Em relação à gestação e suas relações com o sistema imunológico, avalie as seguintes afirmativas e assinale a alternativa que contempla todas as corretas:\nI – Um dos pontos que chamaram a atenção de pesquisadores no passado era como o organismo da mulher não rejeitava o feto apesar de ele possuir antígenos paternos.\nII – Os elementos da resposta imunológica na interface materno-fetal (células NK, macrófagos, Linfócitos T, células dendríticas e outros) compõem um perigoso arsenal de ataque que é mantido silenciado graças ao tipo de placenta da espécie humana – que possibilita uma separação completa da mãe e o feto – e um sistema de anergia generalizada induzido pelo feto nas células da mãe.\nIII – A eliminação seletiva de elementos do sistema imunológico na interface materno fetal diminuiu em 16,5% a taxa de abortos espontâneos em ratos; isso demonstrou a teoria de Medawar que os antígenos paternos desencadeariam algum grau de resposta imune, ainda que não total, por parte da mãe."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A placenta humana é hemocorial e não estabelece 'separação completa' entre o sangue e tecidos, nem o feto causa 'anergia generalizada' sistêmica na mãe (a imunossupressão é estritamente local e altamente regulada por Treg e HLA-G/E)[span_39](start_span)[span_39](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Nenhuma das opções puras satisfaz as afirmações falsas contidas no texto dos itens II e III[span_40](start_span)[span_40](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Paradoxo Imunológico da Gestação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. I e II"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. I e III"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Nenhuma alternativa desta questão atende ao enunciado"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. I, II e III"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Fases Imunológicas da Gravidez",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 20 - Assinale a única alternativa que contém um erro acerca da imunidade na gravidez:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O 2º trimestre da gestação é um período **anti-inflamatório**, caracterizado por perfil predominantemente **Th2 e macrófagos M2**, essencial para o desenvolvimento e crescimento fetal estéril e seguro[span_41](start_span)[span_41](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A afirmativa B erra ao dizer que o 2º trimestre seria inflamatório/Th1/M1[span_42](start_span)[span_42](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fases Imunológicas da Gravidez"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. No novo modelo da relação sistema imune / gestação temos a divisão em 3 fases, cada uma correspondente a aproximadamente um terço da gestação. Em cada uma delas temos uma situação imunológica diversa do terço anterior."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. O segundo trimestre da gestação é caracterizado por um contexto inflamatório, com predomínio de Th1 e macrófagos de fenótipo M1; isso é importante para estimular o crescimento do feto."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Muitos abortos espontâneos estão relacionados a baixos números de TREG durante o segundo terço da gestação."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. O estágio de implantação e placentação assemelha-se ao processo de lesão tecidual e subsequente reparo. Nesse estágio temos aumento da expressão de moléculas de adesão no epitélio do lúmen do útero, dentre outras coisas."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. A expressão de CD95L pelo feto induz à apoptose das células CD8+ específicas para antígenos paternos"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-021",
+      "label": "21",
+      "sectionId": "objetivas",
+      "category": "Imunidade do Recém-Nascido",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 21 - São características da imunidade do recém-nascido, EXCETO:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O recém-nascido possui um sistema imune adaptativo virgem, predominantemente constituído por células T e B naive, apresentando escassas células T de memória periféricas[span_43](start_span)[span_43](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O recém-nascido não possui 'número substancial de linfócitos T de memória', sendo essa a exceção buscada no enunciado[span_44](start_span)[span_44](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunidade do Recém-Nascido"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Parte da sua imunidade foi transferida pela mãe durante a gestação (imunidade passiva)"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. A maioria dos linfócitos T são virgens"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Ocorre predomínio de resposta Th2"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Sua resposta antibacteriana está reduzida - pouca fagocitose e pouca formação de NETs"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Há um número substancial de linfócitos T de memória"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-022",
+      "label": "22",
+      "sectionId": "objetivas",
+      "category": "Rejeição de Enxertos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 22 - Em relação às reações imunológicas aos enxertos, avalie as seguintes afirmativas e assinale a alternativa que contempla todas as corretas:\nI – Embora a imunidade inata não seja a mais importante para a rejeição de enxertos, ela tem algum papel decorrente do dano tecidual derivado da colocação do enxerto.\nII – As reações mais fortes e rápidas de rejeição estão ligadas às moléculas de MHC\nIII – O alto grau de polimorfismo das moléculas de MHC torna praticamente impossível achar duas pessoas (que não sejam gêmeos univitelinos) com o mesmo genótipo para o MHC."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O dano de isquemia-reperfusão ativa a imunidade inata. O MHC (HLA) é a barreira aloantigênica mais potente devido ao extremo polimorfismo genético na população[span_45](start_span)[span_45](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os três itens (I, II e III) são verdadeiros e consagrados no contexto dos transplantes[span_46](start_span)[span_46](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Rejeição de Enxertos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. I e II"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. I e III"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. I, II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Nenhuma alternativa desta questão atende ao enunciado"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-023",
+      "label": "23",
+      "sectionId": "objetivas",
+      "category": "Tipos de Transplante de Enxerto",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 23 - Temos algumas possibilidades de transplante de enxertos atualmente. Aquela em que há a menor taxa de rejeição é a que envolve o enxerto:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O transplante autólogo utiliza tecidos ou células do próprio paciente, não apresentando incompatibilidade imunológica ou risco de rejeição imunomediada[span_47](start_span)[span_47](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Aponta a modalidade de enxerto autólogo como isenta de barreira de histocompatibilidade[span_48](start_span)[span_48](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Tipos de Transplante de Enxerto"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Semi-alogênico"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Autólogo"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Xenogênico"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Alogênico"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Heterólogo"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-024",
+      "label": "24",
+      "sectionId": "objetivas",
+      "category": "Imunossenescência e Consequências",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 24 - “A prevalência de indivíduos idosos em relação aos indivíduos jovens compreende um quadro comum na população mundial... Contudo, a eficácia de uma vacina depende, sobretudo, da habilidade dos indivíduos para exibir uma resposta imune adequada.” Implicações da imunossenescência na vacinação de idosos.\nO texto acima mostra a importância de se estudar a imunossenescência em um contexto de saúde pública (resposta às vacinas). Além de uma possível ineficiência das vacinações, há outras consequências da imunossenescência, EXCETO:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Idosos imunossenescentes frequentemente apresentam **resposta febril embotada ou ausente** mesmo em infecções graves, devido à alteração na regulação central e na sinalização por citocinas no hipotálamo[span_49](start_span)[span_49](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Erra ao dizer que idosos apresentariam 'picos febris frequentes' por maior sensibilidade febril[span_50](start_span)[span_50](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunossenescência e Consequências"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Reativação de vírus latentes"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Mortalidade aumentada para doenças infecciosas"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Aceleração de doenças degenerativas"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Aumento na incidência de doenças auto-imunes"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Aumento da sensibilidade a citocinas inflamatórias relacionadas à febre, ocasionando picos febris frequentemente desconectados de eventos importantes."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-025",
+      "label": "25",
+      "sectionId": "objetivas",
+      "category": "Marcadores de Imunossenescência",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 25 - A ciência médica tem feito avanços importantes no campo da medicina personalizada. Já existem alguns testes para se avaliar o grau de senescência de um organismo... Alguns desses indicadores que, quando elevados, parecem ter boa correlação com o envelhecimento são:\nA. Aumento da Interleucina 6 no sangue.\nB. Diminuição acentuada de linfócitos B virgens com prejuízo da resposta imune humoral.\nC. Aumento persistente da Interleucina 10 e do NF-kB na corrente sanguínea.\nD. Nenhuma alternativa desta questão atende ao enunciado.\nE. Alta frequência de linfócitos T virgens, indicando descontrole nas células tronco hematopoiéticas da medula, que passam a liberar um número anormalmente alto dessas células naive na corrente sanguínea."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O 'Inflammaging' (inflamação estéril crônica associada ao envelhecimento) é caracterizado pelo aumento sistêmico contínuo de citocinas inflamatórias marcadoras, sendo a **IL-6** e o **TNF-$alpha$** os principais indicadores circulantes[span_51](start_span)[span_51](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Destaca o IL-6 sanguíneo elevado como o clássico biomarcador da imunossenescência e do inflammaging[span_52](start_span)[span_52](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Marcadores de Imunossenescência"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Aumento da Interleucina 6 no sangue."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Diminuição acentuada de linfócitos B virgens com prejuízo da resposta imune humoral."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Aumento persistente da Interleucina 10 e do NF-kB na corrente sanguínea."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Nenhuma alternativa desta questão atende ao enunciado"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Alta frequência de linfócitos T virgens, indicando descontrole nas células tronco hematopoiéticas da medula, que passam a liberar um número anormalmente alto dessas células naive na corrente sanguínea."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-026",
+      "label": "26",
+      "sectionId": "objetivas",
+      "category": "Senescência Celular e Inflammaging",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 26 - A notícia ao lado repercutiu recentemente o resultado de algumas pesquisas na área de senescência celular. Esse campo envolve, evidentemente, múltiplas áreas, com destaque para a imunologia e a genética. Nesse contexto, analise as afirmativas abaixo e assinale a alternativa que contempla todas as corretas:\nI – As possibilidades de reversão de senescência celular em termos genéticos se baseiam, atualmente, na epigenética, já que reverter mutações exigiria tecnologias de edição de DNA que ainda estão muito longe de serem viáveis.\nII - A inflamação é uma das consequências da imunossenescência, sendo caracterizada por um estado inflamatório frequentemente associado à inflamação estéril.\nIII – No fenótipo SASP (Spurious Associated Senescent Phenotype) temos uma mudança celular decorrente do envelhecimento em que genes regulatórios de crescimento sofrem alterações genéticas (mutações) e epigenéticas (metilação e acetilação de histonas) que levam a células a entrar em um ciclo celular contínuo, multiplicando-se descontroladamente."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O fenótipo SASP (Senescence-Associated Secretory Phenotype) secreta fatores pró-inflamatórios em estado de **parada irreversível do ciclo celular (senescência)** e não em 'multiplicação contínua descontrolada' (que caracteriza neoplasias)[span_53](start_span)[span_53](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os itens I e II estão corretos, enquanto o item III distorce o conceito fundamental da senescência e da SASP[span_54](start_span)[span_54](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Senescência Celular e Inflammaging"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. I e II"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. II e III"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. I"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. III"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Nenhuma afirmativa está correta"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-027",
+      "label": "27",
+      "sectionId": "objetivas",
+      "category": "Reconhecimento Direto de Aloenxertos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 27 - Na rejeição a enxertos, a resposta imune adaptativa tem papel fundamental. E o MHC uma participação central dentro desse cenário. O MHC do doador pode ser reconhecido pelo receptor. Uma das maneiras pelas quais isso acontece é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Na via direta de alorreconhecimento, os linfócitos T do receptor reconhecem a molécula de MHC intacta na superfície das APCs do doador, ocorrendo uma reação cruzada estrutural com o complexo MHC próprio + peptídeo[span_55](start_span)[span_55](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Define de forma precisa a via de alorreconhecimento Direto pelo TCR do receptor[span_56](start_span)[span_56](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Reconhecimento Direto de Aloenxertos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. De forma DIRETA pelos linfócitos T, que reconhecem o complexo MHC doador+ Ag processado do doador de forma cruzada com seu próprio MHC (receptor) apresentando um Ag estranho."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. De forma DIRETA pelos linfócitos T, que reconhecem a ausência de MHC próprio pelas células do doador."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. De forma DIRETA e IMEDIATA pelos Linfócitos B virgens, cujos BCRs reconhecem o complexo MHC doador+Ag processado do doador como estranho"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. De forma INDIRETA pelo processamento do MHC por neutrófilos que fagocitam, sofrem apoptose e liberam fragmentos desse MHC na corrente sanguínea; esses fragmentos irão estimular uma resposta adaptativa via ligação com TCRs em mastócitos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. De forma INDIRETA e IMEDIATA (reação de minutos a horas) pela fagocitose, processamento e apresentação das moléculas de MHC do receptor para o Linfócito T naive."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-028",
+      "label": "28",
+      "sectionId": "objetivas",
+      "category": "Anticorpos Naturais e Sistema ABO",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 28 - Em relação às transfusões de sangue, percebeu-se que mesmo pessoas que nunca haviam recebido uma transfusão antes podiam desenvolver uma reação imediata se recebessem sangue de um tipo sanguíneo diferente do seu (exemplo: indivíduo tipo A recebendo sangue tipo B). A rapidez da resposta causava estranhamento, já que indicava uma resposta adaptativa já pronta, o que contrariava a ideia de uma primeira transfusão. Posteriormente se descobriu que na verdade essas reações rápidas ocorriam porque:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os isoaglutininas naturais (anti-A e anti-B da classe IgM) surgem na infância precoce devido ao reatividade cruzada contra carboidratos e glicolipídios presentes na parede de bactérias da comensalidade intestinal[span_57](start_span)[span_57](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Explica a origem dos anticorpos pré-formados da imunidade humoral natural do sistema ABO[span_58](start_span)[span_58](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Anticorpos Naturais e Sistema ABO"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. O que ocorria era uma resposta enxerto-versus-hospedeiro, com as células do sistema imune do doador atacando as células sanguíneas do receptor, produzindo uma inflamação sistêmica."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Anticorpos produzidos contra glicolipídios de bactérias intestinais acabavam reagindo de forma cruzada com os antígenos do grupo ABO"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Representavam uma resposta inata exacerbada e não uma resposta adaptativa."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Os antígenos de tipo sanguíneo funcionavam como superantígenos, ativando de forma indiscriminada linfócitos T CD4+ e promovem uma tempestade de citocinas, simulando uma resposta de memória imunológica."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Nenhuma alternativa desta questão atende ao enunciado"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-029",
+      "label": "29",
+      "sectionId": "objetivas",
+      "category": "Rejeição de Transplante de Medula Óssea",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 29 - Uma aluna que havia feito um curso de prestidigitação mágica conseguiu esconder um celular no coque do seu cabelo e o usou durante a prova de imunologia sem que os professores percebessem. Diante da questão dissertativa “Qual o mais importante problema que pode resultar de um transplante de células tronco hematopoieticas heterólogo? Explique.” Ela fez uma consulta ao ChatGPT e obteve a seguinte resposta: “O maior problema de um transplante desse tipo é a rejeição que o receptor desenvolve contra os células do enxerto. Na maioria dos casos, o SI do receptor acaba por destruir rapidamente as células recebidas pelo mecanismo mais importante de rejeição, que é via resposta inata envolvendo linfócitos T naive plasmocitários e células NK. Essa é a maior causa de morte entre receptores de células tronco hematopoieticas.” Em relação à resposta do ChatGPT, podemos dizer de forma correta e apropriada que:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O maior obstáculo clínico no TMO alogênico/heterólogo é a **Doença do Enxerto contra Hospedeiro (GVHD)** e a rejeição imune adaptativa mediada por linfócitos T maduros, e não por 'resposta inata com T naive plasmocitários' (termo inexistente)[span_59](start_span)[span_59](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Desconstrói integralmente o erro da resposta gerada no enunciado[span_60](start_span)[span_60](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Rejeição de Transplante de Medula Óssea"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Está correta embora bastante incompleta, pois há outros elementos da resposta imunológicas envolvidos nessa rejeição ao enxerto."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Está incorreta no ponto que explica como ocorre a rejeição ao enxerto."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Está correta na essência, mas problemática nos detalhes: na maioria dos casos não é a resposta inata que rejeita o transplante de medula, mas anticorpos naturais produzidos pelos linfócitos B1; além disso, não existem linfócitos T plasmocitários, e sim linfócitos T foliculares relacionados a essa rejeição."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Nenhuma alternativa desta questão atende ao enunciado"
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Está incorreta porque essa rejeição ao enxerto, principal problema do transplante de medula e maior causa de mortalidade entre os receptores, ocorre de forma complexa envolvendo muito mais a resposta adaptativa que a inata."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "imunologia-b4-2023-objetivas-030",
+      "label": "30",
+      "sectionId": "objetivas",
+      "category": "Estratégias de Imunossupressão em Transplantes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Questão 30 - Em relação às tentativas de se reduzir o grau de rejeição ao máximo, podemos afirmar corretamente, EXCETO:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Não se realiza imunossupressão sistêmica prévia intensa por 3 meses antes de transplantes de órgãos sólidos. A imunossupressão é iniciada no período perioperatório/de indução e mantida como manutenção pós-transplante[span_61](start_span)[span_61](end_span)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Representa a conduta clínica absurda e incorreta que constitui a exceção do enunciado[span_62](start_span)[span_62](end_span)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Estratégias de Imunossupressão em Transplantes"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Realizar a tipagem sanguínea ABO."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Promover um tratamento imunossupressor não seletivo intenso três meses antes do transplante, especialmente em relação aos transplantes de coração e pulmão."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Fazer a detecção de Acs pré-formados no receptor que reagem contra o MHC ou outros Ags do receptor (prova cruzada)."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Determinar os alelos de MHC HLA-A, HLA-B e HLA-DR dos doadores e receptores."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "E. Nenhuma alternativa desta questão atende ao enunciado"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    }
+  ]
+}
