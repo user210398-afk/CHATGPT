@@ -1,0 +1,4192 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "patologia-b3-2025",
+  "title": "Patologia e Imunologia Médica",
+  "subject": "Patologia/Imunologia",
+  "year": 2025,
+  "division": "B3",
+  "description": "",
+  "tags": [],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [
+    {
+      "id": "objetivas",
+      "title": "Questões objetivas"
+    }
+  ],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "simulados/patologia-b3-Simulado-2025.html",
+    "sourceCommit": "d029f44501e32f0358160a613ce262379dc26af1",
+    "notes": [
+      "Conteúdo acadêmico integral, prefixos e gabaritos posicionais preservados. Descrição e tags da prova vazias por ausência de metadados canônicos separados.",
+      "Quatro alternativas em cada questão."
+    ]
+  },
+  "questions": [
+    {
+      "id": "patologia-b3-2025-objetivas-001",
+      "label": "1",
+      "sectionId": "objetivas",
+      "category": "Inflamação e Reparo Tecidual",
+      "statement": [
+        {
+          "type": "text",
+          "text": "1) Uma criança de 8 anos sofreu uma lesão perfurante após pisar acidentalmente em um prego com os pés descalços. Assinale os achados histopatológicos mais provavelmente encontrados ao examinar a área lesada 3 dias após o acidente?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Na inflamação aguda, as primeiras 24-48h são marcadas por neutrófilos, edema e vasodilatação. Ao fim do 3º dia (72h), inicia-se a transição para a fase de reparo/organização (tecido de granulação), caracterizada por recrutamento de macrófagos, proliferação de fibroblastos e angiogênese."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " No 3º dia do processo reparativo, predominam macrófagos, fibroblastos ativos e neovascularização."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Reflete a fase imediata da inflamação aguda (24-48 horas)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Descreve inflamação granulomatosa crônica estrita."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Típico de resposta imune adaptativa crônica ou hiperplasia linfoide organofacial."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Inflamação e Reparo Tecidual"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Neutrófilos, edema, vasodilatação"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Células epitelioides e células gigantes multinucleadas do tipo Langhans."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Macrófagos, fibroblastos e vasos sanguíneos de pequeno calibre neoformados."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Linfócitos com formação de folículos linfoides reacionais."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-002",
+      "label": "2",
+      "sectionId": "objetivas",
+      "category": "Derrame Pleural e Permeabilidade Vascular",
+      "statement": [
+        {
+          "type": "text",
+          "text": "2) Homem de 67 anos, com história de insuficiência cardíaca congestiva, apresenta dispneia súbita. Derrame pleural obtido por toracocentese mostra líquido claro, com baixo teor proteico, sem células inflamatórias. Este padrão corresponde à:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O transudato é um extravasamento fluido ultrafiltrado do plasma de origem não inflamatória, com baixo teor proteico e ausência de exsudação celular, decorrente do aumento da pressão hidrostática (ex: ICC) ou diminuição da pressão oncótica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O líquido claro com baixo teor proteico e sem células inflamatórias em paciente com ICC é a definição fisiopatológica de transudato."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A, B e C: Representam exsudatos de processos inflamatórios exsudativos ricos em células ou proteínas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Derrame Pleural e Permeabilidade Vascular"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Inflamação serosa"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Inflamação fibrinosa"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Inflamação crônica inespecífica"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Derrame não inflamatório (transudato)"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-003",
+      "label": "3",
+      "sectionId": "objetivas",
+      "category": "Inflamação Aguda e Mecanismos Endoteliais",
+      "statement": [
+        {
+          "type": "text",
+          "text": "3) Mulher de 50 anos, com histórico de artrite reumatoide, apresenta quadro de pleurite aguda. Exame do líquido pleural mostra exsudato rico em proteínas e fibrina, com células inflamatórias. Uma biópsia revelou presença de depósitos fibrinosos na superfície pleural e neutrófilos dispersos. Qual alteração celular endotelial foi determinante para o extravasamento de neutrófilos e proteínas plasmáticas neste caso?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O aumento da permeabilidade vascular no exsudato agudo ocorre de forma rápida e reversível por contração das células endoteliais (formando fendas intercelulares) induzida por mediadores solúveis como histamina e bradicinina."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A contração endotelial reversível é o principal mecanismo gerador de fendas intercelulares na inflamação exsudativa aguda."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A e D: Lesões destrutivas diretas e irreversíveis ocorrem em queimaduras severas ou necrotizantes agudas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Aumento da pressão hidrostática gera transudatos e não exsudato exsudativo com fibrina."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Inflamação Aguda e Mecanismos Endoteliais"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Lesão irreversível da membrana endotelial"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Contração rápida e reversível das células endoteliais induzida por histamina e bradicinina"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Aumento da pressão hidrostática capilar"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Destruição direta do endotélio por radicais livres"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-004",
+      "label": "4",
+      "sectionId": "objetivas",
+      "category": "Granulomas e Imunidade Celular",
+      "statement": [
+        {
+          "type": "text",
+          "text": "4) Paciente masculino, 45 anos, apresenta tosse crônica, hemoptise e perda de peso há 3 meses. No hemograma observa-se anemia normocítica e leucocitose discreta. RX de tórax evidencia cavitação no ápice pulmonar direito. Biópsia mostra granulomas com necrose central caseosa, circundada por células epitelioides e linfócitos. Qual o principal mecanismo imune associado à formação deste granuloma?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Na tuberculose, a formação do granuloma caseoso é coordenada pela resposta celular Th1, onde os linfócitos T CD4+ produzem IFN-γ para ativar fortemente os macrófagos e convertê-los em células epitelioides e células gigantes multinucleadas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A via celular Th1 com secreção de IFN-γ ativa macrófagos e constrói a estrutura granulomatosa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Eosinófilos/IL-5 participam em alergias e parasitoses."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: IgE medeia hipersensibilidade tipo I."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Imunidade humoral por anticorpos é ineficaz para controlar bactérias intracelulares como M. tuberculosis."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Granulomas e Imunidade Celular"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Ativação de eosinófilos mediados por IL-5"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Hipersensibilidade imediata mediada por IgE"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Resposta Th1 com secreção de IFN-γ ativando macrófagos"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Produção de anticorpos neutralizantes contra antígenos bacterianos"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-005",
+      "label": "5",
+      "sectionId": "objetivas",
+      "category": "Imunopatologia da Hanseníase",
+      "statement": [
+        {
+          "type": "text",
+          "text": "5) Mulher de 28 anos, com história de hanseníase paucibacilar, apresenta múltiplas lesões cutâneas hipopigmentadas, com perda de sensibilidade. Biópsia mostra granulomas tuberculoides com macrófagos epitelioides e predomínio de linfócitos T CD4+. Esse padrão histológico é consequência de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Hanseníase Tuberculoide (paucibacilar) caracteriza-se por uma forte imunidade celular (Th1 com IFN-γ e IL-2) que restringe a replicação do bacilo formando granulomas bem delimitados."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O perfil Th1 promove a diferenciação granulomatosa e controle bacilar paucibacilar."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A e B: Resposta Th2 e de anticorpos predominam na forma virchowiana (multibacilar)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Neutrófilos não coordenam a imunidade granulomatosa crônica da hanseníase."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunopatologia da Hanseníase"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Resposta imune Th2 com IL-4 e IL-10 predominantes"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Produção de anticorpos IgM contra Mycobacterium leprae"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Ação citotóxica direta de neutrófilos ativados"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Resposta Th1 com secreção de IFN-γ e IL-2"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-006",
+      "label": "6",
+      "sectionId": "objetivas",
+      "category": "Infecções Oportunistas no HIV",
+      "statement": [
+        {
+          "type": "text",
+          "text": "6) Paciente 40 anos, HIV positivo, CD4+ = 120/mm³, apresenta diarreia crônica e emagrecimento. Exame de colonoscopia demonstrou lesões nodulares em cólon. Biópsia revela granulomas mal formados com numerosos organismos corados pela coloração de metenamina-prata (coloração especial de Grocott). Com base nestes dados, assinale qual é o agente etiológico mais provável?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A impregnação pela Prata de Grocott é a coloração especial histoquímica de escolha para revelar fungos. Em doentes imunodeprimidos por HIV (CD4 < 150-200), a histoplasmose disseminada gera granulomas cólicos repletos de leveduras fúngicas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Grocott cora a parede fúngica de Histoplasma capsulatum."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Micobactérias são marcadas por Ziehl-Neelsen/Fite-Faraco."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Citomegalovírus produz inclusões intranucleares em 'olho de coruja'."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: E. coli é uma bactéria gram-negativa não demonstrada por metenamina-prata."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Infecções Oportunistas no HIV"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Mycobacterium avium-intracellulare"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Citomegalovírus"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Histoplasma capsulatum"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Escherichia coli enteroagressiva"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-007",
+      "label": "7",
+      "sectionId": "objetivas",
+      "category": "Micoses Endêmicas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "7) Homem, 42 anos, apresenta nódulo cutâneo ulcerado em região de face, com história de viagem à área endêmica da Amazônia. Hemograma: anemia discreta; leucocitose com linfocitose. Biópsia mostra granulomas com células gigantes e leveduras gemuladas em \"roda de leme\". O agente etiológico mais provável é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O achado anatomo-patológico de leveduras de brotamento exogêneo múltiplo em torno de uma célula mãe (\"roda de leme\" ou \"orelha do Mickey\") é o elemento patognomônico da Paracoccidioidomicose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O aspecto em 'roda de leme' identifica o Paracoccidioides brasiliensis."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Cryptococcus possui cápsula mucopolissacarídica espessa e brotamento único."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Histoplasma apresenta leveduras intracelulares pequenas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Candida exibe pseudohifas e blastoconídios."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Micoses Endêmicas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Cryptococcus neoformans"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Histoplasma capsulatum"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Candida albicans"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Paracoccidioides brasiliensis"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-008",
+      "label": "8",
+      "sectionId": "objetivas",
+      "category": "Teste Tuberculínico e Hipersensibilidade",
+      "statement": [
+        {
+          "type": "text",
+          "text": "8) Homem, 45 anos fez teste de tuberculina (PPD). Às 48 horas apresenta induração de 18 mm com eritema e biópsia da área revela infiltrado de células mononucleares com macrófagos ativados. Qual a descrição correta do tipo celular e das citocinas fundamentais neste tipo de reação de hipersensibilidade cutânea?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O teste do PPD (tuberculina) é o modelo clássico de Hipersensibilidade Retardada (Tipo IVa). Linfócitos T CD4+ Th1 sensibilizados reconhecem o antígeno em 24-72h, libertando IFN-γ para recrutar e ativar macrófagos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A via IVa depende de T CD4+ Th1, secreção de IFN-γ e ativação de macrófagos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Citotoxicidade por T CD8+ direta caracteriza a via IVc."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: IgE/histamina medeiam reações tipo I em minutos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Imunocomplexos caracterizam a hipersensibilidade tipo III."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Teste Tuberculínico e Hipersensibilidade"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Reação mediada por linfócitos T CD4+ Th1 que secretam IFN-γ que, por sua vez, levam à ativação de macrófagos (hipersensibilidade retardada clássica, tipo IVa)."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Citotoxicidade CD8+ predominante com liberação de perfurina/granzima (tipo IV)."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Reação mediada por IgE e mastócitos com liberação de histamina."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Deposição de imunocomplexos e ativação do complemento (tipo III)."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-009",
+      "label": "9",
+      "sectionId": "objetivas",
+      "category": "Febre Reumática e Mimetismo Molecular",
+      "statement": [
+        {
+          "type": "text",
+          "text": "9) Um menino de 12 anos, previamente hígido, apresenta febre, artralgia migratória em grandes articulações e sopro cardíaco. Há relato de amigdalite purulenta há 3 semanas, não tratada.\nExames:\n1) Hemograma: leucocitose leve, VHS = 70 mm/h\n2) ASLO: 950 UI (VR < 200), elevado (mede anticorpos contra a estreptolisina O de Streptococcus pyogenes)\n3) Ureia e creatinina normais\n\nCom base na fisiopatologia da febre reumática, assinale a alternativa correta:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Febre Reumática é uma sequela pós-estreptocócica autoimune. Anticorpos e linfócitos T produzidos contra a proteína M do S. pyogenes reagem cruzadamente com antígenos próprios das valvas e miocárdio humanos (mimetismo molecular)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O mimetismo molecular conduz a autoimunidade por reação cruzada com tecidos cardíacos e articulares."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Não há invasão bacteriana direta no coração na Febre Reumática."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: A lesão é mediada predominantemente por imunidade celular e autoanticorpos direcionados aos tecidos (Tipo II)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: A lesão não é provocada por toxicidade direta de endotoxinas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Febre Reumática e Mimetismo Molecular"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. A lesão valvar resulta da ação direta da bactéria sobre o endotélio endocárdico."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. O mecanismo principal envolve reação cruzada entre antígenos estreptocócicos e proteínas do hospedeiro, reação mediada por mimetismo molecular."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. A artrite é causada pela deposição de imunocomplexos circulantes."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. A cardite reumática decorre de endotoxinas estreptocócicas que causam necrose miocárdica direta."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-010",
+      "label": "10",
+      "sectionId": "objetivas",
+      "category": "Cardiopatia Reumática Crônica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "10) Homem, 22 anos, com história de febre reumática na infância, apresenta sopro cardíaco. Ecocardiograma: fusão de comissuras e encurtamento de cordas tendíneas da valva mitral. Exames: ureia, creatinina e hemograma normais.\nQual complicação crônica é esperada neste paciente devido à estenose mitral reumática?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A estenose mitral pós-reumática crônica impede o esvaziamento do átrio esquerdo para o ventrículo esquerdo, levando ao aumento de pressão atrial, dilatação do átrio esquerdo e estase sanguínea que predispõe à fibrilação atrial."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A resistência ao fluxo mitral leva ao aumento estrutural e elétrico do átrio esquerdo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: A hipertrofia de VE ocorre na estenose aórtica ou hipertensão."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: A alteração primária inicial é no átrio esquerdo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Abscessos miocárdicos são complicações de endocardite infeciosa bacteriana aguda e não de sequela reumática estéril."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Cardiopatia Reumática Crônica"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Hipertrofia concêntrica do ventrículo esquerdo."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Dilatação aneurismática do ventrículo direito."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Dilatação do átrio esquerdo e fibrilação atrial."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Formação de abscessos miocárdicos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-011",
+      "label": "11",
+      "sectionId": "objetivas",
+      "category": "Reações Transfusionais e Complemento",
+      "statement": [
+        {
+          "type": "text",
+          "text": "11) Homem de 45 anos, recebeu transfusão de emergência com sangue de compatibilidade desconhecida e desenvolveu febre, dor lombar e urina escura 1 hora após. Hemograma (pré-transfusão Hb 13,0 g/dL; pós 4 h Hb 8,0 g/dL); leucócitos 14.000/µL. Assinale qual das alternativas abaixo mais provavelmente identifica o mecanismo mais consistente com este quadro:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Incompatibilidade ABO transfusional provoca reação hemolítica intravascular aguda. Isoaglutininas IgM ativam fortemente a via clássica do complemento, montando o MAC (C5b-C9) e provocando lise direta e fulminante das hemácias do dador na circulação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A ativação da via clássica com montagem do MAC e mediação por IgM é responsável pela lise intravascular aguda com hemoglobinúria."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: ADCC por células NK é um processo extravascular mais lento."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Hemólise por IgG é extravascular (fígado/baço) e não lítica intravascular fulminante com urina preta em 1h."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Deposição de imunocomplexos caracteriza reações do tipo III."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Reações Transfusionais e Complemento"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Citotoxicidade dependente de anticorpos mediada por células NK através de CD16."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Hemólise extravascular por macrófagos esplênicos mediada por IgG."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Lise intravascular mediada por ativação clássica do complemento com formação do Complexo de Ataque à Membrana (MAC) e por anticorpos IgM."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Lesão por imunocomplexos depositados nos capilares renais."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-012",
+      "label": "12",
+      "sectionId": "objetivas",
+      "category": "Autoimunidade - Doença de Graves",
+      "statement": [
+        {
+          "type": "text",
+          "text": "12) Paciente feminina, 38 anos, apresenta taquicardia, intolerância ao calor e perda ponderal. Ao exame físico, há exoftalmia e bócio difuso. TSH encontra-se suprimido, T3 e T4 estão elevados. Anticorpos anti-receptor de TSH são detectados. Qual o mecanismo fisiopatológico responsável pelo quadro clínico?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Doença de Graves é um exemplo de Hipersensibilidade Tipo II funcional/estimulatória. Autoanticorpos da classe IgG (TRAb) ligam-se ao receptor do TSH e imitam o hormônio, estimulando continuadamente a tiróide."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Anticorpos estimuladores (TRAb) ligam-se ao receptor de TSH ativando a secreção de hormônios tiroideus."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: A doença não é decorrente da deposição de imunocomplexos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Destruição celular por T CD8+ caracteriza a Tiroidite de Hashimoto (hipotiroidismo)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: IgE medeia anafilaxia/alergias e não tirotoxicose autoimune."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Autoimunidade - Doença de Graves"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Formação de imunocomplexos com deposição na glândula tireoide."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Ligação de anticorpos estimuladores ao receptor de TSH, ativando produção hormonal."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Destruição tireoidiana por linfócitos T CD8+ citotóxicos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Liberação mastocitária mediada por IgE específica para antígenos tireoidianos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-013",
+      "label": "13",
+      "sectionId": "objetivas",
+      "category": "Inflamação Crônica Inespecífica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "13) Um paciente de 45 anos apresenta úlcera crônica na perna, de longa evolução, com bordas endurecidas e secreção purulenta escassa. Biópsia mostra infiltrado celular com predomínio de linfócitos, plasmócitos e macrófagos, além de proliferação vascular e fibroblastos. Qual o melhor diagnóstico histopatológico do processo?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A coexistência de infiltrado celular mononuclear (linfócitos, macrófagos e plasmócitos) com proliferação vascular e fibroblastos (tecido de granulação) em lesão persistente define a inflamação crônica inespecífica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O quadro histopatológico atende à definição exata de inflamação crônica inespecífica."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Fibrinosa caracteriza-se por exsudação de rede de fibrina e neutrófilos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Exige arranjo de células epitelioides nodulares organizadas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Necrose liquefativa transforma o tecido numa massa líquida viscosa (abcessos/enfartes cerebrais)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Inflamação Crônica Inespecífica"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Inflamação aguda fibrinosa"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Granuloma tuberculóide"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Necrose liquefativa"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Inflamação crônica inespecífica"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-014",
+      "label": "14",
+      "sectionId": "objetivas",
+      "category": "Reparo Tecidual e Granulação",
+      "statement": [
+        {
+          "type": "text",
+          "text": "14) Mulher, 68 anos, diabética, apresenta lesão traumática em perna que não cicatriza há semanas. Histologia: numerosos capilares neoformados, fibroblastos ativos e matriz extracelular frouxa. Esse achado corresponde à fase de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O tecido de granulação é a matriz provisória do reparo, formado por proliferação capilar (angiogênese), proliferação de fibroblastos ativos e estroma extracelular frouxo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Capilares neoformados com fibroblastos e matriz frouxa constituem o tecido de granulação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Necrose fibrinoide é padrão de lesão vascular imunomediada."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Cicatriz madura é avascular, contendo colágeno denso e acelular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Granuloma é nodular com macrófagos epitelioides agrupados."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Reparo Tecidual e Granulação"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Inflamação aguda fibrinoide"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Tecido de granulação"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Cicatriz madura"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Granuloma imune"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-015",
+      "label": "15",
+      "sectionId": "objetivas",
+      "category": "Inflamação Crônica e Fibrose",
+      "statement": [
+        {
+          "type": "text",
+          "text": "15) Paciente de 50 anos, tabagista, apresenta tosse persistente. Biópsia brônquica revela infiltrado crônico linfoplasmocitário e fibrose subepitelial. Esse processo patológico é exemplo de:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A agressão contínua da fumaça do tabaco estabelece um estado de inflamação crônica mantida (infiltrado mononuclear) que conduz à deposição excessiva de matriz colágena de reparo (fibrose subepitelial)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Reflete o binômio inflamação crônica contínua e remodelação/fibrose reparativa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Não houve resolução ou neutralização do agente."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Ausência de macrófagos epitelioides agrupados e necrose caseosa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Primeira intenção aplica-se a incisões cirúrgicas limpas e alinhadas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Inflamação Crônica e Fibrose"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Inflamação aguda com resolução completa"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Inflamação crônica com fibrose reparativa"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Inflamação granulomatosa com necrose caseosa"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Cicatrização por primeira intenção"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-016",
+      "label": "16",
+      "sectionId": "objetivas",
+      "category": "Fases da Cicatrização",
+      "statement": [
+        {
+          "type": "text",
+          "text": "16) Qual é o evento inicial mais importante no processo de cicatrização de feridas após uma incisão cirúrgica limpa?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A primeira fase imediata após o traumatismo incisional é a hemostasia com formação do coágulo de fibrina/plaquetas, que serve de arcabouço para o recrutamento dos leucócitos inflamatórios iniciais."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A formação do coágulo e inflamação aguda são o evento disparador essencial do reparo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A, B e D: Ocorrem sequencialmente nos dias subsequentes (fases proliferativa e de remodelação)."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fases da Cicatrização"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Formação de tecido de granulação"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Regeneração epitelial"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Formação de coágulos sanguíneos e inflamação"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Deposição de colágeno"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-017",
+      "label": "17",
+      "sectionId": "objetivas",
+      "category": "Hipersensibilidade Imediata (Tipo I)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "17) Uma criança de 3 anos com alergia à amendoim ingere acidentalmente manteiga de amendoim e desenvolve urticária, inchaço e dificuldade para respirar. Qual mecanismo imunológico é o principal responsável pela reação alérgica da criança?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Manifestações imediatas de broncoespasmo e urticária após exposição alimentar em sensibilizados são decorrentes de reação de Hipersensibilidade Tipo I, na qual antígenos ligam-se a anticorpos IgE fixos a mastócitos, promovendo desgranulação."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Anafilaxia e alergias alimentares são mediadas por IgE e mastócitos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Complemento atua primariamente nas hipersensibilidades do tipo II e III."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Citotoxicidade celular é o mecanismo tipo IV retardo."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Trata-se de hipersensibilidade contra antígeno exógeno e não autoimunidade."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hipersensibilidade Imediata (Tipo I)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Ativação do sistema complemento"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Citotoxicidade mediada por células"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Hipersensibilidade mediada por IgE"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Resposta autoimune"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-018",
+      "label": "18",
+      "sectionId": "objetivas",
+      "category": "Imunologia do Granuloma",
+      "statement": [
+        {
+          "type": "text",
+          "text": "18) Um homem de 35 anos é diagnosticado com tuberculose. Seu sistema imunológico forma granulomas para conter a infecção. Quais tipos de células imunes estão principalmente envolvidas na formação de granulomas?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os granulomas imunes da tuberculose são mantidos pela sinergia entre os linfócitos T auxiliares CD4+ (Th1) e os macrófagos. As citocinas T ativam os macrófagos, que se transformam em células epitelioides."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Macrófagos e células T CD4+ auxiliares constituem os elementos imunológicos nucleares do granuloma."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A, B e D: Não compõem a base arquitetural e efetora da reação granulomatosa tuberculosa."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunologia do Granuloma"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Células B e plasmócitos"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Células T citotóxicas e células dendríticas"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Macrófagos e células T auxiliares"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Células assassinas naturais e eosinófilos"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-019",
+      "label": "19",
+      "sectionId": "objetivas",
+      "category": "Hipersensibilidade Citotóxica (Tipo II)",
+      "statement": [
+        {
+          "type": "text",
+          "text": "19) Um homem de 50 anos é diagnosticado com miastenia gravis, uma condição na qual autoanticorpos tem como alvo os receptores de acetilcolina na junção neuromuscular. Que tipo de reação de hipersensibilidade está envolvida na miastenia gravis?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Miastenia Gravis enquadra-se na Hipersensibilidade do Tipo II. Autoanticorpos IgG direcionados contra um antígeno fixo de membrana (receptor de ACh) causam bloqueio ou internalização do receptor sem necrose celular primária."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Reações mediadas por anticorpos específicos contra antígenos de superfície celular são do Tipo II."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Tipo I é mediado por IgE."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Tipo III depende de imunocomplexos circulantes solúveis."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Tipo IV é mediado por células T."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hipersensibilidade Citotóxica (Tipo II)"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Hipersensibilidade tipo I"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Hipersensibilidade tipo II"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Hipersensibilidade tipo III"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Hipersensibilidade tipo IV"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-020",
+      "label": "20",
+      "sectionId": "objetivas",
+      "category": "Neuro-Autoimunidade no LES",
+      "statement": [
+        {
+          "type": "text",
+          "text": "20) Qual é a causa provável dos sintomas neurológicos no LES (Lúpus Eritematoso Sistêmico)?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As alterações neurológicas e psiquiátricas do LES são causadas por vasculite autoimune imuno-complexo-mediada em vasos cerebrais e oclusão microvascular gerada por anticorpos antifosfolipídeos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O dano vascular do SNC no Lúpus resulta de vasculite autoimune e microtrombose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Lúpus não é um agente infecioso para invadir o cérebro."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C e D: Podem ser complicações associadas mas não são o mecanismo autoimune primário lúpico."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Neuro-Autoimunidade no LES"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Vasculite autoimune mediada e microtrombi no SNC"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Invasão direta do cérebro pelo lúpus"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Infecção secundária do SNC"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Encefalopatia hipertensiva"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-021",
+      "label": "21",
+      "sectionId": "objetivas",
+      "category": "Anticorpos Antifosfolipídeos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "21) Qual é o papel dos anticorpos antifosfolipídeos no LES?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Os anticorpos antifosfolipídeos induzem um estado de hipercoagulabilidade arterial e venosa e interferem na placentação, promovendo tromboses recorrentes e abortos de repetição."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Promovem eventos trombóticos e perdas gestacionais no contexto do LES/SAF."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A e B: Não possuem efeito protetor ou profilático contra infecções."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: O seu efeito clínico marcante é o estado pró-trombótico e não lise endotelial direta."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Anticorpos Antifosfolipídeos"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Eles aumentam a resposta imune contra infecções."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Protegem contra reações autoimunes."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Danificam diretamente as células endoteliais."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Promovem trombose e aumentam o risco de abortos espontâneos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-022",
+      "label": "22",
+      "sectionId": "objetivas",
+      "category": "Patogênese do Eritema Malar",
+      "statement": [
+        {
+          "type": "text",
+          "text": "22) O lúpus eritematoso sistêmico (LES) é uma doença autoimune que ocorre em mulheres jovens em idade reprodutiva. Uma das possíveis manifestações é a ocorrência do eritema malar em forma de \"asa de borboleta\". Qual das alternativas abaixo melhor descreve a patogênese desta lesão?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A radiação UV induz a apoptose de queratinócitos na pele. A exposição de autoantígenos nucleares em indivíduos suscetíveis desencadeia a reação por anticorpos antinucleares (AAN/ANA) com formação de imunocomplexos e resposta inflamatória eritematosa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Explica o efeito da luz UV na apoptose celular e exposição de antígenos nucleares reativos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Recrutamento inflamatório imuno-complexo não atrai IgE."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C e D: O mecanismo dermatológico do LES fotossensível baseia-se na autoimunidade contra antígenos nucleares próprios e imunocomplexos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Patogênese do Eritema Malar"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Depósitos de imunocomplexo na parede de vasos da derme, ativando o sistema complemento e atraindo anticorpos IgE para o local da lesão."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Apoptose de queratinócitos promovendo fragmentação nuclear com exposição dos antígenos nucleares que, por sua vez, estimulam a produção de anticorpos antinucleares intensificando a destruição dos queratinócitos e promovendo o eritema malar."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Por mimetismo imunológico, estimulado pela luz ultravioleta, com produção de anticorpos contra as células da epiderme promovendo a lesão de queratinócitos e, em consequência, o eritema malar."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Pela reação de hipersensibilidade tardia com produção de linfócitos T CD8+ citotóxicos que lesam queratinócitos por lise osmótica."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-023",
+      "label": "23",
+      "sectionId": "objetivas",
+      "category": "Imunodeficiência e Infecção na SIDA",
+      "statement": [
+        {
+          "type": "text",
+          "text": "23) Uma mulher de 40 anos com histórico de HIV apresenta linfadenopatia cervical progressiva e sintomas sistêmicos. Uma biópsia revela granulomas com caseificação e numerosos bacilos álcool-ácido resistentes. Por que pacientes com HIV apresentam risco aumentado de desenvolver linfadenite tuberculosa?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O HIV destrói os linfócitos T CD4+, que são vitais para a imunidade celular. A escassez de T CD4+ impede a secreção adequada de IFN-γ e inviabiliza a contenção granulomatosa do M. tuberculosis."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O enfraquecimento da imunidade celular mediada por T CD4+ predispõe à tuberculose ativa."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: O fator determinante é a perda da imunocompetência do hospedeiro."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B e C: O HIV não aumenta a eficácia de anticorpos ou a função de macrófagos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Imunodeficiência e Infecção na SIDA"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Maior exposição ao Mycobacterium tuberculosis"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Aumento da produção de anticorpos"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Aumento da função dos macrófagos"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Enfraquecimento da imunidade celular"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-024",
+      "label": "24",
+      "sectionId": "objetivas",
+      "category": "Modelos de Hipersensibilidade",
+      "statement": [
+        {
+          "type": "text",
+          "text": "24) Em estudo experimental, um antígeno é injetado em dois grupos de camundongos previamente sensibilizados. No primeiro grupo, ocorre resposta imediata com edema e eosinofilia. No segundo, a resposta se inicia após 48 horas com infiltrado mononuclear e induração local. Assinale a correlação correta entre o tipo de hipersensibilidade e suas células efetoras predominantes:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O Grupo 1 apresenta Hipersensibilidade do Tipo I (imediatismo, mastócitos e eosinófilos). O Grupo 2 exibe Hipersensibilidade do Tipo IV (retardada, 48h, induração, linfócitos T CD4+ e macrófagos)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (A):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Estabelece a correlação precisa dos tipos I e IV com suas respetivas células efetuadoras."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Invertem ou atribuem incorretamente as células efetoras aos tipos de hipersensibilidade."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Modelos de Hipersensibilidade"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Tipo I - Mastócitos / Tipo IV - Linfócitos T CD4+ e macrófagos"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Tipo I - Linfócitos T CD8+ / Tipo IV - Mastócitos"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Tipo II - Neutrófilos / Tipo III - Eosinófilos"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Tipo II - Linfócitos T / Tipo I - IgM"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-025",
+      "label": "25",
+      "sectionId": "objetivas",
+      "category": "Glomerulonefrite Pós-Estreptocócica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "25) Paciente masculino, 9 anos, é levado ao pronto socorro por edema palpebral e urina escurecida (\"cor de Coca-Cola\") uma semana após faringite estreptocócica. Exames mostram creatinina sérica de 1,3 mg/dL, proteínaúria, hematúria com cilindros hemáticos e queda de C3 sérico. A biópsia renal evidencia glomérulos hipercelulares com \"humps\" subepiteliais à microscopia eletrônica. O mecanismo fisiopatológico de lesão renal predominante é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Glomerulonefrite Pós-Estreptocócica é uma doença imunomediada do Tipo III. Imunocomplexos circulantes formados após infecção estreptocócica depositam-se no glomérulo (visíveis como 'humps' subepiteliais), ativando o complemento e recrutando neutrófilos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (D):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O depósito de imunocomplexos (Tipo III) e ativação do complemento causam a lesão glomerular."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Não é citotoxicidade direta por exotoxinas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Anti-MBG in situ ocorre na Síndrome de Goodpasture (Tipo II)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: O gatilho primário da nefrite pós-estreptocócica é o depósito do imunocomplexo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Glomerulonefrite Pós-Estreptocócica"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Lesão direta por toxinas bacterianas nos glomérulos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Formação in situ de autoanticorpos anti-membrana basal do capilar glomerular."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Ativação do complemento via alternativa, com lise direta dos glomérulos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Formação e depósito de imunocomplexos circulantes (tipo III), com ativação do complemento."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-026",
+      "label": "26",
+      "sectionId": "objetivas",
+      "category": "Espondiloartropatias Soronegativas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "26) Paciente jovem, do sexo masculino, com queixa de rigidez lombar progressiva e alteração postural. Radiografia revela coluna em \"haste de bambu\". Com base nestes achados, cite a doença e o mecanismo fisiopatológico mais provavelmente envolvidos na patogênese destas lesões?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Espondilite Anquilosante é uma doença inflamatória crônica do esqueleto axial que conduz à fusão vertebral radiográfica em 'coluna em haste de bambu'. Possui fortíssima associação genética com o alelo HLA-B27."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Espondilite anquilosante ligada à resposta celular de T T em indivíduos HLA-B27 positivos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Lúpus não causa a alteração em haste de bambu."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: Não é doença primária por deposição vascular de imunocomplexos."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Gota resulta da deposição de cristais de urato monossódico."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Espondiloartropatias Soronegativas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Lupus eritematoso sistêmico / Autoanticorpos contra a lâmina basal da membrana sinovial"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Espondilite anquilosante / Formação de imunocomplexos com deposição em vasos"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Espondilite anquilosante / Ativação de linfócitos T em indivíduos com HLA-B27"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Gota / Deposição de cristais de cálcio nas articulações"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-027",
+      "label": "27",
+      "sectionId": "objetivas",
+      "category": "Rejeição de Transplantes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "27) Em um modelo experimental de rejeição de transplante, observou-se que o mecanismo principal de dano às células do órgão transplantado é mediado por células T citotóxicas. Qual das alternativas abaixo melhor descreve o processo de destruição das células do órgão transplantado?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Linfócitos T citotóxicos (CD8+) causam necrose/morte das células parenquimatosas alógenas através do mecanismo de exocitose de grânulos contendo perforinas e granzimas."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Perforinas abrem poros na membrana e granzimas acionam as caspases indutoras de apoptose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Complemento via clássica atua na rejeição humoral/hiperaguda."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Imunocomplexos caracterizam hipersensibilidade tipo III."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Histamina/leucotrienos são liberados por mastócitos na hipersensibilidade tipo I."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Rejeição de Transplantes"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Ativação do sistema complemento pela via clássica"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Liberação de granzimas e perforinas"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Formação de imunocomplexos"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Liberação de histamina e leucotrienos"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-028",
+      "label": "28",
+      "sectionId": "objetivas",
+      "category": "Mecanismos de Apoptose Celular",
+      "statement": [
+        {
+          "type": "text",
+          "text": "28) Na resposta imune mediada por células T citotóxicas, a liberação de granzimas tem como finalidade principal:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " As granzimas B penetram nas células-alvo e clavam pro-caspases, desencadeando a cascata enzimática programada da apoptose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (C):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A ativação direta das caspases induz a morte celular por apoptose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: Granzimas são proteases líticas e não antioxidantes."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• B: O modo de morte controlado induzido por células T CD8+ é a apoptose."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: A sua função citotóxica final é a eliminação programada do alvo."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Mecanismos de Apoptose Celular"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Agir como agentes antioxidantes"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Induzir necrose nos alvos celulares"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Induzir apoptose mediada por caspases"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Estimular expressão de moléculas de adesão"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-029",
+      "label": "29",
+      "sectionId": "objetivas",
+      "category": "Sarcoidose e Perfil de Citocinas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "29) Uma mulher de 28 anos apresenta sarcoidose pulmonar. A análise citométrica de fluxo de células T isoladas dos alvéolos e do interstício pulmonar revela a presença de um grande número de células T auxiliares (Th1). Sabe-se que essas células secretam qual das seguintes substâncias?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " O perfil de diferenciação T auxiliar 1 (Th1) caracteriza-se pela produção e secreção ativas das citocinas carro-chefe Interleucina-2 (IL-2) e Interferon-gama (IFN-γ)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " IL-2 e IFN-γ são os mediadores protéicos característicos de células Th1."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: C5a é uma anafilatoxina clavada no plasma."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: IL-8 atrai neutrófilos e TGF-β é produzido por Tregs/M2."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Leucotrienos são eicosanoides lipídicos liberados por mastócitos/granulócitos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Sarcoidose e Perfil de Citocinas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. Componente do complemento C5A"
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. Interleucina-2 (IL-2) e interferon-γ"
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. IL-8 e fator de crescimento transformador-β"
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Leucotrienos C4 e C5"
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "patologia-b3-2025-objetivas-030",
+      "label": "30",
+      "sectionId": "objetivas",
+      "category": "Eritroblastose Fetal e Imunoglobulinas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "30) Uma gestante Rh-negativa possui histórico de sensibilização em gestação anterior. No terceiro trimestre atual, ultrassonografia fetal evidencia hidropisia (edema geral do feto). A amniocentese revela níveis elevados de bilirrubina fetal. O hemograma do feto apresenta hemoglobina de 6,0 g/dL e reticulócitos aumentados. O teste direto de Coombs no recém-nascido (RN) apresenta resultado positivo confirmando anemia hemolítica. Com base nesse quadro, qual mecanismo imunológico é o principal responsável pela anemia fetal/neonatal neste caso?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Mini-resumo:"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " A Doença Hemolítica do Recém-Nascido decorre da passagem transplacentária de anticorpos IgG maternos anti-Rh(D). As IgG opsonizam as hemácias Rh-positivas do feto, que são posteriormente fagocitadas pelos macrófagos do baço fetal (Hipersensibilidade Tipo II)."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Justificativa da alternativa correta (B):"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " Apenas IgG atravessa a placenta, opsonizando hemácias fetais para fagocitose pelo baço do feto."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "b",
+          "children": [
+            {
+              "type": "text",
+              "text": "Análise das incorretas:"
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• A: IgM é um pentâmero grande que não ultrapassa a barreira placentária."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• C: Trata-se de hipersensibilidade do tipo II e não tipo III."
+        },
+        {
+          "type": "element",
+          "tag": "br",
+          "children": []
+        },
+        {
+          "type": "text",
+          "text": "• D: Células NK maternas não cruzam a barreira placentária."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Eritroblastose Fetal e Imunoglobulinas"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. IgM materno atravessando a placenta e ativando o complemento fetal."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "B. IgG materno atravessando a placenta e promovendo opsonização e fagocitose esplênica das hemácias fetais."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "C. Reação imune do tipo III no fígado fetal levando à hemólise."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "D. Citotoxicidade celular mediada por células NK maternas que cruzam a barreira placentária."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    }
+  ]
+}

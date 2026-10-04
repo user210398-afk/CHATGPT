@@ -26,7 +26,7 @@ Todos os enunciados/categorias/opções/gabaritos/modelos permanecem na ordem or
 | `simulados/micro-b4-Simulado 2024.html` | `data/exams/micro-b4-2024.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | OK — schema + DOM integral |
 | `simulados/micro-b4-Simulado 2025.html` | `data/exams/micro-b4-2025.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | OK — schema + DOM integral |
 | `simulados/parasito-b4-Simulado 2025.html` | `data/exams/parasito-b4-2025.json` | objetiva simples; conteúdo rico | 31 | 31 | 0 | OK — schema + DOM integral |
-| `simulados/patologia-b3-Simulado-2025.html` | `data/exams/patologia-b3-2025.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | Pendente |
+| `simulados/patologia-b3-Simulado-2025.html` | `data/exams/patologia-b3-2025.json` | objetiva simples; conteúdo rico | 30 | 30 | 0 | OK — schema + DOM integral |
 | `simulados/propedeu-p2-Simulado 2024.html` | `data/exams/propedeu-p2-2024.json` | objetiva simples; conteúdo rico | 20 | 20 | 0 | Pendente |
 | `simulados/propedeu-p2-Simulado 2025.html` | `data/exams/propedeu-p2-2025.json` | objetiva simples; conteúdo rico | 20 | 20 | 0 | Pendente |
 
