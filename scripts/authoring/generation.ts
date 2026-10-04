@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { link, readFile } from 'node:fs/promises';
+import { link, lstat, readFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import { z } from 'zod';
@@ -152,21 +152,14 @@ export async function generate(
   });
 }
 
-// Re-read the original source locally: import never trusts a caller-supplied hash.
-export async function importGeneration(
-  root: string,
-  input: { result: string; export: string; file: string },
-  dependencies: Pick<GenerationDependencies, 'publish'> = {},
-) {
-  const manifest = exportManifestSchema.parse(await readJson(input.export));
+// Shared read-only export contract, also used by the workflow status command.
+export async function validateExport(file: string) {
+  const manifest = exportManifestSchema.parse(await readJson(file));
   const { integritySha256, ...unsigned } = manifest;
   assert.equal(digest(json(unsigned)), integritySha256, 'Export manifest integrity inválida');
-  const local = await readSource(input.file);
-  assert.ok(
-    isDeepStrictEqual(local.source, manifest.source),
-    'Fonte/config/hash do export divergentes',
-  );
-  const directory = dirname(input.export);
+  const directory = dirname(file);
+  for (const name of ['prompt.md', 'schema.json'])
+    assert.ok((await lstat(join(directory, name))).isFile(), 'Export exige arquivos regulares');
   const prompt = await readFile(join(directory, 'prompt.md'), 'utf8');
   const schema = await readFile(join(directory, 'schema.json'), 'utf8');
   assert.equal(digest(prompt), manifest.promptSha256, 'Export prompt hash divergente');
@@ -177,6 +170,21 @@ export async function importGeneration(
     'Export prompt/config incompatível com versão atual',
   );
   assert.equal(schema, json(generationJsonSchema()), 'Export schema incompatível com versão atual');
+  return manifest;
+}
+
+// Re-read the original source locally: import never trusts a caller-supplied hash.
+export async function importGeneration(
+  root: string,
+  input: { result: string; export: string; file: string },
+  dependencies: Pick<GenerationDependencies, 'publish'> = {},
+) {
+  const manifest = await validateExport(input.export);
+  const local = await readSource(input.file);
+  assert.ok(
+    isDeepStrictEqual(local.source, manifest.source),
+    'Fonte/config/hash do export divergentes',
+  );
   const id = manifest.request.examId;
   await assertAvailable(root, id);
   const artifacts = mapGeneration(
