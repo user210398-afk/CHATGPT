@@ -1,0 +1,32 @@
+{
+  "authoringVersion": 1,
+  "examId": "farmacologia-anti-hipertensivos-teste-2026",
+  "status": "approved",
+  "source": {
+    "fileName": "Anti-hipertensivos.pdf",
+    "sha256": "a99871fba87b91f6b139f62e4196a83785fa95315eece160dcdd4c4e6ad94b95"
+  },
+  "generation": {
+    "mode": "ai-assisted",
+    "provider": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1"
+  },
+  "requirements": {
+    "objectiveCount": 10,
+    "essayCount": 2,
+    "optionsPerObjective": 5
+  },
+  "checks": {
+    "sourceCoverageReviewed": true,
+    "answerKeyReviewed": true,
+    "explanationsReviewed": true,
+    "duplicateCheckReviewed": true
+  },
+  "reviewedBy": "ChatGPT",
+  "notes": [
+    "Schema válido não garante correção acadêmica. Source anchors auxiliam revisão, sem garantia factual.",
+    "Pré-revisão assistida por IA das 12 questões realizada exclusivamente com o PDF original; candidate atualizado para revision 2, com correções nas objetivas 3, 4 e 10. Generation record e source anchors originais preservados. Revisão humana continua obrigatória; status draft, checks false e reviewedBy null mantidos.",
+    "Aprovação final realizada pelo revisor humano após a pré-revisão assistida, conforme declaração explícita comunicada pelo usuário."
+  ]
+}

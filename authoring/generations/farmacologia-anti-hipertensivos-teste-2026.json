@@ -1,0 +1,173 @@
+{
+  "generationVersion": 1,
+  "examId": "farmacologia-anti-hipertensivos-teste-2026",
+  "source": {
+    "fileName": "Anti-hipertensivos.pdf",
+    "sha256": "a99871fba87b91f6b139f62e4196a83785fa95315eece160dcdd4c4e6ad94b95",
+    "sizeBytes": 1309952
+  },
+  "request": {
+    "examId": "farmacologia-anti-hipertensivos-teste-2026",
+    "subject": "Farmacologia Básica",
+    "year": null,
+    "division": "2º ano de Medicina — Anti-hipertensivos",
+    "title": "Farmacologia dos Anti-hipertensivos — teste de geração",
+    "language": "pt-BR",
+    "objectiveCount": 10,
+    "essayCount": 2,
+    "optionsPerObjective": 5,
+    "difficulty": {
+      "easy": 0.2,
+      "medium": 0.6,
+      "hard": 0.2
+    },
+    "focusTopics": [
+      "determinantes e regulação da pressão arterial",
+      "regulação simpática e simpatolíticos",
+      "bloqueadores de canais de cálcio",
+      "vasodilatadores diretos",
+      "sistema renina-angiotensina-aldosterona e seus inibidores"
+    ],
+    "excludeTopics": [],
+    "allowExternalKnowledge": false
+  },
+  "provider": {
+    "name": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1",
+    "detail": "low"
+  },
+  "response": {
+    "id": null,
+    "usage": null
+  },
+  "coverage": {
+    "topicsDetected": [
+      "determinantes da pressão arterial",
+      "hipertensão arterial sistêmica",
+      "tratamento não farmacológico",
+      "regulação simpática da pressão arterial",
+      "betabloqueadores",
+      "antagonistas alfa-adrenérgicos",
+      "simpatolíticos de ação central",
+      "bloqueadores de canais de cálcio",
+      "vasodilatadores diretos",
+      "sistema renina-angiotensina-aldosterona",
+      "IECA",
+      "BRA",
+      "inibidor direto de renina",
+      "diuréticos"
+    ],
+    "topicsUsed": [
+      "determinantes e regulação da pressão arterial",
+      "regulação simpática e simpatolíticos",
+      "bloqueadores de canais de cálcio",
+      "vasodilatadores diretos",
+      "sistema renina-angiotensina-aldosterona e seus inibidores"
+    ],
+    "topicsSkipped": [
+      "tratamento não farmacológico",
+      "definição e classificação da hipertensão arterial sistêmica",
+      "diuréticos"
+    ]
+  },
+  "insufficiency": {
+    "detected": false,
+    "reason": null
+  },
+  "difficultyCounts": {
+    "easy": 3,
+    "medium": 7,
+    "hard": 2
+  },
+  "questions": [
+    {
+      "questionId": "objetivas-001",
+      "sourceAnchors": [
+        "Página 5: PA = DC x RVP.",
+        "Página 6: DC = VS x FC."
+      ]
+    },
+    {
+      "questionId": "objetivas-002",
+      "sourceAnchors": [
+        "Página 20: beta1 no rim — renina — SRAA.",
+        "Página 21: integração simpática com aumento da PA."
+      ]
+    },
+    {
+      "questionId": "objetivas-003",
+      "sourceAnchors": [
+        "Página 26: classificação dos betabloqueadores e carvedilol como terceira geração/vasodilatador.",
+        "Página 45: questão de revisão sobre o betabloqueador com ação vasodilatadora."
+      ]
+    },
+    {
+      "questionId": "objetivas-004",
+      "sourceAnchors": [
+        "Página 32: betabloqueadores podem mascarar sinais e sintomas de hipoglicemia e há risco de broncoconstrição em asmáticos.",
+        "Página 33: broncoconstrição e alterações glicêmicas associadas ao propranolol."
+      ]
+    },
+    {
+      "questionId": "objetivas-005",
+      "sourceAnchors": [
+        "Página 35: alfa1 associado à vasoconstrição.",
+        "Página 36: antagonismo alfa1 associado à vasodilatação e redução da RVP."
+      ]
+    },
+    {
+      "questionId": "objetivas-006",
+      "sourceAnchors": [
+        "Página 42: clonidina e alfametildopa como agonistas alfa2 de ação pré-sináptica.",
+        "Página 43: alfametildopa indicada em pré-eclâmpsia e outras hipertensões na gravidez."
+      ]
+    },
+    {
+      "questionId": "objetivas-007",
+      "sourceAnchors": [
+        "Páginas 47 a 49: classificação e efeitos hemodinâmicos dos bloqueadores de canais de cálcio.",
+        "Página 50: indicações de diidropiridinas, verapamil e diltiazem.",
+        "Página 51: efeitos adversos de diidropiridinas e de verapamil/diltiazem."
+      ]
+    },
+    {
+      "questionId": "objetivas-008",
+      "sourceAnchors": [
+        "Página 57: nitroprussiato indicado em emergência hipertensiva e IC aguda ou descompensada.",
+        "Página 58: proteção da luz, bomba de infusão e risco de intoxicação por cianeto.",
+        "Página 59: intoxicação por cianeto entre as reações adversas."
+      ]
+    },
+    {
+      "questionId": "objetivas-009",
+      "sourceAnchors": [
+        "Páginas 65 a 71: efeitos da angiotensina II em receptores AT1, incluindo vasoconstrição, reabsorção de Na+, ativação simpática, aldosterona e ADH."
+      ]
+    },
+    {
+      "questionId": "objetivas-010",
+      "sourceAnchors": [
+        "Página 76: IECA — tosse seca e angioedema devido ao aumento de bradicinina; hipercalemia e contraindicação na gestação.",
+        "Páginas 80 e 81: BRA — hipotensão, hipercalemia, vantagem de não causar tosse nem angioedema e contraindicação na gestação."
+      ]
+    },
+    {
+      "questionId": "dissertativas-001",
+      "sourceAnchors": [
+        "Páginas 5 e 6: determinantes PA = DC x RVP e DC = VS x FC.",
+        "Páginas 17 a 24: regulação neural simpática sobre coração, vasos e rim.",
+        "Páginas 65 a 71: efeitos do SRAA sobre vasos, sódio, simpático, aldosterona e ADH."
+      ]
+    },
+    {
+      "questionId": "dissertativas-002",
+      "sourceAnchors": [
+        "Páginas 72 a 76: IECA, exemplos, indicações, tosse, angioedema, hipercalemia e gestação.",
+        "Páginas 77 a 81: BRA, exemplos, indicações, efeitos adversos e vantagem em relação a tosse/angioedema.",
+        "Páginas 82 a 85: inibidor direto de renina, alisquireno, indicação, hipotensão, hipercalemia e gestação."
+      ]
+    }
+  ],
+  "createdAt": "2026-10-04T19:43:11.142Z"
+}
