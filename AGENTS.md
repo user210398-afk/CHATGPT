@@ -22,3 +22,7 @@
 20. Promoção exige comando local explícito e `--confirm PROMOVER`; suporta somente adição. Revisão/substituição de prova existente não é autorizada na 6A.
 21. Nenhuma geração automática faz merge ou deploy. Promoção não faz git/PR/deploy. Manter Content Gate read-only e deploy manual separado.
 22. A Fase 6A não chama IA/API, não adiciona serviço/segredo/dependência e não altera UI, engine, conteúdo acadêmico existente ou Pages. Ver `docs/CONTENT_AUTHORING.md`.
+23. Fase 6B: IA gera candidate, nunca aprovação. Toda prova assistida exige revisão humana de fonte, gabaritos, explicações e respostas-modelo. JSON Schema válido não equivale à correção acadêmica; source anchors auxiliam auditoria, sem garantia factual.
+24. Preservar a fonte acadêmica e rastrear a geração ao SHA-256 local. Não inventar conteúdo sem suporte, doses, valores ou diretrizes. Conhecimento externo exige permissão explícita na configuração e registro transparente.
+25. `author:generate` usa export offline por padrão; mock é neutro/determinístico. OpenAI é opcional, exclusivamente OPENAI_API_KEY por ambiente, `--confirm ENVIAR`, store:false, sem tools/web search, zero retry e timeout. Não executar chamada live durante engenharia/testes nem em CI.
+26. Reutilizar schema/validação/gate da 6A. Artefatos 6B usam `exam-generation-v1` e exigem generation record íntegro. Nenhuma geração promove, altera data/exams, engine/UI, abre PR de conteúdo, faz merge ou deploy. Não persistir source bruto, Base64, reasoning, resposta HTTP, caminhos absolutos ou segredos. Ver `docs/AI_GENERATION.md`.
