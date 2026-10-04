@@ -167,17 +167,23 @@ com restauração síncrona simples e ampla compatibilidade. `AttemptRepository`
 recebe um adaptador substituível e concentra todas as operações de tentativa.
 Uma evolução para IndexedDB não precisa alterar renderers nem transições.
 
-- Envelope `storageVersion: 1`, namespace
-  `chatgpt-exams:v1:<examId>:r<revision>`.
-- `current` contém a tentativa atual; `history` contém até 20 tentativas completas
-  por prova/revisão, deduplicadas pelo ID da tentativa. As mais antigas saem ao
-  exceder o limite. Iniciar nova tentativa preserva o histórico.
-- Uma única gravação por interação atualiza estado e histórico atomicamente.
-  O progresso é derivado das respostas persistidas, evitando contadores divergentes.
-- Restauração valida estrutura, IDs, opções, limites, revisão, datas e recalcula o
-  resultado para conferir consistência. Dados antigos ou corrompidos abrem uma
-  sessão nova com aviso, sem quebrar a aplicação. O valor inválido fica intacto
-  até a próxima interação que consiga gravar.
+- Envelope `storageVersion: 2` sob o namespace já existente
+  `chatgpt-exams:v1:<examId>:r<revision>`. A chave principal guarda somente
+  `current`; a chave `:history` guarda até 20 resumos concluídos (ID, início,
+  conclusão e resultado). Respostas longas não são duplicadas no histórico.
+- Digitação dissertativa atualiza a interface imediatamente e aguarda 500 ms de
+  inatividade antes de gravar. Navegação, marcação, finalização e saída da página
+  gravam a tentativa pendente imediatamente. O histórico só é regravado quando
+  uma conclusão nova entra ou quando precisa ser migrado/reparado.
+- Iniciar nova tentativa preserva os 20 resumos mais recentes. Uma falha entre
+  as duas escritas pode deixar o histórico atrasado; a restauração recompõe o
+  resumo da tentativa concluída a partir de `current` e tenta repará-lo na
+  próxima gravação. O progresso é derivado das respostas persistidas.
+- Envelopes v1 da própria Fase 2 são lidos e migrados na próxima escrita,
+  preservando tentativa e histórico. Restauração valida estrutura, IDs, opções,
+  limites, revisão e datas, e recalcula o resultado da tentativa atual. Um
+  histórico separado corrompido não impede restaurar a tentativa atual. Dados
+  incompatíveis abrem uma sessão nova com aviso, sem quebrar a aplicação.
 - Falhas de leitura/quota/permissão mostram aviso e mantêm o uso em memória.
   Sem gravação, fechar/recarregar perde mudanças da sessão.
 - Preferências têm chave separada `chatgpt-exams:preferences:v1`; tema segue o

@@ -9,7 +9,7 @@ import { QuestionRenderer } from '../questions/QuestionRenderer';
 import { Results } from '../results/Results';
 import { QuestionNavigation } from './QuestionNavigation';
 export function ExamPage({ exam }: { exam: Exam }) {
-  const { current, history, restored, warning, dispatch, restart } = useExamSession(exam);
+  const { current, history, restored, warning, saving, dispatch, restart } = useExamSession(exam);
   const [review, setReview] = useState(false);
   const [confirmFinish, setConfirmFinish] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -131,9 +131,11 @@ export function ExamPage({ exam }: { exam: Exam }) {
               {!finished && (
                 <section className="card finish-card">
                   <p className="save-status">
-                    {warning
-                      ? 'Salvamento local indisponível'
-                      : '✓ Progresso salvo neste navegador'}
+                    {saving
+                      ? 'Salvando resposta…'
+                      : warning
+                        ? 'Salvamento local indisponível'
+                        : '✓ Progresso salvo neste navegador'}
                   </p>
                   {confirmFinish ? (
                     <div role="region" aria-label="Confirmar finalização">

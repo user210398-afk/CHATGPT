@@ -1,4 +1,6 @@
+import { useEffect, useRef } from 'react';
 import type { Attempt } from '../../engine/exam-state';
+import type { HistoryEntry } from '../../engine/persistence';
 export function Results({
   attempt,
   history,
@@ -6,16 +8,22 @@ export function Results({
   onRestart,
 }: {
   attempt: Attempt;
-  history: Attempt[];
+  history: HistoryEntry[];
   onReview: () => void;
   onRestart: () => void;
 }) {
+  const heading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    heading.current?.focus();
+  }, []);
   const result = attempt.result;
   if (!result) return null;
   return (
     <section className="card results" aria-labelledby="results-title">
       <p className="eyebrow">TENTATIVA CONCLUÍDA</p>
-      <h2 id="results-title">Seu resultado</h2>
+      <h2 id="results-title" ref={heading} tabIndex={-1}>
+        Seu resultado
+      </h2>
       <div className="score">
         {result.percentage === null ? 'Sem nota automática' : `${result.percentage}%`}
       </div>

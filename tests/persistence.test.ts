@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { AttemptRepository, storageKey } from '../src/engine/persistence';
+import { AttemptRepository, historyStorageKey, storageKey } from '../src/engine/persistence';
 import { createAttempt, transition } from '../src/engine/exam-state';
 import { poc, first, firstEssay } from './fixtures';
 const repository = () => new AttemptRepository(() => localStorage);
@@ -20,10 +20,20 @@ describe('persistência isolada e versionada', () => {
     state = transition(poc, state, { type: 'finish', now: '2026-10-03T10:20:00.000Z' });
     const saved = repo.save(poc, state, []);
     repo.save(poc, state, saved.history);
-    expect(repo.load(poc).history).toEqual([state]);
+    expect(repo.load(poc).history).toEqual([
+      {
+        id: state.id,
+        startedAt: state.startedAt,
+        completedAt: state.completedAt,
+        result: state.result,
+      },
+    ]);
     const next = createAttempt(poc);
     repo.save(poc, next, saved.history);
-    expect(repo.load(poc)).toMatchObject({ current: next, history: [state] });
+    expect(repo.load(poc)).toMatchObject({
+      current: next,
+      history: [{ id: state.id, result: state.result }],
+    });
   });
   it.each(['{bad', '{}', '{"storageVersion":0}'])(
     'sobrevive a estado corrompido/antigo: %s',
@@ -75,5 +85,85 @@ describe('persistência isolada e versionada', () => {
     });
     expect(repo.load(poc).warning).toBeTruthy();
     expect(repo.save(poc, createAttempt(poc), []).warning).toBeTruthy();
+  });
+  it('grava histórico compacto uma vez e não o regrava na navegação ou resposta', () => {
+    const values = new Map<string, string>();
+    const writes: string[] = [];
+    const repo = new AttemptRepository(() => ({
+      getItem: (key) => values.get(key) ?? null,
+      setItem: (key, value) => {
+        writes.push(key);
+        values.set(key, value);
+      },
+    }));
+    let current = createAttempt(poc, '2026-10-03T10:00:00.000Z');
+    current = transition(poc, current, {
+      type: 'answer',
+      questionId: firstEssay.id,
+      value: 'Texto longo',
+    });
+    current = transition(poc, current, { type: 'finish', now: '2026-10-03T10:10:00.000Z' });
+    const saved = repo.save(poc, current, []);
+    expect(writes).toEqual([storageKey(poc), historyStorageKey(poc)]);
+    expect(values.get(historyStorageKey(poc))).not.toContain('Texto longo');
+    expect(JSON.parse(values.get(historyStorageKey(poc))!).history[0]).toEqual({
+      id: current.id,
+      startedAt: current.startedAt,
+      completedAt: current.completedAt,
+      result: current.result,
+    });
+    repo.save(poc, transition(poc, current, { type: 'navigate', index: 1 }), saved.history);
+    expect(writes).toEqual([storageKey(poc), historyStorageKey(poc), storageKey(poc)]);
+    expect(repo.load(poc).history).toHaveLength(1);
+  });
+  it('restaura envelope v1 e migra sem perder a tentativa ou histórico', () => {
+    const current = createAttempt(poc, '2026-10-03T10:00:00.000Z');
+    const completed = transition(poc, current, { type: 'finish', now: '2026-10-03T10:10:00.000Z' });
+    localStorage.setItem(
+      storageKey(poc),
+      JSON.stringify({ storageVersion: 1, current, history: [completed] }),
+    );
+    const repo = repository();
+    const loaded = repo.load(poc);
+    expect(loaded).toMatchObject({ restored: true, current, history: [{ id: completed.id }] });
+    repo.save(poc, loaded.current, loaded.history);
+    expect(JSON.parse(localStorage.getItem(storageKey(poc))!).storageVersion).toBe(2);
+    expect(JSON.parse(localStorage.getItem(historyStorageKey(poc))!).history).toHaveLength(1);
+    expect(repository().load(poc)).toMatchObject({
+      restored: true,
+      current,
+      history: [{ id: completed.id }],
+    });
+  });
+  it('preserva a tentativa quando o histórico separado está corrompido', () => {
+    const repo = repository();
+    const current = createAttempt(poc);
+    repo.save(poc, current, []);
+    localStorage.setItem(historyStorageKey(poc), '{corrompido');
+    expect(repository().load(poc)).toMatchObject({
+      restored: true,
+      current,
+      history: [],
+      warning: expect.any(String),
+    });
+  });
+  it('recupera conclusão ausente do histórico antes de iniciar outra tentativa', () => {
+    const current = createAttempt(poc, '2026-10-03T10:00:00.000Z');
+    const completed = transition(poc, current, { type: 'finish', now: '2026-10-03T10:10:00.000Z' });
+    localStorage.setItem(
+      storageKey(poc),
+      JSON.stringify({ storageVersion: 2, current: completed }),
+    );
+    localStorage.setItem(
+      historyStorageKey(poc),
+      JSON.stringify({ storageVersion: 2, history: [] }),
+    );
+    const repo = repository();
+    const loaded = repo.load(poc);
+    expect(loaded.history.map((entry) => entry.id)).toEqual([completed.id]);
+    repo.save(poc, createAttempt(poc), loaded.history);
+    expect(JSON.parse(localStorage.getItem(historyStorageKey(poc))!).history[0].id).toBe(
+      completed.id,
+    );
   });
 });
