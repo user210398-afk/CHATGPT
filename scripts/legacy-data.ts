@@ -44,14 +44,14 @@ export function extractArray(html: string, name: string): unknown[] {
   return value;
 }
 const common = { num: z.number(), category: z.string(), statement: z.string() };
-const objective = z.object({
+const objective = z.strictObject({
   ...common,
   type: z.literal('objective'),
   options: z.array(z.string()),
   correct: z.number().int(),
   context: z.string(),
 });
-const essay = z.object({
+const essay = z.strictObject({
   ...common,
   type: z.literal('dissertative'),
   gabarito: z.string(),
