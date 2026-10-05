@@ -24,6 +24,7 @@ export type ExamProgressSummary = {
   progressPercentage: number;
   attemptCount: number;
   lastResultPercentage: number | null;
+  lastResultAt: string | null;
   bestResultPercentage: number | null;
   lastActivityAt: string | null;
 };
@@ -32,7 +33,7 @@ const legacyReaderSchema = previousEnvelopeSchema.extend({ history: z.unknown() 
 const historyReaderSchema = historyEnvelopeSchema.extend({
   history: z.array(z.unknown()).max(HISTORY_LIMIT),
 });
-function isCatalogResultConsistent(exam: CatalogExam, result: Result): boolean {
+export function isCatalogResultConsistent(exam: CatalogExam, result: Result): boolean {
   return (
     result.objectiveTotal === exam.objectiveCount &&
     result.essayTotal === exam.essayCount &&
@@ -129,6 +130,7 @@ export function readExamProgress(
         exam.questionCount > 0 ? Math.round((count / exam.questionCount) * 100) : 0,
       attemptCount: history.length,
       lastResultPercentage: scored[0]?.result.percentage ?? null,
+      lastResultAt: scored[0]?.completedAt ?? null,
       bestResultPercentage: scored.length
         ? Math.max(...scored.map((entry) => entry.result.percentage!))
         : null,

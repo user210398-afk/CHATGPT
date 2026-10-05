@@ -67,7 +67,9 @@ de acertos.
 
 O histórico aceita somente entradas válidas, deduplica por ID e usa
 `includeCurrent` da persistência para incluir uma conclusão ainda não gravada
-em history, respeitando o limite existente de 20. Entradas inválidas são
+em history. A deduplicação e a ordenação por conclusão precedem o limite de 20:
+somente as 20 conclusões temporalmente mais recentes permanecem; um current
+concluído antigo não desloca entradas posteriores. Entradas inválidas são
 ignoradas em memória; nenhuma reparação é escrita. O current válido continua
 legível mesmo que o histórico separado ou o histórico embutido v1 esteja
 corrompido. Havendo registros v1 e history v2 do mesmo ID, o history v2 prevalece;
