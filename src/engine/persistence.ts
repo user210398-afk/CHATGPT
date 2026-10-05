@@ -12,22 +12,22 @@ export interface StorageAdapter {
   getItem(key: string): string | null;
   setItem(key: string, value: string): void;
 }
-const HISTORY_LIMIT = 20;
-const historyEntrySchema = z.strictObject({
+export const HISTORY_LIMIT = 20;
+export const historyEntrySchema = z.strictObject({
   id: z.string().min(1),
   startedAt: z.iso.datetime(),
   completedAt: z.iso.datetime(),
   result: resultSchema,
 });
-const currentEnvelopeSchema = z.strictObject({
+export const currentEnvelopeSchema = z.strictObject({
   storageVersion: z.literal(2),
   current: attemptSchema,
 });
-const historyEnvelopeSchema = z.strictObject({
+export const historyEnvelopeSchema = z.strictObject({
   storageVersion: z.literal(2),
   history: z.array(historyEntrySchema).max(HISTORY_LIMIT),
 });
-const previousEnvelopeSchema = z.strictObject({
+export const previousEnvelopeSchema = z.strictObject({
   storageVersion: z.literal(1),
   current: attemptSchema,
   history: z.array(attemptSchema).max(HISTORY_LIMIT),
@@ -39,13 +39,13 @@ export interface Session {
   warning: string | null;
   restored: boolean;
 }
-export function storageKey(exam: Exam): string {
+export function storageKey(exam: Pick<Exam, 'id' | 'revision'>): string {
   return `chatgpt-exams:v1:${exam.id}:r${exam.revision}`;
 }
-export function historyStorageKey(exam: Exam): string {
+export function historyStorageKey(exam: Pick<Exam, 'id' | 'revision'>): string {
   return `${storageKey(exam)}:history`;
 }
-function summary(attempt: Attempt): HistoryEntry {
+export function summary(attempt: Attempt): HistoryEntry {
   if (!attempt.completedAt || !attempt.result)
     throw new Error('Histórico requer tentativa concluída');
   return {
@@ -61,7 +61,7 @@ function validHistory(history: HistoryEntry[]): boolean {
     history.every((item) => Date.parse(item.completedAt) >= Date.parse(item.startedAt))
   );
 }
-function includeCurrent(current: Attempt, history: HistoryEntry[]): HistoryEntry[] {
+export function includeCurrent(current: Attempt, history: HistoryEntry[]): HistoryEntry[] {
   return current.completedAt
     ? [summary(current), ...history.filter((item) => item.id !== current.id)].slice(
         0,
