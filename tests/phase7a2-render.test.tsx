@@ -1,3 +1,4 @@
+import { storageFixtureJson } from './legacy-fixtures';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { act, fireEvent, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -52,7 +53,7 @@ describe('dashboard renderizado', () => {
     render(<DashboardPage catalog={testCatalog} />);
     localStorage.setItem(
       storageKey(poc),
-      JSON.stringify({ storageVersion: 2, current: completedAttempt() }),
+      storageFixtureJson({ storageVersion: 2, current: completedAttempt() }),
     );
     fireEvent(window, new Event('pageshow'));
     expect(document.querySelector('.recent-list')).toHaveTextContent('Concluída · 5%');
@@ -157,16 +158,18 @@ describe('configurações e primeiro uso opcional', () => {
     render(<SettingsFixture />);
     const input = {
       format: 'medsim-backup',
-      version: 1,
+      version: 2,
       exportedAt: '2026-10-04T12:00:00.000Z',
       exams: [
         {
           examId: poc.id,
           revision: 1,
           current: null,
+          reviewAttempts: [],
           history: [
             {
               id: 'old',
+              mode: 'exam',
               startedAt: '2026-10-03T10:00:00.000Z',
               completedAt: '2026-10-03T11:00:00.000Z',
               result: completedAttempt().result,
@@ -177,8 +180,8 @@ describe('configurações e primeiro uso opcional', () => {
       catalogPreferences: { storageVersion: 1, favorites: [poc.id] },
       uiPreferences: defaultUiPreferences,
     };
-    const file = new File([JSON.stringify(input)], 'backup.json', { type: 'application/json' });
-    Object.defineProperty(file, 'text', { value: async () => JSON.stringify(input) });
+    const file = new File([storageFixtureJson(input)], 'backup.json', { type: 'application/json' });
+    Object.defineProperty(file, 'text', { value: async () => storageFixtureJson(input) });
     fireEvent.change(screen.getByLabelText('Importar progresso'), { target: { files: [file] } });
     await screen.findByRole('heading', { name: 'Prévia da importação' });
     expect(localStorage.length).toBe(0);
@@ -215,7 +218,7 @@ describe('rotas e shell', () => {
     window.history.replaceState({}, '', dashboardUrl());
     vi.stubGlobal(
       'fetch',
-      vi.fn(async () => new Response(JSON.stringify(testCatalog))),
+      vi.fn(async () => new Response(storageFixtureJson(testCatalog))),
     );
     render(<App />);
     await screen.findByRole('heading', { name: 'Meu desempenho' });
@@ -224,11 +227,11 @@ describe('rotas e shell', () => {
     expect(nav.getByRole('link', { name: 'Catálogo' })).not.toHaveAttribute('aria-current');
   });
   it('atalho de tema sai de system para oposto efetivo e preserva legacy', async () => {
-    localStorage.setItem(legacyThemeKey, JSON.stringify({ version: 1, theme: 'dark' }));
+    localStorage.setItem(legacyThemeKey, storageFixtureJson({ version: 1, theme: 'dark' }));
     window.history.replaceState({}, '', settingsUrl());
     vi.stubGlobal(
       'fetch',
-      vi.fn(async () => new Response(JSON.stringify(testCatalog))),
+      vi.fn(async () => new Response(storageFixtureJson(testCatalog))),
     );
     render(<App />);
     await screen.findByRole('heading', { name: 'Configurações', level: 1 });

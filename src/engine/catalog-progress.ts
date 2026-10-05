@@ -1,11 +1,17 @@
 import { z } from 'zod';
 import type { Catalog } from '../../schema/catalog';
-import { attemptSchema, type Attempt, type Result } from './exam-state';
 import {
-  currentEnvelopeSchema,
+  legacyAttemptSchema,
+  normalizeLegacyAttempt,
+  type Attempt,
+  type Result,
+} from './exam-state';
+import {
+  readableCurrentEnvelopeSchema,
   previousEnvelopeSchema,
   historyEnvelopeSchema,
-  historyEntrySchema,
+  historyV2EnvelopeSchema,
+  readableHistoryEntrySchema,
   HISTORY_LIMIT,
   includeCurrent,
   summary,
@@ -30,9 +36,10 @@ export type ExamProgressSummary = {
 };
 // Reuse envelope contracts, but salvage individual history entries without rewriting storage.
 const legacyReaderSchema = previousEnvelopeSchema.extend({ history: z.unknown() });
-const historyReaderSchema = historyEnvelopeSchema.extend({
-  history: z.array(z.unknown()).max(HISTORY_LIMIT),
-});
+const historyReaderSchema = z.union([
+  historyEnvelopeSchema.extend({ history: z.array(z.unknown()).max(HISTORY_LIMIT) }),
+  historyV2EnvelopeSchema.extend({ history: z.array(z.unknown()).max(HISTORY_LIMIT) }),
+]);
 export function isCatalogResultConsistent(exam: CatalogExam, result: Result): boolean {
   return (
     result.objectiveTotal === exam.objectiveCount &&
@@ -51,6 +58,13 @@ function matchingAttempt(exam: CatalogExam, attempt: Attempt): boolean {
     attempt.examId === exam.id &&
     attempt.examRevision === exam.revision &&
     attempt.currentIndex < exam.questionCount &&
+    (attempt.mode !== 'exam' || attempt.confirmedQuestionIds.length === 0) &&
+    attempt.confirmedQuestionIds.every((id) => Boolean(attempt.answers[id]?.trim())) &&
+    (!attempt.completedAt ||
+      attempt.mode !== 'study' ||
+      Object.entries(attempt.answers).every(
+        ([id, answer]) => !answer.trim() || attempt.confirmedQuestionIds.includes(id),
+      )) &&
     new Set(attempt.flagged).size === attempt.flagged.length &&
     Boolean(attempt.completedAt) === Boolean(attempt.result) &&
     (!attempt.completedAt || Date.parse(attempt.completedAt) >= Date.parse(attempt.startedAt)) &&
@@ -60,7 +74,12 @@ function matchingAttempt(exam: CatalogExam, attempt: Attempt): boolean {
 export function readExamProgress(
   exam: CatalogExam,
   storage: () => Pick<StorageAdapter, 'getItem'> = () => window.localStorage,
-): { progress: ExamProgressSummary; unavailable: boolean } {
+): {
+  progress: ExamProgressSummary;
+  unavailable: boolean;
+  includesStudy: boolean;
+  includesExam: boolean;
+} {
   let current: Attempt | null = null;
   let history: HistoryEntry[] = [];
   let legacyHistory: unknown = [];
@@ -69,9 +88,13 @@ export function readExamProgress(
     const raw = storage().getItem(storageKey(exam));
     if (raw) {
       const value: unknown = JSON.parse(raw);
-      const v2 = currentEnvelopeSchema.safeParse(value);
+      const v2 = readableCurrentEnvelopeSchema.safeParse(value);
       const v1 = legacyReaderSchema.safeParse(value);
-      const candidate = v2.success ? v2.data.current : v1.success ? v1.data.current : null;
+      const candidate = v2.success
+        ? v2.data.current
+        : v1.success
+          ? normalizeLegacyAttempt(v1.data.current)
+          : null;
       if (candidate && matchingAttempt(exam, candidate)) current = candidate;
       if (v1.success) legacyHistory = v1.data.history;
     }
@@ -81,7 +104,7 @@ export function readExamProgress(
   }
   if (Array.isArray(legacyHistory)) {
     for (const entry of legacyHistory.slice(0, HISTORY_LIMIT)) {
-      const parsed = attemptSchema.safeParse(entry);
+      const parsed = legacyAttemptSchema.transform(normalizeLegacyAttempt).safeParse(entry);
       if (parsed.success && parsed.data.completedAt && matchingAttempt(exam, parsed.data))
         history.push(summary(parsed.data));
     }
@@ -91,7 +114,7 @@ export function readExamProgress(
     const parsed = raw ? historyReaderSchema.safeParse(JSON.parse(raw)) : null;
     if (parsed?.success) {
       for (const entry of parsed.data.history) {
-        const item = historyEntrySchema.safeParse(entry);
+        const item = readableHistoryEntrySchema.safeParse(entry);
         if (
           item.success &&
           Date.parse(item.data.completedAt) >= Date.parse(item.data.startedAt) &&
@@ -122,6 +145,8 @@ export function readExamProgress(
       .sort((a, b) => Date.parse(b) - Date.parse(a))[0] ?? null;
   return {
     unavailable,
+    includesStudy: current?.mode === 'study' || history.some((entry) => entry.mode === 'study'),
+    includesExam: current?.mode === 'exam' || history.some((entry) => entry.mode === 'exam'),
     progress: {
       status: current ? (current.completedAt ? 'completed' : 'in-progress') : 'not-started',
       answeredCount: count,

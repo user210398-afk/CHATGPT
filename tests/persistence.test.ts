@@ -1,3 +1,4 @@
+import { storageFixtureJson } from './legacy-fixtures';
 import { describe, expect, it } from 'vitest';
 import {
   AttemptRepository,
@@ -34,6 +35,7 @@ describe('persistência isolada e versionada', () => {
         startedAt: state.startedAt,
         completedAt: state.completedAt,
         result: state.result,
+        mode: 'exam',
       },
     ]);
     const next = createAttempt(poc);
@@ -64,14 +66,14 @@ describe('persistência isolada e versionada', () => {
     ]) {
       localStorage.setItem(
         storageKey(poc),
-        JSON.stringify({ storageVersion: 1, current, history: [] }),
+        storageFixtureJson({ storageVersion: 1, current, history: [] }),
       );
       expect(repo.load(poc).restored).toBe(false);
     }
     const finished = transition(poc, fresh, { type: 'finish', now: new Date().toISOString() });
     localStorage.setItem(
       storageKey(poc),
-      JSON.stringify({
+      storageFixtureJson({
         storageVersion: 1,
         current: { ...finished, result: { ...finished.result, correct: 999 } },
         history: [],
@@ -119,6 +121,7 @@ describe('persistência isolada e versionada', () => {
       startedAt: current.startedAt,
       completedAt: current.completedAt,
       result: current.result,
+      mode: 'exam',
     });
     repo.save(poc, transition(poc, current, { type: 'navigate', index: 1 }), saved.history);
     expect(writes).toEqual([storageKey(poc), historyStorageKey(poc), storageKey(poc)]);
@@ -129,13 +132,13 @@ describe('persistência isolada e versionada', () => {
     const completed = transition(poc, current, { type: 'finish', now: '2026-10-03T10:10:00.000Z' });
     localStorage.setItem(
       storageKey(poc),
-      JSON.stringify({ storageVersion: 1, current, history: [completed] }),
+      storageFixtureJson({ storageVersion: 1, current, history: [completed] }),
     );
     const repo = repository();
     const loaded = repo.load(poc);
     expect(loaded).toMatchObject({ restored: true, current, history: [{ id: completed.id }] });
     repo.save(poc, loaded.current, loaded.history);
-    expect(JSON.parse(localStorage.getItem(storageKey(poc))!).storageVersion).toBe(2);
+    expect(JSON.parse(localStorage.getItem(storageKey(poc))!).storageVersion).toBe(3);
     expect(JSON.parse(localStorage.getItem(historyStorageKey(poc))!).history).toHaveLength(1);
     expect(repository().load(poc)).toMatchObject({
       restored: true,
@@ -160,11 +163,11 @@ describe('persistência isolada e versionada', () => {
     const completed = transition(poc, current, { type: 'finish', now: '2026-10-03T10:10:00.000Z' });
     localStorage.setItem(
       storageKey(poc),
-      JSON.stringify({ storageVersion: 2, current: completed }),
+      storageFixtureJson({ storageVersion: 2, current: completed }),
     );
     localStorage.setItem(
       historyStorageKey(poc),
-      JSON.stringify({ storageVersion: 2, history: [] }),
+      storageFixtureJson({ storageVersion: 2, history: [] }),
     );
     const repo = repository();
     const loaded = repo.load(poc);

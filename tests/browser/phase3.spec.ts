@@ -1,3 +1,4 @@
+import { chooseExam } from './attempt-helpers';
 import { test, expect } from '@playwright/test';
 import { readExamCatalog } from '../../scripts/catalog';
 
@@ -33,6 +34,7 @@ test('catálogo atual e loader de cada JSON sem depender do HTML legado', async 
       r.url().endsWith(`/generated/exams/${exam.id}.json`),
     );
     await page.goto(`?exam=${exam.id}`);
+    await chooseExam(page);
     expect(await (await loaded).json()).toEqual(exam);
     await expect(
       page.getByRole('heading', { name: `Questão 1 de ${exam.questions.length}`, exact: true }),
@@ -52,6 +54,7 @@ for (const representative of [
   }, info) => {
     const check = monitor(page);
     await page.goto(`?exam=${representative.id}`);
+    await chooseExam(page);
     await expect(
       page.getByRole('heading', { name: `Questão 1 de ${representative.count}`, exact: true }),
     ).toBeVisible();

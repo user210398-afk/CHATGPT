@@ -1,3 +1,4 @@
+import { storageFixtureJson } from './legacy-fixtures';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
   backupSchema,
@@ -50,12 +51,12 @@ function entry(
   current = null as BackupExam['current'],
   history = [] as BackupExam['history'],
 ): BackupExam {
-  return { examId: poc.id, revision: poc.revision, current, history };
+  return { examId: poc.id, revision: poc.revision, current, history, reviewAttempts: [] };
 }
 function backup(exams: BackupExam[] = [], favorites: string[] = []): Backup {
   return {
     format: 'medsim-backup',
-    version: 1,
+    version: 2,
     exportedAt: now,
     exams,
     catalogPreferences: { storageVersion: 1, favorites },
@@ -68,9 +69,9 @@ function backup(exams: BackupExam[] = [], favorites: string[] = []): Backup {
   };
 }
 const storeCurrent = (current: unknown) =>
-  [storageKey(poc), JSON.stringify({ storageVersion: 2, current })] as [string, string];
+  [storageKey(poc), storageFixtureJson({ storageVersion: 2, current })] as [string, string];
 const storeHistory = (history: unknown[]) =>
-  [historyStorageKey(poc), JSON.stringify({ storageVersion: 2, history })] as [string, string];
+  [historyStorageKey(poc), storageFixtureJson({ storageVersion: 2, history })] as [string, string];
 afterEach(() => vi.restoreAllMocks());
 describe('exportação normalizada, completa e read-only', () => {
   it('backup vazio inclui defaults e somente chaves conhecidas, sem carregar provas', async () => {
@@ -83,7 +84,7 @@ describe('exportação normalizada, completa e read-only', () => {
     expect(exported).toEqual({ ...backup(), uiPreferences: defaultUiPreferences });
     expect(load).not.toHaveBeenCalled();
     expect(store.setItem).not.toHaveBeenCalled();
-    expect(JSON.stringify(exported)).not.toMatch(
+    expect(storageFixtureJson(exported)).not.toMatch(
       /secret|third-party|legacy|questions|correctAnswer|modelAnswer|explanations/,
     );
   });
@@ -96,7 +97,10 @@ describe('exportação normalizada, completa e read-only', () => {
       const before = [...store.values];
       const result = await exportBackup(catalog, store, load, now);
       expect(result.exams).toEqual([
-        entry(current, state === 'completed' ? [summary(current)] : []),
+        {
+          ...entry(current, state === 'completed' ? [summary(current)] : []),
+          reviewAttempts: state === 'completed' ? [current] : [],
+        },
       ]);
       expect(load).toHaveBeenCalledTimes(1);
       expect(load).toHaveBeenCalledWith(poc.id);
@@ -107,7 +111,7 @@ describe('exportação normalizada, completa e read-only', () => {
   it('v1 normaliza current e históricos compactos sem migrar o envelope', async () => {
     const current = createAttempt(poc, now),
       past = completedAttempt();
-    const raw = JSON.stringify({ storageVersion: 1, current, history: [past] });
+    const raw = storageFixtureJson({ storageVersion: 1, current, history: [past] });
     const store = memory([[storageKey(poc), raw]]);
     expect((await exportBackup(catalog, store, loader(), now)).exams).toEqual([
       entry(current, [summary(past)]),
@@ -120,9 +124,9 @@ describe('exportação normalizada, completa e read-only', () => {
         storeHistory([summary(completedAttempt())]),
         [
           catalogPreferencesKey,
-          JSON.stringify({ storageVersion: 1, favorites: [poc.id, 'future-exam'] }),
+          storageFixtureJson({ storageVersion: 1, favorites: [poc.id, 'future-exam'] }),
         ],
-        [uiPreferencesKey, JSON.stringify(backup().uiPreferences)],
+        [uiPreferencesKey, storageFixtureJson(backup().uiPreferences)],
       ]),
       load = loader();
     const result = await exportBackup(catalog, store, load, now);
@@ -131,7 +135,7 @@ describe('exportação normalizada, completa e read-only', () => {
     expect(load).not.toHaveBeenCalled();
   });
   it.each(['light', 'dark'])('tema legado %s normalizado apenas em memória', async (theme) => {
-    const store = memory([[legacyThemeKey, JSON.stringify({ version: 1, theme })]]);
+    const store = memory([[legacyThemeKey, storageFixtureJson({ version: 1, theme })]]);
     expect((await exportBackup(catalog, store, loader(), now)).uiPreferences?.theme).toBe(theme);
     expect(store.setItem).not.toHaveBeenCalled();
     expect(store.values.size).toBe(1);
@@ -174,7 +178,7 @@ describe('exportação normalizada, completa e read-only', () => {
       exportBackup(
         catalog,
         memory([
-          [storageKey(poc), JSON.stringify({ storageVersion: 1, current, history: [invalid] })],
+          [storageKey(poc), storageFixtureJson({ storageVersion: 1, current, history: [invalid] })],
         ]),
         loader(),
         now,
@@ -262,10 +266,10 @@ describe('schema estrito e limites de importação', () => {
   it.each([
     '{bad',
     '{}',
-    JSON.stringify({ ...backup(), format: 'other' }),
-    JSON.stringify({ ...backup(), version: 2 }),
-    JSON.stringify({ ...backup(), unknown: true }),
-    JSON.stringify({ ...backup(), exportedAt: 'yesterday' }),
+    storageFixtureJson({ ...backup(), format: 'other' }),
+    storageFixtureJson({ ...backup(), version: 3 }),
+    storageFixtureJson({ ...backup(), unknown: true }),
+    storageFixtureJson({ ...backup(), exportedAt: 'yesterday' }),
   ])('rejeita JSON/formato/version/datas/unknown keys %s', (text) =>
     expect(() => parseBackup(text)).toThrow('Backup inválido'),
   );
@@ -313,21 +317,21 @@ describe('schema estrito e limites de importação', () => {
   });
   it('File API local lê JSON válido e rejeita inválido', async () => {
     await expect(
-      readBackupFile({ size: 100, text: async () => JSON.stringify(backup()) } as File),
+      readBackupFile({ size: 100, text: async () => storageFixtureJson(backup()) } as File),
     ).resolves.toEqual(backup());
     await expect(readBackupFile({ size: 4, text: async () => '{bad' } as File)).rejects.toThrow(
       'Backup inválido',
     );
   });
   it('unknown keys aninhadas ou __proto__ não são aceitas como chaves de storage', () => {
-    const value = JSON.parse(JSON.stringify(backup()));
+    const value = JSON.parse(storageFixtureJson(backup()));
     value.exams = [{ ...entry(), storageKey: 'third-party' }];
-    expect(() => parseBackup(JSON.stringify(value))).toThrow('Backup inválido');
+    expect(() => parseBackup(storageFixtureJson(value))).toThrow('Backup inválido');
     expect(() =>
       parseBackup(
-        JSON.stringify(backup()).replace(
-          '"version":1',
-          '"version":1,"__proto__":{"polluted":true}',
+        storageFixtureJson(backup()).replace(
+          '"version":2',
+          '"version":2,"__proto__":{"polluted":true}',
         ),
       ),
     ).toThrow('Backup inválido');
@@ -551,9 +555,9 @@ describe('merge não destrutivo puro', () => {
     const store = memory([
       [
         catalogPreferencesKey,
-        JSON.stringify({ storageVersion: 1, favorites: ['future-exam', poc.id] }),
+        storageFixtureJson({ storageVersion: 1, favorites: ['future-exam', poc.id] }),
       ],
-      [uiPreferencesKey, JSON.stringify(localUi)],
+      [uiPreferencesKey, storageFixtureJson(localUi)],
     ]);
     const plan = await prepareImport(backup([], [poc.id]), catalog, store, loader());
     expect(plan.favoritesAdded).toBe(0);
@@ -568,7 +572,7 @@ describe('merge não destrutivo puro', () => {
     expect(JSON.parse(store.values.get(uiPreferencesKey)!)).toEqual(backup().uiPreferences);
   });
   it('tema legado válido nunca é sobrescrito nem preseleciona importação de UI', async () => {
-    const raw = JSON.stringify({ version: 1, theme: 'light' }),
+    const raw = storageFixtureJson({ version: 1, theme: 'light' }),
       store = memory([[legacyThemeKey, raw]]);
     const plan = await prepareImport(backup(), catalog, store, loader());
     expect(plan.applyPreferencesByDefault).toBe(false);
@@ -580,13 +584,13 @@ describe('merge não destrutivo puro', () => {
     const source = memory([
         [
           storageKey(poc),
-          JSON.stringify({ storageVersion: 1, current: completedAttempt(), history: [] }),
+          storageFixtureJson({ storageVersion: 1, current: completedAttempt(), history: [] }),
         ],
       ]),
       dest = memory();
     const input = await exportBackup(catalog, source, loader(), now);
     confirmImport(await prepareImport(input, catalog, dest, loader()), true, dest);
-    expect(JSON.parse(dest.values.get(storageKey(poc))!).storageVersion).toBe(2);
+    expect(JSON.parse(dest.values.get(storageKey(poc))!).storageVersion).toBe(3);
     const before = [...dest.values],
       calls = dest.setItem.mock.calls.length;
     const next = await prepareImport(input, catalog, dest, loader());
@@ -669,7 +673,7 @@ describe('transação, concorrência e rollback', () => {
     expect(store.values.has(storageKey(poc))).toBe(true);
   });
   it('rollback setItem falha em chave existente: erro explícito', async () => {
-    const raw = JSON.stringify({ storageVersion: 1, favorites: ['future-exam'] });
+    const raw = storageFixtureJson({ storageVersion: 1, favorites: ['future-exam'] });
     const store = memory([[catalogPreferencesKey, raw]]),
       plan = await prepareImport(input(), catalog, store, loader());
     store.setItem.mockImplementation((key, value) => {
@@ -693,7 +697,7 @@ describe('importação ao lado de current v1 sem migração na leitura', () => {
   it('histories importados sobrevivem a abrir prova e ao próximo save v2', async () => {
     const current = createAttempt(poc, now);
     const old = completedAttempt('old');
-    const raw = JSON.stringify({ storageVersion: 1, current, history: [old] });
+    const raw = storageFixtureJson({ storageVersion: 1, current, history: [old] });
     const store = memory([[storageKey(poc), raw]]);
     const input = {
       ...backup([entry(null, [summary(completedAttempt('imported', 10, now))])]),
@@ -718,7 +722,7 @@ describe('importação ao lado de current v1 sem migração na leitura', () => {
     expect(repo.load(poc).history).toHaveLength(2);
   });
   it('history v2 corrompido não impede current/histórico v1 válidos', () => {
-    const raw = JSON.stringify({
+    const raw = storageFixtureJson({
       storageVersion: 1,
       current: createAttempt(poc, now),
       history: [completedAttempt()],
@@ -775,7 +779,14 @@ describe('histórico local prevalece também quando não há current', () => {
       );
       confirmImport(plan, false, store);
       expect(store.values.has(storageKey(poc))).toBe(false);
-      expect(JSON.parse(store.values.get(historyStorageKey(poc))!).history).toEqual([local]);
+      expect(JSON.parse(store.values.get(historyStorageKey(poc))!).history).toEqual([
+        {
+          id: local.id,
+          startedAt: local.startedAt,
+          completedAt: local.completedAt,
+          result: local.result,
+        },
+      ]);
     },
   );
   it('history-only importado é restaurado sem current e sobrevive ao primeiro save e conclusão', async () => {
@@ -823,7 +834,7 @@ describe('F1: importação mantém as 20 conclusões mais recentes em load/save/
           : [
               [
                 storageKey(poc),
-                JSON.stringify(
+                storageFixtureJson(
                   destination === 'v1'
                     ? { storageVersion: 1, current: old, history: [old] }
                     : { storageVersion: 2, current: old },
@@ -832,7 +843,7 @@ describe('F1: importação mantém as 20 conclusões mais recentes em load/save/
             ],
       );
       const input = parseBackup(
-        JSON.stringify({
+        storageFixtureJson({
           ...backup([entry(destination === 'empty' ? old : null, history)]),
           uiPreferences: null,
         }),
@@ -870,11 +881,13 @@ describe('F1: importação mantém as 20 conclusões mais recentes em load/save/
 describe('F2: colisões de ID entre todas as categorias', () => {
   it('current local aberto rejeita history de mesmo ID; outros dados continuam importáveis', async () => {
     const current = { ...createAttempt(poc, '2026-10-03T10:00:00.000Z'), id: 'collision' };
-    const raw = JSON.stringify({ storageVersion: 2, current });
+    const raw = storageFixtureJson({ storageVersion: 2, current });
     const store = memory([[storageKey(poc), raw]]);
     const collision = summary(completedAttempt('collision', 10));
     const other = summary(completedAttempt('other', 1));
-    const input = parseBackup(JSON.stringify(backup([entry(null, [collision, other])], [poc.id])));
+    const input = parseBackup(
+      storageFixtureJson(backup([entry(null, [collision, other])], [poc.id])),
+    );
     const plan = await prepareImport(input, catalog, store, loader());
     expect(plan.conflicts).toBeGreaterThanOrEqual(1);
     expect(plan.issues.join(' ')).toContain(

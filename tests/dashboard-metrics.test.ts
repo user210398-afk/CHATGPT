@@ -1,3 +1,4 @@
+import { storageFixtureJson } from './legacy-fixtures';
 import { describe, expect, it } from 'vitest';
 import {
   aggregateGlobalMetrics,
@@ -87,11 +88,11 @@ describe('métricas globais e tempo de resultados', () => {
   it('history fora de ordem deriva lastResultAt read-only, mesmo após reabrir prova', () => {
     localStorage.setItem(
       storageKey(poc),
-      JSON.stringify({ storageVersion: 2, current: createAttempt(poc, date(5)) }),
+      storageFixtureJson({ storageVersion: 2, current: createAttempt(poc, date(5)) }),
     );
     localStorage.setItem(
       historyStorageKey(poc),
-      JSON.stringify({
+      storageFixtureJson({
         storageVersion: 2,
         history: [
           summary(completedAttempt('old', 10)),
@@ -113,7 +114,7 @@ describe('métricas globais e tempo de resultados', () => {
       type: 'finish',
       now: date(4),
     });
-    localStorage.setItem(storageKey(essay), JSON.stringify({ storageVersion: 2, current }));
+    localStorage.setItem(storageKey(essay), storageFixtureJson({ storageVersion: 2, current }));
     expect(
       readExamProgress({ ...catalogExam, questionCount: 10, objectiveCount: 0, essayCount: 10 })
         .progress,

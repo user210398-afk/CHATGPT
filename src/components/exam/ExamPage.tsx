@@ -1,27 +1,31 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import type { Exam } from '../../types/exam';
 import { useExamSession } from '../../app/useExamSession';
-import { answeredCount } from '../../engine/exam-state';
+import { answeredCount, pendingConfirmationIds } from '../../engine/exam-state';
+import { readUiPreferences, type UiPreferences } from '../../engine/ui-preferences';
 import { sitePath } from '../../utils/paths';
-import { RichContent } from '../common/RichContent';
 import { Images } from '../common/Images';
-import { QuestionRenderer } from '../questions/QuestionRenderer';
 import { Results } from '../results/Results';
 import { QuestionNavigation } from './QuestionNavigation';
-export function ExamPage({ exam }: { exam: Exam }) {
-  const { current, history, restored, warning, saving, dispatch, restart } = useExamSession(exam);
+import { ModeChooser } from './ModeChooser';
+import { QuestionCard } from '../questions/QuestionCard';
+import { ReviewView } from '../review/ReviewView';
+export function ExamPage({
+  exam,
+  preference,
+}: {
+  exam: Exam;
+  preference?: UiPreferences['attemptModePreference'];
+}) {
+  const [fallback] = useState(() => readUiPreferences().preferences.attemptModePreference);
+  const { current, history, restored, warning, saving, choosing, dispatch, restart, start } =
+    useExamSession(exam, preference ?? fallback);
   const [review, setReview] = useState(false);
   const [confirmFinish, setConfirmFinish] = useState(false);
-  const heading = useRef<HTMLHeadingElement>(null);
-  const question = exam.questions[current.currentIndex]!;
-  const section = exam.sections.find((section) => section.id === question.sectionId);
-  const group = exam.groups.find((group) => group.id === question.groupId);
-  const finished = Boolean(current.completedAt);
-  const showResult = finished && !review;
-  const count = answeredCount(exam, current);
-  useEffect(() => {
-    heading.current?.focus();
-  }, [current.currentIndex, review, showResult]);
+  const finished = Boolean(current?.completedAt);
+  const count = current ? answeredCount(exam, current) : 0;
+  const pending = current ? pendingConfirmationIds(exam, current) : [];
+  const question = current ? exam.questions[current.currentIndex]! : null;
   return (
     <>
       <a className="back-link" href={sitePath('')}>
@@ -33,6 +37,18 @@ export function ExamPage({ exam }: { exam: Exam }) {
         </p>
         <h1>{exam.title}</h1>
         {exam.description && <p className="muted">{exam.description}</p>}
+        {current && !choosing && (
+          <>
+            <p className="badge">{current.mode === 'study' ? 'Modo Estudo' : 'Modo Prova'}</p>
+            {!finished && (
+              <p className="muted small">
+                {current.mode === 'study'
+                  ? 'Confirme cada resposta para liberar o feedback.'
+                  : 'Feedback após finalizar.'}
+              </p>
+            )}
+          </>
+        )}
       </header>
       <Images images={exam.images} />
       {warning && (
@@ -40,135 +56,125 @@ export function ExamPage({ exam }: { exam: Exam }) {
           {warning}
         </p>
       )}
-      {restored && <p className="save-status">✓ Tentativa restaurada neste navegador.</p>}
-      {showResult ? (
-        <Results
-          attempt={current}
-          history={history}
-          onReview={() => setReview(true)}
-          onRestart={() => {
-            restart();
-            setReview(false);
-          }}
-        />
-      ) : (
-        <>
-          {review && (
+      {restored && !choosing && (
+        <p className="save-status">✓ Tentativa restaurada neste navegador.</p>
+      )}
+      {choosing || !current ? (
+        <ModeChooser onStart={start} />
+      ) : finished ? (
+        review ? (
+          <>
             <div className="notice actions">
               <span>Revisão · respostas e resultado preservados.</span>
               <button onClick={() => setReview(false)}>Voltar ao resultado</button>
             </div>
-          )}
-          <div className="exam-layout">
-            <section className="card question-card">
-              <div className="question-topline">
-                <span className="badge">
-                  {section?.title ?? (question.type === 'essay' ? 'Dissertativa' : 'Objetiva')} ·{' '}
-                  {question.label}
-                </span>
-                <button
-                  className="flag-button"
-                  disabled={finished}
-                  aria-pressed={current.flagged.includes(question.id)}
-                  onClick={() => dispatch({ type: 'flag', questionId: question.id })}
-                >
-                  {current.flagged.includes(question.id)
-                    ? '⚑ Marcada para revisão'
-                    : '⚑ Marcar para revisão'}
-                </button>
-              </div>
-              <h2 ref={heading} tabIndex={-1}>
-                Questão {current.currentIndex + 1} de {exam.questions.length}
-              </h2>
-              <p className="category">{question.category}</p>
-              {group && (
-                <section className="case-context">
-                  <h3>{group.title}</h3>
-                  <RichContent content={group.context} />
-                  <Images images={group.images} />
-                </section>
-              )}
-              {question.context && (
-                <section className="case-context">
-                  <RichContent content={question.context} />
-                </section>
-              )}
-              <div className="statement">
-                <RichContent content={question.statement} />
-              </div>
-              <Images images={question.images} />
-              <QuestionRenderer
-                question={question}
-                answer={current.answers[question.id]}
-                readOnly={finished}
-                onAnswer={(value) => dispatch({ type: 'answer', questionId: question.id, value })}
-              />
-              <div className="question-controls">
-                <button
-                  disabled={current.currentIndex === 0}
-                  onClick={() => dispatch({ type: 'navigate', index: current.currentIndex - 1 })}
-                >
-                  ← Anterior
-                </button>
-                <span className="muted small">
-                  {current.currentIndex + 1} / {exam.questions.length}
-                </span>
-                <button
-                  className="primary"
-                  disabled={current.currentIndex === exam.questions.length - 1}
-                  onClick={() => dispatch({ type: 'navigate', index: current.currentIndex + 1 })}
-                >
-                  Próxima →
-                </button>
-              </div>
-            </section>
-            <div className="exam-sidebar">
-              <QuestionNavigation
-                exam={exam}
-                attempt={current}
-                onNavigate={(index) => dispatch({ type: 'navigate', index })}
-              />
-              {!finished && (
-                <section className="card finish-card">
-                  <p className="save-status">
-                    {saving
-                      ? 'Salvando resposta…'
-                      : warning
-                        ? 'Salvamento local indisponível'
-                        : '✓ Progresso salvo neste navegador'}
-                  </p>
-                  {confirmFinish ? (
-                    <div role="region" aria-label="Confirmar finalização">
-                      <h3>Finalizar tentativa?</h3>
+            <ReviewView
+              exam={exam}
+              attempt={current}
+              onFlag={(questionId) => dispatch({ type: 'flag', questionId })}
+            />
+          </>
+        ) : (
+          <Results
+            attempt={current}
+            history={history}
+            onReview={() => setReview(true)}
+            onRestart={() => {
+              if (restart()) setReview(false);
+            }}
+          />
+        )
+      ) : (
+        <div className="exam-layout">
+          <QuestionCard
+            exam={exam}
+            attempt={current}
+            index={current.currentIndex}
+            feedback={
+              current.mode === 'study' && current.confirmedQuestionIds.includes(question!.id)
+            }
+            onAnswer={(value) => dispatch({ type: 'answer', questionId: question!.id, value })}
+            onFlag={() => dispatch({ type: 'flag', questionId: question!.id })}
+            onConfirm={() => dispatch({ type: 'confirm-answer', questionId: question!.id })}
+          >
+            <div className="question-controls">
+              <button
+                disabled={current.currentIndex === 0}
+                onClick={() => dispatch({ type: 'navigate', index: current.currentIndex - 1 })}
+              >
+                ← Anterior
+              </button>
+              <span className="muted small">
+                {current.currentIndex + 1} / {exam.questions.length}
+              </span>
+              <button
+                className="primary"
+                disabled={current.currentIndex === exam.questions.length - 1}
+                onClick={() => dispatch({ type: 'navigate', index: current.currentIndex + 1 })}
+              >
+                Próxima →
+              </button>
+            </div>
+          </QuestionCard>
+          <div className="exam-sidebar">
+            <QuestionNavigation
+              exam={exam}
+              attempt={current}
+              onNavigate={(index) => dispatch({ type: 'navigate', index })}
+            />
+            <section className="card finish-card">
+              <p className="save-status">
+                {saving
+                  ? 'Salvando resposta…'
+                  : warning
+                    ? 'Salvamento local indisponível'
+                    : '✓ Progresso salvo neste navegador'}
+              </p>
+              {confirmFinish ? (
+                <div role="region" aria-label="Confirmar finalização">
+                  <h3>Finalizar tentativa?</h3>
+                  {pending.length ? (
+                    <>
+                      <p role="alert">Existem {pending.length} respostas ainda não confirmadas.</p>
+                      <button
+                        onClick={() => {
+                          dispatch({
+                            type: 'navigate',
+                            index: exam.questions.findIndex((q) => q.id === pending[0]),
+                          });
+                          setConfirmFinish(false);
+                        }}
+                      >
+                        Ir para primeira resposta pendente
+                      </button>
+                    </>
+                  ) : (
+                    <>
                       <p>
                         {exam.questions.length - count} questão(ões) sem resposta. Após finalizar,
                         as respostas ficam disponíveis para revisão.
                       </p>
-                      <div className="stack">
-                        <button
-                          className="primary"
-                          onClick={() => {
-                            dispatch({ type: 'finish', now: new Date().toISOString() });
-                            setConfirmFinish(false);
-                          }}
-                        >
-                          Confirmar finalização
-                        </button>
-                        <button onClick={() => setConfirmFinish(false)}>
-                          Continuar respondendo
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    <button className="full-width" onClick={() => setConfirmFinish(true)}>
-                      Finalizar tentativa
-                    </button>
+                      <button
+                        className="primary"
+                        onClick={() => {
+                          dispatch({ type: 'finish', now: new Date().toISOString() });
+                          setConfirmFinish(false);
+                        }}
+                      >
+                        Confirmar finalização
+                      </button>
+                    </>
                   )}
-                </section>
+                  <button onClick={() => setConfirmFinish(false)}>Continuar respondendo</button>
+                </div>
+              ) : (
+                <button className="full-width" onClick={() => setConfirmFinish(true)}>
+                  Finalizar tentativa
+                </button>
               )}
-            </div>
+            </section>
           </div>
-        </>
+        </div>
       )}
     </>
   );

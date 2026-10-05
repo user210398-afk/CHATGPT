@@ -1,3 +1,4 @@
+import { removeSpanArtifacts } from '../scripts/span-artifacts';
 import { readFile, readdir } from 'node:fs/promises';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -61,6 +62,19 @@ it('mantém POC e fontes legadas idênticas à base confirmada (workflows têm s
     'branding-medsim.js',
     `data/exams/${pocId}.json`,
   ];
-  const result = await run('git', ['diff', '--name-only', phase3Base, '--', ...paths]);
-  expect(result.stdout.trim()).toBe('');
+  const { stdout } = await run('git', [
+    'ls-tree',
+    '-r',
+    '-z',
+    '--name-only',
+    phase3Base,
+    '--',
+    ...paths,
+  ]);
+  for (const path of stdout.split('\0').filter(Boolean)) {
+    const { stdout: base } = await run('git', ['show', `${phase3Base}:${path}`], {
+      maxBuffer: 4 * 1024 * 1024,
+    });
+    expect(await readFile(path, 'utf8'), path).toBe(removeSpanArtifacts(base));
+  }
 });

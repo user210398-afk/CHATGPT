@@ -1,3 +1,5 @@
+import { chooseExam } from './attempt-helpers';
+import { storageFixtureJson } from '../legacy-fixtures';
 import { test, expect, type Page } from '@playwright/test';
 import { readExamCatalog } from '../../scripts/catalog';
 import { createAttempt, transition } from '../../src/engine/exam-state';
@@ -68,7 +70,7 @@ test('7A.1: tentativas sintéticas, filtros por AND e favoritos persistentes', a
   await seed(page, [
     [
       storageKey(poc),
-      JSON.stringify({
+      storageFixtureJson({
         storageVersion: 2,
         current: {
           ...createAttempt(poc),
@@ -78,7 +80,7 @@ test('7A.1: tentativas sintéticas, filtros por AND e favoritos persistentes', a
     ],
     [
       storageKey(objective),
-      JSON.stringify({
+      storageFixtureJson({
         storageVersion: 2,
         current: transition(objective, createAttempt(objective, '2026-10-03T10:00:00.000Z'), {
           type: 'finish',
@@ -138,6 +140,7 @@ test('7A.1: dogfood responder, voltar, favoritar, concluir e reiniciar sem perde
   await card(page)
     .getByRole('link', { name: /Abrir prova/ })
     .click();
+  await chooseExam(page);
   for (let i = 0; i < 2; i++) {
     const question = poc.questions[i]!;
     if (question.type !== 'multiple-choice') throw new Error('Fixture objetiva esperada');
@@ -173,6 +176,7 @@ test('7A.1: dogfood responder, voltar, favoritar, concluir e reiniciar sem perde
     .click();
   await expect(page.getByRole('heading', { name: 'Seu resultado' })).toBeVisible();
   await page.getByRole('button', { name: 'Nova tentativa' }).click();
+  await chooseExam(page);
   await page.getByRole('link', { name: '← Catálogo de provas' }).click();
   await expect(card(page).locator('.catalog-status')).toHaveText('Em andamento');
   await expect(card(page).getByText('Respondidas 0 de 30')).toBeVisible();
@@ -211,6 +215,8 @@ test('7A.1: storage bloqueado mantém busca, filtros e abertura sem crash', asyn
   await card(page)
     .getByRole('link', { name: /Abrir prova/ })
     .click();
+  await chooseExam(page);
+  await chooseExam(page);
   await expect(page.getByRole('heading', { name: 'Questão 1 de 30', exact: true })).toBeVisible();
   check();
 });
@@ -230,8 +236,8 @@ test('7A.1: corrupção é preservada e falha de escrita é honesta', async ({ p
     '{bad-preferences',
   );
   await seed(page, [
-    [corruptKey, JSON.stringify({ storageVersion: 2, current: completedAttempt() })],
-    [catalogPreferencesKey, JSON.stringify({ storageVersion: 1, favorites: [] })],
+    [corruptKey, storageFixtureJson({ storageVersion: 2, current: completedAttempt() })],
+    [catalogPreferencesKey, storageFixtureJson({ storageVersion: 1, favorites: [] })],
   ]);
   await page.evaluate(() => {
     Storage.prototype.setItem = () => {

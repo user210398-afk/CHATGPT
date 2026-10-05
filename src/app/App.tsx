@@ -1,11 +1,12 @@
 import { useCallback } from 'react';
 import { loadCatalog, loadExam } from '../engine/exam-loader';
 import { ExamPage } from '../components/exam/ExamPage';
-import { sitePath, dashboardUrl, settingsUrl, resolveRoute } from '../utils/paths';
+import { sitePath, dashboardUrl, settingsUrl, reviewUrl, resolveRoute } from '../utils/paths';
 import { CatalogPage } from './CatalogPage';
 import { useResource } from './useResource';
 import { useUiPreferences, type UiPreferencesState } from './useUiPreferences';
 import { DashboardPage } from './DashboardPage';
+import { ReviewPage } from './ReviewPage';
 import { SettingsPage } from './SettingsPage';
 import { SetupPrompt } from '../components/common/SetupPrompt';
 const catalogLoader = (signal: AbortSignal) => loadCatalog(fetch, signal);
@@ -27,6 +28,12 @@ function CatalogRoute({ view, ui }: { view: string; ui: UiPreferencesState }) {
       {view !== 'settings' && <SetupPrompt ui={ui} />}
       {view === 'dashboard' ? (
         <DashboardPage catalog={data} />
+      ) : view === 'review' ? (
+        <ReviewPage
+          catalog={data}
+          examId={resolveRoute(window.location.search).reviewExam}
+          attemptId={resolveRoute(window.location.search).attempt}
+        />
       ) : view === 'settings' ? (
         <SettingsPage catalog={data} ui={ui} />
       ) : (
@@ -37,11 +44,15 @@ function CatalogRoute({ view, ui }: { view: string; ui: UiPreferencesState }) {
     <LoadMessage error={error} />
   );
 }
-function ExamRoute({ id }: { id: string }) {
+function ExamRoute({ id, ui }: { id: string; ui: UiPreferencesState }) {
   const loader = useCallback((signal: AbortSignal) => loadExam(id, fetch, signal), [id]);
   const { data, error } = useResource(loader);
   return data ? (
-    <ExamPage key={`${data.id}:${data.revision}`} exam={data} />
+    <ExamPage
+      key={`${data.id}:${data.revision}`}
+      exam={data}
+      preference={ui.preferences.attemptModePreference}
+    />
   ) : (
     <LoadMessage error={error} />
   );
@@ -71,6 +82,7 @@ export function App() {
               [
                 ['catalog', 'Catálogo', sitePath('')],
                 ['dashboard', 'Dashboard', dashboardUrl()],
+                ['review', 'Revisão', reviewUrl()],
                 ['settings', 'Configurações', settingsUrl()],
               ] as const
             ).map(([view, label, href]) => (
@@ -94,7 +106,7 @@ export function App() {
       )}
       <main id="main" className="main-container" tabIndex={-1}>
         {route.view === 'exam' ? (
-          <ExamRoute id={route.id!} />
+          <ExamRoute id={route.id!} ui={ui} />
         ) : (
           <CatalogRoute view={route.view} ui={ui} />
         )}

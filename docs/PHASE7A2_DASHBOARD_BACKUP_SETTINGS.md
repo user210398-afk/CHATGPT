@@ -1,5 +1,10 @@
 # Fase 7A.2 — Dashboard, backup e configurações
 
+> Este documento registra o contrato histórico da 7A.2. A 7B.1 congela esses
+> schemas e acrescenta current/history v3, preferências v2, backup v2 e revisão
+> detalhada. Ver [Fase 7B.1](PHASE7B1_REVIEW_STUDY_MODES.md). Os formatos
+> descritos abaixo continuam aceitos sem migração por leitura.
+
 ## Objetivo e base
 
 Branch `codex/phase7a2-dashboard-backup-settings`, worktree

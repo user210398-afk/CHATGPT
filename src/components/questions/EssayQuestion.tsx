@@ -17,7 +17,8 @@ export function EssayQuestion({ question, answer, readOnly, onAnswer }: Question
         onChange={(event) => onAnswer(event.target.value)}
       />
       <p className="muted small">
-        Resposta dissertativa. Compare com o modelo após finalizar; ela não recebe nota automática.
+        Resposta dissertativa. Compare com o modelo após confirmar no Modo Estudo ou finalizar; ela
+        não recebe nota automática.
       </p>
       {readOnly && (
         <section className="feedback">

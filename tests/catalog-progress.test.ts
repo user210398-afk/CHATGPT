@@ -1,3 +1,4 @@
+import { storageFixtureJson } from './legacy-fixtures';
 import { describe, expect, it, vi } from 'vitest';
 import { readExamProgress, type CatalogExam } from '../src/engine/catalog-progress';
 import { createAttempt, transition, type Attempt, type Result } from '../src/engine/exam-state';
@@ -6,12 +7,12 @@ import { catalogExam, completedAttempt } from './catalog-fixtures';
 import { poc } from './fixtures';
 const read = (exam = catalogExam) => readExamProgress(exam).progress;
 function saveCurrent(current: unknown) {
-  localStorage.setItem(storageKey(catalogExam), JSON.stringify({ storageVersion: 2, current }));
+  localStorage.setItem(storageKey(catalogExam), storageFixtureJson({ storageVersion: 2, current }));
 }
 function saveHistory(history: unknown[]) {
   localStorage.setItem(
     historyStorageKey(catalogExam),
-    JSON.stringify({ storageVersion: 2, history }),
+    storageFixtureJson({ storageVersion: 2, history }),
   );
 }
 const storedLocations = ['current v1', 'current v2', 'history v1', 'history v2'] as const;
@@ -21,7 +22,7 @@ function readStoredAttempt(location: StoredLocation, attempt: Attempt, exam = ca
   if (location.endsWith('v1')) {
     values.set(
       storageKey(exam),
-      JSON.stringify({
+      storageFixtureJson({
         storageVersion: 1,
         current: location.startsWith('current')
           ? attempt
@@ -30,11 +31,11 @@ function readStoredAttempt(location: StoredLocation, attempt: Attempt, exam = ca
       }),
     );
   } else if (location.startsWith('current')) {
-    values.set(storageKey(exam), JSON.stringify({ storageVersion: 2, current: attempt }));
+    values.set(storageKey(exam), storageFixtureJson({ storageVersion: 2, current: attempt }));
   } else {
     values.set(
       historyStorageKey(exam),
-      JSON.stringify({ storageVersion: 2, history: [summary(attempt)] }),
+      storageFixtureJson({ storageVersion: 2, history: [summary(attempt)] }),
     );
   }
   const original = [...values];
@@ -126,7 +127,7 @@ describe('leitura local de progresso do catálogo', () => {
     const current = completedAttempt();
     localStorage.setItem(
       storageKey(catalogExam),
-      JSON.stringify({
+      storageFixtureJson({
         storageVersion: 1,
         current,
         history: [current, completedAttempt('past', 5)],
@@ -142,7 +143,7 @@ describe('leitura local de progresso do catálogo', () => {
   it('v1 com histórico inválido ainda preserva a leitura do current', () => {
     localStorage.setItem(
       storageKey(catalogExam),
-      JSON.stringify({ storageVersion: 1, current: createAttempt(poc), history: 'corrupt' }),
+      storageFixtureJson({ storageVersion: 1, current: createAttempt(poc), history: 'corrupt' }),
     );
     expect(read().status).toBe('in-progress');
   });
@@ -338,7 +339,7 @@ describe('degradação segura e flagged único', () => {
       const past = completedAttempt('valid-past', 10);
       localStorage.setItem(
         storageKey(catalogExam),
-        JSON.stringify(
+        storageFixtureJson(
           version === 1
             ? { storageVersion: 1, current, history: [past] }
             : { storageVersion: 2, current },
