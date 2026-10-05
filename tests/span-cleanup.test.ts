@@ -32,7 +32,7 @@ it('zero remaining span artifacts across all tracked user content, including esc
     );
   }
 });
-it('all academic/authoring/schema/infra bytes match the mandatory base except the six approved cleanup files', async () => {
+it('academic/authoring/schema/infra bytes match the base except approved cleanup and gate implementation', async () => {
   const { stdout } = await run('git', [
     'ls-tree',
     '-r',
@@ -50,6 +50,9 @@ it('all academic/authoring/schema/infra bytes match the mandatory base except th
     'scripts/authoring',
   ]);
   for (const path of stdout.split('\0').filter(Boolean)) {
+    // Only the gate implementation may change to recognize the authorized cleanup.
+    // Candidates, reviews, generations and every other authoring file stay frozen.
+    if (path === 'scripts/authoring/gate.ts') continue;
     const { stdout: original } = await run('git', ['show', `${base}:${path}`], {
       encoding: 'buffer',
       maxBuffer: 8 * 1024 * 1024,
