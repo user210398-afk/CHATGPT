@@ -69,7 +69,7 @@ test('release: links e metadados do catálogo atual, refresh, claro/escuro e pat
         await expect(card).toContainText(
           `${exam.questions.filter((q) => q.type === 'multiple-choice').length} objetivas · ${exam.questions.filter((q) => q.type === 'essay').length} dissertativas`,
         );
-      await card.getByRole('link', { name: /Abrir prova/ }).click();
+      await card.getByRole('link', { name: /Abrir prova|Continuar/ }).click();
       await expect(page).toHaveURL(new RegExp(`\\?exam=${exam.id}$`));
       await expect(page.getByRole('heading', { level: 1 })).toHaveText(exam.title);
       await expect(
