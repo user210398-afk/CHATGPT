@@ -35,6 +35,10 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     ':(exclude)src/engine/catalog-progress.ts',
     ':(exclude)src/engine/catalog-preferences.ts',
     ':(exclude)src/engine/catalog-query.ts',
+    // Phase 7B.2A authorizes subject-groups.ts as catalog/presentation metadata only.
+    // This exclusion does not authorize generic src/engine changes;
+    // all other engine protections remain in force.
+    ':(exclude)src/engine/subject-groups.ts',
     ':(exclude)src/engine/dashboard-metrics.ts',
     ':(exclude)src/engine/ui-preferences.ts',
     ':(exclude)src/engine/backup.ts',
