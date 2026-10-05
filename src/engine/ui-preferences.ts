@@ -2,7 +2,7 @@ import { z } from 'zod';
 import type { StorageAdapter } from './persistence';
 export const uiPreferencesKey = 'chatgpt-exams:v1:ui-preferences';
 export const legacyThemeKey = 'chatgpt-exams:preferences:v1';
-export const uiPreferencesSchema = z.strictObject({
+export const uiPreferencesV1Schema = z.strictObject({
   storageVersion: z.literal(1),
   theme: z.enum(['system', 'light', 'dark']),
   textSize: z.enum(['normal', 'medium', 'large']),
@@ -12,9 +12,22 @@ export const uiPreferencesSchema = z.strictObject({
   enhancedFocus: z.boolean(),
   setupPrompt: z.enum(['pending', 'dismissed', 'completed']),
 });
+export const uiPreferencesSchema = uiPreferencesV1Schema.extend({
+  storageVersion: z.literal(2),
+  attemptModePreference: z.enum(['ask', 'exam', 'study']),
+});
+export const readableUiPreferencesSchema = z.union([
+  uiPreferencesSchema,
+  uiPreferencesV1Schema.transform((value) => ({
+    ...value,
+    storageVersion: 2 as const,
+    attemptModePreference: 'ask' as const,
+  })),
+]);
 export type UiPreferences = z.infer<typeof uiPreferencesSchema>;
 export const defaultUiPreferences: UiPreferences = {
-  storageVersion: 1,
+  storageVersion: 2,
+  attemptModePreference: 'ask',
   theme: 'system',
   textSize: 'normal',
   contrast: 'standard',
@@ -34,7 +47,7 @@ export function readUiPreferences(
   try {
     const raw = storage().getItem(uiPreferencesKey);
     if (raw !== null) {
-      const parsed = uiPreferencesSchema.safeParse(JSON.parse(raw));
+      const parsed = readableUiPreferencesSchema.safeParse(JSON.parse(raw));
       if (parsed.success)
         return { preferences: parsed.data, state: 'valid' as const, warning: null };
       return {
@@ -65,7 +78,7 @@ export function saveUiPreferences(
 ): string | null {
   try {
     const raw = storage().getItem(uiPreferencesKey);
-    if (raw !== null && !uiPreferencesSchema.safeParse(JSON.parse(raw)).success)
+    if (raw !== null && !readableUiPreferencesSchema.safeParse(JSON.parse(raw)).success)
       return 'Aplicada nesta sessão, mas não pôde ser salva: o registro incompatível foi preservado.';
     storage().setItem(uiPreferencesKey, JSON.stringify(uiPreferencesSchema.parse(preferences)));
     return null;

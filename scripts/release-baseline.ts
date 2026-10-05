@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { removeSpanArtifacts } from './span-artifacts';
 import { execFile } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -21,7 +22,15 @@ export async function assertReleaseBaseline(root = '.') {
       encoding: 'buffer',
       maxBuffer: 4 * 1024 * 1024,
     });
-    assert.deepEqual(await readFile(join(root, file)), stdout, `Baseline alterado: ${file}`);
+    const actual = await readFile(join(root, file));
+    // Historical fixtures may still be byte-identical to the original. The only
+    // permitted production difference is removal of the authorized artifacts.
+    if (!actual.equals(stdout))
+      assert.deepEqual(
+        actual,
+        Buffer.from(removeSpanArtifacts(stdout.toString('utf8'))),
+        `Baseline alterado: ${file}`,
+      );
   }
 }
 

@@ -1,3 +1,4 @@
+import { chooseExam } from './attempt-helpers';
 import { test, expect, type Page, type Locator } from '@playwright/test';
 import { readExamCatalog } from '../../scripts/catalog';
 
@@ -71,6 +72,7 @@ test('release: links e metadados do catálogo atual, refresh, claro/escuro e pat
         );
       await card.getByRole('link', { name: /Abrir prova|Continuar/ }).click();
       await expect(page).toHaveURL(new RegExp(`\\?exam=${exam.id}$`));
+      await chooseExam(page);
       await expect(page.getByRole('heading', { level: 1 })).toHaveText(exam.title);
       await expect(
         page.getByRole('heading', { name: `Questão 1 de ${exam.questions.length}`, exact: true }),
@@ -104,6 +106,7 @@ test('release: teclado, skip link, labels, foco e estados textuais', async ({ pa
   const open = page.getByRole('link', { name: /Abrir prova/ }).first();
   await tabTo(page, open);
   await page.keyboard.press('Enter');
+  await chooseExam(page);
   await expect(page.getByRole('heading', { name: 'Questão 1 de 35', exact: true })).toBeFocused();
   const radio = page.getByRole('radio').first();
   await tabTo(page, radio);
@@ -127,6 +130,7 @@ test('release: teclado, skip link, labels, foco e estados textuais', async ({ pa
   await page.keyboard.press('Enter');
   await expect(page.getByRole('heading', { name: 'Questão 2 de 35', exact: true })).toBeFocused();
   await page.goto('?exam=fisiologia-m5-endocrino-em-grupo-2026');
+  await chooseExam(page);
   const textarea = page.getByRole('textbox', { name: 'Sua resposta' });
   await tabTo(page, textarea);
   await page.keyboard.type('Resposta por teclado.');

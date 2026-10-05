@@ -60,7 +60,7 @@ describe('preferências versionadas e compatibilidade legada', () => {
   it.each([
     '{bad',
     '{}',
-    JSON.stringify({ ...defaultUiPreferences, storageVersion: 2 }),
+    JSON.stringify({ ...defaultUiPreferences, storageVersion: 3 }),
     JSON.stringify({ ...defaultUiPreferences, unknown: true }),
     JSON.stringify({ ...defaultUiPreferences, theme: 'auto' }),
   ])('novo corrompido %s preservado na leitura e no save', (raw) => {

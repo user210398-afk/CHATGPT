@@ -12,7 +12,8 @@ export const resultSchema = z.strictObject({
   essayTotal: z.number().int().nonnegative(),
   essayAnswered: z.number().int().nonnegative(),
 });
-export const attemptSchema = z.strictObject({
+// Frozen contract written by current v1/v2. Never add fields here.
+export const legacyAttemptSchema = z.strictObject({
   id: z.string().min(1),
   examId: z.string(),
   examRevision: z.number().int().positive(),
@@ -23,18 +24,31 @@ export const attemptSchema = z.strictObject({
   completedAt: z.iso.datetime().nullable(),
   result: resultSchema.nullable(),
 });
+export const attemptModeSchema = z.enum(['exam', 'study']);
+export type AttemptMode = z.infer<typeof attemptModeSchema>;
+export const attemptSchema = legacyAttemptSchema.extend({
+  mode: attemptModeSchema,
+  confirmedQuestionIds: z
+    .array(z.string().min(1))
+    .refine((ids) => new Set(ids).size === ids.length),
+});
+export function normalizeLegacyAttempt(attempt: z.infer<typeof legacyAttemptSchema>): Attempt {
+  return { ...attempt, mode: 'exam', confirmedQuestionIds: [] };
+}
 export type Attempt = z.infer<typeof attemptSchema>;
 export type Result = z.infer<typeof resultSchema>;
 export type ExamAction =
   | { type: 'answer'; questionId: string; value: string }
   | { type: 'navigate'; index: number }
   | { type: 'flag'; questionId: string }
-  | { type: 'finish'; now: string };
+  | { type: 'finish'; now: string }
+  | { type: 'confirm-answer'; questionId: string };
 
 export function createAttempt(
   exam: Exam,
   now = new Date().toISOString(),
-  id = crypto.randomUUID(),
+  id: string = crypto.randomUUID(),
+  mode: AttemptMode = 'exam',
 ): Attempt {
   return {
     id,
@@ -43,6 +57,8 @@ export function createAttempt(
     currentIndex: 0,
     answers: {},
     flagged: [],
+    mode: attemptModeSchema.parse(mode),
+    confirmedQuestionIds: [],
     startedAt: now,
     completedAt: null,
     result: null,
@@ -94,8 +110,9 @@ export function transition(exam: Exam, state: Attempt, action: ExamAction): Atte
       return state;
     return { ...state, currentIndex: action.index };
   }
-  if (state.completedAt) return state;
+  if (state.completedAt && action.type !== 'flag') return state;
   if (action.type === 'finish') {
+    if (pendingConfirmationIds(exam, state).length) return state;
     if (
       !z.iso.datetime().safeParse(action.now).success ||
       Date.parse(action.now) < Date.parse(state.startedAt)
@@ -112,10 +129,41 @@ export function transition(exam: Exam, state: Attempt, action: ExamAction): Atte
         ? state.flagged.filter((id) => id !== q.id)
         : [...state.flagged, q.id],
     };
+  if (action.type === 'confirm-answer') {
+    if (
+      state.mode !== 'study' ||
+      state.confirmedQuestionIds.includes(q.id) ||
+      !questionBehaviors[q.type].isAnswered(state.answers[q.id])
+    )
+      return state;
+    return { ...state, confirmedQuestionIds: [...state.confirmedQuestionIds, q.id] };
+  }
+  if (state.confirmedQuestionIds.includes(q.id)) return state;
   if (!questionBehaviors[q.type].accepts(q, action.value)) return state;
   return { ...state, answers: { ...state.answers, [q.id]: action.value } };
 }
+export function pendingConfirmationIds(exam: Exam, state: Attempt): string[] {
+  return state.mode === 'study'
+    ? exam.questions
+        .filter(
+          (q) =>
+            questionBehaviors[q.type].isAnswered(state.answers[q.id]) &&
+            !state.confirmedQuestionIds.includes(q.id),
+        )
+        .map((q) => q.id)
+    : [];
+}
 export function isCompatibleAttempt(exam: Exam, state: Attempt): boolean {
+  if (!attemptSchema.safeParse(state).success) return false;
+  if (state.mode === 'exam' && state.confirmedQuestionIds.length) return false;
+  if (
+    state.confirmedQuestionIds.some((id) => {
+      const q = exam.questions.find((item) => item.id === id);
+      return !q || !questionBehaviors[q.type].isAnswered(state.answers[id]);
+    })
+  )
+    return false;
+  if (state.completedAt && pendingConfirmationIds(exam, state).length) return false;
   if (
     state.examId !== exam.id ||
     state.examRevision !== exam.revision ||

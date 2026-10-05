@@ -69,7 +69,10 @@ describe('Exam Engine', () => {
     expect(
       transition(poc, state, { type: 'answer', questionId: first.id, value: 'option-1' }),
     ).toBe(state);
-    expect(transition(poc, state, { type: 'flag', questionId: first.id })).toBe(state);
+    const flagged = transition(poc, state, { type: 'flag', questionId: first.id });
+    expect(flagged.flagged).toEqual([first.id]);
+    expect(flagged.answers).toBe(state.answers);
+    expect(flagged.result).toBe(state.result);
     expect(transition(poc, state, { type: 'navigate', index: 2 }).currentIndex).toBe(2);
   });
   it('aceita sequência intercalada e prova só dissertativa sem divisão por zero', () => {

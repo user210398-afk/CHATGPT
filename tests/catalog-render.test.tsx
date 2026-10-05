@@ -1,3 +1,4 @@
+import { storageFixtureJson } from './legacy-fixtures';
 import { afterEach, expect, it, vi } from 'vitest';
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -19,7 +20,10 @@ it('renderiza todas as provas, status textual e CTA inicial', () => {
 it('tentativa aberta mostra progresso acessível e CTA Continuar', () => {
   new AttemptRepository(() => localStorage).save(
     poc,
-    { ...createAttempt(poc), answers: { a: '1', b: '2' } },
+    {
+      ...createAttempt(poc),
+      answers: { [poc.questions[0]!.id]: 'option-1', [poc.questions[1]!.id]: 'option-2' },
+    },
     [],
   );
   render(<CatalogPage catalog={testCatalog} />);
@@ -143,7 +147,7 @@ it('pageshow atualiza progresso ao restaurar catálogo do cache de navegação',
   render(<CatalogPage catalog={testCatalog} />);
   localStorage.setItem(
     storageKey(catalogExam),
-    JSON.stringify({ storageVersion: 2, current: completedAttempt() }),
+    storageFixtureJson({ storageVersion: 2, current: completedAttempt() }),
   );
   fireEvent(window, new Event('pageshow'));
   expect(within(screen.getAllByRole('article')[0]!).getByText('Concluída')).toBeInTheDocument();

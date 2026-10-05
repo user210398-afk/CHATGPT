@@ -3,7 +3,7 @@ import { Metrics } from '../components/dashboard/Metrics';
 import { SubjectCards } from '../components/dashboard/SubjectCards';
 import { RecentActivity } from '../components/dashboard/RecentActivity';
 import { BackupControls } from '../components/settings/BackupControls';
-import { settingsUrl, sitePath } from '../utils/paths';
+import { settingsUrl, sitePath, reviewUrl } from '../utils/paths';
 import { useDashboardState } from './useDashboardState';
 export function DashboardPage({ catalog }: { catalog: Catalog }) {
   const state = useDashboardState(catalog);
@@ -22,6 +22,11 @@ export function DashboardPage({ catalog }: { catalog: Catalog }) {
         </p>
       )}
       <Metrics metrics={state.metrics} />
+      {state.includesStudy && state.includesExam && (
+        <p className="muted small">
+          As métricas atuais incluem tentativas em Modo Prova e Modo Estudo.
+        </p>
+      )}
       <SubjectCards subjects={state.subjects} />
       <RecentActivity items={state.recent} />
       <section aria-labelledby="quick-title">
@@ -29,6 +34,9 @@ export function DashboardPage({ catalog }: { catalog: Catalog }) {
         <div className="actions">
           <a className="button" href={sitePath('')}>
             Ir para catálogo
+          </a>
+          <a className="button" href={reviewUrl()}>
+            Revisar questões
           </a>
           <a className="button" href={settingsUrl()}>
             Configurações

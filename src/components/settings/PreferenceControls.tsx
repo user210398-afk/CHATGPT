@@ -1,10 +1,19 @@
 import type { UiPreferencesState } from '../../app/useUiPreferences';
 import type { UiPreferences } from '../../engine/ui-preferences';
-type SelectKey = 'theme' | 'textSize' | 'density' | 'contrast';
+type SelectKey = 'theme' | 'textSize' | 'density' | 'contrast' | 'attemptModePreference';
 const selectOptions: Record<
   SelectKey,
   { label: string; help: string; options: [string, string][] }
 > = {
+  attemptModePreference: {
+    label: 'Modo padrão para novas tentativas',
+    help: 'Esta preferência vale apenas para novas tentativas e não altera provas já iniciadas.',
+    options: [
+      ['ask', 'Perguntar sempre'],
+      ['exam', 'Modo Prova'],
+      ['study', 'Modo Estudo'],
+    ],
+  },
   theme: {
     label: 'Tema',
     help: 'Seguir sistema acompanha a aparência do dispositivo.',
@@ -73,6 +82,10 @@ export function PreferenceControls({ ui }: { ui: UiPreferencesState }) {
   }
   return (
     <>
+      <section className="card" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experiência da prova</h2>
+        {select('attemptModePreference')}
+      </section>
       <section className="card" aria-labelledby="appearance-title">
         <h2 id="appearance-title">Aparência</h2>
         <div className="settings-grid">

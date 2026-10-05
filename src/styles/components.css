@@ -637,3 +637,25 @@ progress::-moz-progress-bar {
     padding: min(var(--card-padding), var(--space-5));
   }
 }
+.study-confirmation {
+  margin-block: var(--space-5);
+}
+.question-number.confirmed {
+  border-style: double;
+  border-color: var(--color-success);
+}
+.question-number small {
+  font-size: 0.7rem;
+}
+.review-attempt-list li {
+  margin-block: var(--space-4);
+}
+.review-attempt-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+}
+.review-attempt-list p {
+  margin-bottom: 0;
+}

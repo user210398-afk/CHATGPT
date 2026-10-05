@@ -13,7 +13,7 @@ afterEach(() => {
 });
 it('renderiza e conclui a POC real, restaura dissertativa e exibe modelos somente na revisão', async () => {
   const user = userEvent.setup();
-  const first = render(<ExamPage exam={poc} />);
+  const first = render(<ExamPage exam={poc} preference="exam" />);
   expect(screen.getByRole('heading', { name: 'Questão 1 de 30' })).toBeInTheDocument();
   const answerB = screen.getByRole('radio', { name: /b\) Substância química/ });
   await user.click(answerB);
@@ -28,7 +28,7 @@ it('renderiza e conclui a POC real, restaura dissertativa e exibe modelos soment
   await user.type(screen.getByRole('textbox', { name: 'Sua resposta' }), 'Resposta para revisar.');
   expect(screen.queryByText('Resposta-modelo')).not.toBeInTheDocument();
   first.unmount();
-  render(<ExamPage exam={poc} />);
+  render(<ExamPage exam={poc} preference="exam" />);
   expect(screen.getByRole('heading', { name: 'Questão 21 de 30' })).toBeInTheDocument();
   expect(screen.getByRole('textbox')).toHaveValue('Resposta para revisar.');
   expect(screen.getByText(/Tentativa restaurada/)).toBeInTheDocument();
@@ -52,7 +52,7 @@ it('renderiza e conclui a POC real, restaura dissertativa e exibe modelos soment
 it('debounce da dissertativa evita escrita a cada tecla e permite restaurar após o prazo', async () => {
   const user = userEvent.setup();
   const setItem = vi.spyOn(Storage.prototype, 'setItem');
-  const view = render(<ExamPage exam={poc} />);
+  const view = render(<ExamPage exam={poc} preference="exam" />);
   await user.click(screen.getByRole('button', { name: 'Ir para questão 21' }));
   const writesBeforeTyping = setItem.mock.calls.length;
   const answer = screen.getByRole('textbox', { name: 'Sua resposta' });
@@ -63,7 +63,7 @@ it('debounce da dissertativa evita escrita a cada tecla e permite restaurar apó
   expect(screen.getByText('Salvando resposta…')).toBeInTheDocument();
   await waitFor(() => expect(setItem).toHaveBeenCalledTimes(writesBeforeTyping + 1));
   view.unmount();
-  render(<ExamPage exam={poc} />);
+  render(<ExamPage exam={poc} preference="exam" />);
   expect(screen.getByRole('textbox', { name: 'Sua resposta' })).toHaveValue('abc');
   const writesBeforeFinish = setItem.mock.calls.length;
   await user.click(screen.getByRole('button', { name: 'Finalizar tentativa' }));
@@ -81,7 +81,7 @@ it('erro de quota não interrompe a tentativa dissertativa', async () => {
   const setItem = vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
     throw new Error('QuotaExceededError');
   });
-  render(<ExamPage exam={poc} />);
+  render(<ExamPage exam={poc} preference="exam" />);
   await user.click(screen.getByRole('button', { name: 'Ir para questão 21' }));
   fireEvent.change(screen.getByRole('textbox', { name: 'Sua resposta' }), {
     target: { value: 'resposta em memória' },
@@ -181,6 +181,9 @@ it('realiza loader → estado → renderer sem HTML legado pela URL da aplicaç�
   const fetcher = vi.fn<typeof fetch>().mockResolvedValue(new Response(JSON.stringify(poc)));
   vi.stubGlobal('fetch', fetcher);
   render(<App />);
+  await userEvent
+    .setup()
+    .click(await screen.findByRole('button', { name: 'Iniciar em Modo Prova' }));
   expect(await screen.findByRole('heading', { name: 'Questão 1 de 30' })).toBeInTheDocument();
   expect(fetcher).toHaveBeenCalledTimes(1);
   expect(fetcher.mock.calls[0]![0]).toBe(`/CHATGPT/generated/exams/${poc.id}.json`);

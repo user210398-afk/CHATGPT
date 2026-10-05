@@ -1,3 +1,4 @@
+import { chooseExam } from './attempt-helpers';
 import { test, expect } from '@playwright/test';
 
 test('catálogo → tentativa mista → reload → resultado → revisão no base path', async ({
@@ -19,6 +20,7 @@ test('catálogo → tentativa mista → reload → resultado → revisão no bas
   await page.getByRole('searchbox').fill('hipofise');
   await page.getByRole('link', { name: /Abrir prova/ }).click();
   await expect(page).toHaveURL(/\/CHATGPT\/\?exam=fisiologia-m5-aula-1-2026$/);
+  await chooseExam(page);
   await expect(page.getByRole('heading', { name: 'Questão 1 de 30' })).toBeVisible();
   await page.getByRole('radio', { name: /b\) Substância/ }).check();
   await page.getByRole('button', { name: '⚑ Marcar para revisão' }).click();
@@ -50,6 +52,7 @@ test('catálogo → tentativa mista → reload → resultado → revisão no bas
   await expect(page.getByRole('textbox')).toHaveAttribute('readonly', '');
   await page.getByRole('button', { name: 'Voltar ao resultado' }).click();
   await page.getByRole('button', { name: 'Nova tentativa' }).click();
+  await chooseExam(page);
   await expect(page.getByRole('heading', { name: 'Questão 1 de 30' })).toBeVisible();
   await expect(page.getByRole('radio', { name: /b\) Substância/ })).not.toBeChecked();
   expect(errors).toEqual([]);

@@ -21,6 +21,7 @@ export function Results({
   return (
     <section className="card results" aria-labelledby="results-title">
       <p className="eyebrow">TENTATIVA CONCLUÍDA</p>
+      <p className="badge">{attempt.mode === 'study' ? 'Modo Estudo' : 'Modo Prova'}</p>
       <h2 id="results-title" ref={heading} tabIndex={-1}>
         Seu resultado
       </h2>
@@ -62,6 +63,7 @@ export function Results({
           {history.map((item) => (
             <li key={item.id}>
               {new Date(item.completedAt ?? item.startedAt).toLocaleString('pt-BR')} ·{' '}
+              {item.mode === 'study' ? 'Modo Estudo' : 'Modo Prova'} ·{' '}
               {item.result?.percentage === null
                 ? 'Dissertativa'
                 : `${item.result?.percentage}% nas objetivas`}

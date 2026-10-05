@@ -1,3 +1,5 @@
+import { chooseExam } from './attempt-helpers';
+import { storageFixtureJson } from '../legacy-fixtures';
 import { test, expect, type Page, type Locator } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { parseExam } from '../../schema/exam';
@@ -86,9 +88,9 @@ async function focusProof(page: Page, control: Locator) {
 function inputBackup(current = createAttempt(poc, '2026-10-03T10:00:00.000Z')): Backup {
   return {
     format: 'medsim-backup',
-    version: 1,
+    version: 2,
     exportedAt: '2026-10-04T12:00:00.000Z',
-    exams: [{ examId: poc.id, revision: 1, current, history: [] }],
+    exams: [{ examId: poc.id, revision: 1, current, history: [], reviewAttempts: [] }],
     catalogPreferences: { storageVersion: 1, favorites: [poc.id] },
     uiPreferences: {
       ...defaultUiPreferences,
@@ -102,7 +104,7 @@ async function selectFile(page: Page, input: unknown) {
   await page.getByLabel('Importar progresso', { exact: true }).setInputFiles({
     name: 'backup.json',
     mimeType: 'application/json',
-    buffer: Buffer.from(JSON.stringify(input)),
+    buffer: Buffer.from(storageFixtureJson(input)),
   });
 }
 
@@ -138,6 +140,7 @@ test('7A.2: rotas desconhecidas caem no catálogo e exam válido prevalece sobre
   await page.goto('?exam=../bad&view=dashboard');
   await expect(page.getByRole('heading', { name: 'Meu desempenho' })).toBeVisible();
   await page.goto(`?exam=${poc.id}&view=settings`);
+  await chooseExam(page);
   await expect(page.getByRole('heading', { name: poc.title, exact: true })).toBeVisible();
   await expect(page.locator('.app-nav a[aria-current="page"]')).toHaveCount(0);
 });
@@ -151,6 +154,7 @@ test('7A.2: dogfood responder, dashboard, concluir, disciplina e atividade recen
     .getByRole('article')
     .filter({ has: page.locator(`a[href="/CHATGPT/?exam=${poc.id}"]`) });
   await card.getByRole('link', { name: /Abrir prova/ }).click();
+  await chooseExam(page);
   const first = poc.questions[0]!;
   if (first.type !== 'multiple-choice') throw new Error('Fixture objetiva');
   await page
@@ -185,7 +189,7 @@ test('7A.2: legado light/dark intacto, system acompanha OS e atalho vira explíc
 }) => {
   for (const theme of ['light', 'dark']) {
     await page.goto('?view=settings');
-    const raw = JSON.stringify({ version: 1, theme });
+    const raw = storageFixtureJson({ version: 1, theme });
     await page.evaluate(
       ({ key, raw, uiKey }) => {
         localStorage.removeItem(uiKey);
@@ -228,6 +232,7 @@ test('7A.2: todas configurações persistem e aplicam em prova e resultado', asy
   for (const [key, value] of Object.entries(attrs))
     await expect(page.locator('html')).toHaveAttribute(key, value);
   await page.goto(`?exam=${poc.id}`);
+  await chooseExam(page);
   await expect(page.getByRole('heading', { name: poc.title, exact: true })).toBeVisible();
   for (const [key, value] of Object.entries(attrs))
     await expect(page.locator('html')).toHaveAttribute(key, value);
@@ -308,6 +313,7 @@ test('7A.2: mouse/touch sem retângulo, Tab/Shift+Tab com foco no header, favori
   await focusProof(page, page.getByRole('button', { name: /Tema escuro|Tema claro/ }));
   await focusProof(page, page.locator('.favorite-button').first());
   await page.locator('.exam-card-footer .primary').first().click();
+  await chooseExam(page);
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await focusProof(page, page.getByRole('button', { name: 'Próxima →' }));
   await page.goto('?view=settings');
@@ -393,6 +399,7 @@ test('7A.2: backup roundtrip real em contexto limpo com progresso, histórico, f
 }, info) => {
   const check = monitor(page);
   await page.goto(`?exam=${poc.id}`);
+  await chooseExam(page);
   await page.getByRole('radio').first().check();
   await page.getByRole('button', { name: 'Finalizar tentativa', exact: true }).click();
   await page.getByRole('button', { name: 'Confirmar finalização' }).click();
@@ -414,7 +421,7 @@ test('7A.2: backup roundtrip real em contexto limpo com progresso, histórico, f
   if (!file) throw new Error('Download ausente');
   expect(JSON.parse(readFileSync(file, 'utf8'))).toMatchObject({
     format: 'medsim-backup',
-    version: 1,
+    version: 2,
   });
   const context = await browser.newContext({
     ...info.project.use,
@@ -464,14 +471,15 @@ test('7A.2: current diferente preservado, histórico/favoritos mesclados e UI de
   const local = createAttempt(poc, '2026-10-03T10:00:00.000Z'),
     prefs = { ...defaultUiPreferences, theme: 'light' };
   await seed(page, [
-    [storageKey(poc), JSON.stringify({ storageVersion: 2, current: local })],
-    [uiPreferencesKey, JSON.stringify(prefs)],
+    [storageKey(poc), storageFixtureJson({ storageVersion: 2, current: local })],
+    [uiPreferencesKey, storageFixtureJson(prefs)],
   ]);
   const incoming = inputBackup();
   const completed = transition(poc, incoming.exams[0]!.current!, {
     type: 'finish',
     now: '2026-10-03T11:00:00.000Z',
   });
+  incoming.exams[0]!.current = completed;
   incoming.exams[0]!.history.push(summary(completed));
   const before = await snapshot(page);
   await selectFile(page, incoming);
@@ -563,7 +571,7 @@ test('7A.2: importação de history v2 ao lado de current v1 sobrevive a abrir e
     { ...current, id: 'local-old' },
     { type: 'finish', now: '2026-10-03T11:00:00.000Z' },
   );
-  const raw = JSON.stringify({ storageVersion: 1, current, history: [past] });
+  const raw = storageFixtureJson({ storageVersion: 1, current, history: [past] });
   await seed(page, [[storageKey(poc), raw]]);
   const incoming = inputBackup();
   incoming.exams[0]!.current = transition(
@@ -577,6 +585,7 @@ test('7A.2: importação de history v2 ao lado de current v1 sobrevive a abrir e
   await expect(page.getByRole('status')).toContainText('Importação concluída');
   expect((await snapshot(page))[storageKey(poc)]).toBe(raw);
   await page.goto(`?exam=${poc.id}`);
+  await chooseExam(page);
   await expect(page.getByText('✓ Tentativa restaurada neste navegador.')).toBeVisible();
   expect((await snapshot(page))[storageKey(poc)]).toBe(raw);
   await page.getByRole('button', { name: 'Próxima →' }).click();
@@ -609,6 +618,7 @@ test('7A.2: backup apenas com histórico é mantido ao abrir e concluir uma nova
   await expect(page.getByRole('status')).toContainText('Importação concluída');
   expect((await snapshot(page))[storageKey(poc)]).toBeUndefined();
   await page.goto(`?exam=${poc.id}`);
+  await chooseExam(page);
   await expect(page.getByRole('heading', { name: 'Questão 1 de 30', exact: true })).toBeVisible();
   expect(JSON.parse((await snapshot(page))[historyStorageKey(poc)]!).history).toHaveLength(1);
   await page.getByRole('button', { name: 'Finalizar tentativa', exact: true }).click();
@@ -666,6 +676,7 @@ test('F1: import/load/restart/save preservam as 20 conclusões posteriores e mel
   await expect(page.locator('.history li')).toHaveCount(20);
   await checkHistory();
   await page.getByRole('button', { name: 'Nova tentativa' }).click();
+  await chooseExam(page);
   await page.getByRole('button', { name: 'Próxima →' }).click();
   await checkHistory();
   await page.reload();
@@ -680,7 +691,7 @@ test('F2: preview sinaliza colisão com current aberto e export continua válido
 }) => {
   await page.goto('?view=settings');
   const current = { ...createAttempt(poc, '2026-10-01T10:00:00.000Z'), id: 'collision' };
-  const raw = JSON.stringify({ storageVersion: 2, current });
+  const raw = storageFixtureJson({ storageVersion: 2, current });
   await seed(page, [[storageKey(poc), raw]]);
   const objective = poc.questions.filter((q) => q.type === 'multiple-choice');
   const historyCurrent = {
@@ -713,9 +724,11 @@ test('F2: preview sinaliza colisão com current aberto e export continua válido
   expect(JSON.parse(after[catalogPreferencesKey]!).favorites).toEqual([poc.id]);
   expect(JSON.parse(after[uiPreferencesKey]!)).toEqual(incoming.uiPreferences);
   await page.goto(`?exam=${poc.id}`);
+  await chooseExam(page);
   await page.getByRole('button', { name: 'Finalizar tentativa', exact: true }).click();
   await page.getByRole('button', { name: 'Confirmar finalização' }).click();
   await page.getByRole('button', { name: 'Nova tentativa' }).click();
+  await chooseExam(page);
   await page.getByRole('button', { name: 'Finalizar tentativa', exact: true }).click();
   await page.getByRole('button', { name: 'Confirmar finalização' }).click();
   await page.locator('.app-nav').getByRole('link', { name: 'Configurações' }).click();
@@ -746,6 +759,7 @@ for (const width of [1024, 1280, 390, 375]) {
         await page.getByLabel('Tamanho do texto').selectOption(textSize);
         await page.getByLabel('Densidade').selectOption(density);
         await page.goto(`?exam=${poc.id}`);
+        await chooseExam(page);
         const buttons = page.locator('.question-number');
         await expect(buttons).toHaveCount(30);
         const boxes = await buttons.evaluateAll((elements) =>
@@ -772,7 +786,7 @@ for (const width of [1024, 1280, 390, 375]) {
       }
     }
     await info.attach(`question-map-${width}-measurements`, {
-      body: JSON.stringify(measurements, null, 2),
+      body: storageFixtureJson(measurements, null, 2),
       contentType: 'application/json',
     });
     const currentButton = page.getByRole('button', { name: 'Ir para questão 2', exact: true });
@@ -781,6 +795,7 @@ for (const width of [1024, 1280, 390, 375]) {
     await page.getByLabel('Contraste').selectOption('high');
     await page.getByRole('checkbox', { name: /Indicador de foco reforçado/ }).check();
     await page.goto(`?exam=${poc.id}`);
+    await chooseExam(page);
     const enhanced = page.getByRole('button', { name: 'Ir para questão 2', exact: true });
     await focusProof(page, enhanced);
     expect(await enhanced.evaluate((element) => getComputedStyle(element).outlineWidth)).toBe(

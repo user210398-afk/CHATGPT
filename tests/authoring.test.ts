@@ -1,6 +1,16 @@
 import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { cp, mkdtemp, mkdir, readFile, rm, writeFile, rename } from 'node:fs/promises';
+import {
+  chmod,
+  cp,
+  mkdtemp,
+  mkdir,
+  readFile,
+  rm,
+  writeFile,
+  rename,
+  symlink,
+} from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { promisify } from 'node:util';
@@ -25,6 +35,7 @@ import {
   examCounts,
 } from '../scripts/release-baseline';
 import { readExamCatalog } from '../scripts/catalog';
+import { removeSpanArtifacts } from '../scripts/span-artifacts';
 
 const run = promisify(execFile);
 const fixture = () => ({
@@ -283,6 +294,170 @@ it('gate aceita nova prova mock aprovada e catálogo extensível', async () => {
   await addition();
   expect(await contentGate(root, releaseBaselineCommit)).toBe(1);
   expect((await readExamCatalog(join(root, 'data/exams'))).exams).toHaveLength(18);
+});
+async function modifiedExam(spans = true) {
+  await repository();
+  const pair = approved();
+  if (spans) pair.exam.questions[0]!.statement[0]!.text += '[span_1](start_span)[span_1](end_span)';
+  await addition(pair);
+  const base = (await run('git', ['rev-parse', 'HEAD'], { cwd: root })).stdout.trim();
+  const file = join(root, `data/exams/${pair.exam.id}.json`);
+  const original = await readFile(file, 'utf8');
+  return { base, file, original, cleaned: removeSpanArtifacts(original) };
+}
+it('gate aceita M com remoção exata de spans e conta zero adições', async () => {
+  const { base, file, original, cleaned } = await modifiedExam();
+  expect(cleaned).not.toBe(original);
+  await writeFile(file, cleaned);
+  // This fixture has a retained candidate; keep the existing production equality check valid.
+  await writeFile(join(root, 'authoring/candidates/exemplo-neutro.json'), cleaned);
+  await commit();
+  expect(await contentGate(root, base)).toBe(0);
+});
+const academicChanges: [string, (exam: typeof examTemplate) => void][] = [
+  [
+    'uma letra',
+    (exam) => {
+      exam.questions[0]!.statement[0]!.text = exam.questions[0]!.statement[0]!.text.replace(
+        'Qual',
+        'qual',
+      );
+    },
+  ],
+  [
+    'opção',
+    (exam) => {
+      exam.questions[0]!.options[0]!.text[0]!.text += '!';
+    },
+  ],
+  [
+    'gabarito',
+    (exam) => {
+      exam.questions[0]!.correctAnswer = 'b';
+    },
+  ],
+  [
+    'explanation',
+    (exam) => {
+      exam.questions[0]!.explanation[0]!.text += '!';
+    },
+  ],
+  [
+    'categoria',
+    (exam) => {
+      exam.questions[0]!.category += '!';
+    },
+  ],
+  [
+    'tag',
+    (exam) => {
+      exam.tags.push('nova');
+    },
+  ],
+  [
+    'revision',
+    (exam) => {
+      exam.revision++;
+    },
+  ],
+  [
+    'ID',
+    (exam) => {
+      exam.questions[0]!.id = 'q2';
+    },
+  ],
+  [
+    'whitespace',
+    (exam) => {
+      exam.questions[0]!.statement[0]!.text += ' ';
+    },
+  ],
+  [
+    'pontuação',
+    (exam) => {
+      exam.questions[0]!.statement[0]!.text += '!';
+    },
+  ],
+  [
+    'reordenação',
+    (exam) => {
+      exam.questions[0]!.options.reverse();
+    },
+  ],
+];
+it.each(academicChanges)(
+  'gate rejeita spans removidos mais alteração de %s',
+  async (_label, mutate) => {
+    const { base, file, cleaned } = await modifiedExam();
+    const exam: typeof examTemplate = JSON.parse(cleaned);
+    mutate(exam);
+    await writeFile(file, JSON.stringify(exam));
+    await commit();
+    await expect(contentGate(root, base)).rejects.toThrow(/exclusivamente remoção exata/);
+  },
+);
+it('gate rejeita M sem spans e com alteração acadêmica', async () => {
+  const { base, file, original } = await modifiedExam(false);
+  await writeFile(file, original.replace('Qual', 'qual'));
+  await commit();
+  await expect(contentGate(root, base)).rejects.toThrow(/remoção real de spans/);
+});
+it('gate rejeita M sem remoção real mesmo com bytes iguais à base', async () => {
+  const { base, file, original } = await modifiedExam(false);
+  await chmod(file, 0o755);
+  await commit();
+  expect(await readFile(file, 'utf8')).toBe(original);
+  await expect(contentGate(root, base)).rejects.toThrow(/remoção real de spans/);
+});
+it('gate rejeita cleanup parcial e whitespace externo adicional', async () => {
+  const { base, file, original, cleaned } = await modifiedExam();
+  for (const invalid of [original.replace('[span_1](start_span)', ''), cleaned + '\n']) {
+    await writeFile(file, invalid);
+    await commit();
+    await expect(contentGate(root, base)).rejects.toThrow(/exclusivamente remoção exata/);
+  }
+});
+it.each(['D', 'R', 'T'] as const)(
+  'gate mantém rejeição de %s em prova não baseline',
+  async (status) => {
+    const { base, file } = await modifiedExam();
+    if (status === 'R') await rename(file, join(root, 'data/exams/renomeado.json'));
+    else {
+      await rm(file);
+      if (status === 'T') await symlink('../simulados.json', file);
+    }
+    await commit();
+    await expect(contentGate(root, base)).rejects.toThrow(/somente adições/);
+  },
+);
+it('gate conta somente A ao combinar adição aprovada e cleanup M', async () => {
+  await repository();
+  const file = join(root, 'data/exams/farmaco-p2-2025.json');
+  await writeFile(file, removeSpanArtifacts(await readFile(file, 'utf8')));
+  await addition();
+  expect(await contentGate(root, releaseBaselineCommit)).toBe(1);
+});
+it('gate aceita os três cleanups reais da 7B.1 contra a base aprovada', async () => {
+  await repository();
+  const base = 'd1d9fc3fac7a99f6ad51ccf4153b25e263b07a93';
+  await run('git', ['checkout', '--quiet', base], { cwd: root });
+  for (const id of ['farmaco-p2-2025', 'imunologia-b4-2023', 'imunologia-b4-2024']) {
+    const file = `data/exams/${id}.json`;
+    const original = await readFile(join(root, file), 'utf8');
+    const actual = await readFile(file, 'utf8');
+    expect(actual).toBe(removeSpanArtifacts(original));
+    expect(actual).not.toBe(original);
+    await writeFile(join(root, file), actual);
+  }
+  await commit();
+  expect(await contentGate(root, base)).toBe(0);
+});
+it('gate não aplica a exceção de spans a A sem review approved', async () => {
+  await repository();
+  const pair = fixture();
+  pair.exam.questions[0]!.statement[0]!.text += '[span_1](start_span)[span_1](end_span)';
+  await addition(pair);
+  await expect(contentGate(root, releaseBaselineCommit)).rejects.toThrow(/approved/);
 });
 it('gate rejeita nova prova sem review', async () => {
   await repository();

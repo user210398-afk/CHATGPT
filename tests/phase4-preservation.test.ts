@@ -1,5 +1,6 @@
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { removeSpanArtifacts } from '../scripts/span-artifacts';
 import { readFile } from 'node:fs/promises';
 import { assertReleaseBaseline } from '../scripts/release-baseline';
 import { expect, it } from 'vitest';
@@ -13,7 +14,6 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     'b31295406ee800f0bb113282da7edfc27bfa511b',
     '--',
     'src/engine',
-    'simulados',
     'simulados.json',
     'index.html',
     '*.js',
@@ -27,6 +27,11 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     'scripts/generate-exam-index.ts',
     'package-lock.json',
     ':(exclude)src/engine/persistence.ts',
+    ':(exclude)src/engine/exam-state.ts',
+    ':(exclude)src/engine/review-history.ts',
+    ':(exclude)src/engine/review-filters.ts',
+    ':(exclude)src/engine/storage-transaction.ts',
+    ':(exclude)src/engine/content-equality.ts',
     ':(exclude)src/engine/catalog-progress.ts',
     ':(exclude)src/engine/catalog-preferences.ts',
     ':(exclude)src/engine/catalog-query.ts',
@@ -36,37 +41,34 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     ':(exclude)src/engine/backup-browser.ts',
   ]);
   expect(stdout.trim()).toBe('');
-  // 7A.1 may expose existing contracts and accept index metadata for keys.
-  // 7A.2 also reads imported compact histories alongside a legacy current.
-  // F1 also authorizes chronological retention in includeCurrent.
-  // Strip only that helper, the bridge and its calls; other persistence bodies must match.
-  const { stdout: originalPersistence } = await run('git', [
+  // Authorized 7B.1 transitions/storage are covered by domain and migration tests.
+  // Academic calculation and all historical scripts remain byte-protected.
+  const { stdout: originalEngine } = await run('git', [
     'show',
-    'b31295406ee800f0bb113282da7edfc27bfa511b:src/engine/persistence.ts',
+    'b31295406ee800f0bb113282da7edfc27bfa511b:src/engine/exam-state.ts',
   ]);
-  const persistence = await readFile('src/engine/persistence.ts', 'utf8');
-  const compatiblePersistence = persistence
-    .replace(
-      /^export function includeCurrent[\s\S]*?(?=\n\/\/ Fase 7A.2:)/m,
-      originalPersistence.slice(
-        originalPersistence.indexOf('function includeCurrent('),
-        originalPersistence.indexOf('\nexport class AttemptRepository'),
-      ),
-    )
-    .replace(
-      'if (!raw) return { ...fresh, history: readLegacyHistory(this.storage, exam, []) };',
-      'if (!raw) return fresh;',
-    )
-    .replace(/^\/\/ Fase 7A.2:[\s\S]*?(?=export class AttemptRepository)/m, '')
-    .replace(
-      /history: includeCurrent\(\s*previous\.data\.current,\s*readLegacyHistory\(\s*this\.storage,\s*exam,\s*previous\.data\.history\.map\(summary\),?\s*\),?\s*\)/,
-      'history: includeCurrent(previous.data.current, previous.data.history.map(summary))',
-    )
-    .replace(
-      /^export const (HISTORY_LIMIT|historyEntrySchema|currentEnvelopeSchema|historyEnvelopeSchema|previousEnvelopeSchema)\b/gm,
-      'const $1',
-    )
-    .replace(/^export function (summary|includeCurrent)\b/gm, 'function $1')
-    .replaceAll("Pick<Exam, 'id' | 'revision'>", 'Exam');
-  expect(compatiblePersistence).toBe(originalPersistence);
+  const engine = await readFile('src/engine/exam-state.ts', 'utf8');
+  const calculation = (text: string) =>
+    text.slice(
+      text.indexOf('export function answeredCount('),
+      text.indexOf('export function transition('),
+    );
+  expect(calculation(engine)).toBe(calculation(originalEngine));
+  const { stdout: paths } = await run('git', [
+    'ls-tree',
+    '-r',
+    '-z',
+    '--name-only',
+    'b31295406ee800f0bb113282da7edfc27bfa511b',
+    '--',
+    'simulados',
+  ]);
+  for (const path of paths.split('\0').filter(Boolean)) {
+    const { stdout: base } = await run(
+      'git',
+      ['show', `b31295406ee800f0bb113282da7edfc27bfa511b:${path}`],
+      { maxBuffer: 4 * 1024 * 1024 },
+    );
+    expect(await readFile(path, 'utf8'), path).toBe(removeSpanArtifacts(base));
+  }
 });

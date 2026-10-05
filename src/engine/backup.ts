@@ -2,12 +2,19 @@ import { z } from 'zod';
 import { identifier } from '../../schema/exam';
 import type { Catalog } from '../../schema/catalog';
 import type { Exam } from '../types/exam';
-import { attemptSchema, isCompatibleAttempt, type Attempt } from './exam-state';
 import {
-  currentEnvelopeSchema,
+  attemptSchema,
+  legacyAttemptSchema,
+  normalizeLegacyAttempt,
+  isCompatibleAttempt,
+  type Attempt,
+} from './exam-state';
+import {
+  readableCurrentEnvelopeSchema,
   previousEnvelopeSchema,
-  historyEnvelopeSchema,
+  readableHistoryEnvelopeSchema,
   historyEntrySchema,
+  historyEntryV2Schema,
   storageKey,
   historyStorageKey,
   summary,
@@ -23,16 +30,29 @@ import {
   legacyThemeSchema,
   uiPreferencesKey,
   uiPreferencesSchema,
+  uiPreferencesV1Schema,
+  readableUiPreferencesSchema,
   type UiPreferences,
 } from './ui-preferences';
 import { loadExam } from './exam-loader';
+import {
+  reviewStorageKey,
+  reviewEnvelopeSchema,
+  validateReviewArchive,
+  combineDetailedAttempts,
+  sameAttemptAcademic,
+  retainReviews,
+} from './review-history';
+import { sameContent } from './content-equality';
+export { sameContent } from './content-equality';
+import { writeTransaction } from './storage-transaction';
 export const MAX_BACKUP_BYTES = 10 * 1024 * 1024;
 const boundedId = z
   .string()
   .min(1)
   .max(256)
   .refine((id) => id.trim().length > 0);
-const backupAttemptSchema = attemptSchema.extend({
+const backupLegacyAttemptSchema = legacyAttemptSchema.extend({
   id: boundedId,
   examId: identifier.max(256),
   examRevision: z.number().int().positive().max(1_000_000),
@@ -45,10 +65,10 @@ const backupAttemptSchema = attemptSchema.extend({
     .max(2000)
     .refine((ids) => new Set(ids).size === ids.length),
 });
-const backupHistorySchema = historyEntrySchema
+const backupLegacyHistorySchema = historyEntryV2Schema
   .extend({ id: boundedId })
   .refine((entry) => Date.parse(entry.completedAt) >= Date.parse(entry.startedAt));
-export const backupSchema = z.strictObject({
+export const backupV1Schema = z.strictObject({
   format: z.literal('medsim-backup'),
   version: z.literal(1),
   exportedAt: z.iso.datetime(),
@@ -57,9 +77,9 @@ export const backupSchema = z.strictObject({
       z.strictObject({
         examId: identifier.max(256),
         revision: z.number().int().positive().max(1_000_000),
-        current: backupAttemptSchema.nullable(),
+        current: backupLegacyAttemptSchema.nullable(),
         history: z
-          .array(backupHistorySchema)
+          .array(backupLegacyHistorySchema)
           .max(HISTORY_LIMIT)
           .refine((entries) => new Set(entries.map((entry) => entry.id)).size === entries.length),
       }),
@@ -72,8 +92,61 @@ export const backupSchema = z.strictObject({
       .max(1000)
       .refine((ids) => new Set(ids).size === ids.length),
   }),
+  uiPreferences: uiPreferencesV1Schema.nullable(),
+});
+const backupAttemptSchema = backupLegacyAttemptSchema.extend({
+  mode: attemptSchema.shape.mode,
+  confirmedQuestionIds: z
+    .array(boundedId)
+    .max(2000)
+    .refine((ids) => new Set(ids).size === ids.length),
+});
+const backupHistorySchema = historyEntrySchema
+  .extend({ id: boundedId })
+  .refine((entry) => Date.parse(entry.completedAt) >= Date.parse(entry.startedAt));
+export const backupSchema = backupV1Schema.extend({
+  version: z.literal(2),
+  exams: z
+    .array(
+      z.strictObject({
+        examId: identifier.max(256),
+        revision: z.number().int().positive().max(1_000_000),
+        current: backupAttemptSchema.nullable(),
+        history: z
+          .array(backupHistorySchema)
+          .max(HISTORY_LIMIT)
+          .refine((entries) => new Set(entries.map((entry) => entry.id)).size === entries.length),
+        reviewAttempts: z
+          .array(backupAttemptSchema)
+          .max(HISTORY_LIMIT)
+          .refine((entries) => new Set(entries.map((entry) => entry.id)).size === entries.length),
+      }),
+    )
+    .max(200)
+    .refine((entries) => new Set(entries.map((entry) => entry.examId)).size === entries.length),
   uiPreferences: uiPreferencesSchema.nullable(),
 });
+export const readableBackupSchema = z.union([
+  backupSchema,
+  backupV1Schema.transform((backup) => ({
+    ...backup,
+    version: 2 as const,
+    exams: backup.exams.map((exam) => ({
+      ...exam,
+      current: exam.current ? normalizeLegacyAttempt(exam.current) : null,
+      history: exam.history.map((entry) => ({ ...entry, mode: 'exam' as const })),
+      reviewAttempts: [],
+    })),
+    uiPreferences: backup.uiPreferences
+      ? {
+          ...backup.uiPreferences,
+          storageVersion: 2 as const,
+          attemptModePreference: 'ask' as const,
+        }
+      : null,
+  })),
+]);
+export type BackupV1 = z.infer<typeof backupV1Schema>;
 export type Backup = z.infer<typeof backupSchema>;
 export type BackupExam = Backup['exams'][number];
 export interface BackupStorage extends StorageAdapter {
@@ -99,18 +172,6 @@ export type ImportPlan = {
   hasUiPreferences: boolean;
   applyPreferencesByDefault: boolean;
 };
-function canonical(value: unknown): unknown {
-  if (Array.isArray(value)) return value.map(canonical);
-  if (value && typeof value === 'object')
-    return Object.fromEntries(
-      Object.entries(value)
-        .sort(([a], [b]) => a.localeCompare(b))
-        .map(([key, item]) => [key, canonical(item)]),
-    );
-  return value;
-}
-export const sameContent = (a: unknown, b: unknown) =>
-  JSON.stringify(canonical(a)) === JSON.stringify(canonical(b));
 function sortHistory(entries: HistoryEntry[]) {
   return entries
     .map((entry, index) => ({ entry, index }))
@@ -165,6 +226,13 @@ function snapshotStorage(storage: Pick<BackupStorage, 'getItem'>) {
 function readJson(raw: string) {
   return JSON.parse(raw) as unknown;
 }
+function cachedExamLoader(loader: ExamLoader): ExamLoader {
+  const exams = new Map<string, Promise<Exam>>();
+  return (id) => {
+    if (!exams.has(id)) exams.set(id, loader(id));
+    return exams.get(id)!;
+  };
+}
 async function readStoredExam(
   exam: CatalogExam,
   storage: Pick<BackupStorage, 'getItem'>,
@@ -172,37 +240,61 @@ async function readStoredExam(
 ): Promise<BackupExam> {
   const raw = storage.getItem(storageKey(exam));
   const historyRaw = storage.getItem(historyStorageKey(exam));
+  const reviewRaw = storage.getItem(reviewStorageKey(exam));
   let current: Attempt | null = null;
   let history: HistoryEntry[] = [];
   if (raw !== null) {
     const value = readJson(raw);
-    const v2 = currentEnvelopeSchema.safeParse(value);
+    const v2 = readableCurrentEnvelopeSchema.safeParse(value);
     if (v2.success) {
       current = v2.data.current;
       await validateCurrent(exam, current, loader);
     } else {
       const v1 = previousEnvelopeSchema.parse(value);
-      current = v1.current;
+      current = normalizeLegacyAttempt(v1.current);
       const full = await loader(exam.id);
       if (
         full.id !== exam.id ||
         full.revision !== exam.revision ||
         full.questions.length !== exam.questionCount ||
         !isCompatibleAttempt(full, current) ||
-        v1.history.some((attempt) => !attempt.completedAt || !isCompatibleAttempt(full, attempt))
+        v1.history.some(
+          (attempt) =>
+            !attempt.completedAt || !isCompatibleAttempt(full, normalizeLegacyAttempt(attempt)),
+        )
       )
         throw new Error('Envelope legado incompatível.');
-      history = v1.history.map(summary);
+      history = v1.history.map(normalizeLegacyAttempt).map(summary);
       validateHistory(exam, history);
     }
   }
   if (historyRaw !== null) {
-    const entries = historyEnvelopeSchema.parse(readJson(historyRaw)).history;
+    const entries = readableHistoryEnvelopeSchema.parse(readJson(historyRaw)).history;
     validateHistory(exam, entries);
     history = uniqueHistory([...history, ...entries]);
   }
-  if (current?.completedAt) history = uniqueHistory([...history, summary(current)]);
+  if (current) {
+    const collision = history.find((entry) => entry.id === current.id);
+    if (collision && (!current.completedAt || !sameContent(collision, summary(current))))
+      throw new Error('Colisão de current e histórico.');
+    if (current.completedAt) history = uniqueHistory([...history, summary(current)]);
+  }
+  const archive =
+    reviewRaw === null ? [] : reviewEnvelopeSchema.parse(readJson(reviewRaw)).attempts;
+  if (archive.length) validateReviewArchive(await loader(exam.id), archive);
+  if (current) {
+    const collision = archive.find((attempt) => attempt.id === current.id);
+    if (collision && !sameAttemptAcademic(current, collision))
+      throw new Error('Colisão de current e revisão.');
+  }
+  const reviewAttempts = retainReviews(combineDetailedAttempts(current, archive));
+  for (const attempt of reviewAttempts) {
+    const entry = history.find((entry) => entry.id === attempt.id);
+    if (entry && !sameContent(entry, summary(attempt)))
+      throw new Error('Colisão de histórico e revisão.');
+  }
   return {
+    reviewAttempts,
     examId: exam.id,
     revision: exam.revision,
     current,
@@ -211,7 +303,7 @@ async function readStoredExam(
 }
 function readExportPreferences(storage: Pick<BackupStorage, 'getItem'>): UiPreferences {
   const raw = storage.getItem(uiPreferencesKey);
-  if (raw !== null) return uiPreferencesSchema.parse(readJson(raw));
+  if (raw !== null) return readableUiPreferencesSchema.parse(readJson(raw));
   const legacy = storage.getItem(legacyThemeKey);
   return legacy === null
     ? { ...defaultUiPreferences }
@@ -223,12 +315,13 @@ export async function exportBackup(
   loader: ExamLoader = loadExam,
   now = new Date().toISOString(),
 ): Promise<Backup> {
+  loader = cachedExamLoader(loader);
   const snapshot = snapshotStorage(storage);
   const exams: BackupExam[] = [];
   for (const exam of catalog.exams) {
     try {
       const entry = await readStoredExam(exam, snapshot, loader);
-      if (entry.current || entry.history.length) exams.push(entry);
+      if (entry.current || entry.history.length || entry.reviewAttempts.length) exams.push(entry);
     } catch {
       throw new Error(
         `Exportação abortada: ${exam.title} possui estado local incompatível ou indisponível. Nenhum arquivo parcial foi gerado.`,
@@ -239,7 +332,7 @@ export async function exportBackup(
     const raw = snapshot.getItem(catalogPreferencesKey);
     const backup = backupSchema.parse({
       format: 'medsim-backup',
-      version: 1,
+      version: 2,
       exportedAt: now,
       exams,
       catalogPreferences:
@@ -267,7 +360,7 @@ export function parseBackup(text: string): Backup {
   )
     throw new Error('Arquivo acima do limite de 10 MiB.');
   try {
-    return backupSchema.parse(JSON.parse(text));
+    return readableBackupSchema.parse(JSON.parse(text));
   } catch {
     throw new Error(
       'Backup inválido: verifique formato, versão, campos, datas, limites e IDs duplicados.',
@@ -278,19 +371,22 @@ export function mergeExam(local: BackupExam, incoming: BackupExam) {
   let conflicts = 0;
   const notes: string[] = [];
   let current = local.current;
+  const localReviews = local.reviewAttempts;
   if (incoming.current) {
     if (!current) {
+      const detail = localReviews.find((attempt) => attempt.id === incoming.current!.id);
       const collision = local.history.find((entry) => entry.id === incoming.current!.id);
       if (
-        collision &&
-        (!incoming.current.completedAt || !sameContent(collision, summary(incoming.current)))
+        (detail && !sameAttemptAcademic(detail, incoming.current)) ||
+        (collision &&
+          (!incoming.current.completedAt || !sameContent(collision, summary(incoming.current))))
       ) {
         conflicts++;
         notes.push(
           'Tentativa importada colide com uma conclusão local; o histórico local foi preservado.',
         );
-      } else current = incoming.current;
-    } else if (!sameContent(current, incoming.current)) {
+      } else current = detail ? { ...incoming.current, flagged: detail.flagged } : incoming.current;
+    } else if (!sameAttemptAcademic(current, incoming.current)) {
       conflicts++;
       notes.push('Tentativa atual local preservada por conflito.');
     }
@@ -298,6 +394,12 @@ export function mergeExam(local: BackupExam, incoming: BackupExam) {
   const union = new Map(local.history.map((entry) => [entry.id, entry]));
   const added = new Set<string>();
   for (const entry of incoming.history) {
+    const review = localReviews.find((attempt) => attempt.id === entry.id);
+    if (review && !sameContent(summary(review), entry)) {
+      conflicts++;
+      notes.push(`Histórico ${entry.id}: revisão local preservada por conflito.`);
+      continue;
+    }
     if (
       current?.id === entry.id &&
       (!current.completedAt || !sameContent(summary(current), entry))
@@ -326,12 +428,35 @@ export function mergeExam(local: BackupExam, incoming: BackupExam) {
     }
     union.set(entry.id, entry);
   }
+  const reviews = new Map(localReviews.map((attempt) => [attempt.id, attempt]));
+  for (const attempt of incoming.reviewAttempts) {
+    const localCurrent = local.current?.id === attempt.id ? local.current : null;
+    const localHistory = local.history.find((entry) => entry.id === attempt.id);
+    const existing = reviews.get(attempt.id);
+    if (
+      (localCurrent && !sameAttemptAcademic(localCurrent, attempt)) ||
+      (localHistory && !sameContent(localHistory, summary(attempt))) ||
+      (existing && !sameAttemptAcademic(existing, attempt)) ||
+      (current?.id === attempt.id && !sameAttemptAcademic(current, attempt))
+    ) {
+      conflicts++;
+      notes.push(`Revisão ${attempt.id}: conteúdo local preservado por conflito.`);
+      continue;
+    }
+    if (!existing)
+      reviews.set(
+        attempt.id,
+        current?.id === attempt.id ? { ...attempt, flagged: current.flagged } : attempt,
+      );
+  }
+  const reviewAttempts = retainReviews([...reviews.values()]);
   const history = sortHistory([...union.values()]).slice(0, HISTORY_LIMIT);
   const kept = new Set(history.map((entry) => entry.id));
   const discarded = [...added].filter((id) => !kept.has(id)).length;
   return {
     current,
     history,
+    reviewAttempts,
     conflicts,
     notes,
     discarded,
@@ -339,13 +464,14 @@ export function mergeExam(local: BackupExam, incoming: BackupExam) {
   };
 }
 export async function prepareImport(
-  backup: Backup,
+  input: Backup | BackupV1,
   catalog: Catalog,
   storage: Pick<BackupStorage, 'getItem'> = window.localStorage,
   loader: ExamLoader = loadExam,
 ): Promise<ImportPlan> {
   // Also validate callers that bypass parseBackup.
-  backup = backupSchema.parse(backup);
+  const backup = readableBackupSchema.parse(input);
+  loader = cachedExamLoader(loader);
   const snapshot = snapshotStorage(storage);
   const plan: ImportPlan = {
     exportedAt: backup.exportedAt,
@@ -384,6 +510,20 @@ export async function prepareImport(
     }
     try {
       validateHistory(exam, incoming.history);
+      if (incoming.reviewAttempts.length)
+        validateReviewArchive(await loader(exam.id), incoming.reviewAttempts);
+      const detailed = [
+        ...incoming.reviewAttempts,
+        ...(incoming.current ? [incoming.current] : []),
+      ];
+      for (const attempt of detailed) {
+        const entry = incoming.history.find((entry) => entry.id === attempt.id);
+        if (entry && (!attempt.completedAt || !sameContent(entry, summary(attempt))))
+          throw new Error('Colisão importada.');
+      }
+      for (const review of incoming.reviewAttempts)
+        if (incoming.current?.id === review.id && !sameAttemptAcademic(incoming.current, review))
+          throw new Error('Colisão importada.');
       if (incoming.current) {
         await validateCurrent(exam, incoming.current, loader);
         // A tampered same-ID current/history pair cannot silently replace its own history.
@@ -414,9 +554,11 @@ export async function prepareImport(
       const previousChanges = plan.changes.length;
       // Only write current when imported into an empty destination. No opportunistic v1 migration.
       if (!local.current && merged.current)
-        change(storageKey(exam), { storageVersion: 2, current: merged.current });
+        change(storageKey(exam), { storageVersion: 3, current: merged.current });
       if (!sameContent(local.history, merged.history))
-        change(historyStorageKey(exam), { storageVersion: 2, history: merged.history });
+        change(historyStorageKey(exam), { storageVersion: 3, history: merged.history });
+      if (!sameContent(local.reviewAttempts, merged.reviewAttempts))
+        change(reviewStorageKey(exam), { storageVersion: 1, attempts: merged.reviewAttempts });
       if (plan.changes.length > previousChanges) plan.importedExams++;
     } catch {
       plan.issues.push(
@@ -440,7 +582,7 @@ export async function prepareImport(
   if (backup.uiPreferences) {
     try {
       const before = snapshot.getItem(uiPreferencesKey);
-      if (before !== null) uiPreferencesSchema.parse(readJson(before));
+      if (before !== null) readableUiPreferencesSchema.parse(readJson(before));
       // Preserve any explicit legacy choice unless the user selects the checkbox.
       const legacy = snapshot.getItem(legacyThemeKey);
       plan.applyPreferencesByDefault = before === null && legacy === null;
@@ -467,39 +609,10 @@ export function confirmImport(
     ...(applyPreferences && plan.preferenceChange ? [plan.preferenceChange] : []),
   ];
   try {
-    for (const [key, before] of plan.expected)
-      if (storage.getItem(key) !== before)
-        throw new Error('O progresso local mudou após a prévia. Selecione o arquivo novamente.');
+    writeTransaction(storage, plan.expected, changes);
   } catch (error) {
     throw new Error(
-      `Importação abortada por concorrência ou falha de leitura. ${error instanceof Error ? error.message : ''}`,
-    );
-  }
-  const written: BackupChange[] = [];
-  try {
-    for (const change of changes) {
-      written.push(change); // Include a setItem that mutates and then throws.
-      storage.setItem(change.key, change.after);
-    }
-  } catch {
-    let rollbackFailed = false;
-    for (const change of written.reverse()) {
-      try {
-        if (storage.getItem(change.key) === change.before) continue;
-      } catch {
-        /* A failed read must not prevent attempting restoration. */
-      }
-      try {
-        if (change.before === null) storage.removeItem(change.key);
-        else storage.setItem(change.key, change.before);
-      } catch {
-        rollbackFailed = true;
-      }
-    }
-    throw new Error(
-      rollbackFailed
-        ? 'Importação falhou e o rollback ficou incompleto. Alguns dados podem ter sido alterados; preserve seu backup e confira o progresso local.'
-        : 'Importação falhou. As chaves tocadas foram restauradas; nenhum dado local foi substituído.',
+      `Importação abortada. ${error instanceof Error ? error.message : 'Falha de armazenamento.'}`,
     );
   }
   return {

@@ -25,7 +25,7 @@ export function useUiPreferences() {
     applyUiPreferences(preferences, systemDark);
   }, [preferences, systemDark]);
   function update(patch: Partial<UiPreferences>) {
-    const next = { ...preferences, ...patch, storageVersion: 1 as const };
+    const next = { ...preferences, ...patch, storageVersion: 2 as const };
     setPreferences(next);
     applyUiPreferences(next, systemDark);
     setWarning(saveUiPreferences(next));

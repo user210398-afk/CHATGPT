@@ -22,6 +22,8 @@ export function useDashboardState(catalog: Catalog) {
       subjects: aggregateSubjects(snapshot),
       recent: recentActivity(snapshot),
       unavailable: snapshot.some((item) => item.unavailable),
+      includesStudy: snapshot.some((item) => item.includesStudy),
+      includesExam: snapshot.some((item) => item.includesExam),
     }),
     [snapshot],
   );
