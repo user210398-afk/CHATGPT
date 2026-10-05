@@ -45,7 +45,7 @@ test('release: links e metadados do catálogo atual, refresh, claro/escuro e pat
   const check = monitor(page);
   const { exams } = await readExamCatalog();
   for (const theme of ['light', 'dark']) {
-    await page.goto('./');
+    await page.goto('?view=all');
     await expect(
       page.getByText(`${exams.length} provas disponíveis`, { exact: false }),
     ).toBeVisible();
@@ -53,7 +53,7 @@ test('release: links e metadados do catálogo atual, refresh, claro/escuro e pat
     await expect(page.locator('html')).toHaveAttribute('data-theme', theme);
     await noOverflow(page);
     for (const exam of exams) {
-      await page.goto('./');
+      await page.goto('?view=all');
       const card = page
         .locator('article')
         .filter({ has: page.locator(`a[href="/CHATGPT/?exam=${exam.id}"]`) });
@@ -90,7 +90,7 @@ test('release: links e metadados do catálogo atual, refresh, claro/escuro e pat
 
 test('release: teclado, skip link, labels, foco e estados textuais', async ({ page }) => {
   const check = monitor(page);
-  await page.goto('./');
+  await page.goto('?view=all');
   await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
   await expect(page.locator('html')).toHaveAttribute('lang', 'pt-BR');
   await page.keyboard.press('Tab');
@@ -145,7 +145,7 @@ test('release: teclado, skip link, labels, foco e estados textuais', async ({ pa
 
 test('release: contraste dos tokens nos dois temas e movimento reduzido', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('./');
+  await page.goto('?view=all');
   await expect(page.getByRole('heading', { name: 'Suas provas' })).toBeVisible();
   for (const theme of ['light', 'dark']) {
     if (theme === 'dark') await page.getByRole('button', { name: /Tema escuro/ }).click();

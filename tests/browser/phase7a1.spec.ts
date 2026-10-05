@@ -48,7 +48,7 @@ test('7A.1: catálogo sem progresso, controles acessíveis e somente índice car
 }) => {
   const check = monitor(page);
   const { catalog } = await readExamCatalog();
-  await page.goto('./');
+  await page.goto('?view=all');
   await expect(page.getByRole('article')).toHaveCount(catalog.exams.length);
   await expect(page.locator('.catalog-status')).toHaveText(catalog.exams.map(() => 'Não iniciada'));
   await expect(page.getByRole('link', { name: /Abrir prova/ })).toHaveCount(catalog.exams.length);
@@ -66,7 +66,7 @@ test('7A.1: tentativas sintéticas, filtros por AND e favoritos persistentes', a
   const check = monitor(page);
   const { exams, catalog } = await readExamCatalog();
   const objective = exams.find((exam) => exam.id === 'farmaco-p2-2025')!;
-  await page.goto('./');
+  await page.goto('?view=all');
   await seed(page, [
     [
       storageKey(poc),
@@ -107,7 +107,7 @@ test('7A.1: tentativas sintéticas, filtros por AND e favoritos persistentes', a
     'aria-pressed',
     'true',
   );
-  await expect(page).toHaveURL(/\/CHATGPT\/$/);
+  await expect(page).toHaveURL(/\?view=all$/);
   await page.reload();
   await expect(opened.getByRole('button', { name: /Remover .* dos favoritos/ })).toHaveAttribute(
     'aria-pressed',
@@ -135,7 +135,7 @@ test('7A.1: dogfood responder, voltar, favoritar, concluir e reiniciar sem perde
   page,
 }, info) => {
   const check = monitor(page);
-  await page.goto('./');
+  await page.goto('?view=all');
   await expect(card(page).locator('.catalog-status')).toHaveText('Não iniciada');
   await card(page)
     .getByRole('link', { name: /Abrir prova/ })
@@ -150,7 +150,7 @@ test('7A.1: dogfood responder, voltar, favoritar, concluir e reiniciar sem perde
       .check();
     if (i === 0) await page.getByRole('button', { name: 'Próxima →' }).click();
   }
-  await page.getByRole('link', { name: '← Catálogo de provas' }).click();
+  await page.getByRole('link', { name: '← Simulados da matéria' }).click();
   await expect(card(page).locator('.catalog-status')).toHaveText('Em andamento');
   await expect(card(page).getByText('Respondidas 2 de 30')).toBeVisible();
   await card(page)
@@ -166,7 +166,7 @@ test('7A.1: dogfood responder, voltar, favoritar, concluir e reiniciar sem perde
   await page.getByRole('button', { name: 'Finalizar tentativa', exact: true }).click();
   await page.getByRole('button', { name: 'Confirmar finalização' }).click();
   await expect(page.getByRole('heading', { name: 'Seu resultado' })).toBeVisible();
-  await page.getByRole('link', { name: '← Catálogo de provas' }).click();
+  await page.getByRole('link', { name: '← Simulados da matéria' }).click();
   await expect(card(page).locator('.catalog-status')).toHaveText('Concluída');
   await expect(card(page).getByText('Último resultado: 10%')).toBeVisible();
   await expect(card(page).getByText('1 tentativa concluída')).toBeVisible();
@@ -177,7 +177,7 @@ test('7A.1: dogfood responder, voltar, favoritar, concluir e reiniciar sem perde
   await expect(page.getByRole('heading', { name: 'Seu resultado' })).toBeVisible();
   await page.getByRole('button', { name: 'Nova tentativa' }).click();
   await chooseExam(page);
-  await page.getByRole('link', { name: '← Catálogo de provas' }).click();
+  await page.getByRole('link', { name: '← Simulados da matéria' }).click();
   await expect(card(page).locator('.catalog-status')).toHaveText('Em andamento');
   await expect(card(page).getByText('Respondidas 0 de 30')).toBeVisible();
   await expect(card(page).getByText('1 tentativa concluída')).toBeVisible();
@@ -202,7 +202,7 @@ test('7A.1: storage bloqueado mantém busca, filtros e abertura sem crash', asyn
   });
   const check = monitor(page);
   const { catalog } = await readExamCatalog();
-  await page.goto('./');
+  await page.goto('?view=all');
   await expect(page.getByRole('article')).toHaveCount(catalog.exams.length);
   await page.getByRole('searchbox').fill('hipofise');
   await page.getByLabel('Tipo', { exact: true }).selectOption('mixed');
@@ -222,7 +222,7 @@ test('7A.1: storage bloqueado mantém busca, filtros e abertura sem crash', asyn
 });
 test('7A.1: corrupção é preservada e falha de escrita é honesta', async ({ page }) => {
   const check = monitor(page);
-  await page.goto('./');
+  await page.goto('?view=all');
   const corruptKey = storageKey(poc);
   await seed(page, [
     [corruptKey, '{bad'],

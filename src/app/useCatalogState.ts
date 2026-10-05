@@ -22,17 +22,15 @@ export function useCatalogState(catalog: Catalog) {
     window.addEventListener('pageshow', refresh);
     return () => window.removeEventListener('pageshow', refresh);
   }, [catalog]);
-  const items = useMemo(() => {
+  const allItems = useMemo(() => {
     const favorites = new Set(snapshot.preferences.favorites);
-    return selectCatalogItems(
-      snapshot.progress.map(({ exam, progress }) => ({
-        exam,
-        progress,
-        favorite: favorites.has(exam.id),
-      })),
-      filters,
-    );
-  }, [snapshot, filters]);
+    return snapshot.progress.map(({ exam, progress }) => ({
+      exam,
+      progress,
+      favorite: favorites.has(exam.id),
+    }));
+  }, [snapshot]);
+  const items = useMemo(() => selectCatalogItems(allItems, filters), [allItems, filters]);
   function toggleFavorite(id: string) {
     const saved = preferencesRepository.setFavorite(
       id,
@@ -41,6 +39,7 @@ export function useCatalogState(catalog: Catalog) {
     setSnapshot((previous) => ({ ...previous, ...saved }));
   }
   return {
+    allItems,
     items,
     filters,
     setFilters,

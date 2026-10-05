@@ -10,7 +10,7 @@ import { catalogExam, completedAttempt, testCatalog } from './catalog-fixtures';
 import { poc } from './fixtures';
 afterEach(() => vi.restoreAllMocks());
 it('renderiza todas as provas, status textual e CTA inicial', () => {
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(screen.getAllByRole('article')).toHaveLength(3);
   expect(screen.getAllByText('Não iniciada')).toHaveLength(3);
   expect(screen.getAllByRole('link', { name: /Abrir prova/ })).toHaveLength(3);
@@ -26,7 +26,7 @@ it('tentativa aberta mostra progresso acessível e CTA Continuar', () => {
     },
     [],
   );
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(within(screen.getAllByRole('article')[0]!).getByText('Em andamento')).toBeInTheDocument();
   expect(screen.getByText('Respondidas 2 de 30')).toBeInTheDocument();
   expect(screen.getByRole('progressbar')).toHaveAccessibleName('Respondidas 2 de 30 7%');
@@ -38,7 +38,7 @@ it('tentativa aberta mostra progresso acessível e CTA Continuar', () => {
 });
 it('conclusão mostra resultado, singular e CTA Ver prova', () => {
   new AttemptRepository(() => localStorage).save(poc, completedAttempt(), []);
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(screen.getByText('Concluída')).toBeInTheDocument();
   expect(screen.getByText('Último resultado: 5%')).toBeInTheDocument();
   expect(screen.getByText('1 tentativa concluída')).toBeInTheDocument();
@@ -55,12 +55,12 @@ it('dissertativa concluída mostra sem nota automática sem inferir percentual',
     now: '2026-10-03T11:00:00.000Z',
   });
   new AttemptRepository(() => localStorage).save(essay, current, []);
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(screen.getByText('Concluída · sem nota automática')).toBeInTheDocument();
   expect(screen.queryByText(/Último resultado/)).not.toBeInTheDocument();
 });
 it('favorito muda aria-pressed imediatamente, persiste e não abre a prova', async () => {
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   const user = userEvent.setup();
   const button = screen.getByRole('button', {
     name: `Adicionar ${catalogExam.title} aos favoritos`,
@@ -75,7 +75,7 @@ it('favorito muda aria-pressed imediatamente, persiste e não abre a prova', asy
   expect(screen.getAllByRole('article')).toHaveLength(3);
 });
 it('filtros combinados, contador X de Y, empty state e limpar restauram todos os controles', async () => {
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   const user = userEvent.setup();
   await user.selectOptions(screen.getByLabelText('Disciplina'), 'Farmacologia');
   await user.selectOptions(screen.getByLabelText('Tipo'), 'objective-only');
@@ -96,7 +96,7 @@ it('filtros combinados, contador X de Y, empty state e limpar restauram todos os
   expect(screen.getByLabelText('Ordenação')).toHaveValue('default');
 });
 it('filtro favoritos reage à remoção sem recarregar a página', async () => {
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   const user = userEvent.setup();
   await user.click(
     screen.getByRole('button', { name: `Adicionar ${catalogExam.title} aos favoritos` }),
@@ -109,7 +109,7 @@ it('filtro favoritos reage à remoção sem recarregar a página', async () => {
   expect(screen.queryAllByRole('article')).toHaveLength(0);
 });
 it('falha de escrita preserva aria-pressed e mostra aviso honesto', async () => {
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
     throw new Error('quota');
   });
@@ -125,7 +125,7 @@ it('storage bloqueado permite catálogo, links, busca e filtros independentes', 
   vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
     throw new DOMException('blocked', 'SecurityError');
   });
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(screen.getAllByRole('article')).toHaveLength(3);
   expect(screen.getAllByRole('link', { name: /Abrir prova/ })).toHaveLength(3);
   await userEvent.setup().selectOptions(screen.getByLabelText('Tipo'), 'essay-only');
@@ -136,7 +136,7 @@ it('storage bloqueado permite catálogo, links, busca e filtros independentes', 
 it('corrupção não sobrescreve os registros ao montar ou favoritar', async () => {
   localStorage.setItem(catalogPreferencesKey, '{bad');
   localStorage.setItem(storageKey(catalogExam), '{bad-current');
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   await userEvent
     .setup()
     .click(screen.getByRole('button', { name: `Adicionar ${catalogExam.title} aos favoritos` }));
@@ -144,7 +144,7 @@ it('corrupção não sobrescreve os registros ao montar ou favoritar', async () 
   expect(localStorage.getItem(storageKey(catalogExam))).toBe('{bad-current');
 });
 it('pageshow atualiza progresso ao restaurar catálogo do cache de navegação', () => {
-  render(<CatalogPage catalog={testCatalog} />);
+  render(<CatalogPage catalog={testCatalog} mode="all" />);
   localStorage.setItem(
     storageKey(catalogExam),
     storageFixtureJson({ storageVersion: 2, current: completedAttempt() }),

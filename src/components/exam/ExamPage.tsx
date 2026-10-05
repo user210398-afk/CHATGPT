@@ -3,7 +3,8 @@ import type { Exam } from '../../types/exam';
 import { useExamSession } from '../../app/useExamSession';
 import { answeredCount, pendingConfirmationIds } from '../../engine/exam-state';
 import { readUiPreferences, type UiPreferences } from '../../engine/ui-preferences';
-import { sitePath } from '../../utils/paths';
+import { subjectUrl } from '../../utils/paths';
+import { subjectGroupDefinition } from '../../engine/subject-groups';
 import { Images } from '../common/Images';
 import { Results } from '../results/Results';
 import { QuestionNavigation } from './QuestionNavigation';
@@ -28,8 +29,8 @@ export function ExamPage({
   const question = current ? exam.questions[current.currentIndex]! : null;
   return (
     <>
-      <a className="back-link" href={sitePath('')}>
-        ← Catálogo de provas
+      <a className="back-link" href={subjectUrl(subjectGroupDefinition(exam.subject).id)}>
+        ← Simulados da matéria
       </a>
       <header className="page-heading">
         <p className="eyebrow">

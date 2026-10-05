@@ -124,7 +124,7 @@ test('7A.2: dashboard vazio, navegação e apenas índice no carregamento normal
   await expect(page.getByRole('heading', { name: 'Desempenho por disciplina' })).toBeVisible();
   await noOverflow(page);
   await page.getByRole('link', { name: 'Ir para catálogo' }).click();
-  await expect(page.getByRole('heading', { name: 'Suas provas' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Suas matérias' })).toBeVisible();
   await page.locator('.app-nav').getByRole('link', { name: 'Configurações' }).click();
   await expect(page.getByLabel('Tema', { exact: true })).toBeVisible();
   await noOverflow(page);
@@ -136,7 +136,7 @@ test('7A.2: rotas desconhecidas caem no catálogo e exam válido prevalece sobre
   page,
 }) => {
   await page.goto('?view=unknown');
-  await expect(page.getByRole('heading', { name: 'Suas provas' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Suas matérias' })).toBeVisible();
   await page.goto('?exam=../bad&view=dashboard');
   await expect(page.getByRole('heading', { name: 'Meu desempenho' })).toBeVisible();
   await page.goto(`?exam=${poc.id}&view=settings`);
@@ -149,7 +149,7 @@ test('7A.2: dogfood responder, dashboard, concluir, disciplina e atividade recen
   page,
 }, info) => {
   const check = monitor(page);
-  await page.goto('./');
+  await page.goto('?view=all');
   const card = page
     .getByRole('article')
     .filter({ has: page.locator(`a[href="/CHATGPT/?exam=${poc.id}"]`) });
@@ -309,7 +309,7 @@ test('7A.2: 375/390px, três tamanhos, densidade e quatro combinações de contr
 test('7A.2: mouse/touch sem retângulo, Tab/Shift+Tab com foco no header, favorito, ação e setting', async ({
   page,
 }) => {
-  await page.goto('./');
+  await page.goto('?view=all');
   await focusProof(page, page.getByRole('button', { name: /Tema escuro|Tema claro/ }));
   await focusProof(page, page.locator('.favorite-button').first());
   await page.locator('.exam-card-footer .primary').first().click();
@@ -362,7 +362,7 @@ test('7A.2: convite opcional não bloqueia e não reaparece depois de decisão v
   page,
 }) => {
   await page.goto('./');
-  await expect(page.getByRole('heading', { name: 'Suas provas' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Suas matérias' })).toBeVisible();
   await page.getByRole('link', { name: 'Configurar agora' }).click();
   await expect(page.getByLabel('Tema', { exact: true })).toBeVisible();
   expect((await snapshot(page))[uiPreferencesKey]).toBeUndefined();
@@ -403,7 +403,8 @@ test('7A.2: backup roundtrip real em contexto limpo com progresso, histórico, f
   await page.getByRole('radio').first().check();
   await page.getByRole('button', { name: 'Finalizar tentativa', exact: true }).click();
   await page.getByRole('button', { name: 'Confirmar finalização' }).click();
-  await page.locator('.app-nav').getByRole('link', { name: 'Catálogo' }).click();
+  await page.locator('.app-nav').getByRole('link', { name: 'Matérias' }).click();
+  await page.getByRole('link', { name: 'Ver todos os simulados' }).click();
   await page
     .getByRole('article')
     .filter({ has: page.locator(`a[href="/CHATGPT/?exam=${poc.id}"]`) })
@@ -453,7 +454,8 @@ test('7A.2: backup roundtrip real em contexto limpo com progresso, histórico, f
     await expect(restored.locator('html')).toHaveAttribute('data-theme', 'dark');
     await restored.locator('.app-nav').getByRole('link', { name: 'Dashboard' }).click();
     await expect(metric(restored, 'Provas concluídas')).toHaveText('1');
-    await restored.locator('.app-nav').getByRole('link', { name: 'Catálogo' }).click();
+    await restored.locator('.app-nav').getByRole('link', { name: 'Matérias' }).click();
+    await restored.getByRole('link', { name: 'Ver todos os simulados' }).click();
     await expect(
       restored.getByRole('button', { name: `Remover ${poc.title} dos favoritos` }),
     ).toHaveAttribute('aria-pressed', 'true');

@@ -15,7 +15,7 @@ test('catálogo → tentativa mista → reload → resultado → revisão no bas
     if (response.status() >= 400) failures.push(response.url());
   });
   page.on('request', (request) => requests.push(request.url()));
-  await page.goto('./');
+  await page.goto('?view=all');
   await expect(page.getByRole('heading', { name: 'Suas provas' })).toBeVisible();
   await page.getByRole('searchbox').fill('hipofise');
   await page.getByRole('link', { name: /Abrir prova/ }).click();
