@@ -62,12 +62,44 @@ function validHistory(history: HistoryEntry[]): boolean {
   );
 }
 export function includeCurrent(current: Attempt, history: HistoryEntry[]): HistoryEntry[] {
-  return current.completedAt
-    ? [summary(current), ...history.filter((item) => item.id !== current.id)].slice(
-        0,
-        HISTORY_LIMIT,
+  // Current remains authoritative for its ID, but receives no priority over newer dates.
+  const entries = current.completedAt ? [summary(current), ...history] : history;
+  const unique = new Map<string, HistoryEntry>();
+  for (const entry of entries) if (!unique.has(entry.id)) unique.set(entry.id, entry);
+  return [...unique.values()]
+    .map((entry, index) => ({ entry, index }))
+    .sort(
+      (a, b) =>
+        Date.parse(b.entry.completedAt) - Date.parse(a.entry.completedAt) || a.index - b.index,
+    )
+    .slice(0, HISTORY_LIMIT)
+    .map(({ entry }) => entry);
+}
+// Fase 7A.2: read-only bridge for compact histories imported beside a legacy current.
+function readLegacyHistory(
+  storage: () => StorageAdapter,
+  exam: Exam,
+  legacy: HistoryEntry[],
+): HistoryEntry[] {
+  try {
+    const raw = storage().getItem(historyStorageKey(exam));
+    if (raw === null) return legacy;
+    const parsed = historyEnvelopeSchema.safeParse(JSON.parse(raw));
+    if (!parsed.success || !validHistory(parsed.data.history)) return legacy;
+    // A legacy local collision wins. Compatible imports already preserve this content.
+    return [
+      ...new Map([...parsed.data.history, ...legacy].map((entry) => [entry.id, entry])).values(),
+    ]
+      .map((entry, index) => ({ entry, index }))
+      .sort(
+        (a, b) =>
+          Date.parse(b.entry.completedAt) - Date.parse(a.entry.completedAt) || a.index - b.index,
       )
-    : history;
+      .slice(0, HISTORY_LIMIT)
+      .map(({ entry }) => entry);
+  } catch {
+    return legacy;
+  }
 }
 export class AttemptRepository {
   private readonly savedHistory = new Set<string>();
@@ -83,7 +115,7 @@ export class AttemptRepository {
     this.savedHistory.delete(key);
     try {
       const raw = this.storage().getItem(storageKey(exam));
-      if (!raw) return fresh;
+      if (!raw) return { ...fresh, history: readLegacyHistory(this.storage, exam, []) };
       const value: unknown = JSON.parse(raw);
       const current = currentEnvelopeSchema.safeParse(value);
       if (current.success) {
@@ -144,7 +176,10 @@ export class AttemptRepository {
       }
       return {
         current: previous.data.current,
-        history: includeCurrent(previous.data.current, previous.data.history.map(summary)),
+        history: includeCurrent(
+          previous.data.current,
+          readLegacyHistory(this.storage, exam, previous.data.history.map(summary)),
+        ),
         warning: null,
         restored: true,
       };

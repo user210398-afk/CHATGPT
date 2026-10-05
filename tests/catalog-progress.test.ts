@@ -56,6 +56,7 @@ describe('leitura local de progresso do catálogo', () => {
       progressPercentage: 0,
       attemptCount: 0,
       lastResultPercentage: null,
+      lastResultAt: null,
       bestResultPercentage: null,
       lastActivityAt: null,
     });

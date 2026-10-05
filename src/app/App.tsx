@@ -1,10 +1,13 @@
 import { useCallback } from 'react';
 import { loadCatalog, loadExam } from '../engine/exam-loader';
 import { ExamPage } from '../components/exam/ExamPage';
-import { sitePath } from '../utils/paths';
+import { sitePath, dashboardUrl, settingsUrl, resolveRoute } from '../utils/paths';
 import { CatalogPage } from './CatalogPage';
 import { useResource } from './useResource';
-import { useTheme } from './theme';
+import { useUiPreferences, type UiPreferencesState } from './useUiPreferences';
+import { DashboardPage } from './DashboardPage';
+import { SettingsPage } from './SettingsPage';
+import { SetupPrompt } from '../components/common/SetupPrompt';
 const catalogLoader = (signal: AbortSignal) => loadCatalog(fetch, signal);
 function LoadMessage({ error }: { error?: string }) {
   return error ? (
@@ -17,9 +20,22 @@ function LoadMessage({ error }: { error?: string }) {
     <p role="status">Carregando…</p>
   );
 }
-function CatalogRoute() {
+function CatalogRoute({ view, ui }: { view: string; ui: UiPreferencesState }) {
   const { data, error } = useResource(catalogLoader);
-  return data ? <CatalogPage catalog={data} /> : <LoadMessage error={error} />;
+  return data ? (
+    <>
+      {view !== 'settings' && <SetupPrompt ui={ui} />}
+      {view === 'dashboard' ? (
+        <DashboardPage catalog={data} />
+      ) : view === 'settings' ? (
+        <SettingsPage catalog={data} ui={ui} />
+      ) : (
+        <CatalogPage catalog={data} />
+      )}
+    </>
+  ) : (
+    <LoadMessage error={error} />
+  );
 }
 function ExamRoute({ id }: { id: string }) {
   const loader = useCallback((signal: AbortSignal) => loadExam(id, fetch, signal), [id]);
@@ -31,8 +47,10 @@ function ExamRoute({ id }: { id: string }) {
   );
 }
 export function App() {
-  const id = new URLSearchParams(window.location.search).get('exam');
-  const { theme, toggleTheme, warning } = useTheme();
+  const route = resolveRoute(window.location.search);
+  const ui = useUiPreferences();
+  const { theme, toggleTheme } = ui;
+  const warning = ui.warning ?? (route.view === 'settings' ? ui.readWarning : null);
   return (
     <>
       <a className="skip-link" href="#main">
@@ -48,6 +66,19 @@ export function App() {
               MedSim<small>PRÁTICA MÉDICA</small>
             </span>
           </a>
+          <nav className="app-nav" aria-label="Navegação principal">
+            {(
+              [
+                ['catalog', 'Catálogo', sitePath('')],
+                ['dashboard', 'Dashboard', dashboardUrl()],
+                ['settings', 'Configurações', settingsUrl()],
+              ] as const
+            ).map(([view, label, href]) => (
+              <a key={view} href={href} aria-current={route.view === view ? 'page' : undefined}>
+                {label}
+              </a>
+            ))}
+          </nav>
           <div className="header-actions">
             <span className="muted small header-caption">Seu tempo. Seu aprendizado.</span>
             <button aria-pressed={theme === 'dark'} onClick={toggleTheme}>
@@ -58,11 +89,15 @@ export function App() {
       </header>
       {warning && (
         <p role="status" className="notice">
-          O tema foi aplicado, mas não pôde ser salvo neste navegador.
+          {warning}
         </p>
       )}
       <main id="main" className="main-container" tabIndex={-1}>
-        {id !== null ? <ExamRoute id={id} /> : <CatalogRoute />}
+        {route.view === 'exam' ? (
+          <ExamRoute id={route.id!} />
+        ) : (
+          <CatalogRoute view={route.view} ui={ui} />
+        )}
       </main>
       <footer className="app-footer">
         <span>MedSim · Aprender é uma prática contínua.</span>

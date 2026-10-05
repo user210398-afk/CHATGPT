@@ -208,3 +208,46 @@ summary {
     scroll-behavior: auto !important;
   }
 }
+/* Pointer focus stays on the control; only its keyboard outline is suppressed. */
+:is(button, .button, .app-nav a, .brand):focus:not(:focus-visible) {
+  outline: none;
+}
+:is(button, .button, .app-nav a, .brand, input, select, .setting-check) {
+  -webkit-tap-highlight-color: transparent;
+}
+:is(button, .button, .app-nav a):active:not(:disabled) {
+  background: var(--color-selection);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+:root[data-reduced-motion='true'] * {
+  transition: none !important;
+  animation: none !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}
+input[type='checkbox'] {
+  accent-color: var(--color-primary);
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+}
+input[type='file'] {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+}
+input[type='file']::file-selector-button {
+  min-height: 44px;
+}
+select {
+  min-height: 44px;
+}

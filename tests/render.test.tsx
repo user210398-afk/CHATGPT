@@ -173,7 +173,8 @@ it('carrega o catálogo, filtra por texto sem acentos e salva tema', async () =>
   expect(screen.getByRole('status')).toHaveTextContent('Nenhuma prova encontrada');
   await user.click(screen.getByRole('button', { name: /Tema escuro/ }));
   expect(document.documentElement.dataset.theme).toBe('dark');
-  expect(localStorage.getItem('chatgpt-exams:preferences:v1')).toContain('dark');
+  expect(localStorage.getItem('chatgpt-exams:v1:ui-preferences')).toContain('dark');
+  expect(localStorage.getItem('chatgpt-exams:preferences:v1')).toBeNull();
 });
 it('realiza loader → estado → renderer sem HTML legado pela URL da aplicação', async () => {
   window.history.replaceState({}, '', `/CHATGPT/?exam=${poc.id}`);

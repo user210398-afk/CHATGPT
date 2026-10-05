@@ -1,7 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { AttemptRepository, historyStorageKey, storageKey } from '../src/engine/persistence';
+import {
+  AttemptRepository,
+  historyStorageKey,
+  storageKey,
+  includeCurrent,
+  summary,
+  HISTORY_LIMIT,
+} from '../src/engine/persistence';
 import { createAttempt, transition } from '../src/engine/exam-state';
 import { poc, first, firstEssay } from './fixtures';
+import { completedAttempt } from './catalog-fixtures';
 const repository = () => new AttemptRepository(() => localStorage);
 describe('persistência isolada e versionada', () => {
   it('restaura respostas, questão, marcação, início, resultado e histórico sem duplicar', () => {
@@ -165,5 +173,67 @@ describe('persistência isolada e versionada', () => {
     expect(JSON.parse(localStorage.getItem(historyStorageKey(poc))!).history[0].id).toBe(
       completed.id,
     );
+  });
+});
+
+describe('F1: retenção cronológica compartilhada', () => {
+  const recent = () =>
+    Array.from({ length: HISTORY_LIMIT }, (_, i) =>
+      summary(
+        completedAttempt(
+          `recent-${i}`,
+          i === 0 ? 20 : 0,
+          `2026-10-04T10:${String(i).padStart(2, '0')}:00.000Z`,
+        ),
+      ),
+    );
+  it('current antigo não desloca nenhuma das 20 conclusões posteriores, incluindo 100%', () => {
+    const current = completedAttempt('old', 0),
+      history = recent();
+    const before = structuredClone({ current, history });
+    const result = includeCurrent(current, history);
+    expect(result).toEqual([...history].reverse());
+    expect(result).toHaveLength(HISTORY_LIMIT);
+    expect(result.some((entry) => entry.result.percentage === 100)).toBe(true);
+    expect({ current, history }).toEqual(before);
+  });
+  it('current dentro dos 20 mais recentes aparece uma vez com precedência de conteúdo', () => {
+    const current = completedAttempt('recent-10', 10, '2026-10-04T10:10:00.000Z');
+    const result = includeCurrent(current, recent());
+    expect(result).toHaveLength(HISTORY_LIMIT);
+    expect(result.filter((entry) => entry.id === current.id)).toEqual([summary(current)]);
+  });
+  it('current mais recente vai para o topo e remove somente a conclusão mais antiga', () => {
+    const current = completedAttempt('latest', 10, '2026-10-04T11:00:00.000Z');
+    const result = includeCurrent(current, recent());
+    expect(result[0]).toEqual(summary(current));
+    expect(result.map((entry) => entry.id)).toEqual([
+      'latest',
+      ...recent()
+        .slice(1)
+        .reverse()
+        .map((entry) => entry.id),
+    ]);
+  });
+  it('current e history semanticamente iguais são deduplicados, incluindo outras duplicatas', () => {
+    const current = completedAttempt('same', 10);
+    const item = summary(current);
+    expect(includeCurrent(current, [item, structuredClone(item)])).toEqual([item]);
+  });
+  it('empates preservam explicitamente current e depois a ordem original dos IDs únicos', () => {
+    const current = completedAttempt('current', 1);
+    const history = ['b', 'a', 'b'].map((id) => summary(completedAttempt(id, 1)));
+    expect(includeCurrent(current, history).map((entry) => entry.id)).toEqual([
+      'current',
+      'b',
+      'a',
+    ]);
+  });
+  it('current aberto normaliza history fora de ordem sem mutação ou prioridade artificial', () => {
+    const history = recent();
+    const shuffled = [history[5]!, ...history.slice(0, 5), ...history.slice(6), history[5]!];
+    const before = structuredClone(shuffled);
+    expect(includeCurrent(createAttempt(poc), shuffled)).toEqual([...history].reverse());
+    expect(shuffled).toEqual(before);
   });
 });
