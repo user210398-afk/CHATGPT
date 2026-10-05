@@ -16,6 +16,8 @@ export function resolveRoute(search: string): {
   reviewExam?: string;
   attempt?: string;
   id?: string;
+  area?: string;
+  allExams?: boolean;
 } {
   const params = new URLSearchParams(search),
     id = params.get('exam');
@@ -31,9 +33,19 @@ export function resolveRoute(search: string): {
         : {}),
     };
   }
-  return { view: view === 'dashboard' || view === 'settings' ? view : 'catalog' };
+  if (view === 'dashboard' || view === 'settings') return { view };
+  const area = params.get('area');
+  return { view: 'catalog', ...(area !== null ? { area } : { allExams: view === 'all' }) };
 }
 
 export function reviewUrl(examId?: string, attemptId?: string): string {
   return `${sitePath('')}?view=review${examId && attemptId ? `&reviewExam=${encodeURIComponent(identifier.parse(examId))}&attempt=${encodeURIComponent(attemptId)}` : ''}`;
+}
+
+export function subjectUrl(id: string): string {
+  return `${sitePath('')}?area=${encodeURIComponent(id)}`;
+}
+
+export function allExamsUrl(): string {
+  return `${sitePath('')}?view=all`;
 }

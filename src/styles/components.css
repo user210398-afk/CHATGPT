@@ -182,7 +182,10 @@
   margin-top: var(--space-5);
 }
 .back-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
   margin-bottom: var(--space-5);
   font-size: var(--font-small);
   text-decoration: none;
@@ -658,4 +661,65 @@ progress::-moz-progress-bar {
 }
 .review-attempt-list p {
   margin-bottom: 0;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: var(--layout-gap);
+}
+.subject-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-height: 310px;
+  padding: calc(var(--card-padding) + var(--space-2));
+}
+.subject-monogram {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-selection);
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+}
+.subject-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  margin-bottom: var(--space-3);
+}
+.subject-progress {
+  margin-bottom: var(--space-5);
+}
+.subject-cta {
+  margin-top: auto;
+}
+.catalog-breadcrumb {
+  margin-bottom: var(--space-5);
+}
+.catalog-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.catalog-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+}
+@media (max-width: 48rem) {
+  .subject-card {
+    padding: calc(min(var(--card-padding), var(--space-5)) + var(--space-2));
+  }
 }

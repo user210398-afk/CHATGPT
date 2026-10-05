@@ -37,7 +37,11 @@ function CatalogRoute({ view, ui }: { view: string; ui: UiPreferencesState }) {
       ) : view === 'settings' ? (
         <SettingsPage catalog={data} ui={ui} />
       ) : (
-        <CatalogPage catalog={data} />
+        <CatalogPage
+          catalog={data}
+          area={resolveRoute(window.location.search).area}
+          mode={resolveRoute(window.location.search).allExams ? 'all' : 'hub'}
+        />
       )}
     </>
   ) : (
@@ -80,7 +84,7 @@ export function App() {
           <nav className="app-nav" aria-label="Navegação principal">
             {(
               [
-                ['catalog', 'Catálogo', sitePath('')],
+                ['catalog', 'Matérias', sitePath('')],
                 ['dashboard', 'Dashboard', dashboardUrl()],
                 ['review', 'Revisão', reviewUrl()],
                 ['settings', 'Configurações', settingsUrl()],

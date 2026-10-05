@@ -7,12 +7,14 @@ export function CatalogFilters({
   onChange,
   active,
   onClear,
+  showSubject = true,
 }: {
   catalog: Catalog;
   filters: CatalogFiltersState;
   onChange: (filters: CatalogFiltersState) => void;
   active: boolean;
   onClear: () => void;
+  showSubject?: boolean;
 }) {
   const options = useMemo(() => catalogFilterOptions(catalog.exams), [catalog]);
   const selects: {
@@ -90,22 +92,24 @@ export function CatalogFilters({
           onChange={(event) => onChange({ ...filters, query: event.target.value })}
         />
       </div>
-      {selects.map(({ key, label, options }) => (
-        <div key={key}>
-          <label htmlFor={`catalog-${key}`}>{label}</label>
-          <select
-            id={`catalog-${key}`}
-            value={filters[key]}
-            onChange={(event) => onChange({ ...filters, [key]: event.target.value })}
-          >
-            {options.map(([value, text]) => (
-              <option key={value} value={value}>
-                {text}
-              </option>
-            ))}
-          </select>
-        </div>
-      ))}
+      {selects
+        .filter(({ key }) => showSubject || key !== 'subject')
+        .map(({ key, label, options }) => (
+          <div key={key}>
+            <label htmlFor={`catalog-${key}`}>{label}</label>
+            <select
+              id={`catalog-${key}`}
+              value={filters[key]}
+              onChange={(event) => onChange({ ...filters, [key]: event.target.value })}
+            >
+              {options.map(([value, text]) => (
+                <option key={value} value={value}>
+                  {text}
+                </option>
+              ))}
+            </select>
+          </div>
+        ))}
       {active && (
         <button className="catalog-clear" onClick={onClear}>
           Limpar filtros

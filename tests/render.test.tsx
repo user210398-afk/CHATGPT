@@ -142,6 +142,7 @@ it('alternativa com parágrafo, lista e tabela mantém radio acessível e seleci
   expect(onAnswer).toHaveBeenCalledWith('option-1');
 });
 it('carrega o catálogo, filtra por texto sem acentos e salva tema', async () => {
+  window.history.replaceState({}, '', '/CHATGPT/?view=all');
   const user = userEvent.setup();
   const catalog = {
     schemaVersion: 1,

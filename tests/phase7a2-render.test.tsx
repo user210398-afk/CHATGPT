@@ -224,7 +224,7 @@ describe('rotas e shell', () => {
     await screen.findByRole('heading', { name: 'Meu desempenho' });
     const nav = within(screen.getByRole('navigation', { name: 'Navegação principal' }));
     expect(nav.getByRole('link', { name: 'Dashboard' })).toHaveAttribute('aria-current', 'page');
-    expect(nav.getByRole('link', { name: 'Catálogo' })).not.toHaveAttribute('aria-current');
+    expect(nav.getByRole('link', { name: 'Matérias' })).not.toHaveAttribute('aria-current');
   });
   it('atalho de tema sai de system para oposto efetivo e preserva legacy', async () => {
     localStorage.setItem(legacyThemeKey, storageFixtureJson({ version: 1, theme: 'dark' }));
