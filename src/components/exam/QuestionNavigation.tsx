@@ -1,5 +1,5 @@
 import type { Exam } from '../../types/exam';
-import type { Attempt } from '../../engine/exam-state';
+import type { QuestionState } from '../../engine/review-session';
 import { answeredCount } from '../../engine/exam-state';
 import { questionBehaviors } from '../../engine/question-behaviors';
 export function QuestionNavigation({
@@ -7,10 +7,14 @@ export function QuestionNavigation({
   attempt,
   onNavigate,
   indices,
+  title = 'Mapa da prova',
+  isReviewSession = false,
 }: {
   indices?: number[];
+  title?: string;
+  isReviewSession?: boolean;
   exam: Exam;
-  attempt: Attempt;
+  attempt: QuestionState;
   onNavigate: (index: number) => void;
 }) {
   const study = attempt.mode === 'study';
@@ -19,7 +23,7 @@ export function QuestionNavigation({
   return (
     <aside className="card navigation-card">
       <p className="eyebrow">SEU PERCURSO</p>
-      <h2>Mapa da prova</h2>
+      <h2>{title}</h2>
       <div className="progress-label">
         <span>{study ? 'Confirmadas' : 'Respondidas'}</span>
         <strong>
@@ -42,7 +46,7 @@ export function QuestionNavigation({
               key={q.id}
               className={`question-number ${answered ? 'answered' : ''} ${flagged ? 'flagged' : ''} ${confirmed ? 'confirmed' : ''}`}
               aria-current={index === attempt.currentIndex ? 'step' : undefined}
-              aria-label={`Ir para questão ${index + 1}${study ? (confirmed ? ', confirmada' : answered ? ', resposta selecionada, aguardando confirmação' : ', em branco') : answered ? ', respondida' : ''}${flagged ? ', marcada para revisão' : ''}`}
+              aria-label={`Ir para questão ${index + 1}${isReviewSession ? ' da sessão' : ''}${study ? (confirmed ? ', confirmada' : answered ? ', resposta selecionada, aguardando confirmação' : ', em branco') : answered ? ', respondida' : ''}${flagged ? ', marcada para revisão' : ''}`}
               onClick={() => onNavigate(index)}
             >
               {index + 1}

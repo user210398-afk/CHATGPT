@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import type { Exam } from '../../types/exam';
-import type { Attempt } from '../../engine/exam-state';
+import type { QuestionState } from '../../engine/review-session';
 import { RichContent } from '../common/RichContent';
 import { Images } from '../common/Images';
 import { QuestionRenderer } from './QuestionRenderer';
@@ -13,15 +13,17 @@ export function QuestionCard({
   onFlag,
   onConfirm,
   children,
+  isReviewSession = false,
 }: {
   exam: Exam;
-  attempt: Attempt;
+  attempt: QuestionState;
   index: number;
   feedback: boolean;
   onAnswer?: (value: string) => void;
   onFlag: () => void;
   onConfirm?: () => void;
   children?: React.ReactNode;
+  isReviewSession?: boolean;
 }) {
   const question = exam.questions[index]!;
   const section = exam.sections.find((section) => section.id === question.sectionId);
@@ -35,7 +37,7 @@ export function QuestionCard({
       <div className="question-topline">
         <span className="badge">
           {section?.title ?? (question.type === 'essay' ? 'Dissertativa' : 'Objetiva')} ·{' '}
-          {question.label}
+          {isReviewSession ? `Questão original: ${question.label}` : question.label}
         </span>
         <button
           className="flag-button"
@@ -49,6 +51,7 @@ export function QuestionCard({
       </div>
       <h2 ref={heading} tabIndex={-1}>
         Questão {index + 1} de {exam.questions.length}
+        {isReviewSession ? ' da sessão' : ''}
       </h2>
       <p className="category">{question.category}</p>
       {group && (

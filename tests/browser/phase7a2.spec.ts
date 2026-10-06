@@ -4,7 +4,7 @@ import { test, expect, type Page, type Locator } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { parseExam } from '../../schema/exam';
 import { readExamCatalog } from '../../scripts/catalog';
-import type { Backup } from '../../src/engine/backup';
+import type { BackupV2 as Backup } from '../../src/engine/backup';
 import { createAttempt, transition } from '../../src/engine/exam-state';
 import { storageKey, historyStorageKey, summary } from '../../src/engine/persistence';
 import { catalogPreferencesKey } from '../../src/engine/catalog-preferences';
@@ -422,7 +422,7 @@ test('7A.2: backup roundtrip real em contexto limpo com progresso, histórico, f
   if (!file) throw new Error('Download ausente');
   expect(JSON.parse(readFileSync(file, 'utf8'))).toMatchObject({
     format: 'medsim-backup',
-    version: 2,
+    version: 3,
   });
   const context = await browser.newContext({
     ...info.project.use,

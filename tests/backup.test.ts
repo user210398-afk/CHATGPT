@@ -51,12 +51,19 @@ function entry(
   current = null as BackupExam['current'],
   history = [] as BackupExam['history'],
 ): BackupExam {
-  return { examId: poc.id, revision: poc.revision, current, history, reviewAttempts: [] };
+  return {
+    examId: poc.id,
+    revision: poc.revision,
+    current,
+    history,
+    reviewAttempts: [],
+    reviewSession: null,
+  };
 }
 function backup(exams: BackupExam[] = [], favorites: string[] = []): Backup {
   return {
     format: 'medsim-backup',
-    version: 2,
+    version: 3,
     exportedAt: now,
     exams,
     catalogPreferences: { storageVersion: 1, favorites },
@@ -267,7 +274,7 @@ describe('schema estrito e limites de importação', () => {
     '{bad',
     '{}',
     storageFixtureJson({ ...backup(), format: 'other' }),
-    storageFixtureJson({ ...backup(), version: 3 }),
+    storageFixtureJson({ ...backup(), version: 4 }),
     storageFixtureJson({ ...backup(), unknown: true }),
     storageFixtureJson({ ...backup(), exportedAt: 'yesterday' }),
   ])('rejeita JSON/formato/version/datas/unknown keys %s', (text) =>
@@ -330,8 +337,8 @@ describe('schema estrito e limites de importação', () => {
     expect(() =>
       parseBackup(
         storageFixtureJson(backup()).replace(
-          '"version":2',
-          '"version":2,"__proto__":{"polluted":true}',
+          '"version":3',
+          '"version":3,"__proto__":{"polluted":true}',
         ),
       ),
     ).toThrow('Backup inválido');

@@ -1,4 +1,5 @@
 import type { Catalog } from '../../schema/catalog';
+import { HistoryResetControls } from '../components/dashboard/HistoryResetControls';
 import { Metrics } from '../components/dashboard/Metrics';
 import { SubjectCards } from '../components/dashboard/SubjectCards';
 import { RecentActivity } from '../components/dashboard/RecentActivity';
@@ -44,6 +45,7 @@ export function DashboardPage({ catalog }: { catalog: Catalog }) {
         </div>
       </section>
       <BackupControls catalog={catalog} />
+      <HistoryResetControls catalog={catalog} onReset={state.refresh} />
     </div>
   );
 }

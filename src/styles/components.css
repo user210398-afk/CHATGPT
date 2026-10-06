@@ -302,6 +302,7 @@
 }
 .question-controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-2);
@@ -519,6 +520,8 @@ progress::-moz-progress-bar {
 .page-stack {
   display: grid;
   gap: var(--layout-gap);
+  /* Enlarged labels must wrap without expanding the grid's intrinsic minimum width. */
+  overflow-wrap: anywhere;
 }
 .page-stack .page-heading {
   margin-bottom: 0;
@@ -722,4 +725,23 @@ progress::-moz-progress-bar {
   .subject-card {
     padding: calc(min(var(--card-padding), var(--space-5)) + var(--space-2));
   }
+}
+
+/* Shared destructive and review confirmations use the same layout at every width. */
+.confirmation-region {
+  margin-block: var(--space-4, 1rem);
+  padding: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+}
+.history-reset textarea {
+  max-width: 100%;
+  min-height: 44px;
+}
+button.danger {
+  color: var(--color-text);
+  border: 2px solid var(--color-error);
+}
+.review-session-actions {
+  min-width: 0;
 }

@@ -18,6 +18,7 @@ export function useDashboardState(catalog: Catalog) {
   }, [catalog]);
   return useMemo(
     () => ({
+      refresh: () => setSnapshot(read(catalog)),
       metrics: aggregateGlobalMetrics(snapshot),
       subjects: aggregateSubjects(snapshot),
       recent: recentActivity(snapshot),
@@ -25,6 +26,6 @@ export function useDashboardState(catalog: Catalog) {
       includesStudy: snapshot.some((item) => item.includesStudy),
       includesExam: snapshot.some((item) => item.includesExam),
     }),
-    [snapshot],
+    [snapshot, catalog],
   );
 }

@@ -3,7 +3,8 @@ import type { Catalog } from '../../schema/catalog';
 import type { Exam } from '../types/exam';
 import { loadExam } from '../engine/exam-loader';
 import { readReviewSummary, ReviewRepository } from '../engine/review-history';
-import { reviewUrl } from '../utils/paths';
+import { readReviewSessionSummary } from '../engine/review-session-storage';
+import { reviewSessionUrl, reviewUrl } from '../utils/paths';
 import { useResource } from './useResource';
 import { ReviewView } from '../components/review/ReviewView';
 import { dateTime } from '../components/dashboard/Metrics';
@@ -46,6 +47,7 @@ function AttemptReview({ exam, id }: { exam: Exam; id: string }) {
       )}
       <ReviewView
         exam={exam}
+        allowSessions
         attempt={attempt}
         onFlag={(questionId) => {
           try {
@@ -86,7 +88,12 @@ export function ReviewPage({
   examId?: string;
   attemptId?: string;
 }) {
-  const snapshot = () => catalog.exams.map((exam) => ({ exam, ...readReviewSummary(exam) }));
+  const snapshot = () =>
+    catalog.exams.map((exam) => ({
+      exam,
+      ...readReviewSummary(exam),
+      reviewSession: readReviewSessionSummary(exam),
+    }));
   const [items, setItems] = useState(snapshot);
   useEffect(() => {
     const refresh = () => setItems(snapshot());
@@ -99,7 +106,9 @@ export function ReviewPage({
     ) : (
       <p role="alert">Prova desconhecida. O registro local foi preservado.</p>
     );
-  const available = items.filter((item) => item.attempts.length);
+  const available = items.filter(
+    (item) => item.attempts.length || item.reviewSession.session || item.reviewSession.warning,
+  );
   return (
     <div className="page-stack">
       <header className="page-heading">
@@ -119,20 +128,32 @@ export function ReviewPage({
       {!available.length && (
         <p role="status">Nenhuma tentativa detalhada disponível para revisão.</p>
       )}
-      {available.map(({ exam, attempts }) => (
+      {available.map(({ exam, attempts, reviewSession }) => (
         <article className="card" key={exam.id}>
           <h2>{exam.title}</h2>
           <p>
             {exam.subject} · {attempts.length} tentativa(s) detalhada(s)
           </p>
-          <p className="muted">
-            Mais recente: {dateTime(attempts[0]!.completedAt)} ·{' '}
-            {attempts[0]!.mode === 'study' ? 'Modo Estudo' : 'Modo Prova'} ·{' '}
-            {attempts[0]!.result!.percentage === null
-              ? 'Sem nota automática'
-              : `${attempts[0]!.result!.percentage}%`}{' '}
-            · {attempts[0]!.result!.incorrect} erros · {attempts[0]!.flagged.length} marcadas
-          </p>
+          {reviewSession.warning && <p role="status">{reviewSession.warning}</p>}
+          {reviewSession.session && (
+            <p>
+              <a className="button" href={reviewSessionUrl(exam.id)}>
+                {reviewSession.session.completedAt
+                  ? 'Ver resultado da sessão de revisão'
+                  : 'Continuar sessão de revisão'}
+              </a>
+            </p>
+          )}
+          {attempts.length > 0 && (
+            <p className="muted">
+              Mais recente: {dateTime(attempts[0]!.completedAt)} ·{' '}
+              {attempts[0]!.mode === 'study' ? 'Modo Estudo' : 'Modo Prova'} ·{' '}
+              {attempts[0]!.result!.percentage === null
+                ? 'Sem nota automática'
+                : `${attempts[0]!.result!.percentage}%`}{' '}
+              · {attempts[0]!.result!.incorrect} erros · {attempts[0]!.flagged.length} marcadas
+            </p>
+          )}
           <ul className="review-attempt-list">
             {attempts.map((attempt) => (
               <li key={attempt.id}>

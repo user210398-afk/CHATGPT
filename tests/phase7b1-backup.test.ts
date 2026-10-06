@@ -27,6 +27,7 @@ const entry = (
   current: kind === 'current' ? attempt : null,
   history: kind === 'history' ? [summary(attempt)] : [],
   reviewAttempts: kind === 'review' ? [attempt] : [],
+  reviewSession: null,
 });
 describe('backup v2 and genuine frozen v1 compatibility', () => {
   it('reads real v1 fields, normalizes only memory, then imports storage v3', async () => {
@@ -50,7 +51,7 @@ describe('backup v2 and genuine frozen v1 compatibility', () => {
     expect(backupV1Schema.safeParse(old).success).toBe(true);
     const raw = JSON.stringify(old),
       backup = parseBackup(raw);
-    expect(backup.version).toBe(2);
+    expect(backup.version).toBe(3);
     expect(backup.exams[0]!.current).toEqual(current);
     expect(backup.exams[0]!.reviewAttempts).toEqual([]);
     expect(backup.uiPreferences).toMatchObject({ storageVersion: 2, attemptModePreference: 'ask' });
@@ -81,7 +82,7 @@ describe('backup v2 and genuine frozen v1 compatibility', () => {
       const marked = repo.toggleFlag(poc, current, firstEssay.id),
         before = [...source.values];
       const exported = await exportBackup(catalog, source, loader);
-      expect(exported.version).toBe(2);
+      expect(exported.version).toBe(3);
       expect(exported.exams[0]!.reviewAttempts).toEqual([marked]);
       expect([...source.values]).toEqual(before);
       const target = memory(),

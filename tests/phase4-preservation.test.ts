@@ -39,6 +39,15 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     // This exclusion does not authorize generic src/engine changes;
     // all other engine protections remain in force.
     ':(exclude)src/engine/subject-groups.ts',
+    // Phase 7B.2B authorizes these three new modules explicitly:
+    // review-session.ts and review-session-storage.ts form the isolated review-session domain;
+    // history-reset.ts implements the explicit reset operation.
+    // These exclusions do not authorize generic src/engine changes;
+    // all other baseline protections remain active. Their behavior and persistence
+    // are covered by the dedicated Phase 7B.2B suites.
+    ':(exclude)src/engine/history-reset.ts',
+    ':(exclude)src/engine/review-session-storage.ts',
+    ':(exclude)src/engine/review-session.ts',
     ':(exclude)src/engine/dashboard-metrics.ts',
     ':(exclude)src/engine/ui-preferences.ts',
     ':(exclude)src/engine/backup.ts',
@@ -52,11 +61,23 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     'b31295406ee800f0bb113282da7edfc27bfa511b:src/engine/exam-state.ts',
   ]);
   const engine = await readFile('src/engine/exam-state.ts', 'utf8');
-  const calculation = (text: string) =>
-    text.slice(
-      text.indexOf('export function answeredCount('),
-      text.indexOf('export function transition('),
+  // 7B.2B broadens only the input type to share scoring with an isolated session.
+  // Keep the calculation body byte-protected against the production baseline.
+  const calculation = (text: string) => {
+    const normalized = text
+      .replace(
+        /export function answeredCount\(\s*exam: Exam,\s*state: Pick<Attempt, 'answers'>,?\s*\): number/,
+        'export function answeredCount(exam: Exam, state: Attempt): number',
+      )
+      .replace(
+        /export function calculateResult<T extends Pick<Attempt, 'answers'>>\(\s*exam: Exam,\s*state: T,?\s*\): Result/,
+        'export function calculateResult(exam: Exam, state: Attempt): Result',
+      );
+    return normalized.slice(
+      normalized.indexOf('export function answeredCount('),
+      normalized.indexOf('export function transition('),
     );
+  };
   expect(calculation(engine)).toBe(calculation(originalEngine));
   const { stdout: paths } = await run('git', [
     'ls-tree',
