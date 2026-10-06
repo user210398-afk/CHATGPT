@@ -1,3 +1,4 @@
+import { paint, erase } from './annotation-helpers';
 import { test, expect, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { parseExam } from '../../schema/exam';
@@ -26,34 +27,6 @@ async function seed(page: Page, mode: 'exam' | 'study' = 'exam') {
   await page.goto(`?exam=${exam.id}`);
   await expect(page.locator('.statement')).toBeVisible();
 }
-async function select(page: Page, start: number, end: number) {
-  await page.locator('.statement').scrollIntoViewIfNeeded();
-  await page.evaluate(
-    ({ start, end }) => {
-      const root = document.querySelector('.statement')!;
-      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT),
-        texts: Text[] = [];
-      let node: Node | null;
-      while ((node = walker.nextNode())) texts.push(node as Text);
-      function point(offset: number): [Text, number] {
-        for (const text of texts) {
-          if (offset <= text.length) return [text, offset];
-          offset -= text.length;
-        }
-        throw new Error('Fixture range exceeds statement');
-      }
-      const range = document.createRange();
-      range.setStart(...point(start));
-      range.setEnd(...point(end));
-      const selection = window.getSelection()!;
-      selection.removeAllRanges();
-      selection.addRange(range);
-      document.dispatchEvent(new Event('selectionchange'));
-    },
-    { start, end },
-  );
-  await expect(page.getByRole('group', { name: 'Ferramentas de marcação' })).toBeVisible();
-}
 const current = (page: Page) =>
   page.evaluate((key) => JSON.parse(localStorage.getItem(key)!).current, storageKey(exam));
 const annotations = (page: Page) =>
@@ -81,27 +54,23 @@ async function noOverflow(page: Page) {
     expect(box!.y + box!.height).toBeLessThanOrEqual(viewport.height);
   }
 }
-test('three colors, selection on fragmented DOM, recolor, eraser, reload, individual removal and clear', async ({
+test('three colors, gesture on fragmented DOM, recolor, eraser, reload, individual removal and clear', async ({
   page,
 }) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await seed(page);
   const before = await current(page);
-  await select(page, 2, 28);
-  await page.getByRole('button', { name: 'Amarelo', exact: true }).click();
-  await select(page, 7, 22);
-  await page.getByRole('button', { name: 'Verde', exact: true }).click();
-  await select(page, 10, 18);
-  await page.getByRole('button', { name: 'Azul', exact: true }).click();
+  await paint(page, 2, 28, 'Amarelo');
+  await paint(page, 7, 22, 'Verde');
+  await paint(page, 10, 18, 'Azul');
   await expect(page.locator('mark.annotation-yellow').first()).toBeVisible();
   await expect(page.locator('mark.annotation-green').first()).toBeVisible();
   await expect(page.locator('mark.annotation-blue').first()).toBeVisible();
   const raw = await annotations(page);
   await page.reload();
   expect(await annotations(page)).toBe(raw);
-  await select(page, 12, 15);
-  await page.getByRole('button', { name: 'Borracha', exact: true }).click();
+  await erase(page, 12, 15);
   expect(
     JSON.parse((await annotations(page))!).questions[q.id].some(
       (h: { start: number; end: number }) => h.start <= 13 && h.end > 13,
@@ -184,6 +153,7 @@ test('touch explicit controls, comfortable target, Enter restore, body timer can
   const box = await button.boundingBox();
   expect(box!.height).toBeGreaterThanOrEqual(44);
   expect(box!.width).toBeGreaterThanOrEqual(44);
+  expect(box!.width).toBeGreaterThanOrEqual(44);
   await button.click();
   await expect(button).toHaveAttribute('aria-pressed', 'true');
   await button.focus();
@@ -209,16 +179,14 @@ test('Study confirmation hides elimination and feedback dominates; highlights re
   await expect(page.locator('.feedback')).toBeVisible();
   await expect(page.locator('.option.eliminated')).toHaveCount(0);
   await expect(page.getByRole('button', { name: /Eliminar alternativa/ })).toHaveCount(0);
-  await select(page, 0, 5);
-  await page.getByRole('button', { name: 'Azul', exact: true }).click();
+  await paint(page, 0, 5, 'Azul');
   await expect(page.locator('mark.annotation-blue')).toHaveCount(1);
 });
 test('annotations shared by new attempt, historical review and subset ReviewSession; scopes isolated', async ({
   page,
 }) => {
   await seed(page);
-  await select(page, 0, 8);
-  await page.getByRole('button', { name: 'Amarelo', exact: true }).click();
+  await paint(page, 0, 8, 'Amarelo');
   await page.getByRole('button', { name: 'Eliminar alternativa 1', exact: true }).click();
   const raw = await annotations(page);
   let historical = createAttempt(exam, '2026-10-05T16:00:00.000Z', 'historical');
@@ -252,8 +220,7 @@ test('annotations shared by new attempt, historical review and subset ReviewSess
   await expect(page.locator('mark.annotation-yellow')).toHaveCount(1);
   await expect(page.getByRole('button', { name: /Eliminar alternativa/ })).toHaveCount(0);
   const official = await current(page);
-  await select(page, 0, 8);
-  await page.getByRole('button', { name: 'Verde', exact: true }).click();
+  await paint(page, 0, 8, 'Verde');
   expect(await current(page)).toEqual(official);
   await page.goto(`?view=review-session&reviewExam=${exam.id}`);
   await expect(page.locator('mark.annotation-green')).toHaveCount(1);
@@ -281,8 +248,7 @@ test('corrupt annotations preserve academic response; storage event conflict sta
   page,
 }) => {
   await seed(page);
-  await select(page, 0, 5);
-  await page.getByRole('button', { name: 'Amarelo', exact: true }).click();
+  await paint(page, 0, 5, 'Amarelo');
   const good = await annotations(page);
   await page.evaluate((key) => {
     localStorage.setItem(key, '{bad');
@@ -306,7 +272,7 @@ test('corrupt annotations preserve academic response; storage event conflict sta
   );
   await expect(page.getByText(/edição bloqueada/)).toHaveCount(0);
 });
-test('rich repeated leaves, Unicode, backward selection and one logical highlight across tags after reload/split', async ({
+test('rich repeated leaves, Unicode, backward gesture and one logical highlight across tags after reload/split', async ({
   page,
 }) => {
   const richExam = structuredClone(exam);
@@ -322,8 +288,7 @@ test('rich repeated leaves, Unicode, backward selection and one logical highligh
     route.fulfill({ json: richExam }),
   );
   await seed(page);
-  await select(page, 4, 24);
-  await page.getByRole('button', { name: 'Azul', exact: true }).click();
+  await paint(page, 4, 24, 'Azul');
   await expect(page.locator('.statement mark')).toHaveCount(5);
   expect(
     await page
@@ -333,10 +298,9 @@ test('rich repeated leaves, Unicode, backward selection and one logical highligh
       ),
   ).toBe(1);
   await page.reload();
-  await select(page, 8, 12);
-  await page.getByRole('button', { name: 'Verde', exact: true }).click();
-  await select(page, 10, 11);
-  await page.getByRole('button', { name: 'Borracha', exact: true }).click();
+  await paint(page, 8, 12, 'Verde');
+  await erase(page, 10, 11);
+  await page.keyboard.press('Escape');
   await page.evaluate(() => window.getSelection()?.removeAllRanges());
   await page.locator('.statement mark').first().click();
   const firstId = await page.locator('.statement mark').first().getAttribute('data-highlight-id');
@@ -349,18 +313,7 @@ test('rich repeated leaves, Unicode, backward selection and one logical highligh
         firstId,
       ),
   ).toBe(false);
-  await select(page, 0, 14);
-  await page.evaluate(() => {
-    const selection = window.getSelection()!;
-    selection.setBaseAndExtent(
-      selection.focusNode!,
-      selection.focusOffset,
-      selection.anchorNode!,
-      selection.anchorOffset,
-    );
-    document.dispatchEvent(new Event('selectionchange'));
-  });
-  await page.getByRole('button', { name: 'Amarelo', exact: true }).click();
+  await paint(page, 14, 0, 'Amarelo');
   expect(
     JSON.parse((await annotations(page))!).questions[q.id].some(
       (h: { start: number; end: number }) => h.start === 0 && h.end === 14,
@@ -372,8 +325,7 @@ test('native cross-tab storage synchronization and same-tab stale writer preserv
   context,
 }) => {
   await seed(page);
-  await select(page, 0, 5);
-  await page.getByRole('button', { name: 'Amarelo', exact: true }).click();
+  await paint(page, 0, 5, 'Amarelo');
   const good = await annotations(page),
     peer = await context.newPage();
   await peer.goto('?view=review');
@@ -398,8 +350,7 @@ test('native cross-tab storage synchronization and same-tab stale writer preserv
     ([key, raw]) => localStorage.setItem(key!, raw!),
     [annotationStorageKey(exam), concurrent],
   );
-  await select(page, 2, 4);
-  await page.getByRole('button', { name: 'Verde', exact: true }).click();
+  await paint(page, 2, 4, 'Verde');
   await expect(page.getByRole('status')).toContainText('mudaram em outra aba');
   expect(await annotations(page)).toBe(concurrent);
   await peer.close();
@@ -408,7 +359,7 @@ for (const width of [375, 390, 768, 1024, 1280])
   for (const theme of ['light', 'dark', 'high', 'dark-high']) {
     test(`responsive ${width} ${theme} enlarged Linux font, toolbar and explicit targets fit`, async ({
       page,
-    }) => {
+    }, testInfo) => {
       await page.setViewportSize({ width, height: 900 });
       await seed(page);
       await page.evaluate((theme) => {
@@ -423,7 +374,8 @@ for (const width of [375, 390, 768, 1024, 1280])
       }, theme);
       await page.getByRole('button', { name: 'Eliminar alternativa 1', exact: true }).click();
       await expect(page.locator('.option.eliminated')).toHaveCount(1);
-      await select(page, 0, 20);
+      await page.getByRole('button', { name: 'Grifar', exact: true }).click();
+      await page.getByRole('group', { name: 'Ferramentas de marcação' }).scrollIntoViewIfNeeded();
       await noOverflow(page);
       for (const button of await page
         .getByRole('group', { name: 'Ferramentas de marcação' })
@@ -431,15 +383,28 @@ for (const width of [375, 390, 768, 1024, 1280])
         .all()) {
         const box = await button.boundingBox();
         expect(box!.height).toBeGreaterThanOrEqual(44);
+        expect(box!.width).toBeGreaterThanOrEqual(44);
       }
-      await page
-        .getByRole('button', { name: 'Focar ferramentas de marcação', exact: true })
-        .click();
-      await expect(page.getByRole('button', { name: 'Amarelo', exact: true })).toBeFocused();
+      if (
+        testInfo.project.name === 'desktop' &&
+        [375, 390].includes(width) &&
+        ['light', 'dark-high'].includes(theme)
+      )
+        await page.screenshot({
+          path: `/tmp/annotation-active-${width}-${theme}.png`,
+          fullPage: true,
+        });
+      await page.getByRole('button', { name: 'Grifar', exact: true }).click();
+      await expect(page.getByRole('button', { name: 'Grifar', exact: true })).toBeFocused();
       await page.keyboard.press('Escape');
-      await expect(
-        page.getByRole('button', { name: 'Focar ferramentas de marcação', exact: true }),
-      ).toBeFocused();
+      await expect(page.locator('.statement')).toHaveAttribute('data-annotation-tool', 'off');
+      await expect(page.getByRole('button', { name: 'Grifar', exact: true })).toBeFocused();
       await noOverflow(page);
+      if (
+        testInfo.project.name === 'desktop' &&
+        [375, 390].includes(width) &&
+        ['light', 'dark-high'].includes(theme)
+      )
+        await page.screenshot({ path: `/tmp/annotation-${width}-${theme}.png`, fullPage: true });
     });
   }

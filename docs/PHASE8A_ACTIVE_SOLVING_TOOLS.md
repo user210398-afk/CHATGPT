@@ -1,3 +1,7 @@
+> A interação de grifo/borracha foi atualizada localmente para ferramentas explícitas por gesto.
+> Ver [ANNOTATION_GESTURE_TOOLS.md](ANNOTATION_GESTURE_TOOLS.md). As evidências abaixo
+> documentam a baseline 8A anterior; a nova validação está no documento de gesto.
+
 # Fase 8A — ferramentas de resolução ativa
 
 ## Contratos e arquitetura
