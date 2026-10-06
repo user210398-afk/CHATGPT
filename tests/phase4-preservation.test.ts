@@ -39,6 +39,15 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     // This exclusion does not authorize generic src/engine changes;
     // all other engine protections remain in force.
     ':(exclude)src/engine/subject-groups.ts',
+    // Phase 7B.2B authorizes these three new modules explicitly:
+    // review-session.ts and review-session-storage.ts form the isolated review-session domain;
+    // history-reset.ts implements the explicit reset operation.
+    // These exclusions do not authorize generic src/engine changes;
+    // all other baseline protections remain active. Their behavior and persistence
+    // are covered by the dedicated Phase 7B.2B suites.
+    ':(exclude)src/engine/history-reset.ts',
+    ':(exclude)src/engine/review-session-storage.ts',
+    ':(exclude)src/engine/review-session.ts',
     ':(exclude)src/engine/dashboard-metrics.ts',
     ':(exclude)src/engine/ui-preferences.ts',
     ':(exclude)src/engine/backup.ts',
