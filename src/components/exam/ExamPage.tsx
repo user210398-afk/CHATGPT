@@ -90,6 +90,7 @@ export function ExamPage({
           <QuestionCard
             exam={exam}
             attempt={current}
+            solverScope={{ kind: 'attempt', id: current.id }}
             index={current.currentIndex}
             feedback={
               current.mode === 'study' && current.confirmedQuestionIds.includes(question!.id)

@@ -101,6 +101,8 @@ export function ReviewSessionPage({ exam }: { exam: Exam }) {
           <QuestionCard
             isReviewSession
             exam={subset}
+            annotationExam={exam}
+            solverScope={{ kind: 'review-session', id: session.id }}
             attempt={state}
             index={session.currentIndex}
             feedback={
