@@ -1,11 +1,16 @@
-import type { aggregateSubjects } from '../../engine/dashboard-metrics';
+import type { aggregateSubjectGroups } from '../../engine/dashboard-metrics';
 import { percentage } from './Metrics';
-export function SubjectCards({ subjects }: { subjects: ReturnType<typeof aggregateSubjects> }) {
+export function SubjectCards({
+  subjects,
+}: {
+  subjects: ReturnType<typeof aggregateSubjectGroups>;
+}) {
   return (
     <section aria-labelledby="subjects-title">
       <h2 id="subjects-title">Desempenho por disciplina</h2>
       <p className="muted small">
-        Média dos melhores: média arredondada do melhor resultado de cada prova com nota automática.
+        As disciplinas equivalentes seguem os mesmos grupos do Hub de Matérias. Média dos melhores:
+        média arredondada do melhor resultado de cada prova com nota automática.
       </p>
       <div className="catalog-grid">
         {subjects.map((s) => (

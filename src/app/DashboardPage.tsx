@@ -1,4 +1,5 @@
 import type { Catalog } from '../../schema/catalog';
+import { AdvancedStatistics } from '../components/dashboard/AdvancedStatistics';
 import { HistoryResetControls } from '../components/dashboard/HistoryResetControls';
 import { Metrics } from '../components/dashboard/Metrics';
 import { SubjectCards } from '../components/dashboard/SubjectCards';
@@ -23,6 +24,7 @@ export function DashboardPage({ catalog }: { catalog: Catalog }) {
         </p>
       )}
       <Metrics metrics={state.metrics} />
+      <AdvancedStatistics statistics={state.advanced} />
       {state.includesStudy && state.includesExam && (
         <p className="muted small">
           As métricas atuais incluem tentativas em Modo Prova e Modo Estudo.

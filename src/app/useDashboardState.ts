@@ -2,8 +2,9 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Catalog } from '../../schema/catalog';
 import { readExamProgress } from '../engine/catalog-progress';
 import {
+  advancedStatistics,
   aggregateGlobalMetrics,
-  aggregateSubjects,
+  aggregateSubjectGroups,
   recentActivity,
 } from '../engine/dashboard-metrics';
 function read(catalog: Catalog) {
@@ -20,7 +21,8 @@ export function useDashboardState(catalog: Catalog) {
     () => ({
       refresh: () => setSnapshot(read(catalog)),
       metrics: aggregateGlobalMetrics(snapshot),
-      subjects: aggregateSubjects(snapshot),
+      advanced: advancedStatistics(snapshot),
+      subjects: aggregateSubjectGroups(snapshot),
       recent: recentActivity(snapshot),
       unavailable: snapshot.some((item) => item.unavailable),
       includesStudy: snapshot.some((item) => item.includesStudy),

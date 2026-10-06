@@ -1,7 +1,9 @@
 import { storageFixtureJson } from './legacy-fixtures';
 import { describe, expect, it } from 'vitest';
 import {
+  advancedStatistics,
   aggregateGlobalMetrics,
+  aggregateSubjectGroups,
   aggregateSubjects,
   recentActivity,
   type DashboardItem,
@@ -174,6 +176,71 @@ describe('agregação exata por disciplina', () => {
     expect(aggregateSubjects(source).map((s) => s.subject)).toEqual(['Á', 'A\u0301']);
   });
 });
+
+describe('estatísticas avançadas e grupos do Hub', () => {
+  it('consolida aliases acadêmicos no mesmo grupo sem alterar Exam.subject', () => {
+    const source = items();
+    source[0]!.exam = { ...source[0]!.exam, subject: 'Farmacologia' };
+    source[1]!.exam = { ...source[1]!.exam, subject: 'Farmacologia Básica' };
+    source[2]!.exam = { ...source[2]!.exam, subject: 'Fisiologia' };
+    source[0]!.progress.bestResultPercentage = 80;
+    source[1]!.progress.bestResultPercentage = 60;
+    const before = source.map(({ exam }) => exam.subject);
+    const groups = aggregateSubjectGroups(source);
+    expect(groups.map((group) => group.subject)).toEqual(['Farmacologia', 'Fisiologia']);
+    expect(groups[0]).toMatchObject({ available: 2, meanOfBests: 70 });
+    expect(source.map(({ exam }) => exam.subject)).toEqual(before);
+  });
+  it('calcula cobertura, média global e extremos somente com melhores notas válidas', () => {
+    const source = items();
+    ['Farmacologia', 'Fisiologia', 'Imunologia'].forEach(
+      (subject, index) => (source[index]!.exam = { ...source[index]!.exam, subject }),
+    );
+    Object.assign(source[0]!.progress, {
+      status: 'completed',
+      attemptCount: 2,
+      bestResultPercentage: 80,
+    });
+    Object.assign(source[1]!.progress, {
+      status: 'in-progress',
+      attemptCount: 0,
+      bestResultPercentage: null,
+    });
+    Object.assign(source[2]!.progress, {
+      status: 'not-started',
+      attemptCount: 1,
+      bestResultPercentage: 40,
+    });
+    expect(advancedStatistics(source)).toEqual({
+      available: 3,
+      practiced: 3,
+      practiceCoverage: 100,
+      scoredExamCount: 2,
+      meanOfBests: 60,
+      strongestSubject: { id: 'farmacologia', subject: 'Farmacologia', meanOfBests: 80 },
+      lowestSubject: { id: 'imunologia', subject: 'Imunologia', meanOfBests: 40 },
+    });
+  });
+  it('catálogo vazio e ausência de notas não inventam percentuais nem rankings', () => {
+    expect(advancedStatistics([])).toEqual({
+      available: 0,
+      practiced: 0,
+      practiceCoverage: null,
+      scoredExamCount: 0,
+      meanOfBests: null,
+      strongestSubject: null,
+      lowestSubject: null,
+    });
+    expect(advancedStatistics(items())).toMatchObject({
+      practiceCoverage: 0,
+      scoredExamCount: 0,
+      meanOfBests: null,
+      strongestSubject: null,
+      lowestSubject: null,
+    });
+  });
+});
+
 describe('atividade recente', () => {
   it('omite ausência, limita a 6, ordena e mantém empate por índice original', () => {
     const source = Array.from({ length: 8 }, (_, i) => ({
@@ -199,6 +266,8 @@ describe('atividade recente', () => {
       before = structuredClone(source);
     aggregateGlobalMetrics(source);
     aggregateSubjects(source);
+    aggregateSubjectGroups(source);
+    advancedStatistics(source);
     recentActivity(source);
     expect(source).toEqual(before);
   });

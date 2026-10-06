@@ -1,6 +1,10 @@
 import type { CatalogExam, ExamProgressSummary } from './catalog-progress';
+import { subjectGroupDefinition } from './subject-groups';
+
 const collator = new Intl.Collator('pt-BR');
+
 export type DashboardItem = { exam: CatalogExam; progress: ExamProgressSummary };
+
 export function aggregateGlobalMetrics(items: DashboardItem[]) {
   const metrics = {
     available: items.length,
@@ -40,6 +44,16 @@ export function aggregateGlobalMetrics(items: DashboardItem[]) {
   }
   return metrics;
 }
+
+function meanOfBests(items: DashboardItem[]) {
+  const scored = items.flatMap(({ progress }) =>
+    progress.bestResultPercentage === null ? [] : [progress.bestResultPercentage],
+  );
+  return scored.length
+    ? Math.round(scored.reduce((sum, value) => sum + value, 0) / scored.length)
+    : null;
+}
+
 export function aggregateSubjects(items: DashboardItem[]) {
   const groups = new Map<string, DashboardItem[]>();
   for (const item of items) {
@@ -48,21 +62,89 @@ export function aggregateSubjects(items: DashboardItem[]) {
     groups.set(item.exam.subject, group);
   }
   return [...groups]
-    .map(([subject, group], index) => {
-      const scored = group.flatMap(({ progress }) =>
-        progress.bestResultPercentage === null ? [] : [progress.bestResultPercentage],
-      );
-      return {
-        subject,
-        index,
-        ...aggregateGlobalMetrics(group),
-        meanOfBests: scored.length
-          ? Math.round(scored.reduce((sum, value) => sum + value, 0) / scored.length)
-          : null,
-      };
-    })
+    .map(([subject, group], index) => ({
+      subject,
+      index,
+      ...aggregateGlobalMetrics(group),
+      meanOfBests: meanOfBests(group),
+    }))
     .sort((a, b) => collator.compare(a.subject, b.subject) || a.index - b.index);
 }
+
+export function aggregateSubjectGroups(items: DashboardItem[]) {
+  const groups = new Map<
+    string,
+    {
+      definition: ReturnType<typeof subjectGroupDefinition>;
+      index: number;
+      items: DashboardItem[];
+    }
+  >();
+  for (const item of items) {
+    const definition = subjectGroupDefinition(item.exam.subject);
+    const existing = groups.get(definition.id);
+    if (existing) existing.items.push(item);
+    else groups.set(definition.id, { definition, index: groups.size, items: [item] });
+  }
+  return [...groups.values()]
+    .map(({ definition, index, items: group }) => ({
+      ...definition,
+      subject: definition.title,
+      index,
+      ...aggregateGlobalMetrics(group),
+      meanOfBests: meanOfBests(group),
+    }))
+    .sort(
+      (a, b) =>
+        a.order - b.order ||
+        collator.compare(a.subject, b.subject) ||
+        (a.id < b.id ? -1 : a.id > b.id ? 1 : a.index - b.index),
+    );
+}
+
+function rate(part: number, total: number) {
+  return total === 0 ? null : Math.round((part / total) * 100);
+}
+
+export function advancedStatistics(items: DashboardItem[]) {
+  const practiced = items.filter(
+    ({ progress }) => progress.status === 'in-progress' || progress.attemptCount > 0,
+  ).length;
+  const scored = items.flatMap(({ progress }) =>
+    progress.bestResultPercentage === null ? [] : [progress.bestResultPercentage],
+  );
+  const rankedSubjects = aggregateSubjectGroups(items).flatMap((group) =>
+    group.meanOfBests === null
+      ? []
+      : [
+          {
+            id: group.id,
+            subject: group.subject,
+            meanOfBests: group.meanOfBests,
+          },
+        ],
+  );
+  let strongestSubject = rankedSubjects[0] ?? null;
+  let lowestSubject = rankedSubjects[0] ?? null;
+  for (const subject of rankedSubjects.slice(1)) {
+    if (strongestSubject && subject.meanOfBests > strongestSubject.meanOfBests)
+      strongestSubject = subject;
+    if (lowestSubject && subject.meanOfBests < lowestSubject.meanOfBests)
+      lowestSubject = subject;
+  }
+  return {
+    available: items.length,
+    practiced,
+    practiceCoverage: rate(practiced, items.length),
+    scoredExamCount: scored.length,
+    meanOfBests: scored.length
+      ? Math.round(scored.reduce((sum, value) => sum + value, 0) / scored.length)
+      : null,
+    strongestSubject,
+    lowestSubject,
+  };
+}
+
 export function recentActivity(items: DashboardItem[], limit = 6) {
   return items
     .map((item, index) => ({ ...item, index }))

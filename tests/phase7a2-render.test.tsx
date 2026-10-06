@@ -32,10 +32,11 @@ afterEach(() => {
   window.history.replaceState({}, '', '/');
 });
 describe('dashboard renderizado', () => {
-  it('sem progresso apresenta 8 métricas, disciplinas e ausência de atividade', () => {
+  it('sem progresso apresenta métricas básicas e avançadas, disciplinas e ausência de atividade', () => {
     render(<DashboardPage catalog={testCatalog} />);
     expect(screen.getByRole('heading', { name: 'Meu desempenho' })).toBeInTheDocument();
-    expect(document.querySelectorAll('.metric')).toHaveLength(8);
+    expect(document.querySelectorAll('.metric')).toHaveLength(12);
+    expect(screen.getByRole('heading', { name: 'Visão avançada' })).toBeInTheDocument();
     expect(screen.getByText('Nenhuma atividade salva neste navegador.')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Ir para catálogo' })).toHaveAttribute(
       'href',

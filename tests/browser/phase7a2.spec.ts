@@ -122,6 +122,8 @@ test('7A.2: dashboard vazio, navegação e apenas índice no carregamento normal
   await expect(page.getByText('Nenhuma atividade salva neste navegador.')).toBeVisible();
   await expect(page.locator('.app-nav a[aria-current="page"]')).toHaveText('Dashboard');
   await expect(page.getByRole('heading', { name: 'Desempenho por disciplina' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Visão avançada' })).toBeVisible();
+  await expect(metric(page, 'Cobertura prática')).toHaveText('0%');
   await noOverflow(page);
   await page.getByRole('link', { name: 'Ir para catálogo' }).click();
   await expect(page.getByRole('heading', { name: 'Suas matérias' })).toBeVisible();
