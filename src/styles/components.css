@@ -520,6 +520,8 @@ progress::-moz-progress-bar {
 .page-stack {
   display: grid;
   gap: var(--layout-gap);
+  /* Enlarged labels must wrap without expanding the grid's intrinsic minimum width. */
+  overflow-wrap: anywhere;
 }
 .page-stack .page-heading {
   margin-bottom: 0;

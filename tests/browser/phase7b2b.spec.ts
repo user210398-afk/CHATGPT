@@ -519,6 +519,13 @@ for (const width of [375, 390, 768, 1024, 1280]) {
       document.documentElement.style.fontSize = '32px';
     });
     await measure('reset 200% text');
+    const documentWidth = await page.evaluate(() => ({
+      viewport: document.documentElement.clientWidth,
+      scroll: document.body.scrollWidth,
+    }));
+    expect(documentWidth.scroll, 'reset 200% text content').toBeLessThanOrEqual(
+      documentWidth.viewport,
+    );
     if (width >= 1024) {
       await page.evaluate(() => {
         document.documentElement.style.fontSize = '';
