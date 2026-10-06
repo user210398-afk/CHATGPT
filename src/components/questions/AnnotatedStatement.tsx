@@ -199,7 +199,7 @@ function GestureStatement({ exam, questionId }: { exam: Exam; questionId: string
   }
   return (
     <div className="annotation-area">
-      <div className="annotation-toolbar" role="group" aria-label="Ferramentas de marcação">
+      <div className="annotation-toolbar" role="group" aria-label="Ferramentas de grifo e borracha">
         <button
           ref={highlightButton}
           disabled={annotations.blocked}

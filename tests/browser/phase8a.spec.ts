@@ -43,7 +43,7 @@ async function noOverflow(page: Page) {
       () => document.documentElement.scrollWidth <= document.documentElement.clientWidth,
     ),
   ).toBe(true);
-  const toolbar = page.getByRole('group', { name: 'Ferramentas de marcação' });
+  const toolbar = page.getByRole('group', { name: 'Ferramentas de grifo e borracha' });
   if (await toolbar.count()) {
     const box = await toolbar.boundingBox();
     expect(box).toBeTruthy();
@@ -375,10 +375,10 @@ for (const width of [375, 390, 768, 1024, 1280])
       await page.getByRole('button', { name: 'Eliminar alternativa 1', exact: true }).click();
       await expect(page.locator('.option.eliminated')).toHaveCount(1);
       await page.getByRole('button', { name: 'Grifar', exact: true }).click();
-      await page.getByRole('group', { name: 'Ferramentas de marcação' }).scrollIntoViewIfNeeded();
+      await page.getByRole('group', { name: 'Ferramentas de grifo e borracha' }).scrollIntoViewIfNeeded();
       await noOverflow(page);
       for (const button of await page
-        .getByRole('group', { name: 'Ferramentas de marcação' })
+        .getByRole('group', { name: 'Ferramentas de grifo e borracha' })
         .getByRole('button')
         .all()) {
         const box = await button.boundingBox();

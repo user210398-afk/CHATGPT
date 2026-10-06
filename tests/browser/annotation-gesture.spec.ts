@@ -100,7 +100,7 @@ test('real mouse: hover zero-write, down/move preview zero-write, up exactly onc
     'aria-pressed',
     'false',
   );
-  await expect(page.getByRole('group', { name: 'Ferramentas de marcação' })).toBeVisible();
+  await expect(page.getByRole('group', { name: 'Ferramentas de grifo e borracha' })).toBeVisible();
   const before = await page.evaluate((key) => localStorage.getItem(key), storageKey(exam));
   await page.getByRole('button', { name: 'Grifar', exact: true }).click();
   const { a, b } = await coordinates(page);

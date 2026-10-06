@@ -247,7 +247,7 @@ describe('annotations UI zero-write and synchronization', () => {
     expect(trigger).toHaveAttribute('aria-pressed', 'true');
     await userEvent.setup().keyboard('[Escape]');
     expect(trigger).toHaveFocus();
-    expect(screen.getByRole('group', { name: 'Ferramentas de marcação' })).toBeTruthy();
+    expect(screen.getByRole('group', { name: 'Ferramentas de grifo e borracha' })).toBeTruthy();
     expect(trigger).toHaveAttribute('aria-pressed', 'false');
   });
   it('storage event valid is read-only; corrupt retains last good and blocks; wrong key/area/stale ignored', () => {

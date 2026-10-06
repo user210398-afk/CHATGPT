@@ -28,7 +28,7 @@ afterEach(() => {
 describe('explicit gesture tools / lifecycle red team', () => {
   it('toolbar is available without Selection; modes exclusive; color independent; Escape and toggle off', () => {
     const f = fixture();
-    expect(screen.getByRole('group', { name: 'Ferramentas de marcação' })).toBeVisible();
+    expect(screen.getByRole('group', { name: 'Ferramentas de grifo e borracha' })).toBeVisible();
     expect(f.root).toHaveAttribute('data-annotation-tool', 'off');
     expect(tool('Amarelo')).toHaveAttribute('aria-pressed', 'true');
     fireEvent.click(tool());
