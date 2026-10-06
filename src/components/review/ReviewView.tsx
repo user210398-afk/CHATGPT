@@ -8,16 +8,19 @@ import {
   type ReviewFilters,
   type ReviewStatus,
 } from '../../engine/review-filters';
+import { ReviewSessionActions } from './ReviewSessionActions';
 import { QuestionCard } from '../questions/QuestionCard';
 import { QuestionNavigation } from '../exam/QuestionNavigation';
 export function ReviewView({
   exam,
   attempt,
   onFlag,
+  allowSessions = false,
 }: {
   exam: Exam;
   attempt: Attempt;
   onFlag: (id: string) => void;
+  allowSessions?: boolean;
 }) {
   const [filters, setFilters] = useState<ReviewFilters>({ ...defaultReviewFilters });
   const [selected, setSelected] = useState(attempt.currentIndex);
@@ -124,6 +127,7 @@ export function ReviewView({
         </button>
         <p role="status">{indices.length} questão(ões) nesta revisão.</p>
       </section>
+      {allowSessions && <ReviewSessionActions exam={exam} attempt={attempt} filters={filters} />}
       {index === undefined ? (
         <p role="status" className="notice">
           Nenhuma questão corresponde aos filtros.

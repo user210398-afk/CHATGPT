@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import type { Exam } from '../types/exam';
 import { writeTransaction } from './storage-transaction';
+import { sameContent } from './content-equality';
 import {
   attemptSchema,
   legacyAttemptSchema,
@@ -110,12 +111,18 @@ export function includeCurrent(current: Attempt | null, history: HistoryEntry[])
 }
 export class AttemptRepository {
   private readonly savedHistory = new Set<string>();
+  private readonly legacyHistorySources = new Map<string, string>();
+  private readonly savedCurrents = new Map<string, Attempt>();
+  private readonly resetConflicts = new Set<string>();
   constructor(readonly storage: () => StorageAdapter) {}
   // UI uses read: no attempt is created until the user chooses a mode.
   read(exam: Exam): ReadSession {
     const fresh: ReadSession = { current: null, history: [], warning: null, restored: false };
     const key = historyStorageKey(exam);
     this.savedHistory.delete(key);
+    this.legacyHistorySources.delete(key);
+    this.savedCurrents.delete(key);
+    this.resetConflicts.delete(key);
     try {
       const raw = this.storage().getItem(storageKey(exam));
       let current: Attempt | null = null;
@@ -134,6 +141,7 @@ export class AttemptRepository {
           )
             throw new Error('Histórico legado incompatível');
           history = detailed.map(summary);
+          if (history.length) this.legacyHistorySources.set(key, raw);
         }
         if (!isCompatibleAttempt(exam, current)) throw new Error('Tentativa incompatível');
       }
@@ -155,6 +163,7 @@ export class AttemptRepository {
           ? 'O histórico local está inválido. A tentativa atual foi restaurada.'
           : 'O histórico local está inválido. O registro existente foi preservado.';
       }
+      if (current) this.savedCurrents.set(key, attemptSchema.parse(current));
       return {
         current,
         history: includeCurrent(current, history),
@@ -180,8 +189,60 @@ export class AttemptRepository {
     history: HistoryEntry[],
     expected?: Map<string, string | null>,
   ): Pick<Session, 'history' | 'warning'> & { aborted?: boolean } {
-    const nextHistory = includeCurrent(current, history);
     const historyKey = historyStorageKey(exam);
+    const resetWarning =
+      'O histórico ou a tentativa atual mudou. Reabra a prova; os registros locais foram preservados.';
+    if (this.resetConflicts.has(historyKey))
+      return { history, aborted: true, warning: resetWarning };
+    let observedReset = false;
+    // A reset in another tab can leave old summaries in this repository's caller.
+    // A removed known history, or replaced embedded v1 history, must not be resurrected.
+    if (
+      history.length &&
+      (this.savedHistory.has(historyKey) || this.legacyHistorySources.has(historyKey))
+    ) {
+      try {
+        const store = this.storage(),
+          historyRaw = store.getItem(historyKey);
+        if (historyRaw === null) {
+          const currentRaw = store.getItem(storageKey(exam));
+          const legacyRaw = this.legacyHistorySources.get(historyKey);
+          if (
+            this.savedHistory.has(historyKey) ||
+            (legacyRaw !== undefined && currentRaw !== legacyRaw)
+          ) {
+            const knownCurrent = this.savedCurrents.get(historyKey);
+            // Inspect with a separate reader: a failed save must not adopt another
+            // writer's snapshot and then accept that writer's data on a retry.
+            const actual = new AttemptRepository(this.storage).read(exam);
+            if (
+              actual.warning ||
+              !actual.current ||
+              actual.current.id !== current.id ||
+              actual.current.completedAt ||
+              !knownCurrent ||
+              !sameContent(knownCurrent, actual.current)
+            )
+              throw new Error('Tentativa atual mudou após a remoção do histórico.');
+            history = actual.history;
+            observedReset = true;
+            expected ??= new Map([
+              [storageKey(exam), currentRaw],
+              [historyKey, historyRaw],
+            ]);
+            this.savedHistory.add(historyKey); // Acknowledge the explicitly emptied history.
+          }
+        }
+      } catch {
+        this.resetConflicts.add(historyKey);
+        return {
+          history,
+          aborted: true,
+          warning: resetWarning,
+        };
+      }
+    }
+    const nextHistory = includeCurrent(current, history);
     if (!isCompatibleAttempt(exam, current))
       return {
         history: nextHistory,
@@ -204,9 +265,12 @@ export class AttemptRepository {
         });
       try {
         writeTransaction(this.storage(), expected, changes);
+        this.savedCurrents.set(historyKey, attemptSchema.parse(current));
+        this.legacyHistorySources.delete(historyKey);
         if (writeHistory) this.savedHistory.add(historyKey);
         return { history: nextHistory, warning: null };
       } catch (error) {
+        if (observedReset) this.resetConflicts.add(historyKey);
         return {
           history,
           aborted: true,
@@ -216,6 +280,8 @@ export class AttemptRepository {
     }
     try {
       this.storage().setItem(storageKey(exam), JSON.stringify({ storageVersion: 3, current }));
+      this.legacyHistorySources.delete(historyKey);
+      this.savedCurrents.set(historyKey, attemptSchema.parse(current));
     } catch {
       return {
         history: nextHistory,

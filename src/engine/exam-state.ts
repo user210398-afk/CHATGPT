@@ -64,11 +64,11 @@ export function createAttempt(
     result: null,
   };
 }
-export function answeredCount(exam: Exam, state: Attempt): number {
+export function answeredCount(exam: Exam, state: Pick<Attempt, 'answers'>): number {
   return exam.questions.filter((q) => questionBehaviors[q.type].isAnswered(state.answers[q.id]))
     .length;
 }
-export function calculateResult(exam: Exam, state: Attempt): Result {
+export function calculateResult<T extends Pick<Attempt, 'answers'>>(exam: Exam, state: T): Result {
   const result: Result = {
     objectiveTotal: 0,
     objectiveAnswered: 0,

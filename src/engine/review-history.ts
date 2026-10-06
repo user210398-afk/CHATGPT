@@ -215,12 +215,19 @@ export class ReviewRepository {
     ]);
     if (!attempts.some((item) => item.id === next.id))
       throw new Error('O limite de revisão não permite preservar esta marcação.');
+    const embedded = isCurrent ? previousEnvelopeSchema.safeParse(JSON.parse(currentRaw!)) : null;
     const changes = isCurrent
       ? [
           {
             key: storageKey(exam),
             before: currentRaw,
-            after: JSON.stringify({ storageVersion: 3, current: next }),
+            // Never erase embedded v1 history while flagging. When none exists,
+            // retain 7B.1's explicit-action migration to the current v3 contract.
+            after: JSON.stringify(
+              embedded?.success && embedded.data.history.length
+                ? { ...embedded.data, current: { ...embedded.data.current, flagged: next.flagged } }
+                : { storageVersion: 3, current: next },
+            ),
           },
         ]
       : [];

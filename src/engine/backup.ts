@@ -45,6 +45,8 @@ import {
 } from './review-history';
 import { sameContent } from './content-equality';
 export { sameContent } from './content-equality';
+import { reviewSessionSchema, isCompatibleReviewSession } from './review-session';
+import { reviewSessionStorageKey, reviewSessionEnvelopeSchema } from './review-session-storage';
 import { writeTransaction } from './storage-transaction';
 export const MAX_BACKUP_BYTES = 10 * 1024 * 1024;
 const boundedId = z
@@ -104,7 +106,7 @@ const backupAttemptSchema = backupLegacyAttemptSchema.extend({
 const backupHistorySchema = historyEntrySchema
   .extend({ id: boundedId })
   .refine((entry) => Date.parse(entry.completedAt) >= Date.parse(entry.startedAt));
-export const backupSchema = backupV1Schema.extend({
+export const backupV2Schema = backupV1Schema.extend({
   version: z.literal(2),
   exams: z
     .array(
@@ -126,16 +128,33 @@ export const backupSchema = backupV1Schema.extend({
     .refine((entries) => new Set(entries.map((entry) => entry.examId)).size === entries.length),
   uiPreferences: uiPreferencesSchema.nullable(),
 });
+export const backupSchema = backupV2Schema.extend({
+  version: z.literal(3),
+  exams: z
+    .array(
+      backupV2Schema.shape.exams.element.extend({
+        reviewSession: reviewSessionSchema.nullable(),
+      }),
+    )
+    .max(200)
+    .refine((entries) => new Set(entries.map((entry) => entry.examId)).size === entries.length),
+});
 export const readableBackupSchema = z.union([
   backupSchema,
+  backupV2Schema.transform((backup) => ({
+    ...backup,
+    version: 3 as const,
+    exams: backup.exams.map((exam) => ({ ...exam, reviewSession: null })),
+  })),
   backupV1Schema.transform((backup) => ({
     ...backup,
-    version: 2 as const,
+    version: 3 as const,
     exams: backup.exams.map((exam) => ({
       ...exam,
       current: exam.current ? normalizeLegacyAttempt(exam.current) : null,
       history: exam.history.map((entry) => ({ ...entry, mode: 'exam' as const })),
       reviewAttempts: [],
+      reviewSession: null,
     })),
     uiPreferences: backup.uiPreferences
       ? {
@@ -146,6 +165,7 @@ export const readableBackupSchema = z.union([
       : null,
   })),
 ]);
+export type BackupV2 = z.infer<typeof backupV2Schema>;
 export type BackupV1 = z.infer<typeof backupV1Schema>;
 export type Backup = z.infer<typeof backupSchema>;
 export type BackupExam = Backup['exams'][number];
@@ -241,6 +261,11 @@ async function readStoredExam(
   const raw = storage.getItem(storageKey(exam));
   const historyRaw = storage.getItem(historyStorageKey(exam));
   const reviewRaw = storage.getItem(reviewStorageKey(exam));
+  const sessionRaw = storage.getItem(reviewSessionStorageKey(exam));
+  const reviewSession =
+    sessionRaw === null ? null : reviewSessionEnvelopeSchema.parse(readJson(sessionRaw)).session;
+  if (reviewSession && !isCompatibleReviewSession(await loader(exam.id), reviewSession))
+    throw new Error('Sessão incompatível.');
   let current: Attempt | null = null;
   let history: HistoryEntry[] = [];
   if (raw !== null) {
@@ -295,6 +320,7 @@ async function readStoredExam(
   }
   return {
     reviewAttempts,
+    reviewSession,
     examId: exam.id,
     revision: exam.revision,
     current,
@@ -321,7 +347,13 @@ export async function exportBackup(
   for (const exam of catalog.exams) {
     try {
       const entry = await readStoredExam(exam, snapshot, loader);
-      if (entry.current || entry.history.length || entry.reviewAttempts.length) exams.push(entry);
+      if (
+        entry.current ||
+        entry.history.length ||
+        entry.reviewAttempts.length ||
+        entry.reviewSession
+      )
+        exams.push(entry);
     } catch {
       throw new Error(
         `Exportação abortada: ${exam.title} possui estado local incompatível ou indisponível. Nenhum arquivo parcial foi gerado.`,
@@ -332,7 +364,7 @@ export async function exportBackup(
     const raw = snapshot.getItem(catalogPreferencesKey);
     const backup = backupSchema.parse({
       format: 'medsim-backup',
-      version: 2,
+      version: 3,
       exportedAt: now,
       exams,
       catalogPreferences:
@@ -372,6 +404,14 @@ export function mergeExam(local: BackupExam, incoming: BackupExam) {
   const notes: string[] = [];
   let current = local.current;
   const localReviews = local.reviewAttempts;
+  let reviewSession = local.reviewSession;
+  if (incoming.reviewSession) {
+    if (!reviewSession) reviewSession = incoming.reviewSession;
+    else if (!sameContent(reviewSession, incoming.reviewSession)) {
+      conflicts++;
+      notes.push('Sessão de revisão local preservada por conflito.');
+    }
+  }
   if (incoming.current) {
     if (!current) {
       const detail = localReviews.find((attempt) => attempt.id === incoming.current!.id);
@@ -457,6 +497,7 @@ export function mergeExam(local: BackupExam, incoming: BackupExam) {
     current,
     history,
     reviewAttempts,
+    reviewSession,
     conflicts,
     notes,
     discarded,
@@ -464,7 +505,7 @@ export function mergeExam(local: BackupExam, incoming: BackupExam) {
   };
 }
 export async function prepareImport(
-  input: Backup | BackupV1,
+  input: Backup | BackupV1 | BackupV2,
   catalog: Catalog,
   storage: Pick<BackupStorage, 'getItem'> = window.localStorage,
   loader: ExamLoader = loadExam,
@@ -510,6 +551,11 @@ export async function prepareImport(
     }
     try {
       validateHistory(exam, incoming.history);
+      if (
+        incoming.reviewSession &&
+        !isCompatibleReviewSession(await loader(exam.id), incoming.reviewSession)
+      )
+        throw new Error('Sessão importada incompatível.');
       if (incoming.reviewAttempts.length)
         validateReviewArchive(await loader(exam.id), incoming.reviewAttempts);
       const detailed = [
@@ -559,6 +605,8 @@ export async function prepareImport(
         change(historyStorageKey(exam), { storageVersion: 3, history: merged.history });
       if (!sameContent(local.reviewAttempts, merged.reviewAttempts))
         change(reviewStorageKey(exam), { storageVersion: 1, attempts: merged.reviewAttempts });
+      if (!local.reviewSession && merged.reviewSession)
+        change(reviewSessionStorageKey(exam), { storageVersion: 1, session: merged.reviewSession });
       if (plan.changes.length > previousChanges) plan.importedExams++;
     } catch {
       plan.issues.push(

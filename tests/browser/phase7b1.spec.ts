@@ -493,7 +493,7 @@ test('7B.1: real Study backup v2 roundtrip preserves answers, confirmations and 
   if (!file) throw new Error('download');
   expect(JSON.parse(readFileSync(file, 'utf8'))).toMatchObject({
     format: 'medsim-backup',
-    version: 2,
+    version: 3,
   });
   const context = await browser.newContext({
     ...info.project.use,

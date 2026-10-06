@@ -1,10 +1,19 @@
 import type { StorageAdapter } from './persistence';
-export type StorageChange = { key: string; before: string | null; after: string };
+export type StorageChange = { key: string; before: string | null; after: string | null };
 export function writeTransaction(
   storage: StorageAdapter,
   expected: Map<string, string | null>,
   changes: StorageChange[],
 ) {
+  if (
+    new Set(changes.map((change) => change.key)).size !== changes.length ||
+    changes.some(
+      (change) => !expected.has(change.key) || expected.get(change.key) !== change.before,
+    )
+  )
+    throw new Error('Plano transacional inválido.');
+  if (changes.some((change) => change.after === null) && !storage.removeItem)
+    throw new Error('Operação abortada: removeItem indisponível para remoção ou rollback.');
   const written: StorageChange[] = [];
   // localStorage has no native transaction: compare raw values before every write.
   function check() {
@@ -23,7 +32,8 @@ export function writeTransaction(
     for (const change of changes) {
       check();
       written.push(change); // Handles adapters that mutate and then throw.
-      storage.setItem(change.key, change.after);
+      if (change.after === null) storage.removeItem!(change.key);
+      else storage.setItem(change.key, change.after);
     }
     check();
   } catch {

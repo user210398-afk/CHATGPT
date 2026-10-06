@@ -55,8 +55,8 @@ export function BackupControls({ catalog }: { catalog: Catalog }) {
     <section className="card backup-controls" aria-labelledby="backup-title">
       <h2 id="backup-title">Backup do progresso</h2>
       <p className="muted">
-        Arquivo JSON local, até 10 MiB. Nenhum dado é enviado. A importação mescla registros e
-        preserva conflitos locais.
+        Backup v3; leitura de v1, v2 e v3. Arquivo JSON local, até 10 MiB. Nenhum dado é enviado. A
+        importação mescla registros e preserva conflitos locais.
       </p>
       <div className="actions">
         <button disabled={busy} onClick={() => void exportFile()}>
