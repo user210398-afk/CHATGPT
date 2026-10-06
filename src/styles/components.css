@@ -745,3 +745,82 @@ button.danger {
 .review-session-actions {
   min-width: 0;
 }
+
+.annotation-area {
+  min-width: 0;
+  margin-bottom: var(--space-5);
+}
+.annotation-yellow {
+  background: var(--annotation-yellow);
+  color: var(--annotation-text);
+}
+.annotation-green {
+  background: var(--annotation-green);
+  color: var(--annotation-text);
+}
+.annotation-blue {
+  background: var(--annotation-blue);
+  color: var(--annotation-text);
+}
+.statement mark {
+  border-radius: 2px;
+  box-decoration-break: clone;
+}
+.annotation-toolbar {
+  position: fixed;
+  inset-inline: 1rem;
+  bottom: 1rem;
+  z-index: var(--z-skip);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  width: fit-content;
+  max-width: calc(100% - 2rem);
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  padding: var(--space-3);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+.annotation-toolbar button,
+.annotation-area button {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.annotation-list {
+  margin-top: var(--space-3);
+}
+.annotation-list ul {
+  padding-inline-start: var(--space-5);
+}
+.annotation-list li {
+  overflow-wrap: anywhere;
+  margin-block: var(--space-2);
+}
+.option {
+  flex-wrap: wrap;
+}
+.option-content {
+  flex: 1 1 10rem;
+}
+.eliminate-button {
+  font-size: var(--font-small);
+  min-width: 44px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.option.eliminated .option-content > .rich-content {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+.elimination-note {
+  color: var(--color-muted);
+  font-size: var(--font-small);
+}
+@media (max-width: 48rem) {
+  .eliminate-button {
+    margin-inline-start: auto;
+  }
+}

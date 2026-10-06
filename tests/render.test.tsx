@@ -136,10 +136,10 @@ it('alternativa com parágrafo, lista e tabela mantém radio acessível e seleci
   expect(radio.closest('.option')?.querySelector('table')).toBeInTheDocument();
   expect(radio.closest('label')).toBeNull();
   await userEvent.setup().click(screen.getByText('Dado'));
-  expect(onAnswer).toHaveBeenCalledWith('option-1');
+  await vi.waitFor(() => expect(onAnswer).toHaveBeenCalledWith('option-1'));
   radio.focus();
   await userEvent.setup().keyboard('[Space]');
-  expect(onAnswer).toHaveBeenCalledWith('option-1');
+  await vi.waitFor(() => expect(onAnswer).toHaveBeenCalledWith('option-1'));
 });
 it('carrega o catálogo, filtra por texto sem acentos e salva tema', async () => {
   window.history.replaceState({}, '', '/CHATGPT/?view=all');

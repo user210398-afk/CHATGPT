@@ -26,6 +26,13 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     'scripts/catalog.ts',
     'scripts/generate-exam-index.ts',
     'package-lock.json',
+    // Phase 8A: exact scratchwork modules; academic engine remains protected.
+    ':(exclude)src/engine/statement-projection.ts',
+    ':(exclude)src/engine/statement-selection.ts',
+    ':(exclude)src/engine/question-annotations.ts',
+    ':(exclude)src/engine/question-annotations-storage.ts',
+    ':(exclude)src/engine/solver-scratch.ts',
+    ':(exclude)src/engine/option-click-arbiter.ts',
     ':(exclude)src/engine/persistence.ts',
     ':(exclude)src/engine/exam-state.ts',
     ':(exclude)src/engine/review-history.ts',

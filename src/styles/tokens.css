@@ -119,3 +119,29 @@
   --color-attention: #ffe2a3;
   --color-attention-bg: #3e3421;
 }
+
+/* Personal statement annotations; independent of academic feedback colors. */
+:root {
+  --annotation-yellow: #fff0a3;
+  --annotation-green: #c5efd2;
+  --annotation-blue: #c5e3ff;
+  --annotation-text: #182a42;
+}
+:root[data-theme='dark'] {
+  --annotation-yellow: #665217;
+  --annotation-green: #24563b;
+  --annotation-blue: #284f79;
+  --annotation-text: #ffffff;
+}
+:root[data-contrast='high'] {
+  --annotation-yellow: #ffe572;
+  --annotation-green: #9de2b6;
+  --annotation-blue: #a8d5ff;
+  --annotation-text: #101010;
+}
+:root[data-theme='dark'][data-contrast='high'] {
+  --annotation-yellow: #f8d967;
+  --annotation-green: #99dfb1;
+  --annotation-blue: #a5d2ff;
+  --annotation-text: #080808;
+}
