@@ -212,12 +212,15 @@ describe('annotations UI zero-write and synchronization', () => {
     render(<AnnotatedStatement exam={exam} questionId={questionId} />);
     expect(writes).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', { name: 'Grifar' }));
+    fireEvent.click(screen.getByRole('button', { name: /^Cor:/ }));
     fireEvent.click(screen.getByRole('button', { name: 'Amarelo' }));
     drag(2, 12);
     expect(document.querySelectorAll('mark.annotation-yellow')).toHaveLength(2);
+    fireEvent.click(screen.getByRole('button', { name: /^Cor:/ }));
     fireEvent.click(screen.getByRole('button', { name: 'Verde' }));
     drag(4, 10);
     expect(document.querySelector('mark.annotation-green')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', { name: /^Cor:/ }));
     fireEvent.click(screen.getByRole('button', { name: 'Azul' }));
     drag(5, 8);
     expect(document.querySelector('mark.annotation-blue')).toBeTruthy();
@@ -233,8 +236,9 @@ describe('annotations UI zero-write and synchronization', () => {
     window.getSelection()?.removeAllRanges();
     fireEvent.click(document.querySelector('mark')!);
     fireEvent.click(screen.getByRole('button', { name: /^Remover destaque$/ }));
+    fireEvent.click(screen.getByRole('button', { name: 'Mais ações de grifo' }));
     fireEvent.click(screen.getByRole('button', { name: 'Limpar marcações desta questão' }));
-    expect(screen.getByRole('button', { name: 'Grifar' })).toHaveFocus();
+    expect(screen.getByRole('button', { name: 'Mais ações de grifo' })).toHaveFocus();
     expect(document.querySelector('mark')).toBeNull();
     expect(writes.mock.calls.every(([key]) => key === annotationStorageKey(exam))).toBe(true);
   });
@@ -301,7 +305,7 @@ describe('annotations UI zero-write and synchronization', () => {
     expect(screen.getByRole('status')).toHaveTextContent('bloqueada');
     expect(writes).not.toHaveBeenCalled();
     select(3, 5);
-    expect(screen.getByRole('button', { name: 'Amarelo' })).toBeDisabled();
+    expect(screen.getByRole('button', { name: /^Cor:/ })).toBeDisabled();
     expect(localStorage.getItem(key)).toBe('{bad');
     localStorage.setItem(key, raw);
     writes.mockClear();
@@ -332,6 +336,7 @@ describe('annotations UI zero-write and synchronization', () => {
     const view = render(<ReviewView exam={exam} attempt={attempt} onFlag={() => {}} />);
     expect(document.querySelector('mark')).toBeTruthy();
     expect(screen.queryByRole('button', { name: /Eliminar alternativa/ })).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'Mais ações de grifo' }));
     fireEvent.click(screen.getByRole('button', { name: 'Limpar marcações desta questão' }));
     expect(JSON.stringify(attempt)).toBe(original);
     view.unmount();

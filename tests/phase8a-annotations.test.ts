@@ -106,7 +106,7 @@ describe('strict annotations and mutation algebra', () => {
   it.each([
     { examId: 'unknown' },
     { examRevision: 2 },
-    { storageVersion: 2 },
+    { storageVersion: 3 },
     { questions: { unknown: [] } },
     { questions: { [questionId]: [{ id: 'id', start: -1, end: 2, color: 'yellow' }] } },
     { questions: { [questionId]: [{ id: 'id', start: 2, end: 2, color: 'yellow' }] } },
@@ -114,7 +114,7 @@ describe('strict annotations and mutation algebra', () => {
     { questions: { [questionId]: [{ id: 'id', start: 14, end: 15, color: 'yellow' }] } },
     { questions: { [questionId]: [{ id: '', start: 0, end: 1, color: 'yellow' }] } },
     { questions: { [questionId]: [{ id: 'id', start: 0.5, end: 1, color: 'yellow' }] } },
-    { questions: { [questionId]: [{ id: 'id', start: 0, end: 1, color: 'red' }] } },
+    { questions: { [questionId]: [{ id: 'id', start: 0, end: 1, color: 'purple' }] } },
   ])('rejects incompatible envelope %#', (patch) =>
     expect(() => validateAnnotations(exam, { ...emptyAnnotations(exam), ...patch })).toThrow(),
   );
@@ -243,7 +243,7 @@ describe('annotation storage defensive writes', () => {
     '{bad',
     '{}',
     '[]',
-    JSON.stringify({ ...emptyAnnotations(exam), storageVersion: 2 }),
+    JSON.stringify({ ...emptyAnnotations(exam), storageVersion: 3 }),
     'x'.repeat(MAX_ANNOTATION_RAW_LENGTH + 1),
   ])('bad/oversized raw preserved %#', (raw) => {
     const store = memory();

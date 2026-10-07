@@ -125,23 +125,27 @@
   --annotation-yellow: #fff0a3;
   --annotation-green: #c5efd2;
   --annotation-blue: #c5e3ff;
+  --annotation-red: #ffd4cc;
   --annotation-text: #182a42;
 }
 :root[data-theme='dark'] {
   --annotation-yellow: #665217;
   --annotation-green: #24563b;
   --annotation-blue: #284f79;
+  --annotation-red: #703c39;
   --annotation-text: #ffffff;
 }
 :root[data-contrast='high'] {
   --annotation-yellow: #ffe572;
   --annotation-green: #9de2b6;
   --annotation-blue: #a8d5ff;
+  --annotation-red: #ffb9aa;
   --annotation-text: #101010;
 }
 :root[data-theme='dark'][data-contrast='high'] {
   --annotation-yellow: #f8d967;
   --annotation-green: #99dfb1;
   --annotation-blue: #a5d2ff;
+  --annotation-red: #ffc1b3;
   --annotation-text: #080808;
 }

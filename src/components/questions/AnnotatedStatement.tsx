@@ -1,4 +1,4 @@
-import { createElement, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { createElement, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { Exam, RichNode } from '../../types/exam';
 import type { Highlight } from '../../engine/question-annotations';
 import {
@@ -13,6 +13,12 @@ import {
 import { useQuestionAnnotations } from '../../app/useQuestionAnnotations';
 type Tool = 'off' | 'highlight' | 'eraser';
 type Color = Highlight['color'];
+const colors: { value: Color; label: string }[] = [
+  { value: 'yellow', label: 'Amarelo' },
+  { value: 'green', label: 'Verde' },
+  { value: 'blue', label: 'Azul' },
+  { value: 'red', label: 'Vermelho' },
+];
 interface Preview {
   start: number;
   end: number;
@@ -118,22 +124,40 @@ export function AnnotatedStatement({
   questionId: string;
   scopeIdentity?: string;
 }) {
+  const [color, setColor] = useState<Color>('yellow');
   return (
     <GestureStatement
       key={`${exam.id}:${exam.revision}:${questionId}:${scopeIdentity}`}
       exam={exam}
       questionId={questionId}
+      color={color}
+      setColor={setColor}
     />
   );
 }
-function GestureStatement({ exam, questionId }: { exam: Exam; questionId: string }) {
+function GestureStatement({
+  exam,
+  questionId,
+  color,
+  setColor,
+}: {
+  exam: Exam;
+  questionId: string;
+  color: Color;
+  setColor: (color: Color) => void;
+}) {
   const question = exam.questions.find((q) => q.id === questionId)!;
   const projection = useMemo(() => projectStatement(question.statement), [question.statement]);
   const fragments = useRef<StatementTextMap>(new Map());
   const root = useRef<HTMLDivElement>(null);
   const highlightButton = useRef<HTMLButtonElement>(null);
   const [tool, setTool] = useState<Tool>('off');
-  const [color, setColor] = useState<Color>('yellow');
+  const controls = useRef<HTMLDivElement>(null);
+  const colorButton = useRef<HTMLButtonElement>(null);
+  const moreButton = useRef<HTMLButtonElement>(null);
+  const [panel, setPanel] = useState<'color' | 'more' | null>(null);
+  const panelId = useId();
+  const colorName = colors.find((item) => item.value === color)!.label;
   const [preview, setPreview] = useState<Preview | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
   const annotations = useQuestionAnnotations(exam, questionId);
@@ -167,12 +191,14 @@ function GestureStatement({ exam, questionId }: { exam: Exam; questionId: string
   function choose(next: Tool) {
     cancel();
     setActiveId(null);
+    setPanel(null);
     setTool(next === tool ? 'off' : next);
   }
   useLayoutEffect(() => {
     if (annotations.blocked) {
       cancel();
       setTool('off');
+      setPanel(null);
     }
   }, [annotations.blocked]);
   useLayoutEffect(() => () => release(), []);
@@ -182,11 +208,26 @@ function GestureStatement({ exam, questionId }: { exam: Exam; questionId: string
         cancel();
         setTool('off');
         setActiveId(null);
+        if (panel && controls.current?.contains(document.activeElement))
+          (panel === 'color' ? colorButton : moreButton).current?.focus();
+        setPanel(null);
       }
     }
+    function outside(event: PointerEvent) {
+      if (event.target instanceof Node && !controls.current?.contains(event.target)) setPanel(null);
+    }
+    function focusOutside(event: FocusEvent) {
+      if (event.target instanceof Node && !controls.current?.contains(event.target)) setPanel(null);
+    }
     document.addEventListener('keydown', escape);
-    return () => document.removeEventListener('keydown', escape);
-  }, []);
+    document.addEventListener('pointerdown', outside);
+    document.addEventListener('focusin', focusOutside);
+    return () => {
+      document.removeEventListener('keydown', escape);
+      document.removeEventListener('pointerdown', outside);
+      document.removeEventListener('focusin', focusOutside);
+    };
+  }, [panel]);
   function hit(x: number, y: number) {
     return root.current
       ? coordinateToStatementOffset(root.current, x, y, projection, fragments.current)
@@ -199,51 +240,150 @@ function GestureStatement({ exam, questionId }: { exam: Exam; questionId: string
   }
   return (
     <div className="annotation-area">
-      <div className="annotation-toolbar" role="group" aria-label="Ferramentas de grifo e borracha">
-        <button
-          ref={highlightButton}
-          disabled={annotations.blocked}
-          aria-pressed={tool === 'highlight'}
-          onClick={() => choose('highlight')}
+      <div ref={controls} className="annotation-controls">
+        <div
+          className="annotation-toolbar"
+          role="group"
+          aria-label="Ferramentas de grifo e borracha"
         >
-          Grifar
-        </button>
-        <button
-          disabled={annotations.blocked}
-          aria-pressed={tool === 'eraser'}
-          onClick={() => choose('eraser')}
-        >
-          Borracha
-        </button>
-        {(['yellow', 'green', 'blue'] as const).map((value, index) => (
           <button
-            key={value}
-            className={`annotation-${value}`}
+            ref={highlightButton}
             disabled={annotations.blocked}
-            aria-pressed={color === value}
+            aria-pressed={tool === 'highlight'}
+            onClick={() => choose('highlight')}
+          >
+            Grifar
+          </button>
+          <button
+            ref={colorButton}
+            disabled={annotations.blocked}
+            aria-label={`Cor: ${colorName}`}
+            aria-expanded={panel === 'color'}
+            aria-controls={`${panelId}-color`}
             onClick={() => {
               cancel();
-              setColor(value);
+              setPanel(panel === 'color' ? null : 'color');
             }}
           >
-            {['Amarelo', 'Verde', 'Azul'][index]}
+            <span className={`annotation-swatch annotation-${color}`} aria-hidden="true" />
+            Cor <span aria-hidden="true">⌄</span>
           </button>
-        ))}
-        {activeId && (
           <button
             disabled={annotations.blocked}
+            aria-pressed={tool === 'eraser'}
+            onClick={() => choose('eraser')}
+          >
+            Borracha
+          </button>
+          <button
+            ref={moreButton}
+            aria-label="Mais ações de grifo"
+            aria-expanded={panel === 'more'}
+            aria-controls={`${panelId}-more`}
             onClick={() => {
               cancel();
-              annotations.mutate({ type: 'remove', id: activeId });
-              setActiveId(null);
-              highlightButton.current?.focus();
+              setPanel(panel === 'more' ? null : 'more');
             }}
           >
-            Remover destaque
+            <span aria-hidden="true">⋯</span>
           </button>
+        </div>
+        {panel === 'color' && (
+          <div
+            id={`${panelId}-color`}
+            className="annotation-panel annotation-colors"
+            role="group"
+            aria-label="Cor do grifo"
+          >
+            {colors.map(({ value, label }) => (
+              <button
+                key={value}
+                disabled={annotations.blocked}
+                aria-label={label}
+                aria-pressed={color === value}
+                onClick={() => {
+                  cancel();
+                  setActiveId(null);
+                  setColor(value);
+                  setTool('highlight');
+                  setPanel(null);
+                  colorButton.current?.focus();
+                }}
+              >
+                <span className={`annotation-swatch annotation-${value}`} aria-hidden="true" />
+                <span className="annotation-color-name">{label}</span>
+                <span className="annotation-check" aria-hidden="true">
+                  {color === value ? '✓' : ''}
+                </span>
+                {color === value && <span className="sr-only"> — selecionada</span>}
+              </button>
+            ))}
+          </div>
+        )}
+        {panel === 'more' && (
+          <section
+            id={`${panelId}-more`}
+            className="annotation-panel annotation-list"
+            aria-label="Destaques desta questão"
+          >
+            <h3>Marcações deste enunciado ({annotations.highlights.length})</h3>
+            {!annotations.highlights.length && (
+              <p className="muted small">Nenhum destaque nesta questão.</p>
+            )}
+            <ul>
+              {annotations.highlights.map((h, index) => (
+                <li key={h.id}>
+                  <span className={`annotation-${h.color}`}>
+                    {projection.text.slice(h.start, h.end)}
+                  </span>{' '}
+                  <button
+                    disabled={annotations.blocked}
+                    aria-label={`Remover destaque ${index + 1}`}
+                    onClick={() => {
+                      cancel();
+                      annotations.mutate({ type: 'remove', id: h.id });
+                      setActiveId(null);
+                      setPanel(null);
+                      moreButton.current?.focus();
+                    }}
+                  >
+                    Remover destaque
+                  </button>
+                </li>
+              ))}
+            </ul>
+            {annotations.highlights.length > 0 && (
+              <button
+                className="danger"
+                disabled={annotations.blocked}
+                onClick={() => {
+                  cancel();
+                  annotations.mutate({ type: 'clear' });
+                  setActiveId(null);
+                  setPanel(null);
+                  moreButton.current?.focus();
+                }}
+              >
+                Limpar marcações desta questão
+              </button>
+            )}
+          </section>
         )}
       </div>
-      <p className="muted small" aria-live="polite" aria-atomic="true">
+      {activeId && (
+        <button
+          disabled={annotations.blocked}
+          onClick={() => {
+            cancel();
+            annotations.mutate({ type: 'remove', id: activeId });
+            setActiveId(null);
+            highlightButton.current?.focus();
+          }}
+        >
+          Remover destaque
+        </button>
+      )}
+      <p className="annotation-hint muted small" aria-live="polite" aria-atomic="true">
         {tool === 'highlight'
           ? 'Grifo ativo — arraste sobre o enunciado.'
           : tool === 'eraser'
@@ -346,43 +486,6 @@ function GestureStatement({ exam, questionId }: { exam: Exam; questionId: string
           />
         </div>
       </div>
-      {annotations.highlights.length > 0 && (
-        <details className="annotation-list">
-          <summary>Marcações deste enunciado ({annotations.highlights.length})</summary>
-          <ul>
-            {annotations.highlights.map((h, index) => (
-              <li key={h.id}>
-                <span className={`annotation-${h.color}`}>
-                  {projection.text.slice(h.start, h.end)}
-                </span>{' '}
-                <button
-                  disabled={annotations.blocked}
-                  aria-label={`Remover destaque ${index + 1}`}
-                  onClick={() => {
-                    cancel();
-                    annotations.mutate({ type: 'remove', id: h.id });
-                    setActiveId(null);
-                    highlightButton.current?.focus();
-                  }}
-                >
-                  Remover destaque
-                </button>
-              </li>
-            ))}
-          </ul>
-          <button
-            disabled={annotations.blocked}
-            onClick={() => {
-              cancel();
-              annotations.mutate({ type: 'clear' });
-              setActiveId(null);
-              highlightButton.current?.focus();
-            }}
-          >
-            Limpar marcações desta questão
-          </button>
-        </details>
-      )}
       {annotations.warning && (
         <p role="status" className="notice">
           {annotations.warning}

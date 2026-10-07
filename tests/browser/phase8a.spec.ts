@@ -76,8 +76,9 @@ test('three colors, gesture on fragmented DOM, recolor, eraser, reload, individu
       (h: { start: number; end: number }) => h.start <= 13 && h.end > 13,
     ),
   ).toBe(false);
-  await page.getByText(/^Marcações deste enunciado/).click();
+  await page.getByRole('button', { name: 'Mais ações de grifo' }).click();
   await page.getByRole('button', { name: 'Remover destaque 1', exact: true }).click();
+  await page.getByRole('button', { name: 'Mais ações de grifo' }).click();
   await page.getByRole('button', { name: 'Limpar marcações desta questão', exact: true }).click();
   await expect(page.locator('mark')).toHaveCount(0);
   expect(await current(page)).toEqual(before);
@@ -375,7 +376,9 @@ for (const width of [375, 390, 768, 1024, 1280])
       await page.getByRole('button', { name: 'Eliminar alternativa 1', exact: true }).click();
       await expect(page.locator('.option.eliminated')).toHaveCount(1);
       await page.getByRole('button', { name: 'Grifar', exact: true }).click();
-      await page.getByRole('group', { name: 'Ferramentas de grifo e borracha' }).scrollIntoViewIfNeeded();
+      await page
+        .getByRole('group', { name: 'Ferramentas de grifo e borracha' })
+        .scrollIntoViewIfNeeded();
       await noOverflow(page);
       for (const button of await page
         .getByRole('group', { name: 'Ferramentas de grifo e borracha' })
