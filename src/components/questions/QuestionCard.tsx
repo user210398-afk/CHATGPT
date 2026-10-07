@@ -105,7 +105,6 @@ export function QuestionCard({
         </section>
       )}
       <AnnotatedStatement
-        key={`${annotationExam.id}:${annotationExam.revision}:${question.id}`}
         exam={annotationExam}
         questionId={question.id}
         scopeIdentity={

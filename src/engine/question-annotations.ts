@@ -5,7 +5,7 @@ import { projectStatement, validStatementRange } from './statement-projection';
 export const MAX_HIGHLIGHTS_PER_QUESTION = 200;
 export const MAX_HIGHLIGHTS_PER_EXAM = 4000;
 export const MAX_ANNOTATION_RAW_LENGTH = 1_000_000;
-export const highlightSchema = z.strictObject({
+const legacyHighlightSchema = z.strictObject({
   id: z
     .string()
     .min(1)
@@ -15,12 +15,24 @@ export const highlightSchema = z.strictObject({
   end: z.number().int().positive(),
   color: z.enum(['yellow', 'green', 'blue']),
 });
-export const annotationsSchema = z.strictObject({
+export const annotationsV1Schema = z.strictObject({
   storageVersion: z.literal(1),
   examId: identifier,
   examRevision: z.number().int().positive(),
+  questions: z.record(identifier, z.array(legacyHighlightSchema).max(MAX_HIGHLIGHTS_PER_QUESTION)),
+});
+export const highlightSchema = legacyHighlightSchema.extend({
+  color: z.enum(['yellow', 'green', 'blue', 'red']),
+});
+export const annotationsV2Schema = annotationsV1Schema.extend({
+  storageVersion: z.literal(2),
   questions: z.record(identifier, z.array(highlightSchema).max(MAX_HIGHLIGHTS_PER_QUESTION)),
 });
+// Validate the frozen legacy domain before normalizing in memory. Reads never serialize it.
+export const annotationsSchema = z.union([
+  annotationsV2Schema,
+  annotationsV1Schema.transform((value) => ({ ...value, storageVersion: 2 as const })),
+]);
 export type Highlight = z.infer<typeof highlightSchema>;
 export type Annotations = z.infer<typeof annotationsSchema>;
 export function questionHighlights(value: Annotations, questionId: string): Highlight[] {
@@ -32,7 +44,7 @@ export type AnnotationAction =
   | { type: 'remove'; id: string }
   | { type: 'clear' };
 export function emptyAnnotations(exam: Exam): Annotations {
-  return { storageVersion: 1, examId: exam.id, examRevision: exam.revision, questions: {} };
+  return { storageVersion: 2, examId: exam.id, examRevision: exam.revision, questions: {} };
 }
 export function validateAnnotations(exam: Exam, input: unknown): Annotations {
   const value = annotationsSchema.parse(input);

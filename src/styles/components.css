@@ -762,6 +762,10 @@ button.danger {
   background: var(--annotation-blue);
   color: var(--annotation-text);
 }
+.annotation-red {
+  background: var(--annotation-red);
+  color: var(--annotation-text);
+}
 .statement mark {
   border-radius: 2px;
   box-decoration-break: clone;
@@ -769,14 +773,13 @@ button.danger {
 .annotation-toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
+  gap: var(--space-1);
   width: fit-content;
   max-width: 100%;
-  padding: var(--space-2);
-  border: 2px solid var(--color-border);
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: var(--color-surface);
-  box-shadow: var(--shadow-card);
+  background: var(--color-surface-soft);
 }
 .annotation-toolbar button {
   padding-inline: var(--space-2);
@@ -792,7 +795,9 @@ button.danger {
   cursor: crosshair;
 }
 .annotation-preview {
-  opacity: 0.8;
+  background: color-mix(in srgb, var(--annotation-yellow) 80%, var(--color-surface));
+  outline: 1px dotted currentColor;
+  outline-offset: -1px;
 }
 .annotation-preview-eraser {
   outline: 2px dashed currentColor;
@@ -801,9 +806,11 @@ button.danger {
   color: var(--color-text);
 }
 .annotation-toolbar button[aria-pressed='true'] {
-  border: 3px solid currentColor;
-  box-shadow: inset 0 -3px currentColor;
-  font-weight: 800;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-selection);
+  box-shadow: inset 0 -2px var(--color-primary);
+  font-weight: 700;
 }
 .annotation-toolbar button,
 .annotation-area button {
@@ -811,6 +818,63 @@ button.danger {
   min-height: 44px;
   max-width: 100%;
   overflow-wrap: anywhere;
+}
+.annotation-controls {
+  min-width: 0;
+}
+.annotation-swatch {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-muted);
+  border-radius: 50%;
+}
+/* Disclosures stay in document flow: no viewport collision or hidden statement overlay. */
+.annotation-panel {
+  width: min(100%, 30rem);
+  max-height: min(60vh, 24rem);
+  overflow-y: auto;
+  min-width: 0;
+  padding: var(--space-3);
+  margin-block: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-soft);
+}
+.annotation-colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: var(--space-2);
+}
+.annotation-colors button {
+  justify-content: start;
+  padding-inline: var(--space-2);
+  font-size: var(--font-small);
+}
+.annotation-colors button[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  font-weight: 750;
+}
+.annotation-check {
+  margin-inline-start: auto;
+}
+.annotation-hint {
+  margin-block: var(--space-2) var(--space-3);
+}
+.annotation-preview.annotation-yellow {
+  --preview-color: var(--annotation-yellow);
+}
+.annotation-preview.annotation-green {
+  --preview-color: var(--annotation-green);
+}
+.annotation-preview.annotation-blue {
+  --preview-color: var(--annotation-blue);
+}
+.annotation-preview.annotation-red {
+  --preview-color: var(--annotation-red);
+}
+.annotation-preview:not(.annotation-preview-eraser) {
+  background: color-mix(in srgb, var(--preview-color) 80%, var(--color-surface));
 }
 .annotation-list {
   margin-top: var(--space-3);

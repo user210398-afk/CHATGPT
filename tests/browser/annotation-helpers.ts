@@ -33,6 +33,7 @@ export async function gesture(page: Page, start: number, end: number) {
 export async function paint(page: Page, start: number, end: number, color: string) {
   const button = page.getByRole('button', { name: 'Grifar', exact: true });
   if ((await button.getAttribute('aria-pressed')) !== 'true') await button.click();
+  await page.getByRole('button', { name: /^Cor:/ }).click();
   await page.getByRole('button', { name: color, exact: true }).click();
   await gesture(page, start, end);
 }

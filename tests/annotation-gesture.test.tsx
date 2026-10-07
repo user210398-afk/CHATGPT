@@ -10,6 +10,11 @@ import { exam, questionId } from './phase8a-fixtures';
 import { drag, pointer } from './gesture-fixtures';
 const key = annotationStorageKey(exam);
 const tool = (name = 'Grifar') => screen.getByRole('button', { name });
+const colorTrigger = () => screen.getByRole('button', { name: /^Cor:/ });
+function selectColor(name: string) {
+  fireEvent.click(colorTrigger());
+  fireEvent.click(tool(name));
+}
 function fixture() {
   const view = render(<AnnotatedStatement exam={exam} questionId={questionId} />);
   const root = document.querySelector('.statement') as HTMLElement;
@@ -26,11 +31,13 @@ afterEach(() => {
   delete (document as any).caretPositionFromPoint;
 });
 describe('explicit gesture tools / lifecycle red team', () => {
-  it('toolbar is available without Selection; modes exclusive; color independent; Escape and toggle off', () => {
+  it('toolbar is available without Selection; modes exclusive; color activates Grifar; Escape and toggle off', () => {
     const f = fixture();
     expect(screen.getByRole('group', { name: 'Ferramentas de grifo e borracha' })).toBeVisible();
     expect(f.root).toHaveAttribute('data-annotation-tool', 'off');
+    fireEvent.click(colorTrigger());
     expect(tool('Amarelo')).toHaveAttribute('aria-pressed', 'true');
+    fireEvent.click(colorTrigger());
     fireEvent.click(tool());
     expect(tool()).toHaveAttribute('aria-pressed', 'true');
     fireEvent.click(tool('Borracha'));
@@ -39,8 +46,9 @@ describe('explicit gesture tools / lifecycle red team', () => {
     fireEvent.click(tool('Borracha'));
     expect(f.root).toHaveAttribute('data-annotation-tool', 'off');
     for (const name of ['Verde', 'Azul', 'Amarelo']) {
-      fireEvent.click(tool(name));
-      expect(tool(name)).toHaveAttribute('aria-pressed', 'true');
+      selectColor(name);
+      expect(colorTrigger()).toHaveAccessibleName(`Cor: ${name}`);
+      expect(tool()).toHaveAttribute('aria-pressed', 'true');
     }
     fireEvent.click(tool());
     fireEvent.keyDown(document, { key: 'Escape' });
@@ -65,27 +73,30 @@ describe('explicit gesture tools / lifecycle red team', () => {
     tool().focus();
     await user.keyboard('[Space]');
     expect(tool()).toHaveAttribute('aria-pressed', 'true');
+    colorTrigger().focus();
+    await user.keyboard('[Enter]');
     tool('Azul').focus();
     await user.keyboard('[Enter]');
-    expect(tool('Azul')).toHaveAttribute('aria-pressed', 'true');
+    expect(colorTrigger()).toHaveAccessibleName('Cor: Azul');
+    expect(colorTrigger()).toHaveFocus();
     tool('Borracha').focus();
     await user.keyboard('[Space]');
     expect(tool()).toHaveAttribute('aria-pressed', 'false');
     expect(f.writes).not.toHaveBeenCalled();
     await user.keyboard('[Escape]');
-    const summary = document.querySelector('summary')!;
-    summary.focus();
+    tool('Mais ações de grifo').focus();
     await user.keyboard('[Enter]');
     screen.getByRole('button', { name: 'Remover destaque 1' }).focus();
     await user.keyboard('[Enter]');
     expect(document.querySelector('mark')).toBeNull();
-    expect(tool()).toHaveFocus();
+    expect(tool('Mais ações de grifo')).toHaveFocus();
     fireEvent.click(tool());
     drag(2, 12);
+    fireEvent.click(tool('Mais ações de grifo'));
     screen.getByRole('button', { name: 'Limpar marcações desta questão' }).focus();
     await user.keyboard('[Enter]');
     expect(document.querySelector('mark')).toBeNull();
-    expect(tool()).toHaveFocus();
+    expect(tool('Mais ações de grifo')).toHaveFocus();
   });
   it.each(['mouse', 'touch', 'pen'])(
     '%s unified down/move/up: preview only, then exactly one write, no Selection',
@@ -141,7 +152,7 @@ describe('explicit gesture tools / lifecycle red team', () => {
         ),
       );
       expect(tool()).toBeDisabled();
-      expect(tool('Azul')).toBeDisabled();
+      expect(colorTrigger()).toBeDisabled();
     } else pointer(f.root, reason, 12);
     pointer(f.root, 'pointerup', 12, { buttons: 0 });
     expect(f.writes).not.toHaveBeenCalled();
@@ -210,7 +221,7 @@ describe('explicit gesture tools / lifecycle red team', () => {
     localStorage.setItem(key, JSON.stringify(old));
     const f = fixture();
     fireEvent.click(tool());
-    fireEvent.click(tool('Verde'));
+    selectColor('Verde');
     drag(10, 4);
     expect(
       JSON.parse(localStorage.getItem(key)!).questions[questionId].map(
@@ -281,7 +292,7 @@ describe('explicit gesture tools / lifecycle red team', () => {
     fireEvent.click(tool());
     pointer(f.root, 'pointerdown', 2);
     pointer(f.root, 'pointermove', 12);
-    fireEvent.click(tool('Azul'));
+    selectColor('Azul');
     pointer(f.root, 'pointerup', 12);
     expect(f.writes).not.toHaveBeenCalled();
     pointer(f.root, 'pointerdown', 2);
