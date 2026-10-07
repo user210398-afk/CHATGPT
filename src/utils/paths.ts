@@ -72,8 +72,12 @@ export function dashboardUrl(): string {
 export function settingsUrl(): string {
   return `${sitePath('')}?view=settings`;
 }
+export function errorNotebookUrl(): string {
+  return withReviewResume(`${sitePath('')}?view=error-notebook`);
+}
 export function resolveRoute(search: string): {
-  view: 'catalog' | 'dashboard' | 'settings' | 'review' | 'review-session' | 'exam';
+  view:
+    'catalog' | 'dashboard' | 'settings' | 'review' | 'review-session' | 'error-notebook' | 'exam';
   reviewExam?: string;
   attempt?: string;
   id?: string;
@@ -101,7 +105,7 @@ export function resolveRoute(search: string): {
         : {}),
     };
   }
-  if (view === 'dashboard' || view === 'settings') return { view };
+  if (view === 'dashboard' || view === 'settings' || view === 'error-notebook') return { view };
   const area = params.get('area');
   return { view: 'catalog', ...(area !== null ? { area } : { allExams: view === 'all' }) };
 }
