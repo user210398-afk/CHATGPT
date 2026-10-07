@@ -26,32 +26,45 @@ export function HistoryResetControls({
   return (
     <section className="card history-reset" aria-labelledby="reset-title">
       <h2 id="reset-title">Dados e histórico</h2>
-      <p>
-        {progress.reduce((count, item) => count + item.attemptCount, 0)} tentativas concluídas
-        registradas · {progress.filter((item) => item.attemptCount).length} provas com histórico ·{' '}
-        {progress.filter((item) => item.status === 'in-progress').length} tentativas oficiais em
-        andamento.
-      </p>
-      <p>
-        Serão removidas as tentativas concluídas, seus históricos detalhados e sessões de revisão
-        neste navegador. Exporte seu progresso na seção de backup antes de continuar.
-      </p>
-      <button
-        ref={trigger}
-        className="danger"
-        onClick={() => {
-          setError(null);
-          setReport(null);
-          setConfirmation('');
-          try {
-            setPlan(prepareHistoryReset(catalog));
-          } catch (error) {
-            setError(error instanceof Error ? error.message : 'Não foi possível preparar o reset.');
-          }
-        }}
-      >
-        Zerar histórico e estatísticas
-      </button>
+      <dl className="history-indicators">
+        <div>
+          <dt>Conclusões registradas</dt>
+          <dd>{progress.reduce((count, item) => count + item.attemptCount, 0)}</dd>
+        </div>
+        <div>
+          <dt>Provas com histórico</dt>
+          <dd>{progress.filter((item) => item.attemptCount).length}</dd>
+        </div>
+        <div>
+          <dt>Tentativas oficiais em andamento</dt>
+          <dd>{progress.filter((item) => item.status === 'in-progress').length}</dd>
+        </div>
+      </dl>
+      <div className="history-care-zone">
+        <h3>Zona de cuidado</h3>
+        <p className="muted">
+          Serão removidas as tentativas concluídas, seus históricos detalhados e sessões de revisão
+          neste navegador. Exporte seu progresso na seção de backup antes de continuar.
+        </p>
+        <button
+          ref={trigger}
+          className="danger"
+          onClick={() => {
+            setError(null);
+            setReport(null);
+            setConfirmation('');
+            try {
+              setPlan(prepareHistoryReset(catalog));
+            } catch (error) {
+              setError(
+                error instanceof Error ? error.message : 'Não foi possível preparar o reset.',
+              );
+            }
+          }}
+        >
+          Zerar histórico e estatísticas
+        </button>
+      </div>
       {error && (
         <p role="alert" className="notice">
           {error}

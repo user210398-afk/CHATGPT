@@ -869,6 +869,10 @@ describe('deterministic filters, comparator and domain preservation', () => {
           'src/engine/history-reset.ts',
           'src/app/DashboardPage.tsx',
           'src/app/useDashboardState.ts',
+          // Analytics v1 explicitly authorizes only these two dashboard UI paths.
+          // Keep the baseline and every academic/official domain assertion intact.
+          ':(exclude)src/app/DashboardPage.tsx',
+          ':(exclude)src/app/useDashboardState.ts',
           '.github/workflows/',
           'package.json',
           'package-lock.json',
