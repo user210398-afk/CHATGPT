@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { lazy, Suspense, useCallback, useEffect } from 'react';
 import { loadCatalog, loadExam } from '../engine/exam-loader';
 import { ExamPage } from '../components/exam/ExamPage';
 import {
@@ -8,6 +8,7 @@ import {
   reviewUrl,
   resolveRoute,
   withReviewResume,
+  errorNotebookUrl,
 } from '../utils/paths';
 import { CatalogPage } from './CatalogPage';
 import { useResource } from './useResource';
@@ -18,6 +19,7 @@ import { ReviewPage } from './ReviewPage';
 import { SettingsPage } from './SettingsPage';
 import { SetupPrompt } from '../components/common/SetupPrompt';
 const catalogLoader = (signal: AbortSignal) => loadCatalog(fetch, signal);
+const ErrorNotebookPage = lazy(() => import('./ErrorNotebookPage'));
 function LoadMessage({ error }: { error?: string }) {
   return error ? (
     <section className="card" role="alert">
@@ -36,6 +38,10 @@ function CatalogRoute({ view, ui }: { view: string; ui: UiPreferencesState }) {
       {view !== 'settings' && <SetupPrompt ui={ui} />}
       {view === 'dashboard' ? (
         <DashboardPage catalog={data} />
+      ) : view === 'error-notebook' ? (
+        <Suspense fallback={<LoadMessage />}>
+          <ErrorNotebookPage catalog={data} />
+        </Suspense>
       ) : view === 'review' ? (
         <ReviewPage
           catalog={data}
@@ -127,6 +133,7 @@ export function App() {
                 ['catalog', 'Matérias', sitePath('')],
                 ['dashboard', 'Dashboard', dashboardUrl()],
                 ['review', 'Revisão', reviewUrl()],
+                ['error-notebook', 'Erros', errorNotebookUrl()],
                 ['settings', 'Configurações', settingsUrl()],
               ] as const
             ).map(([view, label, href]) => (

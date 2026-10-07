@@ -59,6 +59,10 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     ':(exclude)src/engine/ui-preferences.ts',
     ':(exclude)src/engine/backup.ts',
     ':(exclude)src/engine/backup-browser.ts',
+    // Caderno de Erros: only the two approved read-only notebook modules.
+    // Keep every other academic engine and historical baseline protection active.
+    ':(exclude)src/engine/error-notebook-storage.ts',
+    ':(exclude)src/engine/error-notebook.ts',
   ]);
   expect(stdout.trim()).toBe('');
   // Authorized 7B.1 transitions/storage are covered by domain and migration tests.

@@ -666,6 +666,122 @@ progress::-moz-progress-bar {
   margin-bottom: 0;
 }
 
+/* Derived study views share the existing surfaces, metrics, controls and tokens. */
+.notebook-page {
+  max-width: 960px;
+  margin-inline: auto;
+}
+.notebook-page .page-heading {
+  max-width: 46rem;
+}
+.notebook-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin: 0;
+}
+.notebook-summary > p {
+  margin-block: var(--space-5) 0;
+}
+.notebook-filters {
+  display: grid;
+  gap: var(--space-4);
+}
+.notebook-filters h2,
+.notebook-results-count {
+  margin: 0;
+}
+.notebook-category-controls,
+.notebook-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.notebook-category-controls button {
+  font-size: var(--font-small);
+}
+.notebook-category-controls button[aria-pressed='true'] {
+  background: var(--color-selection);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.notebook-selects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.notebook-question {
+  max-width: 100%;
+}
+.notebook-question header > p:first-child {
+  margin-bottom: var(--space-2);
+}
+.notebook-question h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-1);
+}
+.notebook-identity {
+  margin-bottom: var(--space-5);
+}
+.notebook-question > .rich-content {
+  font-size: var(--font-reading);
+}
+.notebook-card-meta {
+  display: grid;
+  gap: var(--space-3);
+  margin-block: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+.notebook-card-meta p {
+  margin: 0;
+}
+.notebook-pending {
+  background: var(--color-attention-bg);
+  color: var(--color-attention);
+}
+.notebook-overcome {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+.notebook-outcomes summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-primary);
+}
+.notebook-outcomes summary::before {
+  content: '+';
+  margin-inline-end: var(--space-2);
+}
+.notebook-outcomes[open] summary::before {
+  content: '−';
+}
+.notebook-outcomes ol,
+.notebook-coverage ul {
+  padding-inline-start: var(--space-5);
+}
+.notebook-outcomes li,
+.notebook-coverage li {
+  margin-block: var(--space-3);
+}
+.notebook-empty .button {
+  margin-inline-end: var(--space-2);
+  margin-block: var(--space-2);
+}
+@media (max-width: 48rem) {
+  .notebook-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+  .notebook-metrics > div:first-child {
+    grid-column: 1 / -1;
+  }
+  .notebook-selects {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .subject-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));

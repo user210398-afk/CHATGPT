@@ -1,5 +1,8 @@
 # Caderno de Erros — arquitetura proposta, sem implementação
 
+Nota de evolução: a seção 13 registra a implementação local read-only v1 sobre
+`b09634a87042e18ebf2c31ad598c6ad5e13103d7`. O projeto original abaixo foi preservado.
+
 Status: projeto para tarefa futura. Baseline inspecionado:
 `8a3114f4ca36e2976156026ee9bb00345df23b33` (PR #18).
 Esta tarefa cria somente este documento: não há rota, componente, engine, botão,
@@ -358,3 +361,90 @@ como parte desta v1.
 
 Sem mudanças funcionais autorizadas por este documento. Implementação futura exige
 nova tarefa e auditoria dos contratos; não ampliar a autorização desta rodada.
+
+## 13. Implementação local v1 read-only
+
+Subset concretizado: rota explícita `?view=error-notebook`, helper
+`errorNotebookUrl()` com preservação de `reviewResume`, módulo de página carregado
+por `lazy`, entrada **Erros** na navegação principal e heading **Caderno de Erros**.
+A navegação conserva seu padrão compartilhado de flex-wrap, sem reduzir fontes
+para acomodar a quinta entrada. Dashboard e suas métricas permanecem inalterados.
+
+`error-notebook-storage.ts` captura raws de current/history/review antes do fetch.
+Reutiliza envelopes estritos v1/v2/v3 existentes, normaliza v1/v2 apenas em memória
+e extrai todo o history detalhado embutido em v1. Envelope inválido exclui sua fonte
+inteira, preservando fontes independentes. Não há load/capture/save de repositórios,
+migração, reparo, setItem/removeItem ou novo domínio de storage.
+
+`error-notebook.ts` carrega somente Exams com detalhes concluídos candidatos, um
+load por identidade em cada atualização, no máximo dois simultâneos. O retry usa o
+conteúdo já obtido em memória. Sem detalhes, inclusive somente resumos ou versões
+históricas, são zero loads. Confere id/revision do Exam antes de qualquer validação.
+Após a derivação, recaptura raws e a lista de chaves reconhecidas: mudança permite
+um único retry; nova mudança torna a análise indisponível. AbortSignal e gerações
+da página impedem publicação antiga em refresh/unmount. `pageshow`, eventos de
+storage oficial e atualização manual refazem a leitura sem writes; domínios pessoais
+e sessionStorage não invalidam a visão.
+
+Deduplicação ocorre por exam/revision/Attempt.id, preferindo current, archive e
+embedded nessa ordem, com `sameAttemptAcademic`. Divergência acadêmica entre cópias
+exclui a Attempt antes de qualquer fallback. Se todas forem academicamente iguais,
+a primeira representação compatível nessa ordem é usada; cópias incompatíveis em
+metadata não impedem uma cópia independente válida e geram aviso/cobertura parcial.
+Sem representação compatível, o ID é excluído. Resumo de mesmo ID é comparado com a
+cópia compatível escolhida; divergência exclui a Attempt e avisa conflito. Completed
+schema e
+`isCompatibleAttempt` validam cada candidata; `reviewQuestionStatus` é a única regra
+de outcome por questão. Resumos ausentes nos detalhes sinalizam cobertura parcial,
+jamais criam outcomes. Não há corte silencioso da união disponível: até current +
+20 archive + 20 embedded antes da deduplicação, respeitando cada envelope.
+Resumo de schema válido com Result inconsistente é preservado apenas como evidência
+de conflito/cobertura, com aviso; descartá-lo antes do confronto de mesmo ID poderia
+escolher indevidamente a cópia detalhada. Nenhum resumo fornece correctness.
+
+QuestionPerformance é memória da rota, identificado pela tupla; inclui contagens,
+datas de conclusão da Attempt, outcomes e chronologyTie. Omissões e dissertativas
+não contam. As quatro categorias sobrepostas e o comparator total da seção 6 são
+implementados, usando code units para desempate de IDs. Empates são explicados na
+UI somente quando outcomes diferentes empatam no timestamp respondido mais recente,
+afetando último resultado/categorias. Empate antigo seguido de timestamp único ou
+outcomes finais iguais não gera chronologyTie; toda ordenação permanece determinística.
+Filtros de categoria/matéria real/prova e
+paginação de 50 itens são estado React, sem preferências persistidas ou fetches.
+
+Cards reutilizam RichContent seguro, superfícies/tokens/métricas/badges/controles do
+Design System; exibem statement real, label e ID, contagens, categorias e histórico
+expansível. Não renderizam alternativas, gabarito, explicações nem resposta anterior.
+Não se oferece link de Attempt: a proveniência embedded não garante a rota de
+ReviewRepository. A navegação existente e o link genérico de Revisão dos estados
+vazios continuam disponíveis. Loading, sem histórico, sem erros detectáveis, filtro
+vazio, indisponibilidade, conflitos e cobertura parcial têm mensagens distintas;
+quando nada pôde ser analisado, métricas usam “—”, não “0 erros”.
+
+A enumeração tem parser ancorado somente para current/history/review oficiais,
+revision decimal positiva segura e examId kebab-case. Fontes históricas passam
+pelos mesmos envelopes/identidade; sem provedor versionado, aparecem somente como
+identificação da prova/versão e aviso, fora da agregação. Provas removidas mostram o
+ID, sem matéria/título inventado. Nenhum conteúdo atual corrige respostas antigas.
+
+Limites defensivos de leitura desta v1 (não novos limites de schemas): 10.000
+chaves do storage por captura, 5 × 1.024² code units UTF-16 por raw antes de JSON.parse,
+16 × 1.024² code units por snapshot. Excesso de fonte é avisado e excluído; excesso
+de captura é indisponibilidade, sem truncamento ou writes. Estes tetos são guardas
+de leitura para inputs locais não confiáveis; futuras ampliações exigem profiling.
+O cenário de apresentação com 205 questões é exclusivamente fixture de teste.
+
+Validação dedicada em `tests/error-notebook.test.ts`,
+`tests/error-notebook-render.test.tsx` e `tests/browser/error-notebook.spec.ts` cobre
+zero-write com spies/raws, fetch bounds/retry/abort, integridade/conflitos/legados,
+rotas/teclado/reset/backup e cenários visuais (375/390/768/1024/1280, quatro temas,
+texto ampliado, RichText fragmentado e paginação). Screenshots são temporários em
+`/tmp`, fora do inventário versionável. As suítes 7B/8A existentes continuam sendo
+a evidência de preservação dos domínios protegidos.
+
+**DEFERRED:** ReviewSession notebook; ReviewSession v2; “Revisar estes erros”; seleção
+arbitrária congelada; multi-source review action; sessão multi-prova; historical
+content provider; deep link question-level; Dashboard counters de erro; filtro de
+período; cache persistido; IA/prioridade; notas pessoais. Backup/reset e os contratos
+acadêmicos não mudaram. Esta implementação local não autoriza staging, commit,
+push, PR, merge ou publicação.
