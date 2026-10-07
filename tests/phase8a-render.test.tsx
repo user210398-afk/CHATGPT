@@ -13,6 +13,7 @@ import { emptyAnnotations, mutateAnnotations } from '../src/engine/question-anno
 import { scratchStorageKey } from '../src/engine/solver-scratch';
 import { reviewSessionStorageKey } from '../src/engine/review-session-storage';
 import { exam, questionId, scope } from './phase8a-fixtures';
+import { drag } from './gesture-fixtures';
 import { source, session } from './phase7b2b-fixtures';
 const q = exam.questions[0]!;
 if (q.type !== 'multiple-choice') throw new Error('fixture');
@@ -210,40 +211,44 @@ describe('annotations UI zero-write and synchronization', () => {
     const writes = vi.spyOn(Storage.prototype, 'setItem');
     render(<AnnotatedStatement exam={exam} questionId={questionId} />);
     expect(writes).not.toHaveBeenCalled();
-    select(2, 12);
+    fireEvent.click(screen.getByRole('button', { name: 'Grifar' }));
     fireEvent.click(screen.getByRole('button', { name: 'Amarelo' }));
+    drag(2, 12);
     expect(document.querySelectorAll('mark.annotation-yellow')).toHaveLength(2);
-    select(4, 10);
     fireEvent.click(screen.getByRole('button', { name: 'Verde' }));
+    drag(4, 10);
     expect(document.querySelector('mark.annotation-green')).toBeTruthy();
-    select(5, 8);
     fireEvent.click(screen.getByRole('button', { name: 'Azul' }));
+    drag(5, 8);
     expect(document.querySelector('mark.annotation-blue')).toBeTruthy();
-    select(6, 7);
     fireEvent.click(screen.getByRole('button', { name: 'Borracha' }));
+    drag(6, 7);
     const envelope = JSON.parse(localStorage.getItem(annotationStorageKey(exam))!);
     expect(
       envelope.questions[questionId].some(
         (h: { start: number; end: number }) => h.start <= 6 && h.end > 6,
       ),
     ).toBe(false);
+    fireEvent.click(screen.getByRole('button', { name: 'Borracha' }));
     window.getSelection()?.removeAllRanges();
     fireEvent.click(document.querySelector('mark')!);
     fireEvent.click(screen.getByRole('button', { name: /^Remover destaque$/ }));
     fireEvent.click(screen.getByRole('button', { name: 'Limpar marcações desta questão' }));
-    expect(screen.getByRole('button', { name: 'Focar ferramentas de marcação' })).toHaveFocus();
+    expect(screen.getByRole('button', { name: 'Grifar' })).toHaveFocus();
     expect(document.querySelector('mark')).toBeNull();
     expect(writes.mock.calls.every(([key]) => key === annotationStorageKey(exam))).toBe(true);
   });
-  it('toolbar keyboard/Escape returns focus and preserves captured selection', async () => {
+  it('toolbar exists without Selection; keyboard/Escape disables tool and preserves native selection', async () => {
     render(<AnnotatedStatement exam={exam} questionId={questionId} />);
     select(0, 4);
-    const trigger = screen.getByRole('button', { name: 'Focar ferramentas de marcação' });
+    const trigger = screen.getByRole('button', { name: 'Grifar' });
     await userEvent.setup().click(trigger);
-    expect(screen.getByRole('button', { name: 'Amarelo' })).toHaveFocus();
+    expect(trigger).toHaveFocus();
+    expect(trigger).toHaveAttribute('aria-pressed', 'true');
     await userEvent.setup().keyboard('[Escape]');
     expect(trigger).toHaveFocus();
-    expect(screen.queryByRole('group', { name: 'Ferramentas de marcação' })).toBeNull();
+    expect(screen.getByRole('group', { name: 'Ferramentas de grifo e borracha' })).toBeTruthy();
+    expect(trigger).toHaveAttribute('aria-pressed', 'false');
   });
   it('storage event valid is read-only; corrupt retains last good and blocks; wrong key/area/stale ignored', () => {
     render(<AnnotatedStatement exam={exam} questionId={questionId} />);

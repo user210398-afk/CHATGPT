@@ -1,17 +1,34 @@
-import { createElement, useEffect, useMemo, useRef, useState } from 'react';
+import { createElement, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { Exam, RichNode } from '../../types/exam';
 import type { Highlight } from '../../engine/question-annotations';
-import { projectStatement, type StatementProjection } from '../../engine/statement-projection';
-import { selectionToStatementRange, type StatementTextMap } from '../../engine/statement-selection';
+import {
+  projectStatement,
+  validStatementRange,
+  type StatementProjection,
+} from '../../engine/statement-projection';
+import {
+  coordinateToStatementOffset,
+  type StatementTextMap,
+} from '../../engine/statement-selection';
 import { useQuestionAnnotations } from '../../app/useQuestionAnnotations';
+type Tool = 'off' | 'highlight' | 'eraser';
+type Color = Highlight['color'];
+interface Preview {
+  start: number;
+  end: number;
+  tool: Exclude<Tool, 'off'>;
+  color: Color;
+}
 export function StatementContent({
   projection,
   highlights,
   fragments,
+  preview,
 }: {
   projection: StatementProjection;
   highlights: Highlight[];
   fragments: StatementTextMap;
+  preview?: Preview | null;
 }) {
   const byPath = new Map(projection.leaves.map((leaf) => [leaf.path, leaf]));
   function renderNode(node: RichNode, path: string): React.ReactNode {
@@ -27,13 +44,19 @@ export function StatementContent({
       );
     const leaf = byPath.get(path)!;
     const pieces: React.ReactNode[] = [];
-    let cursor = leaf.start;
     function piece(start: number, end: number, highlight?: Highlight) {
       if (start === end) return;
       let registered: Text | null = null;
+      const pending = preview && start >= preview.start && end <= preview.end;
       const text = (
         <span
           key={start}
+          className={
+            pending
+              ? `annotation-preview ${preview.tool === 'eraser' ? 'annotation-preview-eraser' : `annotation-${preview.color}`}`
+              : undefined
+          }
+          data-annotation-preview={pending ? preview.tool : undefined}
           ref={(element) => {
             if (registered) fragments.delete(registered);
             registered = element?.firstChild as Text | null;
@@ -62,15 +85,22 @@ export function StatementContent({
         ),
       );
     }
-    for (const h of highlights) {
-      if (h.end <= leaf.start || h.start >= leaf.end) continue;
-      const start = Math.max(h.start, leaf.start),
-        end = Math.min(h.end, leaf.end);
-      piece(cursor, start);
-      piece(start, end, h);
-      cursor = end;
+    const boundaries = new Set([leaf.start, leaf.end]);
+    for (const range of [...highlights, ...(preview ? [preview] : [])]) {
+      if (range.end <= leaf.start || range.start >= leaf.end) continue;
+      boundaries.add(Math.max(range.start, leaf.start));
+      boundaries.add(Math.min(range.end, leaf.end));
     }
-    piece(cursor, leaf.end);
+    const points = [...boundaries].sort((a, b) => a - b);
+    for (let index = 1; index < points.length; index++) {
+      const start = points[index - 1]!,
+        end = points[index]!;
+      piece(
+        start,
+        end,
+        highlights.find((h) => h.start <= start && h.end >= end),
+      );
+    }
     return (
       <span key={leaf.path} data-statement-leaf={leaf.path}>
         {pieces}
@@ -79,74 +109,232 @@ export function StatementContent({
   }
   return <>{projection.content.map((node, index) => renderNode(node, String(index)))}</>;
 }
-export function AnnotatedStatement({ exam, questionId }: { exam: Exam; questionId: string }) {
+export function AnnotatedStatement({
+  exam,
+  questionId,
+  scopeIdentity = '',
+}: {
+  exam: Exam;
+  questionId: string;
+  scopeIdentity?: string;
+}) {
+  return (
+    <GestureStatement
+      key={`${exam.id}:${exam.revision}:${questionId}:${scopeIdentity}`}
+      exam={exam}
+      questionId={questionId}
+    />
+  );
+}
+function GestureStatement({ exam, questionId }: { exam: Exam; questionId: string }) {
   const question = exam.questions.find((q) => q.id === questionId)!;
   const projection = useMemo(() => projectStatement(question.statement), [question.statement]);
   const fragments = useRef<StatementTextMap>(new Map());
   const root = useRef<HTMLDivElement>(null);
-  const toolbar = useRef<HTMLDivElement>(null);
-  const toolsTrigger = useRef<HTMLButtonElement>(null);
-  const [range, setRange] = useState<{ start: number; end: number } | null>(null);
+  const highlightButton = useRef<HTMLButtonElement>(null);
+  const [tool, setTool] = useState<Tool>('off');
+  const [color, setColor] = useState<Color>('yellow');
+  const [preview, setPreview] = useState<Preview | null>(null);
   const [activeId, setActiveId] = useState<string | null>(null);
   const annotations = useQuestionAnnotations(exam, questionId);
-  function close() {
-    setRange(null);
-    setActiveId(null);
+  const stroke = useRef<{
+    questionId: string;
+    pointerId: number;
+    tool: Exclude<Tool, 'off'>;
+    color: Color;
+    anchor: number;
+    x: number;
+    y: number;
+    moved: boolean;
+    element: HTMLDivElement;
+  } | null>(null);
+  function release() {
+    const pending = stroke.current;
+    stroke.current = null; // lostpointercapture must never finalize anything
+    if (pending) {
+      try {
+        if (pending.element.hasPointerCapture?.(pending.pointerId))
+          pending.element.releasePointerCapture(pending.pointerId);
+      } catch {
+        /* capture may already be lost */
+      }
+    }
   }
+  function cancel() {
+    release();
+    setPreview(null);
+  }
+  function choose(next: Tool) {
+    cancel();
+    setActiveId(null);
+    setTool(next === tool ? 'off' : next);
+  }
+  useLayoutEffect(() => {
+    if (annotations.blocked) {
+      cancel();
+      setTool('off');
+    }
+  }, [annotations.blocked]);
+  useLayoutEffect(() => () => release(), []);
   useEffect(() => {
-    function selectionChanged() {
-      const next = root.current
-        ? selectionToStatementRange(
-            root.current,
-            window.getSelection(),
-            projection,
-            fragments.current,
-          )
-        : null;
-      if (
-        !next &&
-        (toolbar.current?.contains(document.activeElement) ||
-          document.activeElement === toolsTrigger.current)
-      )
-        return;
-      setRange(next);
-      if (next) setActiveId(null);
-    }
     function escape(event: KeyboardEvent) {
-      if (event.key !== 'Escape') return;
-      if (toolbar.current?.contains(document.activeElement)) toolsTrigger.current?.focus();
-      close();
+      if (event.key === 'Escape') {
+        cancel();
+        setTool('off');
+        setActiveId(null);
+      }
     }
-    function outside(event: PointerEvent) {
-      const target = event.target as Node;
-      if (
-        !root.current?.contains(target) &&
-        !toolbar.current?.contains(target) &&
-        !toolsTrigger.current?.contains(target)
-      )
-        close();
-    }
-    document.addEventListener('selectionchange', selectionChanged);
     document.addEventListener('keydown', escape);
-    document.addEventListener('pointerdown', outside);
-    return () => {
-      document.removeEventListener('selectionchange', selectionChanged);
-      document.removeEventListener('keydown', escape);
-      document.removeEventListener('pointerdown', outside);
-    };
-  }, [projection]);
+    return () => document.removeEventListener('keydown', escape);
+  }, []);
+  function hit(x: number, y: number) {
+    return root.current
+      ? coordinateToStatementOffset(root.current, x, y, projection, fragments.current)
+      : null;
+  }
+  function rangeAt(pending: NonNullable<typeof stroke.current>, current: number) {
+    const start = Math.min(pending.anchor, current),
+      end = Math.max(pending.anchor, current);
+    return pending.moved && validStatementRange(projection, start, end) ? { start, end } : null;
+  }
   return (
     <div className="annotation-area">
+      <div className="annotation-toolbar" role="group" aria-label="Ferramentas de grifo e borracha">
+        <button
+          ref={highlightButton}
+          disabled={annotations.blocked}
+          aria-pressed={tool === 'highlight'}
+          onClick={() => choose('highlight')}
+        >
+          Grifar
+        </button>
+        <button
+          disabled={annotations.blocked}
+          aria-pressed={tool === 'eraser'}
+          onClick={() => choose('eraser')}
+        >
+          Borracha
+        </button>
+        {(['yellow', 'green', 'blue'] as const).map((value, index) => (
+          <button
+            key={value}
+            className={`annotation-${value}`}
+            disabled={annotations.blocked}
+            aria-pressed={color === value}
+            onClick={() => {
+              cancel();
+              setColor(value);
+            }}
+          >
+            {['Amarelo', 'Verde', 'Azul'][index]}
+          </button>
+        ))}
+        {activeId && (
+          <button
+            disabled={annotations.blocked}
+            onClick={() => {
+              cancel();
+              annotations.mutate({ type: 'remove', id: activeId });
+              setActiveId(null);
+              highlightButton.current?.focus();
+            }}
+          >
+            Remover destaque
+          </button>
+        )}
+      </div>
+      <p className="muted small" aria-live="polite" aria-atomic="true">
+        {tool === 'highlight'
+          ? 'Grifo ativo — arraste sobre o enunciado.'
+          : tool === 'eraser'
+            ? 'Borracha ativa — arraste sobre as marcações.'
+            : 'Ferramentas desligadas — escolha Grifar ou Borracha.'}
+      </p>
       <div
         className="statement"
         ref={root}
-        onClick={(event) => {
-          if (!window.getSelection()?.isCollapsed) return;
-          const mark = (event.target as Element).closest('mark[data-highlight-id]');
-          if (mark && root.current?.contains(mark)) {
-            setActiveId(mark.getAttribute('data-highlight-id'));
-            setRange(null);
+        data-annotation-tool={tool}
+        onPointerDown={(event) => {
+          if (
+            tool === 'off' ||
+            annotations.blocked ||
+            stroke.current ||
+            !event.isPrimary ||
+            event.button !== 0 ||
+            (event.buttons & 1) === 0
+          )
+            return;
+          const anchor = hit(event.clientX, event.clientY);
+          if (anchor === null) return;
+          event.preventDefault();
+          const element = event.currentTarget;
+          try {
+            element.setPointerCapture?.(event.pointerId);
+          } catch {
+            /* unavailable capture: local events still safe */
           }
+          stroke.current = {
+            questionId,
+            pointerId: event.pointerId,
+            tool,
+            color,
+            anchor,
+            x: event.clientX,
+            y: event.clientY,
+            moved: false,
+            element,
+          };
+          setActiveId(null);
+        }}
+        onPointerMove={(event) => {
+          const pending = stroke.current;
+          if (!pending || pending.pointerId !== event.pointerId) return;
+          if (
+            annotations.blocked ||
+            pending.tool !== tool ||
+            pending.questionId !== questionId ||
+            (event.buttons & 1) === 0
+          ) {
+            cancel();
+            return;
+          }
+          event.preventDefault();
+          // Small taps/caret jitter never produce an accidental character highlight.
+          pending.moved ||= Math.hypot(event.clientX - pending.x, event.clientY - pending.y) >= 3;
+          const current = hit(event.clientX, event.clientY);
+          if (current === null) return; // keep last valid preview; outside release is zero-write
+          const range = rangeAt(pending, current);
+          setPreview(range ? { ...range, tool: pending.tool, color: pending.color } : null);
+        }}
+        onPointerUp={(event) => {
+          const pending = stroke.current;
+          if (!pending || pending.pointerId !== event.pointerId) return;
+          const current = hit(event.clientX, event.clientY);
+          const range = current === null ? null : rangeAt(pending, current);
+          cancel();
+          if (
+            range &&
+            !annotations.blocked &&
+            pending.questionId === questionId &&
+            pending.tool === tool
+          )
+            annotations.mutate(
+              pending.tool === 'highlight'
+                ? { type: 'paint', ...range, color: pending.color }
+                : { type: 'erase', ...range },
+            );
+        }}
+        onPointerCancel={(event) => {
+          if (stroke.current?.pointerId === event.pointerId) cancel();
+        }}
+        onLostPointerCapture={(event) => {
+          if (stroke.current?.pointerId === event.pointerId) cancel();
+        }}
+        onClick={(event) => {
+          if (tool !== 'off' || !window.getSelection()?.isCollapsed) return;
+          const mark = (event.target as Element).closest('mark[data-highlight-id]');
+          if (mark && root.current?.contains(mark))
+            setActiveId(mark.getAttribute('data-highlight-id'));
         }}
       >
         <div className="rich-content">
@@ -154,78 +342,10 @@ export function AnnotatedStatement({ exam, questionId }: { exam: Exam; questionI
             projection={projection}
             highlights={annotations.highlights}
             fragments={fragments.current}
+            preview={preview}
           />
         </div>
       </div>
-      <p className="muted small">
-        Selecione um trecho do enunciado para destacar ou apagar marcações.
-      </p>
-      <button
-        ref={toolsTrigger}
-        onPointerDown={(event) => event.preventDefault()}
-        onClick={() => toolbar.current?.querySelector('button')?.focus()}
-      >
-        Focar ferramentas de marcação
-      </button>
-      {(range || activeId) && (
-        <div
-          className="annotation-toolbar"
-          role="group"
-          aria-label="Ferramentas de marcação"
-          ref={toolbar}
-        >
-          {range && (
-            <>
-              {(['yellow', 'green', 'blue'] as const).map((color, index) => (
-                <button
-                  key={color}
-                  className={`annotation-${color}`}
-                  disabled={annotations.blocked}
-                  onPointerDown={(e) => e.preventDefault()}
-                  onClick={() => {
-                    annotations.mutate({ type: 'paint', ...range, color });
-                    close();
-                    toolsTrigger.current?.focus();
-                  }}
-                >
-                  {['Amarelo', 'Verde', 'Azul'][index]}
-                </button>
-              ))}
-              <button
-                disabled={annotations.blocked}
-                onPointerDown={(e) => e.preventDefault()}
-                onClick={() => {
-                  annotations.mutate({ type: 'erase', ...range });
-                  close();
-                  toolsTrigger.current?.focus();
-                }}
-              >
-                Borracha
-              </button>
-            </>
-          )}
-          {activeId && (
-            <button
-              disabled={annotations.blocked}
-              onClick={() => {
-                annotations.mutate({ type: 'remove', id: activeId });
-                close();
-                toolsTrigger.current?.focus();
-              }}
-            >
-              Remover destaque
-            </button>
-          )}
-          <button
-            onClick={() => {
-              close();
-              toolsTrigger.current?.focus();
-            }}
-          >
-            Fechar ferramentas
-          </button>
-        </div>
-      )}
       {annotations.highlights.length > 0 && (
         <details className="annotation-list">
           <summary>Marcações deste enunciado ({annotations.highlights.length})</summary>
@@ -239,8 +359,10 @@ export function AnnotatedStatement({ exam, questionId }: { exam: Exam; questionI
                   disabled={annotations.blocked}
                   aria-label={`Remover destaque ${index + 1}`}
                   onClick={() => {
+                    cancel();
                     annotations.mutate({ type: 'remove', id: h.id });
-                    toolsTrigger.current?.focus();
+                    setActiveId(null);
+                    highlightButton.current?.focus();
                   }}
                 >
                   Remover destaque
@@ -251,8 +373,10 @@ export function AnnotatedStatement({ exam, questionId }: { exam: Exam; questionI
           <button
             disabled={annotations.blocked}
             onClick={() => {
+              cancel();
               annotations.mutate({ type: 'clear' });
-              toolsTrigger.current?.focus();
+              setActiveId(null);
+              highlightButton.current?.focus();
             }}
           >
             Limpar marcações desta questão

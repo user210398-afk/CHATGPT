@@ -52,7 +52,7 @@ export function QuestionCard({
   solverScope,
 }: {
   exam: Exam;
-  attempt: QuestionState;
+  attempt: QuestionState & { readonly id?: string };
   index: number;
   feedback: boolean;
   onAnswer?: (value: string) => void;
@@ -108,6 +108,9 @@ export function QuestionCard({
         key={`${annotationExam.id}:${annotationExam.revision}:${question.id}`}
         exam={annotationExam}
         questionId={question.id}
+        scopeIdentity={
+          solverScope ? `${solverScope.kind}:${solverScope.id}` : `review:${attempt.id ?? ''}`
+        }
       />
       <Images images={question.images} />
       {solverScope ? (
