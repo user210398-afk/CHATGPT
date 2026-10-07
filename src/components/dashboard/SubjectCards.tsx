@@ -2,14 +2,15 @@ import type { aggregateSubjects } from '../../engine/dashboard-metrics';
 import { percentage } from './Metrics';
 export function SubjectCards({ subjects }: { subjects: ReturnType<typeof aggregateSubjects> }) {
   return (
-    <section aria-labelledby="subjects-title">
+    <section className="subject-coverage" aria-labelledby="subjects-title">
+      <p className="eyebrow">COBERTURA GLOBAL</p>
       <h2 id="subjects-title">Desempenho por disciplina</h2>
       <p className="muted small">
         Média dos melhores: média arredondada do melhor resultado de cada prova com nota automática.
       </p>
-      <div className="catalog-grid">
+      <div className="subject-coverage-list">
         {subjects.map((s) => (
-          <article className="card" key={s.subject}>
+          <article className="subject-coverage-row" key={s.subject}>
             <h3>{s.subject}</h3>
             <p>{s.available} provas</p>
             <p>

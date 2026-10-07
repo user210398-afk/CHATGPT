@@ -53,16 +53,27 @@ export function BackupControls({ catalog }: { catalog: Catalog }) {
   }
   return (
     <section className="card backup-controls" aria-labelledby="backup-title">
+      <p className="eyebrow">PROTEÇÃO DOS SEUS DADOS</p>
       <h2 id="backup-title">Backup do progresso</h2>
+      <p>
+        Seus dados ficam neste navegador. Guarde uma cópia para recuperar seu progresso em outro
+        dispositivo ou após limpar os dados locais.
+      </p>
       <p className="muted">
         Backup v3; leitura de v1, v2 e v3. Arquivo JSON local, até 10 MiB. Nenhum dado é enviado. A
         importação mescla registros e preserva conflitos locais.
       </p>
-      <div className="actions">
-        <button disabled={busy} onClick={() => void exportFile()}>
-          Exportar progresso
-        </button>
-        <div className="backup-file">
+      <div className="backup-actions">
+        <div className="backup-action">
+          <h3>Guardar uma cópia</h3>
+          <p className="muted small">Baixe seu progresso em um arquivo local.</p>
+          <button disabled={busy} onClick={() => void exportFile()}>
+            Exportar progresso
+          </button>
+        </div>
+        <div className="backup-action backup-file">
+          <h3>Restaurar uma cópia</h3>
+          <p className="muted small">Escolha um arquivo e confira a prévia antes de importar.</p>
           <label className="field-label" htmlFor="backup-file">
             Importar progresso
           </label>
@@ -79,6 +90,9 @@ export function BackupControls({ catalog }: { catalog: Catalog }) {
           />
         </div>
       </div>
+      <p className="muted small backup-format">
+        JSON local · até 10 MiB · compatível com backups v1–v3 · zero upload
+      </p>
       {busy && <p role="status">Validando progresso…</p>}
       {error && (
         <p className="notice" role="alert">

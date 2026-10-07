@@ -63,6 +63,10 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     // Keep every other academic engine and historical baseline protection active.
     ':(exclude)src/engine/error-notebook-storage.ts',
     ':(exclude)src/engine/error-notebook.ts',
+    // Analytics v1 authorizes only the two read-only analytics modules.
+    // Every other academic engine and historical baseline protection remains active.
+    ':(exclude)src/engine/analytics-reader.ts',
+    ':(exclude)src/engine/analytics.ts',
   ]);
   expect(stdout.trim()).toBe('');
   // Authorized 7B.1 transitions/storage are covered by domain and migration tests.
