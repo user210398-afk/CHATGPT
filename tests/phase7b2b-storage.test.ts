@@ -294,10 +294,10 @@ describe('safe whole-catalog explicit history reset', () => {
         questionId: objective.id,
         value: source().answers[objective.id]!,
       });
-      expect(repo.save(tiny, next, open.history).aborted).toBe(true);
+      expect(repo.save(tiny, next, open.history, open.persistence).aborted).toBe(true);
       expect(store.values).toEqual(before);
       // A retry from the same stale tab must remain blocked until a fresh read.
-      expect(repo.save(tiny, next, open.history).aborted).toBe(true);
+      expect(repo.save(tiny, next, open.history, open.persistence).aborted).toBe(true);
       expect(store.values).toEqual(before);
     },
   );
@@ -322,8 +322,8 @@ describe('safe whole-catalog explicit history reset', () => {
       .mockImplementationOnce(() => {
         throw new Error('quota');
       });
-    expect(repo.save(tiny, open.current!, open.history).warning).toBeTruthy();
-    const retry = repo.save(tiny, open.current!, open.history);
+    expect(repo.save(tiny, open.current!, open.history, open.persistence).warning).toBeTruthy();
+    const retry = repo.save(tiny, open.current!, open.history, open.persistence);
     expect(retry.warning).toBeNull();
     expect(retry.history.map((h) => h.id)).toEqual(['source']);
     expect(readExamProgress(tinyCatalog.exams[0]!, () => store).progress.attemptCount).toBe(1);
@@ -360,11 +360,11 @@ describe('safe whole-catalog explicit history reset', () => {
         questionId: objective.id,
         value: source().answers[objective.id]!,
       });
-      const saved = official.save(tiny, answered, open.history);
+      const saved = official.save(tiny, answered, open.history, open.persistence);
       expect(saved.history).toEqual([]);
       expect(store.getItem(historyStorageKey(tiny))).toBeNull();
       const done = transition(tiny, answered, { type: 'finish', now: end });
-      official.save(tiny, done, saved.history);
+      official.save(tiny, done, saved.history, saved.persistence);
       expect(readExamProgress(tinyCatalog.exams[0]!, () => store).progress.attemptCount).toBe(1);
       expect(
         JSON.parse(store.getItem(historyStorageKey(tiny))!).history.map(

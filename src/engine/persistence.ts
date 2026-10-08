@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { Exam } from '../types/exam';
-import { writeTransaction } from './storage-transaction';
+import { writeTransaction, type StorageChange } from './storage-transaction';
 import { sameContent } from './content-equality';
 import {
   attemptSchema,
@@ -71,6 +71,7 @@ export interface Session {
   history: HistoryEntry[];
   warning: string | null;
   restored: boolean;
+  persistence: PersistenceSnapshot;
 }
 export type ReadSession = Omit<Session, 'current'> & { current: Attempt | null };
 export function storageKey(exam: Pick<Exam, 'id' | 'revision'>): string {
@@ -90,12 +91,6 @@ export function summary(attempt: Attempt): HistoryEntry {
     mode: attempt.mode,
   };
 }
-function validHistory(history: HistoryEntry[]): boolean {
-  return (
-    new Set(history.map((item) => item.id)).size === history.length &&
-    history.every((item) => Date.parse(item.completedAt) >= Date.parse(item.startedAt))
-  );
-}
 export function includeCurrent(current: Attempt | null, history: HistoryEntry[]): HistoryEntry[] {
   const entries = current?.completedAt ? [summary(current), ...history] : history;
   const unique = new Map<string, HistoryEntry>();
@@ -109,201 +104,456 @@ export function includeCurrent(current: Attempt | null, history: HistoryEntry[])
     .slice(0, HISTORY_LIMIT)
     .map(({ entry }) => entry);
 }
-export class AttemptRepository {
-  private readonly savedHistory = new Set<string>();
-  private readonly legacyHistorySources = new Map<string, string>();
-  private readonly savedCurrents = new Map<string, Attempt>();
-  private readonly resetConflicts = new Set<string>();
-  constructor(readonly storage: () => StorageAdapter) {}
-  // UI uses read: no attempt is created until the user chooses a mode.
-  read(exam: Exam): ReadSession {
-    const fresh: ReadSession = { current: null, history: [], warning: null, restored: false };
-    const key = historyStorageKey(exam);
-    this.savedHistory.delete(key);
-    this.legacyHistorySources.delete(key);
-    this.savedCurrents.delete(key);
-    this.resetConflicts.delete(key);
-    try {
-      const raw = this.storage().getItem(storageKey(exam));
-      let current: Attempt | null = null;
-      let history: HistoryEntry[] = [];
-      if (raw !== null) {
-        const value: unknown = JSON.parse(raw);
-        const parsed = readableCurrentEnvelopeSchema.safeParse(value);
-        if (parsed.success) current = parsed.data.current;
-        else {
-          const previous = previousEnvelopeSchema.parse(value);
-          current = normalizeLegacyAttempt(previous.current);
-          const detailed = previous.history.map(normalizeLegacyAttempt);
-          if (
-            detailed.some((item) => !item.completedAt || !isCompatibleAttempt(exam, item)) ||
-            new Set(detailed.map((item) => item.id)).size !== detailed.length
-          )
-            throw new Error('Histórico legado incompatível');
-          history = detailed.map(summary);
-          if (history.length) this.legacyHistorySources.set(key, raw);
-        }
-        if (!isCompatibleAttempt(exam, current)) throw new Error('Tentativa incompatível');
-      }
-      let warning: string | null = null;
-      try {
-        const historyRaw = this.storage().getItem(key);
-        if (historyRaw !== null) {
-          const entries = readableHistoryEnvelopeSchema.parse(JSON.parse(historyRaw)).history;
-          if (!validHistory(entries)) throw new Error('Histórico inválido');
-          // Keep legacy local collisions, as in the original read-only bridge.
-          history = [
-            ...new Map([...entries, ...history].map((entry) => [entry.id, entry])).values(),
-          ];
-          if (!current?.completedAt || entries.some((entry) => entry.id === current.id))
-            this.savedHistory.add(key);
-        }
-      } catch {
-        warning = current
-          ? 'O histórico local está inválido. A tentativa atual foi restaurada.'
-          : 'O histórico local está inválido. O registro existente foi preservado.';
-      }
-      if (current) this.savedCurrents.set(key, attemptSchema.parse(current));
-      return {
-        current,
-        history: includeCurrent(current, history),
-        warning,
-        restored: current !== null,
-      };
-    } catch {
-      return {
-        ...fresh,
-        warning:
-          'Não foi possível restaurar o progresso local. O registro anterior será preservado até uma interação explícita.',
-      };
+// In-memory contracts only. Unknown reads are undefined, never known-missing null.
+export type SourceStatus = 'missing' | 'valid' | 'incompatible' | 'corrupt' | 'unavailable';
+export interface PersistenceSource<T> {
+  readonly status: SourceStatus;
+  readonly raw: string | null | undefined;
+  readonly value: T;
+  readonly integrity: 'complete' | 'partial' | 'unknown';
+}
+export interface PersistenceSnapshot {
+  readonly key: string;
+  readonly current: PersistenceSource<Attempt | null>;
+  readonly history: PersistenceSource<HistoryEntry[]>;
+  readonly embeddedHistory: PersistenceSource<HistoryEntry[]> | null;
+}
+export interface SaveOutcome {
+  status: 'saved' | 'conflict' | 'blocked' | 'storage-error' | 'invalid';
+  history: HistoryEntry[];
+  warning: string | null;
+  persistence: PersistenceSnapshot;
+  aborted: boolean;
+  rollbackComplete?: boolean;
+}
+const authoritative = (source: PersistenceSource<unknown>) =>
+  source.status === 'missing' || source.status === 'valid';
+function source<T>(
+  status: SourceStatus,
+  raw: string | null | undefined,
+  value: T,
+  integrity: PersistenceSource<T>['integrity'] = authoritativeStatus(status)
+    ? 'complete'
+    : 'unknown',
+): PersistenceSource<T> {
+  // Tokens also own their parsed data; a consumer cannot mutate rewrite authority.
+  function freeze(data: unknown) {
+    if (data && typeof data === 'object' && !Object.isFrozen(data)) {
+      for (const child of Object.values(data)) freeze(child);
+      Object.freeze(data);
     }
   }
-  // Compatibility for internal callers that need a fresh in-memory Exam attempt.
+  freeze(value);
+  return Object.freeze({ status, raw, value, integrity });
+}
+function authoritativeStatus(status: SourceStatus) {
+  return status === 'valid' || status === 'missing';
+}
+function consistentSummary(exam: Exam, entry: HistoryEntry) {
+  const r = entry.result,
+    objective = exam.questions.filter((q) => q.type === 'multiple-choice').length;
+  return (
+    Date.parse(entry.completedAt) >= Date.parse(entry.startedAt) &&
+    r.objectiveTotal === objective &&
+    r.essayTotal === exam.questions.length - objective &&
+    r.correct + r.incorrect === r.objectiveAnswered &&
+    r.objectiveAnswered + r.unanswered === objective &&
+    r.essayAnswered <= r.essayTotal &&
+    r.percentage === (objective ? Math.round((r.correct / objective) * 100) : null)
+  );
+}
+function parseEntries(
+  exam: Exam,
+  raw: string,
+  entries: unknown,
+  version: number,
+  envelopeValid: boolean,
+  embedded = false,
+): PersistenceSource<HistoryEntry[]> {
+  if (!Array.isArray(entries)) return source('corrupt', raw, []);
+  let corrupt = !envelopeValid || entries.length > HISTORY_LIMIT,
+    incompatible = false;
+  const candidates: HistoryEntry[] = [];
+  for (const item of entries.slice(0, HISTORY_LIMIT)) {
+    if (embedded) {
+      const parsed = legacyAttemptSchema.safeParse(item);
+      if (!parsed.success) {
+        corrupt = true;
+        continue;
+      }
+      const attempt = normalizeLegacyAttempt(parsed.data);
+      if (!attempt.completedAt || !isCompatibleAttempt(exam, attempt)) {
+        incompatible = true;
+        continue;
+      }
+      candidates.push(summary(attempt));
+    } else {
+      // Never accept a v2 entry (missing mode) inside a v3 envelope.
+      const parsed = (
+        version === 3
+          ? historyEntrySchema
+          : historyEntryV2Schema.transform((entry) => ({ ...entry, mode: 'exam' as const }))
+      ).safeParse(item);
+      if (!parsed.success) {
+        corrupt = true;
+        continue;
+      }
+      const entry = parsed.data;
+      if (!consistentSummary(exam, entry)) {
+        incompatible = true;
+        continue;
+      }
+      candidates.push(entry);
+    }
+  }
+  const counts = new Map<string, number>();
+  for (const entry of candidates) counts.set(entry.id, (counts.get(entry.id) ?? 0) + 1);
+  if ([...counts.values()].some((count) => count > 1)) corrupt = true;
+  const value = candidates.filter((entry) => counts.get(entry.id) === 1);
+  return source(
+    corrupt ? 'corrupt' : incompatible ? 'incompatible' : 'valid',
+    raw,
+    value,
+    corrupt || incompatible ? 'partial' : 'complete',
+  );
+}
+function parseHistory(
+  exam: Exam,
+  raw: string | null | undefined,
+): PersistenceSource<HistoryEntry[]> {
+  if (raw === undefined) return source('unavailable', raw, []);
+  if (raw === null) return source('missing', raw, []);
+  try {
+    const value = JSON.parse(raw);
+    if (!value || typeof value !== 'object') return source('corrupt', raw, []);
+    if (value.storageVersion !== 2 && value.storageVersion !== 3)
+      return source('incompatible', raw, []);
+    const schema = value.storageVersion === 3 ? historyEnvelopeSchema : historyV2EnvelopeSchema;
+    const envelope = schema.extend({ history: z.unknown() }).safeParse(value);
+    return parseEntries(exam, raw, value.history, value.storageVersion, envelope.success);
+  } catch {
+    return source('corrupt', raw, []);
+  }
+}
+function parseCurrent(
+  exam: Exam,
+  raw: string | null | undefined,
+): Pick<PersistenceSnapshot, 'current' | 'embeddedHistory'> {
+  const empty = (status: SourceStatus) => ({
+    current: source<Attempt | null>(status, raw, null),
+    embeddedHistory: null,
+  });
+  if (raw === undefined) return empty('unavailable');
+  if (raw === null) return empty('missing');
+  try {
+    const value = JSON.parse(raw);
+    if (!value || typeof value !== 'object') return empty('corrupt');
+    const version = value.storageVersion;
+    if (version !== 1 && version !== 2 && version !== 3) return empty('incompatible');
+    const envelope =
+      version === 1
+        ? previousEnvelopeSchema
+            .extend({ current: z.unknown(), history: z.unknown() })
+            .safeParse(value)
+        : (version === 3 ? currentEnvelopeSchema : currentV2EnvelopeSchema)
+            .extend({ current: z.unknown() })
+            .safeParse(value);
+    const embeddedHistory =
+      version === 1 ? parseEntries(exam, raw, value.history, 1, envelope.success, true) : null;
+    const parsed = (version === 3 ? attemptSchema : legacyAttemptSchema).safeParse(value.current);
+    if (!parsed.success) return { current: source('corrupt', raw, null), embeddedHistory };
+    const current = version === 3 ? (parsed.data as Attempt) : normalizeLegacyAttempt(parsed.data);
+    if (!isCompatibleAttempt(exam, current))
+      return { current: source('incompatible', raw, null), embeddedHistory };
+    return {
+      current: source(envelope.success ? 'valid' : 'corrupt', raw, current),
+      embeddedHistory,
+    };
+  } catch {
+    return empty('corrupt');
+  }
+}
+function snapshotHistory(snapshot: PersistenceSnapshot) {
+  // Retain the existing read-only legacy collision precedence.
+  const entries = [
+    ...new Map(
+      [...snapshot.history.value, ...(snapshot.embeddedHistory?.value ?? [])].map((entry) => [
+        entry.id,
+        entry,
+      ]),
+    ).values(),
+  ];
+  return includeCurrent(snapshot.current.value, entries);
+}
+const conflictWarning =
+  'O histórico ou a tentativa atual mudou por concorrência. Reabra a prova; os registros locais foram preservados.';
+const blockedWarning =
+  'O armazenamento local está inválido, incompatível ou indisponível. Os registros foram preservados; esta operação não pode ser salva.';
+export class AttemptRepository {
+  private readonly snapshots = new WeakSet<PersistenceSnapshot>();
+  private readonly uncertain = new WeakSet<PersistenceSnapshot>();
+  constructor(readonly storage: () => StorageAdapter) {}
+  private snapshot(
+    exam: Exam,
+    currentRaw: string | null | undefined,
+    historyRaw: string | null | undefined,
+  ) {
+    const snapshot: PersistenceSnapshot = Object.freeze({
+      key: storageKey(exam),
+      ...parseCurrent(exam, currentRaw),
+      history: parseHistory(exam, historyRaw),
+    });
+    this.snapshots.add(snapshot);
+    return snapshot;
+  }
+  read(exam: Exam): ReadSession {
+    const readRaw = (key: string) => {
+      try {
+        return this.storage().getItem(key);
+      } catch {
+        return undefined;
+      }
+    };
+    // Acquisition and parsing are independent even if current is unreadable.
+    const persistence = this.snapshot(
+      exam,
+      readRaw(storageKey(exam)),
+      readRaw(historyStorageKey(exam)),
+    );
+    const current = persistence.current.value;
+    const warning = !authoritative(persistence.current)
+      ? blockedWarning
+      : !authoritative(persistence.history) ||
+          (persistence.embeddedHistory && !authoritative(persistence.embeddedHistory))
+        ? current
+          ? 'O histórico local está inválido. A tentativa atual foi restaurada.'
+          : 'O histórico local está inválido. O registro existente foi preservado.'
+        : null;
+    return {
+      current,
+      history: snapshotHistory(persistence),
+      warning,
+      restored: current !== null,
+      persistence,
+    };
+  }
   load(exam: Exam): Session {
     const read = this.read(exam);
     return { ...read, current: read.current ?? createAttempt(exam) };
+  }
+  private integrity(exam: Exam, expected: PersistenceSnapshot, rewriteHistory: boolean) {
+    if (!expected || !this.snapshots.has(expected) || expected.key !== storageKey(exam))
+      return 'invalid';
+    if (
+      this.uncertain.has(expected) ||
+      !authoritative(expected.current) ||
+      expected.history.raw === undefined ||
+      (expected.embeddedHistory && !authoritative(expected.embeddedHistory)) ||
+      ((rewriteHistory || Boolean(expected.embeddedHistory?.value.length)) &&
+        !authoritative(expected.history))
+    )
+      return 'blocked';
+    return null;
+  }
+  // Read-only preflight for review capture/flags; it never adopts another consumer's raw.
+  guard(exam: Exam, expected: PersistenceSnapshot, rewriteHistory = false): string | null {
+    const blocked = this.integrity(exam, expected, rewriteHistory);
+    if (blocked) return blockedWarning;
+    try {
+      const store = this.storage();
+      return store.getItem(storageKey(exam)) !== expected.current.raw ||
+        store.getItem(historyStorageKey(exam)) !== expected.history.raw
+        ? conflictWarning
+        : null;
+    } catch {
+      return blockedWarning;
+    }
+  }
+  // Caller supplies bytes recorded from its own successful review transaction, not a new read.
+  afterCurrentWrite(
+    exam: Exam,
+    expected: PersistenceSnapshot,
+    ownRaw: string,
+  ): PersistenceSnapshot {
+    if (this.integrity(exam, expected, false)) throw new Error(blockedWarning);
+    return this.snapshot(exam, ownRaw, expected.history.raw);
   }
   save(
     exam: Exam,
     current: Attempt,
     history: HistoryEntry[],
-    expected?: Map<string, string | null>,
-  ): Pick<Session, 'history' | 'warning'> & { aborted?: boolean } {
-    const historyKey = historyStorageKey(exam);
-    const resetWarning =
-      'O histórico ou a tentativa atual mudou. Reabra a prova; os registros locais foram preservados.';
-    if (this.resetConflicts.has(historyKey))
-      return { history, aborted: true, warning: resetWarning };
-    let observedReset = false;
-    // A reset in another tab can leave old summaries in this repository's caller.
-    // A removed known history, or replaced embedded v1 history, must not be resurrected.
-    if (
-      history.length &&
-      (this.savedHistory.has(historyKey) || this.legacyHistorySources.has(historyKey))
-    ) {
-      try {
-        const store = this.storage(),
-          historyRaw = store.getItem(historyKey);
-        if (historyRaw === null) {
-          const currentRaw = store.getItem(storageKey(exam));
-          const legacyRaw = this.legacyHistorySources.get(historyKey);
-          if (
-            this.savedHistory.has(historyKey) ||
-            (legacyRaw !== undefined && currentRaw !== legacyRaw)
-          ) {
-            const knownCurrent = this.savedCurrents.get(historyKey);
-            // Inspect with a separate reader: a failed save must not adopt another
-            // writer's snapshot and then accept that writer's data on a retry.
-            const actual = new AttemptRepository(this.storage).read(exam);
-            if (
-              actual.warning ||
-              !actual.current ||
-              actual.current.id !== current.id ||
-              actual.current.completedAt ||
-              !knownCurrent ||
-              !sameContent(knownCurrent, actual.current)
-            )
-              throw new Error('Tentativa atual mudou após a remoção do histórico.');
-            history = actual.history;
-            observedReset = true;
-            expected ??= new Map([
-              [storageKey(exam), currentRaw],
-              [historyKey, historyRaw],
-            ]);
-            this.savedHistory.add(historyKey); // Acknowledge the explicitly emptied history.
-          }
-        }
-      } catch {
-        this.resetConflicts.add(historyKey);
-        return {
-          history,
-          aborted: true,
-          warning: resetWarning,
-        };
-      }
-    }
-    const nextHistory = includeCurrent(current, history);
+    expected: PersistenceSnapshot,
+    additionalExpected?: Map<string, string | null>,
+  ): SaveOutcome {
+    const reject = (
+      status: SaveOutcome['status'],
+      warning: string,
+      rollbackComplete?: boolean,
+    ): SaveOutcome => ({
+      status,
+      history,
+      warning,
+      persistence: expected,
+      aborted: true,
+      rollbackComplete,
+    });
+    if (!expected || !this.snapshots.has(expected) || expected.key !== storageKey(exam))
+      return reject('invalid', 'Token de persistência obrigatório ou inválido.');
     if (!isCompatibleAttempt(exam, current))
-      return {
-        history: nextHistory,
-        warning: 'Tentativa incompatível: o progresso não foi salvo.',
-      };
-    if (expected) {
-      const changes = [
-        {
-          key: storageKey(exam),
-          before: expected.get(storageKey(exam))!,
-          after: JSON.stringify({ storageVersion: 3, current }),
-        },
-      ];
-      const writeHistory = current.completedAt || !this.savedHistory.has(historyKey);
-      if (writeHistory)
-        changes.push({
-          key: historyKey,
-          before: expected.get(historyKey)!,
-          after: JSON.stringify({ storageVersion: 3, history: nextHistory }),
-        });
-      try {
-        writeTransaction(this.storage(), expected, changes);
-        this.savedCurrents.set(historyKey, attemptSchema.parse(current));
-        this.legacyHistorySources.delete(historyKey);
-        if (writeHistory) this.savedHistory.add(historyKey);
-        return { history: nextHistory, warning: null };
-      } catch (error) {
-        if (observedReset) this.resetConflicts.add(historyKey);
-        return {
-          history,
-          aborted: true,
-          warning: `A nova tentativa não foi iniciada. ${error instanceof Error ? error.message : 'Falha de armazenamento.'}`,
-        };
-      }
-    }
+      return reject('invalid', 'Tentativa incompatível: o progresso não foi salvo.');
+    const starting = expected.current.value?.id !== current.id;
+    const integrity = this.integrity(exam, expected, starting || Boolean(current.completedAt));
+    if (integrity)
+      return reject(
+        integrity,
+        integrity === 'invalid' ? 'Token de persistência obrigatório ou inválido.' : blockedWarning,
+      );
+    if (!sameContent(history, snapshotHistory(expected)))
+      return reject('invalid', 'Tentativa ou histórico incompatível: o progresso não foi salvo.');
+    let store: StorageAdapter;
     try {
-      this.storage().setItem(storageKey(exam), JSON.stringify({ storageVersion: 3, current }));
-      this.legacyHistorySources.delete(historyKey);
-      this.savedCurrents.set(historyKey, attemptSchema.parse(current));
+      store = this.storage();
     } catch {
-      return {
-        history: nextHistory,
-        warning:
-          'O navegador não conseguiu salvar. Mantenha esta página aberta para preservar sua tentativa.',
-      };
+      return reject(
+        'storage-error',
+        'O navegador não conseguiu salvar. Mantenha esta página aberta.',
+      );
     }
-    const newCompletion = current.completedAt && !history.some((item) => item.id === current.id);
-    if (nextHistory.length && (newCompletion || !this.savedHistory.has(historyKey))) {
-      try {
-        this.storage().setItem(
-          historyKey,
-          JSON.stringify({ storageVersion: 3, history: nextHistory }),
-        );
-        this.savedHistory.add(historyKey);
-      } catch {
-        return {
-          history: nextHistory,
-          warning: 'A tentativa atual foi salva, mas o histórico não pôde ser atualizado.',
-        };
+    const key = storageKey(exam),
+      historyKey = historyStorageKey(exam);
+    let beforeCurrent = expected.current.raw as string | null,
+      beforeHistory = expected.history.raw as string | null;
+    let baseHistory = history;
+    try {
+      const actualCurrent = store.getItem(key),
+        actualHistory = store.getItem(historyKey);
+      if (actualCurrent !== beforeCurrent || actualHistory !== beforeHistory) {
+        const known = expected.current.value;
+        const hadHistory = expected.history.status === 'valid' || expected.embeddedHistory !== null;
+        const actual = parseCurrent(exam, actualCurrent);
+        // Explicit reset: only an unchanged known ongoing current may acknowledge removed history.
+        // v1 reset normalizes current to v3 while deleting its embedded summaries.
+        const resetCurrent =
+          actualCurrent === beforeCurrent ||
+          (expected.embeddedHistory &&
+            actual.current.status === 'valid' &&
+            actualCurrent !== null &&
+            JSON.parse(actualCurrent).storageVersion === 3 &&
+            sameContent(known, actual.current.value));
+        if (
+          !hadHistory ||
+          !authoritative(expected.history) ||
+          actualHistory !== null ||
+          !known ||
+          known.completedAt ||
+          !actual.current.value ||
+          actual.current.status !== 'valid' ||
+          actual.current.value.completedAt ||
+          actual.embeddedHistory?.value.length ||
+          current.id !== known.id ||
+          !resetCurrent
+        )
+          return reject('conflict', conflictWarning);
+        beforeCurrent = actualCurrent;
+        beforeHistory = null;
+        baseHistory = [];
       }
+    } catch {
+      return reject('storage-error', 'O navegador não conseguiu salvar: falha de leitura.');
     }
-    return { history: nextHistory, warning: null };
+    const nextHistory = includeCurrent(current, baseHistory);
+    const expectedRaws = new Map<string, string | null>([
+      [key, beforeCurrent],
+      [historyKey, beforeHistory],
+    ]);
+    if (additionalExpected)
+      for (const [guardKey, raw] of additionalExpected) {
+        if (expectedRaws.has(guardKey) && expectedRaws.get(guardKey) !== raw)
+          return reject('conflict', conflictWarning);
+        expectedRaws.set(guardKey, raw);
+      }
+    const afterCurrent = JSON.stringify({ storageVersion: 3, current });
+    const changes: StorageChange[] = [{ key, before: beforeCurrent, after: afterCurrent }];
+    // Partial history participates in the guard, but can never be a rewrite source.
+    const writeHistory =
+      authoritative(expected.history) &&
+      nextHistory.length > 0 &&
+      !sameContent(
+        nextHistory,
+        beforeHistory === null ? [] : includeCurrent(null, expected.history.value),
+      );
+    const afterHistory = writeHistory
+      ? JSON.stringify({ storageVersion: 3, history: nextHistory })
+      : beforeHistory;
+    if (writeHistory) changes.push({ key: historyKey, before: beforeHistory, after: afterHistory });
+    let storageFailed = false,
+      diverged = false;
+    const owned = new Map(expectedRaws);
+    // Observe failure kind without changing the shared transaction primitive or parsing its messages.
+    const adapter: StorageAdapter = {
+      getItem: (k) => {
+        try {
+          const raw = store.getItem(k);
+          if (owned.has(k) && raw !== owned.get(k)) diverged = true;
+          return raw;
+        } catch (error) {
+          storageFailed = true;
+          throw error;
+        }
+      },
+      setItem: (k, raw) => {
+        owned.set(k, raw);
+        try {
+          store.setItem(k, raw);
+        } catch (error) {
+          storageFailed = true;
+          throw error;
+        }
+      },
+      ...(store.removeItem
+        ? {
+            removeItem: (k: string) => {
+              owned.set(k, null);
+              try {
+                store.removeItem!(k);
+              } catch (error) {
+                storageFailed = true;
+                throw error;
+              }
+            },
+          }
+        : {}),
+    };
+    try {
+      writeTransaction(adapter, expectedRaws, changes);
+      return {
+        status: 'saved',
+        history: nextHistory,
+        warning: !authoritative(expected.history)
+          ? 'O histórico local está inválido. O registro existente foi preservado.'
+          : null,
+        persistence: this.snapshot(exam, afterCurrent, afterHistory),
+        aborted: false,
+      };
+    } catch {
+      let rollbackComplete = true;
+      try {
+        for (const change of changes)
+          if (store.getItem(change.key) !== change.before) rollbackComplete = false;
+      } catch {
+        rollbackComplete = false;
+      }
+      if (!rollbackComplete) this.uncertain.add(expected);
+      const warning = !rollbackComplete
+        ? 'O salvamento falhou e o rollback ficou incompleto. Reabra a prova para conferir o progresso local.'
+        : storageFailed
+          ? 'O navegador não conseguiu salvar. Mantenha esta página aberta para preservar sua tentativa.'
+          : conflictWarning;
+      return reject(
+        storageFailed || !diverged ? 'storage-error' : 'conflict',
+        warning,
+        rollbackComplete,
+      );
+    }
   }
 }

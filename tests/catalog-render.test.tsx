@@ -18,13 +18,15 @@ it('renderiza todas as provas, status textual e CTA inicial', () => {
   expect(screen.queryByRole('button', { name: 'Limpar filtros' })).not.toBeInTheDocument();
 });
 it('tentativa aberta mostra progresso acessível e CTA Continuar', () => {
-  new AttemptRepository(() => localStorage).save(
+  const repository = new AttemptRepository(() => localStorage);
+  repository.save(
     poc,
     {
       ...createAttempt(poc),
       answers: { [poc.questions[0]!.id]: 'option-1', [poc.questions[1]!.id]: 'option-2' },
     },
     [],
+    repository.read(poc).persistence,
   );
   render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(within(screen.getAllByRole('article')[0]!).getByText('Em andamento')).toBeInTheDocument();
@@ -37,7 +39,8 @@ it('tentativa aberta mostra progresso acessível e CTA Continuar', () => {
   );
 });
 it('conclusão mostra resultado, singular e CTA Ver prova', () => {
-  new AttemptRepository(() => localStorage).save(poc, completedAttempt(), []);
+  const repository = new AttemptRepository(() => localStorage);
+  repository.save(poc, completedAttempt(), [], repository.read(poc).persistence);
   render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(screen.getByText('Concluída')).toBeInTheDocument();
   expect(screen.getByText('Último resultado: 5%')).toBeInTheDocument();
@@ -54,7 +57,8 @@ it('dissertativa concluída mostra sem nota automática sem inferir percentual',
     type: 'finish',
     now: '2026-10-03T11:00:00.000Z',
   });
-  new AttemptRepository(() => localStorage).save(essay, current, []);
+  const repository = new AttemptRepository(() => localStorage);
+  repository.save(essay, current, [], repository.read(essay).persistence);
   render(<CatalogPage catalog={testCatalog} mode="all" />);
   expect(screen.getByText('Concluída · sem nota automática')).toBeInTheDocument();
   expect(screen.queryByText(/Último resultado/)).not.toBeInTheDocument();

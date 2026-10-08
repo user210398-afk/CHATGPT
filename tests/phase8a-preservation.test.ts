@@ -5,7 +5,12 @@ const run = promisify(execFile);
 import { readFileSync, readdirSync } from 'node:fs';
 import { prepareHistoryReset, confirmHistoryReset } from '../src/engine/history-reset';
 import { exportBackup, prepareImport, confirmImport } from '../src/engine/backup';
-import { storageKey, historyStorageKey, summary } from '../src/engine/persistence';
+import {
+  AttemptRepository,
+  storageKey,
+  historyStorageKey,
+  summary,
+} from '../src/engine/persistence';
 import { reviewStorageKey } from '../src/engine/review-history';
 import { reviewSessionStorageKey } from '../src/engine/review-session-storage';
 import { annotationStorageKey } from '../src/engine/question-annotations-storage';
@@ -73,7 +78,6 @@ describe('annotations/scratch preserve official domains', () => {
       'src/types/exam.ts',
       'src/engine/exam-state.ts',
       'src/engine/review-session.ts',
-      'src/engine/persistence.ts',
       'src/engine/history-reset.ts',
       'src/engine/backup.ts',
       '.github/workflows',
@@ -111,4 +115,27 @@ describe('annotations/scratch preserve official domains', () => {
       expect(source).not.toMatch(/\.clear\s*\(|\.key\s*\(|\.startsWith\s*\(/);
     }
   });
+});
+
+// RT-P1 explicitly authorizes persistence.ts; replace only its impossible byte gate.
+it('RT-P1 official writes/conflicts preserve annotations, scratch and unrelated raw bytes', () => {
+  const store = memory(),
+    current = createAttempt(exam);
+  const official = new AttemptRepository(() => store);
+  const foreignKeys = [
+    annotationStorageKey(exam),
+    scratchStorageKey(exam, scope),
+    'unknown-personal-key',
+  ];
+  for (const key of foreignKeys) store.values.set(key, ` opaque:${key} `);
+  const personal = foreignKeys.map((key) => [key, store.values.get(key)]);
+  const a = official.read(exam),
+    b = official.read(exam);
+  expect(official.save(exam, current, a.history, a.persistence).status).toBe('saved');
+  const winner = new Map(store.values);
+  expect(official.save(exam, createAttempt(exam), b.history, b.persistence).status).toBe(
+    'conflict',
+  );
+  expect(store.values).toEqual(winner);
+  expect(foreignKeys.map((key) => [key, store.values.get(key)])).toEqual(personal);
 });

@@ -48,7 +48,7 @@ describe('frozen contracts and in-memory-only normalization', () => {
     expect(store.setItem).not.toHaveBeenCalled();
     expect(store.values.get(storageKey(poc))).toBe(raw);
     const action = transition(poc, read.current, { type: 'navigate', index: 1 });
-    repo.save(poc, action, read.history);
+    repo.save(poc, action, read.history, read.persistence);
     expect(JSON.parse(store.values.get(storageKey(poc))!).storageVersion).toBe(3);
   });
   it('v1/v2 frozen schemas reject v3 fields', () => {

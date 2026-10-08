@@ -77,6 +77,7 @@ it('filtros de matéria combinam busca, ano, status, tipo, favorito e ordenaçã
       now: '2026-10-03T11:00:00.000Z',
     }),
     [],
+    repository.read(farmaco).persistence,
   );
   new CatalogPreferencesRepository(() => localStorage).setFavorite(farmaco.id, true);
   const coincident = {
@@ -145,11 +146,13 @@ it('progresso de current e conclusão agrega no Hub e preserva ExamCard', () => 
     farmaco,
     { ...createAttempt(farmaco), answers: { [farmaco.questions[0]!.id]: 'option-1' } },
     [],
+    repository.read(farmaco).persistence,
   );
   repository.save(
     studyCurrent,
     createAttempt(studyCurrent, '2026-10-03T10:00:00.000Z', 'study-current', 'study'),
     [],
+    repository.read(studyCurrent).persistence,
   );
   repository.save(
     studyComplete,
@@ -162,6 +165,7 @@ it('progresso de current e conclusão agrega no Hub e preserva ExamCard', () => 
       },
     ),
     [],
+    repository.read(studyComplete).persistence,
   );
   repository.save(
     other,
@@ -170,6 +174,7 @@ it('progresso de current e conclusão agrega no Hub e preserva ExamCard', () => 
       now: '2026-10-03T11:00:00.000Z',
     }),
     [],
+    repository.read(other).persistence,
   );
   const view = render(<CatalogPage catalog={catalog} />);
   expect(
@@ -192,7 +197,8 @@ it('progresso de current e conclusão agrega no Hub e preserva ExamCard', () => 
 
 it('pageshow atualiza resumo do Hub restaurado do bfcache', () => {
   render(<CatalogPage catalog={catalog} />);
-  new AttemptRepository(() => localStorage).save(farmaco, createAttempt(farmaco), []);
+  const repository = new AttemptRepository(() => localStorage);
+  repository.save(farmaco, createAttempt(farmaco), [], repository.read(farmaco).persistence);
   fireEvent(window, new Event('pageshow'));
   expect(screen.getByText('0 concluídos · 1 em andamento · 4 não iniciados')).toBeInTheDocument();
 });
