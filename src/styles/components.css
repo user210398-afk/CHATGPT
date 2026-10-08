@@ -233,6 +233,7 @@
 .exam-card h3 {
   font-size: 1.4rem;
   line-height: 1.4;
+  overflow-wrap: anywhere;
 }
 .exam-card-footer {
   border-top: 1px solid var(--color-border);

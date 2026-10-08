@@ -105,6 +105,48 @@ async function start(page: Page) {
   await page.getByRole('button', { name: 'Conhecer o MedSim' }).click();
   await expect(page.getByRole('dialog')).toHaveAccessibleName(guidedTourSteps[0].title);
 }
+async function overflowDiagnostic(page: Page) {
+  return page.evaluate(() => ({
+    scrollWidth: document.documentElement.scrollWidth,
+    innerWidth: window.innerWidth,
+    url: location.href,
+    step: document.getElementById('tour-progress')?.textContent ?? 'tour fechado',
+    theme: document.documentElement.dataset.theme,
+    textSize: document.documentElement.dataset.textSize,
+    overflowingElements: [...document.querySelectorAll<HTMLElement>('body *')]
+      .filter((element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.width > 0 &&
+          (rect.left < 0 ||
+            rect.right > window.innerWidth ||
+            element.scrollWidth > element.clientWidth)
+        );
+      })
+      .map((element) => {
+        const rect = element.getBoundingClientRect();
+        const style = getComputedStyle(element);
+        return {
+          tag: element.tagName,
+          id: element.id,
+          className: element.className,
+          left: rect.left,
+          right: rect.right,
+          width: rect.width,
+          scrollWidth: element.scrollWidth,
+          clientWidth: element.clientWidth,
+          text: element.textContent?.trim().slice(0, 120),
+          computedWidth: style.width,
+          minWidth: style.minWidth,
+          fontSize: style.fontSize,
+          whiteSpace: style.whiteSpace,
+          overflowWrap: style.overflowWrap,
+          display: style.display,
+          overflowX: style.overflowX,
+        };
+      }),
+  }));
+}
 async function panelFits(page: Page) {
   const viewport = page.viewportSize()!;
   await expect
@@ -119,9 +161,11 @@ async function panelFits(page: Page) {
       );
     })
     .toBe(true);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
-    true,
-  );
+  const diagnostic = await overflowDiagnostic(page);
+  expect(
+    diagnostic.scrollWidth <= diagnostic.innerWidth,
+    JSON.stringify(diagnostic, null, 2),
+  ).toBe(true);
 }
 async function complete(page: Page, checkTargets = false) {
   for (let index = 0; index < 7; index++) {
@@ -298,6 +342,10 @@ test('UX1: temas, alto contraste, texto grande, movimento reduzido e tela estrei
     await page.getByLabel('Tema', { exact: true }).selectOption(theme);
     await page.getByLabel('Contraste', { exact: true }).selectOption('high');
     await page.getByLabel('Tamanho do texto').selectOption('large');
+    await info.attach(`overflow-before-tour-${theme}`, {
+      body: JSON.stringify(await overflowDiagnostic(page), null, 2),
+      contentType: 'application/json',
+    });
     await start(page);
     expect(
       await page
