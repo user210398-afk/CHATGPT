@@ -85,12 +85,12 @@ test('7B.2A: Home, Farmacologia, back/forward, reload, Propedêutica e Todos', a
     .click();
   await page.getByRole('link', { name: 'Ver todos os simulados' }).click();
   await expect(page).toHaveURL(/\?view=all$/);
-  await expect(page.locator('.exam-card')).toHaveCount(19);
+  await expect(page.locator('.exam-card')).toHaveCount(catalog.exams.length);
   await expect(page.getByLabel('Disciplina', { exact: true })).toBeVisible();
   await page.goBack();
   await expect(page.locator('.subject-card')).toHaveCount(7);
   await page.goForward();
-  await expect(page.locator('.exam-card')).toHaveCount(19);
+  await expect(page.locator('.exam-card')).toHaveCount(catalog.exams.length);
   await page.reload();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Todos os simulados');
   await page.goto('?area=farmacologia');
@@ -98,7 +98,7 @@ test('7B.2A: Home, Farmacologia, back/forward, reload, Propedêutica e Todos', a
   await expect(page.locator('.exam-card')).toHaveCount(5);
   await page.goto('?view=all');
   await page.reload();
-  await expect(page.locator('.exam-card')).toHaveCount(19);
+  await expect(page.locator('.exam-card')).toHaveCount(catalog.exams.length);
   expect(network.fullExams()).toEqual([]);
   network.check();
 });
@@ -173,11 +173,11 @@ test('7B.2A: navegação zero-write com current/history/review/preferências pre
   await expect(page.locator('.subject-card')).toHaveCount(7);
   await unchanged();
   await page.getByRole('link', { name: 'Ver todos os simulados' }).click();
-  await expect(page.locator('.exam-card')).toHaveCount(19);
+  await expect(page.locator('.exam-card')).toHaveCount(catalog.exams.length);
   await page.getByLabel('Ano', { exact: true }).selectOption('2025');
   await unchanged();
   await page.getByRole('button', { name: 'Limpar filtros' }).click();
-  await expect(page.locator('.exam-card')).toHaveCount(19);
+  await expect(page.locator('.exam-card')).toHaveCount(catalog.exams.length);
   await unchanged();
   await page.goto('?area=inexistente');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Matéria não encontrada.');
@@ -186,7 +186,7 @@ test('7B.2A: navegação zero-write com current/history/review/preferências pre
   await expect(page.locator('.subject-card')).toHaveCount(7);
   await unchanged();
   await page.getByRole('link', { name: 'Ver todos os simulados' }).click();
-  await expect(page.locator('.exam-card')).toHaveCount(19);
+  await expect(page.locator('.exam-card')).toHaveCount(catalog.exams.length);
   await unchanged();
   expect(network.fullExams()).toHaveLength(0);
   await examCard(page, farmaco.id)
@@ -361,7 +361,7 @@ test('7B.2A: dogfood Farmacologia 2025, retorno à matéria, Propedêutica 2024 
   await page.getByLabel('Disciplina', { exact: true }).selectOption('Farmacologia Básica');
   await expect(page.locator('.exam-card')).toHaveCount(2);
   await page.getByRole('button', { name: 'Limpar filtros' }).click();
-  await expect(page.locator('.exam-card')).toHaveCount(19);
+  await expect(page.locator('.exam-card')).toHaveCount(catalog.exams.length);
   network.check();
 });
 

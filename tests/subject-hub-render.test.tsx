@@ -9,6 +9,9 @@ import { AttemptRepository, storageKey } from '../src/engine/persistence';
 import { createAttempt, transition } from '../src/engine/exam-state';
 import { CatalogPreferencesRepository } from '../src/engine/catalog-preferences';
 const { catalog, exams } = await readExamCatalog();
+const subjectCount = new Set(catalog.exams.map((exam) => subjectGroupDefinition(exam.subject).id))
+  .size;
+const questionCount = catalog.exams.reduce((sum, exam) => sum + exam.questionCount, 0);
 const farmaco = exams.find((exam) => exam.id === 'farmaco-p2-2025')!;
 afterEach(() => {
   vi.restoreAllMocks();
@@ -16,12 +19,16 @@ afterEach(() => {
   window.history.replaceState({}, '', '/');
 });
 
-it('Home renderiza sete matérias, contagens e links reais, sem ExamCards', () => {
+it('Home renderiza todas as matérias, contagens e links reais, sem ExamCards', () => {
   const { container } = render(<CatalogPage catalog={catalog} />);
-  expect(screen.getAllByRole('article')).toHaveLength(7);
+  expect(screen.getAllByRole('article')).toHaveLength(subjectCount);
   expect(container.querySelectorAll('.exam-card')).toHaveLength(0);
   expect(screen.queryByRole('searchbox')).not.toBeInTheDocument();
-  expect(screen.getByText('7 matérias · 19 simulados · 522 questões')).toBeInTheDocument();
+  expect(
+    screen.getByText(
+      `${subjectCount} matérias · ${catalog.exams.length} simulados · ${questionCount} questões`,
+    ),
+  ).toBeInTheDocument();
   const card = screen.getByRole('article', { name: 'Farmacologia' });
   expect(within(card).getByText('5 simulados · 148 questões')).toBeInTheDocument();
   expect(within(card).getByRole('link', { name: 'Farmacologia Abrir matéria →' })).toHaveAttribute(
@@ -60,10 +67,12 @@ it.each([
   expect(within(breadcrumb).getByText(String(title))).toHaveAttribute('aria-current', 'page');
 });
 
-it('Todos os simulados preserva 19 ExamCards e todos os filtros', () => {
+it('Todos os simulados mostra um ExamCard por prova e preserva todos os filtros', () => {
   render(<CatalogPage catalog={catalog} mode="all" />);
-  expect(screen.getAllByRole('article')).toHaveLength(19);
-  expect(screen.getByText('19 simulados · 522 questões')).toBeInTheDocument();
+  expect(screen.getAllByRole('article')).toHaveLength(catalog.exams.length);
+  expect(
+    screen.getByText(`${catalog.exams.length} simulados · ${questionCount} questões`),
+  ).toBeInTheDocument();
   for (const label of ['Disciplina', 'Ano', 'Status', 'Favoritos', 'Tipo', 'Ordenação'])
     expect(screen.getByLabelText(label)).toBeInTheDocument();
 });

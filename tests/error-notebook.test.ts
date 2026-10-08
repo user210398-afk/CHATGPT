@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
-import { readFileSync, readdirSync } from 'node:fs';
+import { assertAcademicPreservation } from './academic-preservation';
+import { examCounts } from '../scripts/release-baseline';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import {
@@ -242,7 +243,10 @@ describe('read-only official sources and outcomes', () => {
         memory([
           [storageKey(exam), current(invalid)],
           [reviewStorageKey(exam), archive([valid])],
-          [historyStorageKey(exam), JSON.stringify({ storageVersion: 3, history: [summary(valid)] })],
+          [
+            historyStorageKey(exam),
+            JSON.stringify({ storageVersion: 3, history: [summary(valid)] }),
+          ],
         ]),
       );
       expect(result.attemptCount).toBe(1);
@@ -850,6 +854,9 @@ describe('deterministic filters, comparator and domain preservation', () => {
     expect(JSON.stringify(after)).not.toMatch(/notebook|QuestionPerformance|wrongCount/);
   });
   it('all protected academic/official domains match the required baseline', async () => {
+    const { historicalExams } = await assertAcademicPreservation(
+      'b09634a87042e18ebf2c31ad598c6ad5e13103d7',
+    );
     expect(
       (
         await promisify(execFile)('git', [
@@ -857,7 +864,6 @@ describe('deterministic filters, comparator and domain preservation', () => {
           '--name-only',
           'b09634a87042e18ebf2c31ad598c6ad5e13103d7',
           '--',
-          'data/exams/',
           'simulados/',
           'schema/',
           'src/engine/exam-state.ts',
@@ -883,16 +889,12 @@ describe('deterministic filters, comparator and domain preservation', () => {
         ])
       ).stdout.trim(),
     ).toBe('');
-    const exams = readdirSync('data/exams')
-      .filter((f) => f.endsWith('.json'))
-      .map((f) => JSON.parse(readFileSync(`data/exams/${f}`, 'utf8')));
-    const questions = exams.flatMap((e) => e.questions);
-    expect([
-      exams.length,
-      questions.length,
-      questions.filter((q) => q.type === 'multiple-choice').length,
-      questions.filter((q) => q.type === 'essay').length,
-    ]).toEqual([19, 522, 492, 30]);
+    expect(examCounts(historicalExams)).toMatchObject({
+      exams: 19,
+      questions: 522,
+      objective: 492,
+      essay: 30,
+    });
   });
   it('source reader prefers current metadata then archive then embedded, without persisting', () => {
     const value = attempt('incorrect'),
