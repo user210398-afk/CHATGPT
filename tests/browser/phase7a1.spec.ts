@@ -192,7 +192,7 @@ test('7A.1: dogfood responder, voltar, favoritar, concluir e reiniciar sem perde
   await expect(page.locator('.history li')).toHaveCount(2);
   check();
 });
-test('7A.1: storage bloqueado mantém busca, filtros e abertura sem crash', async ({ page }) => {
+test('7A.1: storage bloqueado mantém busca, filtros e bloqueia início sem crash', async ({ page }) => {
   await page.addInitScript(() => {
     Object.defineProperty(window, 'localStorage', {
       get: () => {
@@ -215,9 +215,12 @@ test('7A.1: storage bloqueado mantém busca, filtros e abertura sem crash', asyn
   await card(page)
     .getByRole('link', { name: /Abrir prova/ })
     .click();
-  await chooseExam(page);
-  await chooseExam(page);
-  await expect(page.getByRole('heading', { name: 'Questão 1 de 30', exact: true })).toBeVisible();
+  const chooser = page.getByRole('heading', { name: 'Como deseja fazer esta tentativa?' });
+  await expect(chooser).toBeVisible();
+  await page.getByRole('button', { name: 'Iniciar em Modo Prova', exact: true }).click();
+  await expect(page.getByRole('alert')).toContainText('A nova tentativa não foi iniciada');
+  await expect(chooser).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Questão 1 de 30', exact: true })).toHaveCount(0);
   check();
 });
 test('7A.1: corrupção é preservada e falha de escrita é honesta', async ({ page }) => {
