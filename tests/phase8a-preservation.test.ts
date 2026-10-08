@@ -2,7 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 const run = promisify(execFile);
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
+import { assertAcademicPreservation } from './academic-preservation';
+import { examCounts } from '../scripts/release-baseline';
 import { prepareHistoryReset, confirmHistoryReset } from '../src/engine/history-reset';
 import { exportBackup, prepareImport, confirmImport } from '../src/engine/backup';
 import {
@@ -70,9 +72,9 @@ describe('annotations/scratch preserve official domains', () => {
     expect(store.values.get(annotationStorageKey(exam))).toBe(raw);
     expect(store.values.get(scratchStorageKey(exam, scope))).toBe(scratch);
   });
-  it('academic data and official engine modules remain identical to baseline, including untracked academic files', async () => {
+  it('historical academic bytes stay frozen; new exams require approved authoring; official modules stay identical', async () => {
+    const { historicalExams } = await assertAcademicPreservation(baseline);
     const paths = [
-      'data/exams',
       'simulados',
       'schema/exam.ts',
       'src/types/exam.ts',
@@ -93,16 +95,12 @@ describe('annotations/scratch preserve official domains', () => {
         await run('git', ['ls-files', '--others', '--exclude-standard', '--', ...paths])
       ).stdout.trim(),
     ).toBe('');
-    const exams = readdirSync('data/exams')
-      .filter((name) => name.endsWith('.json'))
-      .map((name) => JSON.parse(readFileSync(`data/exams/${name}`, 'utf8')));
-    const questions = exams.flatMap((exam) => exam.questions);
-    expect([
-      exams.length,
-      questions.length,
-      questions.filter((q) => q.type === 'multiple-choice').length,
-      questions.filter((q) => q.type === 'essay').length,
-    ]).toEqual([19, 522, 492, 30]);
+    expect(examCounts(historicalExams)).toMatchObject({
+      exams: 19,
+      questions: 522,
+      objective: 492,
+      essay: 30,
+    });
   });
   it('new production domains never clear storage or delete by generic prefix', () => {
     for (const path of [

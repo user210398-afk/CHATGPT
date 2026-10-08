@@ -7,12 +7,18 @@ import {
 } from '../src/engine/subject-groups';
 import { readExamProgress } from '../src/engine/catalog-progress';
 import { allExamsUrl, resolveRoute, subjectUrl } from '../src/utils/paths';
+import { assertAcademicPreservation } from './academic-preservation';
 const { catalog } = await readExamCatalog();
+const { historicalExams } = await assertAcademicPreservation(
+  '8dbdd359e0f7badebdbce45b64ef893a17dee6e2',
+);
+const historicalIds = new Set(historicalExams.map((exam) => exam.id));
+const historicalCatalog = catalog.exams.filter((exam) => historicalIds.has(exam.id));
 
-it('19 provas aparecem exatamente uma vez, sem duplicatas ou provas sem grupo', () => {
+it('todas as provas do catálogo aparecem exatamente uma vez, sem duplicatas ou provas sem grupo', () => {
   const exams = groupCatalogExams(catalog.exams).flatMap((group) => group.exams);
-  expect(exams).toHaveLength(19);
-  expect(new Set(exams.map((exam) => exam.id)).size).toBe(19);
+  expect(exams).toHaveLength(catalog.exams.length);
+  expect(new Set(exams.map((exam) => exam.id)).size).toBe(catalog.exams.length);
   expect(exams.map((exam) => exam.id).sort()).toEqual(catalog.exams.map((exam) => exam.id).sort());
 });
 
@@ -24,11 +30,25 @@ it.each([
   ['parasitologia', 1, 31],
   ['patologia', 1, 30],
   ['propedeutica', 2, 40],
-])('%s agrega %i provas / %i questões', (id, examCount, questionCount) => {
-  expect(groupCatalogExams(catalog.exams).find((group) => group.id === id)).toMatchObject({
+])('baseline histórico: %s agrega %i provas / %i questões', (id, examCount, questionCount) => {
+  expect(groupCatalogExams(historicalCatalog).find((group) => group.id === id)).toMatchObject({
     examCount,
     questionCount,
   });
+});
+
+it('grupos somam todas as provas e questões atuais, incluindo adições aprovadas', () => {
+  const groups = groupCatalogExams(catalog.exams);
+  for (const group of groups) {
+    const members = catalog.exams.filter(
+      (exam) => subjectGroupDefinition(exam.subject).id === group.id,
+    );
+    expect(group.examCount).toBe(members.length);
+    expect(group.questionCount).toBe(members.reduce((sum, exam) => sum + exam.questionCount, 0));
+    expect(group.exams.map((exam) => exam.id).sort()).toEqual(
+      members.map((exam) => exam.id).sort(),
+    );
+  }
 });
 
 it.each([
@@ -41,7 +61,7 @@ it.each([
 ])('alias %s pertence a %s', (subject, id) => expect(subjectGroupDefinition(subject).id).toBe(id));
 
 it('membership obrigatório segue subject acadêmico, inclusive imunologia-b4-2024', () => {
-  const groups = groupCatalogExams(catalog.exams);
+  const groups = groupCatalogExams(historicalCatalog);
   expect(
     groups
       .find((group) => group.id === 'farmacologia')!
@@ -207,10 +227,11 @@ it('rotas mantêm Pages, encoding, precedência e área inválida explícita', (
   });
 });
 
-it('total do Hub centralizado conserva 19 simulados / 522 questões', () => {
+it('total do Hub centralizado conserva todas as provas e questões atuais', () => {
   expect(subjectHubTotals(groupCatalogExams(catalog.exams))).toEqual({
-    subjectCount: 7,
-    examCount: 19,
-    questionCount: 522,
+    subjectCount: new Set(catalog.exams.map((exam) => subjectGroupDefinition(exam.subject).id))
+      .size,
+    examCount: catalog.exams.length,
+    questionCount: catalog.exams.reduce((sum, exam) => sum + exam.questionCount, 0),
   });
 });

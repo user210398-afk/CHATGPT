@@ -260,7 +260,7 @@ test('Analytics texto grande e densidade compacta a 375 sem overflow', async ({ 
   await screenshot(page, 'large-text-compact', info.project.name);
   await check();
 });
-test('Analytics perto do limite: 380 resultados oficiais, todos acessíveis sem overflow', async ({
+test('Analytics perto do limite: 20 resultados oficiais por prova, todos acessíveis sem overflow', async ({
   page,
 }, info) => {
   const { catalog } = await readExamCatalog();
@@ -271,7 +271,9 @@ test('Analytics perto do limite: 380 resultados oficiais, todos acessíveis sem 
   const check = await setup(page, entries);
   const scoredCount = catalog.exams.filter((item) => item.objectiveCount > 0).length * 20;
   await expect(page.locator('.performance-point')).toHaveCount(scoredCount);
-  await expect(page.locator('.analytics-summary div').first().locator('dd')).toHaveText('380');
+  await expect(page.locator('.analytics-summary div').first().locator('dd')).toHaveText(
+    String(entries.length * 20),
+  );
   await expect(page.getByLabel('Resultado selecionado').locator('option')).toHaveCount(scoredCount);
   await page.getByLabel('Resultado selecionado').selectOption('0');
   await page.getByRole('button', { name: 'Próximo resultado', exact: true }).click();

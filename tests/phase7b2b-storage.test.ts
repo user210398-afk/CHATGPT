@@ -418,9 +418,9 @@ describe('safe whole-catalog explicit history reset', () => {
       lastResultPercentage: null,
     });
   });
-  it('red team: corruption only in the last of all 19 exams aborts with zero mutations', async () => {
+  it('red team: corruption only in the last catalog exam aborts with zero mutations', async () => {
     const { catalog } = await readExamCatalog();
-    expect(catalog.exams).toHaveLength(19);
+    expect(catalog.exams.length).toBeGreaterThan(0);
     const store = memory(
       catalog.exams.flatMap(
         (exam) =>
@@ -438,7 +438,7 @@ describe('safe whole-catalog explicit history reset', () => {
     expect(store.setItem).not.toHaveBeenCalled();
     expect(store.removeItem).not.toHaveBeenCalled();
   });
-  it('red team: all 76 catalog keys are read before the first reset mutation', async () => {
+  it('red team: every catalog key is read before the first reset mutation', async () => {
     const { catalog } = await readExamCatalog();
     const store = memory(catalog.exams.map((exam) => [historyStorageKey(exam), 'history']));
     const allKeys = catalog.exams.flatMap((exam) => [
