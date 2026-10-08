@@ -37,6 +37,8 @@
   --transition-fast: 140ms ease;
   --z-header: 10;
   --z-skip: 20;
+  --z-tour: 30;
+  --color-tour-shade: rgb(10 20 35 / 48%);
   --layout-max: 1200px;
   /* Media queries usam literais: CSS custom properties não são válidas nelas. */
   --breakpoint-mobile: 48rem;
