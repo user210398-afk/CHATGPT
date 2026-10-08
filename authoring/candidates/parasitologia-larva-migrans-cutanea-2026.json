@@ -1,0 +1,1243 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "parasitologia-larva-migrans-cutanea-2026",
+  "title": "Larva Migrans Cutânea (Bicho Geográfico) — Parasitologia",
+  "subject": "Parasitologia",
+  "year": null,
+  "division": "Disciplina de Parasitologia — FMJ",
+  "description": "Simulado baseado na aula Larva Migrans Cutânea (Bicho Geográfico), Disciplina de Parasitologia — FMJ, Profa. Dra. Alcione Vendramin Gatti. 15 questões objetivas e 5 dissertativas aprovadas pelo usuário, com fonte primária exclusiva nos slides.",
+  "tags": [
+    "Parasitologia",
+    "Larva Migrans Cutânea",
+    "Bicho Geográfico",
+    "Ancylostoma",
+    "Zoonoses"
+  ],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "Larva Migrans Cutânea (Bicho Geográfico).pdf",
+    "sourceSha256": "c49e51eb7ba766ad3e3527649bc21c4c82e1549ff7879c0dbfd77cacaf2f1fa0",
+    "notes": [
+      "Candidate assistido por IA; revisão humana obrigatória de fonte, gabaritos e explicações."
+    ]
+  },
+  "questions": [
+    {
+      "id": "objetivas-001",
+      "label": "Questão 1",
+      "category": "Agentes etiológicos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "A larva migrans cutânea, popularmente conhecida como bicho geográfico, é descrita na aula como uma infecção humana causada principalmente por:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula identifica A. caninum e A. braziliense como os ancilostomídeos de animais relacionados à LMC.\nAlternativa 1: Atribui a doença a bactérias, mas os agentes apresentados são helmintos.\nAlternativa 2: O quadro humano decorre da migração larvária, não do desenvolvimento de vermes adultos na pele.\nAlternativa 3: A aula identifica A. caninum e A. braziliense como os ancilostomídeos de animais relacionados à LMC.\nAlternativa 4: Os ovos participam da contaminação ambiental; a forma infectante ao homem é a larva L3.\nAlternativa 5: Confunde o ambiente de desenvolvimento larvário com o local de estabelecimento dos vermes adultos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Agentes etiológicos",
+        "fácil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Multiplicação de bactérias provenientes das fezes de cães e gatos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Desenvolvimento de vermes adultos de animais na pele humana."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Migração de larvas de Ancylostoma caninum e Ancylostoma braziliense."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Penetração de ovos de ancilostomídeos diretamente na pele."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Proliferação de vermes adultos no solo após contato humano."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-002",
+      "label": "Questão 2",
+      "category": "Forma infectante",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual estágio de desenvolvimento dos ancilostomídeos de animais é identificado como a forma infectante para o ser humano na larva migrans cutânea?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A L3 filarioide é apresentada como a forma infectante presente no ambiente, capaz de penetrar ativamente na pele humana.\nAlternativa 1: L1 é uma fase larvária anterior à infectante.\nAlternativa 2: L2 também antecede o estágio infectante.\nAlternativa 3: Ovos são eliminados nas fezes e participam da continuidade do ciclo ambiental, mas não são a forma infectante ao homem indicada na aula.\nAlternativa 4: A L3 filarioide é apresentada como a forma infectante presente no ambiente, capaz de penetrar ativamente na pele humana.\nAlternativa 5: Vermes adultos pertencem ao ciclo do hospedeiro definitivo, não à forma infectante cutânea humana."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Forma infectante",
+        "fácil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Larva L1 rabditoide."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Larva L2 rabditoide."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ovo eliminado nas fezes."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Larva L3 filarioide."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Verme adulto."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "objetivas-003",
+      "label": "Questão 3",
+      "category": "Manifestação característica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Qual associação de achados clínicos é característica da larva migrans cutânea, segundo a aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A apresentação destaca o aspecto serpiginoso das lesões e o prurido como componentes do diagnóstico clínico.\nAlternativa 1: Não apresenta o conjunto característico descrito na aula.\nAlternativa 2: A apresentação destaca o aspecto serpiginoso das lesões e o prurido como componentes do diagnóstico clínico.\nAlternativa 3: Associa uma lesão não característica à eliminação cutânea de ovos, que não integra o ciclo humano apresentado.\nAlternativa 4: A LMC é uma manifestação da migração larvária, e o prurido é um achado destacado.\nAlternativa 5: As manifestações ilustradas e descritas são cutâneas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Manifestação característica",
+        "fácil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Lesão cutânea circular assintomática e ausência de exposição ambiental."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Lesão de trajeto serpiginoso acompanhada de prurido."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Lesão cutânea fixa, sem alteração de trajeto, e eliminação de ovos pela pele."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Vermes adultos visíveis na superfície da pele, sem prurido."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Lesões restritas à cavidade oral e à mucosa intestinal."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-004",
+      "label": "Questão 4",
+      "category": "Hospedeiros",
+      "statement": [
+        {
+          "type": "text",
+          "text": "A respeito da participação de cães, gatos e seres humanos no ciclo dos agentes da larva migrans cutânea, assinale a alternativa correta."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A apresentação identifica cães e gatos como hospedeiros definitivos e o ser humano como acidental.\nAlternativa 1: A apresentação identifica cães e gatos como hospedeiros definitivos e o ser humano como acidental.\nAlternativa 2: Inverte os papéis dos hospedeiros.\nAlternativa 3: Ignora a ausência de ciclo completo no homem.\nAlternativa 4: Contradiz o ciclo descrito nos animais.\nAlternativa 5: Desconsidera o desenvolvimento do parasito nos hospedeiros animais."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Hospedeiros",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Cães e gatos atuam como hospedeiros definitivos, enquanto o ser humano é hospedeiro acidental."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "O ser humano é o hospedeiro definitivo, e cães e gatos são hospedeiros acidentais."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Todos os três hospedeiros apresentam obrigatoriamente o mesmo ciclo completo."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "O ciclo completo ocorre apenas no ser humano."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Cães e gatos participam apenas como transportadores mecânicos de larvas, sem serem hospedeiros do parasito."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-005",
+      "label": "Questão 5",
+      "category": "Desenvolvimento no ambiente",
+      "statement": [
+        {
+          "type": "text",
+          "text": "No ciclo representado para Ancylostoma caninum, qual sequência corresponde ao desenvolvimento das formas larvárias após a eliminação de ovos pelo hospedeiro definitivo?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula apresenta a eclosão do ovo, a liberação da L1, o desenvolvimento para L2 e, posteriormente, para L3, que constitui a forma infectante.\nAlternativa 1: Coloca L3 antes de L1/L2.\nAlternativa 2: Introduz verme adulto no solo.\nAlternativa 3: Inverte a ordem larvária e intercala um adulto.\nAlternativa 4: Troca as denominações morfológicas atribuídas aos estágios.\nAlternativa 5: A aula apresenta a eclosão do ovo, a liberação da L1, o desenvolvimento para L2 e, posteriormente, para L3, que constitui a forma infectante."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Desenvolvimento no ambiente",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ovo → L3 filarioide → L1 rabditoide → L2 rabditoide."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ovo → verme adulto no solo → L3 → L1."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ovo → L2 rabditoide → verme adulto → L1 rabditoide."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ovo → L1 filarioide → L2 filarioide → L3 rabditoide."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ovo → L1 rabditoide → L2 rabditoide → L3 filarioide."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "objetivas-006",
+      "label": "Questão 6",
+      "category": "Mecanismo de infecção humana",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Uma pessoa entra em contato direto, com a pele desprotegida, com solo contendo formas infectantes de ancilostomídeos de animais. De acordo com o ciclo apresentado, o mecanismo responsável pela larva migrans cutânea é:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A transmissão humana descrita decorre da penetração de larvas L3 infectantes presentes no ambiente.\nAlternativa 1: Apresenta uma forma e via não correspondentes à LMC.\nAlternativa 2: Confunde ovos ambientais com larvas infectantes.\nAlternativa 3: A transmissão humana descrita decorre da penetração de larvas L3 infectantes presentes no ambiente.\nAlternativa 4: Atribui infectividade humana à L1 e desenvolvimento adulto cutâneo.\nAlternativa 5: Introduz um vetor e uma forma larvária que não integram a transmissão apresentada."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Mecanismo de infecção humana",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ingestão de vermes adultos presentes no solo."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Penetração ativa de ovos através da pele."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Penetração ativa de larvas L3 filarioides, seguida de migração cutânea."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ingestão de larvas L1 e transformação imediata em vermes adultos na pele."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Entrada de larvas L2 por picada de insetos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-007",
+      "label": "Questão 7",
+      "category": "Diagnóstico clínico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Um paciente procura atendimento com prurido e uma lesão cutânea de aspecto serpiginoso após exposição a uma área de solo potencialmente contaminado por fezes de animais. Segundo a abordagem diagnóstica apresentada na aula, qual conduta é mais compatível com a investigação inicial?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O slide de diagnóstico caracteriza a investigação como clínica, fundamentada na anamnese, exposição, aspecto serpiginoso e prurido.\nAlternativa 1: Exige um exame que não é indicado como necessário na apresentação.\nAlternativa 2: O slide de diagnóstico caracteriza a investigação como clínica, fundamentada na anamnese, exposição, aspecto serpiginoso e prurido.\nAlternativa 3: Elimina os critérios clínicos destacados pela aula.\nAlternativa 4: A identificação de adultos na lesão não é descrita como critério diagnóstico da LMC.\nAlternativa 5: Ignora tanto o aspecto característico da lesão quanto a história de contato com ambientes de risco."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico clínico",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Confirmar obrigatoriamente a doença pela pesquisa de ovos nas fezes humanas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Valorizar a história de exposição, o aspecto serpiginoso da lesão e o prurido, sem necessidade rotineira de exame laboratorial."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Considerar o aspecto dermatológico irrelevante e estabelecer o diagnóstico exclusivamente por exames sanguíneos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Identificar vermes adultos na lesão como requisito para estabelecer o diagnóstico."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Desconsiderar a exposição ambiental e basear o diagnóstico apenas na presença de animais domésticos na residência."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-008",
+      "label": "Questão 8",
+      "category": "Morfologia dos agentes",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Ao comparar as ilustrações dos aparelhos bucais dos vermes adultos apresentadas na aula, qual conclusão é compatível com o material?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula compara diretamente os dentes ventrais das duas espécies, ilustrando maior número dessas estruturas em A. caninum.\nAlternativa 1: A comparação morfológica apresentada se refere aos aparelhos bucais, não à presença ou ausência de ovos.\nAlternativa 2: As duas figuras mostram estruturas dentárias.\nAlternativa 3: O slide compara vermes adultos das duas espécies, e não diferentes estágios larvários.\nAlternativa 4: A aula compara diretamente os dentes ventrais das duas espécies, ilustrando maior número dessas estruturas em A. caninum.\nAlternativa 5: Contraria a distinção exibida nas imagens."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Morfologia dos agentes",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "As espécies são diferenciadas exclusivamente pela presença ou ausência de ovos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "A. caninum e A. braziliense são mostrados com aparelhos bucais desprovidos de dentes."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "A diferenciação apresentada depende de o parasito estar na fase L1 ou L3."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "As espécies apresentam diferenças no número e na disposição dos dentes ventrais do aparelho bucal, com maior número em A. caninum."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "As figuras indicam estruturas bucais idênticas, sem distinção morfológica entre as espécies."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "objetivas-009",
+      "label": "Questão 9",
+      "category": "Prevenção em praias",
+      "statement": [
+        {
+          "type": "text",
+          "text": "A respeito das medidas de profilaxia da larva migrans cutânea em praias, assinale a alternativa mais compatível com a apresentação."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O slide de profilaxia recomenda evitar a contaminação da areia por animais domésticos e dá preferência à areia coberta pela maré para recreação.\nAlternativa 1: O slide de profilaxia recomenda evitar a contaminação da areia por animais domésticos e dá preferência à areia coberta pela maré para recreação.\nAlternativa 2: A presença de animais pode favorecer a contaminação ambiental por fezes.\nAlternativa 3: O material não relaciona aparência saudável do animal à ausência de risco ambiental.\nAlternativa 4: Aumenta a exposição ao ambiente que se pretende proteger.\nAlternativa 5: Contraria as recomendações de prevenção apresentadas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Prevenção em praias",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Evitar a presença de animais domésticos nas praias e, para recreação, preferir áreas de areia cobertas pela maré, conforme a orientação da aula."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Incentivar a permanência de animais na areia seca para reduzir a quantidade de larvas infectantes."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Considerar que a areia não pode ser contaminada caso os animais aparentem estar saudáveis."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Priorizar o contato direto da pele com locais onde se concentram fezes de cães e gatos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Dispensar todas as medidas de proteção individual quando houver animais circulando na praia."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-010",
+      "label": "Questão 10",
+      "category": "Prevenção em espaços infantis",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Uma creche mantém uma caixa de areia recreativa frequentemente acessada por cães e gatos. Qual intervenção é especificamente indicada na aula para reduzir o risco de larva migrans cutânea nesse ambiente?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A proteção de caixas de areia em creches e parques contra a presença de animais é expressamente mencionada nas medidas preventivas.\nAlternativa 1: Não previne o contato da areia com possíveis fontes de contaminação.\nAlternativa 2: Introduz uma intervenção ambiental não recomendada no slide e não controla a fonte de contaminação.\nAlternativa 3: Substitui prevenção ambiental por exames que não correspondem à estratégia apresentada.\nAlternativa 4: Mantém o acesso dos animais e não representa proteção adequada da caixa de areia.\nAlternativa 5: A proteção de caixas de areia em creches e parques contra a presença de animais é expressamente mencionada nas medidas preventivas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Prevenção em espaços infantis",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Manter acesso irrestrito dos animais e examinar apenas as crianças que apresentarem lesões."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Aplicar medicamentos antiparasitários diretamente na areia, sem controlar a presença dos animais."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Substituir a proteção física da caixa de areia por exames laboratoriais periódicos em todas as crianças."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Permitir que os animais utilizem a caixa de areia e recolher os resíduos apenas quando forem visíveis."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Proteger a caixa de areia contra o acesso de animais, reduzindo as oportunidades de contaminação ambiental."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "objetivas-011",
+      "label": "Questão 11",
+      "category": "Proteção individual",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Uma pessoa realiza atividades frequentes de jardinagem e manipulação de terra. Qual medida de proteção individual está explicitamente recomendada na aula para reduzir a exposição à larva migrans cutânea?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A apresentação recomenda o uso de luvas durante a manipulação de areia ou terra e o uso de calçados como medidas de proteção.\nAlternativa 1: Mantém contato direto da pele com o ambiente de possível exposição.\nAlternativa 2: Não contempla o mecanismo ambiental de transmissão apresentado.\nAlternativa 3: A apresentação recomenda o uso de luvas durante a manipulação de areia ou terra e o uso de calçados como medidas de proteção.\nAlternativa 4: Transforma uma medida preventiva em intervenção posterior à exposição.\nAlternativa 5: Propõe exames no lugar das barreiras físicas recomendadas."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Proteção individual",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Manipular a terra com as mãos desprotegidas e lavar apenas os instrumentos utilizados."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Evitar exclusivamente o contato com pelos de cães e gatos, sem considerar o solo."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Utilizar luvas ao manipular areia ou terra e usar calçados."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Utilizar calçados somente após o surgimento de lesões cutâneas."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Substituir a proteção física por exames laboratoriais preventivos periódicos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-012",
+      "label": "Questão 12",
+      "category": "Tratamento descrito na aula",
+      "statement": [
+        {
+          "type": "text",
+          "text": "De acordo com o slide de tratamento da larva migrans cutânea, qual associação de medicamentos e vias de administração é apresentada?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O material apresenta albendazol ou ivermectina por via oral em associação a tiabendazol tópico. A questão avalia estritamente o conteúdo histórico-didático da aula; não estabelece prescrição ou recomendação clínica atual.\nAlternativa 1: Inverte as vias de administração indicadas no slide.\nAlternativa 2: O material apresenta albendazol ou ivermectina por via oral em associação a tiabendazol tópico. A questão avalia estritamente o conteúdo histórico-didático da aula; não estabelece prescrição ou recomendação clínica atual.\nAlternativa 3: Apresenta via intravenosa que não consta do tratamento descrito.\nAlternativa 4: Atribui vias de administração diferentes das apresentadas.\nAlternativa 5: Confunde investigação diagnóstica com intervenção terapêutica."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Tratamento descrito na aula",
+        "média"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Albendazol tópico associado a tiabendazol exclusivamente oral."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Albendazol ou ivermectina por via oral, associados a tiabendazol em creme ou pomada."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tiabendazol oral associado obrigatoriamente à aplicação de cloretila por via intravenosa."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ivermectina exclusivamente tópica e albendazol exclusivamente em pomada."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Substituição de qualquer tratamento farmacológico pela pesquisa laboratorial de ovos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-013",
+      "label": "Questão 13",
+      "category": "Integração clínico-parasitológica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Uma criança brincou descalça em uma caixa de areia frequentada por cães e gatos. Posteriormente, apresentou uma lesão cutânea de trajeto serpiginoso e prurido. Considerando o ciclo e a abordagem diagnóstica da larva migrans cutânea apresentados na aula, qual associação está correta?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A hipótese integra corretamente exposição ambiental, penetração por L3, condição de hospedeiro acidental e diagnóstico clínico.\nAlternativa 1: Erra a forma infectante, a classificação do hospedeiro e a exigência laboratorial.\nAlternativa 2: Atribui infectividade cutânea aos ovos e classifica incorretamente o ser humano.\nAlternativa 3: Embora reconheça o hospedeiro acidental, atribui a infecção ao verme adulto e exige sua visualização.\nAlternativa 4: Confunde o estágio infectante e o papel humano, além de contrariar os critérios clínicos descritos.\nAlternativa 5: A hipótese integra corretamente exposição ambiental, penetração por L3, condição de hospedeiro acidental e diagnóstico clínico."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Integração clínico-parasitológica",
+        "difícil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Forma infectante L1; ser humano hospedeiro definitivo; confirmação obrigatória por exame de fezes."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Forma infectante ovo; ser humano hospedeiro definitivo; diagnóstico exclusivamente por exames sanguíneos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Forma infectante verme adulto; ser humano hospedeiro acidental; diagnóstico dependente da visualização do adulto."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Forma infectante L2; ser humano hospedeiro definitivo; diagnóstico estabelecido pela ausência de lesão serpiginosa."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Forma infectante L3 filarioide; ser humano hospedeiro acidental; diagnóstico fundamentado na exposição e nos achados clínicos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "objetivas-014",
+      "label": "Questão 14",
+      "category": "Integração do ciclo biológico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Durante uma atividade de educação em saúde, um estudante deve explicar como a contaminação ambiental causada por um cão infectado pode resultar em larva migrans cutânea humana. Qual descrição integra corretamente as etapas fundamentais?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Essa é a sequência compatível com o ciclo esquematizado, incluindo fonte animal, desenvolvimento ambiental e penetração humana pela L3.\nAlternativa 1: Essa é a sequência compatível com o ciclo esquematizado, incluindo fonte animal, desenvolvimento ambiental e penetração humana pela L3.\nAlternativa 2: Troca a eliminação fecal de ovos por adultos e descreve um mecanismo de infecção incorreto.\nAlternativa 3: Desloca para o homem etapas do ciclo que a aula apresenta como integrantes do ciclo dos animais e do ambiente.\nAlternativa 4: Atribui infectividade à L1 e desenvolvimento adulto à pele humana.\nAlternativa 5: Considera o homem como fonte de L3 para o ambiente e coloca o verme adulto no solo, contrariando o ciclo descrito."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Integração do ciclo biológico",
+        "difícil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "O hospedeiro definitivo elimina ovos nas fezes; no ambiente, ocorre desenvolvimento de L1 e L2 rabditoides até L3 filarioide, que pode penetrar ativamente na pele humana."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "O cão elimina vermes adultos nas fezes, que se transformam diretamente em ovos infectantes ao penetrar na pele humana."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Os ovos se desenvolvem inicialmente no tecido humano, originando L1 e L2 que completam o ciclo como vermes adultos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "A L1 é a forma infectante humana, enquanto a L3 é produzida apenas após a instalação de vermes adultos na pele."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "As larvas L3 eliminadas pelo ser humano contaminam o ambiente, permitindo o desenvolvimento de adultos no solo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-015",
+      "label": "Questão 15",
+      "category": "Diagnóstico e prevenção integrados",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Analise as afirmações sobre larva migrans cutânea, conforme o material da aula.\nI. O ser humano é o hospedeiro definitivo dos ancilostomídeos de cães e gatos responsáveis pela LMC.\nII. História de exposição ambiental, lesão serpiginosa e prurido são elementos relevantes para o diagnóstico clínico.\nIII. O recolhimento adequado das fezes dos animais e o tratamento antiparasitário de cães e gatos integram as medidas preventivas apresentadas.\nIV. A identificação laboratorial de ovos nas fezes humanas é obrigatória para confirmar todos os casos descritos como LMC.\nÉ correto o que se afirma em:"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "II está correta porque reúne os elementos do diagnóstico clínico; III está correta porque reúne duas medidas de profilaxia expressamente citadas.\nAlternativa 1: Inclui I, falsa, pois o homem é hospedeiro acidental.\nAlternativa 2: Reúne duas afirmações falsas: I e IV.\nAlternativa 3: Inclui IV, falsa, porque o diagnóstico é apresentado como clínico, sem necessidade rotineira de exame laboratorial.\nAlternativa 4: II está correta porque reúne os elementos do diagnóstico clínico; III está correta porque reúne duas medidas de profilaxia expressamente citadas.\nAlternativa 5: Inclui IV, também falsa, apesar de III estar correta."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico e prevenção integrados",
+        "difícil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "I e II, apenas."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "I e IV, apenas."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "II e IV, apenas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "II e III, apenas."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "III e IV, apenas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "dissertativas-001",
+      "label": "Questão 16",
+      "category": "Conceito e etiologia",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Defina larva migrans cutânea, identifique os dois agentes etiológicos destacados na aula e diferencie o papel dos animais e dos seres humanos como hospedeiros."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Os critérios de correção são os conceitos explicitados na resposta-modelo, conforme a aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Conceito e etiologia",
+        "fácil"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A larva migrans cutânea, popularmente denominada bicho geográfico, é uma infecção humana causada pela migração de larvas de ancilostomídeos de animais na pele. As espécies destacadas são Ancylostoma caninum e Ancylostoma braziliense. Cães e gatos atuam como hospedeiros definitivos desses parasitos, enquanto o ser humano é considerado hospedeiro acidental.\nPontos esperados:\nDefinir a infecção como manifestação da migração larvária cutânea.\nIdentificar A. caninum e A. braziliense.\nReconhecer cães e gatos como hospedeiros definitivos.\nReconhecer o ser humano como hospedeiro acidental."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-002",
+      "label": "Questão 17",
+      "category": "Ciclo biológico e transmissão",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Descreva as principais etapas do ciclo de Ancylostoma caninum apresentadas na aula, desde a eliminação dos ovos pelo hospedeiro definitivo até o estabelecimento da larva migrans cutânea no ser humano. Explique por que os dois hospedeiros desempenham papéis diferentes nesse processo."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Erro conceitual a evitar: afirmar que a L1 ou o ovo é a forma infectante cutânea humana."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Ciclo biológico e transmissão",
+        "média"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "No hospedeiro definitivo, representado pelo cão no esquema da aula, os vermes adultos participam do ciclo reprodutivo, resultando na eliminação de ovos pelas fezes.\nNo ambiente, os ovos se desenvolvem e liberam larvas L1 rabditoides, que passam ao estágio L2 rabditoide e, posteriormente, à forma L3 filarioide.\nA L3 é a forma infectante para o ser humano. Quando ocorre contato com o ambiente contaminado, a larva pode penetrar ativamente na pele e migrar, produzindo a larva migrans cutânea.\nO cão é hospedeiro definitivo porque nele ocorre o ciclo completo do parasito. O ser humano é hospedeiro acidental, pois a infecção descrita corresponde à migração larvária, sem completar o ciclo dos animais.\nPontos esperados:\nEliminação de ovos nas fezes do hospedeiro definitivo.\nDesenvolvimento ambiental de L1 e L2 rabditoides.\nFormação da L3 filarioide.\nIdentificação da L3 como forma infectante ao homem.\nPenetração ativa e migração cutânea.\nDistinção entre ciclo completo animal e infecção acidental humana."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-003",
+      "label": "Questão 18",
+      "category": "Diagnóstico clínico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Uma pessoa procura atendimento após contato frequente com areia de uma área utilizada por cães e gatos. Apresenta prurido e lesão cutânea de trajeto serpiginoso.\nCom base exclusivamente nos critérios da aula, explique quais elementos sustentam a suspeita diagnóstica de larva migrans cutânea e qual é o papel dos exames laboratoriais na apresentação típica descrita."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Erro conceitual a evitar: afirmar que a identificação de ovos nas fezes humanas é obrigatória para diagnosticar LMC."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Diagnóstico clínico",
+        "média"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A suspeita diagnóstica é sustentada pela associação entre a história de exposição a um ambiente potencialmente contaminado por fezes de cães ou gatos, a presença de prurido e o aspecto serpiginoso da lesão cutânea.\nA anamnese permite identificar o fator de risco ambiental, enquanto a avaliação dermatológica reconhece o padrão característico da manifestação cutânea.\nSegundo a aula, o diagnóstico da apresentação típica de larva migrans cutânea é clínico, sem necessidade de exame laboratorial para estabelecer a suspeita descrita.\nPontos esperados:\nValorizar a exposição ambiental.\nReconhecer o trajeto serpiginoso.\nIdentificar o prurido como manifestação relevante.\nRelacionar anamnese e exame dermatológico ao diagnóstico.\nExplicar que a aula apresenta o diagnóstico como clínico, sem exigir exame laboratorial rotineiro."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-004",
+      "label": "Questão 19",
+      "category": "Profilaxia e saúde coletiva",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Uma comunidade apresenta circulação frequente de cães e gatos em praias, parques e espaços recreativos infantis.\nElabore um conjunto de medidas preventivas contra a larva migrans cutânea, contemplando o controle da contaminação ambiental, o manejo dos animais e a proteção individual. Explique como essas medidas se relacionam à transmissão descrita na aula."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Os critérios de correção são os conceitos explicitados na resposta-modelo, conforme a aula."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Profilaxia e saúde coletiva",
+        "média"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A prevenção deve reduzir a contaminação ambiental por formas do parasito e o contato da pele humana com locais potencialmente contaminados.\nEntre as medidas indicadas estão evitar a presença de animais domésticos nas praias, recolher suas fezes e dar destinação adequada aos resíduos. Também se deve realizar tratamento antiparasitário dos animais domésticos, conforme a orientação apresentada.\nAs caixas de areia de creches e parques devem ser protegidas para impedir o acesso dos animais. Pessoas que manipulam areia ou terra devem utilizar luvas e calçados.\nNas praias, a aula também orienta dar preferência à recreação em areia coberta pela maré.\nEssas medidas procuram interromper as oportunidades de contaminação ambiental e reduzir a exposição humana às larvas L3 infectantes.\nPontos esperados:\nControle do acesso de animais a áreas de recreação.\nRecolhimento e destinação adequada das fezes.\nTratamento antiparasitário dos animais.\nProteção das caixas de areia.\nUso de luvas e calçados.\nRelação das medidas com o desenvolvimento ambiental e a penetração cutânea da L3."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-005",
+      "label": "Questão 20",
+      "category": "Integração clínica, parasitológica e terapêutica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Uma pessoa relata ter manipulado terra e caminhado descalça em um ambiente frequentado por cães e gatos. Posteriormente, percebe uma lesão cutânea de trajeto serpiginoso acompanhada de prurido.\nCom base na aula de larva migrans cutânea, desenvolva uma análise integrada do caso, contemplando:\na) A hipótese parasitológica e os agentes etiológicos envolvidos.\nb) A forma infectante, a via de penetração e a diferença entre o ciclo no hospedeiro definitivo e no ser humano.\nc) Os elementos que sustentam o diagnóstico.\nd) Os medicamentos, vias de administração e alternativas terapêuticas mencionados no material didático.\ne) As medidas de prevenção pertinentes à exposição descrita."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Erros conceituais que comprometem a resposta: indicar ovos ou L1 como a forma infectante humana; classificar o homem como hospedeiro definitivo; exigir exame parasitológico de fezes para confirmar a manifestação cutânea; confundir a via oral e a tópica dos medicamentos descritos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Integração clínica, parasitológica e terapêutica",
+        "difícil"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "a) Hipótese parasitológica: o quadro é compatível com larva migrans cutânea, popularmente conhecida como bicho geográfico, associada a larvas de Ancylostoma caninum e Ancylostoma braziliense.\nb) Ciclo e transmissão: a forma infectante humana é a larva L3 filarioide, que se desenvolve no ambiente após as fases L1 e L2 rabditoides. A L3 pode penetrar ativamente na pele exposta. Cães e gatos são hospedeiros definitivos, nos quais ocorre o ciclo completo, enquanto o ser humano é hospedeiro acidental e apresenta migração larvária cutânea.\nc) Diagnóstico: a história de exposição ao solo potencialmente contaminado, o prurido e o trajeto serpiginoso sustentam o diagnóstico clínico. Na apresentação típica abordada pela aula, não há necessidade de exame laboratorial.\nd) Tratamento descrito no material: o slide menciona albendazol ou ivermectina por via oral, associados a tiabendazol tópico em creme ou pomada. Apresenta também cloretila, neve carbônica e crioterapia como alternativas tópicas. Essas informações reproduzem o conteúdo da aula e não constituem orientação de prescrição clínica atual.\ne) Profilaxia: utilizar calçados e luvas ao manipular areia ou terra, recolher adequadamente as fezes dos animais, realizar seu tratamento antiparasitário e limitar o acesso de animais a áreas recreativas e caixas de areia.\nPontos esperados:\nIdentificação correta dos agentes etiológicos.\nReconhecimento da L3 como estágio infectante humano.\nExplicação da penetração cutânea.\nDistinção entre hospedeiros definitivos e acidental.\nInterpretação do padrão serpiginoso e do prurido.\nReconhecimento da natureza clínica do diagnóstico.\nDescrição fiel dos tratamentos citados, sem doses inventadas.\nMedidas de prevenção associadas ao mecanismo de transmissão."
+        }
+      ]
+    }
+  ]
+}

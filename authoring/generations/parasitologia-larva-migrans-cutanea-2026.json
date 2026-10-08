@@ -1,0 +1,195 @@
+{
+  "generationVersion": 1,
+  "examId": "parasitologia-larva-migrans-cutanea-2026",
+  "source": {
+    "fileName": "Larva Migrans Cutânea (Bicho Geográfico).pdf",
+    "sha256": "c49e51eb7ba766ad3e3527649bc21c4c82e1549ff7879c0dbfd77cacaf2f1fa0",
+    "sizeBytes": 1500626
+  },
+  "request": {
+    "examId": "parasitologia-larva-migrans-cutanea-2026",
+    "subject": "Parasitologia",
+    "year": null,
+    "division": "Disciplina de Parasitologia — FMJ",
+    "title": "Larva Migrans Cutânea (Bicho Geográfico) — Parasitologia",
+    "language": "pt-BR",
+    "objectiveCount": 15,
+    "essayCount": 5,
+    "optionsPerObjective": 5,
+    "difficulty": {
+      "easy": 0.2,
+      "medium": 0.6,
+      "hard": 0.2
+    },
+    "focusTopics": [],
+    "excludeTopics": [],
+    "allowExternalKnowledge": false
+  },
+  "provider": {
+    "name": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1",
+    "detail": "low"
+  },
+  "response": {
+    "id": null,
+    "usage": null
+  },
+  "coverage": {
+    "topicsDetected": [
+      "Definição e agentes etiológicos",
+      "Morfologia comparativa",
+      "Hospedeiros definitivos e acidental",
+      "Ciclo de vida L1/L2/L3",
+      "Transmissão cutânea",
+      "Manifestações clínicas",
+      "Diagnóstico clínico",
+      "Profilaxia",
+      "Tratamento descrito na aula"
+    ],
+    "topicsUsed": [
+      "Definição e agentes etiológicos",
+      "Morfologia comparativa",
+      "Hospedeiros definitivos e acidental",
+      "Ciclo de vida L1/L2/L3",
+      "Transmissão cutânea",
+      "Manifestações clínicas",
+      "Diagnóstico clínico",
+      "Profilaxia",
+      "Tratamento descrito na aula"
+    ],
+    "topicsSkipped": []
+  },
+  "insufficiency": {
+    "detected": false,
+    "reason": null
+  },
+  "difficultyCounts": {
+    "easy": 4,
+    "medium": 12,
+    "hard": 4
+  },
+  "questions": [
+    {
+      "questionId": "objetivas-001",
+      "sourceAnchors": [
+        "PDF p. 2: espécies Ancylostoma caninum e Ancylostoma braziliense; pp. 4 e 6: ciclo e estágio infectante."
+      ]
+    },
+    {
+      "questionId": "objetivas-002",
+      "sourceAnchors": [
+        "PDF pp. 4 e 6: larvas L1/L2 rabditoides, L3 filarioide infectante e penetração ativa."
+      ]
+    },
+    {
+      "questionId": "objetivas-003",
+      "sourceAnchors": [
+        "PDF pp. 7 e 8: fotografias clínicas, lesão serpiginosa e prurido."
+      ]
+    },
+    {
+      "questionId": "objetivas-004",
+      "sourceAnchors": [
+        "PDF pp. 3 e 6: cão e gato hospedeiros definitivos, ser humano hospedeiro acidental; ciclo completo apenas em animais."
+      ]
+    },
+    {
+      "questionId": "objetivas-005",
+      "sourceAnchors": [
+        "PDF pp. 4 e 6: desenvolvimento ambiental de ovo para L1 rabditoide, L2 rabditoide e L3 filarioide."
+      ]
+    },
+    {
+      "questionId": "objetivas-006",
+      "sourceAnchors": [
+        "PDF pp. 4 e 6: larva L3 filarioide penetra ativamente a pele humana e migra nos tecidos."
+      ]
+    },
+    {
+      "questionId": "objetivas-007",
+      "sourceAnchors": [
+        "PDF p. 8: diagnóstico clínico por anamnese, exposição, lesão serpiginosa e prurido; sem necessidade de exame laboratorial."
+      ]
+    },
+    {
+      "questionId": "objetivas-008",
+      "sourceAnchors": [
+        "PDF p. 3: imagens dos aparelhos bucais e diferenças dos dentes ventrais em A. caninum e A. braziliense."
+      ]
+    },
+    {
+      "questionId": "objetivas-009",
+      "sourceAnchors": [
+        "PDF p. 9: evitar animais domésticos nas praias; preferir areia coberta pela maré."
+      ]
+    },
+    {
+      "questionId": "objetivas-010",
+      "sourceAnchors": [
+        "PDF p. 9: proteger as caixas de areia da presença de animais em creches e parques."
+      ]
+    },
+    {
+      "questionId": "objetivas-011",
+      "sourceAnchors": [
+        "PDF p. 9: luvas na manipulação de areia/terra e uso de calçados."
+      ]
+    },
+    {
+      "questionId": "objetivas-012",
+      "sourceAnchors": [
+        "PDF p. 10: albendazol ou ivermectina via oral associado a tiabendazol tópico; medidas alternativas listadas."
+      ]
+    },
+    {
+      "questionId": "objetivas-013",
+      "sourceAnchors": [
+        "PDF pp. 3, 4, 6 e 8: hospedeiros, L3 infectante, transmissão e diagnóstico clínico."
+      ]
+    },
+    {
+      "questionId": "objetivas-014",
+      "sourceAnchors": [
+        "PDF pp. 3, 4 e 6: hospedeiro definitivo e ciclo de ovos, L1/L2 e L3 infectante."
+      ]
+    },
+    {
+      "questionId": "objetivas-015",
+      "sourceAnchors": [
+        "PDF pp. 3, 8 e 9: hospedeiro acidental, diagnóstico clínico e profilaxia."
+      ]
+    },
+    {
+      "questionId": "dissertativas-001",
+      "sourceAnchors": [
+        "PDF pp. 2 e 3: definição, agentes, cães/gatos definitivos e homem acidental."
+      ]
+    },
+    {
+      "questionId": "dissertativas-002",
+      "sourceAnchors": [
+        "PDF pp. 3, 4 e 6: ciclo em animal definitivo; ovos fecais; L1/L2/L3 e infecção acidental humana."
+      ]
+    },
+    {
+      "questionId": "dissertativas-003",
+      "sourceAnchors": [
+        "PDF pp. 7 e 8: sinais e sintomas em imagens; diagnóstico por anamnese, lesão serpiginosa e prurido."
+      ]
+    },
+    {
+      "questionId": "dissertativas-004",
+      "sourceAnchors": [
+        "PDF pp. 6 e 9: L3 no solo; controle de animais, destino das fezes, proteção e medidas individuais."
+      ]
+    },
+    {
+      "questionId": "dissertativas-005",
+      "sourceAnchors": [
+        "PDF pp. 2, 3, 4, 6, 8, 9 e 10: agentes, hospedeiros, ciclo, diagnóstico, profilaxia e tratamentos citados."
+      ]
+    }
+  ],
+  "createdAt": "2026-10-08T22:33:13.734Z"
+}
