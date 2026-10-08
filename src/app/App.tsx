@@ -18,6 +18,8 @@ import { ReviewSessionPage } from './ReviewSessionPage';
 import { ReviewPage } from './ReviewPage';
 import { SettingsPage } from './SettingsPage';
 import { SetupPrompt } from '../components/common/SetupPrompt';
+import { GuidedTour } from '../components/common/GuidedTour';
+import { useGuidedTour } from './useGuidedTour';
 const catalogLoader = (signal: AbortSignal) => loadCatalog(fetch, signal);
 const ErrorNotebookPage = lazy(() => import('./ErrorNotebookPage'));
 function LoadMessage({ error }: { error?: string }) {
@@ -31,11 +33,20 @@ function LoadMessage({ error }: { error?: string }) {
     <p role="status">Carregando…</p>
   );
 }
-function CatalogRoute({ view, ui }: { view: string; ui: UiPreferencesState }) {
+function CatalogRoute({
+  route,
+  ui,
+  touring = false,
+}: {
+  route: ReturnType<typeof resolveRoute>;
+  ui: UiPreferencesState;
+  touring?: boolean;
+}) {
+  const { view } = route;
   const { data, error } = useResource(catalogLoader);
   return data ? (
     <>
-      {view !== 'settings' && <SetupPrompt ui={ui} />}
+      {view !== 'settings' && !touring && <SetupPrompt ui={ui} />}
       {view === 'dashboard' ? (
         <DashboardPage catalog={data} />
       ) : view === 'error-notebook' ? (
@@ -43,19 +54,11 @@ function CatalogRoute({ view, ui }: { view: string; ui: UiPreferencesState }) {
           <ErrorNotebookPage catalog={data} />
         </Suspense>
       ) : view === 'review' ? (
-        <ReviewPage
-          catalog={data}
-          examId={resolveRoute(window.location.search).reviewExam}
-          attemptId={resolveRoute(window.location.search).attempt}
-        />
+        <ReviewPage catalog={data} examId={route.reviewExam} attemptId={route.attempt} />
       ) : view === 'settings' ? (
         <SettingsPage catalog={data} ui={ui} />
       ) : (
-        <CatalogPage
-          catalog={data}
-          area={resolveRoute(window.location.search).area}
-          mode={resolveRoute(window.location.search).allExams ? 'all' : 'hub'}
-        />
+        <CatalogPage catalog={data} area={route.area} mode={route.allExams ? 'all' : 'hub'} />
       )}
     </>
   ) : (
@@ -88,6 +91,7 @@ function ExamRoute({
   );
 }
 export function App() {
+  const tour = useGuidedTour();
   useEffect(() => {
     // Carry read-only positions across native document navigation, including keyboard links.
     function carryPosition(event: MouseEvent) {
@@ -108,78 +112,99 @@ export function App() {
       document.removeEventListener('auxclick', carryPosition, true);
     };
   }, []);
-  const route = resolveRoute(window.location.search);
+  const route = resolveRoute(tour.pageSearch);
+  const visibleRoute = tour.route ?? route;
   const ui = useUiPreferences();
   const { theme, toggleTheme } = ui;
   const warning = ui.warning ?? (route.view === 'settings' ? ui.readWarning : null);
   return (
     <>
-      <a className="skip-link" href="#main">
-        Pular para o conteúdo
-      </a>
-      <header className="app-header">
-        <div className="header-inner">
-          <a href={sitePath('')} className="brand">
-            <span className="brand-mark" aria-hidden="true">
-              M
-            </span>
-            <span>
-              MedSim<small>PRÁTICA MÉDICA</small>
-            </span>
-          </a>
-          <nav className="app-nav" aria-label="Navegação principal">
-            {(
-              [
-                ['catalog', 'Matérias', sitePath('')],
-                ['dashboard', 'Dashboard', dashboardUrl()],
-                ['review', 'Revisão', reviewUrl()],
-                ['error-notebook', 'Erros', errorNotebookUrl()],
-                ['settings', 'Configurações', settingsUrl()],
-              ] as const
-            ).map(([view, label, href]) => (
-              <a
-                key={view}
-                href={href}
-                aria-current={
-                  route.view === view || (view === 'review' && route.view === 'review-session')
-                    ? 'page'
-                    : undefined
-                }
+      <div id="app-surface" inert={!!tour.step} aria-hidden={tour.step ? true : undefined}>
+        <a className="skip-link" href="#main">
+          Pular para o conteúdo
+        </a>
+        <header className="app-header">
+          <div className="header-inner">
+            <a href={sitePath('')} className="brand">
+              <span className="brand-mark" aria-hidden="true">
+                M
+              </span>
+              <span>
+                MedSim<small>PRÁTICA MÉDICA</small>
+              </span>
+            </a>
+            <nav className="app-nav" aria-label="Navegação principal">
+              {(
+                [
+                  ['catalog', 'Matérias', sitePath('')],
+                  ['dashboard', 'Dashboard', dashboardUrl()],
+                  ['review', 'Revisão', reviewUrl()],
+                  ['error-notebook', 'Erros', errorNotebookUrl()],
+                  ['settings', 'Configurações', settingsUrl()],
+                ] as const
+              ).map(([view, label, href]) => (
+                <a
+                  key={view}
+                  href={href}
+                  aria-current={
+                    visibleRoute.view === view ||
+                    (view === 'review' && visibleRoute.view === 'review-session')
+                      ? 'page'
+                      : undefined
+                  }
+                >
+                  {label}
+                </a>
+              ))}
+            </nav>
+            <div className="header-actions">
+              <span className="muted small header-caption">Seu tempo. Seu aprendizado.</span>
+              <button
+                className="tour-trigger"
+                ref={tour.trigger}
+                onClick={tour.start}
+                aria-haspopup="dialog"
               >
-                {label}
-              </a>
-            ))}
-          </nav>
-          <div className="header-actions">
-            <span className="muted small header-caption">Seu tempo. Seu aprendizado.</span>
-            <button aria-pressed={theme === 'dark'} onClick={toggleTheme}>
-              {theme === 'dark' ? '☀ Tema claro' : '◐ Tema escuro'}
-            </button>
+                Conhecer o MedSim
+              </button>
+              <button aria-pressed={theme === 'dark'} onClick={toggleTheme}>
+                {theme === 'dark' ? '☀ Tema claro' : '◐ Tema escuro'}
+              </button>
+            </div>
           </div>
-        </div>
-      </header>
-      {warning && (
-        <p role="status" className="notice">
-          {warning}
-        </p>
-      )}
-      <main id="main" className="main-container" tabIndex={-1}>
-        {route.view === 'review-session' ? (
-          route.reviewExam ? (
-            <ExamRoute id={route.reviewExam} ui={ui} reviewSession />
-          ) : (
-            <LoadMessage error="Prova de revisão inválida. O registro local foi preservado." />
-          )
-        ) : route.view === 'exam' ? (
-          <ExamRoute id={route.id!} ui={ui} />
-        ) : (
-          <CatalogRoute view={route.view} ui={ui} />
+        </header>
+        {warning && (
+          <p role="status" className="notice">
+            {warning}
+          </p>
         )}
-      </main>
-      <footer className="app-footer">
-        <span>MedSim · Aprender é uma prática contínua.</span>
-        <a href={sitePath('legacy/index.html')}>Acervo legado</a>
-      </footer>
+        <main id="main" className="main-container" tabIndex={-1}>
+          {/* Keep active solving mounted: a tour must not flush drafts or restart an attempt. */}
+          {(route.view === 'exam' || route.view === 'review-session') && (
+            <div hidden={!!tour.step}>
+              {route.view === 'review-session' ? (
+                route.reviewExam ? (
+                  <ExamRoute id={route.reviewExam} ui={ui} reviewSession />
+                ) : (
+                  <LoadMessage error="Prova de revisão inválida. O registro local foi preservado." />
+                )
+              ) : (
+                <ExamRoute id={route.id!} ui={ui} />
+              )}
+            </div>
+          )}
+          {(tour.route || (route.view !== 'exam' && route.view !== 'review-session')) && (
+            <div id={tour.route ? 'tour-content' : undefined}>
+              <CatalogRoute route={visibleRoute} ui={ui} touring={!!tour.step} />
+            </div>
+          )}
+        </main>
+        <footer className="app-footer">
+          <span>MedSim · Aprender é uma prática contínua.</span>
+          <a href={sitePath('legacy/index.html')}>Acervo legado</a>
+        </footer>
+      </div>
+      {tour.step && <GuidedTour tour={tour} />}
     </>
   );
 }
