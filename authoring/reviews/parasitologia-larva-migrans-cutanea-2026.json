@@ -1,0 +1,40 @@
+{
+  "authoringVersion": 1,
+  "examId": "parasitologia-larva-migrans-cutanea-2026",
+  "status": "approved",
+  "source": {
+    "fileName": "Larva Migrans Cutânea (Bicho Geográfico).pdf",
+    "sha256": "c49e51eb7ba766ad3e3527649bc21c4c82e1549ff7879c0dbfd77cacaf2f1fa0"
+  },
+  "generation": {
+    "mode": "ai-assisted",
+    "provider": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1"
+  },
+  "requirements": {
+    "objectiveCount": 15,
+    "essayCount": 5,
+    "optionsPerObjective": 5
+  },
+  "checks": {
+    "sourceCoverageReviewed": true,
+    "answerKeyReviewed": true,
+    "explanationsReviewed": true,
+    "duplicateCheckReviewed": true
+  },
+  "reviewedBy": "ChatGPT",
+  "notes": [
+    "Schema válido não garante correção acadêmica. Source anchors auxiliam revisão, sem garantia factual.",
+    "Pré-revisão assistida das 20 questões concluída com as 11 páginas físicas do PDF como única fonte: enunciados, alternativas, gabaritos, rationales, explicações, respostas-modelo, expectedPoints, tags e sourceAnchors conferidos. Sem alteração do conteúdo aprovado e sem uso de conhecimento externo.",
+    "Cobertura: Q1 e Q16 — definição e agentes (p. 2); Q2, Q5, Q6, Q14 e Q17 — estágios larvários e transmissão (pp. 4 e 6); Q4 — hospedeiros (pp. 3 e 6); Q3, Q7 e Q18 — manifestações e diagnóstico (pp. 7 e 8); Q8 — comparação morfológica (p. 3), sem exigir número exato de dentes; Q9, Q10, Q11 e Q19 — profilaxia (p. 9); Q12 — tratamento didático (p. 10); Q13, Q15 e Q20 — integração dos respectivos tópicos. Anchors mantidos integralmente no generation record.",
+    "Conferidos 15 objetivas de cinco alternativas e 5 dissertativas. Dificuldades: 4 fáceis/12 médias/4 difíceis (objetivas 3/9/3; dissertativas 1/3/1). Gabarito aprovado: C, D, B, A, E, C, B, D, A, E, C, B, E, A, D. Q15: apenas II e III. Sem enunciados exatamente duplicados no candidate ou no catálogo existente.",
+    "Tratamento preservado como transcrição didática da aula, sem doses ou recomendação clínica atual. Referências abaixo transcritas da página física 11; não foram usadas como fontes externas adicionais.",
+    "NEVES, D. P. Parasitologia humana. 13. ed. Rio de Janeiro: Atheneu, 2016.",
+    "FERREIRA, M. U. Parasitologia contemporânea. Guanabara Koogan, 2012.",
+    "REY, L. Bases da parasitologia médica. 3. ed. Rio de Janeiro: Guanabara Koogan, 2011.",
+    "VERONESI, R.; FOCCACIA, R. Tratado de Infectologia. 5. ed. São Paulo: Atheneu, 2015.",
+    "Aprovação humana já concedida: o usuário declarou expressamente nesta solicitação que as 20 questões foram revisadas e aprovadas. O PROMPT_CODEX.md do pacote registra “aprovo o conjunto” em 08/10/2026. reviewedBy=ChatGPT segue a convenção de AGENTS.md; registra a decisão do usuário, não aprovação autônoma da IA. Escopo autorizado até Draft PR, sem merge ou deploy.",
+    "Aprovação registrada após declaração explícita do usuário/revisor; a CLI não decide a aprovação acadêmica."
+  ]
+}
