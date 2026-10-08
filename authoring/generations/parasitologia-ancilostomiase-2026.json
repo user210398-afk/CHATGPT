@@ -1,0 +1,193 @@
+{
+  "generationVersion": 1,
+  "examId": "parasitologia-ancilostomiase-2026",
+  "source": {
+    "fileName": "Ancilostomíase (Amarelão).pdf",
+    "sha256": "881621a7fc7aff8bcf03f0b41cfe8c8e6b35e3223e786ebe0715f22f642976b3",
+    "sizeBytes": 1975023
+  },
+  "request": {
+    "examId": "parasitologia-ancilostomiase-2026",
+    "subject": "Parasitologia",
+    "year": null,
+    "division": "Disciplina de Parasitologia — FMJ",
+    "title": "Ancilostomíase (Amarelão) — Parasitologia",
+    "language": "pt-BR",
+    "objectiveCount": 15,
+    "essayCount": 5,
+    "optionsPerObjective": 5,
+    "difficulty": {
+      "easy": 0.2,
+      "medium": 0.6,
+      "hard": 0.2
+    },
+    "focusTopics": [],
+    "excludeTopics": [],
+    "allowExternalKnowledge": false
+  },
+  "provider": {
+    "name": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1",
+    "detail": "low"
+  },
+  "response": {
+    "id": null,
+    "usage": null
+  },
+  "coverage": {
+    "topicsDetected": [
+      "Agentes etiológicos e epidemiologia",
+      "Geohelmintíase e transmissão",
+      "Ciclo de vida e estágios L1, L2 e L3",
+      "Migração cutânea e pulmonar",
+      "Imunidade e manifestações clínicas",
+      "Patogenia intestinal e anemia ferropriva",
+      "Diagnóstico clínico/laboratorial",
+      "Tratamento e profilaxia"
+    ],
+    "topicsUsed": [
+      "Agentes etiológicos e epidemiologia",
+      "Geohelmintíase e transmissão",
+      "Ciclo de vida e estágios L1, L2 e L3",
+      "Migração cutânea e pulmonar",
+      "Imunidade e manifestações clínicas",
+      "Patogenia intestinal e anemia ferropriva",
+      "Diagnóstico clínico/laboratorial",
+      "Tratamento e profilaxia"
+    ],
+    "topicsSkipped": []
+  },
+  "insufficiency": {
+    "detected": false,
+    "reason": null
+  },
+  "difficultyCounts": {
+    "easy": 4,
+    "medium": 12,
+    "hard": 4
+  },
+  "questions": [
+    {
+      "questionId": "objetivas-001",
+      "sourceAnchors": [
+        "PDF pp. 1, 4 e 5: agentes etiológicos; vermes adultos intestinais; formas do parasito e ciclo de vida."
+      ]
+    },
+    {
+      "questionId": "objetivas-002",
+      "sourceAnchors": [
+        "PDF pp. 4–6: L1/L2 rabditoides; larva filarioide L3 identificada como INFECTANTE e penetração cutânea."
+      ]
+    },
+    {
+      "questionId": "objetivas-003",
+      "sourceAnchors": [
+        "PDF pp. 2, 5 e 17: geohelmintíases, contaminação do solo, uso de calçados e saneamento básico."
+      ]
+    },
+    {
+      "questionId": "objetivas-004",
+      "sourceAnchors": [
+        "PDF pp. 4–5: diagrama de ovos nas fezes, desenvolvimento rabditoide L1/L2 no solo e L3 filarioide."
+      ]
+    },
+    {
+      "questionId": "objetivas-005",
+      "sourceAnchors": [
+        "PDF p. 6: migração da LF3 pela pele → circulação → pulmão → traqueia → faringe → deglutição → intestino."
+      ]
+    },
+    {
+      "questionId": "objetivas-006",
+      "sourceAnchors": [
+        "PDF p. 6: ETAPA INFECCIOSA na L3 e ETAPA DIAGNÓSTICA na excreção de ovos nas fezes."
+      ]
+    },
+    {
+      "questionId": "objetivas-007",
+      "sourceAnchors": [
+        "PDF p. 8: penetração L3, hiperemia, prurido, edema, dermatite alérgica e “coceira da terra”."
+      ]
+    },
+    {
+      "questionId": "objetivas-008",
+      "sourceAnchors": [
+        "PDF pp. 7 e 9: inflamação pulmonar/microtraumas e sinais respiratórios de migração larvária."
+      ]
+    },
+    {
+      "questionId": "objetivas-009",
+      "sourceAnchors": [
+        "PDF p. 7: fases e interação imune; respostas de Ac, eosinofilia intestinal, baixa IgE para N. americanus e imunomodulação."
+      ]
+    },
+    {
+      "questionId": "objetivas-010",
+      "sourceAnchors": [
+        "PDF pp. 10–11: cápsula bucal fixada à mucosa duodeno/jejuno; hemorragias e perda crônica de sangue."
+      ]
+    },
+    {
+      "questionId": "objetivas-011",
+      "sourceAnchors": [
+        "PDF pp. 11–13: perda sanguínea crônica por adultos; deficiência de ferro; manifestações clínicas da anemia."
+      ]
+    },
+    {
+      "questionId": "objetivas-012",
+      "sourceAnchors": [
+        "PDF p. 14: método Kato-Katz quantitativo/carga parasitária e Harada e Mori na coprocultura/identificação de espécies."
+      ]
+    },
+    {
+      "questionId": "objetivas-013",
+      "sourceAnchors": [
+        "PDF pp. 5, 6 e 14: larvas em migração versus adultos no intestino e ovos como fase diagnóstica nas fezes."
+      ]
+    },
+    {
+      "questionId": "objetivas-014",
+      "sourceAnchors": [
+        "PDF pp. 11, 16–17: mecanismos da anemia, anti-helmínticos, suplementação de ferro, controle de cura e profilaxia."
+      ]
+    },
+    {
+      "questionId": "objetivas-015",
+      "sourceAnchors": [
+        "PDF p. 18, tabela “Resumo tratamento”: mebendazol bloqueia captação de glicose e aminoácidos; pamoato de pirantel produz paralisia espástica."
+      ]
+    },
+    {
+      "questionId": "dissertativas-001",
+      "sourceAnchors": [
+        "PDF pp. 2, 4–5 e 17: geohelmintíase, formas no solo, L3 infectante e saneamento/calçados."
+      ]
+    },
+    {
+      "questionId": "dissertativas-002",
+      "sourceAnchors": [
+        "PDF pp. 4–6: biologia, desenvolvimento no solo, migração sistêmica, intestinal e etapa diagnóstica."
+      ]
+    },
+    {
+      "questionId": "dissertativas-003",
+      "sourceAnchors": [
+        "PDF pp. 6–11 e 13: interação parasito-hospedeiro; manifestações cutâneas, pulmonares e intestinais; anemia."
+      ]
+    },
+    {
+      "questionId": "dissertativas-004",
+      "sourceAnchors": [
+        "PDF pp. 10–13: cápsula bucal, hemorragia crônica, reservas de ferro, anemia ferropriva e sintomas."
+      ]
+    },
+    {
+      "questionId": "dissertativas-005",
+      "sourceAnchors": [
+        "PDF pp. 6, 9, 11–16: ciclo e ovos nas fezes; diagnóstico; métodos quantitativos; exames complementares e cura."
+      ]
+    }
+  ],
+  "createdAt": "2026-10-08T14:34:03.003Z"
+}
