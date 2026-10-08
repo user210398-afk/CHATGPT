@@ -873,6 +873,9 @@ describe('deterministic filters, comparator and domain preservation', () => {
           // Keep the baseline and every academic/official domain assertion intact.
           ':(exclude)src/app/DashboardPage.tsx',
           ':(exclude)src/app/useDashboardState.ts',
+          // RT-P1 authorizes persistence.ts only; all other academic/official domains stay frozen.
+          // Persistence behavior remains protected by the RT-P1 tests.
+          ':(exclude)src/engine/persistence.ts',
           '.github/workflows/',
           'package.json',
           'package-lock.json',

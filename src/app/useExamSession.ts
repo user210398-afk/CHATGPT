@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Exam } from '../types/exam';
 import { createAttempt, transition, type ExamAction, type AttemptMode } from '../engine/exam-state';
-import { AttemptRepository, type ReadSession } from '../engine/persistence';
+import {
+  AttemptRepository,
+  storageKey,
+  historyStorageKey,
+  type ReadSession,
+  type PersistenceSnapshot,
+  type StorageAdapter,
+} from '../engine/persistence';
 import { ReviewRepository } from '../engine/review-history';
 import type { UiPreferences } from '../engine/ui-preferences';
 const browserRepository = new AttemptRepository(() => window.localStorage);
@@ -16,25 +23,99 @@ export function useExamSession(
   const [saving, setSaving] = useState(false);
   const latest = useRef(session);
   const pending = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const reviews = useRef(new ReviewRepository(repository.storage));
+  const mounted = useRef(true);
+  const conflicted = useRef(false);
   function publish(next: ReadSession) {
     latest.current = next;
-    setSession(next);
+    if (mounted.current) setSession(next);
   }
-  function persist(next: ReadSession, capture = false, expected?: Map<string, string | null>) {
+  function stopSaving() {
+    if (mounted.current) setSaving(false);
+  }
+  function reviewOperation<T>(
+    snapshot: PersistenceSnapshot,
+    rewriteHistory: boolean,
+    operation: (reviews: ReviewRepository) => T,
+  ) {
+    const warning = repository.guard(exam, snapshot, rewriteHistory);
+    if (warning) throw new Error(warning);
+    const store = repository.storage();
+    const ownRaws = new Map<string, string | null>([
+      [storageKey(exam), snapshot.current.raw!],
+      [historyStorageKey(exam), snapshot.history.raw!],
+    ]);
+    // The existing ReviewRepository remains unchanged. Its current/history reads
+    // must match this consumer, and only its confirmed own writes advance our token.
+    const guarded: StorageAdapter = {
+      getItem: (key) => {
+        const raw = store.getItem(key);
+        if (ownRaws.has(key) && raw !== ownRaws.get(key))
+          throw new Error('A tentativa mudou por concorrência. Reabra a prova.');
+        return raw;
+      },
+      setItem: (key, raw) => {
+        if (ownRaws.has(key)) ownRaws.set(key, raw);
+        store.setItem(key, raw);
+      },
+      ...(store.removeItem
+        ? {
+            removeItem: (key: string) => {
+              if (ownRaws.has(key)) ownRaws.set(key, null);
+              store.removeItem!(key);
+            },
+          }
+        : {}),
+    };
+    const value = operation(new ReviewRepository(() => guarded));
+    const ownCurrent = ownRaws.get(storageKey(exam))!;
+    const persistence =
+      ownCurrent !== snapshot.current.raw && ownCurrent !== null
+        ? repository.afterCurrentWrite(exam, snapshot, ownCurrent)
+        : snapshot;
+    return { value, persistence };
+  }
+  function persist(
+    next: ReadSession,
+    capture = false,
+    additionalExpected?: Map<string, string | null>,
+    starting = false,
+  ) {
     if (pending.current !== null) clearTimeout(pending.current);
     pending.current = null;
-    if (!next.current) return false;
-    const saved = repository.save(exam, next.current, next.history, expected);
-    if (saved.aborted) {
-      publish({ ...latest.current, warning: saved.warning });
-      setSaving(false);
+    if (!next.current || conflicted.current) {
+      stopSaving();
       return false;
     }
-    let warning = saved.warning;
+    const saved = repository.save(
+      exam,
+      next.current,
+      next.history,
+      next.persistence,
+      additionalExpected,
+    );
+    if (saved.status !== 'saved') {
+      if (saved.status === 'conflict' || saved.rollbackComplete === false)
+        conflicted.current = true;
+      // Retain answer drafts, but never publish a rejected completion or replace a
+      // completed current with a new attempt whose start was rejected.
+      const draft =
+        !capture && (!starting || (!latest.current.current && saved.status === 'storage-error'))
+          ? next
+          : latest.current;
+      publish({
+        ...draft,
+        warning: starting ? `A nova tentativa não foi iniciada. ${saved.warning}` : saved.warning,
+      });
+      stopSaving();
+      return false;
+    }
+    let warning = saved.warning,
+      persistence = saved.persistence;
     if (capture) {
       try {
-        reviews.current.capture(exam, next.current);
+        persistence = reviewOperation(persistence, false, (reviews) =>
+          reviews.capture(exam, next.current!),
+        ).persistence;
       } catch {
         warning = [
           warning,
@@ -44,8 +125,8 @@ export function useExamSession(
           .join(' ');
       }
     }
-    publish({ ...next, ...saved, warning });
-    setSaving(false);
+    publish({ ...next, history: saved.history, persistence, warning });
+    stopSaving();
     return true;
   }
   function start(mode: AttemptMode) {
@@ -54,7 +135,9 @@ export function useExamSession(
     let expected: Map<string, string | null> | undefined;
     if (current?.completedAt) {
       try {
-        expected = reviews.current.capture(exam, current, true);
+        expected = reviewOperation(latest.current.persistence, true, (reviews) =>
+          reviews.capture(exam, current, true),
+        ).value;
       } catch {
         publish({
           ...latest.current,
@@ -72,37 +155,45 @@ export function useExamSession(
       },
       false,
       expected,
+      true,
     );
-    if (started) setChoosing(false);
+    if (started || (latest.current.current && !latest.current.current.completedAt))
+      setChoosing(false);
     return started;
   }
   useEffect(() => {
+    mounted.current = true;
     if (!latest.current.current && preference !== 'ask' && !latest.current.warning)
       start(preference);
     const flushOnExit = () => {
       if (pending.current !== null && latest.current.current) {
         clearTimeout(pending.current);
         pending.current = null;
-        repository.save(exam, latest.current.current, latest.current.history);
+        persist(latest.current);
       }
     };
     window.addEventListener('pagehide', flushOnExit);
     return () => {
       window.removeEventListener('pagehide', flushOnExit);
+      mounted.current = false;
       flushOnExit();
     };
     // Preference changes affect only the next explicit start/restart.
   }, [exam, repository]);
   function dispatch(action: ExamAction) {
     const previous = latest.current.current;
-    if (!previous || choosing) return;
+    if (!previous || choosing || conflicted.current) return;
     if (previous.completedAt && action.type === 'navigate') return;
     if (previous.completedAt && action.type === 'flag') {
       try {
+        const changed = reviewOperation(latest.current.persistence, false, (reviews) =>
+          reviews.toggleFlag(exam, previous, action.questionId),
+        );
         publish({
           ...latest.current,
-          current: reviews.current.toggleFlag(exam, previous, action.questionId),
-          warning: null,
+          current: changed.value,
+          persistence: changed.persistence,
+          warning: latest.current.warning,
         });
       } catch (error) {
         publish({
@@ -127,9 +218,11 @@ export function useExamSession(
   }
   function restart() {
     const current = latest.current.current;
-    if (!current?.completedAt) return false;
+    if (!current?.completedAt || conflicted.current) return false;
     try {
-      reviews.current.capture(exam, current, true);
+      reviewOperation(latest.current.persistence, true, (reviews) =>
+        reviews.capture(exam, current, true),
+      );
     } catch {
       publish({
         ...latest.current,

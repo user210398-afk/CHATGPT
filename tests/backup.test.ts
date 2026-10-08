@@ -720,7 +720,7 @@ describe('importação ao lado de current v1 sem migração na leitura', () => {
     expect(loaded.history.map((item) => item.id)).toEqual(['imported', 'old']);
     expect([...store.values]).toEqual(beforeReads);
     expect(store.setItem.mock.calls.length).toBe(beforeWrites);
-    repo.save(poc, loaded.current, loaded.history);
+    repo.save(poc, loaded.current, loaded.history, repo.read(poc).persistence);
     expect(
       JSON.parse(store.values.get(historyStorageKey(poc))!).history.map(
         (item: { id: string }) => item.id,
@@ -815,8 +815,8 @@ describe('histórico local prevalece também quando não há current', () => {
     expect(loaded).toMatchObject({ restored: false, history });
     expect(store.setItem.mock.calls.length).toBe(beforeWrites);
     expect(store.values.has(storageKey(poc))).toBe(false);
-    repo.save(poc, loaded.current, loaded.history);
-    repo.save(poc, completedAttempt('new-session'), loaded.history);
+    repo.save(poc, loaded.current, loaded.history, repo.read(poc).persistence);
+    repo.save(poc, completedAttempt('new-session'), loaded.history, repo.read(poc).persistence);
     expect(repo.load(poc).history.map((item) => item.id)).toEqual(['new-session', 'completed']);
   });
 });
@@ -873,10 +873,14 @@ describe('F1: importação mantém as 20 conclusões mais recentes em load/save/
       expect(session.history).toEqual(expected);
       expect([...store.values]).toEqual(beforeLoad);
       check();
-      expect(repo.save(poc, session.current, session.history).history).toEqual(expected);
+      expect(
+        repo.save(poc, session.current, session.history, repo.read(poc).persistence).history,
+      ).toEqual(expected);
       check();
       const restarted = createAttempt(poc, now);
-      expect(repo.save(poc, restarted, session.history).history).toEqual(expected);
+      expect(
+        repo.save(poc, restarted, session.history, repo.read(poc).persistence).history,
+      ).toEqual(expected);
       expect(repo.load(poc)).toMatchObject({ current: restarted, history: expected });
       check();
       const exported = await exportBackup(catalog, store, loader(), now);
@@ -916,16 +920,17 @@ describe('F2: colisões de ID entre todas as categorias', () => {
     const repo = new AttemptRepository(() => store),
       loaded = repo.load(poc);
     const finished = transition(poc, loaded.current, { type: 'finish', now });
-    const saved = repo.save(poc, finished, loaded.history);
+    const saved = repo.save(poc, finished, loaded.history, repo.read(poc).persistence);
     let exported = await exportBackup(catalog, store, loader(), now);
     expect(exported.exams[0]!.history).toContainEqual(summary(finished));
     expect(exported.exams[0]!.history).not.toContainEqual(collision);
     const next = { ...createAttempt(poc, now), id: 'next' };
-    repo.save(poc, next, saved.history);
+    repo.save(poc, next, saved.history, repo.read(poc).persistence);
     repo.save(
       poc,
       transition(poc, next, { type: 'finish', now: '2026-10-04T13:00:00.000Z' }),
       saved.history,
+      repo.read(poc).persistence,
     );
     exported = await exportBackup(catalog, store, loader(), now);
     expect(exported.exams[0]!.history.filter((item) => item.id === 'collision')).toEqual([
