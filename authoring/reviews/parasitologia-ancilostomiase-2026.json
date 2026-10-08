@@ -1,0 +1,31 @@
+{
+  "authoringVersion": 1,
+  "examId": "parasitologia-ancilostomiase-2026",
+  "status": "approved",
+  "source": {
+    "fileName": "Ancilostomíase (Amarelão).pdf",
+    "sha256": "881621a7fc7aff8bcf03f0b41cfe8c8e6b35e3223e786ebe0715f22f642976b3"
+  },
+  "generation": {
+    "mode": "ai-assisted",
+    "provider": "export",
+    "model": "external-manual",
+    "promptVersion": "exam-generation-v1"
+  },
+  "requirements": {
+    "objectiveCount": 15,
+    "essayCount": 5,
+    "optionsPerObjective": 5
+  },
+  "checks": {
+    "sourceCoverageReviewed": true,
+    "answerKeyReviewed": true,
+    "explanationsReviewed": true,
+    "duplicateCheckReviewed": true
+  },
+  "reviewedBy": "ChatGPT",
+  "notes": [
+    "Schema válido não garante correção acadêmica. Source anchors auxiliam revisão, sem garantia factual.",
+    "Aprovação registrada após declaração explícita do usuário/revisor; a CLI não decide a aprovação acadêmica."
+  ]
+}

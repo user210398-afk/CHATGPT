@@ -1,0 +1,1242 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "id": "parasitologia-ancilostomiase-2026",
+  "title": "Ancilostomíase (Amarelão) — Parasitologia",
+  "subject": "Parasitologia",
+  "year": null,
+  "division": "Disciplina de Parasitologia — FMJ",
+  "description": "Simulado da aula de Ancilostomíase (Amarelão), Disciplina de Parasitologia — FMJ, Profa. Dra. Alcione Vendramin Gatti. 15 questões objetivas e 5 dissertativas, elaboradas exclusivamente com base nos slides e aprovadas academicamente pelo usuário nesta conversa.",
+  "tags": [
+    "Parasitologia",
+    "Ancilostomíase",
+    "Amarelão",
+    "Geohelmintíases"
+  ],
+  "images": [],
+  "settings": {
+    "questionOrder": "fixed",
+    "feedback": "after-finish"
+  },
+  "sections": [],
+  "groups": [],
+  "provenance": {
+    "sourceFile": "Ancilostomíase (Amarelão).pdf",
+    "sourceSha256": "881621a7fc7aff8bcf03f0b41cfe8c8e6b35e3223e786ebe0715f22f642976b3",
+    "notes": [
+      "Candidate assistido por IA; revisão humana obrigatória de fonte, gabaritos e explicações."
+    ]
+  },
+  "questions": [
+    {
+      "id": "objetivas-001",
+      "label": "Questão 1",
+      "category": "Agentes etiológicos e localização",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Na ancilostomíase humana, a identificação dos agentes etiológicos e de sua localização no hospedeiro permite compreender a etapa responsável pelas manifestações intestinais. Considerando as espécies apresentadas na aula, assinale a alternativa correta."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula identifica A. duodenale e N. americanus como agentes da ancilostomíase e demonstra a presença de seus vermes adultos no intestino humano, onde ocorre a fixação à mucosa.\nAlternativa 1: Incorreta. A fase adulta ocorre no intestino humano, não no solo.\nAlternativa 2: Incorreta. A circulação participa do deslocamento larvário, não constitui a localização exclusiva dos adultos.\nAlternativa 3: Correta. A aula identifica A. duodenale e N. americanus como agentes da ancilostomíase e demonstra a presença de seus vermes adultos no intestino humano, onde ocorre a fixação à mucosa.\nAlternativa 4: Incorreta. Ambas as espécies apresentam fase adulta intestinal.\nAlternativa 5: Incorreta. Os ovos são eliminados nas fezes; o desenvolvimento até L3 ocorre no ambiente."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Agentes etiológicos e localização",
+        "fácil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ancylostoma duodenale completa sua fase adulta no solo, enquanto Necator americanus se desenvolve exclusivamente no intestino humano."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ambas as espécies permanecem exclusivamente na circulação sanguínea durante a fase adulta."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ancylostoma duodenale e Necator americanus apresentam vermes adultos no intestino humano."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Necator americanus apresenta vermes adultos intestinais, enquanto Ancylostoma duodenale permanece exclusivamente nos pulmões."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ambas as espécies eliminam diretamente larvas filarioides L3 pelas fezes humanas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-002",
+      "label": "Questão 2",
+      "category": "Forma infectante",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Durante o ciclo biológico dos ancilostomídeos, determinadas formas larvárias desenvolvem-se no solo antes de alcançar o hospedeiro humano. Qual forma corresponde à etapa infectante apresentada nos slides, e como ocorre sua entrada no organismo?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A larva filarioide L3 constitui a forma infectante indicada nos slides. Ela se desenvolve no solo e penetra pela pele humana.\nAlternativa 1: Incorreta. O ovo integra o desenvolvimento ambiental, mas não é a forma indicada como infectante por penetração cutânea.\nAlternativa 2: Correta. A larva filarioide L3 constitui a forma infectante indicada nos slides. Ela se desenvolve no solo e penetra pela pele humana.\nAlternativa 3: Incorreta. L1 é uma forma rabditoide do desenvolvimento no solo.\nAlternativa 4: Incorreta. L2 também integra o desenvolvimento ambiental; a deglutição descrita ocorre após a migração larvária pelo hospedeiro.\nAlternativa 5: Incorreta. Os vermes adultos localizam-se no intestino humano e não constituem a forma que penetra na pele."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Forma infectante",
+        "fácil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Ovo embrionado, por penetração cutânea."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Larva filarioide L3, por penetração na pele."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Larva rabditoide L1, por penetração na pele."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Larva rabditoide L2, por deglutição após migração pulmonar no ambiente."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Verme adulto, por penetração direta na pele."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-003",
+      "label": "Questão 3",
+      "category": "Geohelmintíase e prevenção",
+      "statement": [
+        {
+          "type": "text",
+          "text": "A ancilostomíase é apresentada como uma geohelmintíase associada a condições precárias de saneamento básico. Considerando essa classificação e a transmissão demonstrada na aula, qual conjunto de medidas está mais diretamente relacionado à redução do risco de infecção?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O ciclo apresentado relaciona a contaminação do solo por ovos eliminados pelo hospedeiro, o desenvolvimento de larvas infectantes e a penetração cutânea. O saneamento atua sobre a contaminação ambiental, enquanto os calçados reduzem a exposição da pele.\nAlternativa 1: Incorreta. A radiografia pode contribuir para avaliação de alterações pulmonares, mas não previne a contaminação ambiental.\nAlternativa 2: Incorreta. O ferro está relacionado à abordagem da anemia, não ao bloqueio do ciclo ambiental.\nAlternativa 3: Incorreta. O ciclo demonstrado não depende de insetos vetores.\nAlternativa 4: Incorreta. A via infectante apresentada envolve larvas no solo e penetração cutânea.\nAlternativa 5: Correta. O ciclo apresentado relaciona a contaminação do solo por ovos eliminados pelo hospedeiro, o desenvolvimento de larvas infectantes e a penetração cutânea. O saneamento atua sobre a contaminação ambiental, enquanto os calçados reduzem a exposição da pele."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Geohelmintíase e prevenção",
+        "fácil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Investigação radiográfica periódica da população, sem intervenções ambientais."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Suplementação exclusiva de ferro para impedir o desenvolvimento das larvas no solo."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Controle exclusivo de insetos vetores, independentemente da contaminação do solo."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Restrição de alimentos de origem animal como principal medida contra a penetração de L3."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Melhoria do saneamento básico e utilização de calçados para reduzir o contato da pele com solo potencialmente contaminado."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "objetivas-004",
+      "label": "Questão 4",
+      "category": "Desenvolvimento ambiental",
+      "statement": [
+        {
+          "type": "text",
+          "text": "A transmissão da ancilostomíase depende de etapas sucessivas que ocorrem no ambiente e no hospedeiro humano. Qual sequência representa corretamente o desenvolvimento ambiental e o estabelecimento inicial da infecção?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O ciclo apresentado demonstra a eliminação de ovos nas fezes, seguida de eclosão e desenvolvimento das formas larvárias no solo. As larvas rabditoides L1/L2 antecedem a formação da larva filarioide L3, responsável pela infecção cutânea.\nAlternativa 1: Correta. O ciclo apresentado demonstra a eliminação de ovos nas fezes, seguida de eclosão e desenvolvimento das formas larvárias no solo. As larvas rabditoides L1/L2 antecedem a formação da larva filarioide L3, responsável pela infecção cutânea.\nAlternativa 2: Incorreta. Inverte a sequência entre ovos e larvas e atribui à L3 a eliminação fecal.\nAlternativa 3: Incorreta. Os adultos permanecem no intestino; a etapa pulmonar pertence à migração larvária no hospedeiro.\nAlternativa 4: Incorreta. Os vermes adultos não se desenvolvem diretamente no solo.\nAlternativa 5: Incorreta. Não corresponde à sequência de eliminação de ovos e desenvolvimento larvário demonstrada."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Desenvolvimento ambiental",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Eliminação de ovos nas fezes → desenvolvimento de larvas rabditoides L1/L2 no solo → formação de larvas filarioides L3 → penetração cutânea."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Eliminação de larvas L3 nas fezes → transformação em ovos no solo → penetração cutânea dos ovos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Eliminação de vermes adultos nas fezes → formação direta de L3 nos pulmões → retorno ao solo."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Eliminação de ovos → desenvolvimento imediato de vermes adultos no solo → entrada dos adultos pela pele."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Eliminação de larvas L1 nas fezes → reprodução dos adultos no solo → formação de ovos infectantes na pele."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-005",
+      "label": "Questão 5",
+      "category": "Migração no hospedeiro",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Após a penetração da larva filarioide L3 pela pele, o ciclo da ancilostomíase envolve deslocamento por diferentes estruturas do organismo até o estabelecimento dos vermes adultos no intestino. Qual alternativa apresenta a sequência compatível com o esquema da aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Após penetrar pela pele, a larva alcança a circulação sanguínea, migra para os pulmões e percorre as vias respiratórias até a faringe. Após a deglutição, alcança o intestino, onde prossegue seu desenvolvimento e ocorre a fixação dos adultos à mucosa.\nAlternativa 1: Incorreta. Coloca a eliminação de ovos antes da migração pulmonar e do estabelecimento intestinal.\nAlternativa 2: Incorreta. Omite a circulação e os pulmões, além de incluir retorno ao solo durante a migração interna.\nAlternativa 3: Incorreta. Inverte a sequência pulmonar e intestinal e atribui eliminação fecal à L3.\nAlternativa 4: Correta. Após penetrar pela pele, a larva alcança a circulação sanguínea, migra para os pulmões e percorre as vias respiratórias até a faringe. Após a deglutição, alcança o intestino, onde prossegue seu desenvolvimento e ocorre a fixação dos adultos à mucosa.\nAlternativa 5: Incorreta. Os ovos são eliminados pelas fezes, não pelas vias respiratórias."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Migração no hospedeiro",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Pele → intestino → eliminação de ovos → pulmões → circulação sanguínea."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Pele → faringe → estômago → solo → intestino."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Pele → circulação sanguínea → intestino → pulmões → eliminação de L3 nas fezes."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Pele → circulação sanguínea → pulmões e vias respiratórias → faringe e deglutição → intestino."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Pele → pulmões → eliminação de ovos pelas vias respiratórias → intestino."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "objetivas-006",
+      "label": "Questão 6",
+      "category": "Etapas infectante e diagnóstica",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Os slides identificam etapas distintas do ciclo da ancilostomíase como infecciosa e diagnóstica. A distinção entre essas etapas é importante para interpretar os métodos laboratoriais utilizados. Assinale a alternativa correta."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O esquema do ciclo de vida identifica a larva filarioide L3, que penetra pela pele, como a etapa infecciosa. A eliminação de ovos dos parasitos nas fezes humanas corresponde à etapa diagnóstica destacada.\nAlternativa 1: Incorreta. Inverte as duas etapas.\nAlternativa 2: Correta. O esquema do ciclo de vida identifica a larva filarioide L3, que penetra pela pele, como a etapa infecciosa. A eliminação de ovos dos parasitos nas fezes humanas corresponde à etapa diagnóstica destacada.\nAlternativa 3: Incorreta. A etapa infecciosa é larvária, enquanto a fase diagnóstica apresentada envolve ovos nas fezes.\nAlternativa 4: Incorreta. A migração pulmonar é uma etapa do ciclo, mas não representa simultaneamente as duas categorias indicadas.\nAlternativa 5: Incorreta. A L3 no solo é uma forma infectante, não a forma indicada para pesquisa parasitológica fecal."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Etapas infectante e diagnóstica",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A etapa infecciosa corresponde à eliminação de ovos nas fezes, enquanto a diagnóstica corresponde à penetração da L3 na pele."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "A etapa infecciosa é representada pela penetração cutânea da L3, enquanto a eliminação de ovos nas fezes integra a etapa diagnóstica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "A etapa infecciosa ocorre somente quando o verme já está adulto, enquanto a diagnóstica corresponde à presença de larvas L1 no solo."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "As etapas infecciosa e diagnóstica correspondem exclusivamente à presença de larvas nos pulmões."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "A forma diagnóstica identificada no esquema é a L3 infectante presente no solo, independentemente de exame do hospedeiro."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-007",
+      "label": "Questão 7",
+      "category": "Fase cutânea e manifestações clínicas",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Um indivíduo apresenta prurido, hiperemia e edema na região da pele que entrou em contato com solo potencialmente contaminado. Considerando as manifestações descritas na aula, qual mecanismo está mais diretamente relacionado a esse quadro?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A penetração das larvas L3 na pele pode desencadear hiperemia, prurido, edema e dermatite alérgica. Os slides também mencionam a possibilidade de infecção bacteriana secundária e denominam esse quadro de “coceira da terra”.\nAlternativa 1: Incorreta. Descreve o mecanismo de lesão intestinal causado pelos adultos.\nAlternativa 2: Incorreta. Corresponde à fase pulmonar da migração larvária.\nAlternativa 3: Correta. A penetração das larvas L3 na pele pode desencadear hiperemia, prurido, edema e dermatite alérgica. Os slides também mencionam a possibilidade de infecção bacteriana secundária e denominam esse quadro de “coceira da terra”.\nAlternativa 4: Incorreta. Descreve o mecanismo relacionado à anemia ferropriva, não à reação cutânea inicial.\nAlternativa 5: Incorreta. A lesão cutânea é associada à penetração larvária, não à fixação dos adultos no intestino."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fase cutânea e manifestações clínicas",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Dilaceração da mucosa do duodeno pela cápsula bucal dos vermes adultos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Migração de larvas pela traqueia, com formação de pequenas hemorragias pulmonares."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Penetração cutânea das larvas L3, desencadeando manifestações inflamatórias locais."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Perda crônica de sangue intestinal, determinando deficiência de ferro."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Fixação intestinal dos adultos, produzindo diretamente a dermatite no local do contato com o solo."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-008",
+      "label": "Questão 8",
+      "category": "Comprometimento pulmonar",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Durante o ciclo da ancilostomíase, a migração larvária pelo sistema respiratório pode provocar inflamação e microtraumas. Qual conjunto de manifestações está mais diretamente associado a essa etapa?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A migração das larvas pelos alvéolos, bronquíolos, brônquios e traqueia pode produzir febre baixa, tosse seca, rouquidão, dispneia e pequenas hemorragias, conforme descrito na fase pulmonar.\nAlternativa 1: Correta. A migração das larvas pelos alvéolos, bronquíolos, brônquios e traqueia pode produzir febre baixa, tosse seca, rouquidão, dispneia e pequenas hemorragias, conforme descrito na fase pulmonar.\nAlternativa 2: Incorreta. Reúne manifestações apresentadas no contexto da anemia.\nAlternativa 3: Incorreta. Corresponde à fase cutânea.\nAlternativa 4: Incorreta. Descreve o dano intestinal produzido pelos vermes adultos.\nAlternativa 5: Incorreta. Refere-se às consequências da espoliação sanguínea intestinal e da deficiência de ferro."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Comprometimento pulmonar",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Febre baixa, tosse seca, rouquidão, dispneia e pequenas hemorragias."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Palidez, unhas quebradiças, queda de cabelo e desejo de ingerir terra."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Prurido localizado, hiperemia e dermatite alérgica exclusivamente cutânea."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Dilaceração da mucosa duodenal, hemorragia intestinal e anemia ferropriva."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Redução das reservas de ferro, com fadiga e extremidades frias, independentemente da migração larvária."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-009",
+      "label": "Questão 9",
+      "category": "Resposta imunológica ao parasito",
+      "statement": [
+        {
+          "type": "text",
+          "text": "A resposta imunológica do hospedeiro durante a ancilostomíase varia conforme o estágio de desenvolvimento do parasito e o tecido envolvido. Qual alternativa está de acordo com as observações apresentadas nos slides?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula relaciona as larvas circulantes ao aumento da resposta aos antígenos, destaca a resposta eosinofílica durante a presença dos adultos intestinais e menciona propriedades antigênicas imunomoduladoras que podem explicar a ausência de sintomas em alguns casos.\nAlternativa 1: Incorreta. Os slides descrevem aumento, e não eliminação, da resposta aos antígenos durante a fase sanguínea.\nAlternativa 2: Incorreta. A resposta eosinofílica é descrita como mais prevalente na fase intestinal.\nAlternativa 3: Incorreta. O material menciona produção de respostas de anticorpos para todas as classes de imunoglobulinas humanas.\nAlternativa 4: Incorreta. O material registra baixa produção de IgE para N. americanus, observação que qualifica como conflitante com o padrão usualmente esperado.\nAlternativa 5: Correta. A aula relaciona as larvas circulantes ao aumento da resposta aos antígenos, destaca a resposta eosinofílica durante a presença dos adultos intestinais e menciona propriedades antigênicas imunomoduladoras que podem explicar a ausência de sintomas em alguns casos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Resposta imunológica ao parasito",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A passagem das larvas pela corrente sanguínea elimina a resposta aos antígenos parasitários."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Durante a fase intestinal, os vermes adultos impedem completamente qualquer resposta eosinofílica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "A infecção desencadeia exclusivamente anticorpos da classe IgG, sem participação de outras imunoglobulinas."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "A produção de IgE contra Necator americanus é descrita como obrigatoriamente elevada em todos os casos."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "A presença de larvas na circulação está associada ao aumento da resposta aos antígenos; na fase intestinal, a resposta eosinofílica é destacada, e propriedades imunomoduladoras dos nematódeos podem contribuir para infecções assintomáticas."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "objetivas-010",
+      "label": "Questão 10",
+      "category": "Lesão intestinal e espoliação sanguínea",
+      "statement": [
+        {
+          "type": "text",
+          "text": "As manifestações intestinais da ancilostomíase estão relacionadas à interação dos vermes adultos com a mucosa do hospedeiro. Qual mecanismo explica mais diretamente as lesões e a perda de sangue descritas na aula?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Os vermes adultos fixam-se à mucosa e submucosa intestinal. A ação da cápsula bucal produz lesões mecânicas por dilaceração e maceração de fragmentos da mucosa. O processo inflamatório, o edema e as hemorragias contribuem para a perda sanguínea.\nAlternativa 1: Incorreta. A penetração cutânea está relacionada à fase inicial, não à espoliação intestinal pelos adultos.\nAlternativa 2: Incorreta. A fase pulmonar produz danos respiratórios, enquanto a lesão intestinal decorre da fixação dos adultos.\nAlternativa 3: Incorreta. O material atribui a dilaceração à ação dos vermes adultos, não à presença de ovos.\nAlternativa 4: Correta. Os vermes adultos fixam-se à mucosa e submucosa intestinal. A ação da cápsula bucal produz lesões mecânicas por dilaceração e maceração de fragmentos da mucosa. O processo inflamatório, o edema e as hemorragias contribuem para a perda sanguínea.\nAlternativa 5: Incorreta. A perda de sangue está diretamente relacionada às lesões mecânicas na mucosa intestinal."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Lesão intestinal e espoliação sanguínea",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "A penetração cutânea das larvas L3 provoca diretamente a perda crônica de sangue pelo intestino."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "A passagem das larvas pelos pulmões provoca ruptura permanente dos vasos da mucosa intestinal, sem participação dos adultos."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "A presença dos ovos na luz intestinal é responsável pela dilaceração da mucosa do duodeno e jejuno."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "A fixação dos vermes adultos por meio da cápsula bucal provoca dilaceração e maceração da mucosa, acompanhadas de inflamação, edema e áreas hemorrágicas."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "A anemia decorre exclusivamente de uma alteração imunológica, sem relação com a integridade da mucosa intestinal."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "objetivas-011",
+      "label": "Questão 11",
+      "category": "Desenvolvimento da anemia ferropriva",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Um paciente com ancilostomíase apresenta palidez, fadiga, fraqueza e desejo de ingerir substâncias sem valor nutricional, manifestações relacionadas à anemia descritas na aula. Qual processo explica a associação entre a parasitose e esse quadro?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A fixação dos vermes adultos na mucosa intestinal causa perda crônica de sangue. Quando essa perda ultrapassa a capacidade de compensação pelas reservas nutricionais do hospedeiro, pode ocorrer deficiência de ferro e desenvolvimento de anemia ferropriva.\nAlternativa 1: Incorreta. A penetração cutânea relaciona-se às manifestações locais, não ao mecanismo de espoliação sanguínea.\nAlternativa 2: Correta. A fixação dos vermes adultos na mucosa intestinal causa perda crônica de sangue. Quando essa perda ultrapassa a capacidade de compensação pelas reservas nutricionais do hospedeiro, pode ocorrer deficiência de ferro e desenvolvimento de anemia ferropriva.\nAlternativa 3: Incorreta. A aula relaciona a anemia à perda sanguínea intestinal e ao ferro, não atribui essa anemia exclusivamente à deficiência de vitamina B12.\nAlternativa 4: Incorreta. Os ovos representam uma etapa do ciclo, mas não são indicados como responsáveis pela destruição de hemácias circulantes.\nAlternativa 5: Incorreta. A eosinofilia é uma característica da resposta imunológica; o mecanismo de anemia apresentado é a perda crônica de sangue."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Desenvolvimento da anemia ferropriva",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "As larvas L3 consomem diretamente as reservas de ferro durante sua penetração cutânea."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "A perda crônica de sangue intestinal, quando supera as reservas nutricionais do hospedeiro, pode ocasionar deficiência de ferro e anemia ferropriva."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "A migração das larvas pelos pulmões provoca exclusivamente deficiência de vitamina B12, explicando a anemia ferropriva."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Os ovos eliminados nas fezes destroem diretamente as hemácias na corrente sanguínea."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "A resposta eosinofílica intestinal é apresentada como causa exclusiva da diminuição das reservas de ferro."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-2"
+    },
+    {
+      "id": "objetivas-012",
+      "label": "Questão 12",
+      "category": "Métodos laboratoriais",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Na investigação laboratorial da ancilostomíase, o médico deseja obter informações sobre a carga parasitária por exame de fezes e, adicionalmente, identificar as espécies de ancilostomídeos pelas formas larvares. Qual combinação de métodos corresponde a esses objetivos, respectivamente?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O método de Kato-Katz é apresentado como quantitativo, relacionado à avaliação da carga parasitária. A coprocultura pelo método de Harada e Mori permite obter larvas e identificar espécies de ancilostomídeos pelas características dessas formas.\nAlternativa 1: Incorreta. ELISA é apresentado como teste sorológico para anticorpos, enquanto Willis é empregado na pesquisa fecal de ovos; a combinação não contempla os dois objetivos propostos.\nAlternativa 2: Incorreta. Harada e Mori está relacionado à identificação larvária; ferritina avalia o suprimento de ferro, e não a carga parasitária.\nAlternativa 3: Correta. O método de Kato-Katz é apresentado como quantitativo, relacionado à avaliação da carga parasitária. A coprocultura pelo método de Harada e Mori permite obter larvas e identificar espécies de ancilostomídeos pelas características dessas formas.\nAlternativa 4: Incorreta. Hemaglutinação pesquisa anticorpos, e hemoglobina auxilia a avaliação hematológica.\nAlternativa 5: Incorreta. Radiografia de tórax e hematócrito são exames complementares, não métodos de quantificação fecal e identificação larvária das espécies."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Métodos laboratoriais",
+        "intermediária"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "ELISA e Willis."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Harada e Mori e dosagem de ferritina sérica."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Kato-Katz e coprocultura pelo método de Harada e Mori."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Hemaglutinação e dosagem de hemoglobina."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Radiografia de tórax e exame de hematócrito."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-3"
+    },
+    {
+      "id": "objetivas-013",
+      "label": "Questão 13",
+      "category": "Interpretação das etapas do ciclo e do diagnóstico",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Considere, hipoteticamente, um indivíduo infectado por larvas L3 de ancilostomídeos que se encontram exclusivamente na fase de migração pulmonar, ainda sem desenvolvimento de vermes adultos no intestino. Com base apenas no ciclo biológico e nas etapas diagnósticas apresentados nos slides, qual interpretação é a mais adequada sobre a pesquisa de ovos nas fezes nessa fase?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "O esquema da aula diferencia a migração das larvas da presença dos vermes adultos intestinais, responsáveis pela reprodução e eliminação de ovos. Assim, no cenário delimitado, em que ainda não existem adultos intestinais, a pesquisa fecal de ovos não demonstraria essa etapa exclusivamente larvária.\nAlternativa 1: Correta. O esquema da aula diferencia a migração das larvas da presença dos vermes adultos intestinais, responsáveis pela reprodução e eliminação de ovos. Assim, no cenário delimitado, em que ainda não existem adultos intestinais, a pesquisa fecal de ovos não demonstraria essa etapa exclusivamente larvária.\nAlternativa 2: Incorreta. O esquema não atribui produção de ovos às larvas durante a migração respiratória.\nAlternativa 3: Incorreta. A penetração cutânea precede o desenvolvimento intestinal dos adultos.\nAlternativa 4: Incorreta. As larvas rabditoides L1/L2 são apresentadas como formas de desenvolvimento no solo.\nAlternativa 5: Incorreta. As manifestações pulmonares são associadas à migração larvária e não demonstram, isoladamente, a presença de adultos produtores de ovos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Interpretação das etapas do ciclo e do diagnóstico",
+        "difícil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Como a produção de ovos está associada à fase adulta intestinal, não se espera que a pesquisa fecal de ovos demonstre uma infecção limitada à fase larvária pulmonar."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "As larvas que percorrem a traqueia eliminam ovos diretamente nas fezes antes de chegar ao intestino."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "A penetração cutânea da L3 é suficiente para provocar a eliminação imediata de ovos pelo hospedeiro."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Os ovos pesquisados nas fezes são produzidos pelas larvas rabditoides que permanecem nos pulmões."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "A presença de sintomas pulmonares comprova que os vermes adultos já estão fixados à mucosa intestinal e eliminando ovos."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-1"
+    },
+    {
+      "id": "objetivas-014",
+      "label": "Questão 14",
+      "category": "Abordagem da parasitose, anemia e reinfecção",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Um paciente com ancilostomíase apresenta manifestações relacionadas à anemia ferropriva e permanece em uma região onde existe risco de reinfecção. Considerando simultaneamente o mecanismo da doença e as orientações de tratamento e controle descritas na aula, qual abordagem contempla de maneira mais completa os diferentes problemas apresentados?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A aula apresenta componentes complementares da abordagem: anti-helmínticos para o parasito; alimentação rica em ferro e suplementação quando há anemia associada; exames parasitológicos fecais para controle de cura; e medidas profiláticas, particularmente saneamento e proteção contra contato com solo contaminado.\nAlternativa 1: Incorreta. A reposição de ferro não substitui o tratamento anti-helmíntico.\nAlternativa 2: Incorreta. A fase intestinal é diretamente relacionada à perda crônica de sangue e à anemia ferropriva.\nAlternativa 3: Incorreta. O material propõe controle de cura por novos exames parasitológicos de fezes.\nAlternativa 4: Incorreta. A alimentação rica em ferro auxilia o estado nutricional, mas não interrompe o contato com as formas infectantes presentes no solo.\nAlternativa 5: Correta. A aula apresenta componentes complementares da abordagem: anti-helmínticos para o parasito; alimentação rica em ferro e suplementação quando há anemia associada; exames parasitológicos fecais para controle de cura; e medidas profiláticas, particularmente saneamento e proteção contra contato com solo contaminado."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Abordagem da parasitose, anemia e reinfecção",
+        "difícil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "Corrigir exclusivamente a deficiência de ferro, porque a reposição nutricional elimina diretamente os vermes adultos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "Tratar exclusivamente os sintomas pulmonares, pois a fixação dos vermes intestinais não participa do desenvolvimento da anemia."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "Realizar somente exames sorológicos após o tratamento, sem necessidade de acompanhamento parasitológico das fezes."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "Priorizar o aumento da ingestão de ferro como única medida de prevenção ambiental, dispensando o saneamento e a proteção contra contato com o solo contaminado."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "Associar o tratamento anti-helmíntico às medidas de correção da deficiência de ferro, realizar controle parasitológico de cura e adotar medidas que reduzam a exposição ao solo contaminado."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-5"
+    },
+    {
+      "id": "objetivas-015",
+      "label": "Questão 15",
+      "category": "Mecanismos de ação dos anti-helmínticos",
+      "statement": [
+        {
+          "type": "text",
+          "text": "O quadro de tratamento apresentado na aula relaciona medicamentos utilizados contra a ancilostomíase a diferentes mecanismos de ação sobre os helmintos. Considerando especificamente as associações descritas nesse quadro, qual alternativa está correta?"
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A tabela associa o mebendazol ao bloqueio da captação de glicose e aminoácidos pelo helminto e o pamoato de pirantel à produção de paralisia espástica.\nAlternativa 1: Incorreta. A paralisia espástica é atribuída ao pamoato de pirantel. A nitazoxanida tem outro mecanismo descrito na tabela.\nAlternativa 2: Incorreta. Inverte os mecanismos apresentados para albendazol e pamoato de pirantel.\nAlternativa 3: Incorreta. A tabela relaciona a inibição da divisão celular ao albendazol, enquanto o bloqueio da captação de glicose e aminoácidos é atribuído ao mebendazol.\nAlternativa 4: Correta. A tabela associa o mebendazol ao bloqueio da captação de glicose e aminoácidos pelo helminto e o pamoato de pirantel à produção de paralisia espástica.\nAlternativa 5: Incorreta. A nitazoxanida é relacionada à inibição da polimerização da tubulina e ao metabolismo energético anaeróbio. A paralisia espástica corresponde ao pamoato de pirantel."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Mecanismos de ação dos anti-helmínticos",
+        "difícil"
+      ],
+      "type": "multiple-choice",
+      "options": [
+        {
+          "id": "option-1",
+          "text": [
+            {
+              "type": "text",
+              "text": "O mebendazol é descrito como responsável por paralisia espástica, enquanto a nitazoxanida age exclusivamente bloqueando a captação de aminoácidos."
+            }
+          ]
+        },
+        {
+          "id": "option-2",
+          "text": [
+            {
+              "type": "text",
+              "text": "O albendazol produz paralisia espástica, enquanto o pamoato de pirantel atua inibindo a captação de glicose."
+            }
+          ]
+        },
+        {
+          "id": "option-3",
+          "text": [
+            {
+              "type": "text",
+              "text": "O mebendazol é apresentado como inibidor da divisão celular, enquanto o albendazol age exclusivamente por bloqueio da captação de aminoácidos."
+            }
+          ]
+        },
+        {
+          "id": "option-4",
+          "text": [
+            {
+              "type": "text",
+              "text": "O mebendazol bloqueia a captação de glicose e aminoácidos pelo helminto, enquanto o pamoato de pirantel provoca paralisia espástica."
+            }
+          ]
+        },
+        {
+          "id": "option-5",
+          "text": [
+            {
+              "type": "text",
+              "text": "A nitazoxanida é descrita como bloqueadora exclusiva da captação de glicose e aminoácidos, enquanto o pamoato de pirantel inibe o metabolismo energético anaeróbio."
+            }
+          ]
+        }
+      ],
+      "correctAnswer": "option-4"
+    },
+    {
+      "id": "dissertativas-001",
+      "label": "Questão 16",
+      "category": "Transmissão e prevenção da ancilostomíase",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Explique por que a ancilostomíase é classificada como uma geohelmintíase, identificando a forma infectante apresentada na aula, sua via de entrada no hospedeiro e duas medidas profiláticas relacionadas à interrupção da transmissão."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A questão avalia a capacidade de associar a biologia do parasito às medidas de saúde pública. É necessário distinguir a contaminação do ambiente por ovos da infecção humana pela L3. Também é importante reconhecer que as estratégias de prevenção atuam sobre diferentes pontos do ciclo de transmissão."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Transmissão e prevenção da ancilostomíase",
+        "fácil"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A ancilostomíase é classificada como uma geohelmintíase porque parte do desenvolvimento dos parasitos ocorre no solo, que pode ser contaminado por ovos eliminados nas fezes de indivíduos infectados.\n\nNo ambiente, os ovos dão origem às formas larvárias rabditoides L1 e L2, que posteriormente se desenvolvem até a forma filarioide L3. Essa última constitui a forma infectante apresentada no ciclo, penetrando pela pele humana e iniciando a infecção.\n\nDuas medidas profiláticas diretamente relacionadas ao ciclo são a melhoria do saneamento básico, que contribui para reduzir a contaminação do solo, e a utilização de calçados, que diminui o contato direto da pele com o ambiente potencialmente contaminado.\nPontos esperados:\nReconhecimento da ancilostomíase como geohelmintíase.\nParticipação do solo no desenvolvimento das formas larvárias.\nIdentificação da larva filarioide L3 como forma infectante.\nReconhecimento da penetração cutânea como via de infecção.\nRelação entre saneamento básico, uso de calçados e prevenção."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-002",
+      "label": "Questão 17",
+      "category": "Ciclo biológico e migração larvária",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Descreva, em sequência, o ciclo biológico de Ancylostoma duodenale e Necator americanus, desde a eliminação dos ovos pelo hospedeiro humano até a instalação dos vermes adultos no intestino. Identifique a forma infectante, o trajeto percorrido no hospedeiro e a etapa utilizada no diagnóstico parasitológico fecal."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A questão exige integrar os acontecimentos ambientais e aqueles que ocorrem no hospedeiro. Um ponto fundamental é distinguir as fases do parasito, evitando confundir os ovos eliminados pelas fezes com as larvas filarioides responsáveis pela infecção. A migração pulmonar também precisa ser reconhecida como parte do ciclo biológico, e não como um evento independente."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Ciclo biológico e migração larvária",
+        "intermediária"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "O ciclo inicia-se com a presença de vermes adultos no intestino humano, onde se fixam à mucosa. Os ovos produzidos pelos parasitos são eliminados juntamente com as fezes, podendo contaminar o solo.\n\nNo ambiente, ocorre a eclosão dos ovos e o desenvolvimento das larvas rabditoides L1 e L2. Posteriormente, essas formas evoluem para larvas filarioides L3, que correspondem ao estágio infectante.\n\nQuando a L3 entra em contato com a pele humana e consegue penetrá-la, alcança a circulação sanguínea. Em seguida, migra para os pulmões, passando pelas estruturas respiratórias apresentadas no esquema, incluindo alvéolos, bronquíolos, brônquios e traqueia.\n\nAs larvas alcançam a região faríngea e são deglutidas, seguindo para o trato digestório. No intestino, completam seu desenvolvimento até a fase adulta e fixam-se à mucosa, estabelecendo a etapa intestinal da infecção.\n\nA eliminação de ovos pelas fezes permite a pesquisa parasitológica fecal, identificada nos slides como etapa diagnóstica.\nPontos esperados:\nVermes adultos localizados no intestino humano.\nEliminação de ovos nas fezes.\nDesenvolvimento no solo: L1, L2 e L3.\nIdentificação da L3 como forma infectante.\nPenetração cutânea e passagem pela circulação sanguínea.\nMigração pulmonar, deslocamento às vias respiratórias superiores e deglutição.\nDesenvolvimento e fixação dos adultos na mucosa intestinal.\nPesquisa de ovos nas fezes como etapa diagnóstica."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-003",
+      "label": "Questão 18",
+      "category": "Manifestações clínicas e interação parasito-hospedeiro",
+      "statement": [
+        {
+          "type": "text",
+          "text": "A ancilostomíase pode produzir manifestações clínicas distintas durante o desenvolvimento do parasito no organismo humano. Relacione as fases cutânea, pulmonar e intestinal aos respectivos mecanismos de dano e às principais manifestações descritas na aula."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A questão avalia a compreensão da patogênese em diferentes momentos do ciclo parasitário. As manifestações cutâneas e pulmonares estão relacionadas principalmente à ação das larvas, enquanto o dano intestinal crônico resulta da atividade dos vermes adultos. Essa distinção é importante porque manifestações clínicas diferentes podem estar relacionadas a estágios distintos de uma mesma infecção."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Manifestações clínicas e interação parasito-hospedeiro",
+        "intermediária"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A apresentação clínica da ancilostomíase está relacionada à fase de desenvolvimento do parasito e à sua interação com diferentes tecidos do hospedeiro.\n\nNa fase cutânea, a penetração das larvas L3 pode desencadear resposta inflamatória local, caracterizada por hiperemia, prurido, edema e dermatite alérgica. A aula também menciona a possibilidade de infecção bacteriana secundária. Esse quadro é denominado “coceira da terra”.\n\nNa fase pulmonar, a migração das larvas pelos alvéolos, bronquíolos, brônquios e traqueia pode produzir inflamação e microtraumas. As manifestações incluem febre baixa, tosse seca, rouquidão, dispneia e pequenas hemorragias.\n\nNa fase intestinal, os vermes adultos fixam-se à mucosa e submucosa, especialmente no duodeno e jejuno. Sua cápsula bucal provoca lesões mecânicas, dilaceração e maceração de tecidos, acompanhadas de inflamação, edema e hemorragias.\n\nA perda crônica de sangue decorrente dessas lesões pode causar deficiência de ferro e anemia ferropriva. Nesse contexto, podem surgir palidez, fraqueza, fadiga, tontura e outras manifestações relacionadas à anemia.\nPontos esperados:\nAssociação da fase cutânea à penetração da L3.\nIdentificação de prurido, hiperemia e edema como manifestações cutâneas.\nReconhecimento da migração larvária pulmonar e dos microtraumas.\nIdentificação de manifestações respiratórias compatíveis com a fase pulmonar.\nAssociação da fase intestinal à fixação dos adultos pela cápsula bucal.\nReconhecimento das lesões hemorrágicas intestinais.\nRelação entre perda sanguínea crônica e anemia ferropriva."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-004",
+      "label": "Questão 19",
+      "category": "Fisiopatologia da anemia ferropriva",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Explique o mecanismo pelo qual a infecção intestinal por ancilostomídeos pode provocar anemia ferropriva. Em sua resposta, relacione a fixação dos vermes adultos, o dano à mucosa, a perda sanguínea crônica, as reservas nutricionais do hospedeiro e as manifestações clínicas da anemia."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "A questão exige estabelecer uma relação causal entre a ação mecânica dos vermes adultos e uma manifestação sistêmica da parasitose. O mecanismo central não é simplesmente a presença do parasito, mas a perda prolongada de sangue produzida pelas lesões intestinais. A deficiência de ferro surge quando o organismo não consegue compensar adequadamente essa perda. A carga parasitária e as condições nutricionais ajudam a compreender por que as manifestações podem variar entre os indivíduos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Fisiopatologia da anemia ferropriva",
+        "intermediária"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A anemia ferropriva associada à ancilostomíase decorre principalmente da perda crônica de sangue intestinal produzida pela ação dos vermes adultos sobre a mucosa do hospedeiro.\n\nApós seu desenvolvimento no intestino, os vermes adultos de Ancylostoma duodenale e Necator americanus fixam-se à mucosa e submucosa por meio de estruturas bucais. Essa fixação produz lesões mecânicas, com dilaceração e maceração de fragmentos do tecido intestinal.\n\nAs regiões lesionadas apresentam inflamação, edema e áreas hemorrágicas, permitindo a perda contínua de sangue.\n\nQuando a perda de sangue supera as reservas nutricionais do hospedeiro, ocorre comprometimento do suprimento de ferro, podendo resultar em anemia ferropriva.\n\nA gravidade das manifestações deve considerar fatores como a carga parasitária e a possibilidade de poliparasitismo, conforme destacado na aula.\n\nEntre as manifestações clínicas descritas estão palidez, extremidades frias, taquicardia, falta de ar, tontura, fraqueza e fadiga. Também podem ocorrer unhas quebradiças, queda de cabelo e desejo de ingerir substâncias sem valor nutricional, como terra, gelo, giz ou papel.\nPontos esperados:\nPresença dos vermes adultos no intestino humano.\nFixação à mucosa e submucosa intestinal.\nLesões mecânicas por dilaceração e maceração.\nInflamação, edema e áreas hemorrágicas.\nPerda crônica de sangue intestinal.\nRelação entre perda sanguínea, reservas nutricionais e deficiência de ferro.\nDesenvolvimento de anemia ferropriva.\nIdentificação de manifestações clínicas relacionadas à anemia.\nInfluência da carga parasitária e possível poliparasitismo."
+        }
+      ]
+    },
+    {
+      "id": "dissertativas-005",
+      "label": "Questão 20",
+      "category": "Investigação diagnóstica e controle de cura",
+      "statement": [
+        {
+          "type": "text",
+          "text": "Um paciente apresenta histórico de contato com solo potencialmente contaminado, episódio de prurido cutâneo, tosse seca e, posteriormente, palidez e fadiga. Considerando a suspeita de ancilostomíase e exclusivamente os métodos apresentados na aula, elabore uma proposta fundamentada de investigação, contemplando:\n1. A pesquisa parasitológica fecal e sua relação com o ciclo do parasito.\n2. Os métodos de avaliação da carga parasitária e identificação das espécies.\n3. Os exames complementares relacionados à anemia e ao comprometimento pulmonar.\n4. O controle parasitológico de cura após o tratamento."
+        }
+      ],
+      "explanation": [
+        {
+          "type": "text",
+          "text": "Esta questão exige integrar o ciclo biológico, a patogenia e os métodos diagnósticos apresentados no material. A pesquisa de ovos permite investigar a fase relacionada aos vermes adultos intestinais. Os métodos quantitativos e a coprocultura oferecem informações diferentes e, portanto, não devem ser considerados equivalentes. Os exames hematológicos e de ferro ajudam a investigar uma possível consequência da espoliação sanguínea intestinal, enquanto a radiografia de tórax é apresentada como exame complementar na avaliação de determinados quadros pulmonares. Por fim, o controle de cura exige considerar o resultado parasitológico após o tratamento, sem confundir desaparecimento de manifestações clínicas com a pesquisa laboratorial dos parasitos."
+        }
+      ],
+      "images": [],
+      "tags": [
+        "Investigação diagnóstica e controle de cura",
+        "difícil"
+      ],
+      "type": "essay",
+      "modelAnswer": [
+        {
+          "type": "text",
+          "text": "A investigação deve integrar a avaliação clínica e laboratorial, considerando as diferentes fases do ciclo da ancilostomíase e as manifestações apresentadas.\n\n1. Investigação parasitológica fecal\nO exame parasitológico de fezes é utilizado para a pesquisa de ovos dos ancilostomídeos, conforme a etapa diagnóstica apresentada no ciclo biológico. Entre os métodos indicados nos slides estão Willis e Faust. A interpretação desse exame deve considerar que a eliminação de ovos está relacionada à presença de vermes adultos no intestino. Portanto, manifestações exclusivamente da fase larvária não correspondem necessariamente à etapa de eliminação fecal de ovos.\n\n2. Avaliação da carga parasitária e identificação das espécies\nO método de Stoll é apresentado para determinar o número de ovos por grama de fezes (OPG). O método de Kato-Katz é descrito como quantitativo, permitindo a avaliação da carga parasitária. A coprocultura pelo método de Harada e Mori permite a obtenção de larvas dos ancilostomídeos e sua utilização na identificação das espécies pelas formas larvares.\n\n3. Exames complementares\nDiante de palidez e fadiga, a investigação hematológica deve considerar exames relacionados aos eritrócitos, incluindo hemoglobina, hematócrito e contagem de reticulócitos. Para avaliar o suprimento de ferro, a aula apresenta ferro sérico, ferritina sérica e capacidade total de ligação ao ferro. O material também cita a investigação de vitamina B12 e folato como parte dos exames complementares de avaliação geral. Em pacientes com manifestações respiratórias compatíveis com a síndrome de Löeffler, a radiografia de tórax pode auxiliar a avaliação, podendo demonstrar infiltrados pulmonares.\n\n4. Controle parasitológico de cura\nApós o tratamento, a aula recomenda a realização de novos exames parasitológicos de fezes. O protocolo de controle apresentado utiliza três amostras, coletadas à razão de uma por semana, com expectativa de resultados negativos para ovos ou larvas. Esses exames permitem acompanhar o resultado parasitológico do tratamento, devendo ser considerados também os fatores ambientais relacionados ao risco de reinfecção.\nPontos esperados:\nAssociação entre anamnese, manifestações clínicas e suspeita de ancilostomíase.\nPesquisa de ovos nas fezes como componente do diagnóstico parasitológico.\nReconhecimento de Willis e Faust como métodos citados para pesquisa fecal.\nIdentificação de Stoll e Kato-Katz como métodos relacionados à quantificação.\nUtilização de Harada e Mori para obtenção e identificação de larvas.\nReconhecimento dos exames hematológicos e da investigação do suprimento de ferro.\nRelação entre manifestações pulmonares e eventual avaliação radiográfica.\nReconhecimento da síndrome de Löeffler e dos infiltrados pulmonares mencionados na aula.\nControle de cura por novos exames parasitológicos de fezes.\nCompreensão da diferença entre fases larvárias e fase adulta produtora de ovos."
+        }
+      ]
+    }
+  ]
+}
