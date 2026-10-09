@@ -11,7 +11,8 @@ import {
   previousEnvelopeSchema,
   historyEnvelopeSchema,
   historyV2EnvelopeSchema,
-  readableHistoryEntrySchema,
+  historyEntrySchema,
+  historyEntryV2Schema,
   HISTORY_LIMIT,
   includeCurrent,
   summary,
@@ -40,6 +41,11 @@ const historyReaderSchema = z.union([
   historyEnvelopeSchema.extend({ history: z.array(z.unknown()).max(HISTORY_LIMIT) }),
   historyV2EnvelopeSchema.extend({ history: z.array(z.unknown()).max(HISTORY_LIMIT) }),
 ]);
+// Only v2 may normalize a missing mode to Exam; v3 entries require an explicit mode.
+const legacyHistoryEntryReaderSchema = historyEntryV2Schema.transform((entry) => ({
+  ...entry,
+  mode: 'exam' as const,
+}));
 export function isCatalogResultConsistent(exam: CatalogExam, result: Result): boolean {
   return (
     result.objectiveTotal === exam.objectiveCount &&
@@ -114,7 +120,10 @@ export function readExamProgress(
     const parsed = raw ? historyReaderSchema.safeParse(JSON.parse(raw)) : null;
     if (parsed?.success) {
       for (const entry of parsed.data.history) {
-        const item = readableHistoryEntrySchema.safeParse(entry);
+        const item =
+          parsed.data.storageVersion === 3
+            ? historyEntrySchema.safeParse(entry)
+            : legacyHistoryEntryReaderSchema.safeParse(entry);
         if (
           item.success &&
           Date.parse(item.data.completedAt) >= Date.parse(item.data.startedAt) &&
