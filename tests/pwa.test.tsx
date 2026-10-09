@@ -283,6 +283,9 @@ it('PWA preserva academicamente fonte, schemas, engine, legado e lockfile da mai
     'simulados.json',
     '*.js',
     'package-lock.json',
+    // F03 authorizes only rollback-message hardening in the legacy backup script.
+    // All other root JavaScript, academic data and schemas remain byte-protected.
+    ':(exclude)backup-medsim.js',
     ':(exclude)public/sw.js',
     // F01 review metadata is tested separately; Exam and generation schemas remain frozen.
     ':(exclude)schema/authoring.ts',

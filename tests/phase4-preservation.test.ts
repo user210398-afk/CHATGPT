@@ -17,6 +17,9 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     'simulados.json',
     'index.html',
     '*.js',
+    // F03 permits precisely this legacy backup script; behavioral regression tests
+    // cover restoration and verified rollback. All other legacy JS stays frozen.
+    ':(exclude)backup-medsim.js',
     // PWA-1 authorizes only this new worker; tests/pwa.test.tsx verifies its policy.
     ':(exclude)public/sw.js',
     'scripts/legacy-data.ts',
