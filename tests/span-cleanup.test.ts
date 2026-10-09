@@ -1,6 +1,7 @@
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
-import { readFile, readdir } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
+import { readExamCatalog } from '../scripts/catalog';
 import { expect, it } from 'vitest';
 import { removeSpanArtifacts } from '../scripts/span-artifacts';
 const run = promisify(execFile);
@@ -81,12 +82,19 @@ it('academic/authoring/schema/infra bytes match the base except approved cleanup
     expect(actual, path).toEqual(expected);
   }
 }, 60000);
-it('normal generator publishes clean exams from their canonical source', async () => {
-  for (const file of (await readdir('public/generated/exams')).filter((path) =>
-    path.endsWith('.json'),
-  )) {
-    const output = await readFile(`public/generated/exams/${file}`, 'utf8');
-    expect(output, file).not.toMatch(/start_span|end_span|\[span_[0-9]+\]/);
-    expect(JSON.parse(output)).toEqual(JSON.parse(await readFile(`data/exams/${file}`, 'utf8')));
+it('serializes clean canonical exams independently of generated build artifacts', async () => {
+  // readExamCatalog is the exact source loaded by scripts/generate-exam-index.ts.
+  // Assert on its serialization without relying on public/generated/exams
+  // (which is ignored by Git and absent in a fresh isolated test checkout).
+  // tests/phase3-global.test.ts separately runs the generator and checks its files.
+  const { exams, catalog } = await readExamCatalog();
+  expect(exams.length).toBeGreaterThan(0);
+  expect(catalog.exams.map((entry) => entry.id)).toEqual(exams.map((exam) => exam.id));
+  for (const exam of exams) {
+    const serialized = JSON.stringify(exam);
+    expect(serialized, exam.id).not.toMatch(/start_span|end_span|\[span_[0-9]+\]/);
+    expect(JSON.parse(serialized)).toEqual(
+      JSON.parse(await readFile(`data/exams/${exam.id}.json`, 'utf8')),
+    );
   }
 });
