@@ -1,6 +1,6 @@
 # MedSim — continuidade operacional
 
-**Verificado em:** 09/10/2026, após merge da documentação (PR #31), CI da `main` e deploy manual consolidado das correções F01–F03.
+**Verificado em:** 09/10/2026, após merge da documentação (PR #31), CI da `main`, deploy manual consolidado das correções F01–F03 **e ativação verificada da proteção F04**.
 **Fonte de verdade:** GitHub `main`, PRs, checks, `AGENTS.md` e documentos técnicos atuais; este resumo pode ficar desatualizado.
 **Repositório:** https://github.com/user210398-afk/CHATGPT
 **Site:** https://user210398-afk.github.io/CHATGPT/
@@ -14,7 +14,7 @@
 | `main` | `8357808188e2e903ca2d4cad59574b64b175ee26` (PR #31) |
 | CI após PR #31 | [run 37963913809](https://github.com/user210398-afk/CHATGPT/actions/runs/37963913809) — **success**, SHA `8357808` |
 | PRs abertos | **Nenhum**, na consulta de 09/10/2026 |
-| Branch protection de `main` | `protected: false`; `rulesets: []` — **F04 pendente**, rastreada na [issue #32](https://github.com/user210398-afk/CHATGPT/issues/32) |
+| Branch protection de `main` | **F04 configurada**: `protected: true`, ruleset [medsim-main-protection](https://github.com/user210398-afk/CHATGPT/rules/24804795), `active`, target default branch, sem bypass, PR obrigatório, `validate` obrigatório (GitHub Actions), bloqueios de exclusão e force-push, somente merge commit |
 | Último GitHub Pages manual confirmado | [run 37965453809](https://github.com/user210398-afk/CHATGPT/actions/runs/37965453809) — **success**, commit `8357808188e2e903ca2d4cad59574b64b175ee26`; jobs **build** e **deploy** aprovados |
 | Publicação das F01–F03 | **Concluída em Pages** no commit `8357808`; auditorias, validate, typecheck, Vitest, build, validate:dist e Playwright passaram no workflow manual. Verificação manual em navegador físico permanece distinta. |
 | Conteúdo canônico de provas | **21 JSONs** em `data/exams/`, listagem confirmada na `main` |
@@ -50,7 +50,7 @@ A aprovação pelo CI valida as verificações executadas, mas **não equivale a
 
 | Achado | Situação / ação proposta |
 | --- | --- |
-| **F04** | **Pendente**: proteção de `main` ausente. [Issue #32](https://github.com/user210398-afk/CHATGPT/issues/32) registra regras propostas. Ativação requer configuração administrativa no GitHub e verificação posterior; não permitir escrita GitHub automatizada pelo MedFactory antes de concluir. |
+| **F04** | **Concluída e verificada remotamente**: [ruleset #24804795](https://github.com/user210398-afk/CHATGPT/rules/24804795) ativo e `protected: true`. PR obrigatório com 0 aprovações GitHub (não dispensa revisão acadêmica), check `validate`, sem bypass, sem force-push ou exclusão, somente merge commit. [Issue #32](https://github.com/user210398-afk/CHATGPT/issues/32). Antes de automatizar escrita pelo MedFactory, avaliar permissões e controles do próprio app. |
 | **F05** | **Pendente**: CDN de ícones no legado `index.html` sem versionamento/SRI. Manter como correção isolada. |
 | **F06** | **Pendente**: teste de limpeza de spans depende de catálogo gerado no uso isolado. Investigar em PR específico. |
 | **F07** | **Pendente**: `README.md` descreve 17 provas e contratos antigos. Atualizar em PR documental separado, com evidência do estado real. |
@@ -68,7 +68,7 @@ O plano de evolução é estudar **MedFactory** (preparação e revisão de ques
 
 1. **Deploy consolidado concluído e confirmado**: Pages [run 37965453809](https://github.com/user210398-afk/CHATGPT/actions/runs/37965453809), SHA `8357808`, jobs build/deploy success. Próximos deploys continuam exigindo autorização específica via [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) e `PUBLICAR`. Validar manualmente site, armazenamento, import/export, rotas e PWA quando aplicável.
 2. Atualizar/conciliar o documento de continuidade sempre após fase/merge/deploy; não declarar um PR documental como parte da `main` até o merge efetivo.
-3. Tratar F04 antes de incorporar escrita automatizada no GitHub. Nenhuma automação pode contornar controles de aprovação.
+3. **F04 concluída.** Preservar ruleset ativo e verificar o requisito `validate` em PR de teste. Antes de incorporar escrita automatizada no GitHub, avaliar as permissões do app e os controles adicionais; nenhuma automação pode contornar revisão e aprovação.
 4. Decidir o escopo de implementação do MedFactory após revisar [seu plano](docs/MEDFACTORY_MVP_PLAN.md); iniciar isoladamente e com testes neutros, sem conteúdo acadêmico real ou nova dependência sem necessidade.
 5. F05–F07 continuam em backlog; não são automaticamente incluídos nos PRs de MedFactory.
 
