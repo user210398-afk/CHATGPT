@@ -60,6 +60,9 @@ a fonte; a cobertura e correção acadêmica dependem da revisão humana.
   objetivas. Cada questão deve respeitar a mesma quantidade declarada.
 - `checks`: `sourceCoverageReviewed`, `answerKeyReviewed`,
   `explanationsReviewed`, `duplicateCheckReviewed`.
+- `approval.candidateSha256`: SHA-256 canônico do candidate aprovado, registrado
+  exclusivamente por `author:flow approve` após decisão humana explícita. Opcional
+  no schema v1 para compatibilidade histórica; novos approved exigem vínculo válido.
 - `reviewedBy`: identificação humana não vazia na aprovação; `notes`: notas
   explícitas sobre a revisão e decisões acadêmicas.
 
@@ -68,6 +71,32 @@ cada gabarito, explicações/respostas-modelo e possíveis duplicações. Todos 
 checks devem estar true e reviewedBy preenchido. IA nunca aprova seu próprio
 conteúdo. O gate confere a evidência declarada no manifest; não autentica a
 identidade do revisor nem substitui revisão acadêmica ou revisão humana do PR.
+
+## Vínculo da aprovação (F01)
+
+O fingerprint usa SHA-256 do JSON UTF-8 canônico: chaves de objetos ordenadas
+recursivamente, arrays na ordem original, valores JSON preservados, sem whitespace
+externo. Calcula sobre o JSON lido no snapshot validado, antes de transformações do
+schema. Reordenação de chaves e indentação não invalidam aprovação; whitespace
+_dentro de strings_, revision, metadados, tags, conteúdo e ordem de arrays invalidam.
+`status`, validação, promoção e Content Gate falham sem escrever quando divergir.
+
+Uma correção exige invalidar o review (draft/in-review, checks false, reviewedBy
+null e remoção de `approval`), incrementar revision quando houver mudança de
+conteúdo, registrar fonte/discrepância/decisão em notes, preservar generation
+original e obter nova revisão/decisão humana antes de `approve --confirm APROVAR`.
+Digest presente nunca substitui checklist, revisor ou consentimento humano.
+SHA-256 não é assinatura: quem pode editar candidate e review pode recomputá-lo;
+a garantia depende também de revisão humana, Git/PR e Content Gate.
+
+Somente os quatro conjuntos já aprovados no commit imutável
+`be05aa18155751bc675d78beb617bd17c6ff612f` dispensam binding novo. A lista fixa em
+`scripts/authoring/approval-binding.ts` deriva desse commit: identidade canônica
+de candidate/review e SHA-256 dos bytes de candidate, review, generation e
+production. Leitores exigem o conjunto inteiro byte a byte; o Gate preserva todos
+os seus arquivos existentes na base do PR, inclusive contra exclusão/rename.
+Não se aplica a um quinto ID, revision 1 genérica ou production recém-copiada.
+Toda adição de production no Gate exige binding, sem ampliar a lista histórica.
 
 ## Validar
 
@@ -99,8 +128,13 @@ npm run author:promote -- --id <exam-id> --confirm PROMOVER
 O comando exige par válido, status approved, todos os checks, reviewedBy e
 confirmação literal. Confere baseline e catálogo, copia bytes para
 `data/exams/<id>.json` com operação exclusiva (nunca sobrescreve), valida novamente
-o catálogo/assets e baseline. Se a validação após cópia falhar, remove somente
-a cópia recém-criada. Somente adições são suportadas; revisão/substituição de
+o catálogo/assets e baseline. Sob lock por ID, captura candidate/review/record,
+valida os mesmos bytes, confere estabilidade e publica snapshot por hard link
+atômico/exclusivo de staging local. A publicação nunca relê candidate para copiar.
+Se a validação após publicação falhar, remove somente
+a cópia recém-criada; se um ator substituiu o destino ou rollback falhou, preserva
+backup dos bytes aprovados, relata promoção não confirmada e exige inspeção.
+Somente adições são suportadas; revisão/substituição de
 prova existente não é autorizada nesta fase.
 
 A promoção não executa git add/commit/push, não abre PR e não faz merge/deploy.

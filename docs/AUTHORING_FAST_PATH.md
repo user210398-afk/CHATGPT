@@ -57,13 +57,13 @@ promove, modifica production ou executa git/PR/deploy.
 `status` é somente leitura. Valida os artefatos presentes, o contrato do export,
 request scratch, par candidate/review, record 6B e catálogo antes de informar:
 
-| Estado principal             | Evidência necessária                                                 |
-| ---------------------------- | -------------------------------------------------------------------- |
-| `not-started`                | Nenhum artefato desse ID ou production                               |
-| `awaiting-generation-result` | Export íntegro; sem candidate                                        |
-| `awaiting-human-review`      | Candidate e review draft/in-review válidos; record obrigatório na 6B |
-| `ready-to-promote`           | Review approved, checks completos, reviewedBy e production ausente   |
-| `promoted`                   | Candidate aprovado e production semanticamente igual                 |
+| Estado principal             | Evidência necessária                                                        |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| `not-started`                | Nenhum artefato desse ID ou production                                      |
+| `awaiting-generation-result` | Export íntegro; sem candidate                                               |
+| `awaiting-human-review`      | Candidate e review draft/in-review válidos; record obrigatório na 6B        |
+| `ready-to-promote`           | Review approved com vínculo válido, checks, reviewedBy e production ausente |
+| `promoted`                   | Candidate aprovado e production semanticamente igual                        |
 
 `approved` é o status do review; quando production ainda não existe, o estado
 principal é `ready-to-promote`. O resumo também mostra revision, counts, checks,
@@ -77,14 +77,17 @@ factual nem assinatura de autoria. O record 6B mantém suas regras existentes.
 
 `approve` exige `--confirm APROVAR`, revisor não vazio, candidate válido e record
 íntegro quando aplicável; recusa review já aprovado. Registra uma decisão humana
-já declarada, define os quatro checks true, preserva notas e acrescenta uma nota
+já declarada, registra `approval.candidateSha256` sobre o JSON canônico do snapshot
+validado (contrato [F01](CONTENT_AUTHORING.md#vínculo-da-aprovação-f01)), define os
+quatro checks true, preserva notas e acrescenta uma nota
 explícita sobre a declaração do usuário/revisor. A única alteração permanente
 é `authoring/reviews/<id>.json`, por substituição atômica sob lock por ID e
 comparação dos bytes anteriores. A CLI não verifica a conversa nem decide a
 aprovação; o operador é responsável por executar somente após revisão e consentimento.
 
 `promote` exige `--confirm PROMOVER` e reutiliza a promoção 6A, sem alterar sua
-proteção de baseline e cópia exclusiva. Cria somente `data/exams/<id>.json` quando
+proteção de baseline e publicação exclusiva dos bytes do snapshot validado sob lock.
+Cria somente `data/exams/<id>.json` quando
 o ID está ausente, o candidate é válido e a aprovação está completa. Não faz
 git add/commit/push, PR, merge ou deploy. Todos os comandos rejeitam colisões,
 arquivos não regulares e diretórios de authoring/scratch via symlink. Locks e
@@ -128,7 +131,8 @@ untracked. Não há transação única entre todos os diretórios.
    não fornecer outro identificador, usar `reviewedBy="ChatGPT"`. É somente metadata
    do projeto: a decisão deve ter vindo explicitamente do usuário antes do comando.
    Se conteúdo mudar depois da aprovação, a aprovação anterior deixa de ser válida;
-   voltar o review a draft/checks false/reviewedBy null, incrementar revision,
+   voltar o review a draft/checks false/reviewedBy null, remover `approval`,
+   incrementar revision,
    revisar e solicitar nova aprovação antes da promoção.
 8. Após aprovação explícita, rodar `author:flow approve`, `author:flow promote` e
    a suíte completa: `audit:legacy`, `validate`, `author:validate`, `typecheck`,

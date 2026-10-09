@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
-import { constants, type BigIntStats } from 'node:fs';
-import { link, lstat, mkdir, mkdtemp, open, rename, rm, writeFile } from 'node:fs/promises';
+import { link, lstat, mkdir, mkdtemp, rename, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import { z } from 'zod';
@@ -21,6 +20,8 @@ import {
   withGenerationLock,
 } from './generation-files';
 import { validateGenerationRecord } from './generation-integrity';
+import { snapshotFile, assertStable } from './artifact-snapshot';
+import { candidateFingerprint } from './approval-binding';
 
 export interface InitOptions {
   file: string;
@@ -247,53 +248,6 @@ export async function importWorkflow(
   return artifacts;
 }
 
-type FileSnapshot = { present: false } | { present: true; bytes: Buffer; info: BigIntStats };
-const approvalChanged = () =>
-  new GenerationError('Artefatos mudaram durante a aprovação; revise novamente antes de aprovar.');
-
-function sameFileInfo(left: BigIntStats, right: BigIntStats) {
-  return (['dev', 'ino', 'mode', 'size', 'mtimeNs', 'ctimeNs', 'nlink'] as const).every(
-    (field) => left[field] === right[field],
-  );
-}
-
-// Identity/type checks detect replacement even when bytes are identical. Never follow symlinks.
-async function snapshotFile(path: string, optional = false): Promise<FileSnapshot> {
-  let handle;
-  try {
-    const info = await lstat(path, { bigint: true }).catch((error: NodeJS.ErrnoException) => {
-      if (optional && error.code === 'ENOENT') return undefined;
-      throw error;
-    });
-    if (!info) return { present: false };
-    if (!info.isFile()) throw approvalChanged();
-    handle = await open(path, constants.O_RDONLY | constants.O_NOFOLLOW | constants.O_NONBLOCK);
-    if (!sameFileInfo(info, await handle.stat({ bigint: true }))) throw approvalChanged();
-    const bytes = await handle.readFile();
-    if (
-      !sameFileInfo(info, await handle.stat({ bigint: true })) ||
-      !sameFileInfo(info, await lstat(path, { bigint: true }))
-    )
-      throw approvalChanged();
-    return { present: true, bytes, info };
-  } catch {
-    throw approvalChanged();
-  } finally {
-    await handle?.close();
-  }
-}
-
-async function assertStable(path: string, original: FileSnapshot) {
-  const current = await snapshotFile(path, true);
-  if (
-    original.present !== current.present ||
-    (original.present &&
-      current.present &&
-      (!original.bytes.equals(current.bytes) || !sameFileInfo(original.info, current.info)))
-  )
-    throw approvalChanged();
-}
-
 // Internal seams for deterministic fault/concurrency tests; never exposed by the CLI.
 export interface ApprovalDependencies {
   afterValidation?: () => Promise<void>;
@@ -315,7 +269,7 @@ export async function approveWorkflow(
     const candidateSnapshot = await snapshotFile(candidatePath);
     const reviewSnapshot = await snapshotFile(path);
     const generationSnapshot = await snapshotFile(generationPath, true);
-    assert.ok(reviewSnapshot.present);
+    assert.ok(reviewSnapshot.present && candidateSnapshot.present);
     const checkAcademic = async () => {
       await inspectPaths(root, input.id);
       await assertStable(candidatePath, candidateSnapshot);
@@ -333,6 +287,9 @@ export async function approveWorkflow(
     const review = reviewSchema.parse({
       ...pair.review,
       status: 'approved',
+      approval: {
+        candidateSha256: candidateFingerprint(JSON.parse(candidateSnapshot.bytes.toString('utf8'))),
+      },
       reviewedBy,
       checks: Object.fromEntries(Object.keys(pair.review.checks).map((key) => [key, true])),
       notes: [
@@ -356,11 +313,23 @@ export async function approveWorkflow(
       await checkAll();
       await replaceReview(temporary, path);
       try {
+        const installed = await snapshotFile(path);
+        assert.ok(
+          installed.present && installed.bytes.equals(Buffer.from(json(review))),
+          'Review mudou durante aprovação',
+        );
         await checkAcademic();
         await validateAll(root, input.id);
         await checkAcademic();
+        await assertStable(path, installed);
       } catch (error) {
         try {
+          // Never overwrite a concurrent review edit. Keep exact original backup on conflict.
+          const current = await snapshotFile(path);
+          assert.ok(
+            current.present && current.bytes.equals(Buffer.from(json(review))),
+            'Review externo preservado',
+          );
           // Only review is restored. Concurrent candidate/generation edits are never touched.
           const restore = join(stage, 'restore.json');
           await writeFile(restore, reviewSnapshot.bytes, {
@@ -389,14 +358,12 @@ export async function approveWorkflow(
 export async function promoteWorkflow(root: string, input: { id: string; confirm?: string }) {
   assert.equal(input.confirm, 'PROMOVER', 'Confirmação literal --confirm PROMOVER obrigatória');
   await inspectPaths(root, input.id);
-  return withGenerationLock(root, input.id, async () => {
-    const status = await workflowStatus(root, input.id);
-    assert.equal(
-      status.state,
-      'ready-to-promote',
-      'Promoção exige review approved e ID ausente de production',
-    );
-    // Keep the original promotion, frozen baseline and COPYFILE_EXCL protection unchanged.
-    return promote(root, input.id, input.confirm);
-  });
+  const status = await workflowStatus(root, input.id);
+  assert.equal(
+    status.state,
+    'ready-to-promote',
+    'Promoção exige review approved e ID ausente de production',
+  );
+  // Core promotion owns the lock and revalidates snapshots before exclusive publication.
+  return promote(root, input.id, input.confirm);
 }

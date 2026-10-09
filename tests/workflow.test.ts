@@ -17,7 +17,7 @@ import { afterEach, beforeEach, expect, it, vi } from 'vitest';
 import { generationRequestSchema } from '../schema/generation';
 import examTemplate from '../authoring/templates/exam.example.json';
 import reviewTemplate from '../authoring/templates/review.example.json';
-import { loadCandidate, validateAll } from '../scripts/authoring/core';
+import { loadCandidate, promote, validateAll } from '../scripts/authoring/core';
 import { digest, json, readSource } from '../scripts/authoring/generation-files';
 import { mapGeneration } from '../scripts/authoring/generation-mapper';
 import * as providers from '../scripts/authoring/generation-providers';
@@ -862,3 +862,152 @@ it('approve falha explicitamente se rollback atômico falhar e preserva backup e
     original.review,
   );
 });
+
+it.each(['candidates', 'reviews', 'generations'])(
+  'F01 promoção aborta mudança concorrente de %s antes da escrita',
+  async (directory) => {
+    await imported();
+    await approval();
+    const original = await academicBytes();
+    let changed: Buffer | undefined;
+    await expect(
+      promote(root, id, 'PROMOVER', {
+        afterValidation: async () => {
+          const path = artifact(directory);
+          await writeFile(path, Buffer.concat([await readFile(path), Buffer.from('\n')]));
+          changed = await readFile(path);
+        },
+      }),
+    ).rejects.toThrow(/Artefatos mudaram/);
+    expect(await readFile(artifact(directory))).toEqual(changed);
+    if (directory !== 'reviews')
+      expect(await readFile(artifact('reviews'))).toEqual(original.review);
+    await expect(readFile(join(root, 'data/exams', `${id}.json`))).rejects.toMatchObject({
+      code: 'ENOENT',
+    });
+  },
+);
+it.each(['candidates', 'reviews', 'generations'])(
+  'F01 promoção detecta %s na janela de publicação e reverte só sua cópia',
+  async (directory) => {
+    await imported();
+    await approval();
+    const original = await academicBytes();
+    let changed: Buffer | undefined;
+    await expect(
+      promote(root, id, 'PROMOVER', {
+        afterPublication: async () => {
+          const path = artifact(directory);
+          await writeFile(path, Buffer.concat([await readFile(path), Buffer.from('\n')]));
+          changed = await readFile(path);
+        },
+      }),
+    ).rejects.toThrow(/Artefatos mudaram/);
+    expect(await readFile(artifact(directory))).toEqual(changed);
+    if (directory !== 'reviews')
+      expect(await readFile(artifact('reviews'))).toEqual(original.review);
+    await expect(readFile(join(root, 'data/exams', `${id}.json`))).rejects.toMatchObject({
+      code: 'ENOENT',
+    });
+    expect(
+      (await readdir(join(root, 'data/exams'))).filter((p) => p.startsWith('.promotion-stage-')),
+    ).toEqual([]);
+  },
+);
+it('F01 destino concorrente é preservado e publicação falha sem sobrescrever', async () => {
+  await imported();
+  await approval();
+  const target = join(root, 'data/exams', `${id}.json`);
+  await expect(
+    promote(root, id, 'PROMOVER', {
+      afterValidation: async () => {
+        await writeFile(target, 'arquivo externo preservado');
+      },
+    }),
+  ).rejects.toMatchObject({ code: 'EEXIST' });
+  expect(await readFile(target, 'utf8')).toBe('arquivo externo preservado');
+});
+it('F01 correção após invalidar aprovação conserva generation original e registra novo vínculo', async () => {
+  await imported();
+  const first = await approval();
+  const originalRecord = await readFile(artifact('generations'));
+  await changeCandidate();
+  const { approval: _binding, ...review } = first;
+  await writeFile(
+    artifact('reviews'),
+    json({
+      ...review,
+      status: 'in-review',
+      reviewedBy: null,
+      checks: Object.fromEntries(Object.keys(review.checks).map((key) => [key, false])),
+      notes: [...review.notes, 'Fonte neutra: correção transparente revision 2.'],
+    }),
+  );
+  expect(await workflowStatus(root, id)).toMatchObject({ state: 'awaiting-human-review' });
+  const second = await approval();
+  expect(second.approval).not.toEqual(first.approval);
+  expect(await readFile(artifact('generations'))).toEqual(originalRecord);
+  await promotion();
+});
+
+it('F01 mudança externa de review na substituição conserva edição e backup sem confirmar aprovação', async () => {
+  await imported();
+  const original = await academicBytes();
+  const replaceReview = async (
+    source: Parameters<typeof rename>[0],
+    target: Parameters<typeof rename>[1],
+  ) => {
+    await rename(source, target);
+    await changeReview({ notes: ['Edição externa após substituição.'] });
+  };
+  await expect(approveWorkflow(root, confirmedApproval, { replaceReview })).rejects.toThrow(
+    /aprovação NÃO confirmada.*Backup preservado/,
+  );
+  expect(JSON.parse(await readFile(artifact('reviews'), 'utf8')).notes).toEqual([
+    'Edição externa após substituição.',
+  ]);
+  const stages = (await readdir(join(root, 'authoring/reviews'))).filter((p) =>
+    p.startsWith('.approval-stage-'),
+  );
+  expect(stages).toHaveLength(1);
+  expect(await readFile(join(root, 'authoring/reviews', stages[0]!, 'original.json'))).toEqual(
+    original.review,
+  );
+});
+it.each(['substituição externa', 'falha de rollback'])(
+  'F01 promoção não confirma %s e conserva backup exato',
+  async (kind) => {
+    await imported();
+    await approval();
+    const original = await academicBytes();
+    const target = join(root, 'data/exams', `${id}.json`);
+    await expect(
+      promote(root, id, 'PROMOVER', {
+        afterPublication: async () => {
+          if (kind === 'substituição externa') {
+            const replacement = join(root, 'substituto externo.json');
+            await writeFile(replacement, 'arquivo externo preservado');
+            await rename(replacement, target);
+          } else await changeGeneration();
+        },
+        removePublished:
+          kind === 'falha de rollback'
+            ? async () => {
+                throw new Error('Falha de unlink simulada');
+              }
+            : undefined,
+      }),
+    ).rejects.toThrow(/Promoção NÃO confirmada.*Backup preservado/);
+    if (kind === 'substituição externa')
+      expect(await readFile(target, 'utf8')).toBe('arquivo externo preservado');
+    else expect(await readFile(target)).toEqual(original.candidate);
+    const stages = (await readdir(join(root, 'data/exams'))).filter((p) =>
+      p.startsWith('.promotion-stage-'),
+    );
+    expect(stages).toHaveLength(1);
+    expect(await readFile(join(root, 'data/exams', stages[0]!, 'approved-candidate.json'))).toEqual(
+      original.candidate,
+    );
+    expect(await readFile(artifact('reviews'))).toEqual(original.review);
+  },
+);
