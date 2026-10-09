@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- F05: Phosphor SVGs bundled inline; no executable CDN icon script. -->
 
   <style>
     :root {
@@ -138,6 +138,8 @@
     }
 
     .nav-item i { font-size: 1.2rem; }
+    /* F05: size local SVGs like the former Phosphor font glyphs. */
+    .ph-local-svg { display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
 
     .nav-item:hover, .nav-item.active {
       background-color: var(--purple-light);
@@ -704,16 +706,16 @@
     <!-- BARRA LATERAL (SIDEBAR) -->
     <aside class="sidebar">
       <div class="sidebar-brand">
-        <i class="ph-fill ph-stethoscope"></i> MedSim
+        <i class="ph-fill ph-stethoscope" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M240,160a32,32,0,1,0-39.93,31,8,8,0,0,0-.07,1,32,32,0,0,1-32,32H144a32,32,0,0,1-32-32V151.48c31.47-4,56-31.47,56-64.31V40a8,8,0,0,0-8-8H136a8,8,0,0,0,0,16h16V87.17c0,26.58-21.25,48.49-47.36,48.83A48,48,0,0,1,56,88V48H72a8,8,0,0,0,0-16H48a8,8,0,0,0-8,8V88a64,64,0,0,0,56,63.49V192a48.05,48.05,0,0,0,48,48h24a48.05,48.05,0,0,0,48-48,8,8,0,0,0-.07-1A32,32,0,0,0,240,160Zm-32,8a8,8,0,1,1,8-8A8,8,0,0,1,208,168Z"/></svg></i> MedSim
       </div>
       <div class="nav-menu">
-        <button class="nav-item active" onclick="voltarParaInicio()"><i class="ph-duotone ph-squares-four"></i> Início</button>
-        <button class="nav-item" onclick="abrirCalendarioInterativo()"><i class="ph-duotone ph-calendar-blank"></i> Calendário</button>
-        <button class="nav-item" onclick="toggleScratchpad()"><i class="ph-duotone ph-note-pencil"></i> Bloco de Notas</button>
-        <button class="nav-item" onclick="abrirModalAjuda()"><i class="ph-duotone ph-question"></i> Ajuda & Regras</button>
-        <button class="nav-item" onclick="abrirModalConfig()"><i class="ph-duotone ph-sliders-horizontal"></i> Configurações</button>
+        <button class="nav-item active" onclick="voltarParaInicio()"><i class="ph-duotone ph-squares-four" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M112,56v48a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8h48A8,8,0,0,1,112,56Zm88-8H152a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V56A8,8,0,0,0,200,48Zm-96,96H56a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V152A8,8,0,0,0,104,144Zm96,0H152a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V152A8,8,0,0,0,200,144Z" opacity="0.2"/><path d="M200,136H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48ZM104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Z"/></svg></i> Início</button>
+        <button class="nav-item" onclick="abrirCalendarioInterativo()"><i class="ph-duotone ph-calendar-blank" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg></i> Calendário</button>
+        <button class="nav-item" onclick="toggleScratchpad()"><i class="ph-duotone ph-note-pencil" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,88l-72,72H96V128l72-72Z" opacity="0.2"/><path d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,128v80a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h80a8,8,0,0,1,0,16H48V208H208V128a8,8,0,0,1,16,0Z"/></svg></i> Bloco de Notas</button>
+        <button class="nav-item" onclick="abrirModalAjuda()"><i class="ph-duotone ph-question" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></i> Ajuda & Regras</button>
+        <button class="nav-item" onclick="abrirModalConfig()"><i class="ph-duotone ph-sliders-horizontal" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a24,24,0,1,1-24-24A24,24,0,0,1,128,80Zm40,72a24,24,0,1,0,24,24A24,24,0,0,0,168,152Z" opacity="0.2"/><path d="M40,88H73a32,32,0,0,0,62,0h81a8,8,0,0,0,0-16H135a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16Zm64-24A16,16,0,1,1,88,80,16,16,0,0,1,104,64ZM216,168H199a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16h97a32,32,0,0,0,62,0h17a8,8,0,0,0,0-16Zm-48,24a16,16,0,1,1,16-16A16,16,0,0,1,168,192Z"/></svg></i> Configurações</button>
         
-        <button id="btn-back" class="nav-item danger-hover hidden" onclick="voltar()"><i class="ph-bold ph-arrow-left"></i> Voltar</button>
+        <button id="btn-back" class="nav-item danger-hover hidden" onclick="voltar()"><i class="ph-bold ph-arrow-left" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z"/></svg></i> Voltar</button>
       </div>
     </aside>
 
@@ -728,7 +730,7 @@
         </div>
         
         <button class="btn-omnisearch" onclick="abrirOmnisearch()">
-          <i class="ph-bold ph-magnifying-glass"></i> Pesquisar simulado...
+          <i class="ph-bold ph-magnifying-glass" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232.49,215.51,185,168a92.12,92.12,0,1,0-17,17l47.53,47.54a12,12,0,0,0,17-17ZM44,112a68,68,0,1,1,68,68A68.07,68.07,0,0,1,44,112Z"/></svg></i> Pesquisar simulado...
         </button>
       </header>
 
@@ -741,12 +743,12 @@
         
         <!-- TELA 1: Seleção de Matérias -->
         <main id="tela-materias">
-          <div class="section-header"><i class="ph-bold ph-books"></i> Matérias Disponíveis</div>
+          <div class="section-header"><i class="ph-bold ph-books" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M235.57,193.73,202.38,35.93a20,20,0,0,0-23.76-15.48L131.81,30.51a19.82,19.82,0,0,0-11,6.65A20,20,0,0,0,104,28H56A20,20,0,0,0,36,48V208a20,20,0,0,0,20,20h48a20,20,0,0,0,20-20V90.25l25.62,121.82A20,20,0,0,0,169.15,228a20.27,20.27,0,0,0,4.23-.45l46.81-10.06A20.1,20.1,0,0,0,235.57,193.73ZM148.19,88.65l39-8.38,2.53,12-39,8.38Zm7.46,35.5,39-8.38,9.16,43.58-39,8.38Zm24.06-79.39,2.53,12-39,8.38-2.53-12ZM60,88h40v80H60Zm40-36V64H60V52ZM60,204V192h40v12Zm112.29-.76-2.53-12,39-8.38,2.53,12Z"/></svg></i> Matérias Disponíveis</div>
           <div class="grid-container bento-active" id="grid-materias">
             
             <div class="subject-card" onclick="selecionarMateria('fisiologia', 'Fisiologia')">
               <div>
-                <i class="ph-duotone ph-heartbeat card-icon"></i>
+                <i class="ph-duotone ph-heartbeat card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,102c0,66-104,122-104,122S24,168,24,102A54,54,0,0,1,78,48c22.59,0,41.94,12.31,50,32,8.06-19.69,27.41-32,50-32A54,54,0,0,1,232,102Z" opacity="0.2"/><path d="M72,144H32a8,8,0,0,1,0-16H67.72l13.62-20.44a8,8,0,0,1,13.32,0l25.34,38,9.34-14A8,8,0,0,1,136,128h24a8,8,0,0,1,0,16H140.28l-13.62,20.44a8,8,0,0,1-13.32,0L88,126.42l-9.34,14A8,8,0,0,1,72,144ZM178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,.75,0,1.5,0,2.25a8,8,0,1,0,16-.5c0-.58,0-1.17,0-1.75A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46c0,53.61-77.76,102.15-96,112.8-10.83-6.31-42.63-26-66.68-52.21a8,8,0,1,0-11.8,10.82c31.17,34,72.93,56.68,74.69,57.63a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40Z"/></svg></i>
                 <h3>Fisiologia</h3>
                 <p>Sistemas corporais, homeostase e mecânica orgânica.</p>
               </div>
@@ -758,7 +760,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('micro', 'Microbiologia')">
               <div>
-                <i class="ph-duotone ph-virus card-icon"></i>
+                <i class="ph-duotone ph-virus card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,40a88,88,0,1,0,88,88A88,88,0,0,0,128,40Zm-20,88a20,20,0,1,1,20-20A20,20,0,0,1,108,128Z" opacity="0.2"/><path d="M136,108a28,28,0,1,0-28,28A28,28,0,0,0,136,108Zm-28,12a12,12,0,1,1,12-12A12,12,0,0,1,108,120Zm68-8a16,16,0,1,1-16,16A16,16,0,0,1,176,112Zm-32,64a16,16,0,1,1-16-16A16,16,0,0,1,144,176Zm96-56H223.66a95.52,95.52,0,0,0-22.39-53.95l12.39-12.39a8,8,0,0,0-11.32-11.32L190,54.73A95.52,95.52,0,0,0,136,32.34V16a8,8,0,0,0-16,0V32.34A95.52,95.52,0,0,0,66.05,54.73L53.66,42.34A8,8,0,0,0,42.34,53.66L54.73,66.05a95.52,95.52,0,0,0-22.39,54H16a8,8,0,0,0,0,16H32.34A95.52,95.52,0,0,0,54.73,190L42.34,202.34a8,8,0,0,0,11.32,11.32l12.39-12.39a95.52,95.52,0,0,0,54,22.39V240a8,8,0,0,0,16,0V223.66A95.52,95.52,0,0,0,190,201.27l12.39,12.39a8,8,0,0,0,11.32-11.32L201.27,190A95.52,95.52,0,0,0,223.66,136H240a8,8,0,0,0,0-16ZM128,208a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,208Z"/></svg></i>
                 <h3>Microbiologia</h3>
                 <p>Bactérias, virologia, micologia e patogenia.</p>
               </div>
@@ -770,7 +772,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('parasito', 'Parasitologia')">
               <div>
-                <i class="ph-duotone ph-bug card-icon"></i>
+                <i class="ph-duotone ph-bug card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,128v16a80,80,0,0,1-160,0V128Z" opacity="0.2"/><path d="M144,92a12,12,0,1,1,12,12A12,12,0,0,1,144,92ZM100,80a12,12,0,1,0,12,12A12,12,0,0,0,100,80Zm116,64A87.76,87.76,0,0,1,213,167l22.24,9.72A8,8,0,0,1,232,192a7.89,7.89,0,0,1-3.2-.67L207.38,182a88,88,0,0,1-158.76,0L27.2,191.33A7.89,7.89,0,0,1,24,192a8,8,0,0,1-3.2-15.33L43,167A87.76,87.76,0,0,1,40,144v-8H16a8,8,0,0,1,0-16H40v-8a87.76,87.76,0,0,1,3-23L20.8,79.33a8,8,0,1,1,6.4-14.66L48.62,74a88,88,0,0,1,158.76,0l21.42-9.36a8,8,0,0,1,6.4,14.66L213,89.05a87.76,87.76,0,0,1,3,23v8h24a8,8,0,0,1,0,16H216ZM56,120H200v-8a72,72,0,0,0-144,0Zm64,95.54V136H56v8A72.08,72.08,0,0,0,120,215.54ZM200,144v-8H136v79.54A72.08,72.08,0,0,0,200,144Z"/></svg></i>
                 <h3>Parasitologia</h3>
                 <p>Protozoários, helmintos, vetores e diagnósticos.</p>
               </div>
@@ -782,7 +784,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('patologia', 'Patologia')">
               <div>
-                <i class="ph-duotone ph-microscope card-icon"></i>
+                <i class="ph-duotone ph-microscope card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M136,32V136a8,8,0,0,1-8,8H80a8,8,0,0,1-8-8V32a8,8,0,0,1,8-8h48A8,8,0,0,1,136,32Z" opacity="0.2"/><path d="M224,208H203.94A88.05,88.05,0,0,0,144,64.37V32a16,16,0,0,0-16-16H80A16,16,0,0,0,64,32V136a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V80.46A72,72,0,0,1,181.25,208H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16Zm-96-72H80V32h48V136ZM72,184a8,8,0,0,1,0-16h64a8,8,0,0,1,0,16Z"/></svg></i>
                 <h3>Patologia</h3>
                 <p>Processos patológicos gerais e lesões celulares.</p>
               </div>
@@ -794,7 +796,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('imuno', 'Imunologia')">
               <div>
-                <i class="ph-duotone ph-shield-check card-icon"></i>
+                <i class="ph-duotone ph-shield-check card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,56v56c0,96-88,120-88,120S40,208,40,112V56a8,8,0,0,1,8-8H208A8,8,0,0,1,216,56Z" opacity="0.2"/><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg></i>
                 <h3>Imunologia</h3>
                 <p>Resposta imune inata, adaptativa e imunopatologia.</p>
               </div>
@@ -806,7 +808,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('vigilancia', 'Vigilância em Saúde')">
               <div>
-                <i class="ph-duotone ph-first-aid card-icon"></i>
+                <i class="ph-duotone ph-first-aid card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,104v48a8,8,0,0,1-8,8H160v56a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V160H40a8,8,0,0,1-8-8V104a8,8,0,0,1,8-8H96V40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8V96h56A8,8,0,0,1,224,104Z" opacity="0.2"/><path d="M216,88H168V40a16,16,0,0,0-16-16H104A16,16,0,0,0,88,40V88H40a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H88v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V168h48a16,16,0,0,0,16-16V104A16,16,0,0,0,216,88Zm0,64H160a8,8,0,0,0-8,8v56H104V160a8,8,0,0,0-8-8H40V104H96a8,8,0,0,0,8-8V40h48V96a8,8,0,0,0,8,8h56Z"/></svg></i>
                 <h3>Vigilância em Saúde</h3>
                 <p>Epidemiologia, saúde coletiva e indicadores.</p>
               </div>
@@ -818,7 +820,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('farmaco', 'Farmacologia')">
               <div>
-                <i class="ph-duotone ph-pill card-icon"></i>
+                <i class="ph-duotone ph-pill card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M160,160l-50.75,50.75a45.26,45.26,0,0,1-64,0h0a45.26,45.26,0,0,1,0-64L96,96Z" opacity="0.2"/><path d="M216.43,39.6a53.27,53.27,0,0,0-75.33,0L39.6,141.09a53.26,53.26,0,0,0,75.32,75.31L216.43,114.91A53.32,53.32,0,0,0,216.43,39.6ZM103.61,205.09h0a37.26,37.26,0,0,1-52.7-52.69L96,107.31,148.7,160ZM205.11,103.6,160,148.69,107.32,96l45.1-45.09a37.26,37.26,0,0,1,52.69,52.69ZM189.68,82.34a8,8,0,0,1,0,11.32l-24,24a8,8,0,1,1-11.31-11.32l24-24A8,8,0,0,1,189.68,82.34Z"/></svg></i>
                 <h3>Farmacologia</h3>
                 <p>Farmacocinética, farmacodinâmica e terapêutica.</p>
               </div>
@@ -830,7 +832,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('propedeu', 'Propedêutica')">
               <div>
-                <i class="ph-duotone ph-clipboard-text card-icon"></i>
+                <i class="ph-duotone ph-clipboard-text card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,48V216a8,8,0,0,1-8,8H56a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H96a39.83,39.83,0,0,0-8,24v8h80V64a39.83,39.83,0,0,0-8-24h40A8,8,0,0,1,208,48Z" opacity="0.2"/><path d="M168,152a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,152Zm-8-40H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16Zm56-64V216a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V48A16,16,0,0,1,56,32H92.26a47.92,47.92,0,0,1,71.48,0H200A16,16,0,0,1,216,48ZM96,64h64a32,32,0,0,0-64,0ZM200,48H173.25A47.93,47.93,0,0,1,176,64v8a8,8,0,0,1-8,8H88a8,8,0,0,1-8-8V64a47.93,47.93,0,0,1,2.75-16H56V216H200Z"/></svg></i>
                 <h3>Propedêutica</h3>
                 <p>Anamnese, exame físico e raciocínio clínico.</p>
               </div>
@@ -842,7 +844,7 @@
 
             <div class="subject-card" onclick="selecionarMateria('psico', 'Psicomed')">
               <div>
-                <i class="ph-duotone ph-brain card-icon"></i>
+                <i class="ph-duotone ph-brain card-icon" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M240,124a48,48,0,0,1-32,45.27h0V176a40,40,0,0,1-80,0,40,40,0,0,1-80,0v-6.73h0a48,48,0,0,1,0-90.54V72a40,40,0,0,1,80,0,40,40,0,0,1,80,0v6.73A48,48,0,0,1,240,124Z" opacity="0.2"/><path d="M248,124a56.11,56.11,0,0,0-32-50.61V72a48,48,0,0,0-88-26.49A48,48,0,0,0,40,72v1.39a56,56,0,0,0,0,101.2V176a48,48,0,0,0,88,26.49A48,48,0,0,0,216,176v-1.41A56.09,56.09,0,0,0,248,124ZM88,208a32,32,0,0,1-31.81-28.56A55.87,55.87,0,0,0,64,180h8a8,8,0,0,0,0-16H64A40,40,0,0,1,50.67,86.27,8,8,0,0,0,56,78.73V72a32,32,0,0,1,64,0v68.26A47.8,47.8,0,0,0,88,128a8,8,0,0,0,0,16,32,32,0,0,1,0,64Zm104-44h-8a8,8,0,0,0,0,16h8a55.87,55.87,0,0,0,7.81-.56A32,32,0,1,1,168,144a8,8,0,0,0,0-16,47.8,47.8,0,0,0-32,12.26V72a32,32,0,0,1,64,0v6.73a8,8,0,0,0,5.33,7.54A40,40,0,0,1,192,164Zm16-52a8,8,0,0,1-8,8h-4a36,36,0,0,1-36-36V80a8,8,0,0,1,16,0v4a20,20,0,0,0,20,20h4A8,8,0,0,1,208,112ZM60,120H56a8,8,0,0,1,0-16h4A20,20,0,0,0,80,84V80a8,8,0,0,1,16,0v4A36,36,0,0,1,60,120Z"/></svg></i>
                 <h3>Psicomed</h3>
                 <p>Psicologia médica e relação médico-paciente.</p>
               </div>
@@ -857,13 +859,13 @@
 
         <!-- TELA 2: Seleção de Divisões (Trilha de Estudos) -->
         <main id="tela-bimestres" class="hidden">
-          <div class="section-header" id="titulo-secao-divisoes"><i class="ph-bold ph-path"></i> Trilha de Estudos</div>
+          <div class="section-header" id="titulo-secao-divisoes"><i class="ph-bold ph-path" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,164a36.07,36.07,0,0,0-33.94,24H72a28,28,0,0,1,0-56h96a44,44,0,0,0,0-88H72a12,12,0,0,0,0,24h96a20,20,0,0,1,0,40H72a52,52,0,0,0,0,104h94.06A36,36,0,1,0,200,164Zm0,48a12,12,0,1,1,12-12A12,12,0,0,1,200,212Z"/></svg></i> Trilha de Estudos</div>
           <div id="container-divisoes"></div>
         </main>
 
         <!-- TELA 3: Lista de Simulados (Com Alternativa 1 aplicada) -->
         <main id="tela-simulados" class="hidden">
-          <div class="section-header" id="titulo-secao-simulados"><i class="ph-bold ph-files"></i> Simulados Encontrados</div>
+          <div class="section-header" id="titulo-secao-simulados"><i class="ph-bold ph-files" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M220.49,59.51l-40-40A12,12,0,0,0,172,16H92A20,20,0,0,0,72,36V56H56A20,20,0,0,0,36,76V216a20,20,0,0,0,20,20H164a20,20,0,0,0,20-20V196h20a20,20,0,0,0,20-20V68A12,12,0,0,0,220.49,59.51ZM160,212H60V80h67l33,33Zm40-40H184V108a12,12,0,0,0-3.51-8.49l-40-40A12,12,0,0,0,132,56H96V40h71l33,33Zm-56-28a12,12,0,0,1-12,12H88a12,12,0,0,1,0-24h44A12,12,0,0,1,144,144Zm0,40a12,12,0,0,1-12,12H88a12,12,0,0,1,0-24h44A12,12,0,0,1,144,184Z"/></svg></i> Simulados Encontrados</div>
           <div class="grid-container" id="grid-simulados"></div>
         </main>
 
@@ -871,9 +873,9 @@
         <main id="tela-calendario" class="hidden">
           <div class="calendar-container">
             <div class="calendar-header">
-              <button class="btn-action" onclick="mudarMesCalendario(-1)"><i class="ph-bold ph-caret-left"></i> Mês Anterior</button>
+              <button class="btn-action" onclick="mudarMesCalendario(-1)"><i class="ph-bold ph-caret-left" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M168.49,199.51a12,12,0,0,1-17,17l-80-80a12,12,0,0,1,0-17l80-80a12,12,0,0,1,17,17L97,128Z"/></svg></i> Mês Anterior</button>
               <h2 id="calendar-month-title">Setembro / Outubro 2026</h2>
-              <button class="btn-action" onclick="mudarMesCalendario(1)">Próximo Mês <i class="ph-bold ph-caret-right"></i></button>
+              <button class="btn-action" onclick="mudarMesCalendario(1)">Próximo Mês <i class="ph-bold ph-caret-right" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"/></svg></i></button>
             </div>
             
             <div class="calendar-legend">
@@ -906,8 +908,8 @@
   <!-- BLOCO DE NOTAS RÁPIDO (SCRATCHPAD) -->
   <div id="scratchpad-panel" class="scratchpad-panel">
     <div class="scratchpad-header">
-      <h3><i class="ph-duotone ph-note-pencil"></i> Anotações Rápidas</h3>
-      <button onclick="toggleScratchpad()" class="btn-close-scratchpad"><i class="ph-bold ph-x"></i></button>
+      <h3><i class="ph-duotone ph-note-pencil" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M200,88l-72,72H96V128l72-72Z" opacity="0.2"/><path d="M229.66,58.34l-32-32a8,8,0,0,0-11.32,0l-96,96A8,8,0,0,0,88,128v32a8,8,0,0,0,8,8h32a8,8,0,0,0,5.66-2.34l96-96A8,8,0,0,0,229.66,58.34ZM124.69,152H104V131.31l64-64L188.69,88ZM200,76.69,179.31,56,192,43.31,212.69,64ZM224,128v80a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V48A16,16,0,0,1,48,32h80a8,8,0,0,1,0,16H48V208H208V128a8,8,0,0,1,16,0Z"/></svg></i> Anotações Rápidas</h3>
+      <button onclick="toggleScratchpad()" class="btn-close-scratchpad"><i class="ph-bold ph-x" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"/></svg></i></button>
     </div>
     <textarea id="scratchpad-text" placeholder="Digite suas anotações aqui... Tudo é salvo automaticamente no seu navegador."></textarea>
   </div>
@@ -915,7 +917,7 @@
   <!-- MODAIS -->
   <div id="modal-dia" class="modal-overlay">
     <div class="modal-box">
-      <h2 id="modal-dia-titulo"><i class="ph-duotone ph-calendar-check"></i> Detalhes do Dia</h2>
+      <h2 id="modal-dia-titulo"><i class="ph-duotone ph-calendar-check" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></svg></i> Detalhes do Dia</h2>
       <div id="modal-dia-conteudo" style="margin: 15px 0; font-size: 0.95rem; line-height: 1.6;"></div>
       <button class="btn-modal-close" onclick="fecharModalDia()">Fechar</button>
     </div>
@@ -923,7 +925,7 @@
 
   <div id="modal-ajuda" class="modal-overlay">
     <div class="modal-box">
-      <h2><i class="ph-duotone ph-info"></i> Instruções de Adição e Nomeação</h2>
+      <h2><i class="ph-duotone ph-info" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M144,176a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176Zm88-48A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128ZM124,96a12,12,0,1,0-12-12A12,12,0,0,0,124,96Z"/></svg></i> Instruções de Adição e Nomeação</h2>
       <div class="mini-instrucoes">
         <strong>Como vincular à Matéria e sua respectiva Divisão:</strong>
         <ol style="margin-top:8px; padding-left:20px;">
@@ -965,7 +967,7 @@
 
   <div id="modal-config" class="modal-overlay">
     <div class="modal-box">
-      <h2><i class="ph-duotone ph-sliders-horizontal"></i> Configurações Visuais</h2>
+      <h2><i class="ph-duotone ph-sliders-horizontal" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,80a24,24,0,1,1-24-24A24,24,0,0,1,128,80Zm40,72a24,24,0,1,0,24,24A24,24,0,0,0,168,152Z" opacity="0.2"/><path d="M40,88H73a32,32,0,0,0,62,0h81a8,8,0,0,0,0-16H135a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16Zm64-24A16,16,0,1,1,88,80,16,16,0,0,1,104,64ZM216,168H199a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16h97a32,32,0,0,0,62,0h17a8,8,0,0,0,0-16Zm-48,24a16,16,0,1,1,16-16A16,16,0,0,1,168,192Z"/></svg></i> Configurações Visuais</h2>
       <div class="setting-row">
         <div>
           <strong>Layout Bento Box</strong>
@@ -996,7 +998,7 @@
       <div class="spinner"></div>
       <p style="margin-top: 15px; font-weight: 700; color: var(--text-main); font-size: 1.1rem;">Preparando sua avaliação...</p>
     </div>
-    <button class="btn-close-exam" onclick="fecharProva()"><i class="ph-bold ph-arrow-left"></i> Voltar ao Hub</button>
+    <button class="btn-close-exam" onclick="fecharProva()"><i class="ph-bold ph-arrow-left" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z"/></svg></i> Voltar ao Hub</button>
     <iframe id="iframe-simulado" src="" onload="esconderSpinner()"></iframe>
   </div>
 
@@ -1385,7 +1387,7 @@
 
     function abrirDetalhesDia(chaveData, eventos) {
       const [ano, mes, dia] = chaveData.split('-');
-      document.getElementById('modal-dia-titulo').innerHTML = `<i class="ph-duotone ph-calendar-check"></i> Detalhes do Dia ${dia}/${mes}/${ano}`;
+      document.getElementById('modal-dia-titulo').innerHTML = `<i class="ph-duotone ph-calendar-check" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z" opacity="0.2"/><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z"/></svg></i> Detalhes do Dia ${dia}/${mes}/${ano}`;
       
       const conteudoEl = document.getElementById('modal-dia-conteudo');
       if (eventos.length === 0) {
@@ -1543,7 +1545,7 @@
               </div>
               <div class="timeline-card-footer">
                 <span class="count-badge" id="count-b${i}">0 simulados</span>
-                <i class="ph-bold ph-arrow-right" style="color: var(--purple-primary); font-size: 1.2rem;"></i>
+                <i class="ph-bold ph-arrow-right" style="color: var(--purple-primary); font-size: 1.2rem;" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></i>
               </div>
             </div>
           </div>
@@ -1557,9 +1559,9 @@
           divCard.className = 'timeline-item';
           divCard.onclick = () => abrirBimestre(bloco.id, bloco.titulo);
           divCard.innerHTML = `
-            <div class="timeline-node"><i class="ph-bold ph-books"></i></div>
+            <div class="timeline-node"><i class="ph-bold ph-books" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M235.57,193.73,202.38,35.93a20,20,0,0,0-23.76-15.48L131.81,30.51a19.82,19.82,0,0,0-11,6.65A20,20,0,0,0,104,28H56A20,20,0,0,0,36,48V208a20,20,0,0,0,20,20h48a20,20,0,0,0,20-20V90.25l25.62,121.82A20,20,0,0,0,169.15,228a20.27,20.27,0,0,0,4.23-.45l46.81-10.06A20.1,20.1,0,0,0,235.57,193.73ZM148.19,88.65l39-8.38,2.53,12-39,8.38Zm7.46,35.5,39-8.38,9.16,43.58-39,8.38Zm24.06-79.39,2.53,12-39,8.38-2.53-12ZM60,88h40v80H60Zm40-36V64H60V52ZM60,204V192h40v12Zm112.29-.76-2.53-12,39-8.38,2.53,12Z"/></svg></i></div>
             <div class="timeline-card">
-              <span class="watermark-number"><i class="ph-fill ph-book-open"></i></span>
+              <span class="watermark-number"><i class="ph-fill ph-book-open" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M240,56V200a8,8,0,0,1-8,8H160a24,24,0,0,0-24,23.94,7.9,7.9,0,0,1-5.12,7.55A8,8,0,0,1,120,232a24,24,0,0,0-24-24H24a8,8,0,0,1-8-8V56a8,8,0,0,1,8-8H88a32,32,0,0,1,32,32v87.73a8.17,8.17,0,0,0,7.47,8.25,8,8,0,0,0,8.53-8V80a32,32,0,0,1,32-32h64A8,8,0,0,1,240,56Z"/></svg></i></span>
               <div class="timeline-card-content">
                 <div class="timeline-card-info">
                   <h3>${bloco.titulo}</h3>
@@ -1567,7 +1569,7 @@
                 </div>
                 <div class="timeline-card-footer">
                   <span class="count-badge" id="count-extra-${bloco.id}">0 simulados</span>
-                  <i class="ph-bold ph-arrow-right" style="color: var(--purple-primary); font-size: 1.2rem;"></i>
+                  <i class="ph-bold ph-arrow-right" style="color: var(--purple-primary); font-size: 1.2rem;" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></i>
                 </div>
               </div>
             </div>
@@ -1661,7 +1663,7 @@
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px;">
               <div style="display: flex; align-items: center; gap: 10px;">
                 <div style="width: 42px; height: 42px; border-radius: 12px; background: var(--green-light); color: var(--green-primary); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0;">
-                  <i class="ph-duotone ph-file-text"></i>
+                  <i class="ph-duotone ph-file-text" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,88H152V32Z" opacity="0.2"/><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg></i>
                 </div>
                 ${badgeMateriaBusca}
               </div>
@@ -1672,7 +1674,7 @@
           </div>
           <div class="card-footer" style="margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--border-color); color: var(--green-primary); display: flex; align-items: center; justify-content: space-between;">
             <span style="font-size: 0.82rem; font-weight: 600;">Modo Avaliação</span>
-            <span style="display: flex; align-items: center; gap: 4px;">Iniciar Prova <i class="ph-bold ph-arrow-right"></i></span>
+            <span style="display: flex; align-items: center; gap: 4px;">Iniciar Prova <i class="ph-bold ph-arrow-right" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg></i></span>
           </div>
         `;
         card.onclick = () => carregarSimulado(encodeURI(arquivo), arquivo);
@@ -1805,7 +1807,7 @@
       if (prox.data) {
         container.innerHTML += `
           <div class="widget-card">
-            <div class="widget-icon"><i class="ph-fill ph-calendar-star"></i></div>
+            <div class="widget-icon"><i class="ph-fill ph-calendar-star" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,64V56a8,8,0,0,1,16,0v8a8,8,0,0,1-16,0Zm106.55,60.7-24.46,20.19L161.55,175a4,4,0,0,1-1.49,4.17,4.05,4.05,0,0,1-2.39.79,4,4,0,0,1-2-.55L128,163.18l-27.64,16.27A4,4,0,0,1,94.45,175l7.46-30.15L77.45,124.7a4,4,0,0,1,2.24-7.08l32.24-2.49,12.4-28.71a4,4,0,0,1,7.34,0l12.4,28.71,32.24,2.49a4,4,0,0,1,2.24,7.08ZM184,64a8,8,0,0,1-16,0V56a8,8,0,0,1,16,0Z"/></svg></i></div>
             <div class="widget-content">
               <h4>Próxima Avaliação</h4>
               <h2>${prox.data} - ${prox.desc}</h2>
@@ -1819,7 +1821,7 @@
       if (ultimoAcesso) {
         container.innerHTML += `
           <div class="widget-card">
-            <div class="widget-icon purple"><i class="ph-fill ph-clock-counter-clockwise"></i></div>
+            <div class="widget-icon purple"><i class="ph-fill ph-clock-counter-clockwise" aria-hidden="true"><svg class="ph-local-svg" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128A96,96,0,0,1,62.11,197.82a8,8,0,1,1,11-11.64A80,80,0,1,0,71.43,71.43C67.9,75,64.58,78.51,61.35,82L77.66,98.34A8,8,0,0,1,72,112H32a8,8,0,0,1-8-8V64a8,8,0,0,1,13.66-5.66L50,70.7c3.22-3.49,6.54-7,10.06-10.55A96,96,0,0,1,224,128ZM128,72a8,8,0,0,0-8,8v48a8,8,0,0,0,3.88,6.86l40,24a8,8,0,1,0,8.24-13.72L136,123.47V80A8,8,0,0,0,128,72Z"/></svg></i></div>
             <div class="widget-content">
               <h4>Visto por último</h4>
               <h2>${ultimoAcesso.titulo}</h2>

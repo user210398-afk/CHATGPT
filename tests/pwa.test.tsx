@@ -280,6 +280,9 @@ it('PWA preserva academicamente fonte, schemas, engine, legado e lockfile da mai
     'src/engine',
     'simulados',
     'index.html',
+    // F05: exact historical index replacement is pinned and regression-tested.
+    // Keep all other source/legacy baseline protections in this diff.
+    ':(exclude)index.html',
     'simulados.json',
     '*.js',
     'package-lock.json',
