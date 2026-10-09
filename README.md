@@ -1,16 +1,22 @@
 # MedSim — Exam Engine
 
-Aplicação estática React + TypeScript + Vite + Zod com **17 provas JSON e 485
-questões: 462 objetivas e 23 dissertativas**. A Fase 3 concluiu a migração e a
-paridade acadêmica. O sistema já está em produção em
-https://user210398-afk.github.io/CHATGPT/. A Fase 6A prepara authoring seguro
-sem novas provas reais, IA/API, merge ou deploy.
+Aplicação estática React + TypeScript + Vite + Zod com **21 provas JSON e 562
+questões: 522 objetivas e 40 dissertativas** (inventário auditado em 09/10/2026).
+As **17 provas históricas** (485 questões) permanecem protegidas por baseline
+individual; quatro provas foram acrescentadas posteriormente com revisão e
+proveniência. Produção:
+https://user210398-afk.github.io/CHATGPT/.
 
-A Fase 6B acrescenta geração segura de candidates: export offline gratuito,
-mock determinístico e OpenAI opcional com consentimento literal `ENVIAR`.
-IA sempre produz review draft; aprovação e promoção continuam humanas e separadas.
-Veja [AI_GENERATION.md](docs/AI_GENERATION.md) para `author:generate`,
-`author:import-generation`, configuração, privacidade e revisão da fonte.
+O site oferece catálogo, dashboard, configurações, modos prova/estudo,
+revisão detalhada, sessões de revisão e ferramentas de resolução. Tentativas,
+históricos e backups são locais ao navegador; dissertativas não recebem nota
+automática. Para decisões atuais, consultar [continuidade](MEDSIM_CONTINUIDADE.md).
+
+A criação de provas novas usa o authoring das Fases 6A–6C: exportação offline,
+mock determinístico e OpenAI opcional apenas com consentimento literal `ENVIAR`.
+IA produz candidate com review draft, **nunca** aprovação acadêmica automática.
+Veja [geração assistida](docs/AI_GENERATION.md) e o
+[fast path da Fase 6C](docs/AUTHORING_FAST_PATH.md).
 
 ## Instalar e desenvolver
 
@@ -51,8 +57,9 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:browser
 
 O preview abre `http://localhost:4173/CHATGPT/`; a prova usa
 `/CHATGPT/?exam=<id>`. Os testes de browser exigem build anterior e iniciam o
-preview automaticamente. Cobrem as 17 provas, desktop/mobile, dois temas,
-restauração, finalização, revisão e acessibilidade básica.
+preview automaticamente. Cobrem as provas do catálogo, desktop/mobile, temas, restauração,
+finalização, revisão e acessibilidade básica. O acervo histórico de 17 provas
+continua protegido por verificações de paridade.
 
 `npm run build` valida dados, gera catálogo/JSON Schema, verifica TypeScript e
 produz **dist/**, o único artefato preparado para GitHub Pages.
@@ -62,28 +69,38 @@ integral do legado. O refresh pela query string funciona sem rewrites.
 ## Arquitetura e futuras provas
 
 `data/exams/` é a fonte acadêmica canônica; `schema/` define Schema v1; `src/engine/`
-concentra regras e persistência v2; componentes e estilos são compartilhados.
+concentra regras e persistência atual v3, com leitura compatível de formatos
+históricos conforme os documentos técnicos. Componentes e estilos são compartilhados.
 O catálogo é gerado no build e o loader busca apenas JSONs da mesma origem.
 Não há backend, credencial ou API do GitHub em runtime.
 
-Novas provas começam em `authoring/candidates/`, usam o próprio Schema v1 e
-exigem proveniência externa SHA-256 e revisão humana em `authoring/reviews/`.
-A promoção local exige `approved` e confirmação literal `PROMOVER`.
-O catálogo pode crescer; as 17 provas migradas continuam protegidas individualmente.
+Novas provas começam em `authoring/candidates/`, usam o próprio Schema v1,
+exigem SHA-256 real da fonte, source anchors, generation record e revisão humana
+em `authoring/reviews/`. A aprovação de novos candidates é vinculada ao
+conteúdo por SHA-256 canônico (F01); a promoção local exige `approved` válido
+e confirmação literal `PROMOVER`. O catálogo pode crescer sem alterar as
+17 provas migradas nem as quatro já adicionadas.
 
 ## Content authoring
 
 Veja [CONTENT_AUTHORING.md](docs/CONTENT_AUTHORING.md) para hash local,
 `author:validate`, `author:gate`, `author:promote`, checklist humano, templates,
-Content Gate read-only e política de baseline. A Fase 6A não chama IA/API.
+Content Gate read-only e baseline. O fluxo recomendado é
+`author:flow init → import → revisão humana → approve → promote`, com
+aprovação e promoção **explícitas**, verificações e Draft PR antes de qualquer
+merge. Geração não aprova, não publica e não usa automaticamente API paga.
 
-Tentativas são locais ao navegador. Dissertativas não recebem nota automática.
-O estado legado não é importado automaticamente; suas chaves permanecem intactas.
+Tentativas são locais ao navegador, e dados legados não são importados
+automaticamente. Backup atual v3 conserva compatibilidade de leitura
+documentada com formatos anteriores. Ver
+[backup e configurações](docs/PHASE7A2_DASHBOARD_BACKUP_SETTINGS.md) e
+[modos/revisão](docs/PHASE7B1_REVIEW_STUDY_MODES.md).
 
 ## Legado e deploy
 
-O hub `index.html` da raiz, `simulados.json`, os 17 HTMLs, scripts históricos e
-ferramentas de migração/paridade permanecem preservados. O build os copia para
+O hub `index.html` da raiz, `simulados.json`, os 17 HTMLs, scripts históricos
+(com correção pontual de segurança F03 no backup legado) e ferramentas de
+migração/paridade permanecem preservados. O build os copia para
 `/CHATGPT/legacy/`, acessível pelo link “Acervo legado”. A homepage nova é
 `dist/index.html`; o acervo é independente do runtime novo e permite comparação
 e rollback. Limpeza do legado depende de autorização futura.
@@ -97,10 +114,15 @@ e rollback. Limpeza do legado depende de autorização futura.
 - `.github/workflows/atualizar-index.yml`: deprecated, manual e inerte (`if: false`),
   sem permissão de escrita. A lógica histórica continua disponível.
 
-A produção atual está em `https://user210398-afk.github.io/CHATGPT/`, com Vite
-`base: '/CHATGPT/'`. Nenhuma configuração externa ou site de produção é alterado
-nesta fase. O procedimento de aprovação, configuração de Pages/environment,
-cutover histórico e rollback está em [Fase 4](docs/PHASE4_RELEASE_READINESS.md).
+A produção está em `https://user210398-afk.github.io/CHATGPT/`, com Vite
+`base: '/CHATGPT/'`. O deploy manual autorizado de 09/10/2026 concluiu com
+sucesso para o commit `8357808`
+([GitHub Actions #37965453809](https://github.com/user210398-afk/CHATGPT/actions/runs/37965453809)).
+A branch `main` está protegida pelo ruleset `medsim-main-protection` (F04):
+exige Pull Request e check `validate` aprovado; permite somente merge commit,
+sem deploy automático. Novas publicações exigem autorização específica.
+O procedimento histórico de cutover/rollback consta na
+[Fase 4](docs/PHASE4_RELEASE_READINESS.md).
 
 ## Histórico e decisões
 
@@ -113,3 +135,8 @@ cutover histórico e rollback está em [Fase 4](docs/PHASE4_RELEASE_READINESS.md
 - [Geração assistida de candidates — Fase 6B](docs/AI_GENERATION.md)
 - [Auditoria original](docs/LEGACY_AUDIT.md)
 - [Inventário original](docs/EXAM_INVENTORY.md)
+- [Continuidade operacional](MEDSIM_CONTINUIDADE.md)
+- [Fast path de authoring — Fase 6C](docs/AUTHORING_FAST_PATH.md)
+- [Review, modos prova/estudo — Fase 7B.1](docs/PHASE7B1_REVIEW_STUDY_MODES.md)
+- [Ferramentas de resolução — Fase 8A](docs/PHASE8A_ACTIVE_SOLVING_TOOLS.md)
+- [Planejamento do MedFactory MVP](docs/MEDFACTORY_MVP_PLAN.md)
