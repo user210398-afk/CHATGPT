@@ -72,7 +72,14 @@ it('mantém POC e fontes legadas idênticas à base confirmada (workflows têm s
     ...paths,
   ]);
   for (const path of stdout.split('\0').filter(Boolean)) {
-    const { stdout: base } = await run('git', ['show', `${phase3Base}:${path}`], {
+    // F03 changes exactly one historical script. Pin its reviewed implementation
+    // rather than broadly excluding it from the legacy byte-for-byte guard.
+    // All other legacy files still match the original Phase 3 baseline.
+    const reference =
+      path === 'backup-medsim.js'
+        ? 'a77f09035b8c18840ec2d9cdca26efdce3cdffd7'
+        : phase3Base;
+    const { stdout: base } = await run('git', ['show', `${reference}:${path}`], {
       maxBuffer: 4 * 1024 * 1024,
     });
     expect(await readFile(path, 'utf8'), path).toBe(removeSpanArtifacts(base));
