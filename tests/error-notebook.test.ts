@@ -886,6 +886,10 @@ describe('deterministic filters, comparator and domain preservation', () => {
           'package.json',
           'package-lock.json',
           'vite.config.ts',
+          // PWA-1 infrastructure additions have exact guards in pwa.test.tsx.
+          ':(exclude).github/workflows/ci.yml',
+          ':(exclude)package.json',
+          ':(exclude)vite.config.ts',
         ])
       ).stdout.trim(),
     ).toBe('');

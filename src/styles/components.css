@@ -1651,3 +1651,17 @@ button.danger {
     margin-inline-start: auto;
   }
 }
+.pwa-install {
+  margin-block: var(--space-5);
+  overflow-wrap: anywhere;
+}
+.pwa-install h2 { margin-top: 0; }
+.pwa-guide { margin-block: var(--space-4); }
+.pwa-guide summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-block: var(--space-3);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.pwa-guide li + li { margin-top: var(--space-3); }
