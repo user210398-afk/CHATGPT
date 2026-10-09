@@ -209,6 +209,82 @@ describe('leitura local de progresso do catálogo', () => {
     ]);
     expect(read().attemptCount).toBe(1);
   });
+  it('F02: history v3 exige mode por entrada e aproveita sibling Study válido sem writes', () => {
+    const { mode: _oldMode, ...missingMode } = summary(completedAttempt('invalid-v3', 1));
+    const study = {
+      ...summary(completedAttempt('valid-study-v3', 10, '2026-10-03T12:00:00.000Z')),
+      mode: 'study' as const,
+    };
+    const raw = storageFixtureJson({ storageVersion: 3, history: [missingMode, study] });
+    localStorage.setItem(historyStorageKey(catalogExam), raw);
+    const getItem = vi.fn((key: string) => localStorage.getItem(key));
+    const setItem = vi.fn();
+    const removeItem = vi.fn();
+    const output = readExamProgress(catalogExam, () => ({ getItem, setItem, removeItem }));
+    expect(output).toMatchObject({
+      includesExam: false,
+      includesStudy: true,
+      progress: {
+        status: 'not-started',
+        attemptCount: 1,
+        lastResultPercentage: 50,
+        bestResultPercentage: 50,
+        lastResultAt: '2026-10-03T12:00:00.000Z',
+      },
+    });
+    expect(getItem.mock.calls).toEqual([
+      [storageKey(catalogExam)],
+      [historyStorageKey(catalogExam)],
+    ]);
+    expect(localStorage.getItem(historyStorageKey(catalogExam))).toBe(raw);
+    expect(setItem).not.toHaveBeenCalled();
+    expect(removeItem).not.toHaveBeenCalled();
+  });
+  it('F02: mode ausente é inválido em v3, mas continua normalizado em v2', () => {
+    const { mode: _oldMode, ...legacy } = summary(completedAttempt('legacy-no-mode', 10));
+    const v3 = storageFixtureJson({ storageVersion: 3, history: [legacy] });
+    localStorage.setItem(historyStorageKey(catalogExam), v3);
+    expect(readExamProgress(catalogExam)).toMatchObject({
+      includesExam: false,
+      includesStudy: false,
+      progress: {
+        status: 'not-started',
+        attemptCount: 0,
+        lastResultPercentage: null,
+        lastResultAt: null,
+      },
+    });
+    expect(localStorage.getItem(historyStorageKey(catalogExam))).toBe(v3);
+    const v2 = storageFixtureJson({ storageVersion: 2, history: [legacy] });
+    localStorage.setItem(historyStorageKey(catalogExam), v2);
+    expect(readExamProgress(catalogExam)).toMatchObject({
+      includesExam: true,
+      includesStudy: false,
+      progress: {
+        status: 'not-started',
+        attemptCount: 1,
+        lastResultPercentage: 50,
+      },
+    });
+    expect(localStorage.getItem(historyStorageKey(catalogExam))).toBe(v2);
+  });
+  it('F02: history v3 inválido não oculta current concluído independente', () => {
+    const current = completedAttempt();
+    saveCurrent(current);
+    const { mode: _oldMode, ...invalid } = summary(completedAttempt('invalid-only-v3'));
+    const raw = storageFixtureJson({ storageVersion: 3, history: [invalid] });
+    localStorage.setItem(historyStorageKey(catalogExam), raw);
+    expect(readExamProgress(catalogExam)).toMatchObject({
+      includesExam: true,
+      progress: {
+        status: 'completed',
+        attemptCount: 1,
+        lastResultPercentage: 5,
+        lastResultAt: current.completedAt,
+      },
+    });
+    expect(localStorage.getItem(historyStorageKey(catalogExam))).toBe(raw);
+  });
   it('sem current, aproveita histórico válido e sua atividade', () => {
     saveHistory([summary(completedAttempt())]);
     expect(read()).toMatchObject({
