@@ -866,6 +866,8 @@ describe('deterministic filters, comparator and domain preservation', () => {
           '--',
           'simulados/',
           'schema/',
+          // F01 explicitly changes only review metadata; its integrity is tested separately.
+          ':(exclude)schema/authoring.ts',
           'src/engine/exam-state.ts',
           'src/engine/persistence.ts',
           'src/engine/review-history.ts',

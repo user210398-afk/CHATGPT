@@ -18,6 +18,7 @@ import { afterEach, beforeEach, expect, it } from 'vitest';
 import examTemplate from '../authoring/templates/exam.example.json';
 import reviewTemplate from '../authoring/templates/review.example.json';
 import { reviewSchema } from '../schema/authoring';
+import { candidateFingerprint } from '../scripts/authoring/approval-binding';
 import { parseExam } from '../schema/exam';
 import { contentGate } from '../scripts/authoring/gate';
 import {
@@ -48,6 +49,7 @@ function approved() {
   pair.review.reviewedBy = 'Revisor humano de teste';
   for (const key of Object.keys(pair.review.checks) as (keyof typeof pair.review.checks)[])
     pair.review.checks[key] = true;
+  pair.review.approval = { candidateSha256: candidateFingerprint(pair.exam) };
   return pair;
 }
 const validate = (pair = fixture()) =>
@@ -205,6 +207,10 @@ async function repository() {
     await mkdir(join(root, dir), { recursive: true });
 }
 async function writePair(pair = approved()) {
+  // Synthetic fixture approval: bind the final neutral candidate, including any
+  // intentional pre-review mutation by the test. Never used by production code.
+  if (pair.review.status === 'approved')
+    pair.review.approval = { candidateSha256: candidateFingerprint(pair.exam) };
   await writeFile(
     join(root, `authoring/candidates/${pair.exam.id}.json`),
     JSON.stringify(pair.exam),
@@ -311,6 +317,12 @@ it('gate aceita M com remoção exata de spans e conta zero adições', async ()
   await writeFile(file, cleaned);
   // This fixture has a retained candidate; keep the existing production equality check valid.
   await writeFile(join(root, 'authoring/candidates/exemplo-neutro.json'), cleaned);
+  // This neutral cleanup fixture declares a fresh approval of the cleaned value.
+  // A separate F01 regression verifies that keeping the old binding is rejected.
+  const reviewPath = join(root, 'authoring/reviews/exemplo-neutro.json');
+  const review = JSON.parse(await readFile(reviewPath, 'utf8'));
+  review.approval = { candidateSha256: candidateFingerprint(JSON.parse(cleaned)) };
+  await writeFile(reviewPath, JSON.stringify(review));
   await commit();
   expect(await contentGate(root, base)).toBe(0);
 });

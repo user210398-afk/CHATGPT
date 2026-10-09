@@ -50,9 +50,18 @@ it('academic/authoring/schema/infra bytes match the base except approved cleanup
     'scripts/authoring',
   ]);
   for (const path of stdout.split('\0').filter(Boolean)) {
-    // Only the gate implementation may change to recognize the authorized cleanup.
-    // Candidates, reviews, generations and every other authoring file stay frozen.
-    if (path === 'scripts/authoring/gate.ts') continue;
+    // F01 explicitly authorizes these implementation/schema changes. Their
+    // behavior and the exact academic baseline are verified in approval-binding.test.ts.
+    // Every candidate, review, generation and other historical file stays frozen.
+    if (
+      [
+        'scripts/authoring/gate.ts',
+        'scripts/authoring/core.ts',
+        'scripts/authoring/workflow.ts',
+        'schema/authoring.ts',
+      ].includes(path)
+    )
+      continue;
     const { stdout: original } = await run('git', ['show', `${base}:${path}`], {
       encoding: 'buffer',
       maxBuffer: 8 * 1024 * 1024,

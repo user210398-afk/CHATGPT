@@ -8,12 +8,41 @@ import { readExamCatalog } from '../catalog';
 import { assertReleaseBaseline } from '../release-baseline';
 import { removeSpanArtifacts } from '../span-artifacts';
 import { loadCandidate, validateAll } from './core';
+import { historicalApprovals } from './approval-binding';
+import { digest } from './generation-files';
 const run = promisify(execFile);
 export async function contentGate(root: string, base: string) {
   assert.match(base, /^[a-f0-9]{40}$/, 'Base deve ser um SHA Git completo');
   const git = async (args: string[]) =>
     (await run('git', args, { cwd: root, maxBuffer: 8 * 1024 * 1024 })).stdout;
   await assertReleaseBaseline(root);
+  // Preserve every historical artifact that already belongs to the PR base,
+  // including deletions/renames of entire sets that validateAll cannot discover.
+  const existing = new Set(
+    (await git(['ls-tree', '-r', '--name-only', base, '--', 'authoring', 'data/exams']))
+      .trim()
+      .split('\n'),
+  );
+  for (const [id, evidence] of Object.entries(historicalApprovals))
+    for (const [key, directory] of [
+      ['candidate', 'authoring/candidates'],
+      ['review', 'authoring/reviews'],
+      ['generation', 'authoring/generations'],
+      ['production', 'data/exams'],
+    ] as const) {
+      const file = `${directory}/${id}.json`;
+      if (!existing.has(file)) continue;
+      assert.ok(
+        (await lstat(join(root, file))).isFile(),
+        `Baseline histórico exige arquivo regular: ${file}`,
+      );
+      assert.equal(
+        digest(await readFile(join(root, file))),
+        evidence[key],
+        `Baseline de aprovação histórico alterado: ${file}`,
+      );
+    }
+
   const baseFiles = (await git(['ls-tree', '-r', '--name-only', base, '--', 'data/exams']))
     .trim()
     .split('\n')
@@ -66,6 +95,7 @@ export async function contentGate(root: string, base: string) {
     const production = parseExam(JSON.parse(await readFile(join(root, file), 'utf8')), file);
     const pair = await loadCandidate(root, production.id, baseIds);
     assert.equal(pair.review.status, 'approved', 'Gate exige review approved');
+    assert.ok(pair.review.approval, 'Gate exige vínculo de aprovação para novas adições');
     assert.equal(file, `data/exams/${production.id}.json`, 'Filename divergente');
     assert.ok(
       isDeepStrictEqual(production, pair.exam),

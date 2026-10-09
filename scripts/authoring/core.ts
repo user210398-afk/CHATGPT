@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
-import { constants } from 'node:fs';
-import { copyFile, lstat, readFile, readdir, unlink } from 'node:fs/promises';
+import { link, lstat, mkdtemp, readdir, rm, unlink, writeFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 import { isDeepStrictEqual } from 'node:util';
 import { identifier, parseExam, type RichText } from '../../schema/exam';
@@ -9,6 +8,9 @@ import { readExamCatalog } from '../catalog';
 import { assertReleaseBaseline } from '../release-baseline';
 import { validateGenerationRecord } from './generation-integrity';
 import { promptVersion } from '../../schema/generation';
+import { assertApprovalBinding, historicalEvidence } from './approval-binding';
+import { snapshotFile, assertStable } from './artifact-snapshot';
+import { digest, withGenerationLock, safeDirectory } from './generation-files';
 
 export function normalizeText(value: string) {
   return value
@@ -84,39 +86,61 @@ export function validateCandidate(
     exam.questions.map((question) => question.statement),
     'Enunciados',
   );
+  assertApprovalBinding(raw, manifest, review);
   return { exam, review };
 }
 
-async function readRegular(path: string) {
-  assert.ok((await lstat(path)).isFile(), `Arquivo regular obrigatório: ${path}`);
-  return JSON.parse(await readFile(path, 'utf8')) as unknown;
-}
-export async function loadCandidate(root: string, id: string, existingIds: string[] = []) {
+async function loadCandidateSnapshot(root: string, id: string, existingIds: string[] = []) {
   identifier.parse(id);
   const filename = join(root, 'authoring/candidates', `${id}.json`);
-  const review = join(root, 'authoring/reviews', `${id}.json`);
+  const reviewPath = join(root, 'authoring/reviews', `${id}.json`);
+  const generationPath = join(root, 'authoring/generations', `${id}.json`);
+  const candidate = await snapshotFile(filename);
+  const review = await snapshotFile(reviewPath);
+  const generation = await snapshotFile(generationPath, true);
+  assert.ok(candidate.present && review.present);
   const pair = validateCandidate(
-    await readRegular(filename),
-    await readRegular(review),
+    JSON.parse(candidate.bytes.toString('utf8')),
+    JSON.parse(review.bytes.toString('utf8')),
     filename,
     existingIds,
   );
-  // 6A manual/older manifests stay compatible; the versioned 6B pipeline requires audit evidence.
-  const generation = join(root, 'authoring/generations', `${id}.json`);
-  let present = false;
-  try {
-    await lstat(generation);
-    present = true;
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-  }
   if (
-    present ||
+    generation.present ||
     (pair.review.generation.mode === 'ai-assisted' &&
       pair.review.generation.promptVersion === promptVersion)
-  )
-    validateGenerationRecord(await readRegular(generation), pair.exam, pair.review);
-  return pair;
+  ) {
+    assert.ok(generation.present, 'Generation record obrigatório');
+    validateGenerationRecord(JSON.parse(generation.bytes.toString('utf8')), pair.exam, pair.review);
+  }
+  const historical = historicalEvidence(id);
+  const productionPath = join(root, 'data/exams', `${id}.json`);
+  const production = historical ? await snapshotFile(productionPath) : undefined;
+  if (historical) {
+    assert.ok(generation.present && production?.present, 'Conjunto histórico incompleto');
+    for (const [key, bytes] of [
+      ['candidate', candidate.bytes],
+      ['review', review.bytes],
+      ['generation', generation.bytes],
+      ['production', production.bytes],
+    ] as const)
+      assert.equal(
+        digest(bytes),
+        historical[key],
+        `Baseline de aprovação histórico alterado: ${id}/${key}`,
+      );
+  }
+  const stable = async () => {
+    await assertStable(filename, candidate);
+    await assertStable(reviewPath, review);
+    await assertStable(generationPath, generation);
+    if (production) await assertStable(productionPath, production);
+  };
+  await stable();
+  return { pair, candidateBytes: candidate.bytes, stable };
+}
+export async function loadCandidate(root: string, id: string, existingIds: string[] = []) {
+  return (await loadCandidateSnapshot(root, id, existingIds)).pair;
 }
 function realFiles(files: string[]) {
   return files
@@ -158,32 +182,92 @@ export async function validateAll(root = '.', id?: string) {
   return ids.length;
 }
 
-export async function promote(root: string, id: string, confirmation: string | undefined) {
+// Internal deterministic seams; CLI callers cannot inject publication or concurrency hooks.
+export interface PromotionDependencies {
+  afterValidation?: () => Promise<void>;
+  publish?: typeof link;
+  removePublished?: typeof unlink;
+  afterPublication?: () => Promise<void>;
+}
+export async function promote(
+  root: string,
+  id: string,
+  confirmation: string | undefined,
+  dependencies: PromotionDependencies = {},
+) {
   assert.equal(confirmation, 'PROMOVER', 'Confirmação literal --confirm PROMOVER obrigatória');
-  const { exams } = await readExamCatalog(join(root, 'data/exams'), join(root, 'public'));
-  const pair = await loadCandidate(
-    root,
-    id,
-    exams.map((exam) => exam.id),
-  );
-  assert.equal(pair.review.status, 'approved', 'Promoção exige review approved');
-  await assertReleaseBaseline(root);
-  const target = join(root, 'data/exams', `${id}.json`);
-  // COPYFILE_EXCL impede sobrescrita, inclusive em corrida ou destino symlink.
-  await copyFile(join(root, 'authoring/candidates', `${id}.json`), target, constants.COPYFILE_EXCL);
-  try {
-    const result = await readExamCatalog(join(root, 'data/exams'), join(root, 'public'));
-    assert.ok(
-      isDeepStrictEqual(
-        result.exams.find((exam) => exam.id === id),
-        pair.exam,
-      ),
-      'Cópia divergente',
+  return withGenerationLock(root, id, async () => {
+    const { exams } = await readExamCatalog(join(root, 'data/exams'), join(root, 'public'));
+    const loaded = await loadCandidateSnapshot(
+      root,
+      id,
+      exams.map((exam) => exam.id),
     );
+    assert.equal(loaded.pair.review.status, 'approved', 'Promoção exige review approved');
     await assertReleaseBaseline(root);
-  } catch (error) {
-    await unlink(target);
-    throw error;
-  }
-  return target;
+    await dependencies.afterValidation?.();
+    await loaded.stable();
+    const target = join(root, 'data/exams', `${id}.json`);
+    await safeDirectory(root, ['data', 'exams']);
+    const stage = await mkdtemp(join(root, 'data/exams', '.promotion-stage-'));
+    const temporary = join(stage, 'candidate.json');
+    const backup = join(stage, 'approved-candidate.json');
+    let published = false;
+    let retainBackup = false;
+    try {
+      // Publish only the validated bytes. Hard link is atomic and exclusive,
+      // including when another actor creates the destination or a symlink.
+      await writeFile(temporary, loaded.candidateBytes, { flag: 'wx', mode: 0o600 });
+      // Keep an independent exact backup before publication; target edits cannot alter it.
+      await writeFile(backup, loaded.candidateBytes, { flag: 'wx', mode: 0o600 });
+      await loaded.stable();
+      await (dependencies.publish ?? link)(temporary, target);
+      published = true;
+      const publishedSnapshot = await snapshotFile(target);
+      assert.ok(
+        publishedSnapshot.present && publishedSnapshot.bytes.equals(loaded.candidateBytes),
+        'Cópia divergente',
+      );
+      const stagedInfo = await lstat(temporary, { bigint: true });
+      assert.ok(
+        publishedSnapshot.info.dev === stagedInfo.dev &&
+          publishedSnapshot.info.ino === stagedInfo.ino,
+        'Destino mudou durante promoção',
+      );
+      await dependencies.afterPublication?.();
+      await assertStable(target, publishedSnapshot);
+      await loaded.stable();
+      const result = await readExamCatalog(join(root, 'data/exams'), join(root, 'public'));
+      assert.ok(
+        isDeepStrictEqual(
+          result.exams.find((exam) => exam.id === id),
+          loaded.pair.exam,
+        ),
+        'Cópia divergente',
+      );
+      await assertReleaseBaseline(root);
+      await loaded.stable();
+      await assertStable(target, publishedSnapshot);
+    } catch (error) {
+      if (published) {
+        try {
+          const current = await lstat(target, { bigint: true });
+          const own = await lstat(temporary, { bigint: true });
+          assert.ok(current.dev === own.dev && current.ino === own.ino, 'Destino substituído');
+          await (dependencies.removePublished ?? unlink)(target);
+        } catch (rollbackError) {
+          if ((rollbackError as NodeJS.ErrnoException).code !== 'ENOENT') {
+            retainBackup = true;
+            throw new Error(
+              `Promoção NÃO confirmada; rollback inseguro ou falhou. Backup preservado em ${backup}; inspecione antes de continuar.`,
+            );
+          }
+        }
+      }
+      throw error;
+    } finally {
+      if (!retainBackup) await rm(stage, { recursive: true, force: true });
+    }
+    return target;
+  });
 }

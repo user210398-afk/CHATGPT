@@ -30,6 +30,7 @@ export const reviewSchema = z
       explanationsReviewed: z.boolean(),
       duplicateCheckReviewed: z.boolean(),
     }),
+    approval: z.strictObject({ candidateSha256: z.string().regex(/^[a-f0-9]{64}$/) }).optional(),
     reviewedBy: text.nullable(),
     notes: z.array(text),
   })
@@ -38,6 +39,12 @@ export const reviewSchema = z
       ctx.addIssue({ code: 'custom', path, message });
     if (review.requirements.objectiveCount > 0 && review.requirements.optionsPerObjective === null)
       error(['requirements', 'optionsPerObjective'], 'Objetivas exigem 4 ou 5 alternativas');
+    if (review.status !== 'approved' && review.approval !== undefined)
+      error(
+        ['approval'],
+        'Vínculo de aprovação exige status approved; remova ao invalidar o review',
+      );
+    // Missing bindings are checked against the pinned historical evidence by authoring validators.
     if (review.status === 'approved') {
       for (const [check, done] of Object.entries(review.checks))
         if (!done) error(['checks', check], 'Aprovação exige checklist completo');

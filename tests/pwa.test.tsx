@@ -284,6 +284,8 @@ it('PWA preserva academicamente fonte, schemas, engine, legado e lockfile da mai
     '*.js',
     'package-lock.json',
     ':(exclude)public/sw.js',
+    // F01 review metadata is tested separately; Exam and generation schemas remain frozen.
+    ':(exclude)schema/authoring.ts',
   ]);
   expect(stdout).toBe('');
   const { stdout: untracked } = await run('git', [
