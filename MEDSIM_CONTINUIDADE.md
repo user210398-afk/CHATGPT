@@ -1,6 +1,6 @@
 # MedSim — continuidade operacional
 
-**Verificado em:** 09/10/2026, após merge da documentação (PR #31), CI da `main`, deploy manual consolidado das correções F01–F03 **e ativação verificada da proteção F04**.
+**Verificado em:** 09/10/2026, após os merges #33–#35 (continuidade, F06 e F07) e #37 (F05); a `main` permanece protegida pela F04. O deploy Pages continua no SHA anterior `8357808`.
 **Fonte de verdade:** GitHub `main`, PRs, checks, `AGENTS.md` e documentos técnicos atuais; este resumo pode ficar desatualizado.
 **Repositório:** https://github.com/user210398-afk/CHATGPT
 **Site:** https://user210398-afk.github.io/CHATGPT/
@@ -11,9 +11,9 @@
 
 | Item | Estado / evidência |
 | --- | --- |
-| `main` | `8357808188e2e903ca2d4cad59574b64b175ee26` (PR #31) |
-| CI após PR #31 | [run 37963913809](https://github.com/user210398-afk/CHATGPT/actions/runs/37963913809) — **success**, SHA `8357808` |
-| PRs abertos | [#33](https://github.com/user210398-afk/CHATGPT/pull/33) (continuidade F04/Pages), [#34](https://github.com/user210398-afk/CHATGPT/pull/34) (F06) e [#35](https://github.com/user210398-afk/CHATGPT/pull/35) (F07), todos **Draft** e ainda não integrados na consulta mais recente. |
+| `main` | `989b2e0c4e6e2c2fb883db1c784a0ad140e2e5b4` (PR #37, F05) |
+| CI da `main` | [run 37972469918](https://github.com/user210398-afk/CHATGPT/actions/runs/37972469918) — **success**, SHA `1612dd9` após #33–#35. [Run 37976792139](https://github.com/user210398-afk/CHATGPT/actions/runs/37976792139) do merge F05 — **em andamento na última consulta**; conferir antes de declarar aprovação. |
+| PRs abertos | **Nenhum** após os merges #33–#35 e #37, na consulta anterior à abertura deste PR documental. |
 | Branch protection de `main` | **F04 configurada**: `protected: true`, ruleset [medsim-main-protection](https://github.com/user210398-afk/CHATGPT/rules/24804795), `active`, target default branch, sem bypass, PR obrigatório, `validate` obrigatório (GitHub Actions), bloqueios de exclusão e force-push, somente merge commit |
 | Último GitHub Pages manual confirmado | [run 37965453809](https://github.com/user210398-afk/CHATGPT/actions/runs/37965453809) — **success**, commit `8357808188e2e903ca2d4cad59574b64b175ee26`; jobs **build** e **deploy** aprovados |
 | Publicação das F01–F03 | **Concluída em Pages** no commit `8357808`; auditorias, validate, typecheck, Vitest, build, validate:dist e Playwright passaram no workflow manual. Verificação manual em navegador físico permanece distinta. |
@@ -32,6 +32,7 @@
 - **F01:** novos reviews aprovados vinculam `approval.candidateSha256` ao JSON canônico via SHA-256; qualquer alteração posterior ao conteúdo invalida o vínculo até nova aprovação humana. Quatro conjuntos já aprovados antes dessa regra possuem **evidências históricas explicitamente fixadas** em `scripts/authoring/approval-binding.ts`; não são exceção aberta para novos IDs. Um hash de integridade **não** autentica quem aprovou.
 - **F02:** `src/engine/catalog-progress.ts` exige `mode` por entrada de history v3 e mantém leitura v2 sem migração/escrita. Testes de regressão adicionados; proteções de escopo histórico preservadas com exceção exclusiva ao arquivo autorizado.
 - **F03:** `backup-medsim.js` verifica todas as chaves/valores MedSim do snapshot após rollback. Falha ou divergência **não** produz mensagem enganosa de dados preservados. Casos de erro persistem no aviso. Testes de integração do script legado foram incluídos; guardas da Fase 3/PWA/Fase 4 preservam os demais arquivos.
+- **F05:** o `index.html` legado usa SVGs Phosphor declarativos incorporados, originados de commit fixo do projeto upstream; nenhum script CDN de ícones é executado. Licença e origem em [ícones legados](docs/LEGACY_PHOSPHOR_ICONS.md). Testes verificam estrutura e ausência de script remoto; revisão visual manual permanece obrigatória antes de republicar.
 
 A aprovação pelo CI valida as verificações executadas, mas **não equivale a um teste manual da publicação** ou a garantia de perfeição acadêmica.
 
@@ -51,9 +52,9 @@ A aprovação pelo CI valida as verificações executadas, mas **não equivale a
 | Achado | Situação / ação proposta |
 | --- | --- |
 | **F04** | **Concluída e verificada remotamente**: [ruleset #24804795](https://github.com/user210398-afk/CHATGPT/rules/24804795) ativo e `protected: true`. PR obrigatório com 0 aprovações GitHub (não dispensa revisão acadêmica), check `validate`, sem bypass, sem force-push ou exclusão, somente merge commit. [Issue #32](https://github.com/user210398-afk/CHATGPT/issues/32). Antes de automatizar escrita pelo MedFactory, avaliar permissões e controles do próprio app. |
-| **F05** | **Pendente**: CDN de ícones no legado `index.html` sem versionamento/SRI. Manter como correção isolada. |
-| **F06** | **Em validação**, [Draft PR #34](https://github.com/user210398-afk/CHATGPT/pull/34) criado para retirar dependência de artefatos gerados no teste isolado. CI/Content Gate já aprovados no head consultado; ainda sem merge. |
-| **F07** | **Em validação**, [Draft PR #35](https://github.com/user210398-afk/CHATGPT/pull/35) atualiza o README. CI do head consultado aprovado; ainda sem merge. |
+| **F05** | **Código integrado** no [PR #37](https://github.com/user210398-afk/CHATGPT/pull/37), SHA `989b2e0`: 37 ícones em SVG incorporado e remoção do CDN de JavaScript. CI/Content Gate do PR aprovados; **CI da main e revisão visual ainda pendentes** na última consulta. [Issue #36](https://github.com/user210398-afk/CHATGPT/issues/36) mantida aberta até verificação completa. Pages ainda não republicado. |
+| **F06** | **Integrada**: [PR #34](https://github.com/user210398-afk/CHATGPT/pull/34), merge `9d3fb1109c33a869405d754be99bf5955bfd1122`; CI final de `main` após #35 aprovado em `1612dd9`. |
+| **F07** | **Integrada**: [PR #35](https://github.com/user210398-afk/CHATGPT/pull/35), merge `1612dd977353d7df4112cfd07dc3c735fda90366`; CI da `main` success ([run 37972469918](https://github.com/user210398-afk/CHATGPT/actions/runs/37972469918)). |
 
 ## MedSuite: decisão operacional para os próximos MVPs
 
@@ -70,7 +71,7 @@ O plano de evolução é estudar **MedFactory** (preparação e revisão de ques
 2. Atualizar/conciliar o documento de continuidade sempre após fase/merge/deploy; não declarar um PR documental como parte da `main` até o merge efetivo.
 3. **F04 concluída.** Preservar ruleset ativo e verificar o requisito `validate` em PR de teste. Antes de incorporar escrita automatizada no GitHub, avaliar as permissões do app e os controles adicionais; nenhuma automação pode contornar revisão e aprovação.
 4. Decidir o escopo de implementação do MedFactory após revisar [seu plano](docs/MEDFACTORY_MVP_PLAN.md); iniciar isoladamente e com testes neutros, sem conteúdo acadêmico real ou nova dependência sem necessidade.
-5. F05 continua em backlog. F06/F07 já possuem Draft PRs independentes (#34/#35), ainda sem merge; validar e integrar somente após autorização específica. Não incluí-los automaticamente nos PRs de MedFactory.
+5. **F05 já integrada, ainda não publicada**. Confirmar CI após merge e inspeção manual/visual do acervo legado; manter [issue #36](https://github.com/user210398-afk/CHATGPT/issues/36) aberta até conclusão, depois encerrar com evidências. F06/F07 já integradas. Não realizar novo Pages sem autorização específica.
 
 ### Procedimento de trabalho
 
