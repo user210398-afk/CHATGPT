@@ -13,6 +13,7 @@
     "validate:dist": "node --import tsx scripts/validate-dist.ts",
     "migrate:poc": "node --import tsx scripts/migrate-poc.ts",
     "audit:legacy": "node --import tsx scripts/audit-legacy.ts",
+    "audit:security": "node scripts/audit-security.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:browser": "playwright test",

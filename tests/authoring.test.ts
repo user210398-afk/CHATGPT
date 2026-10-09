@@ -563,8 +563,15 @@ it('validate-dist aceita catálogo com 18 mocks e rejeita payload divergente', a
   await mkdir(join(dist, 'legacy'));
   await writeFile(
     join(dist, 'index.html'),
-    '<link rel="stylesheet" href="/CHATGPT/assets/app.css"><script src="/CHATGPT/assets/app.js"></script>',
+    (await readFile('app/index.html', 'utf8'))
+      .replaceAll('%BASE_URL%', '/CHATGPT/')
+      .replace('href="/favicon.svg"', 'href="/CHATGPT/favicon.svg"')
+      .replace('src="/main.ts"', 'src="/CHATGPT/assets/app.js"')
+      .replace('</head>', '<link rel="stylesheet" href="/CHATGPT/assets/app.css"></head>'),
   );
+  // Include the new release assets in this synthetic dist; retain all academic assertions.
+  for (const path of ['manifest.webmanifest', 'sw.js', 'icons', 'favicon.svg'])
+    await cp(join(process.cwd(), 'public', path), join(dist, path), { recursive: true });
   await writeFile(join(dist, 'assets/app.css'), 'body {}');
   await writeFile(join(dist, 'assets/app.js'), '// Mock estático');
   await writeFile(join(dist, 'generated/exam-index.json'), JSON.stringify(catalog));
@@ -590,4 +597,4 @@ it('validate-dist aceita catálogo com 18 mocks e rejeita payload divergente', a
   expect(stdout).toContain('18 provas / 486 questões / 463 objetivas / 23 dissertativas');
   await writeFile(join(dist, 'generated/exams/exemplo-neutro.json'), '{}');
   await expect(run(process.execPath, command, { cwd: root })).rejects.toThrow();
-});
+}, 15000); // Two full dist validations now also decode PNGs and validate manifest/CSP.

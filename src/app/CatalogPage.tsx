@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, type ReactNode } from 'react';
 import type { Catalog } from '../../schema/catalog';
 import { CatalogFilters } from '../components/catalog/CatalogFilters';
 import { ExamCard } from '../components/catalog/ExamCard';
@@ -22,7 +22,7 @@ function CatalogBreadcrumb({ title }: { title: string }) {
   );
 }
 
-function SubjectHub({ catalog }: { catalog: Catalog }) {
+function SubjectHub({ catalog, homePrompt }: { catalog: Catalog; homePrompt?: ReactNode }) {
   const state = useCatalogState(catalog);
   const groups = useMemo(
     () =>
@@ -47,6 +47,7 @@ function SubjectHub({ catalog }: { catalog: Catalog }) {
           onde parou.
         </p>
       </header>
+      {homePrompt}
       <section aria-labelledby="subjects-title">
         <div className="catalog-toolbar">
           <div>
@@ -138,10 +139,12 @@ export function CatalogPage({
   catalog,
   mode = 'hub',
   area,
+  homePrompt,
 }: {
   catalog: Catalog;
   mode?: 'hub' | 'all';
   area?: string;
+  homePrompt?: ReactNode;
 }) {
   const group = useMemo(
     () =>
@@ -165,5 +168,5 @@ export function CatalogPage({
     );
   if (group || mode === 'all')
     return <ExamCatalog key={group?.id ?? 'all'} catalog={scopedCatalog} group={group} />;
-  return <SubjectHub catalog={catalog} />;
+  return <SubjectHub catalog={catalog} homePrompt={homePrompt} />;
 }

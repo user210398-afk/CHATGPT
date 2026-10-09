@@ -50,6 +50,24 @@ it('Home renderiza todas as matérias, contagens e links reais, sem ExamCards', 
   );
 });
 
+it('App coloca um único convite entre cabeçalho e matérias somente após dispensar SetupPrompt', async () => {
+  vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify(catalog))));
+  window.history.replaceState({}, '', '/CHATGPT/');
+  const { container } = render(<App />);
+  await screen.findByRole('heading', { name: 'Suas matérias' });
+  expect(container.querySelector('.setup-prompt')).toBeInTheDocument();
+  expect(container.querySelector('.pwa-install')).toBeNull();
+  fireEvent.click(screen.getByRole('button', { name: 'Agora não' }));
+  expect(container.querySelector('.setup-prompt')).toBeNull();
+  expect(container.querySelectorAll('.pwa-install')).toHaveLength(1);
+  const header = container.querySelector('.catalog-heading')!;
+  const prompt = container.querySelector('.pwa-install')!;
+  expect(header.nextElementSibling).toBe(prompt);
+  expect(prompt.nextElementSibling).toBe(
+    container.querySelector('section[aria-labelledby="subjects-title"]'),
+  );
+});
+
 it.each([
   ['farmacologia', 'Farmacologia', 5, 148],
   ['propedeutica', 'Propedêutica', 2, 40],

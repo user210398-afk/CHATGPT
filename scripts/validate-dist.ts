@@ -5,6 +5,7 @@ import { parse, type DefaultTreeAdapterMap } from 'parse5';
 import { readExamCatalog } from './catalog';
 import { assertReleaseBaseline, examCounts, migratedBaseline } from './release-baseline';
 import viteConfig from '../vite.config';
+import { validatePwa } from './validate-pwa';
 
 const directory = process.argv[2] ?? 'dist';
 const base = '/CHATGPT/';
@@ -64,6 +65,22 @@ async function htmlAssets(path: string, legacy = false) {
   await walk(document);
 }
 await htmlAssets('index.html');
+await validatePwa(directory);
+const modernHtml = (await read('index.html')).toString();
+assert.match(modernHtml, /http-equiv="Content-Security-Policy"/);
+assert.ok(modernHtml.indexOf('Content-Security-Policy') < modernHtml.indexOf('<script'));
+for (const directive of [
+  "script-src 'self'",
+  "connect-src 'self'",
+  "worker-src 'self'",
+  "manifest-src 'self'",
+  "object-src 'none'",
+  "base-uri 'none'",
+  "form-action 'none'",
+])
+  assert.ok(modernHtml.includes(directive), `CSP: ${directive}`);
+assert.ok(!/unsafe-inline|unsafe-eval|frame-ancestors/.test(modernHtml));
+assert.match(modernHtml, /rel="manifest" href="\/CHATGPT\/manifest.webmanifest"/);
 assert.ok(!(await readdir(directory)).includes('authoring'), 'Authoring não pertence ao dist');
 const assets = await files(join(directory, 'assets'));
 assert.ok(
@@ -77,6 +94,12 @@ assert.ok(
 for (const path of assets) {
   const content = await readFile(path, 'utf8');
   assert.ok(!/api\.github\.com|\/simulados\//i.test(content), `${path}: dependência legada/API`);
+  assert.ok(
+    !/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|\bgh[pousr]_[A-Za-z0-9]{30,}|\bAKIA[A-Z0-9]{16}\b/.test(
+      content,
+    ),
+    `${path}: formato de segredo no bundle`,
+  );
   if (path.endsWith('.css')) {
     for (const match of content.matchAll(/url\(\s*['"]?([^)'"\s]+)['"]?\s*\)/g))
       await asset(match[1]!, relative(directory, path));

@@ -370,7 +370,10 @@ test('7A.2: convite opcional não bloqueia e não reaparece depois de decisão v
   await page.getByRole('button', { name: 'Agora não' }).click();
   await expect(page.getByRole('complementary', { name: 'Personalização opcional' })).toHaveCount(0);
   await page.reload();
-  await expect(page.getByRole('button', { name: 'Agora não' })).toHaveCount(0);
+  // Scope the historical assertion to SetupPrompt; PWA has its own isolated dismissal.
+  await expect(
+    page.locator('.setup-prompt').getByRole('button', { name: 'Agora não' }),
+  ).toHaveCount(0);
 });
 
 test('7A.2: storage bloqueado mantém settings e banner dispensável na sessão', async ({ page }) => {

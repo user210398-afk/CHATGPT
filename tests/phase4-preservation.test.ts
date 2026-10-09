@@ -17,6 +17,8 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     'simulados.json',
     'index.html',
     '*.js',
+    // PWA-1 authorizes only this new worker; tests/pwa.test.tsx verifies its policy.
+    ':(exclude)public/sw.js',
     'scripts/legacy-data.ts',
     'scripts/exam-parity.ts',
     'scripts/migrate-poc.ts',

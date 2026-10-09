@@ -60,7 +60,16 @@ it('academic/authoring/schema/infra bytes match the base except approved cleanup
     const expected = files.some(([file]) => file === path)
       ? Buffer.from(removeSpanArtifacts(original.toString('utf8')))
       : original;
-    expect(await readFile(path), path).toEqual(expected);
+    let actual = await readFile(path);
+    // PWA-1 permits these two exact infrastructure lines only. Keep byte comparison
+    // for every other line/file; pwa.test.tsx separately checks the added behavior.
+    if (path === 'package.json')
+      actual = Buffer.from(
+        actual.toString().replace('    "audit:security": "node scripts/audit-security.mjs",\n', ''),
+      );
+    if (path === '.github/workflows/ci.yml')
+      actual = Buffer.from(actual.toString().replace('      - run: npm run audit:security\n', ''));
+    expect(actual, path).toEqual(expected);
   }
 }, 60000);
 it('normal generator publishes clean exams from their canonical source', async () => {

@@ -20,6 +20,9 @@ import { SettingsPage } from './SettingsPage';
 import { SetupPrompt } from '../components/common/SetupPrompt';
 import { GuidedTour } from '../components/common/GuidedTour';
 import { useGuidedTour } from './useGuidedTour';
+import { usePwaInstall, type PwaInstallState } from '../pwa/usePwaInstall';
+import { PwaInstallPrompt } from '../components/common/PwaInstallPrompt';
+import { ConnectivityNotice } from '../pwa/ConnectivityNotice';
 const catalogLoader = (signal: AbortSignal) => loadCatalog(fetch, signal);
 const ErrorNotebookPage = lazy(() => import('./ErrorNotebookPage'));
 function LoadMessage({ error }: { error?: string }) {
@@ -36,10 +39,12 @@ function LoadMessage({ error }: { error?: string }) {
 function CatalogRoute({
   route,
   ui,
+  pwa,
   touring = false,
 }: {
   route: ReturnType<typeof resolveRoute>;
   ui: UiPreferencesState;
+  pwa: PwaInstallState;
   touring?: boolean;
 }) {
   const { view } = route;
@@ -56,9 +61,20 @@ function CatalogRoute({
       ) : view === 'review' ? (
         <ReviewPage catalog={data} examId={route.reviewExam} attemptId={route.attempt} />
       ) : view === 'settings' ? (
-        <SettingsPage catalog={data} ui={ui} />
+        <SettingsPage catalog={data} ui={ui} pwa={touring ? undefined : pwa} />
       ) : (
-        <CatalogPage catalog={data} area={route.area} mode={route.allExams ? 'all' : 'hub'} />
+        <CatalogPage
+          catalog={data}
+          area={route.area}
+          mode={route.allExams ? 'all' : 'hub'}
+          homePrompt={
+            view === 'catalog' &&
+            !route.area &&
+            !route.allExams &&
+            !touring &&
+            ui.preferences.setupPrompt !== 'pending' && <PwaInstallPrompt pwa={pwa} />
+          }
+        />
       )}
     </>
   ) : (
@@ -91,6 +107,7 @@ function ExamRoute({
   );
 }
 export function App() {
+  const pwa = usePwaInstall();
   const tour = useGuidedTour();
   useEffect(() => {
     // Carry read-only positions across native document navigation, including keyboard links.
@@ -179,6 +196,7 @@ export function App() {
           </p>
         )}
         <main id="main" className="main-container" tabIndex={-1}>
+          <ConnectivityNotice />
           {/* Keep active solving mounted: a tour must not flush drafts or restart an attempt. */}
           {(route.view === 'exam' || route.view === 'review-session') && (
             <div hidden={!!tour.step}>
@@ -195,7 +213,7 @@ export function App() {
           )}
           {(tour.route || (route.view !== 'exam' && route.view !== 'review-session')) && (
             <div id={tour.route ? 'tour-content' : undefined}>
-              <CatalogRoute route={visibleRoute} ui={ui} touring={!!tour.step} />
+              <CatalogRoute route={visibleRoute} ui={ui} pwa={pwa} touring={!!tour.step} />
             </div>
           )}
         </main>

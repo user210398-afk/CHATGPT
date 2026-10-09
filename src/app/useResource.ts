@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { offlineMessage } from '../pwa/ConnectivityNotice';
 export function useResource<T>(loader: (signal: AbortSignal) => Promise<T>) {
   const [state, setState] = useState<{ data?: T; error?: string }>({});
   useEffect(() => {
@@ -11,7 +12,12 @@ export function useResource<T>(loader: (signal: AbortSignal) => Promise<T>) {
       .catch((error: unknown) => {
         if (!controller.signal.aborted)
           setState({
-            error: error instanceof Error ? error.message : 'Falha ao carregar os dados.',
+            error:
+              error instanceof TypeError
+                ? `${offlineMessage} A requisição não foi concluída; uma indicação de conexão do navegador não garante acesso ao servidor.`
+                : error instanceof Error
+                  ? error.message
+                  : 'Falha ao carregar os dados.',
           });
       });
     return () => controller.abort();

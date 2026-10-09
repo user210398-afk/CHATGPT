@@ -86,6 +86,11 @@ describe('annotations/scratch preserve official domains', () => {
       'package.json',
       'package-lock.json',
       'vite.config.ts',
+      // PWA-1: exact infrastructure additions, byte/semantic guards in pwa.test.tsx.
+      // All other workflow, lockfile, schema and engine assertions remain active.
+      ':(exclude).github/workflows/ci.yml',
+      ':(exclude)package.json',
+      ':(exclude)vite.config.ts',
     ];
     expect(
       (await run('git', ['diff', '--name-only', baseline, '--', ...paths])).stdout.trim(),
