@@ -78,7 +78,11 @@ it('mantém POC e fontes legadas idênticas à base confirmada (workflows têm s
     const reference =
       path === 'backup-medsim.js'
         ? 'a77f09035b8c18840ec2d9cdca26efdce3cdffd7'
-        : phase3Base;
+        // F05 pins the reviewed, self-contained icon revision byte-for-byte.
+        // The remaining legacy pages and scripts stay tied to the Phase 3 baseline.
+        : path === 'index.html'
+          ? '6393c7b1f76b8a2df31e981465918de83ec89184'
+          : phase3Base;
     const { stdout: base } = await run('git', ['show', `${reference}:${path}`], {
       maxBuffer: 4 * 1024 * 1024,
     });
