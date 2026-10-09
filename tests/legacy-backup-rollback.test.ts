@@ -155,15 +155,17 @@ describe('F03: rollback do backup legado', () => {
     expect(f.scheduled).not.toHaveBeenCalled();
   });
 
-  it('falha em removeItem e rollback também não produz confirmação falsa', async () => {
+  it('falha ao remover dado durante a importação, mas rollback íntegro é conferido', async () => {
     const f = fixture();
     f.adapter.removeItem.mockImplementation((key: string) => {
       f.values.delete(key);
       if (key === 'medsim_alpha') throw new Error('Partial remove');
     });
     await f.restore({ medsim_alpha: 'incoming' });
-    expect(f.message.textContent).toContain('não foi confirmada');
-    expect(f.message.dataset.show).toBe('true');
-    expect(f.scheduled).not.toHaveBeenCalled();
+    expect([...f.values].sort()).toEqual([...f.original].sort());
+    expect(f.message.textContent).toContain('recuperados e conferidos');
+    expect(f.message.dataset.type).toBe('error');
+    expect(f.reload).not.toHaveBeenCalled();
+    expect(f.scheduled).not.toHaveBeenCalledWith(expect.any(Function), 500);
   });
 });
