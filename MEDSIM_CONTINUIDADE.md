@@ -13,7 +13,7 @@
 | --- | --- |
 | `main` | `8357808188e2e903ca2d4cad59574b64b175ee26` (PR #31) |
 | CI após PR #31 | [run 37963913809](https://github.com/user210398-afk/CHATGPT/actions/runs/37963913809) — **success**, SHA `8357808` |
-| PRs abertos | **Nenhum**, na consulta de 09/10/2026 |
+| PRs abertos | [#33](https://github.com/user210398-afk/CHATGPT/pull/33) (continuidade F04/Pages), [#34](https://github.com/user210398-afk/CHATGPT/pull/34) (F06) e [#35](https://github.com/user210398-afk/CHATGPT/pull/35) (F07), todos **Draft** e ainda não integrados na consulta mais recente. |
 | Branch protection de `main` | **F04 configurada**: `protected: true`, ruleset [medsim-main-protection](https://github.com/user210398-afk/CHATGPT/rules/24804795), `active`, target default branch, sem bypass, PR obrigatório, `validate` obrigatório (GitHub Actions), bloqueios de exclusão e force-push, somente merge commit |
 | Último GitHub Pages manual confirmado | [run 37965453809](https://github.com/user210398-afk/CHATGPT/actions/runs/37965453809) — **success**, commit `8357808188e2e903ca2d4cad59574b64b175ee26`; jobs **build** e **deploy** aprovados |
 | Publicação das F01–F03 | **Concluída em Pages** no commit `8357808`; auditorias, validate, typecheck, Vitest, build, validate:dist e Playwright passaram no workflow manual. Verificação manual em navegador físico permanece distinta. |
@@ -52,8 +52,8 @@ A aprovação pelo CI valida as verificações executadas, mas **não equivale a
 | --- | --- |
 | **F04** | **Concluída e verificada remotamente**: [ruleset #24804795](https://github.com/user210398-afk/CHATGPT/rules/24804795) ativo e `protected: true`. PR obrigatório com 0 aprovações GitHub (não dispensa revisão acadêmica), check `validate`, sem bypass, sem force-push ou exclusão, somente merge commit. [Issue #32](https://github.com/user210398-afk/CHATGPT/issues/32). Antes de automatizar escrita pelo MedFactory, avaliar permissões e controles do próprio app. |
 | **F05** | **Pendente**: CDN de ícones no legado `index.html` sem versionamento/SRI. Manter como correção isolada. |
-| **F06** | **Pendente**: teste de limpeza de spans depende de catálogo gerado no uso isolado. Investigar em PR específico. |
-| **F07** | **Pendente**: `README.md` descreve 17 provas e contratos antigos. Atualizar em PR documental separado, com evidência do estado real. |
+| **F06** | **Em validação**, [Draft PR #34](https://github.com/user210398-afk/CHATGPT/pull/34) criado para retirar dependência de artefatos gerados no teste isolado. CI/Content Gate já aprovados no head consultado; ainda sem merge. |
+| **F07** | **Em validação**, [Draft PR #35](https://github.com/user210398-afk/CHATGPT/pull/35) atualiza o README. CI do head consultado aprovado; ainda sem merge. |
 
 ## MedSuite: decisão operacional para os próximos MVPs
 
@@ -70,7 +70,7 @@ O plano de evolução é estudar **MedFactory** (preparação e revisão de ques
 2. Atualizar/conciliar o documento de continuidade sempre após fase/merge/deploy; não declarar um PR documental como parte da `main` até o merge efetivo.
 3. **F04 concluída.** Preservar ruleset ativo e verificar o requisito `validate` em PR de teste. Antes de incorporar escrita automatizada no GitHub, avaliar as permissões do app e os controles adicionais; nenhuma automação pode contornar revisão e aprovação.
 4. Decidir o escopo de implementação do MedFactory após revisar [seu plano](docs/MEDFACTORY_MVP_PLAN.md); iniciar isoladamente e com testes neutros, sem conteúdo acadêmico real ou nova dependência sem necessidade.
-5. F05–F07 continuam em backlog; não são automaticamente incluídos nos PRs de MedFactory.
+5. F05 continua em backlog. F06/F07 já possuem Draft PRs independentes (#34/#35), ainda sem merge; validar e integrar somente após autorização específica. Não incluí-los automaticamente nos PRs de MedFactory.
 
 ### Procedimento de trabalho
 
