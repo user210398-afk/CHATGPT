@@ -16,6 +16,9 @@ it('release mantém baseline acadêmico, engine e scripts históricos da base Fa
     'src/engine',
     'simulados.json',
     'index.html',
+    // F05 authorizes only the audited inline Phosphor SVG change in index.html.
+    // tests/phase3-global and tests/legacy-icons pin its exact bytes and behavior.
+    ':(exclude)index.html',
     '*.js',
     // F03 permits precisely this legacy backup script; behavioral regression tests
     // cover restoration and verified rollback. All other legacy JS stays frozen.
