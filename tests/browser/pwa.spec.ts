@@ -105,6 +105,30 @@ test('PWA: manifest carregável no Chromium não privado, ícones e worker com e
   }
 });
 
+test('PWA: Home ordena cabeçalho, convite único e matérias sem sobreposição', async ({ page }) => {
+  await home(page);
+  const header = page.locator('.catalog-heading');
+  const card = page.locator('.pwa-install');
+  const subjects = page.locator('section[aria-labelledby="subjects-title"]');
+  await expect(card).toHaveCount(1);
+  await expect(header.getByRole('heading', { level: 1 })).toHaveAccessibleName(
+    'Escolha o que você quer estudar.',
+  );
+  await expect(card).toContainText('É necessária conexão com a internet');
+  await expect(card).toContainText('O funcionamento offline ainda não está disponível');
+  expect(
+    await header.evaluate((element) => [
+      element.nextElementSibling?.classList.contains('pwa-install'),
+      element.nextElementSibling?.nextElementSibling?.getAttribute('aria-labelledby'),
+    ]),
+  ).toEqual([true, 'subjects-title']);
+  const headingBox = (await header.boundingBox())!;
+  const cardBox = (await card.boundingBox())!;
+  const subjectsBox = (await subjects.boundingBox())!;
+  expect(headingBox.y + headingBox.height).toBeLessThanOrEqual(cardBox.y);
+  expect(cardBox.y + cardBox.height).toBeLessThanOrEqual(subjectsBox.y);
+});
+
 test('PWA: convite aguarda SetupPrompt, dispensa persiste sem alterar dados e instruções continuam', async ({
   page,
 }) => {
@@ -287,6 +311,8 @@ test('PWA: convite não entra em provas, revisão, matérias ou tour; tour prese
 }) => {
   await home(page);
   for (const route of [
+    '?view=dashboard',
+    '?view=error-notebook',
     '?view=review',
     '?view=review-session',
     '?area=fisiologia',

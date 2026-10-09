@@ -28,7 +28,8 @@ push, sincronização ou deploy automático foi acrescentado.
 - `ConnectivityNotice` informa ausência indicada pelo navegador; `useResource`
   comunica falhas reais de carregamento sem substituir dados nem gravar storage.
 
-O card fica depois do hub de matérias, no fluxo do documento. Aguarda uma decisão
+O card fica após o cabeçalho de apresentação e antes de “Suas matérias”, no fluxo
+do documento. Aguarda uma decisão
 no SetupPrompt; não aparece em provas, páginas de matéria/lista, revisão,
 sessões ou tour. Não há modal automático, elemento fixo ou reload automático.
 Configurações mantém a seção **MedSim no celular** (temporariamente fora da

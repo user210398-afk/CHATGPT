@@ -63,13 +63,19 @@ function CatalogRoute({
       ) : view === 'settings' ? (
         <SettingsPage catalog={data} ui={ui} pwa={touring ? undefined : pwa} />
       ) : (
-        <CatalogPage catalog={data} area={route.area} mode={route.allExams ? 'all' : 'hub'} />
+        <CatalogPage
+          catalog={data}
+          area={route.area}
+          mode={route.allExams ? 'all' : 'hub'}
+          homePrompt={
+            view === 'catalog' &&
+            !route.area &&
+            !route.allExams &&
+            !touring &&
+            ui.preferences.setupPrompt !== 'pending' && <PwaInstallPrompt pwa={pwa} />
+          }
+        />
       )}
-      {view === 'catalog' &&
-        !route.area &&
-        !route.allExams &&
-        !touring &&
-        ui.preferences.setupPrompt !== 'pending' && <PwaInstallPrompt pwa={pwa} />}
     </>
   ) : (
     <LoadMessage error={error} />
