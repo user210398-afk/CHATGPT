@@ -387,7 +387,17 @@ it('escopo F01 preserva todos os dados, runtime, Exam/generation, dependências 
     'package-lock.json',
     'AGENTS.md',
   ];
-  expect((await run('git', ['diff', historicalApprovalCommit, '--', ...paths])).stdout).toBe('');
+  // F02 explicitly changes only the catalog's read-only history parser.
+  // All other F01-protected paths remain byte-identical to the historical baseline.
+  expect(
+    (await run('git', [
+      'diff',
+      historicalApprovalCommit,
+      '--',
+      ...paths,
+      ':(exclude)src/engine/catalog-progress.ts',
+    ])).stdout,
+  ).toBe('');
   expect(
     (await run('git', ['ls-files', '--others', '--exclude-standard', '--', ...paths])).stdout,
   ).toBe('');
