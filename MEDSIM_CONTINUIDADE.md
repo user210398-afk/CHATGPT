@@ -1,6 +1,6 @@
 # MedSim — continuidade operacional
 
-**Verificado em:** 09/10/2026, após os merges das correções F01, F02 e F03.
+**Verificado em:** 09/10/2026, após merge da documentação (PR #31), CI da `main` e deploy manual consolidado das correções F01–F03.
 **Fonte de verdade:** GitHub `main`, PRs, checks, `AGENTS.md` e documentos técnicos atuais; este resumo pode ficar desatualizado.
 **Repositório:** https://github.com/user210398-afk/CHATGPT
 **Site:** https://user210398-afk.github.io/CHATGPT/
@@ -11,12 +11,12 @@
 
 | Item | Estado / evidência |
 | --- | --- |
-| `main` | `c7dd665d7ff95161c9dd2d96d21b1b79ccfc09eb` |
-| CI após PR #30 | [run 37960907349](https://github.com/user210398-afk/CHATGPT/actions/runs/37960907349) — **success**, mesmo SHA |
+| `main` | `8357808188e2e903ca2d4cad59574b64b175ee26` (PR #31) |
+| CI após PR #31 | [run 37963913809](https://github.com/user210398-afk/CHATGPT/actions/runs/37963913809) — **success**, SHA `8357808` |
 | PRs abertos | **Nenhum**, na consulta de 09/10/2026 |
-| Branch protection de `main` | `protected: false`; regras de repositório (`rulesets`) vazias na mesma consulta — **F04 pendente** |
-| Último GitHub Pages manual localizado | [run 37934933508](https://github.com/user210398-afk/CHATGPT/actions/runs/37934933508) — **success**, commit `be05aa18155751bc675d78beb617bd17c6ff612f` (PR #27) |
-| Publicação das F01–F03 | **NÃO executada**; `main` e Pages estão em commits diferentes |
+| Branch protection de `main` | `protected: false`; `rulesets: []` — **F04 pendente**, rastreada na [issue #32](https://github.com/user210398-afk/CHATGPT/issues/32) |
+| Último GitHub Pages manual confirmado | [run 37965453809](https://github.com/user210398-afk/CHATGPT/actions/runs/37965453809) — **success**, commit `8357808188e2e903ca2d4cad59574b64b175ee26`; jobs **build** e **deploy** aprovados |
+| Publicação das F01–F03 | **Concluída em Pages** no commit `8357808`; auditorias, validate, typecheck, Vitest, build, validate:dist e Playwright passaram no workflow manual. Verificação manual em navegador físico permanece distinta. |
 | Conteúdo canônico de provas | **21 JSONs** em `data/exams/`, listagem confirmada na `main` |
 | Total acadêmico registrado na auditoria | 21 provas / 562 questões (522 objetivas, 40 dissertativas); nenhuma correção F01–F03 alterou `data/exams/` |
 | PWA | Instalabilidade online confirmada pelo usuário no Android (Chrome e Samsung Internet); validação em Safari/iPhone físico pendente; provas offline não são suportadas |
@@ -50,7 +50,7 @@ A aprovação pelo CI valida as verificações executadas, mas **não equivale a
 
 | Achado | Situação / ação proposta |
 | --- | --- |
-| **F04** | **Pendente**: proteção de `main` ausente. Priorizar antes de permitir ao futuro MedFactory qualquer fluxo que grave diretamente no GitHub. Configurar com cuidado para manter PRs e CI funcionando; requer autorização. |
+| **F04** | **Pendente**: proteção de `main` ausente. [Issue #32](https://github.com/user210398-afk/CHATGPT/issues/32) registra regras propostas. Ativação requer configuração administrativa no GitHub e verificação posterior; não permitir escrita GitHub automatizada pelo MedFactory antes de concluir. |
 | **F05** | **Pendente**: CDN de ícones no legado `index.html` sem versionamento/SRI. Manter como correção isolada. |
 | **F06** | **Pendente**: teste de limpeza de spans depende de catálogo gerado no uso isolado. Investigar em PR específico. |
 | **F07** | **Pendente**: `README.md` descreve 17 provas e contratos antigos. Atualizar em PR documental separado, com evidência do estado real. |
@@ -66,7 +66,7 @@ O plano de evolução é estudar **MedFactory** (preparação e revisão de ques
 
 ## Próximas etapas e liberações
 
-1. **Publicar as correções F01–F03 somente após autorização específica de deploy.** Workflow [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) é manual (`workflow_dispatch`), somente na `main`, confirmação literal `PUBLICAR`. Verificar build/deploy e commit publicado; validação manual no site segue separada.
+1. **Deploy consolidado concluído e confirmado**: Pages [run 37965453809](https://github.com/user210398-afk/CHATGPT/actions/runs/37965453809), SHA `8357808`, jobs build/deploy success. Próximos deploys continuam exigindo autorização específica via [`deploy-pages.yml`](.github/workflows/deploy-pages.yml) e `PUBLICAR`. Validar manualmente site, armazenamento, import/export, rotas e PWA quando aplicável.
 2. Atualizar/conciliar o documento de continuidade sempre após fase/merge/deploy; não declarar um PR documental como parte da `main` até o merge efetivo.
 3. Tratar F04 antes de incorporar escrita automatizada no GitHub. Nenhuma automação pode contornar controles de aprovação.
 4. Decidir o escopo de implementação do MedFactory após revisar [seu plano](docs/MEDFACTORY_MVP_PLAN.md); iniciar isoladamente e com testes neutros, sem conteúdo acadêmico real ou nova dependência sem necessidade.
