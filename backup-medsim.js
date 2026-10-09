@@ -671,20 +671,42 @@
       );
 
 
+      let recovered = false;
+
       try {
 
         restoreSnapshot(
           current
         );
 
-      } catch (_) {}
+        // A storage adapter may silently ignore a write. Verify the exact
+        // tracked snapshot before claiming that rollback succeeded.
+        const after = collectData();
+        const previousKeys = Object.keys(current.data);
+
+        recovered =
+          Object.keys(after).length === previousKeys.length &&
+          previousKeys.every(key => after[key] === current.data[key]);
+
+        if (!recovered) {
+          console.error('[MedSim] Recuperação incompleta: dados diferentes do snapshot anterior.');
+        }
+
+      } catch (rollbackError) {
+
+        console.error('[MedSim] Falha ao recuperar os dados anteriores.', rollbackError);
+      }
 
 
       showMessage(
 
-        'A restauração falhou e os dados anteriores foram preservados.',
+        recovered
+          ? 'A restauração falhou, mas os dados anteriores foram recuperados e conferidos.'
+          : 'A restauração falhou e a recuperação dos dados anteriores não foi confirmada. Não recarregue nem limpe os dados. Utilize seu backup original ou a recuperação temporária, se disponível.',
 
-        'error'
+        'error',
+
+        !recovered
 
       );
     }
@@ -2780,7 +2802,8 @@
 
   function showMessage(
     message,
-    type
+    type,
+    persistent
   ) {
 
     const box =
@@ -2809,6 +2832,13 @@
     clearTimeout(
       showMessage._timer
     );
+
+
+    // Keep critical rollback failure visible until the user closes the modal.
+    if (persistent) {
+      showMessage._timer = null;
+      return;
+    }
 
 
     showMessage._timer =
